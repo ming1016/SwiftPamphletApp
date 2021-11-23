@@ -8,6 +8,13 @@
 * 使用Xcode编译生成这个手册程序。
 
 截图如下：
+![01](https://user-images.githubusercontent.com/251980/142998258-0f44f4fe-e113-4428-b381-be7e4eb5a899.png)
+![02](https://user-images.githubusercontent.com/251980/142998276-70f12cd3-46e5-46f0-b5e1-185ec9b0beee.png)
+![03](https://user-images.githubusercontent.com/251980/142998296-e6091abe-8639-47f4-acda-f0c20fa20b5e.png)
+![04](https://user-images.githubusercontent.com/251980/142998321-37f5d2e7-3377-4b6b-b412-1ac0ae914b56.png)
+![05](https://user-images.githubusercontent.com/251980/142998327-c208631c-5d04-433c-b29f-35454864ceed.png)
+![06](https://user-images.githubusercontent.com/251980/142998328-4bdea487-4672-4cd9-a3c7-14b93ef947ee.png)
+![07](https://user-images.githubusercontent.com/251980/142998333-891f4aeb-6dea-4be1-850d-ddc2bcc5c956.png)
 
 
 这个程序是Swift写的，按照声明式UI，响应式编程范式开发的，源码也可以看看。与其讲一堆，不如调着试。
