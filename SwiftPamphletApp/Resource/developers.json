@@ -1,0 +1,73 @@
+[
+    {
+        "name":"Swift官方",
+        "id":2111161255,
+        "users":[
+            {
+                "id":"tkremenek",
+                "des":"Swift director"
+            },
+            {
+                "id":"DougGregor"
+            },
+            {
+                "id":"mikeash",
+                "des": "Friday Q&A"
+            }
+        ]
+    },
+    {
+        "name":"社区",
+        "id":2111141053,
+        "users":[
+            {
+                "id":"onevcat",
+                "des":"喵神"
+            },
+            {
+                "id":"DianQK",
+                "des":"SwiftGG翻译组"
+            },
+            {
+                "id":"mattt",
+                "des":"NSHipster"
+            },
+            {
+                "id":"mecid",
+                "des":"Swift with Majid"
+            },
+            {
+                "id":"ibireme",
+                "des":"YYDS"
+            },
+            {
+                "id":"ethanhuang13",
+                "des":"[weak self]播客"
+            },
+            {
+                "id":"pofat",
+                "des":"[weak self]播客"
+            },
+            {
+                "id":"daveverwer",
+                "des":"iOS Dev Weekly"
+            },
+            {
+                "id":"pointfreeco",
+                "des":"Point-Free"
+            },
+            {
+                "id":"sindresorhus"
+            },
+            {
+                "id":"lkzhao"
+            },
+            {
+                "id":"insidegui"
+            },
+            {
+                "id":"mxcl"
+            }
+        ]
+    }
+]
