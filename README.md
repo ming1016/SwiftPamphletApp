@@ -1,6 +1,6 @@
 ## 戴铭的 Swift 小册子
 
-越来越多同学打算开始用 Swift 来开发了，可很多人以前都没接触过 Swift。这篇和我以前文章不同的是，本篇只是面向 Swift 零基础的同学，内容主要是一些直接可用的小例子，例子可以直接在工程中用或自己调试着看。
+越来越多同学打算开始用 Swift 来开发了，可很多人以前都没接触过 Swift。这篇[戴铭的 Swift 小册子 · 戴铭的博客 - 星光社](https://ming1016.github.io/2021/11/23/daiming-swift-pamphlet/)和我以前文章不同的是，本篇只是面向 Swift 零基础的同学，内容主要是一些直接可用的小例子，例子可以直接在工程中用或自己调试着看。
 
 记得以前 PHP 有个 chm 的手册，写的很简单，但很全，每个知识点都有例子，社区版每个知识点下面还有留言互动。因此，我弄了个 Swift 的手册，是个 macOS 程序。建议使用我开发的这个 macOS 程序来浏览，使用方法是：
 * 从  [GitHub - ming1016/SwiftPamphletApp: 戴铭的 Swift 小册子，一本活的 Swift 手册](https://github.com/ming1016/SwiftPamphletApp)  仓库拉代码。
