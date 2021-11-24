@@ -8,7 +8,7 @@
 import Foundation
 
 struct SPConfig {
-    static let gitHubAccessToken = "" // 在这里写上 Github 的access token。在 https://github.com/settings/tokens 申请你的access token。
+    static let gitHubAccessToken = "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" // 在这里写上 Github 的access token。在 https://github.com/settings/tokens 申请你的access token。
     static let detailMinWidth: CGFloat = 500
     static let githubHost = "https://github.com/"
     static let pamphletIssueRepoName = "ming1016/SwiftPamphletApp"
