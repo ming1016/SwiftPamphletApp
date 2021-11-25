@@ -31,7 +31,7 @@ final class APISev: APISevType {
         let path = URL(string: req.path, relativeTo: rootUrl)!
         var comp = URLComponents(url: path, resolvingAgainstBaseURL: true)!
         comp.queryItems = req.qItems
-        print(comp.url?.description ?? "url wrong")
+//        print(comp.url?.description ?? "url wrong")
         var req = URLRequest(url: comp.url!)
         
         // token 处理
@@ -61,8 +61,8 @@ final class APISev: APISevType {
 //                print(String(decoding: data, as: UTF8.self))
 //                print(res.description)
                 // 打印api访问额度
-                let hres = res as! HTTPURLResponse
-                print(hres.value(forHTTPHeaderField: "x-ratelimit-remaining") ?? "none")
+//                let hres = res as! HTTPURLResponse
+//                print(hres.value(forHTTPHeaderField: "x-ratelimit-remaining") ?? "none")
                 return data
             }
             .mapError { _ in
