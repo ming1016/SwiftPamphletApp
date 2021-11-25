@@ -54,6 +54,8 @@ final class APISev: APISevType {
         de.keyDecodingStrategy = .convertFromSnakeCase
         let sch = DispatchQueue(label: "GitHub API Queue", qos: .default, attributes: .concurrent)
         return URLSession.shared.dataTaskPublisher(for: req)
+            .retry(3)
+            .subscribe(on: sch)
             .receive(on: sch)
             .map { data, res in
 //                print(String(decoding: data, as: UTF8.self))
