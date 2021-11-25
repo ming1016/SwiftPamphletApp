@@ -33,7 +33,22 @@ extension Array {
 
 // 跳到浏览器中显示网址内容
 func gotoWebBrowser(urlStr: String) {
-    NSWorkspace.shared.open(URL(string: urlStr)!)
+    if !urlStr.isEmpty {
+        let validUrlStr = validHTTPUrlStrFromUrlStr(urlStr: urlStr)
+        NSWorkspace.shared.open(URL(string: validUrlStr)!)
+    } else {
+        print("error: url is empty!")
+    }
+}
+
+// 检查地址是否有效
+func validHTTPUrlStrFromUrlStr(urlStr: String) -> String {
+    let httpPrefix = "http://"
+    let httpsPrefix = "https://"
+    if (urlStr.hasPrefix(httpPrefix) || urlStr.hasPrefix(httpsPrefix)) {
+        return urlStr
+    }
+    return httpsPrefix + urlStr
 }
 
 // 从Bundle中读取并解析JSON文件生成Model

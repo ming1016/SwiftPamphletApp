@@ -34,8 +34,10 @@ struct UserView: View {
                 }
                 HStack {
                     if vm.user.blog != nil {
-                        Text("博客：\(vm.user.blog ?? "")")
-                        ButtonGoGitHubWeb(url: vm.user.blog ?? "", text: "访问")
+                        if !vm.user.blog!.isEmpty {
+                            Text("博客：\(vm.user.blog ?? "")")
+                            ButtonGoGitHubWeb(url: vm.user.blog ?? "", text: "访问")
+                        }
                     }
                     if vm.user.twitterUsername != nil {
                         Text("Twitter：")
