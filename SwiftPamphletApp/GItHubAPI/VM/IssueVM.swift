@@ -8,7 +8,9 @@
 import Foundation
 import Combine
 
-final class IssueVM: ObservableObject {
+
+
+final class IssueVM: ObservableObject, APIVMable {
     private var cancellables: [AnyCancellable] = []
     public let repoName: String
     public let issueNumber: Int
@@ -32,27 +34,27 @@ final class IssueVM: ObservableObject {
     private let resCIADsSj = PassthroughSubject<IssueModel, Never>()
     private let resCIGRsSj = PassthroughSubject<IssueModel, Never>()
     
-    func apInInit() {
-        apIssueSj.send(())
-        apCommentsSj.send(())
+    enum IssueActionType {
+        case inInit, customIssues, ciads, cigrs, update
+    }
+    typealias ActionType = IssueActionType // 可在定义doing函数时，通过参数类型指定，类型推导出来
+    func doing(_ somethinglike: IssueActionType) {
+        switch somethinglike {
+        case .inInit: // 初始化
+            apIssueSj.send(())
+            apCommentsSj.send(())
+        case .customIssues: // 内容
+            apCustomIssuesSj.send(())
+        case .ciads: // 开发者动态
+            apCIADsSj.send(())
+        case .cigrs: // 仓库动态
+            apCIGRsSj.send(())
+        case .update: // 更新
+            apIssueSj.send(())
+            apCommentsSj.send(())
+        }
     }
     
-    func apCustomIssues() {
-        apCustomIssuesSj.send(())
-    }
-    
-    func apCIADs() {
-        apCIADsSj.send(())
-    }
-    
-    func apCIGRs() {
-        apCIGRsSj.send(())
-    }
-    
-    func update() {
-        apIssueSj.send(())
-        apCommentsSj.send(())
-    }
     
     init(repoName: String, issueNumber: Int) {
         self.repoName = repoName

@@ -21,12 +21,8 @@ struct SPIssuesListView: View {
                     IssueView(vm: IssueVM(repoName: repoVm.repoName, issueNumber: issue.number))
                 } label: {
                     VStack(alignment: .leading, spacing: 3) {
-                        Text(issue.title)
-//                        HStack {
-//                            Text(issue.updatedAt.prefix(10))
-//                            Text("\(issue.comments) 回复")
-//                        }
-//                        .font(.system(.footnote))
+                        Text(issue.title).bold()
+                        Text(issue.updatedAt.prefix(10)).font(.system(.footnote)).foregroundColor(.secondary)
                     }
                     .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
                 } // end NavigationLink

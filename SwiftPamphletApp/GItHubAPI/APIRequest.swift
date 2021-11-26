@@ -16,6 +16,11 @@ protocol APIReqType {
     var qItems: [URLQueryItem]? { get }
 }
 
+protocol APIVMable {
+    associatedtype ActionType
+    func doing(_ somethinglike: ActionType)
+}
+
 protocol APISevType {
     func response<Request>(from req: Request) -> AnyPublisher<Request.Res, APISevError> where Request: APIReqType
 }
@@ -88,3 +93,5 @@ enum APISevError: Error {
         }
     }
 }
+
+

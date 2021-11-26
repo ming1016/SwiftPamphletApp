@@ -24,7 +24,7 @@ struct IssueView: View {
                         Text(vm.issue.title).font(.system(.largeTitle))
                         ButtonGoGitHubWeb(url: vm.issue.htmlUrl, text: "在 GitHub 上访问")
                         Button {
-                            vm.update()
+                            vm.doing(.update)
                         } label: {
                             Image(systemName: "arrow.triangle.2.circlepath")
                         }
@@ -76,7 +76,7 @@ struct IssueView: View {
         } // end ScrollView
         .frame(minWidth: SPConfig.detailMinWidth)
         .onAppear {
-            vm.apInInit()
+            vm.doing(.inInit)
         }
         
     }

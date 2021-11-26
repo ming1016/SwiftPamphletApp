@@ -23,7 +23,7 @@ struct GoodReposListView: View {
         } // end List
         .navigationTitle("仓库动态")
         .onAppear {
-            vm.apCIGRs()
+            vm.doing(.cigrs)
         }
     }
 }

@@ -26,7 +26,7 @@ struct ActiveDeveloperListView: View {
         }
         .navigationTitle("开发者动态")
         .onAppear {
-            vm.apCIADs()
+            vm.doing(.ciads)
         }
         
     }

@@ -28,7 +28,7 @@ struct IssuesListFromCustomView: View {
             }
         }
         .onAppear {
-            vm.apCustomIssues()
+            vm.doing(.customIssues)
         }
     }
 }
