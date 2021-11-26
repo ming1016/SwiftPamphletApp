@@ -7,6 +7,38 @@
 
 import Foundation
 import SwiftUI
+import Combine
+import Network
+
+// 网络状态检查 network state check
+final class Nsck: ObservableObject {
+    static let shared = Nsck()
+    private(set) lazy var pb = mkpb()
+    @Published private(set) var pt: NWPath
+    
+    private let monitor: NWPathMonitor
+    private lazy var sj = CurrentValueSubject<NWPath, Never>(monitor.currentPath)
+    private var sb: AnyCancellable?
+    
+    init() {
+        monitor = NWPathMonitor()
+        pt = monitor.currentPath
+        monitor.pathUpdateHandler = { [weak self] path in
+            self?.pt = path
+            self?.sj.send(path)
+        }
+        monitor.start(queue: DispatchQueue.global())
+    }
+    
+    deinit {
+        monitor.cancel()
+        sj.send(completion: .finished)
+    }
+    
+    private func mkpb() -> AnyPublisher<NWPath, Never> {
+        return sj.eraseToAnyPublisher()
+    }
+}
 
 // base64
 extension String {

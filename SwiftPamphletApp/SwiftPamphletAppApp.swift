@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 @main
 struct SwiftPamphletAppApp: App {
@@ -19,6 +20,8 @@ struct SwiftPamphletAppApp: App {
 }
 
 struct SwiftPamphletApp: View {
+    @State var sb = Set<AnyCancellable>()
+    @State var alertMsg = ""
     @StateObject var gModel = globalModel()
     var body: some View {
         NavigationView {
@@ -42,8 +45,42 @@ struct SwiftPamphletApp: View {
                 NavView()
             }
         }
+        .onAppear(perform: {
+            Nsck.shared.pb
+                .sink { _ in
+                    //
+                } receiveValue: { path in
+                    alertMsg = path.debugDescription
+                    switch path.status {
+                    case .satisfied:
+                        alertMsg = ""
+                    case .unsatisfied:
+                        alertMsg = "😱"
+                    case .requiresConnection:
+                        alertMsg = "🥱"
+                    @unknown default:
+                        alertMsg = "🤔"
+                    }
+                    if path.status == .unsatisfied {
+                        switch path.unsatisfiedReason {
+                        case .notAvailable:
+                            alertMsg += "网络不可用"
+                        case .cellularDenied:
+                            alertMsg += "蜂窝网不可用"
+                        case .wifiDenied:
+                            alertMsg += "Wifi不可用"
+                        case .localNetworkDenied:
+                            alertMsg += "网线不可用"
+                        @unknown default:
+                            alertMsg += "网络不可用"
+                        }
+                    }
+                }
+                .store(in: &sb)
+
+        })
         .frame(minHeight: 700)
-        .navigationTitle("戴铭的 Swift 小册子")
+        .navigationTitle("戴铭的 Swift 小册子 \(alertMsg)")
         .toolbar {
             ToolbarItem(placement: ToolbarItemPlacement.navigation) {
                 Button {
