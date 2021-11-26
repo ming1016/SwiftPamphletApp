@@ -10,6 +10,47 @@ import SwiftUI
 import Combine
 import Network
 
+final class AppVM: ObservableObject {
+    @Published var alertMsg = "" // 网络状态
+    private var cc: [AnyCancellable] = []
+    
+    // 订阅网络状态
+    func nsck() {
+        Nsck.shared.pb
+            .sink { _ in
+                //
+            } receiveValue: { [weak self] path in
+                self?.alertMsg = path.debugDescription
+                switch path.status {
+                case .satisfied:
+                    self?.alertMsg = ""
+                case .unsatisfied:
+                    self?.alertMsg = "😱"
+                case .requiresConnection:
+                    self?.alertMsg = "🥱"
+                @unknown default:
+                    self?.alertMsg = "🤔"
+                }
+                if path.status == .unsatisfied {
+                    switch path.unsatisfiedReason {
+                    case .notAvailable:
+                        self?.alertMsg += "网络不可用"
+                    case .cellularDenied:
+                        self?.alertMsg += "蜂窝网不可用"
+                    case .wifiDenied:
+                        self?.alertMsg += "Wifi不可用"
+                    case .localNetworkDenied:
+                        self?.alertMsg += "网线不可用"
+                    @unknown default:
+                        self?.alertMsg += "网络不可用"
+                    }
+                }
+            }
+            .store(in: &cc)
+    }
+    
+}
+
 // 网络状态检查 network state check
 final class Nsck: ObservableObject {
     static let shared = Nsck()
@@ -27,7 +68,7 @@ final class Nsck: ObservableObject {
             self?.pt = path
             self?.sj.send(path)
         }
-        monitor.start(queue: DispatchQueue.global())
+        monitor.start(queue: DispatchQueue.main)
     }
     
     deinit {

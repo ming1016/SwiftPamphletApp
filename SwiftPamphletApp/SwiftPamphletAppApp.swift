@@ -20,9 +20,9 @@ struct SwiftPamphletAppApp: App {
 }
 
 struct SwiftPamphletApp: View {
+    @StateObject var appVM = AppVM()
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
-    @StateObject var gModel = globalModel()
     var body: some View {
         NavigationView {
             if SPConfig.gitHubAccessToken.isEmpty == true {
@@ -45,42 +45,12 @@ struct SwiftPamphletApp: View {
                 NavView()
             }
         }
+        
         .onAppear(perform: {
-            Nsck.shared.pb
-                .sink { _ in
-                    //
-                } receiveValue: { path in
-                    alertMsg = path.debugDescription
-                    switch path.status {
-                    case .satisfied:
-                        alertMsg = ""
-                    case .unsatisfied:
-                        alertMsg = "😱"
-                    case .requiresConnection:
-                        alertMsg = "🥱"
-                    @unknown default:
-                        alertMsg = "🤔"
-                    }
-                    if path.status == .unsatisfied {
-                        switch path.unsatisfiedReason {
-                        case .notAvailable:
-                            alertMsg += "网络不可用"
-                        case .cellularDenied:
-                            alertMsg += "蜂窝网不可用"
-                        case .wifiDenied:
-                            alertMsg += "Wifi不可用"
-                        case .localNetworkDenied:
-                            alertMsg += "网线不可用"
-                        @unknown default:
-                            alertMsg += "网络不可用"
-                        }
-                    }
-                }
-                .store(in: &sb)
-
+            appVM.nsck()
         })
         .frame(minHeight: 700)
-        .navigationTitle("戴铭的 Swift 小册子 \(alertMsg)")
+        .navigationTitle("戴铭的 Swift 小册子 \(appVM.alertMsg)")
         .toolbar {
             ToolbarItem(placement: ToolbarItemPlacement.navigation) {
                 Button {
@@ -90,7 +60,8 @@ struct SwiftPamphletApp: View {
                 }
             }
         }
-        .environmentObject(gModel)
+        .environmentObject(appVM)
+        
     }
 }
 
@@ -198,9 +169,7 @@ struct SPSidebar: View {
 protocol Jsonable : Identifiable, Decodable, Hashable {}
 
 // MARK: Evironment Model
-final class globalModel: ObservableObject {
-    @Published var activeDeveloperNewsCount: Int = 0
-}
+
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
