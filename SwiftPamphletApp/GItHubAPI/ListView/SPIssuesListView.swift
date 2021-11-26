@@ -29,7 +29,7 @@ struct SPIssuesListView: View {
             } // end ForEach
         } // end List
         .onAppear {
-            repoVm.appearInIssues()
+            repoVm.doing(.inIssues)
         }
         .frame(minWidth:60)
     }

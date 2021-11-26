@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class RepoVM: ObservableObject {
+final class RepoVM: ObservableObject, APIVMable {
     private var cancellables: [AnyCancellable] = []
     
     public let repoName: String
@@ -33,25 +33,23 @@ final class RepoVM: ObservableObject {
     private let resIssuesSj = PassthroughSubject<[IssueModel], Never>()
     private let resReadmeSj = PassthroughSubject<RepoContent, Never>()
     
-    func appearInInit() {
-        apRepoSj.send(())
-        apCommitsSj.send(())
+    enum RepoActionType {
+        case inInit, inInitJustRepo, inIssueEvents, inIssues, inReadme
     }
-    
-    func appearInInitJustRepo() {
-        apRepoSj.send(())
-    }
-    
-    func appearInIssueEvents() {
-        apIssueEventsSj.send(())
-    }
-    
-    func appearInIssues() {
-        apIssuesSj.send(())
-    }
-    
-    func appearInReadme() {
-        apReadmeSj.send(())
+    func doing(_ somethinglike: RepoActionType) {
+        switch somethinglike {
+        case .inInit:
+            apRepoSj.send(())
+            apCommitsSj.send(())
+        case .inInitJustRepo:
+            apRepoSj.send(())
+        case .inIssueEvents:
+            apIssueEventsSj.send(())
+        case .inIssues:
+            apIssuesSj.send(())
+        case .inReadme:
+            apReadmeSj.send(())
+        }
     }
     
     init(repoName: String) {

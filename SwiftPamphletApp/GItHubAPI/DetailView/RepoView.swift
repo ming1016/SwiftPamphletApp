@@ -42,10 +42,10 @@ struct RepoView: View {
         .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
         .onAppear {
             if type == .readme {
-                vm.appearInInitJustRepo()
+                vm.doing(.inInitJustRepo)
                 tabSelct = 4
             } else {
-                vm.appearInInit()
+                vm.doing(.inInit)
             }
             
         }
@@ -63,7 +63,7 @@ struct RepoView: View {
                     Text("议题列表")
                 }
                 .onAppear {
-                    vm.appearInIssues()
+                    vm.doing(.inIssues)
                 }
                 .tag(2)
             
@@ -72,7 +72,7 @@ struct RepoView: View {
                     Text("议题事件")
                 }
                 .onAppear {
-                    vm.appearInIssueEvents()
+                    vm.doing(.inIssueEvents)
                 }
                 .tag(3)
             
@@ -81,7 +81,7 @@ struct RepoView: View {
                     Text("README")
                 }
                 .onAppear {
-                    vm.appearInReadme()
+                    vm.doing(.inReadme)
                 }
                 .tag(4)
             
