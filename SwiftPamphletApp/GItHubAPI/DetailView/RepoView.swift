@@ -38,6 +38,7 @@ struct RepoView: View {
             } // end VStack
             Spacer()
         }
+        .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .frame(minWidth: SPConfig.detailMinWidth)
         .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
         .onAppear {

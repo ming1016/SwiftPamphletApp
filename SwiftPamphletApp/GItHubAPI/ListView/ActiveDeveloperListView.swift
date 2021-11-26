@@ -24,6 +24,7 @@ struct ActiveDeveloperListView: View {
 
             }
         }
+        .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .navigationTitle("开发者动态")
         .onAppear {
             vm.doing(.ciads)

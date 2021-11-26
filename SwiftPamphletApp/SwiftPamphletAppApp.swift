@@ -37,7 +37,7 @@ struct SwiftPamphletApp: View {
                 }
             } else {
                 SPSidebar()
-                SPIssuesListView(repoVm: RepoVM(repoName: SPConfig.pamphletIssueRepoName))
+                SPIssuesListView(vm: RepoVM(repoName: SPConfig.pamphletIssueRepoName))
                 IntroView()
                 NavView()
             }
@@ -135,7 +135,7 @@ struct SPSidebar: View {
             
             Section("小册子") {
                 NavigationLink {
-                    SPIssuesListView(repoVm: RepoVM(repoName: SPConfig.pamphletIssueRepoName))
+                    SPIssuesListView(vm: RepoVM(repoName: SPConfig.pamphletIssueRepoName))
                 } label: {
                     Label("小册子议题", systemImage: "square.3.layers.3d.down.right")
                 }

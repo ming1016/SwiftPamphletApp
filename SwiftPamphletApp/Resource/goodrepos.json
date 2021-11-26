@@ -199,6 +199,10 @@
         "id":2111121046,
         "repos":[
             {
+                "id":"serhii-londar/open-source-mac-os-apps",
+                "des":"开源 macOS 程序合集"
+            },
+            {
                 "id":"insidegui/WWDC"
             },
             {
@@ -239,6 +243,9 @@
             {
                 "id":"twostraws/HackingWithSwift",
                 "des":"示例代码"
+            },
+            {
+                "id":"fangzesheng/free-api"
             }
         ]
     }

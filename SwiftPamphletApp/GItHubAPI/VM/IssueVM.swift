@@ -10,7 +10,7 @@ import Combine
 
 
 
-final class IssueVM: ObservableObject, APIVMable {
+final class IssueVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
     public let repoName: String
     public let issueNumber: Int
@@ -19,6 +19,10 @@ final class IssueVM: ObservableObject, APIVMable {
     @Published private(set) var customIssues: [CustomIssuesModel]
     @Published private(set) var cIADs: [SPActiveDevelopersModel] // 开发者动态
     @Published private(set) var cIGRs: [SPGoodReposModel] // 仓库动态
+    
+    @Published var errHint = false
+    @Published var errMsg = ""
+    private let errSj = PassthroughSubject<APISevError, Never>()
     
     private let apiSev: APISev
     
@@ -71,7 +75,8 @@ final class IssueVM: ObservableObject, APIVMable {
         let resIssueSm = apIssueSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqIssue)
-                    .catch { error -> Empty<IssueModel, Never> in
+                    .catch { [weak self] error -> Empty<IssueModel, Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -85,7 +90,8 @@ final class IssueVM: ObservableObject, APIVMable {
         let resCommentsSm = apCommentsSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqComments)
-                    .catch { error -> Empty<[IssueComment], Never> in
+                    .catch { [weak self] error -> Empty<[IssueComment], Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -99,7 +105,8 @@ final class IssueVM: ObservableObject, APIVMable {
         let resCustomIssuesSm = apCustomIssuesSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqCustomIssues)
-                    .catch { error -> Empty<IssueModel, Never> in
+                    .catch { [weak self] error -> Empty<IssueModel, Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -123,7 +130,8 @@ final class IssueVM: ObservableObject, APIVMable {
         let resCIADsSm = apCIADsSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqCustomIssues)
-                    .catch { error -> Empty<IssueModel, Never> in
+                    .catch { [weak self] error -> Empty<IssueModel, Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -148,7 +156,8 @@ final class IssueVM: ObservableObject, APIVMable {
         let resCIGRsSm = apCIGRsSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqCustomIssues)
-                    .catch { error -> Empty<IssueModel, Never> in
+                    .catch { [weak self] error -> Empty<IssueModel, Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -168,13 +177,25 @@ final class IssueVM: ObservableObject, APIVMable {
             }
             .assign(to: \.cIGRs, on: self)
         
+        // 错误
+        let errMsgSm = errSj
+            .map { err -> String in
+                err.message
+            }
+            .assign(to: \.errMsg, on: self)
+        let errHintSm = errSj
+            .map { _ in
+                true
+            }
+            .assign(to: \.errHint, on: self)
         
         cancellables += [
             resIssueSm, repIssueSm,
             resCommentsSm, repCommentsSm,
             resCustomIssuesSm, repCustomIssuesSm,
             resCIADsSm, repCIADsSm,
-            resCIGRsSm, repCIGRsSm
+            resCIGRsSm, repCIGRsSm,
+            errMsgSm, errHintSm
         ]
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SPIssuesListView: View {
-    @StateObject var repoVm: RepoVM
+    @StateObject var vm: RepoVM
     var body: some View {
         HStack(spacing:0) {
             Text("小册子议题更新").bold()
@@ -16,9 +16,9 @@ struct SPIssuesListView: View {
         }
         .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
         List {
-            ForEach(repoVm.issues) { issue in
+            ForEach(vm.issues) { issue in
                 NavigationLink {
-                    IssueView(vm: IssueVM(repoName: repoVm.repoName, issueNumber: issue.number))
+                    IssueView(vm: IssueVM(repoName: vm.repoName, issueNumber: issue.number))
                 } label: {
                     VStack(alignment: .leading, spacing: 3) {
                         Text(issue.title).bold()
@@ -28,8 +28,9 @@ struct SPIssuesListView: View {
                 } // end NavigationLink
             } // end ForEach
         } // end List
+        .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .onAppear {
-            repoVm.doing(.inIssues)
+            vm.doing(.inIssues)
         }
         .frame(minWidth:60)
     }

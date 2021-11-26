@@ -21,6 +21,7 @@ struct GoodReposListView: View {
                 }
             }
         } // end List
+        .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .navigationTitle("仓库动态")
         .onAppear {
             vm.doing(.cigrs)

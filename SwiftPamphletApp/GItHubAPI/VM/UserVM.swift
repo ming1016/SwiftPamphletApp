@@ -9,12 +9,16 @@ import Foundation
 import Combine
 import AppKit
 
-final class UserVM: ObservableObject {
+final class UserVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
     
     @Published private(set) var user: UserModel
     @Published private(set) var events: [EventModel]
     @Published private(set) var receivedEvents: [EventModel]
+    
+    @Published var errHint = false
+    @Published var errMsg = ""
+    private let errSj = PassthroughSubject<APISevError, Never>()
     
     private let apiSev: APISev
     
@@ -26,12 +30,17 @@ final class UserVM: ObservableObject {
     private let resEventsSubject = PassthroughSubject<[EventModel], Never>()
     private let resReceivedEventsSubject = PassthroughSubject<[EventModel], Never>()
 
-    func appearInInit() {
-        appearUserSubject.send(())
-        appearEventsSubject.send(())
+    enum UserActionType {
+        case inInit, inReceivedEvent
     }
-    func appearInReceivedEvent() {
-        appearReceivedEventsSubject.send(())
+    func doing(_ somethinglike: UserActionType) {
+        switch somethinglike {
+        case .inInit:
+            appearUserSubject.send(())
+            appearEventsSubject.send(())
+        case .inReceivedEvent:
+            appearReceivedEventsSubject.send(())
+        }
     }
     
     init(userName: String) {
@@ -45,7 +54,8 @@ final class UserVM: ObservableObject {
         let resUserStream = appearUserSubject
             .flatMap { [apiSev] in
                 apiSev.response(from: reqUser)
-                    .catch { error -> Empty<UserModel, Never> in
+                    .catch { [weak self] error -> Empty<UserModel, Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -60,7 +70,8 @@ final class UserVM: ObservableObject {
         let resEventStream = appearEventsSubject
             .flatMap { [apiSev] in
                 apiSev.response(from: reqEvent)
-                    .catch { error -> Empty<[EventModel], Never> in
+                    .catch { [weak self] error -> Empty<[EventModel], Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -74,7 +85,8 @@ final class UserVM: ObservableObject {
         let resReceivedEventStream = appearReceivedEventsSubject
             .flatMap { [apiSev] in
                 apiSev.response(from: reqReceivedEvent)
-                    .catch { error -> Empty<[EventModel], Never> in
+                    .catch { [weak self] error -> Empty<[EventModel], Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -83,11 +95,23 @@ final class UserVM: ObservableObject {
         let repReceivedEventStream = resReceivedEventsSubject
             .assign(to: \.receivedEvents, on: self)
         
+        // 错误
+        let errMsgSm = errSj
+            .map { err -> String in
+                err.message
+            }
+            .assign(to: \.errMsg, on: self)
+        let errHintSm = errSj
+            .map { _ in
+                true
+            }
+            .assign(to: \.errHint, on: self)
         
         cancellables += [
             resUserStream, repUserStream,
             resEventStream, repEventStream,
-            resReceivedEventStream, repReceivedEventStream
+            resReceivedEventStream, repReceivedEventStream,
+            errMsgSm, errHintSm
         ]
     }
 }

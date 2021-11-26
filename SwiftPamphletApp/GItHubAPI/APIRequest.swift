@@ -16,7 +16,7 @@ protocol APIReqType {
     var qItems: [URLQueryItem]? { get }
 }
 
-protocol APIVMable {
+protocol APIVMable: ObservableObject {
     associatedtype ActionType
     func doing(_ somethinglike: ActionType)
 }
@@ -74,7 +74,9 @@ final class APISev: APISevType {
                 APISevError.resError
             }
             .decode(type: Request.Res.self, decoder: de)
-            .mapError(APISevError.parseError)
+            .mapError { _ in
+                APISevError.parseError
+            }
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
@@ -82,14 +84,14 @@ final class APISev: APISevType {
 
 enum APISevError: Error {
     case resError
-    case parseError(Error)
+    case parseError
     
     var message: String {
         switch self {
         case .resError:
-            return "network error"
+            return "网络无法访问"
         case .parseError:
-            return "parse error"
+            return "数据解析出错"
         }
     }
 }

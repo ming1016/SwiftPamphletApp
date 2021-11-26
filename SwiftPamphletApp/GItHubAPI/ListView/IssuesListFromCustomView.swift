@@ -11,7 +11,6 @@ struct IssuesListFromCustomView: View {
     @StateObject var vm: IssueVM
     var body: some View {
         List {
-//            ForEach(SPConfig.loadCustomIssues(jsonFileName: "guide-syntax")) { ci in
             ForEach(vm.customIssues) { ci in
                 Section {
                     ForEach(ci.issues) { i in
@@ -27,6 +26,7 @@ struct IssuesListFromCustomView: View {
 
             }
         }
+        .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .onAppear {
             vm.doing(.customIssues)
         }

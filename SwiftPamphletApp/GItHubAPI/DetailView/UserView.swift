@@ -48,9 +48,10 @@ struct UserView: View {
             }
             Spacer()
         }
+        .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
         .onAppear {
-            vm.appearInInit()
+            vm.doing(.inInit)
         }
         .frame(minWidth: SPConfig.detailMinWidth)
         TabView {
@@ -63,7 +64,7 @@ struct UserView: View {
                     Text("Ta 接收的事件")
                 }
                 .onAppear {
-                    vm.appearInReceivedEvent()
+                    vm.doing(.inReceivedEvent)
                 }
         }
         

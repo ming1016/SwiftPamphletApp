@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class RepoVM: ObservableObject, APIVMable {
+final class RepoVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
     
     public let repoName: String
@@ -18,6 +18,10 @@ final class RepoVM: ObservableObject, APIVMable {
     @Published private(set) var issueEvents: [IssueEventModel]
     @Published private(set) var issues: [IssueModel]
     @Published private(set) var readme: RepoContent
+    
+    @Published var errHint = false
+    @Published var errMsg = ""
+    private let errSj = PassthroughSubject<APISevError, Never>()
 
     private let apiSev: APISev
     
@@ -66,7 +70,8 @@ final class RepoVM: ObservableObject, APIVMable {
         let resRepoSm = apRepoSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqRepo)
-                    .catch { error -> Empty<RepoModel, Never> in
+                    .catch { [weak self] error -> Empty<RepoModel, Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -80,7 +85,8 @@ final class RepoVM: ObservableObject, APIVMable {
         let resCommitsSm = apCommitsSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqCommits)
-                    .catch { error -> Empty<[CommitModel], Never> in
+                    .catch { [weak self] error -> Empty<[CommitModel], Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -94,7 +100,8 @@ final class RepoVM: ObservableObject, APIVMable {
         let resIssueEventsSm = apIssueEventsSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqIssueEvents)
-                    .catch { error -> Empty<[IssueEventModel], Never> in
+                    .catch { [weak self] error -> Empty<[IssueEventModel], Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -108,7 +115,8 @@ final class RepoVM: ObservableObject, APIVMable {
         let resIssuesSm = apIssuesSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqIssues)
-                    .catch { error -> Empty<[IssueModel], Never> in
+                    .catch { [weak self] error -> Empty<[IssueModel], Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -122,7 +130,8 @@ final class RepoVM: ObservableObject, APIVMable {
         let resReadmeSm = apReadmeSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqReadme)
-                    .catch { error -> Empty<RepoContent, Never> in
+                    .catch { [weak self] error -> Empty<RepoContent, Never> in
+                        self?.errSj.send(error)
                         return .init()
                     }
             }
@@ -131,16 +140,26 @@ final class RepoVM: ObservableObject, APIVMable {
         let repReadmeSm = resReadmeSj
             .assign(to: \.readme, on: self)
         
+        // 错误
+        let errMsgSm = errSj
+            .map { err -> String in
+                err.message
+            }
+            .assign(to: \.errMsg, on: self)
+        let errHintSm = errSj
+            .map { _ in
+                true
+            }
+            .assign(to: \.errHint, on: self)
         
         cancellables += [
             resRepoSm, repRepoSm,
             resCommitsSm, repCommitsSm,
             resIssueEventsSm, repIssueEventsSm,
             resIssuesSm, repIssuesSm,
-            resReadmeSm, repReadmeSm
+            resReadmeSm, repReadmeSm,
+            errMsgSm, errHintSm
         ]
-        
-        
     }
     
 }
