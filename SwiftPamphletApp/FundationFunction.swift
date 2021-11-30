@@ -22,12 +22,14 @@ final class AppVM: ObservableObject {
     private let resReposSj = PassthroughSubject<IssueModel, Never>()
     
     enum AppActionType {
-        case loadDBRepoInfo
+        case loadDBRepoInfoFromServer, loadDBRepoInfoLocal
     }
     func doing(_ somethinglike: AppActionType) {
         switch somethinglike {
-        case .loadDBRepoInfo:
+        case .loadDBRepoInfoFromServer:
             apReposSj.send(())
+        case .loadDBRepoInfoLocal:
+            loadDBReposLoal()
         }
     }
     
@@ -95,6 +97,20 @@ final class AppVM: ObservableObject {
         cc += [
             resReposSm, repReposSm
         ]
+    }
+    
+    func loadDBReposLoal() {
+        do {
+            if let arr = try ReposDataHelper.findAll() {
+                if arr.count > 0 {
+                    var ReposDic = [String: Int]()
+                    for i in arr {
+                        ReposDic[i.fullName] = i.unRead
+                    }
+                    reposNotis = ReposDic
+                }
+            }
+        } catch {}
     }
     
     func calculateReposCountNotis() {

@@ -58,7 +58,8 @@ struct SwiftPamphletApp: View {
                 SPSidebar()
                     .onAppear(perform: {
                         appVM.nsck()
-                        appVM.doing(.loadDBRepoInfo) // 读取数据存储仓库数据
+                        appVM.doing(.loadDBRepoInfoLocal)
+                        appVM.doing(.loadDBRepoInfoFromServer) // 读取数据存储仓库数据
                     })
                     .onReceive(timer, perform: { time in
                         print(time)
@@ -74,7 +75,7 @@ struct SwiftPamphletApp: View {
                             
                             let vm = RepoVM(repoName: repoName)
                             vm.doing(.notiRepo)
-                            appVM.doing(.loadDBRepoInfo)
+                            appVM.doing(.loadDBRepoInfoLocal)
                             appVM.calculateReposCountNotis()
                             stepCount += 1
                             print(stepCount)
