@@ -113,8 +113,8 @@ final class IssueVM: APIVMable {
             .share()
             .subscribe(resCustomIssuesSj)
         let repCustomIssuesSm = resCustomIssuesSj
-            .map({ issueMode in
-                let str = issueMode.body?.base64Decoded() ?? ""
+            .map({ issueModel in
+                let str = issueModel.body?.base64Decoded() ?? ""
                 let data: Data
                 data = str.data(using: String.Encoding.utf8)!
                 do {

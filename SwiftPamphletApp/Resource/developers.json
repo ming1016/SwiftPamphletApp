@@ -67,6 +67,18 @@
             },
             {
                 "id":"mxcl"
+            },
+            {
+                "id":"johnno1962",
+                "des":"InjectionIII"
+            },
+            {
+                "id":"wigging",
+                "des":"Back to the Mac"
+            },
+            {
+                "id":"stephencelis",
+                "des":"SQLite.swift"
             }
         ]
     }

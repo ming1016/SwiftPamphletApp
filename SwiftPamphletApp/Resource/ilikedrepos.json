@@ -1,0 +1,21 @@
+[
+    {
+        "name":"官方",
+        "id":2111111948,
+        "repos":[
+            {
+                "id":"apple/swift"
+            },
+            {
+                "id":"apple/swift-evolution",
+                "des":"提案"
+            },
+            {
+                "id":"apple/swift-corelibs-foundation"
+            },
+            {
+                "id":"apple/swift-markdown"
+            }
+        ]
+    }
+]

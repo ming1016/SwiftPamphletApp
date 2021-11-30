@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ActiveDeveloperListView: View {
+    @EnvironmentObject var appVM: AppVM
     @StateObject var vm: IssueVM
     var body: some View {
         
@@ -25,7 +26,7 @@ struct ActiveDeveloperListView: View {
             }
         }
         .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
-        .navigationTitle("开发者动态")
+        .navigationTitle("开发者动态 \(appVM.alertMsg)")
         .onAppear {
             vm.doing(.ciads)
         }

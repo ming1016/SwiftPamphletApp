@@ -15,14 +15,30 @@ struct SwiftPamphletAppApp: App {
     var body: some Scene {
         WindowGroup {
             SwiftPamphletApp()
+//            Demo()
         }
     }
 }
+
+struct Demo: View {
+    var body: some View {
+        Group {
+            AnimateLayout()
+        }
+        .frame(minWidth:300, minHeight: 550)
+        .onAppear {
+            
+        }
+    }
+}
+
 
 struct SwiftPamphletApp: View {
     @StateObject var appVM = AppVM()
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
+    @State var stepCount = 0
+    let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationView {
             if SPConfig.gitHubAccessToken.isEmpty == true {
@@ -40,15 +56,36 @@ struct SwiftPamphletApp: View {
                 }
             } else {
                 SPSidebar()
+                    .onAppear(perform: {
+                        appVM.nsck()
+                        appVM.doing(.loadDBRepoInfo) // 读取数据存储仓库数据
+                    })
+                    .onReceive(timer, perform: { time in
+                        print(time)
+                        if appVM.reposNotis.count > 0 {
+                            if stepCount >= appVM.reposNotis.count {
+                                stepCount = 0
+                            }
+                            var arr = [String]()
+                            for (k,_) in appVM.reposNotis {
+                                arr.append(k)
+                            }
+                            let repoName = arr[stepCount]
+                            
+                            let vm = RepoVM(repoName: repoName)
+                            vm.doing(.notiRepo)
+                            appVM.doing(.loadDBRepoInfo)
+                            appVM.calculateReposCountNotis()
+                            stepCount += 1
+                            print(stepCount)
+                        }
+                        
+                    })
                 SPIssuesListView(vm: RepoVM(repoName: SPConfig.pamphletIssueRepoName))
                 IntroView()
                 NavView()
             }
         }
-        
-        .onAppear(perform: {
-            appVM.nsck()
-        })
         .frame(minHeight: 700)
         .navigationTitle("戴铭的 Swift 小册子 \(appVM.alertMsg)")
         .toolbar {
@@ -90,61 +127,56 @@ struct NavView: View {
 }
 
 struct SPSidebar: View {
+    @EnvironmentObject var appVM: AppVM
     var body: some View {
         List {
             Section("GitHub 上相关动态") {
-                NavigationLink {
-                    ActiveDeveloperListView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 30))
-                } label: {
+                
+                NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 30))) {
                     Label("开发者动态", systemImage: "person.2.wave.2")
                 }
                 
-                NavigationLink {
-                    GoodReposListView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 31))
-                } label: {
-                    Label("仓库动态", systemImage: "book.closed")
+                NavigationLink(destination: GoodReposListView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 31))) {
+                    if appVM.reposCountNotis > 0 {
+                        Label("仓库动态", systemImage: "book.closed")
+                            .badge(appVM.reposCountNotis)
+                    } else {
+                        Label("仓库动态", systemImage: "book.closed")
+                    }
                 }
 
             }
             Section("Swift指南") {
-                NavigationLink {
-                    IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 19))
-                } label: {
+                
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 19))) {
                     Label("语法速查", systemImage: "function")
                 }
-                NavigationLink {
-                    IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 20))
-                } label: {
+                
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 20))) {
                     Label("特性", systemImage: "pencil")
                 }
-                NavigationLink {
-                    IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 21))
-                } label: {
+                
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 21))) {
                     Label("专题", systemImage: "graduationcap")
                 }
             }
             Section("库使用指南") {
-                NavigationLink {
-                    IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 60))
-                } label: {
+                
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 60))) {
                     Label("Combine", systemImage: "app.connected.to.app.below.fill")
                 }
-                NavigationLink {
-                    IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 62))
-                } label: {
+                
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 62))) {
                     Label("Concurrency", systemImage: "timer")
                 }
-                NavigationLink {
-                    IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 61))
-                } label: {
+                
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 61))) {
                     Label("SwiftUI", systemImage: "rectangle.fill.on.rectangle.fill")
                 }
             }
             
             Section("小册子") {
-                NavigationLink {
-                    SPIssuesListView(vm: RepoVM(repoName: SPConfig.pamphletIssueRepoName))
-                } label: {
+                NavigationLink(destination: SPIssuesListView(vm: RepoVM(repoName: SPConfig.pamphletIssueRepoName))) {
                     Label("小册子议题", systemImage: "square.3.layers.3d.down.right")
                 }
             }

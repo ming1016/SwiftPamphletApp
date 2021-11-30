@@ -27,24 +27,27 @@ final class RepoVM: APIVMable {
     
     private let apRepoSj = PassthroughSubject<Void, Never>()
     private let apCommitsSj = PassthroughSubject<Void, Never>()
+    private let apNotiCommitsSj = PassthroughSubject<Void, Never>()
     private let apIssueEventsSj = PassthroughSubject<Void, Never>()
     private let apIssuesSj = PassthroughSubject<Void, Never>()
     private let apReadmeSj = PassthroughSubject<Void, Never>()
     
     private let resRepoSj = PassthroughSubject<RepoModel, Never>()
     private let resCommitsSj = PassthroughSubject<[CommitModel], Never>()
+    private let resNotiCommitsSj = PassthroughSubject<[CommitModel], Never>()
     private let resIssueEventsSj = PassthroughSubject<[IssueEventModel], Never>()
     private let resIssuesSj = PassthroughSubject<[IssueModel], Never>()
     private let resReadmeSj = PassthroughSubject<RepoContent, Never>()
     
     enum RepoActionType {
-        case inInit, inInitJustRepo, inIssueEvents, inIssues, inReadme
+        case inInit, inInitJustRepo, inIssueEvents, inIssues, inReadme, notiRepo
     }
     func doing(_ somethinglike: RepoActionType) {
         switch somethinglike {
         case .inInit:
             apRepoSj.send(())
             apCommitsSj.send(())
+            clearUnReadCommit()
         case .inInitJustRepo:
             apRepoSj.send(())
         case .inIssueEvents:
@@ -53,7 +56,18 @@ final class RepoVM: APIVMable {
             apIssuesSj.send(())
         case .inReadme:
             apReadmeSj.send(())
+        case .notiRepo:
+            apNotiCommitsSj.send(())
         }
+    }
+    func clearUnReadCommit() {
+        do {
+            if let f = try ReposDataHelper.find(sFullName: self.repoName) {
+                do {
+                    let _ = try ReposDataHelper.update(i: DBRepo(fullName: f.fullName, lastReadCommitSha: f.lastReadCommitSha, unRead: 0))
+                } catch {}
+            }
+        } catch {}
     }
     
     init(repoName: String) {
@@ -140,6 +154,47 @@ final class RepoVM: APIVMable {
         let repReadmeSm = resReadmeSj
             .assign(to: \.readme, on: self)
         
+        // 更新某个仓库的通知信息
+        let reqNotiCommits = CommitsRequest(repoName: repoName)
+        let resNotiCommitsSm = apNotiCommitsSj
+            .flatMap { [apiSev] in
+                apiSev.response(from: reqNotiCommits)
+                    .catch { error -> Empty<[CommitModel], Never> in
+                        return .init()
+                    }
+            }
+            .share()
+            .subscribe(resNotiCommitsSj)
+        func updateDBReposInfo(cms: [CommitModel]) {
+            do {
+                if let f = try ReposDataHelper.find(sFullName: repoName) {
+                    var i = 0
+                    var lrcs = f.lastReadCommitSha
+                    for cm in cms {
+                        if i == 0 && f.unRead == 0 {
+                            lrcs = cm.sha
+                        }
+                        if cm.sha == f.lastReadCommitSha {
+                            break
+                        }
+                        i += 1
+                    }
+                    if f.unRead != 0 {
+                        i = f.unRead + i
+                    }
+                    do {
+                        let _ = try ReposDataHelper.update(i: DBRepo(fullName: repoName, lastReadCommitSha: lrcs, unRead: i))
+                    } catch {}
+                }
+            } catch {}
+        }
+        let repNotiCommitsSm = resNotiCommitsSj
+            .map { commitModels in
+                updateDBReposInfo(cms: commitModels)
+                return commitModels
+            }
+            .assign(to: \.commits, on: self)
+        
         // 错误
         let errMsgSm = errSj
             .map { err -> String in
@@ -158,6 +213,7 @@ final class RepoVM: APIVMable {
             resIssueEventsSm, repIssueEventsSm,
             resIssuesSm, repIssuesSm,
             resReadmeSm, repReadmeSm,
+            resNotiCommitsSm, repNotiCommitsSm,
             errMsgSm, errHintSm
         ]
     }

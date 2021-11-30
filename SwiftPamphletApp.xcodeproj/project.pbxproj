@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E02756503B0095E0EE /* AnimateLayout.swift */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
@@ -34,9 +35,14 @@
 		086A5F5A274CC17700FECE02 /* lib-Combine.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F59274CC17700FECE02 /* lib-Combine.json */; };
 		086A5F5D274CCAEC00FECE02 /* lib-Concurrency.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F5B274CCAEC00FECE02 /* lib-Concurrency.json */; };
 		086A5F5E274CCAEC00FECE02 /* lib-SwiftUI.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F5C274CCAEC00FECE02 /* lib-SwiftUI.json */; };
+		086A5F612754C0B500FECE02 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 086A5F602754C0B500FECE02 /* SQLite */; };
+		086A5F642754C14F00FECE02 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* TextView.swift */; };
+		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
+		086A5F6A2755F3BE00FECE02 /* ilikedrepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* ilikedrepos.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		083554E02756503B0095E0EE /* AnimateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLayout.swift; sourceTree = "<group>"; };
 		086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的Swift小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +71,9 @@
 		086A5F59274CC17700FECE02 /* lib-Combine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-Combine.json"; sourceTree = "<group>"; };
 		086A5F5B274CCAEC00FECE02 /* lib-Concurrency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-Concurrency.json"; sourceTree = "<group>"; };
 		086A5F5C274CCAEC00FECE02 /* lib-SwiftUI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-SwiftUI.json"; sourceTree = "<group>"; };
+		086A5F632754C14F00FECE02 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		086A5F662754C27900FECE02 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
+		086A5F692755F3BE00FECE02 /* ilikedrepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ilikedrepos.json; path = SwiftPamphletApp/Resource/ilikedrepos.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086A5F612754C0B500FECE02 /* SQLite in Frameworks */,
 				086A5F55274523F100FECE02 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,11 +153,12 @@
 		086A5F252744ECD700FECE02 /* GItHubAPI */ = {
 			isa = PBXGroup;
 			children = (
-				086A5F382744EDA500FECE02 /* APIRequest.swift */,
-				086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */,
+				086A5F652754C23200FECE02 /* DB */,
 				086A5F3C2744EDB400FECE02 /* VM */,
 				086A5F1E2744ECA400FECE02 /* DetailView */,
 				086A5F152744EC8900FECE02 /* ListView */,
+				086A5F382744EDA500FECE02 /* APIRequest.swift */,
+				086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */,
 			);
 			path = GItHubAPI;
 			sourceTree = "<group>";
@@ -165,6 +176,8 @@
 		086A5F472744EF0800FECE02 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				086A5F622754C12800FECE02 /* SwiftUI */,
+				086A5F692755F3BE00FECE02 /* ilikedrepos.json */,
 				086A5F4C2744EF3B00FECE02 /* developers.json */,
 				086A5F4A2744EF3B00FECE02 /* goodrepos.json */,
 				086A5F57274CB8B500FECE02 /* guide-subject.json */,
@@ -185,6 +198,23 @@
 			path = ViewComponet;
 			sourceTree = "<group>";
 		};
+		086A5F622754C12800FECE02 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				086A5F632754C14F00FECE02 /* TextView.swift */,
+				083554E02756503B0095E0EE /* AnimateLayout.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		086A5F652754C23200FECE02 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				086A5F662754C27900FECE02 /* DBHandler.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,6 +233,7 @@
 			name = SwiftPamphletApp;
 			packageProductDependencies = (
 				086A5F54274523F100FECE02 /* MarkdownUI */,
+				086A5F602754C0B500FECE02 /* SQLite */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */;
@@ -234,6 +265,7 @@
 			mainGroup = 086A5EFA2744E88E00FECE02;
 			packageReferences = (
 				086A5F53274523F100FECE02 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
+				086A5F5F2754C0B500FECE02 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -258,6 +290,7 @@
 				086A5F4F2744EF3B00FECE02 /* guide-syntax.json in Resources */,
 				086A5F5E274CCAEC00FECE02 /* lib-SwiftUI.json in Resources */,
 				086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */,
+				086A5F6A2755F3BE00FECE02 /* ilikedrepos.json in Resources */,
 				086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,15 +307,18 @@
 				086A5F422744EDCE00FECE02 /* IssueVM.swift in Sources */,
 				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
+				083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
 				086A5F3B2744EDA500FECE02 /* GitHubAPIModel.swift in Sources */,
 				086A5F312744ED8600FECE02 /* GoodReposListView.swift in Sources */,
 				086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */,
 				086A5F412744EDCE00FECE02 /* UserVM.swift in Sources */,
+				086A5F642754C14F00FECE02 /* TextView.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
 				086A5F3A2744EDA500FECE02 /* APIRequest.swift in Sources */,
 				086A5F522744EF4C00FECE02 /* ViewComponet.swift in Sources */,
+				086A5F672754C27900FECE02 /* DBHandler.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
 				086A5F2F2744ED8600FECE02 /* SPIssuesListView.swift in Sources */,
 			);
@@ -349,6 +385,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -403,6 +440,7 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 			};
 			name = Release;
 		};
@@ -494,6 +532,14 @@
 				minimumVersion = 0.5.2;
 			};
 		};
+		086A5F5F2754C0B500FECE02 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.13.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -501,6 +547,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 086A5F53274523F100FECE02 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
 			productName = MarkdownUI;
+		};
+		086A5F602754C0B500FECE02 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 086A5F5F2754C0B500FECE02 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

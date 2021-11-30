@@ -12,7 +12,7 @@ struct RepoView: View {
     enum EnterType {
         case normal, readme
     }
-    
+    @EnvironmentObject var appVM: AppVM
     @StateObject var vm: RepoVM
     @State private var tabSelct = 1
     @State var type: EnterType = .normal
@@ -48,6 +48,9 @@ struct RepoView: View {
             } else {
                 vm.doing(.inInit)
             }
+            
+            appVM.reposNotis[vm.repoName] = 0
+            appVM.calculateReposCountNotis()
             
         }
         // end HStack
@@ -109,13 +112,11 @@ struct IssuesView: View {
     var body: some View {
         List {
             ForEach(issues) { issue in
-                NavigationLink {
-                    IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issue.number))
-                } label: {
+                NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issue.number))) {
                     VStack(alignment: .leading, spacing: 5) {
                         HStack {
                             Text(issue.updatedAt.prefix(10)).font(.system(.footnote))
-                            ButtonGoGitHubWeb(url: issue.htmlUrl, text: issue.title)
+                            Text(issue.title)
                             Text("\(issue.comments) 回复")
                         }
                         HStack {
@@ -137,9 +138,8 @@ struct IssueEventsView: View {
     var body: some View {
         List {
             ForEach(issueEvents) { issueEvent in
-                NavigationLink {
-                    IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issueEvent.issue.number))
-                } label: {
+                
+                NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issueEvent.issue.number))) {
                     VStack(alignment: .leading, spacing: 5) {
                         HStack {
                             Text(issueEvent.createdAt.prefix(10)).font(.system(.footnote))
@@ -148,7 +148,7 @@ struct IssueEventsView: View {
                             Text(issueEvent.event)
                         }
                         Group {
-                            ButtonGoGitHubWeb(url: issueEvent.issue.title, text: "标题：\(issueEvent.issue.title)")
+                            Text("标题：\(issueEvent.issue.title)")
                             HStack {
                                 AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.issue.user.avatarUrl)
                                 ButtonGoGitHubWeb(url: issueEvent.issue.user.login, text: issueEvent.issue.user.login, ignoreHost: true)
@@ -158,6 +158,7 @@ struct IssueEventsView: View {
                     } // end VStack
                     .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
                 } // end NavigationLink
+                
             } //  end ForEach
         } // end List
     } // end body
@@ -195,6 +196,7 @@ struct RepoCommitsView: View {
                     } // end VStack
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                 } // end NavigationLink
+                
             } // end ForEach
         } // end List
     } // end body

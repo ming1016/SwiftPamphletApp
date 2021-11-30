@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "SQLite.swift",
+        "repositoryURL": "https://github.com/stephencelis/SQLite.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "60a65015f6402b7c34b9a924f755ca0a73afeeaa",
+          "version": "0.13.1"
+        }
+      },
+      {
         "package": "cmark",
         "repositoryURL": "https://github.com/SwiftDocOrg/swift-cmark.git",
         "state": {

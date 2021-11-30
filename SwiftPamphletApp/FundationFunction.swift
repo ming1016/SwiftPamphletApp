@@ -11,8 +11,99 @@ import Combine
 import Network
 
 final class AppVM: ObservableObject {
-    @Published var alertMsg = "" // 网络状态
+    @Published var alertMsg = "" // 警告信息
     private var cc: [AnyCancellable] = []
+    @Published var reposNotis = [String: Int]()
+    @Published var reposCountNotis = 0
+    
+    private let apiSev: APISev
+    
+    private let apReposSj = PassthroughSubject<Void, Never>()
+    private let resReposSj = PassthroughSubject<IssueModel, Never>()
+    
+    enum AppActionType {
+        case loadDBRepoInfo
+    }
+    func doing(_ somethinglike: AppActionType) {
+        switch somethinglike {
+        case .loadDBRepoInfo:
+            apReposSj.send(())
+        }
+    }
+    
+    init() {
+        self.apiSev = APISev()
+        // 初始化数据库
+        let db = DB.shared
+        do {
+            try db.cTbs()
+        } catch {
+            
+        }
+        
+        // 获取所有仓库通知信息
+        let reqReposCustomIssues = IssueRequest(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 31)
+        let resReposSm = apReposSj
+            .flatMap { [apiSev] in
+                apiSev.response(from: reqReposCustomIssues)
+                    .catch { error -> Empty<IssueModel, Never> in
+                        return .init()
+                    }
+            }
+            .share()
+            .subscribe(resReposSj)
+        var ReposDic = [String: Int]()
+        func switchToReposDic(issueModel: IssueModel) -> [String: Int] {
+            let str = issueModel.body?.base64Decoded() ?? ""
+            let data: Data
+            data = str.data(using: String.Encoding.utf8)!
+            var grs = [SPGoodReposModel]()
+            do {
+                let decoder = JSONDecoder()
+                grs = try decoder.decode([SPGoodReposModel].self, from: data)
+            } catch {
+                grs = [SPGoodReposModel]()
+                return ReposDic
+            }
+            for gr in grs {
+                for r in gr.repos {
+                    do {
+                        if let fd = try ReposDataHelper.find(sFullName: r.id) {
+                            ReposDic[fd.fullName] = fd.unRead
+                        } else {
+                            do {
+                                let _ = try ReposDataHelper.insert(i: DBRepo(fullName: r.id, lastReadCommitSha: "", unRead: 0))
+                                ReposDic[r.id] = 0
+                            } catch {
+                                return ReposDic
+                            }
+                        }
+                    } catch {
+                        return ReposDic
+                    }
+                    
+                } // end for
+            } // end for
+            return ReposDic
+        }
+        let repReposSm = resReposSj
+            .map { issueModel in
+                return switchToReposDic(issueModel: issueModel)
+            } // end map
+            .assign(to: \.reposNotis, on: self)
+        
+        cc += [
+            resReposSm, repReposSm
+        ]
+    }
+    
+    func calculateReposCountNotis() {
+        var count = 0
+        for i in reposNotis {
+            count += i.value
+        }
+        reposCountNotis = count
+    }
     
     // 订阅网络状态
     func nsck() {
