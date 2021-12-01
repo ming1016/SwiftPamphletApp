@@ -33,7 +33,6 @@ struct GoodReposListView: View {
         .navigationTitle("仓库动态 \(appVM.alertMsg)")
         .onAppear {
             vm.doing(.cigrs)
-            print(appVM.reposNotis)
         }
     }
 }

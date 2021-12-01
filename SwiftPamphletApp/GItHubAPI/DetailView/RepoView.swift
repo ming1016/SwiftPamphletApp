@@ -126,6 +126,7 @@ struct IssuesView: View {
                         Markdown(Document(issue.body ?? ""))
                     } // end VStack
                     .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+                    
                 }
             } // end ForEach
         } // end List

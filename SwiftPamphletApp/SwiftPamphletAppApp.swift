@@ -37,8 +37,10 @@ struct SwiftPamphletApp: View {
     @StateObject var appVM = AppVM()
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
-    @State var stepCount = 0
+    @State var stepCountRepos = 0
+    @State var stepCountDevs = 0
     let timerForRepos = Timer.publish(every: SPC.timerForReposSec, on: .main, in: .common).autoconnect()
+    let timerForDevs = Timer.publish(every: SPC.timerForDevsSec, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationView {
             if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
@@ -61,25 +63,46 @@ struct SwiftPamphletApp: View {
                         // 仓库数据读取
                         appVM.doing(.loadDBRepoInfoLocal)
                         appVM.doing(.loadDBRepoInfoFromServer)
+                        // 开发者数据读取
+                        appVM.doing(.loadDBDevInfoLocal)
+                        appVM.doing(.loadDBDevInfoFromServer)
                     })
                     .onReceive(timerForRepos, perform: { time in
                         print(time)
                         if appVM.reposNotis.count > 0 {
-                            if stepCount >= appVM.reposNotis.count {
-                                stepCount = 0
+                            if stepCountRepos >= appVM.reposNotis.count {
+                                stepCountRepos = 0
                             }
                             var arr = [String]()
-                            for (k,_) in appVM.reposNotis {
+                            for (k, _) in appVM.reposNotis {
                                 arr.append(k)
                             }
-                            let repoName = arr[stepCount]
+                            let repoName = arr[stepCountRepos]
                             
                             let vm = RepoVM(repoName: repoName)
                             vm.doing(.notiRepo)
                             appVM.doing(.loadDBRepoInfoLocal)
                             appVM.calculateReposCountNotis()
-                            stepCount += 1
-                            print(stepCount)
+                            stepCountRepos += 1
+                            print("repo count \(stepCountRepos)")
+                        }
+                    })
+                    .onReceive(timerForDevs, perform: { time in
+                        if appVM.devsNotis.count > 0 {
+                            if stepCountDevs >= appVM.devsNotis.count {
+                                stepCountDevs = 0
+                            }
+                            var arr = [String]()
+                            for (k, _) in appVM.devsNotis {
+                                arr.append(k)
+                            }
+                            let userName = arr[stepCountDevs]
+                            let vm = UserVM(userName: userName)
+                            vm.doing(.notiEvent)
+                            appVM.doing(.loadDBDevInfoLocal)
+                            appVM.calculateDevsCountNotis()
+                            stepCountDevs += 1
+                            print("dev count \(stepCountDevs)")
                         }
                     })
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
@@ -134,7 +157,12 @@ struct SPSidebar: View {
             Section("GitHub 上相关动态") {
                 
                 NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
-                    Label("开发者动态", systemImage: "person.2.wave.2")
+                    if appVM.devsCountNotis > 0 {
+                        Label("开发者动态", systemImage: "person.2.wave.2")
+                            .badge(appVM.devsCountNotis)
+                    } else {
+                        Label("开发者动态", systemImage: "person.2.wave.2")
+                    }
                 }
                 
                 NavigationLink(destination: GoodReposListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 31))) {

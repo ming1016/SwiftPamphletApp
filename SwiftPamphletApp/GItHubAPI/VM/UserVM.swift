@@ -12,6 +12,8 @@ import AppKit
 final class UserVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
     
+    public let userName: String
+    
     @Published private(set) var user: UserModel
     @Published private(set) var events: [EventModel]
     @Published private(set) var receivedEvents: [EventModel]
@@ -24,32 +26,48 @@ final class UserVM: APIVMable {
     
     private let appearUserSubject = PassthroughSubject<Void, Never>()
     private let appearEventsSubject = PassthroughSubject<Void, Never>()
+    private let appearNotiEventsSubject = PassthroughSubject<Void, Never>()
     private let appearReceivedEventsSubject = PassthroughSubject<Void, Never>()
     
     private let resUserSubject = PassthroughSubject<UserModel, Never>()
     private let resEventsSubject = PassthroughSubject<[EventModel], Never>()
+    private let resNotiEventSubject = PassthroughSubject<[EventModel], Never>()
     private let resReceivedEventsSubject = PassthroughSubject<[EventModel], Never>()
 
     enum UserActionType {
-        case inInit, inReceivedEvent
+        case inInit, inReceivedEvent, notiEvent
     }
     func doing(_ somethinglike: UserActionType) {
         switch somethinglike {
         case .inInit:
             appearUserSubject.send(())
             appearEventsSubject.send(())
+            clearUnReadEvent()
         case .inReceivedEvent:
             appearReceivedEventsSubject.send(())
+        case .notiEvent:
+            appearNotiEventsSubject.send(())
         }
     }
     
+    func clearUnReadEvent() {
+        do {
+            if let f = try DevsNotiDataHelper.find(sLogin: userName) {
+                do {
+                    let _ = try DevsNotiDataHelper.update(i: DBDevNoti(login: f.login, lastReadId: f.lastReadId, unRead: 0))
+                } catch {}
+            }
+        } catch {}
+    }
+    
     init(userName: String) {
+        self.userName = userName
         self.apiSev = APISev()
         self.user = UserModel()
         self.events = [EventModel]()
         self.receivedEvents = [EventModel]()
         
-        // 用户信息获取
+        // MARK: 用户信息获取
         let reqUser = UserRequest(userName: userName)
         let resUserStream = appearUserSubject
             .flatMap { [apiSev] in
@@ -65,7 +83,7 @@ final class UserVM: APIVMable {
         let repUserStream = resUserSubject
             .assign(to: \.user, on: self)
         
-        // 用户事件
+        // MARK: 用户事件
         let reqEvent = UserEventsRequest(userName: userName)
         let resEventStream = appearEventsSubject
             .flatMap { [apiSev] in
@@ -80,7 +98,7 @@ final class UserVM: APIVMable {
         let repEventStream = resEventsSubject
             .assign(to: \.events, on: self)
         
-        // 用户接受的事件
+        // MARK: 用户接受的事件
         let reqReceivedEvent = UserReceivedEventsRequest(userName: userName)
         let resReceivedEventStream = appearReceivedEventsSubject
             .flatMap { [apiSev] in
@@ -95,7 +113,48 @@ final class UserVM: APIVMable {
         let repReceivedEventStream = resReceivedEventsSubject
             .assign(to: \.receivedEvents, on: self)
         
-        // 错误
+        // MARK: 更新用户的通知信息
+        let reqNotiEvents = UserEventsRequest(userName: userName)
+        let resNotiEventsStream = appearNotiEventsSubject
+            .flatMap { [apiSev] in
+                apiSev.response(from: reqNotiEvents)
+                    .catch { error -> Empty<[EventModel], Never> in
+                        return .init()
+                    }
+            }
+            .share()
+            .subscribe(resNotiEventSubject)
+        func updateDBDevsInfo(ems: [EventModel]) {
+            do {
+                if let f = try DevsNotiDataHelper.find(sLogin: userName) {
+                    var i = 0
+                    var lrid = f.lastReadId
+                    for em in ems {
+                        if i == 0 && f.unRead == 0 {
+                            lrid = em.id
+                        }
+                        if em.id == f.lastReadId {
+                            break
+                        }
+                        i += 1
+                    }
+                    if f.unRead != 0 {
+                        i = f.unRead + i
+                    }
+                    do {
+                        let _ = try DevsNotiDataHelper.update(i: DBDevNoti(login: userName, lastReadId: lrid, unRead: i))
+                    } catch {}
+                } // end if let f
+            } catch {}
+        } // end func updateDBDevsInfo
+        let repNotiEventsStream = resNotiEventSubject
+            .map { eventModels in
+                updateDBDevsInfo(ems: eventModels)
+                return eventModels
+            }
+            .assign(to: \.events, on: self)
+        
+        // MARK: 错误
         let errMsgSm = errSj
             .map { err -> String in
                 err.message
@@ -111,6 +170,7 @@ final class UserVM: APIVMable {
             resUserStream, repUserStream,
             resEventStream, repEventStream,
             resReceivedEventStream, repReceivedEventStream,
+            resNotiEventsStream, repNotiEventsStream,
             errMsgSm, errHintSm
         ]
     }

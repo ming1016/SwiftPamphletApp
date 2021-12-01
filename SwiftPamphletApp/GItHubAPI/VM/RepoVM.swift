@@ -79,7 +79,7 @@ final class RepoVM: APIVMable {
         self.issues = [IssueModel]()
         self.readme = RepoContent()
         
-        // 仓库信息获取
+        // MARK: 仓库信息获取
         let reqRepo = RepoRequest(repoName: repoName)
         let resRepoSm = apRepoSj
             .flatMap { [apiSev] in
@@ -94,7 +94,7 @@ final class RepoVM: APIVMable {
         let repRepoSm = resRepoSj
             .assign(to: \.repo, on: self)
         
-        // 获取Commit
+        // MARK: 获取Commit
         let reqCommits = CommitsRequest(repoName: repoName)
         let resCommitsSm = apCommitsSj
             .flatMap { [apiSev] in
@@ -109,7 +109,7 @@ final class RepoVM: APIVMable {
         let repCommitsSm = resCommitsSj
             .assign(to: \.commits, on: self)
         
-        // 获取议题事件
+        // MARK: 获取议题事件
         let reqIssueEvents = IssueEventsRequest(repoName: repoName)
         let resIssueEventsSm = apIssueEventsSj
             .flatMap { [apiSev] in
@@ -124,7 +124,7 @@ final class RepoVM: APIVMable {
         let repIssueEventsSm = resIssueEventsSj
             .assign(to: \.issueEvents, on: self)
         
-        // 获取议题列表
+        // MARK: 获取议题列表
         let reqIssues = IssuesRequest(repoName: repoName)
         let resIssuesSm = apIssuesSj
             .flatMap { [apiSev] in
@@ -154,7 +154,7 @@ final class RepoVM: APIVMable {
         let repReadmeSm = resReadmeSj
             .assign(to: \.readme, on: self)
         
-        // 更新某个仓库的通知信息
+        // MARK: 更新某个仓库的通知信息
         let reqNotiCommits = CommitsRequest(repoName: repoName)
         let resNotiCommitsSm = apNotiCommitsSj
             .flatMap { [apiSev] in
@@ -195,7 +195,7 @@ final class RepoVM: APIVMable {
             }
             .assign(to: \.commits, on: self)
         
-        // 错误
+        // MARK: 错误
         let errMsgSm = errSj
             .map { err -> String in
                 err.message

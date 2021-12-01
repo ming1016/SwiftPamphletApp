@@ -19,6 +19,18 @@
         ]
     },
     {
+        "name":"编译器",
+        "id":2111111947,
+        "repos":[
+            {
+                "id":"llvm/llvm-project"
+            },
+            {
+                "id":"apple/llvm-project"
+            }
+        ]
+    },
+    {
         "name":"资料收集汇总",
         "id":2111122015,
         "repos":[
@@ -170,18 +182,6 @@
         "repos":[
             {
                 "id":"realm/SwiftLint"
-            }
-        ]
-    },
-    {
-        "name":"编译器",
-        "id":2111111947,
-        "repos":[
-            {
-                "id":"llvm/llvm-project"
-            },
-            {
-                "id":"apple/llvm-project"
             }
         ]
     },
