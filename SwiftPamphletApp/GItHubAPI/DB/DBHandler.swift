@@ -55,6 +55,40 @@ protocol DataHelperProtocol {
     static func findAll() throws -> [T]?
 }
 
+// MARK: 开发者更新提醒
+typealias DBDevNoti = (
+    login: String,
+    lastReadId: String,
+    unRead: Int
+)
+
+//struct DevsNotiDataHelper: DataHelperProtocol {
+//    static let table = Table("devsNoti")
+//    static let login = Expression<String>("login")
+//    static let lastReadId = Expression<String>("lastReadId")
+//    static let unRead = Expression<Int>("unRead")
+//    typealias T = DBDevNoti
+//    
+//    static func createTable() throws {
+//        guard let db = DB.shared.BBDB else {
+//            throw DBError.connectionErr
+//        }
+//        do {
+//            let _ = try db.run(table.create(ifNotExists: true) { t in
+//                t.column(login, unique: true)
+//                t.column(lastReadId, defaultValue: "")
+//                t.column(unRead, defaultValue: 0)
+//            })
+//        } catch _ {
+//            throw DBError.connectionErr
+//        }
+//    } // end createTable
+//    
+//    
+//}
+
+// MARK: 仓库更新提醒
+
 typealias DBRepoNoti = (
     fullName: String,
     lastReadCommitSha: String?,
@@ -80,7 +114,7 @@ struct ReposNotiDataHelper: DataHelperProtocol {
                 t.column(unRead, defaultValue: 0)
             })
         } catch _ {
-            
+            throw DBError.connectionErr
         }
     } //  end create table
     
