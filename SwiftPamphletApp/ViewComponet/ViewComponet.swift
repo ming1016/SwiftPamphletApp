@@ -49,7 +49,7 @@ struct ButtonGoGitHubWeb: View {
     var body: some View {
         Button {
             if ignoreHost == true {
-                gotoWebBrowser(urlStr: SPConfig.githubHost + url)
+                gotoWebBrowser(urlStr: SPC.githubHost + url)
             } else {
                 gotoWebBrowser(urlStr: url)
             }

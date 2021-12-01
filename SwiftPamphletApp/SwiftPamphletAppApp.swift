@@ -38,10 +38,10 @@ struct SwiftPamphletApp: View {
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
     @State var stepCount = 0
-    let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
+    let timerForRepos = Timer.publish(every: SPC.timerForReposSec, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationView {
-            if SPConfig.gitHubAccessToken.isEmpty == true {
+            if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
                 VStack {
                     Text("Ops!")
                     Text("Token 未设置")
@@ -58,10 +58,11 @@ struct SwiftPamphletApp: View {
                 SPSidebar()
                     .onAppear(perform: {
                         appVM.nsck()
+                        // 仓库数据读取
                         appVM.doing(.loadDBRepoInfoLocal)
-                        appVM.doing(.loadDBRepoInfoFromServer) // 读取数据存储仓库数据
+                        appVM.doing(.loadDBRepoInfoFromServer)
                     })
-                    .onReceive(timer, perform: { time in
+                    .onReceive(timerForRepos, perform: { time in
                         print(time)
                         if appVM.reposNotis.count > 0 {
                             if stepCount >= appVM.reposNotis.count {
@@ -80,9 +81,8 @@ struct SwiftPamphletApp: View {
                             stepCount += 1
                             print(stepCount)
                         }
-                        
                     })
-                SPIssuesListView(vm: RepoVM(repoName: SPConfig.pamphletIssueRepoName))
+                SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
                 IntroView()
                 NavView()
             }
@@ -114,16 +114,16 @@ struct IntroView: View {
             Text("一本活的 Swift 手册")
             Text("版本1.0").font(.footnote)
         }
-        .frame(minWidth: SPConfig.detailMinWidth)
+        .frame(minWidth: SPC.detailMinWidth)
     }
 }
 
 struct NavView: View {
     var body: some View {
         VStack {
-            IssueView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 1), type: .hiddenUserInfo)
+            IssueView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 1), type: .hiddenUserInfo)
         }
-        .frame(minWidth: SPConfig.detailMinWidth)
+        .frame(minWidth: SPC.detailMinWidth)
     }
 }
 
@@ -133,11 +133,11 @@ struct SPSidebar: View {
         List {
             Section("GitHub 上相关动态") {
                 
-                NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 30))) {
+                NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
                     Label("开发者动态", systemImage: "person.2.wave.2")
                 }
                 
-                NavigationLink(destination: GoodReposListView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 31))) {
+                NavigationLink(destination: GoodReposListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 31))) {
                     if appVM.reposCountNotis > 0 {
                         Label("仓库动态", systemImage: "book.closed")
                             .badge(appVM.reposCountNotis)
@@ -149,35 +149,35 @@ struct SPSidebar: View {
             }
             Section("Swift指南") {
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 19))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 19))) {
                     Label("语法速查", systemImage: "function")
                 }
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 20))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 20))) {
                     Label("特性", systemImage: "pencil")
                 }
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 21))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 21))) {
                     Label("专题", systemImage: "graduationcap")
                 }
             }
             Section("库使用指南") {
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 60))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 60))) {
                     Label("Combine", systemImage: "app.connected.to.app.below.fill")
                 }
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 62))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 62))) {
                     Label("Concurrency", systemImage: "timer")
                 }
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPConfig.pamphletIssueRepoName, issueNumber: 61))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 61))) {
                     Label("SwiftUI", systemImage: "rectangle.fill.on.rectangle.fill")
                 }
             }
             
             Section("小册子") {
-                NavigationLink(destination: SPIssuesListView(vm: RepoVM(repoName: SPConfig.pamphletIssueRepoName))) {
+                NavigationLink(destination: SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))) {
                     Label("小册子议题", systemImage: "square.3.layers.3d.down.right")
                 }
             }

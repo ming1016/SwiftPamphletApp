@@ -75,7 +75,7 @@ struct IssueView: View {
             
         } // end ScrollView
         .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
-        .frame(minWidth: SPConfig.detailMinWidth)
+        .frame(minWidth: SPC.detailMinWidth)
         .onAppear {
             vm.doing(.inInit)
         }

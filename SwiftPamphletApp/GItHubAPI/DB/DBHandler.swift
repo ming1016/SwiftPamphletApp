@@ -35,7 +35,7 @@ struct DB {
     
     func cTbs() throws {
         do {
-            try ReposDataHelper.createTable()
+            try ReposNotiDataHelper.createTable()
         } catch {
             throw DBError.connectionErr
         }
@@ -55,18 +55,18 @@ protocol DataHelperProtocol {
     static func findAll() throws -> [T]?
 }
 
-typealias DBRepo = (
+typealias DBRepoNoti = (
     fullName: String,
     lastReadCommitSha: String?,
     unRead: Int
 )
 
-struct ReposDataHelper: DataHelperProtocol {
+struct ReposNotiDataHelper: DataHelperProtocol {
     static let table = Table("ReposNoti")
     static let fullName = Expression<String>("fullName")
     static let lastReadCommitSha = Expression<String?>("lastReadCommitSha")
     static let unRead = Expression<Int>("unRead")
-    typealias T = DBRepo
+    typealias T = DBRepoNoti
     
     
     static func createTable() throws {
@@ -84,7 +84,7 @@ struct ReposDataHelper: DataHelperProtocol {
         }
     } //  end create table
     
-    static func insert(i: DBRepo) throws -> Int64 {
+    static func insert(i: DBRepoNoti) throws -> Int64 {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
@@ -103,7 +103,7 @@ struct ReposDataHelper: DataHelperProtocol {
         }
     } // end insert
     
-    static func delete(i: DBRepo) throws {
+    static func delete(i: DBRepoNoti) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
@@ -118,19 +118,19 @@ struct ReposDataHelper: DataHelperProtocol {
         }
     } // end delete
     
-    static func find(sFullName: String) throws -> DBRepo? {
+    static func find(sFullName: String) throws -> DBRepoNoti? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
         let query = table.filter(fullName == sFullName)
         let items = try db.prepare(query)
         for i in items {
-            return DBRepo(fullName: i[fullName], lastReadCommitSha: i[lastReadCommitSha], unRead: i[unRead])
+            return DBRepoNoti(fullName: i[fullName], lastReadCommitSha: i[lastReadCommitSha], unRead: i[unRead])
         }
         return nil
     } // end find
     
-    static func update(i: DBRepo) throws {
+    static func update(i: DBRepoNoti) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
@@ -149,14 +149,14 @@ struct ReposDataHelper: DataHelperProtocol {
         }
     } // end update
     
-    static func findAll() throws -> [DBRepo]? {
+    static func findAll() throws -> [DBRepoNoti]? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
-        var arr = [DBRepo]()
+        var arr = [DBRepoNoti]()
         let items = try db.prepare(table)
         for i in items {
-            arr.append(DBRepo(fullName: i[fullName], lastReadCommitSha: i[lastReadCommitSha], unRead: i[unRead]))
+            arr.append(DBRepoNoti(fullName: i[fullName], lastReadCommitSha: i[lastReadCommitSha], unRead: i[unRead]))
         }
         return arr
     } // end find all

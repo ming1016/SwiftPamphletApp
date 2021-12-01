@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E02756503B0095E0EE /* AnimateLayout.swift */; };
+		083554E327572BB60095E0EE /* AppVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E227572BB60095E0EE /* AppVM.swift */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		083554E02756503B0095E0EE /* AnimateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLayout.swift; sourceTree = "<group>"; };
+		083554E227572BB60095E0EE /* AppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVM.swift; sourceTree = "<group>"; };
 		086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的Swift小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,9 +113,10 @@
 				086A5F482744EF2B00FECE02 /* ViewComponet */,
 				086A5F472744EF0800FECE02 /* Resource */,
 				086A5F252744ECD700FECE02 /* GItHubAPI */,
-				086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */,
-				086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */,
+				083554E227572BB60095E0EE /* AppVM.swift */,
 				086A5F452744EEB900FECE02 /* FundationFunction.swift */,
+				086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */,
+				086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */,
 				086A5F0A2744E89100FECE02 /* Assets.xcassets */,
 				086A5F0F2744E89100FECE02 /* SwiftPamphletApp.entitlements */,
 				086A5F0C2744E89100FECE02 /* Preview Content */,
@@ -316,6 +319,7 @@
 				086A5F412744EDCE00FECE02 /* UserVM.swift in Sources */,
 				086A5F642754C14F00FECE02 /* TextView.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
+				083554E327572BB60095E0EE /* AppVM.swift in Sources */,
 				086A5F3A2744EDA500FECE02 /* APIRequest.swift in Sources */,
 				086A5F522744EF4C00FECE02 /* ViewComponet.swift in Sources */,
 				086A5F672754C27900FECE02 /* DBHandler.swift in Sources */,

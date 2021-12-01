@@ -42,14 +42,14 @@ final class APISev: APISevType {
         // token 处理
         // TODO: 支持 OAuth
         // TODO: 访问受限后会crash，异常待处理
-        if SPConfig.gitHubAccessToken.isEmpty {
+        if SPC.gitHubAccessToken.isEmpty {
             // 测试用
             let secretTokenForTest = loadFileContent(path: "/Users/mingdai/Downloads/归档/token/githubAccessToken.txt")
             if secretTokenForTest.isEmpty == false {
                 req.addValue("token \(secretTokenForTest)", forHTTPHeaderField: "Authorization")
             }
         } else {
-            req.addValue("token \(SPConfig.gitHubAccessToken)", forHTTPHeaderField: "Authorization")
+            req.addValue("token \(SPC.gitHubAccessToken)", forHTTPHeaderField: "Authorization")
         }
         
         

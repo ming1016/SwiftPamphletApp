@@ -62,9 +62,9 @@ final class RepoVM: APIVMable {
     }
     func clearUnReadCommit() {
         do {
-            if let f = try ReposDataHelper.find(sFullName: self.repoName) {
+            if let f = try ReposNotiDataHelper.find(sFullName: self.repoName) {
                 do {
-                    let _ = try ReposDataHelper.update(i: DBRepo(fullName: f.fullName, lastReadCommitSha: f.lastReadCommitSha, unRead: 0))
+                    let _ = try ReposNotiDataHelper.update(i: DBRepoNoti(fullName: f.fullName, lastReadCommitSha: f.lastReadCommitSha, unRead: 0))
                 } catch {}
             }
         } catch {}
@@ -167,7 +167,7 @@ final class RepoVM: APIVMable {
             .subscribe(resNotiCommitsSj)
         func updateDBReposInfo(cms: [CommitModel]) {
             do {
-                if let f = try ReposDataHelper.find(sFullName: repoName) {
+                if let f = try ReposNotiDataHelper.find(sFullName: repoName) {
                     var i = 0
                     var lrcs = f.lastReadCommitSha
                     for cm in cms {
@@ -183,7 +183,7 @@ final class RepoVM: APIVMable {
                         i = f.unRead + i
                     }
                     do {
-                        let _ = try ReposDataHelper.update(i: DBRepo(fullName: repoName, lastReadCommitSha: lrcs, unRead: i))
+                        let _ = try ReposNotiDataHelper.update(i: DBRepoNoti(fullName: repoName, lastReadCommitSha: lrcs, unRead: i))
                     } catch {}
                 }
             } catch {}

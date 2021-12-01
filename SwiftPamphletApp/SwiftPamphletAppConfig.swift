@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct SPConfig {
+struct SPC {
     static let gitHubAccessToken = "" // 在这里写上 Github 的access token。在 https://github.com/settings/tokens 申请你的access token。
+    static let gitHubAccessTokenJudge = true
     static let detailMinWidth: CGFloat = 500
     static let githubHost = "https://github.com/"
     static let pamphletIssueRepoName = "ming1016/SwiftPamphletApp"
+    
+    static let timerForReposSec: Double = 60
+    static let timerForDevsSec: Double = 70
     
     static func loadCustomIssues(jsonFileName: String) -> [CustomIssuesModel] {
         let lc: [CustomIssuesModel] = loadBundleJSONFile(jsonFileName + ".json")

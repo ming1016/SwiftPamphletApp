@@ -53,7 +53,7 @@ struct UserView: View {
         .onAppear {
             vm.doing(.inInit)
         }
-        .frame(minWidth: SPConfig.detailMinWidth)
+        .frame(minWidth: SPC.detailMinWidth)
         TabView {
             UserEventView(events: vm.events)
             .tabItem {
