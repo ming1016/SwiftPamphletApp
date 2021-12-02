@@ -30,7 +30,6 @@ struct DB {
         /// nil = NULL
         /// SQLite.Blob = BLOB
         
-
     }
     
     func cTbs() throws {

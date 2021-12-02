@@ -15,18 +15,10 @@
             },
             {
                 "id":"apple/swift-markdown"
-            }
-        ]
-    },
-    {
-        "name":"编译器",
-        "id":2111111947,
-        "repos":[
-            {
-                "id":"llvm/llvm-project"
             },
             {
-                "id":"apple/llvm-project"
+                "id":"llvm/llvm-project",
+                "des":"编译器"
             }
         ]
     },
@@ -56,6 +48,26 @@
             },
             {
                 "id":"public-apis/public-apis"
+            }
+        ]
+    },
+    {
+        "name":"封装易用功能",
+        "id":2111231137,
+        "repos":[
+            {
+                "id":"SwifterSwift/SwifterSwift",
+                "des":"Handy Swift extensions"
+            },
+            {
+                "id":"JoanKing/JKSwiftExtension",
+                "des":"Swift常用扩展、组件、协议"
+            },
+            {
+                "id":"infinum/iOS-Nuts-And-Bolts"
+            },
+            {
+                "id":"gtokman/ExtensionKit"
             }
         ]
     },
@@ -145,38 +157,6 @@
         ]
     },
     {
-        "name":"接口",
-        "id":2111212133,
-        "repos":[
-            {
-                "id":"OAuthSwift/OAuthSwift"
-            },
-            {
-                "id":"p2/OAuth2"
-            }
-        ]
-    },
-    {
-        "name":"封装易用功能",
-        "id":2111231137,
-        "repos":[
-            {
-                "id":"SwifterSwift/SwifterSwift",
-                "des":"Handy Swift extensions"
-            },
-            {
-                "id":"JoanKing/JKSwiftExtension",
-                "des":"Swift常用扩展、组件、协议"
-            },
-            {
-                "id":"infinum/iOS-Nuts-And-Bolts"
-            },
-            {
-                "id":"gtokman/ExtensionKit"
-            }
-        ]
-    },
-    {
         "name":"静态检查",
         "id":2111231117,
         "repos":[
@@ -191,6 +171,18 @@
         "repos":[
             {
                 "id":"kishikawakatsumi/KeychainAccess"
+            }
+        ]
+    },
+    {
+        "name":"接口",
+        "id":2111212133,
+        "repos":[
+            {
+                "id":"OAuthSwift/OAuthSwift"
+            },
+            {
+                "id":"p2/OAuth2"
             }
         ]
     },

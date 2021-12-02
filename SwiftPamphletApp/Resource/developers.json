@@ -29,12 +29,15 @@
                 "des":"SwiftGG翻译组"
             },
             {
+                "id":"pointfreeco",
+                "des":"Point-Free"
+            },
+            {
                 "id":"mattt",
                 "des":"NSHipster"
             },
             {
-                "id":"mecid",
-                "des":"Swift with Majid"
+                "id":"sindresorhus"
             },
             {
                 "id":"ibireme",
@@ -45,28 +48,17 @@
                 "des":"[weak self]播客"
             },
             {
-                "id":"pofat",
-                "des":"[weak self]播客"
-            },
-            {
                 "id":"daveverwer",
                 "des":"iOS Dev Weekly"
             },
             {
-                "id":"pointfreeco",
-                "des":"Point-Free"
-            },
-            {
-                "id":"sindresorhus"
+                "id":"mxcl"
             },
             {
                 "id":"lkzhao"
             },
             {
                 "id":"insidegui"
-            },
-            {
-                "id":"mxcl"
             },
             {
                 "id":"johnno1962",
@@ -79,6 +71,14 @@
             {
                 "id":"stephencelis",
                 "des":"SQLite.swift"
+            },
+            {
+                "id":"pofat",
+                "des":"[weak self]播客"
+            },
+            {
+                "id":"mecid",
+                "des":"Swift with Majid"
             }
         ]
     }

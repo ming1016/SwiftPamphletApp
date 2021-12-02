@@ -28,6 +28,7 @@ struct IssueView: View {
                         } label: {
                             Image(systemName: "arrow.triangle.2.circlepath")
                         }
+                        
                     }
                     if type == .hiddenUserInfo {
                         Text("更新于 \(String(vm.issue.updatedAt.prefix(10)))").font(.footnote)
@@ -35,7 +36,9 @@ struct IssueView: View {
                         HStack {
                             AsyncImageWithPlaceholder(size: .smallSize, url: vm.issue.user.avatarUrl)
                             VStack(alignment:.leading) {
-                                ButtonGoGitHubWeb(url: vm.issue.user.login, text: vm.issue.user.login, ignoreHost: true)
+                                NavigationLink(destination: UserView(vm: UserVM(userName: vm.issue.user.login)), label: {
+                                    Text(vm.issue.user.login)
+                                })
                                 Text("更新于 \(String(vm.issue.updatedAt.prefix(10)))").font(.footnote)
                             }
                         } // end HStack
@@ -59,6 +62,7 @@ struct IssueView: View {
                         HStack {
                             AsyncImageWithPlaceholder(size: .smallSize, url: comment.user.avatarUrl)
                             ButtonGoGitHubWeb(url: comment.user.login, text: comment.user.login, ignoreHost: true)
+                            
                             Text(comment.authorAssociation)
                             Text(comment.updatedAt.prefix(10)).font(.system(.footnote))
                         }
