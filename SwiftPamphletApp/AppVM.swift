@@ -92,6 +92,28 @@ final class AppVM: ObservableObject {
                     } // end do
                 } // end for
             } // end for
+            
+            // 远程已经删除的开发者，同步本地删除
+            if !(devsDic.count > 0) {
+                return devsDic
+            }
+            let devsDicKeys = devsDic.keys
+            do {
+                if let dvsn = try DevsNotiDataHelper.findAll() {
+                    for dvn in dvsn {
+                        if !devsDicKeys.contains(dvn.login) {
+                            do {
+                                try DevsNotiDataHelper.delete(i: dvn)
+                            } catch {
+                                return devsDic
+                            } // end do
+                        } // end if
+                    } // end for
+                } // end if let
+            } catch {
+                return devsDic
+            }
+            
             return devsDic
         }
         let repDevsSm = resDevsSj
@@ -142,6 +164,28 @@ final class AppVM: ObservableObject {
                     
                 } // end for
             } // end for
+            
+            // 远程已经删除的仓库，同步本地删除
+            if !(reposDic.count > 0) {
+                return reposDic
+            }
+            let reposDicKeys = reposDic.keys
+            do {
+                if let rpsn = try ReposNotiDataHelper.findAll() {
+                    for rpn in rpsn {
+                        if !reposDicKeys.contains(rpn.fullName) {
+                            do {
+                                try ReposNotiDataHelper.delete(i: rpn)
+                            } catch {
+                                return reposDic
+                            } // end do
+                        } // end if
+                    } // end for
+                } // end if let
+            } catch {
+                return reposDic
+            }
+            
             return reposDic
         }
         let repReposSm = resReposSj
