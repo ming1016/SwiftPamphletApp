@@ -29,6 +29,14 @@
                 "des":"SwiftGG翻译组"
             },
             {
+                "id":"kean",
+                "des":"Nuke、Pulse"
+            },
+            {
+                "id":"stephencelis",
+                "des":"SQLite.swift"
+            },
+            {
                 "id":"mattt",
                 "des":"NSHipster"
             },
@@ -63,10 +71,6 @@
             {
                 "id":"wigging",
                 "des":"Back to the Mac"
-            },
-            {
-                "id":"stephencelis",
-                "des":"SQLite.swift"
             },
             {
                 "id":"pofat",

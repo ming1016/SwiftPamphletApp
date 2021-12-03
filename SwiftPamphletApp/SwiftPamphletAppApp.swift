@@ -17,6 +17,7 @@ struct SwiftPamphletAppApp: App {
             SwiftPamphletApp()
 //            Demo()
         }
+        .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
     }
 }
 
@@ -209,6 +210,18 @@ struct SPSidebar: View {
                     Label("小册子议题", systemImage: "square.3.layers.3d.down.right")
                 }
             }
+            
+//            Section("个人") {
+//                /// isExpanded 来控制是否展开
+//                /// 详细查看WWDC：[WWDC 2020: Stacks, Grids, and Outlines in SwiftUI](https://developer.apple.com/videos/play/wwdc2020/10031/)
+//                DisclosureGroup(content: {
+//                    Text("待建设")
+//                }, label: {
+//                    Label("我的", systemImage: "person")
+//                })
+//            }
+            
+            
         }
         .listStyle(SidebarListStyle())
         .frame(minWidth: 160)
