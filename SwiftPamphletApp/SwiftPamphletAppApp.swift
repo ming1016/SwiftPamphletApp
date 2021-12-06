@@ -111,7 +111,7 @@ struct SwiftPamphletApp: View {
                 NavView()
             }
         }
-        .frame(minHeight: 700)
+        .frame(minHeight: 650)
         .navigationTitle("戴铭的 Swift 小册子 \(appVM.alertMsg)")
         .toolbar {
             ToolbarItem(placement: ToolbarItemPlacement.navigation) {

@@ -200,6 +200,7 @@ struct RepoCommitsView: View {
                 
             } // end ForEach
         } // end List
+        .frame(minWidth: SPC.detailMinWidth)
     } // end body
 }
 

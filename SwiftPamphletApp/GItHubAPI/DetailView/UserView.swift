@@ -58,6 +58,7 @@ struct UserView: View {
             appVM.calculateDevsCountNotis()
         }
         .frame(minWidth: SPC.detailMinWidth)
+        
         TabView {
             UserEventView(events: vm.events)
             .tabItem {
@@ -71,9 +72,11 @@ struct UserView: View {
                     vm.doing(.inReceivedEvent)
                 }
         }
-        
-        
+        .frame(minWidth: SPC.detailMinWidth)
         Spacer()
+        
+        
+        
     }
 }
 
