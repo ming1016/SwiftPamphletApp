@@ -1,20 +1,193 @@
 [
     {
-        "name":"官方",
+        "name":"待分类",
         "id":2111111948,
         "repos":[
-            {
-                "id":"apple/swift"
-            },
-            {
-                "id":"apple/swift-evolution",
-                "des":"提案"
-            },
             {
                 "id":"apple/swift-corelibs-foundation"
             },
             {
+                "id":"apple/swift-package-manager"
+            },
+            {
                 "id":"apple/swift-markdown"
+            },
+            {
+                "id":"apple/sourcekit-lsp"
+            },
+            {
+                "id":"public-apis/public-apis"
+            },
+            {
+                "id":"insidegui/WWDC"
+            },
+            {
+                "id":"sindresorhus/Actions"
+            },
+            {
+                "id":"overtake/TelegramSwift"
+            },
+            {
+                "id":"fangzesheng/free-api"
+            },
+            {
+                "id":"trimstray/the-book-of-secret-knowledge"
+            },
+            {
+                "id":"rossant/awesome-math"
+                
+            },
+            {
+                "id":"rakutentech/AltSwiftUI"
+            },
+            {
+                "id":"gymshark/ios-stack-kit"
+            },
+            {
+                "id":"OpenCombine/OpenCombine"
+            },
+            {
+                "id":"ReSwift/ReSwift",
+                "des":"单页面状态和数据管理"
+            },
+            {
+                "id":"devicekit/DeviceKit",
+                "des":"UIDevice 易用封装"
+            },
+            {
+                "id":"ivanschuetz/SwiftCharts"
+            },
+            {
+                "id":"overtake/TelegramSwift"
+            },
+            {
+                "id":"nvzqz/FileKit",
+                "des":"文件操作"
+            },
+            {
+                "id":"JohnSundell/Files",
+                "des":"文件操作"
+            },
+            {
+                "id":"kylef/PathKit",
+                "des":"文件操作"
+            },
+            {
+                "id":"JohnSundell/Publish",
+                "des":"静态站点生成器"
+            },
+            {
+                "id":"caiyue1993/IceCream",
+                "des":"CloudKit 同步 Realm 数据库"
+            },
+            {
+                "id":"sinaweibosdk/weibo_ios_sdk"
+            },
+            {
+                "id":"nerdishbynature/octokit.swift",
+                "des":"Swift API Client for GitHub"
+            },
+            {
+                "id":"GitHawkApp/GitHawk",
+                "des":"iOS app for GitHub"
+            },
+            {
+                "id":"tophat/RichTextView"
+            },
+            {
+                "id":"tnantoka/edhita"
+            },
+            {
+                "id":"keitaoouchi/MarkdownView"
+            },
+            {
+                "id":"johnxnguyen/Down",
+                "des":"fast Markdown"
+            },
+            {
+                "id":"shibapm/Komondor",
+                "des":"Git Hooks for Swift projects"
+            },
+            {
+                "id":"SwiftGen/SwiftGen",
+                "des":"代码生成"
+            },
+            {
+                "id":"kasketis/netfox",
+                "des":"获取所有网络请求"
+            },
+            {
+                "id":"BohdanOrlov/iOS-Developer-Roadmap"
+            },
+            {
+                "id":"kickstarter/ios-oss"
+            },
+            {
+                "id":"wordpress-mobile/WordPress-iOS"
+            },
+            {
+                "id":"josejuanqm/VersaPlayer"
+            },
+            {
+                "id":"mozilla-mobile/firefox-ios"
+            },
+            {
+                "id":"shadowsocks/ShadowsocksX-NG"
+            },
+            {
+                "id":"PostgresApp/PostgresApp"
+            },
+            {
+                "id":"Moya/Moya"
+            },
+            {
+                "id":"Kitura/BlueSocket"
+            },
+            {
+                "id":"daltoniam/Starscream",
+                "des":"WebSocket"
+            },
+            {
+                "id":"rhummelmose/BluetoothKit"
+            },
+            {
+                "id":"rushisangani/BiometricAuthentication",
+                "des":"FaceID or TouchID authentication"
+            },
+            {
+                "id":"krzyzanowskim/CryptoSwift"
+            },
+            {
+                "id":"timdonnelly/Advance",
+                "des":"Physics-based animations"
+            },
+            {
+                "id":"MengTo/Spring",
+                "des":"动画"
+            },
+            {
+                "id":"jathu/UIImageColors",
+                "des":"获取图片主次颜色"
+            },
+            {
+                "id":"BradLarson/GPUImage3",
+                "des":"Metal 实现"
+            },
+            {
+                "id":"exyte/Macaw",
+                "des":"SVG"
+            },
+            {
+                "id":"efremidze/Magnetic",
+                "des":"SpriteKit气泡支持SwiftUI"
+            },
+            {
+                "id":"Finb/V2ex-Swift",
+                "des":"V2EX 客户端"
+            },
+            {
+                "id":"analogcode/Swift-Radio-Pro",
+                "des":"电台应用"
             }
         ]
     }

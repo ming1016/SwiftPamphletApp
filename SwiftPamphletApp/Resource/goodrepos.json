@@ -11,14 +11,11 @@
                 "des":"提案"
             },
             {
-                "id":"apple/swift-corelibs-foundation"
-            },
-            {
-                "id":"apple/swift-markdown"
-            },
-            {
                 "id":"llvm/llvm-project",
                 "des":"编译器"
+            },
+            {
+                "id":"apple/swift-nio"
             }
         ]
     },
@@ -35,6 +32,10 @@
             {
                 "id":"sindresorhus/awesome",
                 "des":"内容广"
+            },
+            {
+                "id":"dkhamsing/open-source-ios-apps",
+                "des":"开源的完整 App 例子"
             }
         ]
     },
@@ -51,7 +52,7 @@
                 "des":"戴铭的 Swift 小册子"
             },
             {
-                "id":"public-apis/public-apis"
+                "id":"pointfreeco/episode-code-samples"
             }
         ]
     },
@@ -81,6 +82,9 @@
         "repos":[
             {
                 "id":"Alamofire/Alamofire"
+            },
+            {
+                "id":"socketio/socket.io-client-swift"
             }
         ]
     },
@@ -123,6 +127,9 @@
             },
             {
                 "id":"groue/GRDB.swift"
+            },
+            {
+                "id":"realm/realm-cocoa"
             }
         ]
     },
@@ -135,20 +142,12 @@
                 "des":"函数响应式编程"
             },
             {
-                "id":"OpenCombine/OpenCombine"
-            },
-            {
                 "id":"pointfreeco/swift-composable-architecture"
             },
             {
                 "id":"onmyway133/awesome-ios-architecture"
-            },
-            {
-                "id":"rakutentech/AltSwiftUI"
-            },
-            {
-                "id":"gymshark/ios-stack-kit"
             }
+            
         ]
     },
     {
@@ -199,19 +198,13 @@
                 "des":"开源 macOS 程序合集"
             },
             {
-                "id":"insidegui/WWDC"
-            },
-            {
-                "id":"sindresorhus/Actions"
-            },
-            {
-                "id":"overtake/TelegramSwift"
-            },
-            {
                 "id":"Ranchero-Software/NetNewsWire"
             },
             {
                 "id":"glushchenko/fsnotes"
+            },
+            {
+                "id":"coteditor/CotEditor"
             }
         ]
     },
@@ -221,6 +214,10 @@
         "repos":[
             {
                 "id":"iina/iina"
+            },
+            {
+                "id":"shogo4405/HaishinKit.swift",
+                "des":"RTMP, HLS"
             }
         ]
     },
@@ -229,18 +226,12 @@
         "id":2111122310,
         "repos":[
             {
-                "id":"rossant/awesome-math"
-                
-            },
-            {
                 "id":"twostraws/HackingWithSwift",
                 "des":"示例代码"
             },
             {
-                "id":"fangzesheng/free-api"
-            },
-            {
-                "id":"trimstray/the-book-of-secret-knowledge"
+                "id":"Juanpe/About-SwiftUI",
+                "des":"汇总 SwiftUI 的资料"
             }
         ]
     }

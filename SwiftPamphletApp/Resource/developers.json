@@ -52,10 +52,6 @@
                 "des":"[weak self]播客"
             },
             {
-                "id":"daveverwer",
-                "des":"iOS Dev Weekly"
-            },
-            {
                 "id":"mxcl"
             },
             {
@@ -79,6 +75,13 @@
             {
                 "id":"mecid",
                 "des":"Swift with Majid"
+            },
+            {
+                "id":"hebertialmeida"
+            },
+            {
+                "id":"daveverwer",
+                "des":"iOS Dev Weekly"
             }
         ]
     }
