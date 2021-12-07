@@ -24,7 +24,7 @@ struct SwiftPamphletAppApp: App {
 struct Demo: View {
     var body: some View {
         Group {
-            AnimateLayout()
+            LabelView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {

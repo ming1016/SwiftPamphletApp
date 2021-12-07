@@ -222,6 +222,10 @@
             {
                 "id":"Quick/Quick",
                 "des":"测试框架"
+            },
+            {
+                "id":"kon9chunkit/GitHub-Chinese-Top-Charts",
+                "des":"GitHub中文排行榜"
             }
         ]
     }

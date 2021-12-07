@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MarkdownUI
 
 struct UserView: View {
     @EnvironmentObject var appVM: AppVM
@@ -88,26 +89,58 @@ struct UserEventView: View {
         List {
             ForEach(events) { event in
                 NavigationLink {
+                    /// 编译时间过长，编不过去，升级后再试试
+//                    VStack {
+//                        if event.payload.issue?.number != nil {
+//                            IssueView(vm: IssueVM(repoName: event.repo.name, issueNumber: event.payload.issue?.number ?? 0))
+//                        } else {
+//                            RepoView(vm: RepoVM(repoName: event.repo.name), type: .readme)
+//                        }
+//                    }
                     RepoView(vm: RepoVM(repoName: event.repo.name), type: .readme)
+                    
                 } label: {
-                    HStack {
-                        Text(event.createdAt.prefix(10)).font(.system(.footnote))
-                        Text(event.repo.name).bold()
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(event.createdAt.prefix(10)).font(.system(.footnote))
+                            Text(event.repo.name).bold()
+                            if event.payload.issue?.number != nil {
+                                ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/issues/\(String(describing: event.payload.issue?.number ?? 0))", text: "Issue")
+                            }
+
+                            Text(event.type)
+                            Text(event.payload.action ?? "")
+                            if isShowActor == true {
+                                AsyncImageWithPlaceholder(size: .tinySize, url: event.actor.avatarUrl)
+                                
+                                Text(event.actor.login).bold()
+
+                            } // end if
+                            
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                        
                         if event.payload.issue?.number != nil {
-                            ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/issues/\(String(describing: event.payload.issue?.number ?? 0))", text: "Issue")
+                            Text(event.payload.issue?.title ?? "").bold()
+                            Markdown(Document(event.payload.issue?.body ?? ""))
+                        }
+                        
+                        if event.payload.commits != nil {
+                            ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/commit/\(event.payload.commits?[0].sha ?? "")", text: "commit: \(event.payload.commits?[0].message ?? "")")
+                        }
+                        
+                        if event.payload.pullRequest != nil {
+                            Text(event.payload.pullRequest?.title ?? "").bold()
+                            Markdown(Document(event.payload.pullRequest?.body ?? ""))
                         }
 
-                        Text(event.type)
-                        Text(event.payload.action ?? "")
-                        if isShowActor == true {
-                            AsyncImageWithPlaceholder(size: .tinySize, url: event.actor.avatarUrl)
-                            
-                            Text(event.actor.login).bold()
-
-                        } // end if
-                    }
-                    .padding(5)// end HStack
-                }
+                        if event.payload.description != nil {
+                            Markdown(Document(event.payload.description ?? ""))
+                        }
+                    } // end VStack
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                    
+                } // end NavigationLink
                 
             } // end ForEach
         }//  end List

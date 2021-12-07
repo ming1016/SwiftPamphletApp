@@ -40,6 +40,8 @@
 		086A5F642754C14F00FECE02 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* TextView.swift */; };
 		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
 		086A5F6A2755F3BE00FECE02 /* ilikedrepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* ilikedrepos.json */; };
+		08D4F0FC275F705C005FC997 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4F0FB275F705C005FC997 /* LabelView.swift */; };
+		08D4F0FE275F728C005FC997 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4F0FD275F728C005FC997 /* LinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		086A5F632754C14F00FECE02 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		086A5F662754C27900FECE02 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		086A5F692755F3BE00FECE02 /* ilikedrepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ilikedrepos.json; path = SwiftPamphletApp/Resource/ilikedrepos.json; sourceTree = SOURCE_ROOT; };
+		08D4F0FB275F705C005FC997 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		08D4F0FD275F728C005FC997 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				086A5F632754C14F00FECE02 /* TextView.swift */,
+				08D4F0FB275F705C005FC997 /* LabelView.swift */,
+				08D4F0FD275F728C005FC997 /* LinkView.swift */,
 				083554E02756503B0095E0EE /* AnimateLayout.swift */,
 			);
 			path = SwiftUI;
@@ -307,6 +313,7 @@
 			files = (
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */,
+				08D4F0FC275F705C005FC997 /* LabelView.swift in Sources */,
 				086A5F422744EDCE00FECE02 /* IssueVM.swift in Sources */,
 				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
@@ -324,6 +331,7 @@
 				086A5F522744EF4C00FECE02 /* ViewComponet.swift in Sources */,
 				086A5F672754C27900FECE02 /* DBHandler.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
+				08D4F0FE275F728C005FC997 /* LinkView.swift in Sources */,
 				086A5F2F2744ED8600FECE02 /* SPIssuesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

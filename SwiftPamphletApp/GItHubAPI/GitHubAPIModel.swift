@@ -84,20 +84,32 @@ struct EventModel: Jsonable {
     var payload: PayloadModel
     var actor: GitUserModel
 }
-
-struct PayloadModel: Decodable, Hashable {
-    var action: String?
-    var issue: PayloadIssueModel?
-}
-
 struct EventRepoModel: Jsonable {
     var id: Int64
     var name: String
 }
 
+struct PayloadModel: Decodable, Hashable {
+    var action: String?
+    var issue: PayloadIssueModel?
+    var commits: [PayloadCommitModel]?
+    var description: String?
+    var pullRequest: PayloadPullRequest?
+}
 struct PayloadIssueModel: Jsonable {
     var id: Int64
     var number: Int
+    var title: String?
+    var body: String?
+    
+}
+struct PayloadCommitModel: Decodable, Hashable {
+    var message: String?
+    var sha: String?
+}
+struct PayloadPullRequest: Decodable, Hashable {
+    var body: String?
+    var title: String?
 }
 
 // MARK: Repo

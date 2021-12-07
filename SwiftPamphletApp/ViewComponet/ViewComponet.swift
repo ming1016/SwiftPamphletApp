@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// 列表加按钮性能问题，需观察官方后面是否解决
+/// https://twitter.com/fcbunn/status/1259078251340800000
 struct FixAwfulPerformanceStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
