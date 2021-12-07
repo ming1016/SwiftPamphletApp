@@ -16,6 +16,10 @@
             },
             {
                 "id":"apple/swift-nio"
+            },
+            {
+                "id":"apple/swift-syntax",
+                "des":"解析、生成、转换 Swift 代码"
             }
         ]
     },
@@ -218,6 +222,9 @@
             {
                 "id":"shogo4405/HaishinKit.swift",
                 "des":"RTMP, HLS"
+            },
+            {
+                "id":"AudioKit/AudioKit"
             }
         ]
     },

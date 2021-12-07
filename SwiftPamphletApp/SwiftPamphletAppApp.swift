@@ -67,6 +67,7 @@ struct SwiftPamphletApp: View {
                         // 开发者数据读取
                         appVM.doing(.loadDBDevInfoLocal)
                         appVM.doing(.loadDBDevInfoFromServer)
+                        
                     })
                     .onReceive(timerForRepos, perform: { time in
                         print(time)

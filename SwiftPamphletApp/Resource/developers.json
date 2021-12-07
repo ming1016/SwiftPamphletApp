@@ -82,6 +82,18 @@
             {
                 "id":"daveverwer",
                 "des":"iOS Dev Weekly"
+            },
+            {
+                "id":"kylef",
+                "des":"Commander"
+            },
+            {
+                "id":"joshaber",
+                "des":"at GitHub"
+            },
+            {
+                "id":"ashfurrow",
+                "des":"Moya"
             }
         ]
     }

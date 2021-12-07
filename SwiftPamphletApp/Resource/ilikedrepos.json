@@ -188,6 +188,40 @@
             {
                 "id":"analogcode/Swift-Radio-Pro",
                 "des":"电台应用"
+            },
+            {
+                "id":"suzuki-0000/SKPhotoBrowser",
+                "des":"图片浏览"
+            },
+            {
+                "id":"raywenderlich/swift-algorithm-club"
+            },
+            {
+                "id":"hyperoslo/Cache"
+            },
+            {
+                "id":"sunshinejr/SwiftyUserDefaults"
+            },
+            {
+                "id":"MonitorControl/MonitorControl",
+                "des":"亮度和声音控制"
+            },
+            {
+                "id":"kylef/Commander",
+                "des":"命令行"
+            },
+            {
+                "id":"ReactiveCocoa/ReactiveCocoa"
+            },
+            {
+                "id":"Carthage/Carthage"
+            },
+            {
+                "id":"danielgindi/Charts"
+            },
+            {
+                "id":"Quick/Quick",
+                "des":"测试框架"
             }
         ]
     }

@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import AppKit
 
 final class AppVM: ObservableObject {
     @Published var alertMsg = "" // 警告信息
@@ -234,6 +235,8 @@ final class AppVM: ObservableObject {
             count += i.value
         }
         reposCountNotis = count
+        showAppBadgeLabel()
+        
     }
     
     func calculateDevsCountNotis() {
@@ -242,6 +245,17 @@ final class AppVM: ObservableObject {
             count += i.value
         }
         devsCountNotis = count
+        showAppBadgeLabel()
+    }
+    
+    func showAppBadgeLabel() {
+        if reposCountNotis + devsCountNotis > 0 {
+            let count = reposCountNotis + devsCountNotis
+            NSApp.dockTile.showsApplicationBadge = true
+            NSApp.dockTile.badgeLabel = "\(count)"
+        } else {
+            NSApp.dockTile.badgeLabel = nil
+        }
     }
     
     // 订阅网络状态
