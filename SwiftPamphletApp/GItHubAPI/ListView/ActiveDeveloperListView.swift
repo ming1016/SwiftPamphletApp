@@ -11,19 +11,16 @@ struct ActiveDeveloperListView: View {
     @EnvironmentObject var appVM: AppVM
     @StateObject var vm: IssueVM
     var body: some View {
-        
         List {
-            
             ForEach(vm.cIADs) { ad in
                 Section {
                     ForEach(ad.users) { u in
-//                        NavigationLink("\(u.id) \((u.des != nil) ? "(\(u.des!))" : "")", destination: UserView(vm: .init(userName: u.id)))
                         NavigationLink(destination: UserView(vm: .init(userName: u.id))) {
                             if let badgeCount = appVM.devsNotis[u.id] ?? 0 {
-                                Text("\(u.id) \((u.des != nil) ? "(\(u.des!))" : "")")
+                                ActiveDeveloperListLinkView(u: u)
                                     .badge(badgeCount)
                             } else {
-                                Text("\(u.id) \((u.des != nil) ? "(\(u.des!))" : "")")
+                                ActiveDeveloperListLinkView(u: u)
                             }
                         }
                     }
@@ -42,3 +39,17 @@ struct ActiveDeveloperListView: View {
     }
 }
 
+struct ActiveDeveloperListLinkView: View {
+    var u: ADeveloperModel
+    var body: some View {
+        VStack(alignment: .leading, spacing: 1) {
+            Text(u.id)
+                .bold()
+            if u.des != nil {
+                Text("\((u.des != nil) ? "\(u.des!)" : "")")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+        }
+    }
+}

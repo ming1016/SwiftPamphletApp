@@ -60,6 +60,7 @@ struct ButtonGoGitHubWeb: View {
     var url: String
     var text: String
     var ignoreHost: Bool = false
+    var bold: Bool = false
     var body: some View {
         Button {
             if ignoreHost == true {
@@ -68,7 +69,12 @@ struct ButtonGoGitHubWeb: View {
                 gotoWebBrowser(urlStr: url)
             }
         } label: {
-            Text(text)
+            if bold == true {
+                Text(text).bold()
+            } else {
+                Text(text)
+            }
+            
         }.buttonStyle(FixAwfulPerformanceStyle())
     }
 }

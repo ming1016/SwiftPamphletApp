@@ -18,6 +18,7 @@ struct IssuesListFromCustomView: View {
                             IssueView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: i.number))
                         } label: {
                             Text(i.title)
+                                .bold()
                         }
                     }
                 } header: {

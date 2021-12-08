@@ -186,7 +186,8 @@ struct RepoCommitsView: View {
                                 .font(.system(.footnote))
                             if commit.author != nil {
                                 AsyncImageWithPlaceholder(size: .tinySize, url: commit.author?.avatarUrl ?? "")
-                                Text(commit.author?.login ?? "").bold()
+//                                Text(commit.author?.login ?? "").bold()
+                                ButtonGoGitHubWeb(url: commit.author?.login ?? "", text: commit.author?.login ?? "", ignoreHost: true, bold: true)
 
                             } else {
                                 Text(commit.commit.author.name ?? "")

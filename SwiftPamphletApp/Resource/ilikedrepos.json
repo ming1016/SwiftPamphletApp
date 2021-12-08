@@ -226,6 +226,10 @@
             {
                 "id":"kon9chunkit/GitHub-Chinese-Top-Charts",
                 "des":"GitHub中文排行榜"
+            },
+            {
+                "id":"bilibili/ijkplayer",
+                "des":"播放器"
             }
         ]
     }

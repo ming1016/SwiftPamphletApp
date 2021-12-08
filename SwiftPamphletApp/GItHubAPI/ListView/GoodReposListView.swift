@@ -17,10 +17,10 @@ struct GoodReposListView: View {
                     ForEach(gr.repos) { r in
                         NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
                             if let badgeCount = appVM.reposNotis[r.id] ?? 0 {
-                                Text("\(r.id) \((r.des != nil) ? "(\(r.des!))" : "")")
+                                GoodReposListLinkView(r: r)
                                     .badge(badgeCount)
                             } else {
-                                Text("\(r.id) \((r.des != nil) ? "(\(r.des!))" : "")")
+                                GoodReposListLinkView(r: r)
                             }
                         }
                     }
@@ -35,6 +35,33 @@ struct GoodReposListView: View {
             vm.doing(.cigrs)
         }
     }
+    
 }
 
+struct GoodReposListLinkView: View {
+    var r: ARepoModel
+    var rIdArr: [String] {
+        r.id.components(separatedBy: "/")
+    }
+    var body: some View {
+        VStack(alignment: .leading, spacing: 1) {
+            HStack(spacing:1) {
+                Text(rIdArr[0])
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                Text("/")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+            Text(rIdArr[1])
+                .bold()
+            if r.des != nil {
+                Text("\((r.des != nil) ? "\(r.des!)" : "")")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+            
+        }
+    }
+}
 

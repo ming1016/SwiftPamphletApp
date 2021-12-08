@@ -136,7 +136,7 @@ struct AUserEventLabel: View {
         VStack(alignment: .leading) {
             HStack {
                 Text(event.createdAt.prefix(10)).font(.system(.footnote))
-                Text(event.repo.name).bold()
+                ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)", text: event.repo.name, bold: true)
                 if event.payload.issue?.number != nil {
                     ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/issues/\(String(describing: event.payload.issue?.number ?? 0))", text: "Issue")
                 }
