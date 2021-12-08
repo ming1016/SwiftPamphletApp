@@ -174,7 +174,7 @@ struct RepoCommitsView: View {
                 NavigationLink {
                     VStack {
                         if commit.author?.login != nil {
-                            UserView(vm: UserVM(userName: commit.author?.login ?? ""))
+                            UserView(vm: UserVM(userName: commit.author?.login ?? ""), isShowUserEventLink: false)
                         } else {
                             Text(commit.commit.author.name ?? "")
                         }

@@ -11,6 +11,7 @@ import MarkdownUI
 struct UserView: View {
     @EnvironmentObject var appVM: AppVM
     @StateObject var vm: UserVM
+    var isShowUserEventLink = true
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
@@ -61,11 +62,11 @@ struct UserView: View {
         .frame(minWidth: SPC.detailMinWidth)
         
         TabView {
-            UserEventView(events: vm.events)
+            UserEventView(events: vm.events, isShowUserEventLink: isShowUserEventLink)
             .tabItem {
                 Text("事件")
             }
-            UserEventView(events: vm.receivedEvents, isShowActor: true)
+            UserEventView(events: vm.receivedEvents, isShowActor: true, isShowUserEventLink: isShowUserEventLink)
                 .tabItem {
                     Text("Ta 接收的事件")
                 }
@@ -83,61 +84,28 @@ struct UserView: View {
 
 struct UserEventView: View {
     var events: [EventModel]
-    var isShowActor: Bool = false
+    var isShowActor = false
+    var isShowUserEventLink = true
     
     var body: some View {
         List {
             ForEach(events) { event in
-                NavigationLink {
-                    UserEventLinkDestination(event: event)
-                } label: {
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text(event.createdAt.prefix(10)).font(.system(.footnote))
-                            Text(event.repo.name).bold()
-                            if event.payload.issue?.number != nil {
-                                ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/issues/\(String(describing: event.payload.issue?.number ?? 0))", text: "Issue")
-                            }
-
-                            Text(event.type)
-                            Text(event.payload.action ?? "")
-                            if isShowActor == true {
-                                AsyncImageWithPlaceholder(size: .tinySize, url: event.actor.avatarUrl)
-                                
-                                Text(event.actor.login).bold()
-
-                            } // end if
-                            
-                        }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-                        
-                        if event.payload.issue?.number != nil {
-                            Text(event.payload.issue?.title ?? "").bold()
-                            Markdown(Document(event.payload.issue?.body ?? ""))
-                        }
-                        
-                        if event.payload.commits != nil {
-                            ListCommits(event: event)
-                        }
-                        
-                        if event.payload.pullRequest != nil {
-                            Text(event.payload.pullRequest?.title ?? "").bold()
-                            Markdown(Document(event.payload.pullRequest?.body ?? ""))
-                        }
-
-                        if event.payload.description != nil {
-                            Markdown(Document(event.payload.description ?? ""))
-                        }
-                    } // end VStack
-                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                    
-                } // end NavigationLink
                 
+                if isShowUserEventLink == true {
+                    NavigationLink {
+                        UserEventLinkDestination(event: event)
+                    } label: {
+                        AUserEventLabel(event: event, isShowActor: isShowActor)
+                    } // end NavigationLink
+                } else {
+                    AUserEventLabel(event: event, isShowActor: isShowActor)
+                }
             } // end ForEach
         }//  end List
     } // end body
 } // end struct
 
+// MARK: 碎视图
 
 struct ListCommits: View {
     var event: EventModel
@@ -158,5 +126,51 @@ struct UserEventLinkDestination: View {
                 RepoView(vm: RepoVM(repoName: event.repo.name), type: .readme)
             }
         }
+    }
+}
+
+struct AUserEventLabel: View {
+    var event: EventModel
+    var isShowActor: Bool = false
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text(event.createdAt.prefix(10)).font(.system(.footnote))
+                Text(event.repo.name).bold()
+                if event.payload.issue?.number != nil {
+                    ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/issues/\(String(describing: event.payload.issue?.number ?? 0))", text: "Issue")
+                }
+
+                Text(event.type)
+                Text(event.payload.action ?? "")
+                if isShowActor == true {
+                    AsyncImageWithPlaceholder(size: .tinySize, url: event.actor.avatarUrl)
+                    
+                    Text(event.actor.login).bold()
+
+                } // end if
+                
+            }
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+            
+            if event.payload.issue?.number != nil {
+                Text(event.payload.issue?.title ?? "").bold()
+                Markdown(Document(event.payload.issue?.body ?? ""))
+            }
+            
+            if event.payload.commits != nil {
+                ListCommits(event: event)
+            }
+            
+            if event.payload.pullRequest != nil {
+                Text(event.payload.pullRequest?.title ?? "").bold()
+                Markdown(Document(event.payload.pullRequest?.body ?? ""))
+            }
+
+            if event.payload.description != nil {
+                Markdown(Document(event.payload.description ?? ""))
+            }
+        } // end VStack
+        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
     }
 }
