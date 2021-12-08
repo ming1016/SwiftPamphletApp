@@ -89,16 +89,7 @@ struct UserEventView: View {
         List {
             ForEach(events) { event in
                 NavigationLink {
-                    /// 编译时间过长，编不过去，升级后再试试
-//                    VStack {
-//                        if event.payload.issue?.number != nil {
-//                            IssueView(vm: IssueVM(repoName: event.repo.name, issueNumber: event.payload.issue?.number ?? 0))
-//                        } else {
-//                            RepoView(vm: RepoVM(repoName: event.repo.name), type: .readme)
-//                        }
-//                    }
-                    RepoView(vm: RepoVM(repoName: event.repo.name), type: .readme)
-                    
+                    UserEventLinkDestination(event: event)
                 } label: {
                     VStack(alignment: .leading) {
                         HStack {
@@ -126,7 +117,7 @@ struct UserEventView: View {
                         }
                         
                         if event.payload.commits != nil {
-                            ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/commit/\(event.payload.commits?[0].sha ?? "")", text: "commit: \(event.payload.commits?[0].message ?? "")")
+                            ListCommits(event: event)
                         }
                         
                         if event.payload.pullRequest != nil {
@@ -146,3 +137,26 @@ struct UserEventView: View {
         }//  end List
     } // end body
 } // end struct
+
+
+struct ListCommits: View {
+    var event: EventModel
+    var body: some View {
+        ForEach(event.payload.commits ?? [PayloadCommitModel](), id: \.self) { c in
+            ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/commit/\(c.sha ?? "")", text: "commit: \(c.message ?? "")")
+        }
+    }
+}
+
+struct UserEventLinkDestination: View {
+    var event: EventModel
+    var body: some View {
+        VStack {
+            if event.payload.issue?.number != nil {
+                IssueView(vm: IssueVM(repoName: event.repo.name, issueNumber: event.payload.issue?.number ?? 0))
+            } else {
+                RepoView(vm: RepoVM(repoName: event.repo.name), type: .readme)
+            }
+        }
+    }
+}
