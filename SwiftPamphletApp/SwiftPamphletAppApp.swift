@@ -110,8 +110,8 @@ struct SwiftPamphletApp: View {
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
                 IntroView()
                 NavView()
-            }
-        }
+            } // end if else
+        } // end NavigationView
         .frame(minHeight: 650)
         .navigationTitle("戴铭的 Swift 小册子 \(appVM.alertMsg)")
         .toolbar {

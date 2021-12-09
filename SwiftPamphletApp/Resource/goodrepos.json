@@ -15,11 +15,7 @@
                 "des":"编译器"
             },
             {
-                "id":"apple/swift-nio"
-            },
-            {
-                "id":"apple/swift-syntax",
-                "des":"解析、生成、转换 Swift 代码"
+                "id":"apple/swift-distributed-actors"
             }
         ]
     },
@@ -67,16 +63,6 @@
             {
                 "id":"SwifterSwift/SwifterSwift",
                 "des":"Handy Swift extensions"
-            },
-            {
-                "id":"JoanKing/JKSwiftExtension",
-                "des":"Swift常用扩展、组件、协议"
-            },
-            {
-                "id":"infinum/iOS-Nuts-And-Bolts"
-            },
-            {
-                "id":"gtokman/ExtensionKit"
             }
         ]
     },
@@ -203,12 +189,6 @@
             },
             {
                 "id":"Ranchero-Software/NetNewsWire"
-            },
-            {
-                "id":"glushchenko/fsnotes"
-            },
-            {
-                "id":"coteditor/CotEditor"
             }
         ]
     },
@@ -241,10 +221,6 @@
         "name":"其它",
         "id":2111122310,
         "repos":[
-            {
-                "id":"twostraws/HackingWithSwift",
-                "des":"示例代码"
-            },
             {
                 "id":"Juanpe/About-SwiftUI",
                 "des":"汇总 SwiftUI 的资料"

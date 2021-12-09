@@ -16,6 +16,13 @@
                 "id":"apple/sourcekit-lsp"
             },
             {
+                "id":"apple/swift-nio"
+            },
+            {
+                "id":"apple/swift-syntax",
+                "des":"解析、生成、转换 Swift 代码"
+            },
+            {
                 "id":"public-apis/public-apis"
             },
             {
@@ -230,6 +237,34 @@
             {
                 "id":"bilibili/ijkplayer",
                 "des":"播放器"
+            },
+            {
+                "id":"schellingb/dosbox-pure",
+                "des":"DOS 游戏模拟器"
+            },
+            {
+                "id":"twostraws/HackingWithSwift",
+                "des":"示例代码"
+            },
+            {
+                "id":"glushchenko/fsnotes"
+            },
+            {
+                "id":"coteditor/CotEditor"
+            },
+            {
+                "id":"JoanKing/JKSwiftExtension",
+                "des":"Swift常用扩展、组件、协议"
+            },
+            {
+                "id":"infinum/iOS-Nuts-And-Bolts"
+            },
+            {
+                "id":"gtokman/ExtensionKit"
+            },
+            {
+                "id":"johnsundell/publish",
+                "des":"用 swift 来写网站"
             }
         ]
     }

@@ -95,6 +95,7 @@ struct PayloadModel: Decodable, Hashable {
     var commits: [PayloadCommitModel]?
     var description: String?
     var pullRequest: PayloadPullRequest?
+    var comment: PayloadComment?
 }
 struct PayloadIssueModel: Jsonable {
     var id: Int64
@@ -110,6 +111,9 @@ struct PayloadCommitModel: Decodable, Hashable {
 struct PayloadPullRequest: Decodable, Hashable {
     var body: String?
     var title: String?
+}
+struct PayloadComment: Decodable, Hashable {
+    var body: String?
 }
 
 // MARK: Repo

@@ -34,8 +34,7 @@ struct GoodReposListView: View {
         .onAppear {
             vm.doing(.cigrs)
         }
-    }
-    
+    } // end body
 }
 
 struct GoodReposListLinkView: View {
@@ -47,12 +46,10 @@ struct GoodReposListLinkView: View {
         VStack(alignment: .leading, spacing: 1) {
             HStack(spacing:1) {
                 Text(rIdArr[0])
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
                 Text("/")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
             }
+            .font(.subheadline)
+            .foregroundColor(.secondary)
             Text(rIdArr[1])
                 .bold()
             if r.des != nil {
@@ -60,8 +57,7 @@ struct GoodReposListLinkView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
-            
-        }
-    }
+        } // end VStack
+    } // end body
 }
 

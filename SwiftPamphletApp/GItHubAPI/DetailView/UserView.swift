@@ -154,8 +154,15 @@ struct AUserEventLabel: View {
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             
             if event.payload.issue?.number != nil {
-                Text(event.payload.issue?.title ?? "").bold()
-                Markdown(Document(event.payload.issue?.body ?? ""))
+                if event.payload.issue?.title != nil {
+                    Text(event.payload.issue?.title ?? "").bold()
+                }
+                if event.payload.issue?.body != nil && event.type != "IssueCommentEvent" {
+                    Markdown(Document(event.payload.issue?.body ?? ""))
+                }
+                if event.type == "IssueCommentEvent" && event.payload.comment?.body != nil {
+                    Markdown(Document(event.payload.comment?.body ?? ""))
+                }
             }
             
             if event.payload.commits != nil {
@@ -163,8 +170,12 @@ struct AUserEventLabel: View {
             }
             
             if event.payload.pullRequest != nil {
-                Text(event.payload.pullRequest?.title ?? "").bold()
-                Markdown(Document(event.payload.pullRequest?.body ?? ""))
+                if event.payload.pullRequest?.title != nil {
+                    Text(event.payload.pullRequest?.title ?? "").bold()
+                }
+                if event.payload.pullRequest?.body != nil {
+                    Markdown(Document(event.payload.pullRequest?.body ?? ""))
+                }
             }
 
             if event.payload.description != nil {
