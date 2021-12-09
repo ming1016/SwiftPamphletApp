@@ -11,6 +11,7 @@ import Combine
 import Network
 
 
+// MARK: 网络
 // 网络状态检查 network state check
 final class Nsck: ObservableObject {
     static let shared = Nsck()
@@ -41,29 +42,6 @@ final class Nsck: ObservableObject {
     }
 }
 
-// base64
-extension String {
-    func base64Encoded() -> String? {
-        return self.data(using: .utf8)?.base64EncodedString()
-    }
-
-    func base64Decoded() -> String? {
-        guard let data = Data(base64Encoded: self) else { return nil }
-        return String(data: data, encoding: .utf8)
-    }
-}
-
-// 从数组中随机取一个元素
-extension Array {
-    public var randomElement: Element? {
-        guard count > 0 else {
-            return nil
-        }
-        let index = Int(arc4random_uniform(UInt32(count)))
-        return self[index]
-    }
-}
-
 // 跳到浏览器中显示网址内容
 func gotoWebBrowser(urlStr: String) {
     if !urlStr.isEmpty {
@@ -83,6 +61,8 @@ func validHTTPUrlStrFromUrlStr(urlStr: String) -> String {
     }
     return httpsPrefix + urlStr
 }
+
+// MARK: 文件
 
 // 从Bundle中读取并解析JSON文件生成Model
 func loadBundleJSONFile<T: Decodable>(_ filename: String) -> T {
@@ -112,7 +92,37 @@ func loadFileContent(path: String) -> String {
     }
 }
 
+// MARK: 基础
+// base64
+extension String {
+    func base64Encoded() -> String? {
+        return self.data(using: .utf8)?.base64EncodedString()
+    }
 
+    func base64Decoded() -> String? {
+        guard let data = Data(base64Encoded: self) else { return nil }
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+// 从数组中随机取一个元素
+extension Array {
+    public var randomElement: Element? {
+        guard count > 0 else {
+            return nil
+        }
+        let index = Int(arc4random_uniform(UInt32(count)))
+        return self[index]
+    }
+}
+
+// MARK: 调试
+extension View {
+    func debug() -> Self {
+        print(Mirror(reflecting: self).subjectType)
+        return self
+    }
+}
 
 
 

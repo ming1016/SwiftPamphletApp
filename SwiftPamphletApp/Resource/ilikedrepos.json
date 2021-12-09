@@ -32,9 +32,6 @@
                 "id":"sindresorhus/Actions"
             },
             {
-                "id":"overtake/TelegramSwift"
-            },
-            {
                 "id":"fangzesheng/free-api"
             },
             {
@@ -265,6 +262,18 @@
             {
                 "id":"johnsundell/publish",
                 "des":"用 swift 来写网站"
+            },
+            {
+                "id":"mehdihadeli/awesome-software-architecture",
+                "des":"软件架构"
+            },
+            {
+                "id":"awesome-selfhosted/awesome-selfhosted",
+                "des":"网络服务及上面的应用"
+            },
+            {
+                "id":"NARKOZ/hacker-scripts",
+                "des":"程序员的活都让机器干的脚本（真实故事）"
             }
         ]
     }

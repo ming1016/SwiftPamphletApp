@@ -102,6 +102,7 @@ struct UserEventView: View {
                 }
             } // end ForEach
         }//  end List
+        .id(UUID()) // 优化 commits 有多个时数据变化可能影响的性能。这样做每次更新都产生新的视图，因此无法做动画效果。相当于 UITableView 上的 reloadData()
     } // end body
 } // end struct
 
