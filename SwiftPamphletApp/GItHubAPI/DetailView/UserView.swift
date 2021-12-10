@@ -12,6 +12,7 @@ struct UserView: View {
     @EnvironmentObject var appVM: AppVM
     @StateObject var vm: UserVM
     var isShowUserEventLink = true
+    @State private var tabSelct = 1
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
@@ -61,18 +62,26 @@ struct UserView: View {
         }
         .frame(minWidth: SPC.detailMinWidth)
         
-        TabView {
+        TabView(selection: $tabSelct) {
+            
             UserEventView(events: vm.events, isShowUserEventLink: isShowUserEventLink)
-            .tabItem {
-                Text("事件")
-            }
+                .tabItem {
+                    Image(systemName: "keyboard")
+                    Text("事件")
+                }
+                .onAppear {
+                    vm.doing(.inEvent)
+                }
+                .tag(1)
             UserEventView(events: vm.receivedEvents, isShowActor: true, isShowUserEventLink: isShowUserEventLink)
                 .tabItem {
+                    Image(systemName: "keyboard.badge.ellipsis")
                     Text("Ta 接收的事件")
                 }
                 .onAppear {
                     vm.doing(.inReceivedEvent)
                 }
+                .tag(2)
         }
         .frame(minWidth: SPC.detailMinWidth)
         Spacer()
@@ -100,6 +109,7 @@ struct UserEventView: View {
                 } else {
                     AUserEventLabel(event: event, isShowActor: isShowActor)
                 }
+                Divider()
             } // end ForEach
         }//  end List
         .id(UUID()) // 优化 commits 有多个时数据变化可能影响的性能。这样做每次更新都产生新的视图，因此无法做动画效果。相当于 UITableView 上的 reloadData()
@@ -112,7 +122,8 @@ struct ListCommits: View {
     var event: EventModel
     var body: some View {
         ForEach(event.payload.commits ?? [PayloadCommitModel](), id: \.self) { c in
-            ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/commit/\(c.sha ?? "")", text: "commit: \(c.message ?? "")")
+            ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/commit/\(c.sha ?? "")", text: "提交")
+            Text(c.message ?? "")
         }
     }
 }
@@ -135,15 +146,23 @@ struct AUserEventLabel: View {
     var isShowActor: Bool = false
     var body: some View {
         VStack(alignment: .leading) {
+            GitHubApiTimeView(timeStr: event.createdAt)
             HStack {
-                Text(event.createdAt.prefix(10)).font(.system(.footnote))
-                ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)", text: event.repo.name, bold: true)
-                if event.payload.issue?.number != nil {
-                    ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/issues/\(String(describing: event.payload.issue?.number ?? 0))", text: "Issue")
+                Group {
+                    Text(event.type)
+                        .bold()
+                    Text(event.payload.action ?? "")
                 }
-
-                Text(event.type)
-                Text(event.payload.action ?? "")
+                .foregroundColor(.secondary)
+                .font(.footnote)
+            }
+            ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)", text: event.repo.name, bold: true)
+            HStack {
+                
+                if event.payload.issue?.number != nil {
+                    ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/issues/\(String(describing: event.payload.issue?.number ?? 0))", text: "议题")
+                }
+                
                 if isShowActor == true {
                     AsyncImageWithPlaceholder(size: .tinySize, url: event.actor.avatarUrl)
                     
@@ -183,6 +202,5 @@ struct AUserEventLabel: View {
                 Markdown(Document(event.payload.description ?? ""))
             }
         } // end VStack
-        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
     }
 }

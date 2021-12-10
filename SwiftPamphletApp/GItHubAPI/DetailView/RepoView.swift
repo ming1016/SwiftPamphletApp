@@ -114,10 +114,13 @@ struct IssuesView: View {
             ForEach(issues) { issue in
                 NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issue.number))) {
                     VStack(alignment: .leading, spacing: 5) {
+                        GitHubApiTimeView(timeStr: issue.updatedAt)
                         HStack {
-                            Text(issue.updatedAt.prefix(10)).font(.system(.footnote))
                             Text(issue.title)
+                                .font(.title3)
                             Text("\(issue.comments) 回复")
+                                .foregroundColor(.secondary)
+                                .font(.footnote)
                         }
                         HStack {
                             AsyncImageWithPlaceholder(size: .tinySize, url: issue.user.avatarUrl)
@@ -125,9 +128,8 @@ struct IssuesView: View {
                         }
                         Markdown(Document(issue.body ?? ""))
                     } // end VStack
-                    .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
-                    
                 }
+                Divider()
             } // end ForEach
         } // end List
     } // end body
@@ -142,14 +144,19 @@ struct IssueEventsView: View {
                 
                 NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issueEvent.issue.number))) {
                     VStack(alignment: .leading, spacing: 5) {
+                        GitHubApiTimeView(timeStr: issueEvent.createdAt)
                         HStack {
-                            Text(issueEvent.createdAt.prefix(10)).font(.system(.footnote))
                             AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.actor.avatarUrl)
                             ButtonGoGitHubWeb(url: issueEvent.actor.login, text: issueEvent.actor.login, ignoreHost: true)
                             Text(issueEvent.event)
+                                .foregroundColor(.secondary)
                         }
                         Group {
-                            Text("标题：\(issueEvent.issue.title)")
+                            Text(issueEvent.issue.title)
+                                .font(.title3)
+                            Text("\(issueEvent.issue.comments) 回复")
+                                .foregroundColor(.secondary)
+                                .font(.footnote)
                             HStack {
                                 AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.issue.user.avatarUrl)
                                 ButtonGoGitHubWeb(url: issueEvent.issue.user.login, text: issueEvent.issue.user.login, ignoreHost: true)
@@ -157,9 +164,8 @@ struct IssueEventsView: View {
                             Markdown(Document(issueEvent.issue.body ?? ""))
                         }
                     } // end VStack
-                    .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
                 } // end NavigationLink
-                
+                Divider()
             } //  end ForEach
         } // end List
     } // end body
@@ -181,9 +187,8 @@ struct RepoCommitsView: View {
                     }
                 } label: {
                     VStack(alignment: .leading, spacing: 2) {
+                        GitHubApiTimeView(timeStr: commit.commit.author.date)
                         HStack {
-                            Text(commit.commit.author.date.prefix(10))
-                                .font(.system(.footnote))
                             if commit.author != nil {
                                 AsyncImageWithPlaceholder(size: .tinySize, url: commit.author?.avatarUrl ?? "")
 //                                Text(commit.author?.login ?? "").bold()
@@ -196,9 +201,8 @@ struct RepoCommitsView: View {
                         } // end HStack
                         Markdown(Document(commit.commit.message ?? ""))
                     } // end VStack
-                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                 } // end NavigationLink
-                
+                Divider()
             } // end ForEach
         } // end List
         .frame(minWidth: SPC.detailMinWidth)

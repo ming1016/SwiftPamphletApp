@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+struct GitHubApiTimeView: View {
+    var timeStr: String
+    var body: some View {
+        Text(timeStr.replacingOccurrences(of: "T", with: " ").replacingOccurrences(of: "Z", with: ""))
+            .font(.system(.footnote))
+            .foregroundColor(.secondary)
+        
+    }
+}
+
 /// 列表加按钮性能问题，需观察官方后面是否解决
 /// https://twitter.com/fcbunn/status/1259078251340800000
 struct FixAwfulPerformanceStyle: ButtonStyle {
