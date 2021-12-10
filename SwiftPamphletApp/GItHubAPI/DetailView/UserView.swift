@@ -135,7 +135,7 @@ struct UserEventLinkDestination: View {
             if event.payload.issue?.number != nil {
                 IssueView(vm: IssueVM(repoName: event.repo.name, issueNumber: event.payload.issue?.number ?? 0))
             } else {
-                RepoView(vm: RepoVM(repoName: event.repo.name), type: .readme)
+                RepoView(vm: RepoVM(repoName: event.repo.name), type: .readme, isShowRepoCommitsLink: false, isShowIssuesLink: false)
             }
         }
     }

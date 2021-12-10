@@ -16,6 +16,8 @@ struct RepoView: View {
     @StateObject var vm: RepoVM
     @State private var tabSelct = 1
     @State var type: EnterType = .normal
+    var isShowRepoCommitsLink = true
+    var isShowIssuesLink = true
     
     var body: some View {
         HStack {
@@ -56,13 +58,16 @@ struct RepoView: View {
         // end HStack
         
         TabView(selection: $tabSelct) {
-            RepoCommitsView(commits: vm.commits, repo: vm.repo)
+            RepoCommitsView(commits: vm.commits, repo: vm.repo, isShowLink: isShowRepoCommitsLink)
                 .tabItem {
                     Text("新提交")
                 }
+                .onAppear(perform: {
+                    vm.doing(.inCommit)
+                })
                 .tag(1)
             
-            IssuesView(issues: vm.issues, repo: vm.repo)
+            IssuesView(issues: vm.issues, repo: vm.repo, isShowLink: isShowIssuesLink)
                 .tabItem {
                     Text("议题列表")
                 }
@@ -71,7 +76,7 @@ struct RepoView: View {
                 }
                 .tag(2)
             
-            IssueEventsView(issueEvents: vm.issueEvents, repo: vm.repo)
+            IssueEventsView(issueEvents: vm.issueEvents, repo: vm.repo, isShowLink: isShowIssuesLink)
                 .tabItem {
                     Text("议题事件")
                 }
@@ -109,25 +114,16 @@ struct ReadmeView: View {
 struct IssuesView: View {
     var issues: [IssueModel]
     var repo: RepoModel
+    var isShowLink = true
     var body: some View {
         List {
             ForEach(issues) { issue in
-                NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issue.number))) {
-                    VStack(alignment: .leading, spacing: 5) {
-                        GitHubApiTimeView(timeStr: issue.updatedAt)
-                        HStack {
-                            Text(issue.title)
-                                .font(.title3)
-                            Text("\(issue.comments) 回复")
-                                .foregroundColor(.secondary)
-                                .font(.footnote)
-                        }
-                        HStack {
-                            AsyncImageWithPlaceholder(size: .tinySize, url: issue.user.avatarUrl)
-                            ButtonGoGitHubWeb(url: issue.user.login, text: issue.user.login, ignoreHost: true)
-                        }
-                        Markdown(Document(issue.body ?? ""))
-                    } // end VStack
+                if isShowLink == true {
+                    NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issue.number))) {
+                        IssueLabelView(issue: issue)
+                    }
+                } else {
+                    IssueLabelView(issue: issue)
                 }
                 Divider()
             } // end ForEach
@@ -138,33 +134,17 @@ struct IssuesView: View {
 struct IssueEventsView: View {
     var issueEvents: [IssueEventModel]
     var repo: RepoModel
+    var isShowLink = true
     var body: some View {
         List {
             ForEach(issueEvents) { issueEvent in
-                
-                NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issueEvent.issue.number))) {
-                    VStack(alignment: .leading, spacing: 5) {
-                        GitHubApiTimeView(timeStr: issueEvent.createdAt)
-                        HStack {
-                            AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.actor.avatarUrl)
-                            ButtonGoGitHubWeb(url: issueEvent.actor.login, text: issueEvent.actor.login, ignoreHost: true)
-                            Text(issueEvent.event)
-                                .foregroundColor(.secondary)
-                        }
-                        Group {
-                            Text(issueEvent.issue.title)
-                                .font(.title3)
-                            Text("\(issueEvent.issue.comments) 回复")
-                                .foregroundColor(.secondary)
-                                .font(.footnote)
-                            HStack {
-                                AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.issue.user.avatarUrl)
-                                ButtonGoGitHubWeb(url: issueEvent.issue.user.login, text: issueEvent.issue.user.login, ignoreHost: true)
-                            }
-                            Markdown(Document(issueEvent.issue.body ?? ""))
-                        }
-                    } // end VStack
-                } // end NavigationLink
+                if isShowLink == true {
+                    NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issueEvent.issue.number))) {
+                        IssueEventLabelView(issueEvent: issueEvent)
+                    } // end NavigationLink
+                } else {
+                    IssueEventLabelView(issueEvent: issueEvent)
+                }
                 Divider()
             } //  end ForEach
         } // end List
@@ -174,34 +154,26 @@ struct IssueEventsView: View {
 struct RepoCommitsView: View {
     var commits: [CommitModel]
     var repo: RepoModel
+    var isShowLink = true
     var body: some View {
         List {
             ForEach(commits) { commit in
-                NavigationLink {
-                    VStack {
-                        if commit.author?.login != nil {
-                            UserView(vm: UserVM(userName: commit.author?.login ?? ""), isShowUserEventLink: false)
-                        } else {
-                            Text(commit.commit.author.name ?? "")
-                        }
-                    }
-                } label: {
-                    VStack(alignment: .leading, spacing: 2) {
-                        GitHubApiTimeView(timeStr: commit.commit.author.date)
-                        HStack {
-                            if commit.author != nil {
-                                AsyncImageWithPlaceholder(size: .tinySize, url: commit.author?.avatarUrl ?? "")
-//                                Text(commit.author?.login ?? "").bold()
-                                ButtonGoGitHubWeb(url: commit.author?.login ?? "", text: commit.author?.login ?? "", ignoreHost: true, bold: true)
-
+                if isShowLink == true {
+                    NavigationLink {
+                        VStack {
+                            if commit.author?.login != nil {
+                                UserView(vm: UserVM(userName: commit.author?.login ?? ""), isShowUserEventLink: false)
                             } else {
                                 Text(commit.commit.author.name ?? "")
                             }
-                            ButtonGoGitHubWeb(url: "https://github.com/\(repo.fullName)/commit/\(commit.sha ?? "")", text: "commit")
-                        } // end HStack
-                        Markdown(Document(commit.commit.message ?? ""))
-                    } // end VStack
-                } // end NavigationLink
+                        }
+                    } label: {
+                        RepoCommitLabelView(repo: repo, commit: commit)
+                    } // end NavigationLink
+                } else {
+                    RepoCommitLabelView(repo: repo, commit: commit)
+                }
+                
                 Divider()
             } // end ForEach
         } // end List
@@ -209,10 +181,76 @@ struct RepoCommitsView: View {
     } // end body
 }
 
+// MARK: 碎视图
+struct RepoCommitLabelView: View {
+    var repo: RepoModel
+    var commit: CommitModel
+    var body: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            GitHubApiTimeView(timeStr: commit.commit.author.date)
+            HStack {
+                if commit.author != nil {
+                    AsyncImageWithPlaceholder(size: .tinySize, url: commit.author?.avatarUrl ?? "")
+//                                Text(commit.author?.login ?? "").bold()
+                    ButtonGoGitHubWeb(url: commit.author?.login ?? "", text: commit.author?.login ?? "", ignoreHost: true, bold: true)
 
+                } else {
+                    Text(commit.commit.author.name ?? "")
+                }
+                ButtonGoGitHubWeb(url: "https://github.com/\(repo.fullName)/commit/\(commit.sha ?? "")", text: "commit")
+            } // end HStack
+            Markdown(Document(commit.commit.message ?? ""))
+        } // end VStack
+    }
+}
 
+struct IssueLabelView: View {
+    var issue: IssueModel
+    var body: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            GitHubApiTimeView(timeStr: issue.updatedAt)
+            HStack {
+                Text(issue.title)
+                    .font(.title3)
+                Text("\(issue.comments) 回复")
+                    .foregroundColor(.secondary)
+                    .font(.footnote)
+            }
+            HStack {
+                AsyncImageWithPlaceholder(size: .tinySize, url: issue.user.avatarUrl)
+                ButtonGoGitHubWeb(url: issue.user.login, text: issue.user.login, ignoreHost: true)
+            }
+            Markdown(Document(issue.body ?? ""))
+        } // end VStack
+    }
+}
 
-
+struct IssueEventLabelView: View {
+    var issueEvent: IssueEventModel
+    var body: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            GitHubApiTimeView(timeStr: issueEvent.createdAt)
+            HStack {
+                AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.actor.avatarUrl)
+                ButtonGoGitHubWeb(url: issueEvent.actor.login, text: issueEvent.actor.login, ignoreHost: true)
+                Text(issueEvent.event)
+                    .foregroundColor(.secondary)
+            }
+            Group {
+                Text(issueEvent.issue.title)
+                    .font(.title3)
+                Text("\(issueEvent.issue.comments) 回复")
+                    .foregroundColor(.secondary)
+                    .font(.footnote)
+                HStack {
+                    AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.issue.user.avatarUrl)
+                    ButtonGoGitHubWeb(url: issueEvent.issue.user.login, text: issueEvent.issue.user.login, ignoreHost: true)
+                }
+                Markdown(Document(issueEvent.issue.body ?? ""))
+            }
+        } // end VStack
+    }
+}
 
 
 

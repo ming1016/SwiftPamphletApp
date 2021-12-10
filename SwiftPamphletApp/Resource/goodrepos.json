@@ -13,9 +13,6 @@
             {
                 "id":"llvm/llvm-project",
                 "des":"编译器"
-            },
-            {
-                "id":"apple/swift-distributed-actors"
             }
         ]
     },
