@@ -39,11 +39,14 @@ struct IssueView: View {
                                 NavigationLink(destination: UserView(vm: UserVM(userName: vm.issue.user.login)), label: {
                                     Text(vm.issue.user.login)
                                 })
-                                Text("更新于 \(String(vm.issue.updatedAt.prefix(10)))").font(.footnote)
+                                HStack {
+                                    Text("更新于 ")
+                                    GitHubApiTimeView(timeStr: vm.issue.updatedAt)
+                                }
                             }
                         } // end HStack
                     }
-                    Markdown(Document(vm.issue.body ?? "")) // TODO: 等 SwiftUI 的 Text 支持 markdown，再进行替换
+                    Markdown(Document(vm.issue.body ?? "")) // TODO: 等 SwiftUI 的 Text 支持完整的 markdown，再进行替换
                 } // end VStack
                 Spacer()
             } // end HStack
@@ -59,12 +62,15 @@ struct IssueView: View {
                 }
                 ForEach(vm.comments) { comment in
                     VStack(alignment: .leading) {
+                        GitHubApiTimeView(timeStr: comment.updatedAt)
                         HStack {
                             AsyncImageWithPlaceholder(size: .smallSize, url: comment.user.avatarUrl)
                             ButtonGoGitHubWeb(url: comment.user.login, text: comment.user.login, ignoreHost: true)
                             
                             Text(comment.authorAssociation)
-                            Text(comment.updatedAt.prefix(10)).font(.system(.footnote))
+                                .font(.footnote)
+                                .foregroundColor(.secondary)
+                            
                         }
                         HStack {
                             VStack(alignment: .leading, spacing: 0) {
@@ -73,7 +79,9 @@ struct IssueView: View {
                             Spacer()
                         }
                     } // end VStack
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                    .padding(10)
+                    Divider()
+                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                 } // end ForEach
             }
             
