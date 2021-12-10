@@ -62,9 +62,6 @@
                 "id":"ivanschuetz/SwiftCharts"
             },
             {
-                "id":"overtake/TelegramSwift"
-            },
-            {
                 "id":"nvzqz/FileKit",
                 "des":"文件操作"
             },
@@ -187,6 +184,10 @@
             },
             {
                 "id":"Finb/V2ex-Swift",
+                "des":"V2EX 客户端"
+            },
+            {
+                "id":"v2er-app/iOS",
                 "des":"V2EX 客户端"
             },
             {

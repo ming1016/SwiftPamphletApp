@@ -50,10 +50,11 @@ struct RepoView: View {
             } else {
                 vm.doing(.inInit)
             }
-            
+        }
+        .onDisappear {
+            vm.doing(.disappear)
             appVM.reposNotis[vm.repoName] = 0
             appVM.calculateReposCountNotis()
-            
         }
         // end HStack
         

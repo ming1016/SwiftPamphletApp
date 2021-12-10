@@ -12,24 +12,38 @@ struct ActiveDeveloperListView: View {
     @StateObject var vm: IssueVM
     var body: some View {
         List {
+            Section {
+                ForEach(vm.cIADs) { ad in
+                    ForEach(ad.users) { u in
+                        if let badgeCount = appVM.devsNotis[u.id] ?? 0 {
+                            if badgeCount > 0 {
+                                NavigationLink(destination: UserView(vm: .init(userName: u.id))) {
+                                    ActiveDeveloperListLinkView(u: u)
+                                        .badge(badgeCount)
+                                }
+                            } // end if
+                        } // end if
+                    } // end ForEach
+                } // end ForEach
+            } header: {
+                Text("刚更新的").font(.title)
+            }
             ForEach(vm.cIADs) { ad in
                 Section {
                     ForEach(ad.users) { u in
-                        NavigationLink(destination: UserView(vm: .init(userName: u.id))) {
-                            if let badgeCount = appVM.devsNotis[u.id] ?? 0 {
-                                ActiveDeveloperListLinkView(u: u)
-                                    .badge(badgeCount)
-                            } else {
+                        if (appVM.devsNotis[u.id] ?? 0) > 0  {
+                            
+                        } else {
+                            NavigationLink(destination: UserView(vm: .init(userName: u.id))) {
                                 ActiveDeveloperListLinkView(u: u)
                             }
                         }
-                    }
+                    } // end ForEach
                 } header: {
                     Text(ad.name).font(.title)
-                }
-
-            }
-        }
+                } // end Sectioin
+            } // end Foreach
+        } // end List
         .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .navigationTitle("开发者动态 \(appVM.alertMsg)")
         .onAppear {

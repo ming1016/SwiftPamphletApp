@@ -11,18 +11,35 @@ struct GoodReposListView: View {
     @EnvironmentObject var appVM: AppVM
     @StateObject var vm: IssueVM
     var body: some View {
+        
         List {
+            Section {
+                ForEach(vm.cIGRs) { gr in
+                    ForEach(gr.repos) { r in
+                        if let badgeCount = appVM.reposNotis[r.id] ?? 0 {
+                            if badgeCount > 0 {
+                                NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
+                                    GoodReposListLinkView(r: r)
+                                        .badge(badgeCount)
+                                }
+                            } // end if
+                        } // end if
+                    } // end ForEach
+                } // end ForEach
+            } header: {
+                Text("刚更新的").font(.title)
+            }
             ForEach(vm.cIGRs) { gr in
                 Section {
                     ForEach(gr.repos) { r in
-                        NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
-                            if let badgeCount = appVM.reposNotis[r.id] ?? 0 {
-                                GoodReposListLinkView(r: r)
-                                    .badge(badgeCount)
-                            } else {
+                        if (appVM.reposNotis[r.id] ?? 0) > 0 {
+                            
+                        } else {
+                            NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
                                 GoodReposListLinkView(r: r)
                             }
                         }
+                        
                     }
                 } header: {
                     Text(gr.name).font(.title)

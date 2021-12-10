@@ -56,10 +56,12 @@ struct UserView: View {
         .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
         .onAppear {
             vm.doing(.inInit)
-            
+        }
+        .onDisappear(perform: {
+            vm.doing(.disappear)
             appVM.devsNotis[vm.userName] = 0
             appVM.calculateDevsCountNotis()
-        }
+        })
         .frame(minWidth: SPC.detailMinWidth)
         
         TabView(selection: $tabSelct) {
