@@ -57,8 +57,6 @@ struct UserView: View {
         .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
         .onAppear {
             vm.doing(.inInit)
-            appVM.devsNotis[vm.userName] = SPC.unreadMagicNumber
-            appVM.calculateDevsCountNotis()
         }
         .onDisappear(perform: {
             appVM.devsNotis[vm.userName] = 0
@@ -77,6 +75,8 @@ struct UserView: View {
                     // 如果是从列表未读section里来的会检查清理未读
                     if isCleanUnread == true {
                         vm.doing(.notiEvent)
+                        appVM.devsNotis[vm.userName] = SPC.unreadMagicNumber
+                        appVM.calculateDevsCountNotis()
                     } else {
                         vm.doing(.inEvent)
                     }

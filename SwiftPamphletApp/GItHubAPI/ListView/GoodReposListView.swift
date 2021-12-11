@@ -24,7 +24,7 @@ struct GoodReposListView: View {
             ForEach(vm.cIGRs) { gr in
                 Section {
                     ForEach(gr.repos) { r in
-                        if (appVM.reposNotis[r.id] ?? 0) > 0 && appVM.reposNotis[r.id] != SPC.unreadMagicNumber {
+                        if (appVM.reposNotis[r.id] ?? 0) > 0 {
                             
                         } else {
                             NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
@@ -51,7 +51,7 @@ struct GoodReposListUnreadLinkView: View {
     @EnvironmentObject var appVM: AppVM
     var r: ARepoModel
     var body: some View {
-        if appVM.reposNotis[r.id] ?? 0 > 0 && appVM.reposNotis[r.id] != SPC.unreadMagicNumber {
+        if appVM.reposNotis[r.id] ?? 0 > 0 {
             NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id), isCleanUnread: true)) {
                 GoodReposListLinkView(r: r)
                     .badge(appVM.reposNotis[r.id] == SPC.unreadMagicNumber ? 0 : appVM.reposNotis[r.id] ?? 0)
