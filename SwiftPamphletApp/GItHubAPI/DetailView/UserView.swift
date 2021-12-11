@@ -12,6 +12,7 @@ struct UserView: View {
     @EnvironmentObject var appVM: AppVM
     @StateObject var vm: UserVM
     var isShowUserEventLink = true
+    var isCleanUnread = false
     @State private var tabSelct = 1
     var body: some View {
         HStack {
@@ -73,7 +74,13 @@ struct UserView: View {
                     Text("事件")
                 }
                 .onAppear {
-                    vm.doing(.inEvent)
+                    // 如果是从列表未读section里来的会检查清理未读
+                    if isCleanUnread == true {
+                        vm.doing(.notiEvent)
+                    } else {
+                        vm.doing(.inEvent)
+                    }
+                    
                 }
                 .tag(1)
             UserEventView(events: vm.receivedEvents, isShowActor: true, isShowUserEventLink: isShowUserEventLink)

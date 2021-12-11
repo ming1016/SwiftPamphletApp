@@ -43,11 +43,11 @@ final class UserVM: APIVMable {
             appearUserSubject.send(())
         case .inEvent:
             appearEventsSubject.send(())
-            clearUnReadEvent()
         case .inReceivedEvent:
             appearReceivedEventsSubject.send(())
         case .notiEvent:
             appearNotiEventsSubject.send(())
+            clearUnReadEvent()
         }
     }
     

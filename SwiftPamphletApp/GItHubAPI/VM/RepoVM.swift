@@ -48,7 +48,6 @@ final class RepoVM: APIVMable {
             apRepoSj.send(())
         case .inCommit:
             apCommitsSj.send(())
-            clearUnReadCommit()
         case .inInitJustRepo:
             apRepoSj.send(())
         case .inIssueEvents:
@@ -59,6 +58,7 @@ final class RepoVM: APIVMable {
             apReadmeSj.send(())
         case .notiRepo:
             apNotiCommitsSj.send(())
+            clearUnReadCommit()
         }
     }
     func clearUnReadCommit() {

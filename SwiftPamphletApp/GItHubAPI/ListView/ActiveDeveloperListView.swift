@@ -24,7 +24,7 @@ struct ActiveDeveloperListView: View {
             ForEach(vm.cIADs) { ad in
                 Section {
                     ForEach(ad.users) { u in
-                        if (appVM.devsNotis[u.id] ?? 0) > 0  {
+                        if (appVM.devsNotis[u.id] ?? 0) > 0 && appVM.devsNotis[u.id] != SPC.unreadMagicNumber {
                             
                         } else {
                             NavigationLink(destination: UserView(vm: .init(userName: u.id))) {
@@ -53,8 +53,8 @@ struct ActiveDeveloperUnreadLinkView: View {
     @EnvironmentObject var appVM: AppVM
     var u: ADeveloperModel
     var body: some View {
-        if appVM.devsNotis[u.id] ?? 0 > 0 {
-            NavigationLink(destination: UserView(vm: .init(userName: u.id))) {
+        if appVM.devsNotis[u.id] ?? 0 > 0 && appVM.devsNotis[u.id] != SPC.unreadMagicNumber {
+            NavigationLink(destination: UserView(vm: .init(userName: u.id), isCleanUnread: true)) {
                 ActiveDeveloperListLinkView(u: u)
                     .badge(appVM.devsNotis[u.id] == SPC.unreadMagicNumber ? 0 : appVM.devsNotis[u.id] ?? 0)
             }

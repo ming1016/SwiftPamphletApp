@@ -18,7 +18,7 @@ struct RepoView: View {
     @State var type: EnterType = .normal
     var isShowRepoCommitsLink = true
     var isShowIssuesLink = true
-    
+    var isCleanUnread = false
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
@@ -65,7 +65,12 @@ struct RepoView: View {
                     Text("新提交")
                 }
                 .onAppear(perform: {
-                    vm.doing(.inCommit)
+                    if isCleanUnread == true {
+                        vm.doing(.notiRepo)
+                    } else {
+                        vm.doing(.inCommit)
+                    }
+                    
                 })
                 .tag(1)
             
