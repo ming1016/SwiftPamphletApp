@@ -50,9 +50,10 @@ struct RepoView: View {
             } else {
                 vm.doing(.inInit)
             }
+            appVM.reposNotis[vm.repoName] = SPC.unreadMagicNumber
+            appVM.calculateReposCountNotis()
         }
         .onDisappear {
-            vm.doing(.disappear)
             appVM.reposNotis[vm.repoName] = 0
             appVM.calculateReposCountNotis()
         }

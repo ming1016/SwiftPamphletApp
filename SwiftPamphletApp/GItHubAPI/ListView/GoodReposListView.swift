@@ -11,19 +11,11 @@ struct GoodReposListView: View {
     @EnvironmentObject var appVM: AppVM
     @StateObject var vm: IssueVM
     var body: some View {
-        
         List {
             Section {
                 ForEach(vm.cIGRs) { gr in
                     ForEach(gr.repos) { r in
-                        if let badgeCount = appVM.reposNotis[r.id] ?? 0 {
-                            if badgeCount > 0 {
-                                NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
-                                    GoodReposListLinkView(r: r)
-                                        .badge(badgeCount)
-                                }
-                            } // end if
-                        } // end if
+                        GoodReposListUnreadLinkView(r: r)
                     } // end ForEach
                 } // end ForEach
             } header: {
@@ -52,6 +44,20 @@ struct GoodReposListView: View {
             vm.doing(.cigrs)
         }
     } // end body
+}
+
+// MAKR: 碎视图
+struct GoodReposListUnreadLinkView: View {
+    @EnvironmentObject var appVM: AppVM
+    var r: ARepoModel
+    var body: some View {
+        if appVM.reposNotis[r.id] ?? 0 > 0 {
+            NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
+                GoodReposListLinkView(r: r)
+                    .badge(appVM.reposNotis[r.id] == SPC.unreadMagicNumber ? 0 : appVM.reposNotis[r.id] ?? 0)
+            }
+        } // end if
+    }
 }
 
 struct GoodReposListLinkView: View {

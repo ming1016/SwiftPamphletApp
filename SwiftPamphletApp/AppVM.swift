@@ -207,11 +207,15 @@ final class AppVM: ObservableObject {
                 if arr.count > 0 {
                     var ReposDic = [String: Int]()
                     for i in arr {
-                        ReposDic[i.fullName] = i.unRead
-                    }
+                        if reposNotis[i.fullName] == SPC.unreadMagicNumber {
+                            ReposDic[i.fullName] = SPC.unreadMagicNumber
+                        } else {
+                            ReposDic[i.fullName] = i.unRead
+                        }
+                    } // end for
                     reposNotis = ReposDic
-                }
-            }
+                } // end if
+            } // end if
         } catch {}
     }
     
@@ -221,11 +225,15 @@ final class AppVM: ObservableObject {
                 if arr.count > 0 {
                     var devsDic = [String: Int]()
                     for i in arr {
-                        devsDic[i.login] = i.unRead
-                    }
+                        if devsNotis[i.login] == SPC.unreadMagicNumber {
+                            devsDic[i.login] = SPC.unreadMagicNumber
+                        } else {
+                            devsDic[i.login] = i.unRead
+                        }
+                    } // end for
                     devsNotis = devsDic
-                }
-            }
+                } // end if
+            } // end if
         } catch {}
     }
     
@@ -233,6 +241,9 @@ final class AppVM: ObservableObject {
         var count = 0
         for i in reposNotis {
             count += i.value
+        }
+        if count >= SPC.unreadMagicNumber {
+            count = count - SPC.unreadMagicNumber
         }
         reposCountNotis = count
         showAppBadgeLabel()
@@ -243,6 +254,9 @@ final class AppVM: ObservableObject {
         var count = 0
         for i in devsNotis {
             count += i.value
+        }
+        if count >= SPC.unreadMagicNumber {
+            count = count - SPC.unreadMagicNumber
         }
         devsCountNotis = count
         showAppBadgeLabel()

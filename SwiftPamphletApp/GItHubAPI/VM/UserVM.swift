@@ -35,16 +35,15 @@ final class UserVM: APIVMable {
     private let resReceivedEventsSubject = PassthroughSubject<[EventModel], Never>()
 
     enum UserActionType {
-        case inInit, disappear, inEvent, inReceivedEvent, notiEvent
+        case inInit, inEvent, inReceivedEvent, notiEvent
     }
     func doing(_ somethinglike: UserActionType) {
         switch somethinglike {
         case .inInit:
             appearUserSubject.send(())
-        case .disappear:
-            clearUnReadEvent()
         case .inEvent:
             appearEventsSubject.send(())
+            clearUnReadEvent()
         case .inReceivedEvent:
             appearReceivedEventsSubject.send(())
         case .notiEvent:

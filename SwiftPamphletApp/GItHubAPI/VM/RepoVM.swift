@@ -40,16 +40,15 @@ final class RepoVM: APIVMable {
     private let resReadmeSj = PassthroughSubject<RepoContent, Never>()
     
     enum RepoActionType {
-        case inInit, disappear, inCommit, inInitJustRepo, inIssueEvents, inIssues, inReadme, notiRepo
+        case inInit, inCommit, inInitJustRepo, inIssueEvents, inIssues, inReadme, notiRepo
     }
     func doing(_ somethinglike: RepoActionType) {
         switch somethinglike {
         case .inInit:
             apRepoSj.send(())
-        case .disappear:
-            clearUnReadCommit()
         case .inCommit:
             apCommitsSj.send(())
+            clearUnReadCommit()
         case .inInitJustRepo:
             apRepoSj.send(())
         case .inIssueEvents:
