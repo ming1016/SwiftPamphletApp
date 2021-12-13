@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08038767276700F100519B15 /* RESTfulAPICCY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08038766276700F100519B15 /* RESTfulAPICCY.swift */; };
 		083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E02756503B0095E0EE /* AnimateLayout.swift */; };
 		083554E327572BB60095E0EE /* AppVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E227572BB60095E0EE /* AppVM.swift */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08038766276700F100519B15 /* RESTfulAPICCY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTfulAPICCY.swift; sourceTree = "<group>"; };
 		083554E02756503B0095E0EE /* AnimateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLayout.swift; sourceTree = "<group>"; };
 		083554E227572BB60095E0EE /* AppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVM.swift; sourceTree = "<group>"; };
 		086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的Swift小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		080387652766FF3200519B15 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				08038766276700F100519B15 /* RESTfulAPICCY.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		086A5EFA2744E88E00FECE02 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		086A5F052744E88E00FECE02 /* SwiftPamphletApp */ = {
 			isa = PBXGroup;
 			children = (
+				080387652766FF3200519B15 /* Network */,
 				086A5F482744EF2B00FECE02 /* ViewComponet */,
 				086A5F472744EF0800FECE02 /* Resource */,
 				086A5F252744ECD700FECE02 /* GItHubAPI */,
@@ -318,6 +329,7 @@
 				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
 				083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */,
+				08038767276700F100519B15 /* RESTfulAPICCY.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
 				086A5F3B2744EDA500FECE02 /* GitHubAPIModel.swift in Sources */,

@@ -40,6 +40,8 @@ struct SwiftPamphletApp: View {
     @State var alertMsg = ""
     @State var stepCountRepos = 0
     @State var stepCountDevs = 0
+    @State var reposNotisKeys = [String]()
+    @State var devsNotisKeys = [String]()
     let timerForRepos = Timer.publish(every: SPC.timerForReposSec, on: .main, in: .common).autoconnect()
     let timerForDevs = Timer.publish(every: SPC.timerForDevsSec, on: .main, in: .common).autoconnect()
     var body: some View {
@@ -75,11 +77,14 @@ struct SwiftPamphletApp: View {
                             if stepCountRepos >= appVM.reposNotis.count {
                                 stepCountRepos = 0
                             }
-                            var arr = [String]()
-                            for (k, _) in appVM.reposNotis {
-                                arr.append(k)
+                            
+                            if reposNotisKeys.count == 0 {
+                                for (k, _) in appVM.reposNotis {
+                                    reposNotisKeys.append(k)
+                                }
                             }
-                            let repoName = arr[stepCountRepos]
+                            print(reposNotisKeys)
+                            let repoName = reposNotisKeys[stepCountRepos]
                             
                             let vm = RepoVM(repoName: repoName)
                             vm.doing(.notiRepo)
@@ -94,11 +99,15 @@ struct SwiftPamphletApp: View {
                             if stepCountDevs >= appVM.devsNotis.count {
                                 stepCountDevs = 0
                             }
-                            var arr = [String]()
-                            for (k, _) in appVM.devsNotis {
-                                arr.append(k)
+                            
+                            if devsNotisKeys.count == 0  {
+                                for (k, _) in appVM.devsNotis {
+                                    devsNotisKeys.append(k)
+                                }
                             }
-                            let userName = arr[stepCountDevs]
+                            print(devsNotisKeys)
+                            let userName = devsNotisKeys[stepCountDevs]
+                            
                             let vm = UserVM(userName: userName)
                             vm.doing(.notiEvent)
                             appVM.doing(.loadDBDevInfoLocal)

@@ -64,13 +64,12 @@ struct RepoView: View {
                 }
                 .onAppear(perform: {
                     if isCleanUnread == true {
-                        vm.doing(.notiRepo)
+                        vm.doing(.clearUnReadCommit)
                         appVM.reposNotis[vm.repoName] = SPC.unreadMagicNumber
                         appVM.calculateReposCountNotis()
                     } else {
                         vm.doing(.inCommit)
                     }
-                    
                 })
                 .tag(1)
             

@@ -275,6 +275,17 @@
             {
                 "id":"NARKOZ/hacker-scripts",
                 "des":"程序员的活都让机器干的脚本（真实故事）"
+            },
+            {
+                "id":"nalexn/clean-architecture-swiftui",
+                "des":"干净完整的SwiftUI+Combine例子，包含网络和单元测试等"
+            },
+            {
+                "id":"kean/APIClient"
+            },
+            {
+                "id":"swift-server/async-http-client",
+                "des":"使用 SwiftNIO 开发的 HTTP 客户端"
             }
         ]
     }

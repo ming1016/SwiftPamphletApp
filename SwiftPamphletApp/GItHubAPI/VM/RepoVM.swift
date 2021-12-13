@@ -40,7 +40,7 @@ final class RepoVM: APIVMable {
     private let resReadmeSj = PassthroughSubject<RepoContent, Never>()
     
     enum RepoActionType {
-        case inInit, inCommit, inInitJustRepo, inIssueEvents, inIssues, inReadme, notiRepo
+        case inInit, inCommit, inInitJustRepo, inIssueEvents, inIssues, inReadme, notiRepo, clearUnReadCommit
     }
     func doing(_ somethinglike: RepoActionType) {
         switch somethinglike {
@@ -58,6 +58,7 @@ final class RepoVM: APIVMable {
             apReadmeSj.send(())
         case .notiRepo:
             apNotiCommitsSj.send(())
+        case .clearUnReadCommit:
             clearUnReadCommit()
         }
     }
