@@ -9,10 +9,16 @@ import SwiftUI
 
 struct GitHubApiTimeView: View {
     var timeStr: String
+    var isUnread = false
     var body: some View {
-        Text(timeStr.replacingOccurrences(of: "T", with: " ").replacingOccurrences(of: "Z", with: ""))
-            .font(.system(.footnote))
-            .foregroundColor(.secondary)
+        HStack {
+            Text(timeStr.replacingOccurrences(of: "T", with: " ").replacingOccurrences(of: "Z", with: ""))
+            if isUnread == true {
+                Image(systemName: "envelope.badge")
+            }
+        }
+        .font(.system(.footnote))
+        .foregroundColor(.secondary)
         
     }
 }

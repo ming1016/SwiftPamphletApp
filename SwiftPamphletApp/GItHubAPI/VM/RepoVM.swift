@@ -173,7 +173,7 @@ final class RepoVM: APIVMable {
                     var i = 0
                     var lrcs = f.lastReadCommitSha
                     for cm in cms {
-                        if i == 0 && f.unRead == 0 {
+                        if i == 0 {
                             lrcs = cm.sha
                         }
                         if cm.sha == f.lastReadCommitSha {
@@ -181,9 +181,7 @@ final class RepoVM: APIVMable {
                         }
                         i += 1
                     }
-                    if f.unRead != 0 {
-                        i = f.unRead + i
-                    }
+                    i = f.unRead + i
                     do {
                         let _ = try ReposNotiDataHelper.update(i: DBRepoNoti(fullName: repoName, lastReadCommitSha: lrcs, unRead: i))
                     } catch {}

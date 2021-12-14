@@ -286,6 +286,13 @@
             {
                 "id":"swift-server/async-http-client",
                 "des":"使用 SwiftNIO 开发的 HTTP 客户端"
+            },
+            {
+                "id":"WebKit/WebKit"
+            },
+            {
+                "id":"carekit-apple/CareKit",
+                "des":"使用 SwiftUI 开发健康相关的库"
             }
         ]
     }

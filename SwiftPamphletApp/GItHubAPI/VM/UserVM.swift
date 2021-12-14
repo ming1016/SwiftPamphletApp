@@ -132,7 +132,7 @@ final class UserVM: APIVMable {
                     var i = 0
                     var lrid = f.lastReadId
                     for em in ems {
-                        if i == 0 && f.unRead == 0 {
+                        if i == 0 {
                             lrid = em.id
                         }
                         if em.id == f.lastReadId {
@@ -140,9 +140,7 @@ final class UserVM: APIVMable {
                         }
                         i += 1
                     }
-                    if f.unRead != 0 {
-                        i = f.unRead + i
-                    }
+                    i = f.unRead + i
                     do {
                         let _ = try DevsNotiDataHelper.update(i: DBDevNoti(login: userName, lastReadId: lrid, unRead: i))
                     } catch {}
