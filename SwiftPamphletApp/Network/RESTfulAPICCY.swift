@@ -12,20 +12,22 @@ import SwiftUI
 // MARK: RESTfulDelegate
 public protocol RESTfulDelegate {
     func restful(_ restful: RESTful, willSendReq req: inout URLRequest)
-    func retry(_ restful: RESTful, withErr err: Error) async -> Bool
     func restful(_ restful: RESTful, invalidRes res: HTTPURLResponse, data: Data) -> Error
+    func retry(_ restful: RESTful, withErr err: Error) async -> Bool
+    
 }
 public extension RESTfulDelegate {
     func restful(_ restful: RESTful, willSendReq req: inout URLRequest) {}
-    func retry(_ restful: RESTful, withErr err: Error) async -> Bool {
-        return false
-    }
     func restful(_ restful: RESTful, invalidRes res: HTTPURLResponse, data: Data) -> Error {
         return RESTfulError.wrongStateCode(res.statusCode)
+    }
+    func retry(_ restful: RESTful, withErr err: Error) async -> Bool {
+        return false
     }
 }
 private struct DefaultRESTfulDelegate: RESTfulDelegate {}
 
+// MARK: RESTful
 public actor RESTful {
     private let session: URLSession
     private let host: String
@@ -37,6 +39,43 @@ public actor RESTful {
         self.delegate = delegate ?? DefaultRESTfulDelegate()
     }
 }
+extension RESTful {
+    
+    // MARK: send
+//    public func send<T: Decodable>(_ request: Req<T>) async throws -> T {
+//        try await send
+//    }
+    
+//    private func send<T>(_ req: Req<T>, _ decode: @escaping (Data) async throws -> T) async throws -> T {
+//        let req = try await
+//    }
+    
+    // MARK: Make
+//    func makeRequest(url: URL, method: String, body: AnyEncodable?) async throws -> URLRequest {
+//        var req = URLRequest(url: url)
+//        req.httpMethod = method
+//        if let body = body {
+//            req.httpBody = try await
+//        }
+//    }
+    
+    func makeURL(path: String, query: [String: String]?) throws -> URL {
+        guard let url = URL(string: path), var comps = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            throw URLError(.badURL)
+        }
+        if path.starts(with: "/") {
+            comps.scheme = "https"
+            comps.host = host
+        }
+        if let query = query {
+            comps.queryItems = query.map(URLQueryItem.init)
+        }
+        guard let url = comps.url else {
+            throw URLError(.badURL)
+        }
+        return url
+    }
+}
 public enum RESTfulError: Error, LocalizedError {
     case wrongStateCode(Int)
     public var des: String? {
@@ -46,6 +85,9 @@ public enum RESTfulError: Error, LocalizedError {
         }
     }
 }
+
+
+
 
 // MARK: 请求和响应
 

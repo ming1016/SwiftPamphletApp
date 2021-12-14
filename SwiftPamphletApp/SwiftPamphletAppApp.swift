@@ -83,7 +83,6 @@ struct SwiftPamphletApp: View {
                                     reposNotisKeys.append(k)
                                 }
                             }
-                            print(reposNotisKeys)
                             let repoName = reposNotisKeys[stepCountRepos]
                             
                             let vm = RepoVM(repoName: repoName)
@@ -91,7 +90,6 @@ struct SwiftPamphletApp: View {
                             appVM.doing(.loadDBRepoInfoLocal)
                             appVM.calculateReposCountNotis()
                             stepCountRepos += 1
-                            print("repo count \(stepCountRepos)")
                         }
                     })
                     .onReceive(timerForDevs, perform: { time in
@@ -105,7 +103,6 @@ struct SwiftPamphletApp: View {
                                     devsNotisKeys.append(k)
                                 }
                             }
-                            print(devsNotisKeys)
                             let userName = devsNotisKeys[stepCountDevs]
                             
                             let vm = UserVM(userName: userName)
@@ -113,7 +110,6 @@ struct SwiftPamphletApp: View {
                             appVM.doing(.loadDBDevInfoLocal)
                             appVM.calculateDevsCountNotis()
                             stepCountDevs += 1
-                            print("dev count \(stepCountDevs)")
                         }
                     })
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))

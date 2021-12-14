@@ -73,12 +73,11 @@ struct UserView: View {
                 }
                 .onAppear {
                     // 如果是从列表未读section里来的会检查清理未读
+                    vm.doing(.inEvent)
                     if isCleanUnread == true {
                         vm.doing(.clearUnReadEvent)
                         appVM.devsNotis[vm.userName] = SPC.unreadMagicNumber
                         appVM.calculateDevsCountNotis()
-                    } else {
-                        vm.doing(.inEvent)
                     }
                     
                 }
