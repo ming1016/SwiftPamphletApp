@@ -70,7 +70,7 @@ final class IssueVM: APIVMable {
         self.cIADs = [SPActiveDevelopersModel]()
         self.cIGRs = [SPGoodReposModel]()
         
-        // MARK: 议题的信息获取
+        // MARK: - 议题的信息获取
         let reqIssue = IssueRequest(repoName: repoName, issueNumber: issueNumber)
         let resIssueSm = apIssueSj
             .flatMap { [apiSev] in
@@ -85,7 +85,7 @@ final class IssueVM: APIVMable {
         let repIssueSm = resIssueSj
             .assign(to: \.issue, on: self)
         
-        // MARK: 议题的留言获取
+        // MARK: - 议题的留言获取
         let reqComments = IssueCommentsRequest(repoName: repoName, issueNumber: issueNumber)
         let resCommentsSm = apCommentsSj
             .flatMap { [apiSev] in
@@ -126,7 +126,7 @@ final class IssueVM: APIVMable {
             })
             .assign(to: \.customIssues, on: self)
         
-        // MARK: 开发者动态
+        // MARK: - 开发者动态
         let resCIADsSm = apCIADsSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqCustomIssues)
@@ -152,7 +152,7 @@ final class IssueVM: APIVMable {
             .assign(to: \.cIADs, on: self)
             
         
-        // MARK: 仓库动态
+        // MARK: - 仓库动态
         let resCIGRsSm = apCIGRsSj
             .flatMap { [apiSev] in
                 apiSev.response(from: reqCustomIssues)

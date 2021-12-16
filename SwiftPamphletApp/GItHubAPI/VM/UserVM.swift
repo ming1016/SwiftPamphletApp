@@ -69,7 +69,7 @@ final class UserVM: APIVMable {
         self.events = [EventModel]()
         self.receivedEvents = [EventModel]()
         
-        // MARK: 用户信息获取
+        // MARK: - 用户信息获取
         let reqUser = UserRequest(userName: userName)
         let resUserStream = appearUserSubject
             .flatMap { [apiSev] in
@@ -85,7 +85,7 @@ final class UserVM: APIVMable {
         let repUserStream = resUserSubject
             .assign(to: \.user, on: self)
         
-        // MARK: 用户事件
+        // MARK: - 用户事件
         let reqEvent = UserEventsRequest(userName: userName)
         let resEventStream = appearEventsSubject
             .flatMap { [apiSev] in
@@ -100,7 +100,7 @@ final class UserVM: APIVMable {
         let repEventStream = resEventsSubject
             .assign(to: \.events, on: self)
         
-        // MARK: 用户接受的事件
+        // MARK: - 用户接受的事件
         let reqReceivedEvent = UserReceivedEventsRequest(userName: userName)
         let resReceivedEventStream = appearReceivedEventsSubject
             .flatMap { [apiSev] in
@@ -115,7 +115,7 @@ final class UserVM: APIVMable {
         let repReceivedEventStream = resReceivedEventsSubject
             .assign(to: \.receivedEvents, on: self)
         
-        // MARK: 更新用户的通知信息
+        // MARK: - 更新用户的通知信息
         let reqNotiEvents = UserEventsRequest(userName: userName)
         let resNotiEventsStream = appearNotiEventsSubject
             .flatMap { [apiSev] in
@@ -154,7 +154,7 @@ final class UserVM: APIVMable {
             }
             .assign(to: \.events, on: self)
         
-        // MARK: 错误
+        // MARK: - 错误
         let errMsgSm = errSj
             .map { err -> String in
                 err.message

@@ -10,12 +10,16 @@ import Combine
 import AppKit
 
 final class AppVM: ObservableObject {
+    // MARK: - CCY Action
+    
+    
+    // MARK: - Combine Action
     @Published var alertMsg = "" // 警告信息
-    private var cc: [AnyCancellable] = []
     @Published var reposNotis = [String: Int]()
     @Published var reposCountNotis = 0
     @Published var devsNotis = [String: Int]()
     @Published var devsCountNotis = 0
+    private var cc: [AnyCancellable] = []
     
     private let apiSev: APISev
     
@@ -45,7 +49,7 @@ final class AppVM: ObservableObject {
     
     init() {
         self.apiSev = APISev()
-        // MARK: 初始化数据库
+        // MARK: - 初始化数据库
         let db = DB.shared
         do {
             try db.cTbs()
@@ -53,7 +57,7 @@ final class AppVM: ObservableObject {
             
         }
         
-        // MARK: 获取所有开发者通知信息
+        // MARK: - 获取所有开发者通知信息
         let reqDevsCustomIssues = IssueRequest(repoName: SPC.pamphletIssueRepoName, issueNumber: 30)
         let resDevsSm = apDevsSj
             .flatMap { [apiSev] in
@@ -124,7 +128,7 @@ final class AppVM: ObservableObject {
             .assign(to: \.devsNotis, on: self)
         
         
-        // MARK: 获取所有仓库通知信息
+        // MARK: - 获取所有仓库通知信息
         let reqReposCustomIssues = IssueRequest(repoName: SPC.pamphletIssueRepoName, issueNumber: 31)
         let resReposSm = apReposSj
             .flatMap { [apiSev] in

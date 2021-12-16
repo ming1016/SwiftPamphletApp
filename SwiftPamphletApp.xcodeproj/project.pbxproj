@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08038767276700F100519B15 /* RESTfulAPICCY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08038766276700F100519B15 /* RESTfulAPICCY.swift */; };
+		08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08038766276700F100519B15 /* CCYRESTfulAPI.swift */; };
 		083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E02756503B0095E0EE /* AnimateLayout.swift */; };
 		083554E327572BB60095E0EE /* AppVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E227572BB60095E0EE /* AppVM.swift */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
@@ -32,21 +32,23 @@
 		086A5F4F2744EF3B00FECE02 /* guide-syntax.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F4B2744EF3B00FECE02 /* guide-syntax.json */; };
 		086A5F502744EF3B00FECE02 /* developers.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F4C2744EF3B00FECE02 /* developers.json */; };
 		086A5F522744EF4C00FECE02 /* ViewComponet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F512744EF4C00FECE02 /* ViewComponet.swift */; };
-		086A5F55274523F100FECE02 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 086A5F54274523F100FECE02 /* MarkdownUI */; };
 		086A5F58274CB8B500FECE02 /* guide-subject.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F57274CB8B500FECE02 /* guide-subject.json */; };
 		086A5F5A274CC17700FECE02 /* lib-Combine.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F59274CC17700FECE02 /* lib-Combine.json */; };
 		086A5F5D274CCAEC00FECE02 /* lib-Concurrency.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F5B274CCAEC00FECE02 /* lib-Concurrency.json */; };
 		086A5F5E274CCAEC00FECE02 /* lib-SwiftUI.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F5C274CCAEC00FECE02 /* lib-SwiftUI.json */; };
-		086A5F612754C0B500FECE02 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 086A5F602754C0B500FECE02 /* SQLite */; };
 		086A5F642754C14F00FECE02 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* TextView.swift */; };
 		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
 		086A5F6A2755F3BE00FECE02 /* ilikedrepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* ilikedrepos.json */; };
+		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
+		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
+		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
+		08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */; };
 		08D4F0FC275F705C005FC997 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4F0FB275F705C005FC997 /* LabelView.swift */; };
 		08D4F0FE275F728C005FC997 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4F0FD275F728C005FC997 /* LinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08038766276700F100519B15 /* RESTfulAPICCY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTfulAPICCY.swift; sourceTree = "<group>"; };
+		08038766276700F100519B15 /* CCYRESTfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRESTfulAPI.swift; sourceTree = "<group>"; };
 		083554E02756503B0095E0EE /* AnimateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLayout.swift; sourceTree = "<group>"; };
 		083554E227572BB60095E0EE /* AppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVM.swift; sourceTree = "<group>"; };
 		086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的Swift小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,8 @@
 		086A5F632754C14F00FECE02 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		086A5F662754C27900FECE02 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		086A5F692755F3BE00FECE02 /* ilikedrepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ilikedrepos.json; path = SwiftPamphletApp/Resource/ilikedrepos.json; sourceTree = SOURCE_ROOT; };
+		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
+		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08D4F0FB275F705C005FC997 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		08D4F0FD275F728C005FC997 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,8 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				086A5F612754C0B500FECE02 /* SQLite in Frameworks */,
-				086A5F55274523F100FECE02 /* MarkdownUI in Frameworks */,
+				08BF26D02768A59A0064DDAC /* SQLite in Frameworks */,
+				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +104,7 @@
 		080387652766FF3200519B15 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				08038766276700F100519B15 /* RESTfulAPICCY.swift */,
+				08038766276700F100519B15 /* CCYRESTfulAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -154,6 +158,7 @@
 				086A5F2D2744ED8600FECE02 /* GoodReposListView.swift */,
 				086A5F2C2744ED8600FECE02 /* IssuesListFromCustomView.swift */,
 				086A5F2B2744ED8600FECE02 /* SPIssuesListView.swift */,
+				08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -171,12 +176,12 @@
 		086A5F252744ECD700FECE02 /* GItHubAPI */ = {
 			isa = PBXGroup;
 			children = (
+				086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */,
+				08BF26D4276B18380064DDAC /* Network */,
 				086A5F652754C23200FECE02 /* DB */,
 				086A5F3C2744EDB400FECE02 /* VM */,
 				086A5F1E2744ECA400FECE02 /* DetailView */,
 				086A5F152744EC8900FECE02 /* ListView */,
-				086A5F382744EDA500FECE02 /* APIRequest.swift */,
-				086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */,
 			);
 			path = GItHubAPI;
 			sourceTree = "<group>";
@@ -235,6 +240,15 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		08BF26D4276B18380064DDAC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				086A5F382744EDA500FECE02 /* APIRequest.swift */,
+				08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,8 +266,8 @@
 			);
 			name = SwiftPamphletApp;
 			packageProductDependencies = (
-				086A5F54274523F100FECE02 /* MarkdownUI */,
-				086A5F602754C0B500FECE02 /* SQLite */,
+				08BF26CF2768A59A0064DDAC /* SQLite */,
+				08BF26D22768A5B40064DDAC /* MarkdownUI */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */;
@@ -284,8 +298,8 @@
 			);
 			mainGroup = 086A5EFA2744E88E00FECE02;
 			packageReferences = (
-				086A5F53274523F100FECE02 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
-				086A5F5F2754C0B500FECE02 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				08BF26D12768A5B40064DDAC /* XCRemoteSwiftPackageReference "MarkdownUI" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -322,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */,
 				08D4F0FC275F705C005FC997 /* LabelView.swift in Sources */,
@@ -329,7 +344,8 @@
 				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
 				083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */,
-				08038767276700F100519B15 /* RESTfulAPICCY.swift in Sources */,
+				08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */,
+				08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
 				086A5F3B2744EDA500FECE02 /* GitHubAPIModel.swift in Sources */,
@@ -548,15 +564,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		086A5F53274523F100FECE02 /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.2;
-			};
-		};
-		086A5F5F2754C0B500FECE02 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+		08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
 			requirement = {
@@ -564,18 +572,26 @@
 				minimumVersion = 0.13.1;
 			};
 		};
+		08BF26D12768A5B40064DDAC /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		086A5F54274523F100FECE02 /* MarkdownUI */ = {
+		08BF26CF2768A59A0064DDAC /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 086A5F53274523F100FECE02 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
-			productName = MarkdownUI;
-		};
-		086A5F602754C0B500FECE02 /* SQLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 086A5F5F2754C0B500FECE02 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			package = 08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */;
 			productName = SQLite;
+		};
+		08BF26D22768A5B40064DDAC /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08BF26D12768A5B40064DDAC /* XCRemoteSwiftPackageReference "MarkdownUI" */;
+			productName = MarkdownUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

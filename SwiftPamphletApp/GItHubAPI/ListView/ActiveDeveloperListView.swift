@@ -47,7 +47,7 @@ struct ActiveDeveloperListView: View {
 }
 
 
-// MARK: 碎视图
+// MARK: - 碎视图
 
 struct ActiveDeveloperUnreadLinkView: View {
     @EnvironmentObject var appVM: AppVM

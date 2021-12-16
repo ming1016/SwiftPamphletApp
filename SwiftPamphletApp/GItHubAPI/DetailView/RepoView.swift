@@ -30,8 +30,9 @@ struct RepoView: View {
                     Text("语言 \(vm.repo.language ?? "")")
                     ButtonGoGitHubWeb(url: vm.repo.htmlUrl ?? "https://github.com", text: "在 GitHub 上访问")
                 }
-                
-                Text("简介：\(vm.repo.description ?? "")")
+                if vm.repo.description != nil {
+                    Text("简介：\(vm.repo.description ?? "")")
+                }
                 HStack {
                     Text("作者：")
                     AsyncImageWithPlaceholder(size: .smallSize, url: vm.repo.owner.avatarUrl)
@@ -186,7 +187,7 @@ struct RepoCommitsView: View {
     } // end body
 }
 
-// MARK: 碎视图
+// MARK: - 碎视图
 struct RepoCommitLabelView: View {
     var repo: RepoModel
     var commit: CommitModel
@@ -241,18 +242,18 @@ struct IssueEventLabelView: View {
                 Text(issueEvent.event)
                     .foregroundColor(.secondary)
             }
-            Group {
+            HStack {
                 Text(issueEvent.issue.title)
                     .font(.title3)
                 Text("\(issueEvent.issue.comments) 回复")
                     .foregroundColor(.secondary)
                     .font(.footnote)
-                HStack {
-                    AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.issue.user.avatarUrl)
-                    ButtonGoGitHubWeb(url: issueEvent.issue.user.login, text: issueEvent.issue.user.login, ignoreHost: true)
-                }
-                Markdown(Document(issueEvent.issue.body ?? ""))
             }
+            HStack {
+                AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.issue.user.avatarUrl)
+                ButtonGoGitHubWeb(url: issueEvent.issue.user.login, text: issueEvent.issue.user.login, ignoreHost: true)
+            }
+            Markdown(Document(issueEvent.issue.body ?? ""))
         } // end VStack
     }
 }

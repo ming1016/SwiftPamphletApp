@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-// MARK: API Request Fundation
+// MARK: - API Request Fundation
 
 protocol APIReqType {
     associatedtype Res: Decodable
@@ -42,16 +42,7 @@ final class APISev: APISevType {
         // token 处理
         // TODO: 支持 OAuth
         // TODO: 访问受限后会crash，异常待处理
-        if SPC.gitHubAccessToken.isEmpty {
-            // 测试用
-            let secretTokenForTest = loadFileContent(path: "/Users/mingdai/Downloads/归档/token/githubAccessToken.txt")
-            if secretTokenForTest.isEmpty == false {
-                req.addValue("token \(secretTokenForTest)", forHTTPHeaderField: "Authorization")
-            }
-        } else {
-            req.addValue("token \(SPC.gitHubAccessToken)", forHTTPHeaderField: "Authorization")
-        }
-        
+        req.addValue("token \(SPC.gitHubAccessToken)", forHTTPHeaderField: "Authorization")
         
         req.addValue("SwiftPamphletApp", forHTTPHeaderField: "User-Agent")
 //        print(req.allHTTPHeaderFields!)

@@ -293,6 +293,42 @@
             {
                 "id":"carekit-apple/CareKit",
                 "des":"使用 SwiftUI 开发健康相关的库"
+            },
+            {
+                "id":"carson-katri/awesome-result-builders",
+                "des":"Result Builders awesome"
+            },
+            {
+                "id":"carson-katri/swift-request",
+                "des":"声明式的网络请求"
+            },
+            {
+                "id":"carson-katri/reddit-swiftui",
+                "des":"SwiftUI 写的 Readdit客户端"
+            },
+            {
+                "id":"Cay-Zhang/SwiftSpeech",
+                "des":"苹果语言识别封装库，已适配 SwiftUI"
+            },
+            {
+                "id":"NextLevel/NextLevel",
+                "des":"相机"
+            },
+            {
+                "id":"Harley-xk/MaLiang",
+                "des":"基于 Metal 的涂鸦绘图库"
+            },
+            {
+                "id":"chaozh/awesome-blockchain-cn",
+                "des":"区块链 awesome"
+            },
+            {
+                "id":"RobotsAndPencils/XcodesApp",
+                "des":"Xcode 多版本安装"
+            },
+            {
+                "id":"WeTransfer/Mocker",
+                "des":"Mock Alamofire and URLSession"
             }
         ]
     }

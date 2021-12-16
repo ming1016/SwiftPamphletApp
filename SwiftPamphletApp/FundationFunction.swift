@@ -11,7 +11,7 @@ import Combine
 import Network
 
 
-// MARK: 网络
+// MARK: - 网络
 // 网络状态检查 network state check
 final class Nsck: ObservableObject {
     static let shared = Nsck()
@@ -62,7 +62,7 @@ func validHTTPUrlStrFromUrlStr(urlStr: String) -> String {
     return httpsPrefix + urlStr
 }
 
-// MARK: 文件
+// MARK: - 文件
 
 // 从Bundle中读取并解析JSON文件生成Model
 func loadBundleJSONFile<T: Decodable>(_ filename: String) -> T {
@@ -92,7 +92,7 @@ func loadFileContent(path: String) -> String {
     }
 }
 
-// MARK: 基础
+// MARK: - 基础
 // base64
 extension String {
     func base64Encoded() -> String? {
@@ -116,7 +116,7 @@ extension Array {
     }
 }
 
-// MARK: 调试
+// MARK: - 调试
 extension View {
     func debug() -> Self {
         print(Mirror(reflecting: self).subjectType)

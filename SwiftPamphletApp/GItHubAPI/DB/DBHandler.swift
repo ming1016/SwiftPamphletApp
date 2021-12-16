@@ -55,7 +55,7 @@ protocol DataHelperProtocol {
     static func findAll() throws -> [T]?
 }
 
-// MARK: 开发者更新提醒
+// MARK: - 开发者更新提醒
 typealias DBDevNoti = (
     login: String,
     lastReadId: String,
@@ -157,7 +157,7 @@ struct DevsNotiDataHelper: DataHelperProtocol {
     
 }
 
-// MARK: 仓库更新提醒
+// MARK: - 仓库更新提醒
 
 typealias DBRepoNoti = (
     fullName: String,

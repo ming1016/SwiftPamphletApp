@@ -69,7 +69,6 @@ struct SwiftPamphletApp: View {
                         // 开发者数据读取
                         appVM.doing(.loadDBDevInfoLocal)
                         appVM.doing(.loadDBDevInfoFromServer)
-                        
                     })
                     .onReceive(timerForRepos, perform: { time in
                         print(time)
@@ -112,6 +111,17 @@ struct SwiftPamphletApp: View {
                             stepCountDevs += 1
                         }
                     })
+//                    .task {
+//                        let githubAPI = RESTful(host: .github)
+//                        do {
+//                            let a = try await githubAPI.value(for: Github.user.following.get)
+//                            print(a)
+//                            let b = try await githubAPI.value(for: Github.users("tkremenek").get)
+//                            print(b)
+//                        } catch {
+//                            print("await wrong")
+//                        }
+//                    }
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
                 IntroView()
                 NavView()
@@ -157,6 +167,7 @@ struct NavView: View {
     }
 }
 
+// MARK: - Sidebar
 struct SPSidebar: View {
     @EnvironmentObject var appVM: AppVM
     var body: some View {
@@ -209,6 +220,12 @@ struct SPSidebar: View {
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 61))) {
                     Label("SwiftUI", systemImage: "rectangle.fill.on.rectangle.fill")
                 }
+                
+                NavigationLink {
+                    ExploreRepoListView()
+                } label: {
+                    Label("探索更多", systemImage: "globe.asia.australia")
+                }
             }
             
             Section("小册子") {
@@ -216,6 +233,8 @@ struct SPSidebar: View {
                     Label("小册子议题", systemImage: "square.3.layers.3d.down.right")
                 }
             }
+            
+            
             
 //            Section("个人") {
 //                /// isExpanded 来控制是否展开
@@ -246,20 +265,14 @@ struct SPSidebar: View {
     }
 }
 
+// MARK: - UnCat
 protocol Jsonable : Identifiable, Decodable, Hashable {}
-
-// MARK: Evironment Model
-
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
     var op: String?
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
-        
-        
-        
-        
         
         
         

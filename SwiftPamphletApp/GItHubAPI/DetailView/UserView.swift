@@ -125,7 +125,7 @@ struct UserEventView: View {
     } // end body
 } // end struct
 
-// MARK: 碎视图
+// MARK: - 碎视图
 
 struct ListCommits: View {
     var event: EventModel

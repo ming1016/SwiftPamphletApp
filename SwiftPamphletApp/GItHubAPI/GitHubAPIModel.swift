@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: Readme
+// MARK: - Readme
 struct RepoContent: Decodable, Hashable {
     var content: String = ""
     var encoding: String = ""
@@ -17,7 +17,7 @@ struct RepoContent: Decodable, Hashable {
     var path: String = ""
 }
 
-// MARK: IssueComment
+// MARK: - IssueComment
 struct IssueComment: Jsonable {
     var id: Int64
     var authorAssociation: String
@@ -27,7 +27,7 @@ struct IssueComment: Jsonable {
     var user: GitUserModel
 }
 
-// MARK: IssueEvent
+// MARK: - IssueEvent
 struct IssueEventModel: Jsonable {
     var id: Int64
     var actor: GitUserModel
@@ -36,7 +36,7 @@ struct IssueEventModel: Jsonable {
     var issue: IssueModel
 }
 
-// MARK: Issue
+// MARK: - Issue
 struct IssueModel: Jsonable {
     var id: Int64 = 0
     var number: Int = 0
@@ -48,7 +48,7 @@ struct IssueModel: Jsonable {
     var user: GitUserModel = GitUserModel()
 }
 
-// MARK: Commit
+// MARK: - Commit
 struct CommitModel: Decodable, Hashable {
     var sha: String?
     var author: CommitAuthorModel?
@@ -75,7 +75,7 @@ struct CommitCommitAuthor: Decodable, Hashable {
     var name: String?
 }
 
-// MARK: Event
+// MARK: - Event
 struct EventModel: Jsonable {
     var id: String
     var createdAt: String
@@ -116,7 +116,7 @@ struct PayloadComment: Decodable, Hashable {
     var body: String?
 }
 
-// MARK: Repo
+// MARK: - Repo
 
 struct SearchRepoModel: Decodable {
     var items: [RepoModel]
@@ -134,7 +134,7 @@ struct RepoModel: Jsonable {
     var owner: GitUserModel = GitUserModel()
 }
 
-// MARK: User
+// MARK: - User
 struct UserModel: Jsonable {
     var id: Int64 = 0
     var login: String = ""
@@ -152,8 +152,20 @@ struct UserModel: Jsonable {
     var publicGists: Int = 0
     var publicRepos: Int = 0
 }
+struct UserEmailModel: Decodable {
+    var email: String
+    var verified: Bool
+    var primary: Bool
+    var visibility: String?
+}
 
 struct GitUserModel: Jsonable {
+    var id: Int64 = 0
+    var login: String = ""
+    var name: String?
+    var avatarUrl: String = ""
+}
+struct GitFoll: Jsonable {
     var id: Int64 = 0
     var login: String = ""
     var name: String?
