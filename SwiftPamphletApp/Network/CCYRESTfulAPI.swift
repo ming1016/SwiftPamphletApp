@@ -9,23 +9,7 @@ import Foundation
 import SwiftUI
 /// 参考: https://kean.blog/post/new-api-client
 
-// MARK: - RESTfulDelegate
-public protocol RESTfulDelegate {
-    func restful(_ restful: RESTful, willSendReq req: inout URLRequest) // 发送前可以设置 URLRequest，比如在 header 里设置 access token 啥的
-    func restful(_ restful: RESTful, invalidRes res: HTTPURLResponse, data: Data) -> Error
-    func retry(_ restful: RESTful, withErr err: Error) async -> Bool
-    
-}
-public extension RESTfulDelegate {
-    func restful(_ restful: RESTful, willSendReq req: inout URLRequest) {}
-    func restful(_ restful: RESTful, invalidRes res: HTTPURLResponse, data: Data) -> Error {
-        return RESTfulError.wrongStateCode(res.statusCode)
-    }
-    func retry(_ restful: RESTful, withErr err: Error) async -> Bool {
-        return false
-    }
-}
-private struct DefaultRESTfulDelegate: RESTfulDelegate {}
+
 
 // MARK: - RESTful
 public actor RESTful {
@@ -36,16 +20,14 @@ public actor RESTful {
     private let conf: Conf
     private let session: URLSession
     private let serializer: Serializer
-    private let delegate: RESTfulDelegate
     
-    convenience init(host: Host, conf: URLSessionConfiguration = .default, delegate: RESTfulDelegate? = nil) {
-        self.init(conf: Conf(host: host, sessionConf: conf, delegate: delegate))
+    convenience init(host: Host, conf: URLSessionConfiguration = .default) {
+        self.init(conf: Conf(host: host, sessionConf: conf))
     }
     
     public init(conf: Conf) {
         self.conf = conf
         self.session = URLSession(configuration: conf.sessionConf)
-        self.delegate = conf.delegate ?? DefaultRESTfulDelegate()
         self.serializer = Serializer(decoder: conf.decoder, encoder: conf.encoder)
     }
     // MARK: - Conf
@@ -56,16 +38,14 @@ public actor RESTful {
         var sessionConf: URLSessionConfiguration = .default
         var decoder: JSONDecoder?
         var encoder: JSONEncoder?
-        var delegate: RESTfulDelegate?
         
-        init(host: Host, port: Int? = nil, isInsecure: Bool = false, sessionConf: URLSessionConfiguration = .default, decoder: JSONDecoder? = nil, encoder: JSONEncoder? = nil, delegate: RESTfulDelegate? = nil) {
+        init(host: Host, port: Int? = nil, isInsecure: Bool = false, sessionConf: URLSessionConfiguration = .default, decoder: JSONDecoder? = nil, encoder: JSONEncoder? = nil) {
             self.host = host
             self.port = port
             self.isInsecure = isInsecure
             self.sessionConf = sessionConf
             self.decoder = decoder
             self.encoder = encoder
-            self.delegate = delegate
         } // end init
     } // end struct Conf
     
@@ -115,21 +95,15 @@ extension RESTful {
         do {
             return try await actuallySend(req)
         } catch {
-            guard await delegate.retry(self, withErr: error) else {
-                throw error
-            }
-            return try await actuallySend(req)
+            throw error
         }
     }
     
     private func actuallySend(_ req: URLRequest) async throws -> Res<Data> {
-//        var req = req
-//        delegate.restful(self, willSendReq: &req)
         let (data, res) = try await session.data(for: req, delegate: nil)
         try validate(res: res, data: data)
         let hRes = (res as? HTTPURLResponse) ?? HTTPURLResponse()
         return Res(value: data, data: data, req: req, res: hRes, sCode: hRes.statusCode)
-        
     }
  
     // MARK: - Make
@@ -178,7 +152,8 @@ extension RESTful {
             return
         }
         if !(200..<300).contains(hRes.statusCode) {
-            throw delegate.restful(self, invalidRes: hRes, data: data)
+            print("Wrong, statusCode is \(hRes.statusCode)")
+            throw URLError(.badServerResponse)
         }
     }
 }
