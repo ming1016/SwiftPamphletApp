@@ -1,0 +1,21 @@
+name: Build Release
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - uses: actions/checkout@v2
+      - name: submodules-init
+        uses: snickerbockers/submodules-init@v4
+      - name: Build
+        run: |
+          chmod +x ./compile.command
+          /bin/bash -c ./compile.command
+      - name: Upload .app
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: "戴铭的Swift小册子.app"
+          path: "戴铭的Swift小册子.app"
