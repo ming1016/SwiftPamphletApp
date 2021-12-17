@@ -28,7 +28,7 @@ public actor RESTful {
     public init(conf: Conf) {
         self.conf = conf
         self.session = URLSession(configuration: conf.sessionConf)
-        self.serializer = Serializer(decoder: conf.decoder, encoder: conf.encoder)
+        self.serializer = Serializer()
     }
     // MARK: - Conf
     public struct Conf {
@@ -36,16 +36,12 @@ public actor RESTful {
         var port: Int?
         var isInsecure = false // false 用 https，true 为 http
         var sessionConf: URLSessionConfiguration = .default
-        var decoder: JSONDecoder?
-        var encoder: JSONEncoder?
         
         init(host: Host, port: Int? = nil, isInsecure: Bool = false, sessionConf: URLSessionConfiguration = .default, decoder: JSONDecoder? = nil, encoder: JSONEncoder? = nil) {
             self.host = host
             self.port = port
             self.isInsecure = isInsecure
             self.sessionConf = sessionConf
-            self.decoder = decoder
-            self.encoder = encoder
         } // end init
     } // end struct Conf
     
@@ -172,20 +168,13 @@ public enum RESTfulError: Error, LocalizedError {
 private actor Serializer {
     private let decoder: JSONDecoder
     private let encoder: JSONEncoder
-    init(decoder: JSONDecoder?, encoder: JSONEncoder?) {
-        if let decoder = decoder {
-            self.decoder = decoder
-        } else {
-            self.decoder = JSONDecoder()
-            self.decoder.keyDecodingStrategy = .convertFromSnakeCase
-            self.decoder.dateDecodingStrategy = .iso8601
-        }
-        if let encoder = encoder {
-            self.encoder = encoder
-        } else {
-            self.encoder = JSONEncoder()
-            self.encoder.dateEncodingStrategy = .iso8601
-        }
+    init() {
+        self.decoder = JSONDecoder()
+        self.decoder.keyDecodingStrategy = .convertFromSnakeCase
+        self.decoder.dateDecodingStrategy = .iso8601
+        
+        self.encoder = JSONEncoder()
+        self.encoder.dateEncodingStrategy = .iso8601
     }
     
     func decode<T: Decodable>(_ data: Data) async throws -> T {
@@ -195,7 +184,6 @@ private actor Serializer {
         try encoder.encode(entity)
     }
 }
-
 
 // MARK: - 请求和响应
 
