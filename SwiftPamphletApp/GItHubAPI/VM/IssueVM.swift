@@ -8,8 +8,6 @@
 import Foundation
 import Combine
 
-
-
 final class IssueVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
     public let repoName: String
@@ -18,13 +16,16 @@ final class IssueVM: APIVMable {
     @Published private(set) var comments: [IssueComment]
     @Published private(set) var customIssues: [CustomIssuesModel]
     @Published private(set) var cIADs: [SPActiveDevelopersModel] // 开发者动态
-    @Published private(set) var cIGRs: [SPGoodReposModel] // 仓库动态
+    @Published private(set) var cIGRs: [SPReposModel] // 仓库动态
     
     @Published var errHint = false
     @Published var errMsg = ""
-    private let errSj = PassthroughSubject<APISevError, Never>()
     
+    
+    // MARK: - APISev
     private let apiSev: APISev
+    
+    private let errSj = PassthroughSubject<APISevError, Never>()
     
     private let apIssueSj = PassthroughSubject<Void, Never>()
     private let apCommentsSj = PassthroughSubject<Void, Never>()
@@ -59,7 +60,6 @@ final class IssueVM: APIVMable {
         }
     }
     
-    
     init(repoName: String, issueNumber: Int) {
         self.repoName = repoName
         self.issueNumber = issueNumber
@@ -68,7 +68,7 @@ final class IssueVM: APIVMable {
         self.comments = [IssueComment]()
         self.customIssues = [CustomIssuesModel]()
         self.cIADs = [SPActiveDevelopersModel]()
-        self.cIGRs = [SPGoodReposModel]()
+        self.cIGRs = [SPReposModel]()
         
         // MARK: - 议题的信息获取
         let reqIssue = IssueRequest(repoName: repoName, issueNumber: issueNumber)
@@ -100,7 +100,7 @@ final class IssueVM: APIVMable {
         let repCommentsSm = resCommetsSj
             .assign(to: \.comments, on: self)
         
-        // CustomIssues
+        // MARK: - CustomIssues
         let reqCustomIssues = IssueRequest(repoName: repoName, issueNumber: issueNumber)
         let resCustomIssuesSm = apCustomIssuesSj
             .flatMap { [apiSev] in
@@ -170,14 +170,14 @@ final class IssueVM: APIVMable {
                 data = str.data(using: String.Encoding.utf8)!
                 do {
                     let decoder = JSONDecoder()
-                    return try decoder.decode([SPGoodReposModel].self, from: data)
+                    return try decoder.decode([SPReposModel].self, from: data)
                 } catch {
-                    return [SPGoodReposModel]()
+                    return [SPReposModel]()
                 }
             }
             .assign(to: \.cIGRs, on: self)
         
-        // 错误
+        // MARK: - 错误
         let errMsgSm = errSj
             .map { err -> String in
                 err.message

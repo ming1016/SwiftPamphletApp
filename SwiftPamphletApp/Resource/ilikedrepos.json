@@ -333,6 +333,10 @@
             {
                 "id":"gre4ixin/ReduxUI",
                 "des":"SwiftUI Redux 架构"
+            },
+            {
+                "id":"ZeeZide/5GUIs",
+                "des":"可以分析程序用了哪些库，用了LLVM objdump"
             }
         ]
     }

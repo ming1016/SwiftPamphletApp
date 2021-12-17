@@ -10,13 +10,14 @@ import Combine
 import AppKit
 
 final class AppVM: ObservableObject {
-    // MARK: - CCY Action
-    
-    
-    // MARK: - Combine Action
+
     @Published var alertMsg = "" // 警告信息
+    // 探索更多库
+    @Published var expNotis = [String: Int]()
+    // 仓库动态
     @Published var reposNotis = [String: Int]()
     @Published var reposCountNotis = 0
+    // 开发者动态
     @Published var devsNotis = [String: Int]()
     @Published var devsCountNotis = 0
     private var cc: [AnyCancellable] = []
@@ -143,10 +144,10 @@ final class AppVM: ObservableObject {
         func switchToReposDic(issueModel: IssueModel) -> [String: Int] {
             let str = issueModel.body?.base64Decoded() ?? ""
             let data = str.data(using: String.Encoding.utf8)!
-            var grs = [SPGoodReposModel]()
+            var grs = [SPReposModel]()
             do {
                 let decoder = JSONDecoder()
-                grs = try decoder.decode([SPGoodReposModel].self, from: data)
+                grs = try decoder.decode([SPReposModel].self, from: data)
             } catch {
                 return reposDic
             }

@@ -6,8 +6,34 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Github {}
+
+// MARK: - /repos/{reponame}
+extension Github {
+    static func repos(_ name: String) -> Repos {
+        Repos(path: "/repos/\(name)")
+    }
+    struct Repos {
+        let path: String
+        var get: Req<RepoModel> {
+            .get(path)
+        }
+    }
+}
+// MARK: - /repos/{reponame}/issues/{issuenumber}
+extension Github.Repos {
+    func issues(_ number: Int) -> Issues {
+        Issues(path: path + "/issues/\(number)")
+    }
+    struct Issues {
+        let path: String
+        var get: Req<IssueModel> {
+            .get(path)
+        }
+    }
+}
 
 // MARK: - /user
 extension Github {

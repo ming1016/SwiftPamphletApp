@@ -55,6 +55,8 @@ protocol DataHelperProtocol {
     static func findAll() throws -> [T]?
 }
 
+
+
 // MARK: - 开发者更新提醒
 typealias DBDevNoti = (
     login: String,
@@ -79,7 +81,7 @@ struct DevsNotiDataHelper: DataHelperProtocol {
                 t.column(lastReadId, defaultValue: "")
                 t.column(unRead, defaultValue: 0)
             })
-        } catch _ {
+        } catch {
             throw DBError.connectionErr
         }
     } // end createTable
@@ -156,6 +158,8 @@ struct DevsNotiDataHelper: DataHelperProtocol {
     } // end find all
     
 }
+
+
 
 // MARK: - 仓库更新提醒
 
@@ -266,3 +270,188 @@ struct ReposNotiDataHelper: DataHelperProtocol {
     } // end find all
     
 }
+
+
+// MARK: - 探索更多库更新提醒
+typealias DBRepoStore = (
+    id: Int64,
+    name: String,
+    fullName: String,
+    description: String,
+    stargazersCount: Int,
+    openIssues: Int,
+    language: String,
+    htmlUrl: String,
+    lastReadCommitSha: String,
+    unRead: Int
+)
+struct RepoStoreDataHelper: DataHelperProtocol {
+    static let table = Table("RepoStore")
+    typealias T = DBRepoStore
+    
+    static let id = Expression<Int64>("id")
+    static let name = Expression<String>("name")
+    static let fullName = Expression<String>("fullName")
+    static let description = Expression<String>("description")
+    static let stargazersCount = Expression<Int>("stargazersCount")
+    static let openIssues = Expression<Int>("openIssues")
+    static let language = Expression<String>("language")
+    static let htmlUrl = Expression<String>("htmlUrl")
+    static let lastReadCommitSha = Expression<String>("lastReadCommitSha")
+    static let unRead = Expression<Int>("unRead")
+    
+    
+    
+    static func createTable() throws {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        do {
+            let _ = try db.run(table.create(ifNotExists: true) { t in
+                t.column(id, defaultValue: 0)
+                t.column(name, defaultValue: "")
+                t.column(fullName, unique: true)
+                t.column(description, defaultValue: "")
+                t.column(stargazersCount, defaultValue: 0)
+                t.column(openIssues, defaultValue: 0)
+                t.column(language, defaultValue: "")
+                t.column(htmlUrl, defaultValue: "")
+                t.column(lastReadCommitSha, defaultValue: "")
+                t.column(unRead, defaultValue: 0)
+            })
+        } catch {
+            throw DBError.connectionErr
+        }
+    } // end createTable
+    
+    static func insert(i: DBRepoStore) throws -> Int64 {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        let insert = table.insert(
+            id <- i.id,
+            name <- i.name,
+            fullName <- i.fullName,
+            description <- i.description,
+            stargazersCount <- i.stargazersCount,
+            openIssues <- i.openIssues,
+            language <- i.language,
+            htmlUrl <- i.htmlUrl,
+            lastReadCommitSha <- i.lastReadCommitSha,
+            unRead <- i.unRead
+        )
+        do {
+            let rowId = try db.run(insert)
+            guard rowId > 0 else {
+                throw DBError.insertErr
+            }
+            return rowId
+        } catch {
+            throw DBError.insertErr
+        }
+    } // end insert
+    
+    static func delete(i: DBRepoStore) throws {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        let query = table.filter(fullName == i.fullName)
+        do {
+            let tmp = try db.run(query.delete())
+            guard tmp == 1 else {
+                throw DBError.deleteErr
+            }
+        } catch {
+            throw DBError.deleteErr
+        }
+    } // end delete
+    
+    static func find(sFullName: String) throws -> DBRepoStore? {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        let query = table.filter(fullName == sFullName)
+        let items = try db.prepare(query)
+        for i in items {
+            return DBRepoStore(
+                id: i[id],
+                name: i[name],
+                fullName: i[fullName],
+                description: i[description],
+                stargazersCount: i[stargazersCount],
+                openIssues: i[openIssues],
+                language: i[language],
+                htmlUrl: i[htmlUrl],
+                lastReadCommitSha: i[lastReadCommitSha],
+                unRead: i[unRead]
+            )
+        }
+        return nil
+    } // end find
+    
+    static func updateInfo(i: DBRepoStore) throws {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        let query = table.filter(fullName == i.fullName)
+        do {
+            if try db.run(query.update(
+                description <- i.description,
+                stargazersCount <- i.stargazersCount,
+                openIssues <- i.openIssues,
+                language <- i.language,
+                htmlUrl <- i.htmlUrl
+            )) > 0 {
+                
+            } else {
+                throw DBError.updateErr
+            }
+        } catch {
+            throw DBError.updateErr
+        }
+    } // end updateInfo
+    
+    static func updateRead(i: DBRepoStore) throws {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        let query = table.filter(fullName == i.fullName)
+        do {
+            if try db.run(query.update(
+                lastReadCommitSha <- i.lastReadCommitSha,
+                unRead <- i.unRead
+            )) > 0 {
+                
+            } else {
+                throw DBError.updateErr
+            }
+        } catch {
+            throw DBError.updateErr
+        }
+    } // end update
+    
+    static func findAll() throws -> [DBRepoStore]? {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        var arr = [DBRepoStore]()
+        let items = try db.prepare(table)
+        for i in items {
+            arr.append(DBRepoStore(
+                id: i[id],
+                name: i[name],
+                fullName: i[fullName],
+                description: i[description],
+                stargazersCount: i[stargazersCount],
+                openIssues: i[openIssues],
+                language: i[language],
+                htmlUrl: i[htmlUrl],
+                lastReadCommitSha: i[lastReadCommitSha],
+                unRead: i[unRead]
+            ))
+        }
+        return arr
+    } // end find all
+    
+    
+} // end RepoStore

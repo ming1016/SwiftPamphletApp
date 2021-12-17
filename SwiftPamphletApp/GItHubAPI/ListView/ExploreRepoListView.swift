@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExploreRepoListView: View {
-    @State var eRepos = [SPGoodReposModel]()
+    @State var eRepos = [SPReposModel]()
     var body: some View {
         List {
             ForEach(eRepos) { er in

@@ -111,17 +111,21 @@ struct SwiftPamphletApp: View {
                             stepCountDevs += 1
                         }
                     })
-//                    .task {
-//                        let githubAPI = RESTful(host: .github)
-//                        do {
-//                            let a = try await githubAPI.value(for: Github.user.following.get)
-//                            print(a)
-//                            let b = try await githubAPI.value(for: Github.users("tkremenek").get)
-//                            print(b)
-//                        } catch {
-//                            print("await wrong")
-//                        }
-//                    }
+                    .task {
+                        let githubAPI = RESTful(host: .github)
+                        do {
+                            let a = try await githubAPI.value(for: Github.user.following.get)
+                            print(a)
+                            let b = try await githubAPI.value(for: Github.users("tkremenek").get)
+                            print(b)
+                            
+                            let c = try await githubAPI.value(for: Github.repos("ming1016/SwiftPamphletApp").issues(1).get)
+                            print(c)
+                        } catch {
+                            print("await wrong")
+                        }
+                        
+                    }
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
                 IntroView()
                 NavView()
@@ -224,7 +228,7 @@ struct SPSidebar: View {
                 NavigationLink {
                     ExploreRepoListView()
                 } label: {
-                    Label("探索更多", systemImage: "globe.asia.australia")
+                    Label("探索更多库", systemImage: "globe.asia.australia")
                 }
             }
             
