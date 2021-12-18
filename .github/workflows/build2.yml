@@ -14,12 +14,12 @@ jobs:
         run: |
          cd SwiftPamphletApp
          sed -i '' s/'gitHubAccessToken = ""'/'gitHubAccessToken = "${{ secrets.PAT }}"'/ SwiftPamphletAppConfig.swift
-         if grep -q 'gitHubAccessToken = ""' ./SwiftPamphletAppConfig.swift ; then
-            echo "please setup your personal access token to Actions secrets and name it to PAT" && exit
-         fi
-         cd ..
       - name: Build
         run: |
+          if grep -q 'gitHubAccessToken = ""' ./SwiftPamphletAppConfig.swift ; then
+            echo "please setup your personal access token to Actions secrets and name it to PAT" && exit
+          fi
+          cd ..
           chmod +x ./compile.command
           /bin/bash -c ./compile.command
           zip -r9 戴铭的Swift小册子.zip 戴铭的Swift小册子.app
