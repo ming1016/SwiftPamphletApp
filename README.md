@@ -8,8 +8,9 @@
 * 使用Xcode编译生成这个手册程序或是连点两下compile.command。Xcode 和 macOS 都需要升到最新版，如果遇到 swift package 下载不下来的情况，参看这个议题来解决：[请问markdownui一直更新不下来是什么原因 · Issue #88 · ming1016/SwiftPamphletApp · GitHub](https://github.com/ming1016/SwiftPamphletApp/issues/88)
 
 感谢@powenn 做的 GitHub Actions workflow，使用说明如下：
-Requirea storaging PAT to actions secrets and name it as PAT
-while project update ,user won't need to compile manually in local, only need to fetch and merge commits and wait for about 3 minutes then download it
+Requires storaging PAT to actions secrets and name it to PAT
+
+while project update ,user won't need to compile it manually in local, only need to fetch and merge commits and wait for about 3 minutes then download it
 
 ![image](https://user-images.githubusercontent.com/251980/146639561-8d33bba6-8a84-44b7-b660-1d7a5fffa37a.png)
 ![image](https://user-images.githubusercontent.com/251980/146639573-e556961f-2c4b-4838-83f2-8bf4665b7d9a.png)

@@ -17,6 +17,9 @@ jobs:
          cd ..
       - name: Build
         run: |
+          if grep -q 'gitHubAccessToken = ""' ./SwiftPamphletApp/SwiftPamphletAppConfig.swift ; then
+            echo "please setup your personal access token to Actions secrets and name it to PAT" && exit
+          fi
           chmod +x ./compile.command
           /bin/bash -c ./compile.command
           zip -r9 戴铭的Swift小册子.zip 戴铭的Swift小册子.app
