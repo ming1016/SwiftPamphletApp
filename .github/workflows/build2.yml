@@ -10,12 +10,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: submodules-init
         uses: snickerbockers/submodules-init@v4
-      - name: Check PAT
-        if: ${{ secrets.PAT }} = ""
-        run: |
-         echo "please setup your personal acess token to actions secrets" && exit
       - name: Import PAT from Actions secrets
         run: |
+         if [ echo"${{ secrets.PAT }}" == "" ]; then
+            echo "please setup your personal acess token to SwiftPamphletAppConfig.swift" && exit
+         fi
          cd SwiftPamphletApp
          sed -i '' s/'gitHubAccessToken = ""'/'gitHubAccessToken = "${{ secrets.PAT }}"'/ SwiftPamphletAppConfig.swift
          cd ..
