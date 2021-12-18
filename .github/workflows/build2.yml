@@ -14,7 +14,7 @@ jobs:
         run: |
          cd SwiftPamphletApp
          sed -i '' s/'gitHubAccessToken = ""'/'gitHubAccessToken = "${{ secrets.PAT }}"'/ SwiftPamphletAppConfig.swift
-         cd..
+         cd ..
       - name: Build
         run: |
           if grep -q 'gitHubAccessToken = ""' ./SwiftPamphletApp/SwiftPamphletAppConfig.swift ; then
