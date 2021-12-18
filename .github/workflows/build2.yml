@@ -12,11 +12,11 @@ jobs:
         uses: snickerbockers/submodules-init@v4
       - name: Import PAT from Actions secrets
         run: |
-         if [ echo"${{ secrets.PAT }}" == "" ]; then
-            echo "please setup your personal acess token to SwiftPamphletAppConfig.swift" && exit
-         fi
          cd SwiftPamphletApp
          sed -i '' s/'gitHubAccessToken = ""'/'gitHubAccessToken = "${{ secrets.PAT }}"'/ SwiftPamphletAppConfig.swift
+         if grep -q 'gitHubAccessToken = ""' ./SwiftPamphletAppConfig.swift ; then
+            echo "please setup your personal access token to Actions secrets and name it to PAT" && exit
+         fi
          cd ..
       - name: Build
         run: |
