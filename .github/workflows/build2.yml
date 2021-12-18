@@ -1,0 +1,31 @@
+name: Build Package2
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - uses: actions/checkout@v2
+      - name: submodules-init
+        uses: snickerbockers/submodules-init@v4
+      - name: Check PAT
+        if: ${{ secrets.PAT }} = ""
+        run: |
+         echo "please setup your personal acess token to actions secrets" && exit
+      - name: Import PAT from Actions secrets
+        run: |
+         cd SwiftPamphletApp
+         sed -i '' s/'gitHubAccessToken = ""'/'gitHubAccessToken = "${{ secrets.PAT }}"'/ SwiftPamphletAppConfig.swift
+         cd ..
+      - name: Build
+        run: |
+          chmod +x ./compile.command
+          /bin/bash -c ./compile.command
+          zip -r9 戴铭的Swift小册子.zip 戴铭的Swift小册子.app
+      - name: Upload App.zip
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: "戴铭的Swift小册子.zip"
+          path: "戴铭的Swift小册子.zip"
