@@ -12,7 +12,7 @@ jobs:
         uses: snickerbockers/submodules-init@v4
       - name: Import PAT from Actions secrets
         env:
-          PAT: ${{ secrets.SECRET_KEY }}
+          PAT: ${{ secrets.PAT }}
         run: |
          cd SwiftPamphletApp
          sed -i '' s/'gitHubAccessToken = ""'/'gitHubAccessToken = "$PAT"'/ SwiftPamphletAppConfig.swift
