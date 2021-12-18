@@ -7,7 +7,15 @@
 * 然后在 SwiftPamphletAppConfig.swift 里 gitHubAccessToken 加入你的 GitHub Access Token。GitHub Access Token 在  [Personal Access Tokens](https://github.com/settings/tokens)  这里获取，scope 勾上 repo 和 user。
 * 使用Xcode编译生成这个手册程序或是连点两下compile.command。Xcode 和 macOS 都需要升到最新版，如果遇到 swift package 下载不下来的情况，参看这个议题来解决：[请问markdownui一直更新不下来是什么原因 · Issue #88 · ming1016/SwiftPamphletApp · GitHub](https://github.com/ming1016/SwiftPamphletApp/issues/88)
 
-截图如下：
+感谢@powenn 做的 GitHub Actions workflow，使用说明如下：
+Requirea storaging PAT to actions secrets and name it as PAT
+while project update ,user won't need to compile manually in local, only need to fetch and merge commits and wait for about 3 minutes then download it
+
+![image](https://user-images.githubusercontent.com/251980/146639561-8d33bba6-8a84-44b7-b660-1d7a5fffa37a.png)
+![image](https://user-images.githubusercontent.com/251980/146639573-e556961f-2c4b-4838-83f2-8bf4665b7d9a.png)
+
+
+程序截图如下：
 ![01](https://user-images.githubusercontent.com/251980/142998258-0f44f4fe-e113-4428-b381-be7e4eb5a899.png)
 ![02](https://user-images.githubusercontent.com/251980/142998276-70f12cd3-46e5-46f0-b5e1-185ec9b0beee.png)
 ![03](https://user-images.githubusercontent.com/251980/142998296-e6091abe-8639-47f4-acda-f0c20fa20b5e.png)
