@@ -10,7 +10,12 @@
 感谢@powenn 做的 GitHub Actions workflow，使用说明如下：
 Requires storaging PAT to actions secrets and name it to PAT
 
-while project update ,user won't need to compile it manually in local, only need to fetch and merge commits and wait for about 3 minutes then download it
+- Fork this repository.
+- Go to get a Personal Access Token(PAT) if you haven't done it yet.(GitHub Access Token 在[Personal Access Tokens](https://github.com/settings/tokens)这里获取，scope 勾上 repo 和 user。)
+- Set your token in action secrets ,and name it to PAT.
+- Get the compiled app package after Github action complete.
+
+While project update ,you won't need to compile it manually in local, only need to fetch and merge commits and wait for about 3 minutes then download it
 
 ![image](https://user-images.githubusercontent.com/251980/146639561-8d33bba6-8a84-44b7-b660-1d7a5fffa37a.png)
 ![image](https://user-images.githubusercontent.com/251980/146639573-e556961f-2c4b-4838-83f2-8bf4665b7d9a.png)
