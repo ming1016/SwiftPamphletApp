@@ -22,5 +22,5 @@ xcodebuild -project "$GIT_ROOT/SwiftPamphletApp.xcodeproj" \
  clean build \
  CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO \
  PRODUCT_BUNDLE_IDENTIFIER="com.starming.SwiftPamphletApp" \
- | xcpretty
+
 cp -R $GIT_ROOT/build/Build/Products/Release/戴铭的Swift小册子.app $GIT_ROOT
