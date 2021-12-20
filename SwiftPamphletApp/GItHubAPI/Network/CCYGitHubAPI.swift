@@ -34,6 +34,21 @@ extension Github.Repos {
         }
     }
 }
+// MARK: - /repos/{reponame}/commits
+extension Github.Repos {
+    var commits: Commits {
+        Commits(path: path + "/commits", query: [("per_page", "100")])
+    }
+    
+    struct Commits {
+        let path: String
+        let query: [(String, String?)]?
+        var get: Req<[CommitModel]> {
+            .get(path, query: query)
+        }
+    }
+}
+
 
 // MARK: - /user
 extension Github {

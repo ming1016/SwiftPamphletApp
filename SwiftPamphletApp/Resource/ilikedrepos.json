@@ -337,6 +337,36 @@
             {
                 "id":"ZeeZide/5GUIs",
                 "des":"可以分析程序用了哪些库，用了LLVM objdump"
+            },
+            {
+                "id":"eonist/FileWatcher",
+                "des":"macOS 上监听文件变化"
+            },
+            {
+                "id":"pointfreeco/episode-code-samples"
+            },
+            {
+                "id":"SwiftPackageIndex/PackageList"
+            },
+            {
+                "id":"sindresorhus/awesome",
+                "des":"内容广"
+            },
+            {
+                "id":"dkhamsing/open-source-ios-apps",
+                "des":"开源的完整 App 例子"
+            },
+            {
+                "id":"Lojii/Knot",
+                "des":"使用 SwiftNIO 实现 HTTPS 抓包"
+            },
+            {
+                "id":"frzi/Model3DView",
+                "des":"毫不费力的使用 SwiftUI 渲染 3d models"
+            },
+            {
+                "id":"faisalmemon/ios-crash-dump-analysis-book",
+                "des":"iOS Crash Dump Analysis Book"
             }
         ]
     }

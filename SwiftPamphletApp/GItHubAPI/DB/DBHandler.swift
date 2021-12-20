@@ -36,6 +36,7 @@ struct DB {
         do {
             try ReposNotiDataHelper.createTable()
             try DevsNotiDataHelper.createTable()
+            try RepoStoreDataHelper.createTable()
         } catch {
             throw DBError.connectionErr
         }
@@ -283,7 +284,9 @@ typealias DBRepoStore = (
     language: String,
     htmlUrl: String,
     lastReadCommitSha: String,
-    unRead: Int
+    unRead: Int,
+    type: Int,
+    extra: String
 )
 struct RepoStoreDataHelper: DataHelperProtocol {
     static let table = Table("RepoStore")
@@ -299,7 +302,8 @@ struct RepoStoreDataHelper: DataHelperProtocol {
     static let htmlUrl = Expression<String>("htmlUrl")
     static let lastReadCommitSha = Expression<String>("lastReadCommitSha")
     static let unRead = Expression<Int>("unRead")
-    
+    static let type = Expression<Int>("type")
+    static let extra = Expression<String>("extra")
     
     
     static func createTable() throws {
@@ -318,6 +322,8 @@ struct RepoStoreDataHelper: DataHelperProtocol {
                 t.column(htmlUrl, defaultValue: "")
                 t.column(lastReadCommitSha, defaultValue: "")
                 t.column(unRead, defaultValue: 0)
+                t.column(type, defaultValue: 0)
+                t.column(extra, defaultValue: "")
             })
         } catch {
             throw DBError.connectionErr
@@ -338,7 +344,9 @@ struct RepoStoreDataHelper: DataHelperProtocol {
             language <- i.language,
             htmlUrl <- i.htmlUrl,
             lastReadCommitSha <- i.lastReadCommitSha,
-            unRead <- i.unRead
+            unRead <- i.unRead,
+            type <- i.type,
+            extra <- i.extra
         )
         do {
             let rowId = try db.run(insert)
@@ -383,41 +391,29 @@ struct RepoStoreDataHelper: DataHelperProtocol {
                 language: i[language],
                 htmlUrl: i[htmlUrl],
                 lastReadCommitSha: i[lastReadCommitSha],
-                unRead: i[unRead]
+                unRead: i[unRead],
+                type: i[type],
+                extra: i[extra]
             )
         }
         return nil
     } // end find
     
-    static func updateInfo(i: DBRepoStore) throws {
+    static func update(i: DBRepoStore) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
         let query = table.filter(fullName == i.fullName)
         do {
             if try db.run(query.update(
+                id <- i.id,
+                name <- i.name,
+                fullName <- i.fullName,
                 description <- i.description,
                 stargazersCount <- i.stargazersCount,
                 openIssues <- i.openIssues,
                 language <- i.language,
-                htmlUrl <- i.htmlUrl
-            )) > 0 {
-                
-            } else {
-                throw DBError.updateErr
-            }
-        } catch {
-            throw DBError.updateErr
-        }
-    } // end updateInfo
-    
-    static func updateRead(i: DBRepoStore) throws {
-        guard let db = DB.shared.BBDB else {
-            throw DBError.connectionErr
-        }
-        let query = table.filter(fullName == i.fullName)
-        do {
-            if try db.run(query.update(
+                htmlUrl <- i.htmlUrl,
                 lastReadCommitSha <- i.lastReadCommitSha,
                 unRead <- i.unRead
             )) > 0 {
@@ -429,6 +425,24 @@ struct RepoStoreDataHelper: DataHelperProtocol {
             throw DBError.updateErr
         }
     } // end update
+    
+    static func updateUnread(name: String, unread: Int) throws {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        let query = table.filter(fullName == name)
+        do {
+            if try db.run(query.update(
+                unRead <- unread
+            )) > 0 {
+                
+            } else {
+                throw DBError.updateErr
+            }
+        } catch {
+            throw DBError.updateErr
+        }
+    }
     
     static func findAll() throws -> [DBRepoStore]? {
         guard let db = DB.shared.BBDB else {
@@ -447,7 +461,9 @@ struct RepoStoreDataHelper: DataHelperProtocol {
                 language: i[language],
                 htmlUrl: i[htmlUrl],
                 lastReadCommitSha: i[lastReadCommitSha],
-                unRead: i[unRead]
+                unRead: i[unRead],
+                type: i[type],
+                extra: i[extra]
             ))
         }
         return arr

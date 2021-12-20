@@ -38,12 +38,10 @@ struct SwiftPamphletApp: View {
     @StateObject var appVM = AppVM()
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
-    @State var stepCountRepos = 0
-    @State var stepCountDevs = 0
-    @State var reposNotisKeys = [String]()
-    @State var devsNotisKeys = [String]()
+    
     let timerForRepos = Timer.publish(every: SPC.timerForReposSec, on: .main, in: .common).autoconnect()
     let timerForDevs = Timer.publish(every: SPC.timerForDevsSec, on: .main, in: .common).autoconnect()
+    let timerForExp = Timer.publish(every: SPC.timerForExpSec, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationView {
             if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
@@ -62,70 +60,37 @@ struct SwiftPamphletApp: View {
             } else {
                 SPSidebar()
                     .onAppear(perform: {
-                        appVM.nsck()
-                        // 仓库数据读取
-                        appVM.doing(.loadDBRepoInfoLocal)
-                        appVM.doing(.loadDBRepoInfoFromServer)
-                        // 开发者数据读取
-                        appVM.doing(.loadDBDevInfoLocal)
-                        appVM.doing(.loadDBDevInfoFromServer)
+                        appVM.onAppearEvent()
                     })
                     .onReceive(timerForRepos, perform: { time in
-                        print(time)
-                        if appVM.reposNotis.count > 0 {
-                            if stepCountRepos >= appVM.reposNotis.count {
-                                stepCountRepos = 0
-                            }
-                            
-                            if reposNotisKeys.count == 0 {
-                                for (k, _) in appVM.reposNotis {
-                                    reposNotisKeys.append(k)
-                                }
-                            }
-                            let repoName = reposNotisKeys[stepCountRepos]
-                            
+                        if let repoName = appVM.timeForReposEvent() {
                             let vm = RepoVM(repoName: repoName)
                             vm.doing(.notiRepo)
-                            appVM.doing(.loadDBRepoInfoLocal)
-                            appVM.calculateReposCountNotis()
-                            stepCountRepos += 1
                         }
                     })
                     .onReceive(timerForDevs, perform: { time in
-                        if appVM.devsNotis.count > 0 {
-                            if stepCountDevs >= appVM.devsNotis.count {
-                                stepCountDevs = 0
-                            }
-                            
-                            if devsNotisKeys.count == 0  {
-                                for (k, _) in appVM.devsNotis {
-                                    devsNotisKeys.append(k)
-                                }
-                            }
-                            let userName = devsNotisKeys[stepCountDevs]
-                            
+                        if let userName = appVM.timeForDevsEvent() {
                             let vm = UserVM(userName: userName)
                             vm.doing(.notiEvent)
-                            appVM.doing(.loadDBDevInfoLocal)
-                            appVM.calculateDevsCountNotis()
-                            stepCountDevs += 1
                         }
                     })
-                    .task {
-                        let githubAPI = RESTful(host: .github)
-                        do {
-                            let a = try await githubAPI.value(for: Github.user.following.get)
-                            print(a)
-                            let b = try await githubAPI.value(for: Github.users("tkremenek").get)
-                            print(b)
-                            
-                            let c = try await githubAPI.value(for: Github.repos("ming1016/SwiftPamphletApp").issues(1).get)
-                            print(c)
-                        } catch {
-                            print("await wrong")
-                        }
-                        
+                    .onReceive(timerForExp) { time in
+                        appVM.timeForExpEvent()
                     }
+//                    .task {
+//                        let githubAPI = RESTful(host: .github)
+//                        do {
+//                            let a = try await githubAPI.value(for: Github.user.following.get)
+//                            print(a)
+//                            let b = try await githubAPI.value(for: Github.users("tkremenek").get)
+//                            print(b)
+//
+//                            let c = try await githubAPI.value(for: Github.repos("ming1016/SwiftPamphletApp").issues(1).get)
+//                            print(c)
+//                        } catch {
+//                            print("await wrong")
+//                        }
+//                    }
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
                 IntroView()
                 NavView()
@@ -228,7 +193,13 @@ struct SPSidebar: View {
                 NavigationLink {
                     ExploreRepoListView()
                 } label: {
-                    Label("探索更多库", systemImage: "globe.asia.australia")
+                    if appVM.expCountNotis > 0 {
+                        Label("探索更多库", systemImage: "globe.asia.australia")
+                            .badge(appVM.expCountNotis)
+                    } else {
+                        Label("探索更多库", systemImage: "globe.asia.australia")
+                    }
+                    
                 }
             }
             

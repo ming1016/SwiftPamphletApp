@@ -19,6 +19,7 @@ struct RepoView: View {
     var isShowRepoCommitsLink = true
     var isShowIssuesLink = true
     var isCleanUnread = false
+    var isCleanExpUnread = false
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
@@ -55,6 +56,8 @@ struct RepoView: View {
         .onDisappear {
             appVM.reposNotis[vm.repoName] = 0
             appVM.calculateReposCountNotis()
+            appVM.expNotis[vm.repoName] = 0
+            appVM.calculateExpCountNotis()
         }
         // end HStack
         
@@ -69,6 +72,11 @@ struct RepoView: View {
                         vm.doing(.clearUnReadCommit)
                         appVM.reposNotis[vm.repoName] = SPC.unreadMagicNumber
                         appVM.calculateReposCountNotis()
+                    }
+                    if isCleanExpUnread == true {
+                        vm.doing(.clearExpUnReadCommit)
+                        appVM.expNotis[vm.repoName] = SPC.unreadMagicNumber
+                        appVM.calculateExpCountNotis()
                     }
                 })
                 .tag(1)

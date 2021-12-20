@@ -12,14 +12,216 @@ import AppKit
 final class AppVM: ObservableObject {
 
     @Published var alertMsg = "" // 警告信息
-    // 探索更多库
-    @Published var expNotis = [String: Int]()
+    
     // 仓库动态
     @Published var reposNotis = [String: Int]()
     @Published var reposCountNotis = 0
     // 开发者动态
     @Published var devsNotis = [String: Int]()
     @Published var devsCountNotis = 0
+    
+    // MARK: - CCY
+    // 探索更多库
+    @Published var expNotis = [String: Int]()
+    @Published var expCountNotis = 0
+    @Published var exps = [SPReposModel]()
+    
+    // MARK: - 获取所有探索更多库通知信息
+    @MainActor
+    func loadExpFromServer() {
+        
+        Task {
+            var expDic = [String: Int]()
+            let gAPI = RESTful(host: .github)
+            do {
+                let issueModel = try await gAPI.value(for: Github.repos(SPC.pamphletIssueRepoName).issues(108).get)
+                let str = issueModel.body?.base64Decoded() ?? ""
+                let data = str.data(using: String.Encoding.utf8)!
+                var grs = [SPReposModel]()
+                
+                let decoder = JSONDecoder()
+                grs = try decoder.decode([SPReposModel].self, from: data)
+                
+                exps = grs
+                
+                for gr in grs {
+                    for r in gr.repos {
+                        if let fd = try RepoStoreDataHelper.find(sFullName: r.id) {
+                            expDic[fd.fullName] = fd.unRead
+                        } else {
+                            let _ = try RepoStoreDataHelper.insert(i: DBRepoStore(
+                                id: 0,
+                                name: "",
+                                fullName: r.id,
+                                description: "",
+                                stargazersCount: 0,
+                                openIssues: 0,
+                                language: "",
+                                htmlUrl: "",
+                                lastReadCommitSha: "",
+                                unRead: 0,
+                                type: 0,
+                                extra: ""
+                            ))
+                            expDic[r.id] = 0
+                        } // end if
+                    } // end for
+                } // end for
+                
+                // 远程已经删除的仓库，同步本地删除
+                if !(expDic.count > 0) { return }
+                let expDicKeys = expDic.keys
+                if let expsn = try RepoStoreDataHelper.findAll() {
+                    for expn in expsn {
+                        if !expDicKeys.contains(expn.fullName) {
+                            do {
+                                try RepoStoreDataHelper.delete(i: expn)
+                            } catch { return }
+                        } // end if
+                    } // end for
+                } // end if let
+                
+                expNotis = expDic
+                
+            } catch {
+                print("wrong")
+            } // end do
+        }
+    }
+    
+    // MARK: - Timer for get intervals data
+    // 仓库动态
+    private var stepCountRepos = 0
+    private var reposNotisKeys = [String]()
+    // 开发者动态
+    private var stepCountDevs = 0
+    private var devsNotisKeys = [String]()
+    // 探索更多库
+    private var stepCountExp = 0
+    private var expNotisKeys = [String]()
+    
+    // 探索更多
+    func timeForExpEvent() {
+        Task {
+            if expNotis.count > 0 {
+                if stepCountExp >= expNotis.count {
+                    stepCountExp = 0
+                }
+                if expNotisKeys.count == 0 {
+                    for (k, _) in expNotis {
+                        expNotisKeys.append(k)
+                    }
+                }
+                let repoName = expNotisKeys[stepCountExp]
+                // 网络请求 repo 的 commit，然后更新未读数
+                let gAPI = RESTful(host: .github)
+                do {
+                    let repoModel = try await gAPI.value(for: Github.repos(repoName).get)
+                    let commits = try await gAPI.value(for: Github.repos(repoName).commits.get)
+                    if let f = try RepoStoreDataHelper.find(sFullName: repoName) {
+                        var i = 0
+                        var lrcs = f.lastReadCommitSha
+                        for cm in commits {
+                            if i == 0 {
+                                lrcs = cm.sha ?? ""
+                            }
+                            if cm.sha == f.lastReadCommitSha {
+                                break
+                            }
+                            i += 1
+                        } // end for
+                        i = f.unRead + i
+                        let _ = try RepoStoreDataHelper.update(i: DBRepoStore(
+                            id: repoModel.id,
+                            name: repoModel.name,
+                            fullName: repoName,
+                            description: repoModel.description ?? "",
+                            stargazersCount: repoModel.stargazersCount,
+                            openIssues: repoModel.openIssues,
+                            language: repoModel.language ?? "",
+                            htmlUrl: repoModel.htmlUrl ?? "",
+                            lastReadCommitSha: lrcs,
+                            unRead: i,
+                            type: 0,
+                            extra: ""
+                        ))
+                    }
+                    
+                } catch { return }
+                
+                
+                // 刷新数据
+                await loadDBExpLoal()
+                await calculateExpCountNotis()
+                stepCountExp += 1
+            }
+        }
+        
+    }
+    
+    // 开发者动态
+    @MainActor
+    func timeForDevsEvent() -> String? {
+        if devsNotis.count > 0 {
+            if stepCountDevs >= devsNotis.count {
+                stepCountDevs = 0
+            }
+            if devsNotisKeys.count == 0 {
+                for (k, _) in devsNotis {
+                    devsNotisKeys.append(k)
+                }
+            }
+            let userName = devsNotisKeys[stepCountDevs]
+            loadDBDevsLoal()
+            calculateDevsCountNotis()
+            stepCountDevs += 1
+            return userName
+        } else {
+            return nil
+        }
+    }
+    
+    // 仓库动态
+    @MainActor
+    func timeForReposEvent() -> String? {
+        if reposNotis.count > 0 {
+            if stepCountRepos >= reposNotis.count {
+                stepCountRepos = 0
+            }
+            if reposNotisKeys.count == 0 {
+                for (k, _) in reposNotis {
+                    reposNotisKeys.append(k)
+                }
+            }
+            let repoName = reposNotisKeys[stepCountRepos]
+            loadDBReposLoal()
+            calculateReposCountNotis()
+            stepCountRepos += 1
+            return repoName
+        } else {
+            return nil
+        }
+    }
+    
+    // MARK: - On Appear Event
+    @MainActor
+    func onAppearEvent() {
+        nsck()
+        // 仓库数据读取
+        loadDBReposLoal()
+        apReposSj.send(())
+        // 开发者数据读取
+        loadDBDevsLoal()
+        apDevsSj.send(())
+        // 探索更多库
+        loadDBExpLoal()
+        loadExpFromServer()
+    }
+    
+
+    
+    // MARK: - Combine
+    
     private var cc: [AnyCancellable] = []
     
     private let apiSev: APISev
@@ -28,25 +230,6 @@ final class AppVM: ObservableObject {
     private let resReposSj = PassthroughSubject<IssueModel, Never>()
     private let apDevsSj = PassthroughSubject<Void, Never>()
     private let resDevsSj = PassthroughSubject<IssueModel, Never>()
-    
-    enum AppActionType {
-        case loadDBRepoInfoFromServer
-        case loadDBRepoInfoLocal
-        case loadDBDevInfoFromServer
-        case loadDBDevInfoLocal
-    }
-    func doing(_ somethinglike: AppActionType) {
-        switch somethinglike {
-        case .loadDBRepoInfoFromServer:
-            apReposSj.send(())
-        case .loadDBRepoInfoLocal:
-            loadDBReposLoal()
-        case .loadDBDevInfoFromServer:
-            apDevsSj.send(())
-        case .loadDBDevInfoLocal:
-            loadDBDevsLoal()
-        }
-    }
     
     init() {
         self.apiSev = APISev()
@@ -206,6 +389,28 @@ final class AppVM: ObservableObject {
         ]
     }
     
+    // MARK: 探索更多库，本地数据库读取
+    @MainActor
+    func loadDBExpLoal() {
+        do {
+            if let arr = try RepoStoreDataHelper.findAll() {
+                if arr.count > 0 {
+                    var rDic = [String: Int]()
+                    for i in arr {
+                        if expNotis[i.fullName] == SPC.unreadMagicNumber {
+                            rDic[i.fullName] = SPC.unreadMagicNumber
+                        } else {
+                            rDic[i.fullName] = i.unRead
+                        }
+                    }
+                    expNotis = rDic
+                } // end if
+            } // end if
+        } catch {}
+    }
+    
+    
+    // MARK: 仓库动态，本地数据库读取
     func loadDBReposLoal() {
         do {
             if let arr = try ReposNotiDataHelper.findAll() {
@@ -224,6 +429,7 @@ final class AppVM: ObservableObject {
         } catch {}
     }
     
+    // MARK: 开发者动态，本地数据库读取
     func loadDBDevsLoal() {
         do {
             if let arr = try DevsNotiDataHelper.findAll() {
@@ -242,6 +448,21 @@ final class AppVM: ObservableObject {
         } catch {}
     }
     
+    // MARK: - 计算通知数量
+    @MainActor
+    func calculateExpCountNotis() {
+        var count = 0
+        for i in expNotis {
+            count += i.value
+        }
+        if count >= SPC.unreadMagicNumber {
+            count = count - SPC.unreadMagicNumber
+        }
+        expCountNotis = count
+        showAppBadgeLabel()
+    }
+    
+    @MainActor
     func calculateReposCountNotis() {
         var count = 0
         for i in reposNotis {
@@ -255,6 +476,7 @@ final class AppVM: ObservableObject {
         
     }
     
+    @MainActor
     func calculateDevsCountNotis() {
         var count = 0
         for i in devsNotis {
@@ -267,9 +489,10 @@ final class AppVM: ObservableObject {
         showAppBadgeLabel()
     }
     
+    @MainActor
     func showAppBadgeLabel() {
-        if reposCountNotis + devsCountNotis > 0 {
-            let count = reposCountNotis + devsCountNotis
+        if reposCountNotis + devsCountNotis + expCountNotis > 0 {
+            let count = reposCountNotis + devsCountNotis + expCountNotis
             NSApp.dockTile.showsApplicationBadge = true
             NSApp.dockTile.badgeLabel = "\(count)"
         } else {

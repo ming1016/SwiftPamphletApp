@@ -17,26 +17,6 @@
         ]
     },
     {
-        "name":"资料收集汇总",
-        "id":2111122015,
-        "repos":[
-            {
-                "id":"SwiftPackageIndex/PackageList"
-            },
-            {
-                "id":"matteocrippa/awesome-swift"
-            },
-            {
-                "id":"sindresorhus/awesome",
-                "des":"内容广"
-            },
-            {
-                "id":"dkhamsing/open-source-ios-apps",
-                "des":"开源的完整 App 例子"
-            }
-        ]
-    },
-    {
         "name":"新鲜事",
         "id":2111121547,
         "repos":[
@@ -45,11 +25,11 @@
                 "des":"老司机 iOS 周报"
             },
             {
-                "id":"ming1016/SwiftPamphletApp",
-                "des":"戴铭的 Swift 小册子"
+                "id":"matteocrippa/awesome-swift"
             },
             {
-                "id":"pointfreeco/episode-code-samples"
+                "id":"ming1016/SwiftPamphletApp",
+                "des":"戴铭的 Swift 小册子"
             }
         ]
     },
@@ -218,12 +198,16 @@
         ]
     },
     {
-        "name":"其它",
+        "name":"待分类",
         "id":2111122310,
         "repos":[
             {
                 "id":"Juanpe/About-SwiftUI",
                 "des":"汇总 SwiftUI 的资料"
+            },
+            {
+                "id":"SwiftGGTeam/the-swift-programming-language-in-chinese",
+                "des":"中文版 Apple 官方 Swift 教程"
             }
         ]
     }
