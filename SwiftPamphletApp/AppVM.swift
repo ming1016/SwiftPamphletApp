@@ -42,8 +42,6 @@ final class AppVM: ObservableObject {
                 let decoder = JSONDecoder()
                 grs = try decoder.decode([SPReposModel].self, from: data)
                 
-                
-                
                 for gr in grs {
                     for r in gr.repos {
                         expDic[r.id] = RepoStoreDataHelper.createEmptyDBRepoStore(r.id)
@@ -104,6 +102,9 @@ final class AppVM: ObservableObject {
                         expNotisKeys.append(k)
                     }
                 }
+                guard stepCountExp < expNotisKeys.count else {
+                    return
+                }
                 let repoName = expNotisKeys[stepCountExp]
                 // 网络请求 repo 的 commit，然后更新未读数
                 let gAPI = RESTful(host: .github)
@@ -163,11 +164,15 @@ final class AppVM: ObservableObject {
                     devsNotisKeys.append(k)
                 }
             }
-            let userName = devsNotisKeys[stepCountDevs]
-            loadDBDevsLoal()
-            calculateDevsCountNotis()
-            stepCountDevs += 1
-            return userName
+            if stepCountDevs >= devsNotisKeys.count {
+                return nil
+            } else {
+                let userName = devsNotisKeys[stepCountDevs]
+                loadDBDevsLoal()
+                calculateDevsCountNotis()
+                stepCountDevs += 1
+                return userName
+            }
         } else {
             return nil
         }
@@ -185,11 +190,16 @@ final class AppVM: ObservableObject {
                     reposNotisKeys.append(k)
                 }
             }
-            let repoName = reposNotisKeys[stepCountRepos]
-            loadDBReposLoal()
-            calculateReposCountNotis()
-            stepCountRepos += 1
-            return repoName
+            if stepCountRepos >= reposNotisKeys.count {
+                return nil
+            } else {
+                let repoName = reposNotisKeys[stepCountRepos]
+                loadDBReposLoal()
+                calculateReposCountNotis()
+                stepCountRepos += 1
+                return repoName
+            } // end if else
+            
         } else {
             return nil
         }

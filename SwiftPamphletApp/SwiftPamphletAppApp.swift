@@ -77,20 +77,13 @@ struct SwiftPamphletApp: View {
                     .onReceive(timerForExp) { time in
                         appVM.timeForExpEvent()
                     }
-//                    .task {
-//                        let githubAPI = RESTful(host: .github)
-//                        do {
-//                            let a = try await githubAPI.value(for: Github.user.following.get)
-//                            print(a)
-//                            let b = try await githubAPI.value(for: Github.users("tkremenek").get)
-//                            print(b)
-//
-//                            let c = try await githubAPI.value(for: Github.repos("ming1016/SwiftPamphletApp").issues(1).get)
-//                            print(c)
-//                        } catch {
-//                            print("await wrong")
-//                        }
-//                    }
+                    .task {
+                        do {
+                            let a = try await RSSReq("https://ming1016.github.io/atom.xml")
+                        } catch {
+                            
+                        }
+                    }
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
                 IntroView()
                 NavView()
