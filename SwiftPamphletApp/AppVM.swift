@@ -22,7 +22,7 @@ final class AppVM: ObservableObject {
     
     // MARK: - CCY
     // 探索更多库
-    @Published var expNotis = [String: Int]()
+    @Published var expNotis = [String: DBRepoStore]()
     @Published var expCountNotis = 0
     @Published var exps = [SPReposModel]()
     
@@ -31,7 +31,7 @@ final class AppVM: ObservableObject {
     func loadExpFromServer() {
         
         Task {
-            var expDic = [String: Int]()
+            var expDic = [String: DBRepoStore]()
             let gAPI = RESTful(host: .github)
             do {
                 let issueModel = try await gAPI.value(for: Github.repos(SPC.pamphletIssueRepoName).issues(108).get)
@@ -42,28 +42,16 @@ final class AppVM: ObservableObject {
                 let decoder = JSONDecoder()
                 grs = try decoder.decode([SPReposModel].self, from: data)
                 
-                exps = grs
+                
                 
                 for gr in grs {
                     for r in gr.repos {
+                        expDic[r.id] = RepoStoreDataHelper.createEmptyDBRepoStore(r.id)
                         if let fd = try RepoStoreDataHelper.find(sFullName: r.id) {
-                            expDic[fd.fullName] = fd.unRead
+                            expDic[r.id]?.unRead = fd.unRead
                         } else {
-                            let _ = try RepoStoreDataHelper.insert(i: DBRepoStore(
-                                id: 0,
-                                name: "",
-                                fullName: r.id,
-                                description: "",
-                                stargazersCount: 0,
-                                openIssues: 0,
-                                language: "",
-                                htmlUrl: "",
-                                lastReadCommitSha: "",
-                                unRead: 0,
-                                type: 0,
-                                extra: ""
-                            ))
-                            expDic[r.id] = 0
+                            let _ = try RepoStoreDataHelper.insert(i: RepoStoreDataHelper.createEmptyDBRepoStore(r.id))
+                            expDic[r.id]?.unRead = 0
                         } // end if
                     } // end for
                 } // end for
@@ -77,10 +65,14 @@ final class AppVM: ObservableObject {
                             do {
                                 try RepoStoreDataHelper.delete(i: expn)
                             } catch { return }
-                        } // end if
+                        } else {
+//                            let aExp = SPReposModel
+                            expDic[expn.fullName] = expn
+                        } // end if else
                     } // end for
                 } // end if let
                 
+                exps = grs
                 expNotis = expDic
                 
             } catch {
@@ -96,11 +88,11 @@ final class AppVM: ObservableObject {
     // 开发者动态
     private var stepCountDevs = 0
     private var devsNotisKeys = [String]()
-    // 探索更多库
+    // 探索库
     private var stepCountExp = 0
     private var expNotisKeys = [String]()
     
-    // 探索更多
+    // 探索库
     func timeForExpEvent() {
         Task {
             if expNotis.count > 0 {
@@ -395,12 +387,13 @@ final class AppVM: ObservableObject {
         do {
             if let arr = try RepoStoreDataHelper.findAll() {
                 if arr.count > 0 {
-                    var rDic = [String: Int]()
+                    var rDic = [String: DBRepoStore]()
                     for i in arr {
-                        if expNotis[i.fullName] == SPC.unreadMagicNumber {
-                            rDic[i.fullName] = SPC.unreadMagicNumber
+                        rDic[i.fullName] = i
+                        if expNotis[i.fullName]?.unRead == SPC.unreadMagicNumber {
+                            rDic[i.fullName]?.unRead = SPC.unreadMagicNumber
                         } else {
-                            rDic[i.fullName] = i.unRead
+                            rDic[i.fullName]?.unRead = i.unRead
                         }
                     }
                     expNotis = rDic
@@ -453,7 +446,10 @@ final class AppVM: ObservableObject {
     func calculateExpCountNotis() {
         var count = 0
         for i in expNotis {
-            count += i.value
+            count += i.value.unRead
+            if count > 99999 {
+                break
+            }
         }
         if count >= SPC.unreadMagicNumber {
             count = count - SPC.unreadMagicNumber
@@ -467,6 +463,9 @@ final class AppVM: ObservableObject {
         var count = 0
         for i in reposNotis {
             count += i.value
+            if count > 99999 {
+                break
+            }
         }
         if count >= SPC.unreadMagicNumber {
             count = count - SPC.unreadMagicNumber
@@ -481,6 +480,9 @@ final class AppVM: ObservableObject {
         var count = 0
         for i in devsNotis {
             count += i.value
+            if count > 99999 {
+                break
+            }
         }
         if count >= SPC.unreadMagicNumber {
             count = count - SPC.unreadMagicNumber
@@ -492,7 +494,10 @@ final class AppVM: ObservableObject {
     @MainActor
     func showAppBadgeLabel() {
         if reposCountNotis + devsCountNotis + expCountNotis > 0 {
-            let count = reposCountNotis + devsCountNotis + expCountNotis
+            var count = reposCountNotis + devsCountNotis + expCountNotis
+            if count > 99999 {
+                count = 99999
+            }
             NSApp.dockTile.showsApplicationBadge = true
             NSApp.dockTile.badgeLabel = "\(count)"
         } else {

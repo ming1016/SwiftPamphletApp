@@ -56,7 +56,7 @@ struct RepoView: View {
         .onDisappear {
             appVM.reposNotis[vm.repoName] = 0
             appVM.calculateReposCountNotis()
-            appVM.expNotis[vm.repoName] = 0
+            appVM.expNotis[vm.repoName]?.unRead = 0
             appVM.calculateExpCountNotis()
         }
         // end HStack
@@ -75,7 +75,7 @@ struct RepoView: View {
                     }
                     if isCleanExpUnread == true {
                         vm.doing(.clearExpUnReadCommit)
-                        appVM.expNotis[vm.repoName] = SPC.unreadMagicNumber
+                        appVM.expNotis[vm.repoName]?.unRead = SPC.unreadMagicNumber
                         appVM.calculateExpCountNotis()
                     }
                 })

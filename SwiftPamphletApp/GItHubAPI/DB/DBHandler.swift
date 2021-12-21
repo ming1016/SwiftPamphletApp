@@ -305,6 +305,22 @@ struct RepoStoreDataHelper: DataHelperProtocol {
     static let type = Expression<Int>("type")
     static let extra = Expression<String>("extra")
     
+    static func createEmptyDBRepoStore(_ pFullName: String) -> DBRepoStore {
+        return DBRepoStore(
+            id: 0,
+            name: "",
+            fullName: pFullName,
+            description: "",
+            stargazersCount: 0,
+            openIssues: 0,
+            language: "",
+            htmlUrl: "",
+            lastReadCommitSha: "",
+            unRead: 0,
+            type: 0,
+            extra: ""
+        )
+    }
     
     static func createTable() throws {
         guard let db = DB.shared.BBDB else {

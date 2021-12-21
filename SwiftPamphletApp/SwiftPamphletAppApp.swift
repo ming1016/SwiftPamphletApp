@@ -141,25 +141,37 @@ struct SPSidebar: View {
     @EnvironmentObject var appVM: AppVM
     var body: some View {
         List {
-            Section("GitHub 上相关动态") {
+            Section("新动态") {
                 
                 NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
                     if appVM.devsCountNotis > 0 {
-                        Label("开发者动态", systemImage: "person.2.wave.2")
+                        Label("开发者", systemImage: "person.2.wave.2")
                             .badge(appVM.devsCountNotis)
                     } else {
-                        Label("开发者动态", systemImage: "person.2.wave.2")
+                        Label("开发者", systemImage: "person.2.wave.2")
                     }
-                }
+                } // end NavigationLink
                 
                 NavigationLink(destination: GoodReposListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 31))) {
                     if appVM.reposCountNotis > 0 {
-                        Label("仓库动态", systemImage: "book.closed")
+                        Label("好库", systemImage: "book.closed")
                             .badge(appVM.reposCountNotis)
                     } else {
-                        Label("仓库动态", systemImage: "book.closed")
+                        Label("好库", systemImage: "book.closed")
                     }
-                }
+                } // end NavigationLink
+                
+                NavigationLink {
+                    ExploreRepoListView()
+                } label: {
+                    if appVM.expCountNotis > 0 {
+                        Label("探索库", systemImage: "globe.asia.australia")
+                            .badge(appVM.expCountNotis)
+                    } else {
+                        Label("探索库", systemImage: "globe.asia.australia")
+                    }
+                    
+                } // end NavigationLink
 
             }
             Section("Swift指南") {
@@ -190,17 +202,7 @@ struct SPSidebar: View {
                     Label("SwiftUI", systemImage: "rectangle.fill.on.rectangle.fill")
                 }
                 
-                NavigationLink {
-                    ExploreRepoListView()
-                } label: {
-                    if appVM.expCountNotis > 0 {
-                        Label("探索更多库", systemImage: "globe.asia.australia")
-                            .badge(appVM.expCountNotis)
-                    } else {
-                        Label("探索更多库", systemImage: "globe.asia.australia")
-                    }
-                    
-                }
+                
             }
             
             Section("小册子") {

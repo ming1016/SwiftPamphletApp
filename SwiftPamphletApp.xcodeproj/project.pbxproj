@@ -39,6 +39,7 @@
 		086A5F642754C14F00FECE02 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* TextView.swift */; };
 		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
 		086A5F6A2755F3BE00FECE02 /* ilikedrepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* ilikedrepos.json */; };
+		08B4C9392770B26700742084 /* CCYReqRSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4C9382770B26700742084 /* CCYReqRSS.swift */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
@@ -82,6 +83,7 @@
 		086A5F632754C14F00FECE02 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		086A5F662754C27900FECE02 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		086A5F692755F3BE00FECE02 /* ilikedrepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ilikedrepos.json; path = SwiftPamphletApp/Resource/ilikedrepos.json; sourceTree = SOURCE_ROOT; };
+		08B4C9382770B26700742084 /* CCYReqRSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYReqRSS.swift; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08D4F0FB275F705C005FC997 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				086A5F382744EDA500FECE02 /* APIRequest.swift */,
 				08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */,
+				08B4C9382770B26700742084 /* CCYReqRSS.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				086A5F3A2744EDA500FECE02 /* APIRequest.swift in Sources */,
 				086A5F522744EF4C00FECE02 /* ViewComponet.swift in Sources */,
 				086A5F672754C27900FECE02 /* DBHandler.swift in Sources */,
+				08B4C9392770B26700742084 /* CCYReqRSS.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
 				08D4F0FE275F728C005FC997 /* LinkView.swift in Sources */,
 				086A5F2F2744ED8600FECE02 /* SPIssuesListView.swift in Sources */,
