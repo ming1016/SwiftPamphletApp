@@ -1,7 +1,87 @@
 [
     {
-        "name":"待分类",
-        "id":2111111948,
+        "name":"SwiftUI扩展",
+        "id":2112221651,
+        "repos":[
+            {
+                "id":"SwiftUIX/SwiftUIX",
+                "des":"扩展 SwiftUI"
+            },
+            {
+                "id":"SDWebImage/SDWebImageSwiftUI"
+            },
+            {
+                "id":"apptekstudios/ASCollectionView",
+                "des":"SwiftUI collection"
+            }
+        ]
+    },
+    {
+        "name":"接口应用",
+        "id":2112221710,
+        "repos":[
+            {
+                "id":"bpisano/Weather",
+                "des":"天气应用"
+            },
+            {
+                "id":"Dimillian/MovieSwiftUI",
+                "des":"电影 MovieDB 应用"
+            },
+            {
+                "id":"chojnac/NotionSwift"
+            },
+            {
+                "id":"carson-katri/reddit-swiftui",
+                "des":"SwiftUI 写的 Readdit客户端"
+            },
+            {
+                "id":"tatsuz0u/EhPanda"
+            }
+        ]
+    },
+    {
+        "name":"macOS",
+        "id":2112221735,
+        "repos":[
+            {
+                "id":"eonist/FileWatcher",
+                "des":"macOS 上监听文件变化"
+            },
+            {
+                "id":"waylybaye/XcodeCleaner-SwiftUI",
+                "des":"清理 Xcode"
+            }
+        ]
+    },
+    {
+        "name":"新技术展示",
+        "id":2112221902,
+        "repos":[
+            {
+                "id":"JakeLin/Moments-SwiftUI",
+                "des":"SwiftUI、Async、Actor"
+            }
+        ]
+    },
+    {
+        "name":"聚合",
+        "id":2112221948,
+        "repos":[
+            {
+                "id":"timqian/chinese-independent-blogs"
+            },
+            {
+                "id":"vlondon/awesome-swiftui"
+            },
+            {
+                "id":"ivanvorobei/SwiftUI"
+            }
+        ]
+    },
+    {
+        "name":"Apple",
+        "id":2112212004,
         "repos":[
             {
                 "id":"apple/swift-corelibs-foundation"
@@ -23,6 +103,16 @@
                 "des":"解析、生成、转换 Swift 代码"
             },
             {
+                "id":"apple/swift-crypto",
+                "des":"CryptoKit 的开源实现"
+            }
+        ]
+    },
+    {
+        "name":"待分类",
+        "id":2111111948,
+        "repos":[
+            {
                 "id":"public-apis/public-apis"
             },
             {
@@ -42,10 +132,12 @@
                 
             },
             {
-                "id":"rakutentech/AltSwiftUI"
+                "id":"rakutentech/AltSwiftUI",
+                "des":"类 SwiftUI"
             },
             {
-                "id":"gymshark/ios-stack-kit"
+                "id":"gymshark/ios-stack-kit",
+                "des":"类 SwiftUI"
             },
             {
                 "id":"OpenCombine/OpenCombine"
@@ -303,10 +395,6 @@
                 "des":"声明式的网络请求"
             },
             {
-                "id":"carson-katri/reddit-swiftui",
-                "des":"SwiftUI 写的 Readdit客户端"
-            },
-            {
                 "id":"Cay-Zhang/SwiftSpeech",
                 "des":"苹果语言识别封装库，已适配 SwiftUI"
             },
@@ -339,10 +427,6 @@
                 "des":"可以分析程序用了哪些库，用了LLVM objdump"
             },
             {
-                "id":"eonist/FileWatcher",
-                "des":"macOS 上监听文件变化"
-            },
-            {
                 "id":"pointfreeco/episode-code-samples"
             },
             {
@@ -367,6 +451,14 @@
             {
                 "id":"faisalmemon/ios-crash-dump-analysis-book",
                 "des":"iOS Crash Dump Analysis Book"
+            },
+            {
+                "id":"exyte/SVGView",
+                "des":"支持 SwiftUI 的 SVG 解析渲染视图"
+            },
+            {
+                "id":"ruanyf/weekly",
+                "des":"科技爱好者周刊"
             }
         ]
     }
