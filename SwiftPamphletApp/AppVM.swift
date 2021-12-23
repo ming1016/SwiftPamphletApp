@@ -103,6 +103,7 @@ final class AppVM: ObservableObject {
                     }
                 }
                 guard stepCountExp < expNotisKeys.count else {
+                    stepCountExp = 0
                     return
                 }
                 let repoName = expNotisKeys[stepCountExp]
@@ -165,6 +166,7 @@ final class AppVM: ObservableObject {
                 }
             }
             if stepCountDevs >= devsNotisKeys.count {
+                stepCountDevs = 0
                 return nil
             } else {
                 let userName = devsNotisKeys[stepCountDevs]
@@ -191,6 +193,7 @@ final class AppVM: ObservableObject {
                 }
             }
             if stepCountRepos >= reposNotisKeys.count {
+                stepCountRepos = 0
                 return nil
             } else {
                 let repoName = reposNotisKeys[stepCountRepos]

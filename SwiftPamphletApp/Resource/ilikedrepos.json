@@ -37,6 +37,28 @@
             },
             {
                 "id":"tatsuz0u/EhPanda"
+            },
+            {
+                "id":"Finb/V2ex-Swift",
+                "des":"V2EX 客户端"
+            },
+            {
+                "id":"v2er-app/iOS",
+                "des":"V2EX 客户端"
+            },
+            {
+                "id":"sinaweibosdk/weibo_ios_sdk"
+            },
+            {
+                "id":"nerdishbynature/octokit.swift",
+                "des":"Swift API Client for GitHub"
+            },
+            {
+                "id":"GitHawkApp/GitHawk",
+                "des":"iOS app for GitHub"
+            },
+            {
+                "id":"fangzesheng/free-api"
             }
         ]
     },
@@ -65,6 +87,16 @@
         ]
     },
     {
+        "name":"新鲜事",
+        "id":2112231043,
+        "repos":[
+            {
+                "id":"ruanyf/weekly",
+                "des":"科技爱好者周刊"
+            }
+        ]
+    },
+    {
         "name":"聚合",
         "id":2112221948,
         "repos":[
@@ -76,6 +108,48 @@
             },
             {
                 "id":"ivanvorobei/SwiftUI"
+            },
+            {
+                "id":"kon9chunkit/GitHub-Chinese-Top-Charts",
+                "des":"GitHub中文排行榜"
+            }
+        ]
+    },
+    {
+        "name":"网络",
+        "id":2112231048,
+        "repos":[
+            {
+                "id":"Lojii/Knot",
+                "des":"使用 SwiftNIO 实现 HTTPS 抓包"
+            },
+            {
+                "id":"swift-server/async-http-client",
+                "des":"使用 SwiftNIO 开发的 HTTP 客户端"
+            },
+            {
+                "id":"kean/APIClient"
+            },
+            {
+                "id":"awesome-selfhosted/awesome-selfhosted",
+                "des":"网络服务及上面的应用"
+            },
+            {
+                "id":"daltoniam/Starscream",
+                "des":"WebSocket"
+            },
+            {
+                "id":"shadowsocks/ShadowsocksX-NG"
+            }
+        ]
+    },
+    {
+        "name":"系统",
+        "id":2112231101,
+        "repos":[
+            {
+                "id":"spevans/swift-project1",
+                "des":"Swift编写内核，可在 Mac 和 PC 启动"
             }
         ]
     },
@@ -122,14 +196,10 @@
                 "id":"sindresorhus/Actions"
             },
             {
-                "id":"fangzesheng/free-api"
-            },
-            {
                 "id":"trimstray/the-book-of-secret-knowledge"
             },
             {
                 "id":"rossant/awesome-math"
-                
             },
             {
                 "id":"rakutentech/AltSwiftUI",
@@ -174,17 +244,6 @@
                 "des":"CloudKit 同步 Realm 数据库"
             },
             {
-                "id":"sinaweibosdk/weibo_ios_sdk"
-            },
-            {
-                "id":"nerdishbynature/octokit.swift",
-                "des":"Swift API Client for GitHub"
-            },
-            {
-                "id":"GitHawkApp/GitHawk",
-                "des":"iOS app for GitHub"
-            },
-            {
                 "id":"tophat/RichTextView"
             },
             {
@@ -225,9 +284,6 @@
                 "id":"mozilla-mobile/firefox-ios"
             },
             {
-                "id":"shadowsocks/ShadowsocksX-NG"
-            },
-            {
                 "id":"PostgresApp/PostgresApp"
             },
             {
@@ -235,10 +291,6 @@
             },
             {
                 "id":"Kitura/BlueSocket"
-            },
-            {
-                "id":"daltoniam/Starscream",
-                "des":"WebSocket"
             },
             {
                 "id":"rhummelmose/BluetoothKit"
@@ -273,14 +325,6 @@
             {
                 "id":"efremidze/Magnetic",
                 "des":"SpriteKit气泡支持SwiftUI"
-            },
-            {
-                "id":"Finb/V2ex-Swift",
-                "des":"V2EX 客户端"
-            },
-            {
-                "id":"v2er-app/iOS",
-                "des":"V2EX 客户端"
             },
             {
                 "id":"analogcode/Swift-Radio-Pro",
@@ -321,10 +365,6 @@
                 "des":"测试框架"
             },
             {
-                "id":"kon9chunkit/GitHub-Chinese-Top-Charts",
-                "des":"GitHub中文排行榜"
-            },
-            {
                 "id":"bilibili/ijkplayer",
                 "des":"播放器"
             },
@@ -361,26 +401,12 @@
                 "des":"软件架构"
             },
             {
-                "id":"awesome-selfhosted/awesome-selfhosted",
-                "des":"网络服务及上面的应用"
-            },
-            {
                 "id":"NARKOZ/hacker-scripts",
                 "des":"程序员的活都让机器干的脚本（真实故事）"
             },
             {
                 "id":"nalexn/clean-architecture-swiftui",
                 "des":"干净完整的SwiftUI+Combine例子，包含网络和单元测试等"
-            },
-            {
-                "id":"kean/APIClient"
-            },
-            {
-                "id":"swift-server/async-http-client",
-                "des":"使用 SwiftNIO 开发的 HTTP 客户端"
-            },
-            {
-                "id":"WebKit/WebKit"
             },
             {
                 "id":"carekit-apple/CareKit",
@@ -440,10 +466,7 @@
                 "id":"dkhamsing/open-source-ios-apps",
                 "des":"开源的完整 App 例子"
             },
-            {
-                "id":"Lojii/Knot",
-                "des":"使用 SwiftNIO 实现 HTTPS 抓包"
-            },
+            
             {
                 "id":"frzi/Model3DView",
                 "des":"毫不费力的使用 SwiftUI 渲染 3d models"
@@ -455,10 +478,6 @@
             {
                 "id":"exyte/SVGView",
                 "des":"支持 SwiftUI 的 SVG 解析渲染视图"
-            },
-            {
-                "id":"ruanyf/weekly",
-                "des":"科技爱好者周刊"
             }
         ]
     }
