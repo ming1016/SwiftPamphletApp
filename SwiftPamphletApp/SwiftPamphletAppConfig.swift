@@ -19,7 +19,7 @@ struct SPC {
     static let timerForExpSec: Double = 65
     static let timerForRssSec: Double = 60 * 30
     
-    static let unreadMagicNumber = 9999
+    static let unreadMagicNumber = 99999
     
     static func loadCustomIssues(jsonFileName: String) -> [CustomIssuesModel] {
         let lc: [CustomIssuesModel] = loadBundleJSONFile(jsonFileName + ".json")

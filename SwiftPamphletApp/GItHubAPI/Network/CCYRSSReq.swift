@@ -7,7 +7,7 @@
 
 import Foundation
 
-func RSSReq(_ urlStr: String) async throws {
+func RSSReq(_ urlStr: String) async throws -> String? {
     guard let url = URL(string: urlStr) else {
         fatalError("wrong url")
     }
@@ -17,7 +17,7 @@ func RSSReq(_ urlStr: String) async throws {
         fatalError("wrong data")
     }
     let dataStr = String(data: data, encoding: .utf8)
-    print(dataStr ?? "")
+    return dataStr
 }
 
 
