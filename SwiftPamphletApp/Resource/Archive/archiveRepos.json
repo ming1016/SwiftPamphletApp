@@ -1,0 +1,25 @@
+[
+    {
+        "name":"新鲜事",
+        "id":2112231728,
+        "repos":[
+            {
+                "id":"matteocrippa/awesome-swift"
+            }
+        ]
+    },
+    {
+        "name":"待分类",
+        "id":2112231727,
+        "repos":[
+            {
+                "id":"llvm/llvm-project",
+                "des":"编译器"
+            },
+            {
+                "id":"apple/swift-evolution",
+                "des":"提案"
+            }
+        ]
+    }
+]

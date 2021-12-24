@@ -15,8 +15,9 @@ struct SPC {
     static let pamphletIssueRepoName = "ming1016/SwiftPamphletApp"
     
     static let timerForReposSec: Double = 60
-    static let timerForDevsSec: Double = 70
-    static let timerForExpSec: Double = 85
+    static let timerForDevsSec: Double = 80
+    static let timerForExpSec: Double = 65
+    static let timerForRssSec: Double = 60 * 30
     
     static let unreadMagicNumber = 9999
     

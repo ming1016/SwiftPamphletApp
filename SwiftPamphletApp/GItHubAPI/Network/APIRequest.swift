@@ -82,7 +82,7 @@ enum APISevError: Error {
         case .resError:
             return "网络无法访问"
         case .parseError:
-            return "数据解析出错"
+            return "网络出错"
         }
     }
 }

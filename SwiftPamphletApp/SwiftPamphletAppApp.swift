@@ -42,6 +42,7 @@ struct SwiftPamphletApp: View {
     let timerForRepos = Timer.publish(every: SPC.timerForReposSec, on: .main, in: .common).autoconnect()
     let timerForDevs = Timer.publish(every: SPC.timerForDevsSec, on: .main, in: .common).autoconnect()
     let timerForExp = Timer.publish(every: SPC.timerForExpSec, on: .main, in: .common).autoconnect()
+    let timerForRss = Timer.publish(every: SPC.timerForRssSec, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationView {
             if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
@@ -61,6 +62,7 @@ struct SwiftPamphletApp: View {
                 SPSidebar()
                     .onAppear(perform: {
                         appVM.onAppearEvent()
+                        appVM.rssFetch()
                     })
                     .onReceive(timerForRepos, perform: { time in
                         if let repoName = appVM.timeForReposEvent() {
@@ -77,12 +79,8 @@ struct SwiftPamphletApp: View {
                     .onReceive(timerForExp) { time in
                         appVM.timeForExpEvent()
                     }
-                    .task {
-                        do {
-                            let a = try await RSSReq("https://ming1016.github.io/atom.xml")
-                        } catch {
-                            
-                        }
+                    .onReceive(timerForRss) { time in
+                        appVM.rssFetch()
                     }
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
                 IntroView()

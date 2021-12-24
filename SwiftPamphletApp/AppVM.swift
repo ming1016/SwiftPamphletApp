@@ -26,6 +26,19 @@ final class AppVM: ObservableObject {
     @Published var expCountNotis = 0
     @Published var exps = [SPReposModel]()
     
+    // MARK: - RSS 读取
+    @MainActor
+    func rssFetch() {
+//        Task {
+//            do {
+//                let a = try await RSSReq("https://ming1016.github.io/atom.xml")
+//            } catch {
+//                
+//            }
+//        }
+        print("fetching...")
+    }
+    
     // MARK: - 获取所有探索更多库通知信息
     @MainActor
     func loadExpFromServer() {
