@@ -17,7 +17,7 @@ struct SPC {
     static let timerForReposSec: Double = 60
     static let timerForDevsSec: Double = 80
     static let timerForExpSec: Double = 65
-    static let timerForRssSec: Double = 60 * 30
+    static let timerForRssSec: Double = 60 * 60
     
     static let unreadMagicNumber = 99999
     

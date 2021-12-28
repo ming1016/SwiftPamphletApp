@@ -83,6 +83,14 @@
             },
             {
                 "id":"fangzesheng/free-api"
+            },
+            {
+                "id":"nerdsupremacist/Graphaello",
+                "des":"SwiftUI 中使用 GraphQL 的工具"
+            },
+            {
+                "id":"nerdsupremacist/tmdb",
+                "des":"GraphQL 包装电影数据接口"
             }
         ]
     },
@@ -105,6 +113,10 @@
             {
                 "id":"Dimillian/ACHNBrowserUI",
                 "des":"SwiftUI 写的动物之森小助手程序"
+            },
+            {
+                "id":"lexrus/RegExPlus",
+                "des":"正则表达式"
             }
         ]
     },
@@ -129,6 +141,17 @@
             {
                 "id":"michelpereira/awesome-games-of-coding",
                 "des":"教你学编程的游戏收集"
+            },
+            {
+                "id":"OpenEmu/OpenEmu",
+                "des":"视频游戏模拟器"
+            },
+            {
+                "id":"jVirus/swiftui-2048"
+            },
+            {
+                "id":"chrismaltby/gb-studio",
+                "des":"拖放式复古游戏创建器"
             }
         ]
     },
@@ -171,6 +194,34 @@
             },
             {
                 "id":"onmyway133/awesome-swiftui"
+            },
+            {
+                "id":"Juanpe/About-SwiftUI",
+                "des":"汇总 SwiftUI 的资料"
+            }
+        ]
+    },
+    {
+        "name":"知识管理",
+        "id":2112281910,
+        "repos":[
+            {
+                "id":"logseq/logseq",
+                "des":"注重隐私的知识管理工具"
+            }
+        ]
+    },
+    {
+        "name":"性能和工程构建",
+        "id":2112241714,
+        "repos":[
+            {
+                "id":"peripheryapp/periphery",
+                "des":"检测 Swift 无用代码"
+            },
+            {
+                "id":"nalexn/ViewInspector",
+                "des":"SwiftUI Runtime introspection 和 单元测试"
             }
         ]
     },
@@ -199,6 +250,20 @@
             },
             {
                 "id":"shadowsocks/ShadowsocksX-NG"
+            },
+            {
+                "id":"carson-katri/swift-request",
+                "des":"声明式的网络请求"
+            }
+        ]
+    },
+    {
+        "name":"图形",
+        "id":2112271545,
+        "repos":[
+            {
+                "id":"lludo/SwiftSunburstDiagram",
+                "des":"SwiftUI 图表"
             }
         ]
     },
@@ -269,7 +334,12 @@
                 "des":"类 SwiftUI"
             },
             {
-                "id":"OpenCombine/OpenCombine"
+                "id":"OpenCombine/OpenCombine",
+                "des":"Combine 的开源实现"
+            },
+            {
+                "id":"CombineCommunity/CombineExt",
+                "des":"对 Combine 的补充"
             },
             {
                 "id":"ReSwift/ReSwift",
@@ -314,6 +384,10 @@
             {
                 "id":"johnxnguyen/Down",
                 "des":"fast Markdown"
+            },
+            {
+                "id":"qeude/SwiftDown",
+                "des":"Swift 写的可换主题的 Markdown 编辑器组件"
             },
             {
                 "id":"shibapm/Komondor",
@@ -476,10 +550,6 @@
                 "des":"Result Builders awesome"
             },
             {
-                "id":"carson-katri/swift-request",
-                "des":"声明式的网络请求"
-            },
-            {
                 "id":"Cay-Zhang/SwiftSpeech",
                 "des":"苹果语言识别封装库，已适配 SwiftUI"
             },
@@ -545,6 +615,14 @@
             {
                 "id":"jessesquires/TIL",
                 "des":"学习笔记"
+            },
+            {
+                "id":"majd/ipatool",
+                "des":"下载 ipa"
+            },
+            {
+                "id":"JohnSundell/Ink",
+                "des":"Markdown 解析器"
             }
         ]
     }

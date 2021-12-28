@@ -133,6 +133,12 @@ struct SPSidebar: View {
     var body: some View {
         List {
             Section("新动态") {
+//                NavigationLink {
+//                    ExploreRepoListView()
+//                } label: {
+//                    Label("博客", systemImage: "r.square.on.square.fill")
+//                }
+
                 
                 NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
                     if appVM.devsCountNotis > 0 {

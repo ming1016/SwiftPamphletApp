@@ -27,6 +27,25 @@ final class AppVM: ObservableObject {
     @Published var exps = [SPReposModel]()
     
     // MARK: - RSS 读取
+    struct RSSModel {
+        var title = ""
+        var description = ""
+        var link = ""
+        var language = ""
+        var lastBuildDate = ""
+        var pubDate = ""
+        var items = [RSSItemModel]()
+    }
+    
+    struct RSSItemModel {
+        var guid = ""
+        var title = ""
+        var description = ""
+        var link = ""
+        var pubDate = ""
+        var content = ""
+    }
+    
     func rssFetch() {
 //        Task {
 //            do {
@@ -37,22 +56,77 @@ final class AppVM: ObservableObject {
 //                }
 //                let root = ParseStandXML(input: str).parse()
 //                for n in root.subNodes {
-////                    print(n.name)
-////                    print(n.subNodes.count)
-//                    if n.name == "rss" {
+//                    print("n 级 name：" + n.name)
+//                    print(n.subNodes.count)
+//                    if n.name == "rss" && n.subNodes.count > 0 {
 //                        for n1 in n.subNodes {
-//                            print(n1.name)
+//                            print("n1 级 name：" + n1.name)
 //                            print(n1.subNodes.count)
-//                            for n2 in n1.subNodes {
-//                                print(n2.name)
-//                                print(n2.value)
-//                                print(n2.subNodes.count)
-////                                for n3 in n2.subNodes
-//                            }
-//                        }
-//                    }
-//                    
-//                }
+//                            if n1.name == "channel" && n1.subNodes.count > 0 {
+//                                var rss = RSSModel()
+//                                for n2 in n1.subNodes {
+//                                    print("n2 级 name：" + n2.name)
+//                                    print(n2.value)
+//                                    print(n2.subNodes.count)
+//                                    if n2.name == "title" {
+//                                        rss.title = n2.value
+//                                    }
+//                                    if n2.name == "description" {
+//                                        rss.description = n2.value
+//                                    }
+//                                    if n2.name == "link" {
+//                                        rss.link = n2.value
+//                                    }
+//                                    if n2.name == "language" {
+//                                        rss.language = n2.value
+//                                    }
+//                                    if n2.name == "lastBuildDate" {
+//                                        rss.lastBuildDate = n2.value
+//                                    }
+//                                    if n2.name == "pubDate" {
+//                                        rss.pubDate = n2.value
+//                                    }
+//                                    
+//                                    if n2.name == "item" {
+//                                        var aItem = RSSItemModel()
+//                                        for n3 in n2.subNodes {
+//                                            print("n3 级 name: " + n3.name)
+//                                            print(n3.value)
+//                                            print(n3.subNodes.count)
+//                                            if n3.name == "guid" {
+//                                                aItem.guid = n3.value
+//                                            }
+//                                            if n3.name == "title" {
+//                                                aItem.title = n3.value
+//                                            }
+//                                            if n3.name == "description" {
+//                                                aItem.description = n3.value
+//                                            }
+//                                            if n3.name == "link" {
+//                                                aItem.link = n3.value
+//                                            }
+//                                            if n3.name == "pubDate" {
+//                                                aItem.pubDate = n3.value
+//                                            }
+//                                            if n3.name.prefix(7) == "content" {
+//                                                aItem.content = n3.value
+//                                            }
+//                                        } // end for n3
+//                                        rss.items.append(aItem)
+//                                    }
+//                                } // end for n2
+//                                print(rss.title)
+//                                print(rss.link)
+//                                print(rss.pubDate)
+//                                print(rss.items.count)
+//                                for a in rss.items {
+//                                    print(a.content)
+//                                }
+//                            } // end if channel
+//                            
+//                        } // end for n1
+//                    } // end if rss
+//                } // end n for
 //                
 //                // 在 Main Actor 更新通知数
 //                await rssUpdateNotis()

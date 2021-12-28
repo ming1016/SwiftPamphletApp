@@ -173,6 +173,20 @@
         ]
     },
     {
+        "name":"性能和工程构建",
+        "id":2112241750,
+        "repos":[
+            {
+                "id":"tuist/tuist",
+                "des":"创建和维护 Xcode projects 文件"
+            },
+            {
+                "id":"swift-server/vscode-swift",
+                "des":"VSCode 的 Swift 扩展"
+            }
+        ]
+    },
+    {
         "name":"音视频",
         "id":2111241208,
         "repos":[
@@ -201,10 +215,6 @@
         "name":"待分类",
         "id":2111122310,
         "repos":[
-            {
-                "id":"Juanpe/About-SwiftUI",
-                "des":"汇总 SwiftUI 的资料"
-            },
             {
                 "id":"SwiftGGTeam/the-swift-programming-language-in-chinese",
                 "des":"中文版 Apple 官方 Swift 教程"
