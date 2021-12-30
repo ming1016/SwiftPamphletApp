@@ -15,6 +15,10 @@
             {
                 "id":"bagder/everything-curl",
                 "des":"记录了 curl 的一切"
+            },
+            {
+                "id":"LANDrop/LANDrop",
+                "des":"全平台局域网文件传输"
             }
         ]
     },
