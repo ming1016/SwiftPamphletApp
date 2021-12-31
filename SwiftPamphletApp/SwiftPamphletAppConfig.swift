@@ -36,6 +36,11 @@ struct SPC {
         return re
     }
     
+    static func rssFeed() -> [RSSFeedModel] {
+        let re: [RSSFeedModel] = loadBundleJSONFile("rssfeed.json")
+        return re
+    }
+    
 }
 
 struct SPActiveDevelopersModel: Jsonable {
@@ -59,3 +64,13 @@ struct ARepoModel: Jsonable {
     var id: String
     var des: String?
 }
+
+struct RSSFeedModel: Jsonable {
+    var id: Int64
+    var title: String
+    var des: String
+    var siteLink: String
+    var feedLink: String
+}
+
+
