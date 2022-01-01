@@ -41,6 +41,10 @@ struct SPC {
         return re
     }
     
+    static func rssStyle() -> String {
+        let data = loadBundleData("css.html")
+        return String(data: data, encoding: .utf8) ?? ""
+    }
 }
 
 struct SPActiveDevelopersModel: Jsonable {

@@ -14,19 +14,24 @@ struct RSSListView: View {
         List {
             ForEach(vm.rssFeeds) { rss in
                 NavigationLink {
-                    RSSItemsView()
+                    RSSItemsView(rssLink: rss.feedLink)
                 } label: {
                     VStack(alignment: .leading, spacing: 5) {
                         Text(rss.title)
                             .bold()
-                        Text(rss.des)
+                        Text(rss.description)
                             .font(.footnote)
                             .foregroundColor(.secondary)
                     }
+                    .badge(vm.unReadCountDic[rss.feedLink] ?? 0)
                 }
 
             }
         }
+        .onAppear {
+            vm.showRssFeeds()
+        }
+        .environmentObject(vm)
     }
 }
 

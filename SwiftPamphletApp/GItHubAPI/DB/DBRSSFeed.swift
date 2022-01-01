@@ -118,12 +118,30 @@ struct RSSFeedDataHelper: DataHelperProtocol {
         }
     } // end update
     
+    static func updateUnReadCount(rssLinkStr: String, unReadCountInt: Int) throws {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        let query = table.filter(rssLink == rssLinkStr)
+        do {
+            if try db.run(query.update(
+                unReadCount <- unReadCountInt
+            )) > 0 {
+                
+            } else {
+                throw DBError.updateErr
+            }
+        } catch {
+            throw DBError.updateErr
+        }
+    } // end update unread count
+    
     static func findAll() throws -> [T]? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
         var arr = [T]()
-        let items = try db.prepare(table)
+        let items = try db.prepare(table.order(unReadCount.desc))
         for i in items {
             arr.append(T(
                 title: i[title],

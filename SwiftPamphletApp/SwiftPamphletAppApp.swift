@@ -75,12 +75,13 @@ struct SwiftPamphletApp: View {
                             let vm = UserVM(userName: userName)
                             vm.doing(.notiEvent)
                         }
+                        appVM.rssUpdateNotis() // 定时更新博客未读数
                     })
                     .onReceive(timerForExp) { time in
                         appVM.timeForExpEvent()
                     }
                     .onReceive(timerForRss) { time in
-//                        appVM.rssFetch()
+                        appVM.rssFetch()
                     }
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
                 IntroView()

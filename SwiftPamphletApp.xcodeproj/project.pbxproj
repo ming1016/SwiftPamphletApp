@@ -52,6 +52,8 @@
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
 		08AEAEF3277F09FA00B969E2 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF2277F09FA00B969E2 /* NavView.swift */; };
 		08AEAEF5277F0A1E00B969E2 /* SPSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF4277F0A1E00B969E2 /* SPSidebar.swift */; };
+		08AEAEF7277F389300B969E2 /* RSSItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF6277F389300B969E2 /* RSSItemContentView.swift */; };
+		08AEAEFA277F3C7400B969E2 /* css.html in Resources */ = {isa = PBXBuildFile; fileRef = 08AEAEF9277F3C7400B969E2 /* css.html */; };
 		08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4C9382770B26700742084 /* CCYRSSReq.swift */; };
 		08B4C93C2774786800742084 /* archiveRepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B4C93B2774786800742084 /* archiveRepos.json */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
@@ -115,6 +117,8 @@
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		08AEAEF2277F09FA00B969E2 /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		08AEAEF4277F0A1E00B969E2 /* SPSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPSidebar.swift; sourceTree = "<group>"; };
+		08AEAEF6277F389300B969E2 /* RSSItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItemContentView.swift; sourceTree = "<group>"; };
+		08AEAEF9277F3C7400B969E2 /* css.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css.html; sourceTree = "<group>"; };
 		08B4C9382770B26700742084 /* CCYRSSReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRSSReq.swift; sourceTree = "<group>"; };
 		08B4C93B2774786800742084 /* archiveRepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archiveRepos.json; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 		086A5F472744EF0800FECE02 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				08AEAEF8277F3C5A00B969E2 /* Style */,
 				08AEAEE7277EDD5D00B969E2 /* Guide */,
 				08AEAEE6277EDD4C00B969E2 /* News */,
 				08B4C93A277477E100742084 /* Archive */,
@@ -307,6 +312,14 @@
 			path = Guide;
 			sourceTree = "<group>";
 		};
+		08AEAEF8277F3C5A00B969E2 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				08AEAEF9277F3C7400B969E2 /* css.html */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		08B4C93A277477E100742084 /* Archive */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +345,7 @@
 				08AEAEEA277EED9F00B969E2 /* RSSVM.swift */,
 				08AEAEEC277F014500B969E2 /* RSSListView.swift */,
 				08AEAEEE277F070700B969E2 /* RSSItemsView.swift */,
+				08AEAEF6277F389300B969E2 /* RSSItemContentView.swift */,
 				08CD61F42775886B008C0935 /* Parser */,
 			);
 			path = RSSReader;
@@ -423,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08AEAEFA277F3C7400B969E2 /* css.html in Resources */,
 				086A5F502744EF3B00FECE02 /* developers.json in Resources */,
 				086A5F5A274CC17700FECE02 /* lib-Combine.json in Resources */,
 				086A5F4E2744EF3B00FECE02 /* goodrepos.json in Resources */,
@@ -446,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08AEAEF7277F389300B969E2 /* RSSItemContentView.swift in Sources */,
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */,

@@ -9,31 +9,119 @@ import Foundation
 
 final class RSSVM: ObservableObject {
     
-    @Published private(set) var rssFeeds: [RSSFeedModel]
+    @Published private(set) var rssFeeds = [RSSModel]()
+    @Published private(set) var unReadCountDic = [String: Int]()
     
-    init() {
-        rssFeeds = SPC.rssFeed()
+    @Published private(set) var items = [RSSItemModel]()
+    @Published private(set) var isReadDic = [String: Bool]()
+    
+    func showRssFeeds() {
+        do {
+            if let feeds = try RSSFeedDataHelper.findAll() {
+                var arr = [RSSModel]()
+                for f in feeds {
+                    var m = RSSModel()
+                    m.title = f.title
+                    m.siteLink = f.siteLink
+                    m.feedLink = f.rssLink
+                    m.unReadCount = f.unReadCount
+                    m.description = f.des
+                    arr.append(m)
+                    unReadCountDic[f.rssLink] = f.unReadCount
+                }
+                rssFeeds = arr
+            }
+            
+        } catch {}
     }
     
-    func listAppear() {
-        
+    func showItems(rssLink: String) {
+        do {
+            let rssItems = try RSSItemsDataHelper.findRssLink(sRssLink: rssLink)
+            var arr = [RSSItemModel]()
+            for i in rssItems {
+                var m = RSSItemModel()
+                m.title = i.title
+                m.description = i.des
+                m.link = i.link
+                m.pubDate = i.pubDate
+                m.content = i.content
+                m.isRead = i.isRead
+                arr.append(m)
+                isReadDic[i.link] = i.isRead
+            }
+            items = arr
+        } catch {}
+    }
+    
+    func readContent(linkStr: String, rssLinkStr: String) {
+        isReadDic[linkStr] = true
+        do {
+            let _ = try RSSItemsDataHelper.markRead(aLink: linkStr)
+            let unReadCount = try RSSItemsDataHelper.findRssLinkUnreadCount(sRssLink: rssLinkStr)
+            // 未读数存储更新
+            let _ = try RSSFeedDataHelper.updateUnReadCount(rssLinkStr: rssLinkStr, unReadCountInt: unReadCount)
+            // 未读数内存更新
+            unReadCountDic[rssLinkStr] = unReadCount
+        } catch {}
     }
     
     static func handleFetchFeed(str: String, rssModel: RSSFeedModel) {
         var rss = RSSModel()
         let root = ParseStandXML(input: str).parse()
-        for n in root.subNodes {
-            print("n 级 name：" + n.name)
-            print(n.subNodes.count)
+        for n in root.subNodes {            
+            // MARK: - feed 的情况
+            if n.name == "feed" && n.subNodes.count > 0 {
+                for n1 in n.subNodes {
+                    if n1.name == "title" {
+                        rss.title = n1.value
+                    }
+                    if n1.name == "subtitle" {
+                        rss.description = n1.value
+                    }
+                    if n1.name == "id" {
+                        rss.siteLink = n1.value
+                    }
+                    if n1.name == "updated" {
+                        rss.pubDate = n1.value
+                    }
+                    if n1.name == "entry" {
+                        var aItem = RSSItemModel()
+                        for n2 in n1.subNodes {
+                            if n2.name == "title" {
+                                aItem.title = n2.value
+                            }
+                            if n2.name == "link" {
+                                if n2.attributes.count > 0 {
+                                    for a in n2.attributes {
+                                        if a.name == "href" {
+                                            aItem.link = a.value
+                                        }
+                                    }
+                                } else {
+                                    aItem.link = n2.value
+                                }
+                            } // end name == link
+                            if n2.name == "published" {
+                                aItem.pubDate = n2.value
+                            }
+                            if n2.name == "summary" {
+                                aItem.description = n2.value
+                            }
+                            if n2.name.prefix(7) == "content" {
+                                aItem.content = n2.value
+                            }
+                        } // end for n2
+                        rss.items.append(aItem)
+                    } // end name == entry
+                } // end for n1
+            } // end n name == rss
+            
+            // MARK: - rss 的情况
             if n.name == "rss" && n.subNodes.count > 0 {
                 for n1 in n.subNodes {
-                    print("n1 级 name：" + n1.name)
-                    print(n1.subNodes.count)
                     if n1.name == "channel" && n1.subNodes.count > 0 {
                         for n2 in n1.subNodes {
-                            print("n2 级 name：" + n2.name)
-                            print(n2.value)
-                            print(n2.subNodes.count)
                             if n2.name == "title" {
                                 rss.title = n2.value
                             }
@@ -41,7 +129,7 @@ final class RSSVM: ObservableObject {
                                 rss.description = n2.value
                             }
                             if n2.name == "link" {
-                                rss.link = n2.value
+                                rss.siteLink = n2.value
                             }
                             if n2.name == "language" {
                                 rss.language = n2.value
@@ -56,9 +144,6 @@ final class RSSVM: ObservableObject {
                             if n2.name == "item" {
                                 var aItem = RSSItemModel()
                                 for n3 in n2.subNodes {
-                                    print("n3 级 name: " + n3.name)
-                                    print(n3.value)
-                                    print(n3.subNodes.count)
                                     if n3.name == "guid" {
                                         aItem.guid = n3.value
                                     }
@@ -81,22 +166,22 @@ final class RSSVM: ObservableObject {
                                 rss.items.append(aItem)
                             }
                         } // end for n2
-                        // for check
-                        print(rss.title)
-                        print(rss.link)
-                        print(rss.pubDate)
-                        print(rss.items.count)
-                        for a in rss.items {
-                            print(a.content)
-                        }
                     } // end if channel
-                    
                 } // end for n1
             } // end if rss
         } // end n for
         
-        // 数据库操作
+        // for check
+//        print(rss.title)
+//        print(rss.siteLink)
+//        print(rss.pubDate)
+//        print(rss.items.count)
+//        for a in rss.items {
+//            print(a.title)
+//            print(a.content)
+//        }
         
+        // 数据库操作
         do {
             
             // 添加新增 rss item
@@ -125,7 +210,7 @@ final class RSSVM: ObservableObject {
                     title: rss.title,
                     rssLink: f.rssLink,
                     siteLink: f.siteLink,
-                    des: rss.description,
+                    des: rss.description.isEmpty ? f.des : rss.description,
                     unReadCount: unReadCount
                 ))
             } else {
@@ -133,11 +218,10 @@ final class RSSVM: ObservableObject {
                     title: rssModel.title,
                     rssLink: rssModel.feedLink,
                     siteLink: rssModel.siteLink,
-                    des: rss.description,
-                    unReadCount: 0
+                    des: rss.description.isEmpty ? rssModel.des : rss.description,
+                    unReadCount: unReadCount
                 ))
             }
-            
             
         } catch {}
     }

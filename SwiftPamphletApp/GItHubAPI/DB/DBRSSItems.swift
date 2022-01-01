@@ -117,7 +117,9 @@ struct RSSItemsDataHelper: DataHelperProtocol {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
-        let query = table.filter(rssLink == sRssLink)
+        let query = table
+            .filter(rssLink == sRssLink && isRead == false)
+            .order(id.desc)
         let items = try db.prepare(query)
         var reArr = [T]()
         for i in items {
@@ -140,12 +142,15 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             throw DBError.connectionErr
         }
         let query = table.filter(rssLink == sRssLink && isRead == false)
-        let items = try db.prepare(query)
-        var count = 0
-        for _ in items {
-            count += 1
+        return try db.scalar(query.count)
+    }
+    
+    static func findAllUnreadCount() throws -> Int {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
         }
-        return count
+        let query = table.filter(isRead == false)
+        return try db.scalar(query.count)
     }
     
     static func update(i: T) throws {

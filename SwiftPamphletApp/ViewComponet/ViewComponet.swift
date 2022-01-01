@@ -6,6 +6,20 @@
 //
 
 import SwiftUI
+import WebKit
+
+struct WebUIView : NSViewRepresentable {
+    
+    let html: String
+    
+    func makeNSView(context: Context) -> some WKWebView {
+        return WKWebView()
+    }
+    
+    func updateNSView(_ nsView: NSViewType, context: Context) {
+        nsView.loadHTMLString(html, baseURL: nil)
+    }
+}
 
 struct GitHubApiTimeView: View {
     var timeStr: String

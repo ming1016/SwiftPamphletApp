@@ -13,11 +13,12 @@ struct SPSidebar: View {
     var body: some View {
         List {
             Section("新动态") {
-//                NavigationLink {
-//                    RSSListView(vm: RSSVM())
-//                } label: {
-//                    Label("博客", systemImage: "r.square.on.square.fill")
-//                }
+                NavigationLink {
+                    RSSListView(vm: RSSVM())
+                } label: {
+                    Label("博客", systemImage: "r.square.on.square.fill")
+                        .badge(appVM.rssCountNotis)
+                }
 
                 
                 NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {

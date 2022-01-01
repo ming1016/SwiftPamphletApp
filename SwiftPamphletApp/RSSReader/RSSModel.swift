@@ -7,23 +7,28 @@
 
 import Foundation
 
-struct RSSModel {
+struct RSSModel: Identifiable {
+    var id = UUID()
     var title = ""
     var description = ""
-    var link = ""
+    var feedLink = ""
+    var siteLink = ""
     var language = ""
     var lastBuildDate = ""
     var pubDate = ""
     var items = [RSSItemModel]()
+    var unReadCount = 0
 }
 
-struct RSSItemModel {
+struct RSSItemModel: Identifiable {
+    var id = UUID()
     var guid = ""
     var title = ""
     var description = ""
     var link = ""
     var pubDate = ""
     var content = ""
+    var isRead = false
 }
 
 

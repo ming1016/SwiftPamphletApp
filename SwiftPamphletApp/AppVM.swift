@@ -19,6 +19,8 @@ final class AppVM: ObservableObject {
     // 开发者动态
     @Published var devsNotis = [String: Int]()
     @Published var devsCountNotis = 0
+    // 博客动态
+    @Published var rssCountNotis = 0
     
     // MARK: - CCY
     // 探索更多库
@@ -52,7 +54,9 @@ final class AppVM: ObservableObject {
     
     @MainActor
     func rssUpdateNotis() {
-        
+        do {
+            rssCountNotis = try RSSItemsDataHelper.findAllUnreadCount()
+        } catch {}
     }
     
     // MARK: - 获取所有探索更多库通知信息
@@ -541,8 +545,8 @@ final class AppVM: ObservableObject {
     }
     
     func showAppBadgeLabel() {
-        if reposCountNotis + devsCountNotis + expCountNotis > 0 {
-            var count = reposCountNotis + devsCountNotis + expCountNotis
+        var count = reposCountNotis + devsCountNotis + expCountNotis + rssCountNotis
+        if count > 0 {
             if count > SPC.unreadMagicNumber * 10 {
                 count = SPC.unreadMagicNumber * 10
             }
