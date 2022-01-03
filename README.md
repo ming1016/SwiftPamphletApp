@@ -1,4 +1,4 @@
-## 戴铭的 Swift 小册子
+## 戴铭的 Swift 小册子 2.0
 
 越来越多同学打算开始用 Swift 来开发了，可很多人以前都没接触过 Swift。这篇[戴铭的 Swift 小册子 · 戴铭的博客 - 星光社](https://ming1016.github.io/2021/11/23/daiming-swift-pamphlet/)和我以前文章不同的是，本篇只是面向 Swift 零基础的同学，内容主要是一些直接可用的小例子，例子可以直接在工程中用或自己调试着看。
 
@@ -11,7 +11,7 @@
 * 可使用compile.command编译手册程序，无需开启Xcode设置个人开发帐号，只需在SwiftPamphletAppConfig.swift 里 gitHubAccessToken 加入你的 GitHub Access Token，完成后连点compile.command两下等待作业完成。Xcode 和 macOS 都需要升到最新版。GitHub Access Token 在  [Personal Access Tokens](https://github.com/settings/tokens)  这里获取，scope 勾上 repo 和 user。
 * 或使用Github action workflow 编译，无需在本地操作、也无需开启Xcode设置个人开发帐号，只需设置personal access token(PAT)在repository设定中action secrets，并命名为PAT。Frok此repository，设置PAT，手动启用action，等候约3分钟即可下载档案，往后专案更新时，只需fetch and merge，action会自动进行。
 
-感谢@powenn 做的 GitHub Actions workflow，使用说明如下：
+感谢[@powenn](https://github.com/powenn) 做的 GitHub Actions workflow，使用说明如下：
 Requires storaging PAT to actions secrets and name it to PAT
 
 - Fork this repository.
