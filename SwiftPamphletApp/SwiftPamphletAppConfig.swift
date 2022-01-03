@@ -36,6 +36,11 @@ struct SPC {
         return re
     }
     
+    static func ilikedrepos() -> [SPReposModel] {
+        let re: [SPReposModel] = loadBundleJSONFile("ilikedrepos.json")
+        return re
+    }
+    
     static func rssFeed() -> [RSSFeedModel] {
         let re: [RSSFeedModel] = loadBundleJSONFile("rssfeed.json")
         return re
@@ -44,6 +49,17 @@ struct SPC {
     static func rssStyle() -> String {
         let data = loadBundleData("css.html")
         return String(data: data, encoding: .utf8) ?? ""
+    }
+    
+    static func outputRepo() {
+        let re = ilikedrepos()
+        for r in re {
+            print("#### \(r.name)")
+            for ar in r.repos {
+                let arr = ar.id.components(separatedBy: "/")
+                print("* [\(arr[1])](https://github.com/\(ar.id))  \(ar.des ?? "")")
+            }
+        }
     }
 }
 

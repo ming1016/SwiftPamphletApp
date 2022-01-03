@@ -32,24 +32,18 @@ final class AppVM: ObservableObject {
     func rssFetch() {
         Task {
             do {
-                let rssFeed = SPC.rssFeed()
+                let rssFeed = SPC.rssFeed() // 获取所有 rss 源的模型
                 for r in rssFeed {
                     let str = try await RSSReq(r.feedLink)
-    //                print(str)
                     guard let str = str else {
                         break
                     }
-                    
                     RSSVM.handleFetchFeed(str: str, rssModel: r)
-                    
-                    
                     // 在 Main Actor 更新通知数
                     await rssUpdateNotis()
                 }
-                
             } catch {}
         }
-        print("fetching...")
     }
     
     @MainActor
