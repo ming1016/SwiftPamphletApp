@@ -44,7 +44,6 @@ final class APISev: APISevType {
         // TODO: 访问受限后会crash，异常待处理
         req.addValue("token \(SPC.gitHubAccessToken)", forHTTPHeaderField: "Authorization")
         
-        req.addValue("SwiftPamphletApp", forHTTPHeaderField: "User-Agent")
 //        print(req.allHTTPHeaderFields!)
         let de = JSONDecoder()
         de.keyDecodingStrategy = .convertFromSnakeCase

@@ -52,12 +52,12 @@ struct SPC {
     }
     
     static func outputRepo() {
-        let re = ilikedrepos()
+        let re = goodRepos()
         for r in re {
             print("#### \(r.name)")
             for ar in r.repos {
                 let arr = ar.id.components(separatedBy: "/")
-                print("* [\(arr[1])](https://github.com/\(ar.id))  \(ar.des ?? "")")
+                print("* \(arr[1])：\(ar.des ?? "") (https://github.com/\(ar.id))")
             }
         }
     }
