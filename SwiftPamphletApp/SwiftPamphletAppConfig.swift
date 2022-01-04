@@ -12,7 +12,7 @@ struct SPC {
     static let gitHubAccessTokenJudge = true
     static let detailMinWidth: CGFloat = 450
     static let githubHost = "https://github.com/"
-    static let pamphletIssueRepoName = "ming1016/SwiftPamphletApp"
+    static let pamphletIssueRepoName = "KwaiAppTeam/SwiftPamphletApp"
     
     static let timerForReposSec: Double = 120
     static let timerForDevsSec: Double = 160
