@@ -118,7 +118,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             throw DBError.connectionErr
         }
         let query = table
-            .filter(rssLink == sRssLink && isRead == false)
+            .filter(rssLink == sRssLink)
             .order(id.desc)
         let items = try db.prepare(query)
         var reArr = [T]()

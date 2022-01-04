@@ -14,9 +14,9 @@ struct SPC {
     static let githubHost = "https://github.com/"
     static let pamphletIssueRepoName = "ming1016/SwiftPamphletApp"
     
-    static let timerForReposSec: Double = 60
-    static let timerForDevsSec: Double = 80
-    static let timerForExpSec: Double = 65
+    static let timerForReposSec: Double = 120
+    static let timerForDevsSec: Double = 160
+    static let timerForExpSec: Double = 125
     static let timerForRssSec: Double = 60 * 60
     
     static let unreadMagicNumber = 99999

@@ -63,7 +63,7 @@ struct SwiftPamphletApp: View {
                     .onAppear(perform: {
                         appVM.onAppearEvent()
                         appVM.rssFetch()
-                        SPC.outputRepo()
+//                        SPC.outputRepo()
                     })
                     .onReceive(timerForRepos, perform: { time in
                         if let repoName = appVM.timeForReposEvent() {
