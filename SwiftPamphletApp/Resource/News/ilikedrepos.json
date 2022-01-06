@@ -121,6 +121,10 @@
             {
                 "id":"v2ex/launcher",
                 "des":"用来启动那些本地开发时需要的各种进程，及查看其输出"
+            },
+            {
+                "id":"lukakerr/Pine",
+                "des":"Markdown 编辑器"
             }
         ]
     },
@@ -258,6 +262,10 @@
             {
                 "id":"carson-katri/swift-request",
                 "des":"声明式的网络请求"
+            },
+            {
+                "id":"cloudreve/Cloudreve",
+                "des":"云存储部署"
             }
         ]
     },

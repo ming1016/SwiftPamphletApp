@@ -187,6 +187,16 @@
         ]
     },
     {
+        "name":"图形",
+        "id":2201051836,
+        "repos":[
+            {
+                "id":"willdale/SwiftUICharts",
+                "des":"用于SwiftUI的图表绘图库"
+            }
+        ]
+    },
+    {
         "name":"音视频",
         "id":2111241208,
         "repos":[

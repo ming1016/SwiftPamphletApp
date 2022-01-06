@@ -33,6 +33,14 @@
             {
                 "id":"CleverRaven/Cataclysm-DDA",
                 "des":"以世界末日为背景的生存游戏"
+            },
+            {
+                "id":"freeCodeCamp/LearnToCodeRPG",
+                "des":"学习编码的游戏"
+            },
+            {
+                "id":"pmgl/microstudio",
+                "des":"游戏开发平台集搜索、开发、学习、体验、交流等功能于一身"
             }
         ]
     },
