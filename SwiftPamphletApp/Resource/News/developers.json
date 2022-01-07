@@ -41,9 +41,6 @@
                 "des":"YYDS"
             },
             {
-                "id":"MaskRay"
-            },
-            {
                 "id":"mattt",
                 "des":"NSHipster"
             },
@@ -56,10 +53,6 @@
             },
             {
                 "id":"Kyle-Ye"
-            },
-            {
-                "id":"daveverwer",
-                "des":"iOS Dev Weekly"
             },
             {
                 "id":"ming1016",
@@ -83,6 +76,17 @@
                 "des":"Back to the Mac"
             },
             {
+                "id":"Dimillian",
+                "des":"MovieSwiftUI"
+            },
+            {
+                "id":"krzysztofzablocki",
+                "des":"元编程 Sourcery"
+            },
+            {
+                "id":"onmyway133"
+            },
+            {
                 "id":"pofat",
                 "des":"Pofat - [weak self]播客"
             },
@@ -104,6 +108,9 @@
             {
                 "id":"ashfurrow",
                 "des":"Moya"
+            },
+            {
+                "id":"jessesquires"
             }
         ]
     }

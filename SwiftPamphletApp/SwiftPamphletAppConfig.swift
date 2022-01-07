@@ -12,13 +12,14 @@ struct SPC {
     static let gitHubAccessTokenJudge = true
     static let detailMinWidth: CGFloat = 450
     static let githubHost = "https://github.com/"
-    static let pamphletIssueRepoName = "ming1016/SwiftPamphletApp"
+    static let pamphletIssueRepoName = "KwaiAppTeam/SwiftPamphletApp"
     
-    static let timerForReposSec: Double = 60
-    static let timerForDevsSec: Double = 70
-    static let timerForExpSec: Double = 85
+    static let timerForReposSec: Double = 120
+    static let timerForDevsSec: Double = 160
+    static let timerForExpSec: Double = 125
+    static let timerForRssSec: Double = 60 * 60
     
-    static let unreadMagicNumber = 9999
+    static let unreadMagicNumber = 99999
     
     static func loadCustomIssues(jsonFileName: String) -> [CustomIssuesModel] {
         let lc: [CustomIssuesModel] = loadBundleJSONFile(jsonFileName + ".json")
@@ -35,6 +36,31 @@ struct SPC {
         return re
     }
     
+    static func ilikedrepos() -> [SPReposModel] {
+        let re: [SPReposModel] = loadBundleJSONFile("ilikedrepos.json")
+        return re
+    }
+    
+    static func rssFeed() -> [RSSFeedModel] {
+        let re: [RSSFeedModel] = loadBundleJSONFile("rssfeed.json")
+        return re
+    }
+    
+    static func rssStyle() -> String {
+        let data = loadBundleData("css.html")
+        return String(data: data, encoding: .utf8) ?? ""
+    }
+    
+    static func outputRepo() {
+        let re = goodRepos()
+        for r in re {
+            print("#### \(r.name)")
+            for ar in r.repos {
+                let arr = ar.id.components(separatedBy: "/")
+                print("* \(arr[1])：\(ar.des ?? "") (https://github.com/\(ar.id))")
+            }
+        }
+    }
 }
 
 struct SPActiveDevelopersModel: Jsonable {
@@ -58,3 +84,13 @@ struct ARepoModel: Jsonable {
     var id: String
     var des: String?
 }
+
+struct RSSFeedModel: Jsonable {
+    var id: Int64
+    var title: String
+    var des: String
+    var siteLink: String
+    var feedLink: String
+}
+
+

@@ -214,7 +214,6 @@ struct IssueCommentsRequest: APIReqType {
     }
 }
 
-
 struct IssueRequest: APIReqType {
     typealias Res = IssueModel
     var repoName: String

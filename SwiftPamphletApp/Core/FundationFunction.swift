@@ -66,21 +66,28 @@ func validHTTPUrlStrFromUrlStr(urlStr: String) -> String {
 
 // 从Bundle中读取并解析JSON文件生成Model
 func loadBundleJSONFile<T: Decodable>(_ filename: String) -> T {
+    
+    do {
+        let decoder = JSONDecoder()
+        return try decoder.decode(T.self, from: loadBundleData(filename))
+    } catch {
+        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+    }
+}
+
+// 从 Bundle 中取出 Data
+func loadBundleData(_ filename: String) -> Data {
     let data: Data
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {
         fatalError("Couldn't find \(filename) in main bundle.")
     }
     do {
         data = try Data(contentsOf: file)
+        return data
     } catch {
         fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
     }
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
-    }
+    
 }
 
 // 读取指定路径下文件内容

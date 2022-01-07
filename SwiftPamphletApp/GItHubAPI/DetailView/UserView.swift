@@ -48,9 +48,8 @@ struct UserView: View {
                         Text("Twitter：")
                         ButtonGoGitHubWeb(url: "https://twitter.com/\(vm.user.twitterUsername ?? "")", text: "@\(vm.user.twitterUsername ?? "")")
                     }
-                    
-                }
-            }
+                } // end HStack
+            } // end VStack
             Spacer()
         }
         .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})

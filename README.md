@@ -1,21 +1,27 @@
-## 戴铭的 Swift 小册子
+## 戴铭的 Swift 小册子 2.0
 
-越来越多同学打算开始用 Swift 来开发了，可很多人以前都没接触过 Swift。这篇[戴铭的 Swift 小册子 · 戴铭的博客 - 星光社](https://ming1016.github.io/2021/11/23/daiming-swift-pamphlet/)和我以前文章不同的是，本篇只是面向 Swift 零基础的同学，内容主要是一些直接可用的小例子，例子可以直接在工程中用或自己调试着看。
+Swift 的手册，是个 macOS 程序。使用方法是：
 
-记得以前 PHP 有个 chm 的手册，写的很简单，但很全，每个知识点都有例子，社区版每个知识点下面还有留言互动。因此，我弄了个 Swift 的手册，是个 macOS 程序。建议使用我开发的这个 macOS 程序来浏览，使用方法是：
-* 从  [GitHub - ming1016/SwiftPamphletApp: 戴铭的 Swift 小册子，一本活的 Swift 手册](https://github.com/ming1016/SwiftPamphletApp)  仓库拉代码。
-* 然后在 SwiftPamphletAppConfig.swift 里 gitHubAccessToken 加入你的 GitHub Access Token。GitHub Access Token 在  [Personal Access Tokens](https://github.com/settings/tokens)  这里获取，scope 勾上 repo 和 user。
-* 使用Xcode编译生成这个手册程序或是连点两下compile.command。Xcode 和 macOS 都需要升到最新版，如果遇到 swift package 下载不下来的情况，参看这个议题来解决：[请问markdownui一直更新不下来是什么原因 · Issue #88 · ming1016/SwiftPamphletApp · GitHub](https://github.com/ming1016/SwiftPamphletApp/issues/88)
+### 方式一：本地编译
 
-***以下可以不用进入Xcode设置开发人员帐号并完成编译***
-* 可使用compile.command编译手册程序，无需开启Xcode设置个人开发帐号，只需在SwiftPamphletAppConfig.swift 里 gitHubAccessToken 加入你的 GitHub Access Token，完成后连点compile.command两下等待作业完成。Xcode 和 macOS 都需要升到最新版。GitHub Access Token 在  [Personal Access Tokens](https://github.com/settings/tokens)  这里获取，scope 勾上 repo 和 user。
-* 或使用Github action workflow 编译，无需在本地操作、也无需开启Xcode设置个人开发帐号，只需设置personal access token(PAT)在repository设定中action secrets，并命名为PAT。Frok此repository，设置PAT，手动启用action，等候约3分钟即可下载档案，往后专案更新时，只需fetch and merge，action会自动进行。
+* 拉代码。
+* 在 SwiftPamphletAppConfig.swift 里 gitHubAccessToken 加入你的 GitHub Access Token。GitHub Access Token 在  [Personal Access Tokens](https://github.com/settings/tokens)  这里获取。记得scope 勾上 repo 和 user。
+* 使用Xcode编译生成这个手册程序或是连点两下compile.command。
 
-感谢@powenn 做的 GitHub Actions workflow，使用说明如下：
+Xcode 和 macOS 都需要升到最新版。如果遇到 swift package 下载不下来的情况，参看这个议题来解决：[Issue #88](https://github.com/KwaiAppTeam/SwiftPamphletApp/issues/88)
+
+### 方式二：云编译
+
+***无需 Xcode 设置开发人员帐号编译***
+
+* 可使用 compile.command 编译手册程序，无需开启 Xcode 设置个人开发帐号，只需在 SwiftPamphletAppConfig.swift 里 gitHubAccessToken 加入你的 [GitHub Access Token](https://github.com/settings/tokens)，完成后连点 compile.command 两下等待作业完成。
+* 或使用 Github action workflow 编译（感谢[@powenn](https://github.com/powenn)），无需在本地操作、也无需开启 Xcode 设置个人开发帐号，只需设置 personal access token(PAT) 在 repository 设定中 action secrets，并命名为 PAT。Fork 此 repository，设置 PAT，手动启用 action，等候约3分钟即可下载档案，往后专案更新时，只需 fetch and merge，action 会自动进行。
+
+英文说明：
 Requires storaging PAT to actions secrets and name it to PAT
 
 - Fork this repository.
-- Go to get a Personal Access Token(PAT) if you haven't done it yet.(GitHub Access Token 在[Personal Access Tokens](https://github.com/settings/tokens)这里获取，scope 勾上 repo 和 user。)
+- Go to get a Personal Access Token(PAT) if you haven't done it yet.(GitHub Access Token in [Personal Access Tokens](https://github.com/settings/tokens)，scope checked repo and user)
 - Set your token in action secrets ,and name it to PAT.
 - Get the compiled app package after Github action complete.
 
@@ -25,14 +31,23 @@ While project update ,you won't need to compile it manually in local, only need 
 ![image](https://user-images.githubusercontent.com/251980/146639573-e556961f-2c4b-4838-83f2-8bf4665b7d9a.png)
 
 
-程序截图如下：
-![01](https://user-images.githubusercontent.com/251980/142998258-0f44f4fe-e113-4428-b381-be7e4eb5a899.png)
-![02](https://user-images.githubusercontent.com/251980/142998276-70f12cd3-46e5-46f0-b5e1-185ec9b0beee.png)
-![03](https://user-images.githubusercontent.com/251980/142998296-e6091abe-8639-47f4-acda-f0c20fa20b5e.png)
-![04](https://user-images.githubusercontent.com/251980/142998321-37f5d2e7-3377-4b6b-b412-1ac0ae914b56.png)
-![05](https://user-images.githubusercontent.com/251980/142998327-c208631c-5d04-433c-b29f-35454864ceed.png)
-![06](https://user-images.githubusercontent.com/251980/142998328-4bdea487-4672-4cd9-a3c7-14b93ef947ee.png)
-![07](https://user-images.githubusercontent.com/251980/142998333-891f4aeb-6dea-4be1-850d-ddc2bcc5c956.png)
+### 介绍
+小册子能够方便的查看 Swift 语法，还有一些主要库的使用指南，内容还在完善中，选择的库主要就是开发小册子应用使用到的 SwitUI、Combine、Swift Concurrency
 
+![](https://ming1016.github.io/uploads/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/14.png)
 
-这个程序是Swift写的，按照声明式UI，响应式编程范式开发的，源码也可以看看。与其讲一堆，不如调着试。
+除了这些速查和库的使用内容外，这个应用还有一些开发者的动态，当他们有新的动作，比如提交了代码、star 了什么项目，提交和留言了议题都会直接在程序坞中提醒你。 
+
+![](https://ming1016.github.io/uploads/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/15.png)
+
+我对一些库做了分类，方便按需查找，库有新的提交也会在程序坞中提醒。 
+
+![](https://ming1016.github.io/uploads/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/16.png)
+
+还能方便的查看库的议题。比如在阮一峰的《科技爱好者周刊》的议题中可以看到有很多人推荐和自荐了一些信息。保留议题有一千六百多个。 
+
+![](https://ming1016.github.io/uploads/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/17.png)
+
+博客动态的功能，可以跟进一些博客内容的更新。 
+
+![](https://ming1016.github.io/uploads/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/18.png)

@@ -12,8 +12,8 @@ struct ExploreRepoListView: View {
     var body: some View {
         List {
             Section {
-                ForEach(appVM.exps) { gr in
-                    ForEach(gr.repos) { r in
+                ForEach(appVM.exps) { er in
+                    ForEach(er.repos) { r in
                         ExpListUnreadLinkView(r: r)
                     }
                 }
