@@ -1,5 +1,19 @@
 [
     {
+        "title":"iOS摸鱼周报",
+        "id":2201071620,
+        "des":"iOS 摸鱼周报",
+        "siteLink":"https://zhangferry.com/",
+        "feedLink":"https://zhangferry.com/atom.xml"
+    },
+    {
+        "title":"少数派",
+        "id":2201071524,
+        "des":"少数派致力于更好地运用数字产品或科学方法，帮助用户提升工作效率和生活品质",
+        "siteLink":"https://sspai.com/",
+        "feedLink":"https://sspai.com/feed"
+    },
+    {
         "title":"刘延栋的赛博空间",
         "id":2201012056,
         "des":"成一家之言，毕竟有言胜于无。",
@@ -47,5 +61,12 @@
         "des":"Weekly Swift articles, podcasts and tips by John Sundell",
         "siteLink":"https://www.swiftbysundell.com",
         "feedLink":"https://www.swiftbysundell.com/rss"
+    },
+    {
+        "title":"FIVE STARS",
+        "id":2201071601,
+        "des":"Exploring iOS, SwiftUI & much more.",
+        "siteLink":"https://www.fivestars.blog",
+        "feedLink":"https://www.fivestars.blog/feed.rss"
     }
 ]

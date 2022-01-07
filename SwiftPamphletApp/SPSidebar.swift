@@ -117,5 +117,22 @@ struct SPSidebar: View {
                 }
             }
         }
+        // end List
+        
+        // MARK: - Mine
+//        Spacer()
+//        Mine()
     }
 }
+
+struct Mine: View {
+    var body: some View {
+        HStack {
+            Label("我的", systemImage: "person")
+            Spacer()
+        }
+        .padding(20)
+        
+    }
+}
+

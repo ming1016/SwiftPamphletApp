@@ -51,3 +51,5 @@ While project update ,you won't need to compile it manually in local, only need 
 博客动态的功能，可以跟进一些博客内容的更新。 
 
 ![](https://ming1016.github.io/uploads/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/18.png)
+
+代码说明参看这篇[《如何用 SwiftUI + Combine + Swift Concurrency Aysnc/Await Actor 欢畅开发》](https://ming1016.github.io/2022/01/03/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/)文章

@@ -56,6 +56,15 @@
         }
       },
       {
+        "package": "HTMLEntities",
+        "repositoryURL": "https://github.com/Kitura/swift-html-entities.git",
+        "state": {
+          "branch": null,
+          "revision": "3686a2b931be24dd2531307f89e2f1d648c0200e",
+          "version": "4.0.0"
+        }
+      },
+      {
         "package": "SwiftCommonMark",
         "repositoryURL": "https://github.com/gonzalezreal/SwiftCommonMark",
         "state": {
