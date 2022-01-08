@@ -9,7 +9,6 @@ import SwiftUI
 import WebKit
 
 struct WebUIView : NSViewRepresentable {
-    
     let html: String
     
     func makeNSView(context: Context) -> some WKWebView {

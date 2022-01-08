@@ -12,7 +12,7 @@ struct RSSItemContentView: View {
     var rssItemModel: RSSItemModel
     var rssLink: String
     var body: some View {
-        WebUIView(html: SPC.rssStyle() + "<body><h1><a href=\"\(rssItemModel.link)\">\(rssItemModel.title)</a></h1>" + (rssItemModel.content.isEmpty ? rssItemModel.description : rssItemModel.content) + "<p><a href=\"\(rssItemModel.link)\">阅读原文</a></p></body>")
+        WebUIView(html: SPC.rssStyle() + "<body><h1><a href=\"\(rssItemModel.link.replacingOccurrences(of: "http://", with: "https://"))\">\(rssItemModel.title)</a></h1>" + (rssItemModel.content.isEmpty ? rssItemModel.description : rssItemModel.content) + "<p><a href=\"\(rssItemModel.link)\">阅读原文</a></p></body>")
             .onAppear {
                 vm.readContent(linkStr: rssItemModel.link, rssLinkStr: rssLink)
             }

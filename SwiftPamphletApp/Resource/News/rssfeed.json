@@ -1,4 +1,5 @@
 [
+    
     {
         "title":"iOS摸鱼周报",
         "id":2201071620,
@@ -68,5 +69,34 @@
         "des":"Exploring iOS, SwiftUI & much more.",
         "siteLink":"https://www.fivestars.blog",
         "feedLink":"https://www.fivestars.blog/feed.rss"
+    },
+    {
+        "title":"Release notes from iOS-Weekly",
+        "id":2201080951,
+        "des":"老司机 iOS 周报",
+        "siteLink":"https://github.com/SwiftOldDriver/iOS-Weekly/releases",
+        "feedLink":"https://github.com/SwiftOldDriver/iOS-Weekly/releases.atom"
+    },
+    {
+        "title":"SwiftUI Weekly",
+        "id":2201081000,
+        "des":"The curated collection of links about SwiftUI. Delivered every Monday.",
+        "siteLink":"http://weekly.swiftwithmajid.com/",
+        "feedLink":"https://s3.amazonaws.com/revue/accounts/rss_feeds/000/057/272/original/rss_feed_57272.xml?1640019207"
+    },
+    {
+        "title":"Not Only Swift Weekly",
+        "id":2201081003,
+        "des":"Xcode tips & tricks, Swift, SwiftUI, Combine, Firebase, computing and internet history, and - of course - some fun stuff.",
+        "siteLink":"https://www.getrevue.co/profile/peterfriese",
+        "feedLink":"https://s3.amazonaws.com/revue/accounts/rss_feeds/000/298/465/original/rss_feed_298465.xml?1640361604"
+    },
+    {
+        "title":"SwiftlyRush Weekly",
+        "id":2201081004,
+        "des":"SwiftlyRush Weekly is a weekly curated publication full of interesting, relevant links, alongside industry news and updates. Subscribe now and never miss an issue.",
+        "siteLink":"https://swiftlyrush.curated.co/issues",
+        "feedLink":"https://swiftlyrush.curated.co/issues.rss"
     }
+    
 ]
