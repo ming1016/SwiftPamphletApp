@@ -20,7 +20,7 @@ xcodebuild -project "$GIT_ROOT/SwiftPamphletApp.xcodeproj" \
  -destination 'generic/platform=macOS' \
  -sdk macosx \
  clean build \
- CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO \
- PRODUCT_BUNDLE_IDENTIFIER="com.starming.SwiftPamphletApp" \
+ CODE_SIGNING_REQUIRED=NO \
+ CODE_SIGN_IDENTITY="" \
 
 cp -R $GIT_ROOT/build/Build/Products/Release/戴铭的Swift小册子.app $GIT_ROOT
