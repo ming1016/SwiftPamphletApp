@@ -435,7 +435,7 @@ final class AppVM: ObservableObject {
                         var rDic = [String: DBRepoStore]()
                         for i in arr {
                             rDic[i.fullName] = i
-                            if expNotis[i.fullName]?.unRead == SPC.unreadMagicNumber {
+                            if expNotis[i.fullName]?.unRead ?? 0 >= SPC.unreadMagicNumber {
                                 rDic[i.fullName]?.unRead = SPC.unreadMagicNumber
                             } else {
                                 rDic[i.fullName]?.unRead = i.unRead
@@ -457,7 +457,7 @@ final class AppVM: ObservableObject {
                 if arr.count > 0 {
                     var ReposDic = [String: Int]()
                     for i in arr {
-                        if reposNotis[i.fullName] == SPC.unreadMagicNumber {
+                        if reposNotis[i.fullName] ?? 0 >= SPC.unreadMagicNumber {
                             ReposDic[i.fullName] = SPC.unreadMagicNumber
                         } else {
                             ReposDic[i.fullName] = i.unRead
@@ -476,7 +476,7 @@ final class AppVM: ObservableObject {
                 if arr.count > 0 {
                     var devsDic = [String: Int]()
                     for i in arr {
-                        if devsNotis[i.login] == SPC.unreadMagicNumber {
+                        if devsNotis[i.login] ?? 0 >= SPC.unreadMagicNumber {
                             devsDic[i.login] = SPC.unreadMagicNumber
                         } else {
                             devsDic[i.login] = i.unRead

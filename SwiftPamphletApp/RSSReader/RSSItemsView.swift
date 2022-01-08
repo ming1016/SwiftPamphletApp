@@ -12,6 +12,16 @@ struct RSSItemsView: View {
     var rssLink: String
     
     var body: some View {
+        HStack {
+            
+            Button {
+                vm.markAllAsRead(rssLink: rssLink)
+            } label: {
+                Text("标记全部已读")
+            }
+            Spacer()
+        }
+        .padding(10)
         List {
             ForEach(vm.items) { item in
                 NavigationLink {
@@ -24,7 +34,7 @@ struct RSSItemsView: View {
                         Text(item.pubDate)
                             .font(.footnote)
                             .foregroundColor(.secondary)
-                        if !item.description.isEmpty {
+                        if !item.description.isEmpty && !item.content.isEmpty {
                             Text(item.description)
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import HTMLEntities
 
 final class RSSVM: ObservableObject {
     
@@ -14,6 +15,16 @@ final class RSSVM: ObservableObject {
     
     @Published private(set) var items = [RSSItemModel]()
     @Published private(set) var isReadDic = [String: Bool]()
+    
+    func markAllAsRead(rssLink: String) {
+        for item in items {
+            isReadDic[item.link] = true
+        }
+        do {
+            let _ = try RSSItemsDataHelper.markAllRead(aRssLink: rssLink)
+        } catch {}
+        unReadCountDic[rssLink] = 0
+    }
     
     func showRssFeeds() {
         do {
@@ -42,10 +53,10 @@ final class RSSVM: ObservableObject {
             for i in rssItems {
                 var m = RSSItemModel()
                 m.title = i.title
-                m.description = i.des
+                m.description = i.des.htmlUnescape()
                 m.link = i.link
                 m.pubDate = i.pubDate
-                m.content = i.content
+                m.content = i.content.htmlUnescape()
                 m.isRead = i.isRead
                 arr.append(m)
                 isReadDic[i.link] = i.isRead

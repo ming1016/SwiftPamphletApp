@@ -65,6 +65,7 @@
 		08CD61FA27758AF0008C0935 /* ParseStandXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61F727758AF0008C0935 /* ParseStandXML.swift */; };
 		08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FC27758B8A008C0935 /* Lexer.swift */; };
 		08CD61FF27758B8A008C0935 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FD27758B8A008C0935 /* Token.swift */; };
+		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
 		08D4F0FC275F705C005FC997 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4F0FB275F705C005FC997 /* LabelView.swift */; };
 		08D4F0FE275F728C005FC997 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4F0FD275F728C005FC997 /* LinkView.swift */; };
 /* End PBXBuildFile section */
@@ -139,6 +140,7 @@
 			files = (
 				08BF26D02768A59A0064DDAC /* SQLite in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
+				08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +392,7 @@
 			packageProductDependencies = (
 				08BF26CF2768A59A0064DDAC /* SQLite */,
 				08BF26D22768A5B40064DDAC /* MarkdownUI */,
+				08D107BC278826BB007B7009 /* HTMLEntities */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */;
@@ -422,6 +425,7 @@
 			packageReferences = (
 				08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 				08BF26D12768A5B40064DDAC /* XCRemoteSwiftPackageReference "MarkdownUI" */,
+				08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -726,6 +730,14 @@
 				minimumVersion = 0.5.2;
 			};
 		};
+		08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/swift-html-entities.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -738,6 +750,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08BF26D12768A5B40064DDAC /* XCRemoteSwiftPackageReference "MarkdownUI" */;
 			productName = MarkdownUI;
+		};
+		08D107BC278826BB007B7009 /* HTMLEntities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */;
+			productName = HTMLEntities;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

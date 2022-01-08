@@ -21,6 +21,10 @@
             {
                 "id":"AvdLee/SwiftUIKitView",
                 "des":"在 SwiftUI 中 使用 UIKit"
+            },
+            {
+                "id":"danielsaidi/SwiftUIKit",
+                "des":"给 SwiftUI 添加更多功能"
             }
         ]
     },
@@ -266,6 +270,10 @@
             {
                 "id":"cloudreve/Cloudreve",
                 "des":"云存储部署"
+            },
+            {
+                "id":"alibaba/xquic",
+                "des":"阿里巴巴发布的 XQUIC 库"
             }
         ]
     },
@@ -315,6 +323,10 @@
             {
                 "id":"apple/swift-crypto",
                 "des":"CryptoKit 的开源实现"
+            },
+            {
+                "id":"apple/swift-driver",
+                "des":"用 Swift 语言重新实现的编译器的驱动程序库"
             }
         ]
     },
@@ -607,7 +619,6 @@
                 "id":"dkhamsing/open-source-ios-apps",
                 "des":"开源的完整 App 例子"
             },
-            
             {
                 "id":"frzi/Model3DView",
                 "des":"毫不费力的使用 SwiftUI 渲染 3d models"
@@ -635,6 +646,10 @@
             {
                 "id":"JohnSundell/Ink",
                 "des":"Markdown 解析器"
+            },
+            {
+                "id":"Kitura/swift-html-entities",
+                "des":"HTML5 规范字符编码/解码器"
             }
         ]
     }
