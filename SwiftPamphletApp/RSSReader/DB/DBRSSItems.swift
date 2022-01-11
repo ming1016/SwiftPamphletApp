@@ -120,6 +120,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
         let query = table
             .filter(rssLink == sRssLink)
             .order(id.desc)
+            .limit(100)
         let items = try db.prepare(query)
         var reArr = [T]()
         for i in items {

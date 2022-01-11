@@ -93,5 +93,15 @@
                 "des":"Flutter 和 Rust 开发的开源 Notion"
             }
         ]
+    },
+    {
+        "name":"前端技术",
+        "id":2201111100,
+        "repos":[
+            {
+                "id":"withfig/autocomplete",
+                "des":"自动补全终端"
+            }
+        ]
     }
 ]

@@ -284,8 +284,6 @@
 				08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */,
 				08AEAEDE277EA6B000B969E2 /* DBRepoNoti.swift */,
 				08AEAEE0277EA70500B969E2 /* DBRepoStore.swift */,
-				08AEAEE2277EA8F900B969E2 /* DBRSSFeed.swift */,
-				08AEAEE4277EB36700B969E2 /* DBRSSItems.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -322,6 +320,25 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		08B1EF0827892C6D003E1FA5 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				08AEAEE2277EA8F900B969E2 /* DBRSSFeed.swift */,
+				08AEAEE4277EB36700B969E2 /* DBRSSItems.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		08B1EF0927892C82003E1FA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08AEAEEC277F014500B969E2 /* RSSListView.swift */,
+				08AEAEEE277F070700B969E2 /* RSSItemsView.swift */,
+				08AEAEF6277F389300B969E2 /* RSSItemContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		08B4C93A277477E100742084 /* Archive */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,11 +360,10 @@
 		08CD61F327758855008C0935 /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
+				08B1EF0927892C82003E1FA5 /* View */,
+				08B1EF0827892C6D003E1FA5 /* DB */,
 				08AEAEDA277EA5C300B969E2 /* RSSModel.swift */,
 				08AEAEEA277EED9F00B969E2 /* RSSVM.swift */,
-				08AEAEEC277F014500B969E2 /* RSSListView.swift */,
-				08AEAEEE277F070700B969E2 /* RSSItemsView.swift */,
-				08AEAEF6277F389300B969E2 /* RSSItemContentView.swift */,
 				08CD61F42775886B008C0935 /* Parser */,
 			);
 			path = RSSReader;

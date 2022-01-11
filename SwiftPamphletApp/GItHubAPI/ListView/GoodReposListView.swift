@@ -39,7 +39,7 @@ struct GoodReposListView: View {
             }
         } // end List
         .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
-        .navigationTitle("好库 \(appVM.alertMsg)")
+        .navigationTitle("🤖好库")
         .onAppear {
             vm.doing(.cigrs)
         }

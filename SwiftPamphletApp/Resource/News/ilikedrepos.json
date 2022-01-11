@@ -650,6 +650,10 @@
             {
                 "id":"Kitura/swift-html-entities",
                 "des":"HTML5 规范字符编码/解码器"
+            },
+            {
+                "id":"TokamakUI/Tokamak",
+                "des":"SwiftUI 兼容，WebAssembly 构建 HTML"
             }
         ]
     }

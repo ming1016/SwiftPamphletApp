@@ -97,6 +97,34 @@
         "des":"SwiftlyRush Weekly is a weekly curated publication full of interesting, relevant links, alongside industry news and updates. Subscribe now and never miss an issue.",
         "siteLink":"https://swiftlyrush.curated.co/issues",
         "feedLink":"https://swiftlyrush.curated.co/issues.rss"
+    },
+    {
+        "title":"iOS Dev Weekly",
+        "id":2201111118,
+        "des":"Subscribe to a hand-picked round-up of the best iOS development links every week. Curated by Dave Verwer and published every Friday. Free.",
+        "siteLink":"https://iosdevweekly.com/issues",
+        "feedLink":"https://iosdevweekly.com/issues.rss"
+    },
+    {
+        "title":"阮一峰的网络日志",
+        "id":2201111115,
+        "des":"Ruan YiFeng's Blog 科技爱好者周刊",
+        "siteLink":"https://www.ruanyifeng.com/blog/",
+        "feedLink":"https://www.ruanyifeng.com/blog/atom.xml"
+    },
+    {
+        "title":"Michael Tsai",
+        "id":2201111053,
+        "des":"一名 macOS 开发者的博客",
+        "siteLink":"https://mjtsai.com/blog",
+        "feedLink":"https://mjtsai.com/blog/feed/"
+    },
+    {
+        "title":"湾区日报",
+        "id":2201111107,
+        "des":"阅读湾区日报",
+        "siteLink":"https://wanqu.co",
+        "feedLink":"https://wanqu.co/feed/"
     }
     
 ]

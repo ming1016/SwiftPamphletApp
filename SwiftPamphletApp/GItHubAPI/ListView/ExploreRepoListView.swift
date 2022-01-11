@@ -38,7 +38,7 @@ struct ExploreRepoListView: View {
                 
             } // end ForEach
         } // end List
-        .navigationTitle("探索库 \(appVM.alertMsg)")
+        .navigationTitle("👾探索库")
         .onAppear {
             appVM.loadExpFromServer()
         }

@@ -34,6 +34,7 @@ final class AppVM: ObservableObject {
             do {
                 let rssFeed = SPC.rssFeed() // 获取所有 rss 源的模型
                 for r in rssFeed {
+                    await updateAlertMsg(msg: "正在更新\(r.title)")
                     let str = try await RSSReq(r.feedLink)
                     guard let str = str else {
                         break
@@ -43,6 +44,7 @@ final class AppVM: ObservableObject {
                     await rssUpdateNotis()
                 }
             } catch {}
+            await updateAlertMsg(msg: "")
         }
     }
     
@@ -52,6 +54,12 @@ final class AppVM: ObservableObject {
             rssCountNotis = try RSSItemsDataHelper.findAllUnreadCount()
         } catch {}
     }
+    
+    @MainActor
+    func updateAlertMsg(msg: String) {
+        alertMsg = msg
+    }
+    
     
     // MARK: - 获取所有探索更多库通知信息
     func loadExpFromServer() {
@@ -183,7 +191,6 @@ final class AppVM: ObservableObject {
                 stepCountExp += 1
             }
         }
-        
     }
     
     // 开发者动态

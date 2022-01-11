@@ -38,7 +38,7 @@ struct ActiveDeveloperListView: View {
             } // end Foreach
         } // end List
         .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
-        .navigationTitle("开发者 \(appVM.alertMsg)")
+        .navigationTitle("🤔开发者")
         .onAppear {
             vm.doing(.ciads)
         }
