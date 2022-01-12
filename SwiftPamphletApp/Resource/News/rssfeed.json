@@ -138,6 +138,13 @@
         "des":"Weekly Swift articles",
         "siteLink":"https://theswiftdev.com",
         "feedLink":"https://theswiftdev.com/rss.xml"
+    },
+    {
+        "title":"知乎每日精选",
+        "id":2201121636,
+        "des":"中文互联网最大的知识平台，帮助人们便捷地分享彼此的知识、经验和见解。",
+        "siteLink":"https://www.zhihu.com",
+        "feedLink":"https://www.zhihu.com/rss"
     }
     
 ]
