@@ -22,6 +22,7 @@ final class RSSVM: ObservableObject {
         }
         do {
             let _ = try RSSItemsDataHelper.markAllRead(aRssLink: rssLink)
+            let _ = try RSSFeedDataHelper.updateUnReadCount(rssLinkStr: rssLink, unReadCountInt: 0)
         } catch {}
         unReadCountDic[rssLink] = 0
     }
