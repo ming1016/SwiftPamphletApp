@@ -129,6 +129,10 @@
             {
                 "id":"lukakerr/Pine",
                 "des":"Markdown 编辑器"
+            },
+            {
+                "id":"root3nl/SupportApp",
+                "des":"企业支持 macOS 软件"
             }
         ]
     },
@@ -139,6 +143,10 @@
             {
                 "id":"vinhnx/Clendar",
                 "des":"SwiftUI 写的日历应用"
+            },
+            {
+                "id":"SvenTiigi/WhatsNewKit",
+                "des":"欢迎屏"
             }
         ]
     },
@@ -284,6 +292,14 @@
             {
                 "id":"lludo/SwiftSunburstDiagram",
                 "des":"SwiftUI 图表"
+            },
+            {
+                "id":"imxieyi/waifu2x-ios",
+                "des":"waifu2x Core ML 动漫风格图片的高清渲染"
+            },
+            {
+                "id":"mecid/SwiftUICharts",
+                "des":"支持 SwiftUI 的简单的线图和柱状图库"
             }
         ]
     },
@@ -327,6 +343,10 @@
             {
                 "id":"apple/swift-driver",
                 "des":"用 Swift 语言重新实现的编译器的驱动程序库"
+            },
+            {
+                "id":"apple/swift-numerics",
+                "des":"用简单的方式用浮点型进行数值计算"
             }
         ]
     },

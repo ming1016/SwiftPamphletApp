@@ -51,6 +51,10 @@
             {
                 "id":"mpv-player/mpv",
                 "des":"命令行视频播放器"
+            },
+            {
+                "id":"analogcode/Swift-Radio-Pro",
+                "des":"广播电台"
             }
         ]
     },
@@ -101,6 +105,28 @@
             {
                 "id":"withfig/autocomplete",
                 "des":"自动补全终端"
+            },
+            {
+                "id":"statelyai/xstate",
+                "des":"状态机"
+            }
+        ]
+    },
+    {
+        "name":"待分类",
+        "id":2201111607,
+        "repos":[
+            {
+                "id":"badoo/Chatto",
+                "des":"Swift实现的 IM 框架"
+            },
+            {
+                "id":"migueldeicaza/SwiftTerm",
+                "des":"Swift 写的终端"
+            },
+            {
+                "id":"Jounce/Surge",
+                "des":"Surge是一个Swift库，使用Accelerate框架为矩阵数学、数字信号处理和图像处理提供高性能函数"
             }
         ]
     }

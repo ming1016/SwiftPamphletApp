@@ -1,5 +1,11 @@
 [
-    
+    {
+        "title":"Swift.org",
+        "id":2201111633,
+        "des":"Swift 官方博客",
+        "siteLink":"https://www.swift.org/",
+        "feedLink":"https://www.swift.org/atom.xml"
+    },
     {
         "title":"iOS摸鱼周报",
         "id":2201071620,
@@ -125,6 +131,13 @@
         "des":"阅读湾区日报",
         "siteLink":"https://wanqu.co",
         "feedLink":"https://wanqu.co/feed/"
+    },
+    {
+        "title":"The.Swift.Dev.",
+        "id":2201111537,
+        "des":"Weekly Swift articles",
+        "siteLink":"https://theswiftdev.com",
+        "feedLink":"https://theswiftdev.com/rss.xml"
     }
     
 ]

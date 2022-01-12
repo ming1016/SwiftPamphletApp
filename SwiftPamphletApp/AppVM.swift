@@ -33,8 +33,13 @@ final class AppVM: ObservableObject {
         Task {
             do {
                 let rssFeed = SPC.rssFeed() // 获取所有 rss 源的模型
+                var i = 0
+                let count = rssFeed.count
+                let ics = ["🚶","🏃🏽","👩‍🦽","💃🏿","🐕","🤸🏻‍♀️","🤾🏾","🏂","🏊🏻","🚴🏼","🛩","🚠","🚕","🛴","🛸","🚁"]
                 for r in rssFeed {
-                    await updateAlertMsg(msg: "正在更新\(r.title)")
+                    i += 1
+                    let progressStr = "(\(i)/\(count))"
+                    await updateAlertMsg(msg: "\(progressStr) 正在更新 \(ics.randomElement ?? "") \(r.title) ：\(r.des)")
                     let str = try await RSSReq(r.feedLink)
                     guard let str = str else {
                         break
