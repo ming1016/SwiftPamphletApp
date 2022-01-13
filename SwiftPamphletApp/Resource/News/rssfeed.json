@@ -140,11 +140,11 @@
         "feedLink":"https://theswiftdev.com/rss.xml"
     },
     {
-        "title":"知乎每日精选",
+        "title":"爱范儿",
         "id":2201121636,
-        "des":"中文互联网最大的知识平台，帮助人们便捷地分享彼此的知识、经验和见解。",
-        "siteLink":"https://www.zhihu.com",
-        "feedLink":"https://www.zhihu.com/rss"
+        "des":"让未来触手可及",
+        "siteLink":"https://www.ifanr.com",
+        "feedLink":"https://www.ifanr.com/feed"
     }
     
 ]

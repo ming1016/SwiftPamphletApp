@@ -92,6 +92,28 @@ struct RSSItemsDataHelper: DataHelperProtocol {
         
     } // end delete
     
+    static func deleteExpiredFeedItems(aRssLink: String) throws {
+        guard let db = DB.shared.BBDB else {
+            throw DBError.connectionErr
+        }
+        let q1 = table.filter(rssLink == aRssLink && isRead == true)
+        let items = try db.prepare(q1)
+        var count = 0
+        for _ in items {
+            count += 1
+        }
+        if count > 200 {
+            let q2 = table
+                .filter(rssLink == aRssLink && isRead == true)
+                .order(id.asc)
+                .limit(count - 200)
+            let tmp = try db.run(q2.delete())
+            guard tmp > 0 else {
+                throw DBError.deleteErr
+            }
+        }
+    }
+    
     static func findLink(sLink: String) throws -> T? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
