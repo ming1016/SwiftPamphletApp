@@ -41,6 +41,10 @@
             {
                 "id":"pmgl/microstudio",
                 "des":"游戏开发平台集搜索、开发、学习、体验、交流等功能于一身"
+            },
+            {
+                "id":"diasurgical/devilutionX",
+                "des":"可以运行在 macOS 上的 Diablo 1"
             }
         ]
     },
@@ -75,6 +79,10 @@
             {
                 "id":"rizinorg/cutter",
                 "des":"逆向"
+            },
+            {
+                "id":"jmpews/Dobby",
+                "des":"轻量多平台 Hook"
             }
         ]
     },

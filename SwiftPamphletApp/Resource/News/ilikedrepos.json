@@ -300,6 +300,10 @@
             {
                 "id":"mecid/SwiftUICharts",
                 "des":"支持 SwiftUI 的简单的线图和柱状图库"
+            },
+            {
+                "id":"Tencent/libpag",
+                "des":"PAG（Portable Animated Graphics）实时渲染库，多个平台渲染AE动画。"
             }
         ]
     },
@@ -347,6 +351,10 @@
             {
                 "id":"apple/swift-numerics",
                 "des":"用简单的方式用浮点型进行数值计算"
+            },
+            {
+                "id":"apple/swift-atomics",
+                "des":"Swift 的低级原子操作"
             }
         ]
     },
@@ -674,6 +682,22 @@
             {
                 "id":"TokamakUI/Tokamak",
                 "des":"SwiftUI 兼容，WebAssembly 构建 HTML"
+            },
+            {
+                "id":"rockbruno/SwiftInfo",
+                "des":"提取和分析一个iOS应用"
+            },
+            {
+                "id":"CoreOffice/CoreXLSX",
+                "des":"Swift编写的Excel电子表格（XLSX）格式解析器"
+            },
+            {
+                "id":"CoreOffice/CryptoOffice",
+                "des":"Swift 解析 Office Open XML（OOXML）包括 xlsx, docx, pptx"
+            },
+            {
+                "id":"kevquirk/simple.css",
+                "des":"简单大方基础 CSS 样式"
             }
         ]
     }
