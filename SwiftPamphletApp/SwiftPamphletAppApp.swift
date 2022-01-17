@@ -121,6 +121,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
         
+//        PlaySyntax.array()
+//        PlaySyntax.set()
+//        PlaySyntax.dictionary()
+//        PlayFoundation.data()
+//        PlayFoundation.date()
+//        PlayFoundation.formatter()
+//        PlayFoundation.measurement()
+//        PlayFoundation.file()
+//        PlayFoundation.scanner()
+        
         
         
 //        self.window.makeKey()

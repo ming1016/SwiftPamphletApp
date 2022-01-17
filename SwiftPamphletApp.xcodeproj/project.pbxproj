@@ -60,6 +60,8 @@
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
 		08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */; };
+		08C411F227951152006FC340 /* PlayFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C411F127951152006FC340 /* PlayFoundation.swift */; };
+		08C411F427951181006FC340 /* PlaySyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C411F327951181006FC340 /* PlaySyntax.swift */; };
 		08CD61F827758AF0008C0935 /* ParseStandXMLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61F527758AF0008C0935 /* ParseStandXMLTags.swift */; };
 		08CD61F927758AF0008C0935 /* ParseStandXMLTagTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61F627758AF0008C0935 /* ParseStandXMLTagTokens.swift */; };
 		08CD61FA27758AF0008C0935 /* ParseStandXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61F727758AF0008C0935 /* ParseStandXML.swift */; };
@@ -124,6 +126,8 @@
 		08B4C93B2774786800742084 /* archiveRepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archiveRepos.json; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
+		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
+		08C411F327951181006FC340 /* PlaySyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySyntax.swift; sourceTree = "<group>"; };
 		08CD61F527758AF0008C0935 /* ParseStandXMLTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStandXMLTags.swift; sourceTree = "<group>"; };
 		08CD61F627758AF0008C0935 /* ParseStandXMLTagTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStandXMLTagTokens.swift; sourceTree = "<group>"; };
 		08CD61F727758AF0008C0935 /* ParseStandXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStandXML.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				08AEAEF4277F0A1E00B969E2 /* SPSidebar.swift */,
 				08AEAEF0277F09D000B969E2 /* IntroView.swift */,
 				08AEAEF2277F09FA00B969E2 /* NavView.swift */,
+				08C411F02795111C006FC340 /* Play */,
 				086A5F0A2744E89100FECE02 /* Assets.xcassets */,
 				086A5F0F2744E89100FECE02 /* SwiftPamphletApp.entitlements */,
 				086A5F0C2744E89100FECE02 /* Preview Content */,
@@ -357,6 +362,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		08C411F02795111C006FC340 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				08C411F127951152006FC340 /* PlayFoundation.swift */,
+				08C411F327951181006FC340 /* PlaySyntax.swift */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
 		08CD61F327758855008C0935 /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,9 +509,11 @@
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
 				08AEAEEF277F070700B969E2 /* RSSItemsView.swift in Sources */,
 				08AEAEED277F014500B969E2 /* RSSListView.swift in Sources */,
+				08C411F427951181006FC340 /* PlaySyntax.swift in Sources */,
 				083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */,
 				08CD61F827758AF0008C0935 /* ParseStandXMLTags.swift in Sources */,
 				08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */,
+				08C411F227951152006FC340 /* PlayFoundation.swift in Sources */,
 				08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
@@ -743,7 +759,7 @@
 			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.2;
+				minimumVersion = 1.0.0;
 			};
 		};
 		08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */ = {
