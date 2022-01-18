@@ -63,5 +63,7 @@ struct TextView: View {
                 .lineSpacing(10) // 行间距
                 .multilineTextAlignment(.leading) // 对齐
         }
+//        Text(PlayFoundation.attributeString().randomElement!)
+//        Text(PlayFoundation.attributeString().randomElement!)
     }
 }

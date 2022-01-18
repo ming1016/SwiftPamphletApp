@@ -22,7 +22,7 @@ struct SPIssuesListView: View {
                 } label: {
                     VStack(alignment: .leading, spacing: 3) {
                         Text(issue.title).bold()
-                        Text(issue.updatedAt.prefix(10)).font(.system(.footnote)).foregroundColor(.secondary)
+                        Text(howLongFromNow(timeStr: issue.updatedAt)).font(.system(.footnote)).foregroundColor(.secondary)
                     }
                     .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
                 } // end NavigationLink

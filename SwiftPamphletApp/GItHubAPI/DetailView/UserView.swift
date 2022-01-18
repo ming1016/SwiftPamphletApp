@@ -186,10 +186,10 @@ struct AUserEventLabel: View {
                     Text(event.payload.issue?.title ?? "").bold()
                 }
                 if event.payload.issue?.body != nil && event.type != "IssueCommentEvent" {
-                    Markdown(Document(event.payload.issue?.body ?? ""))
+                    Markdown(event.payload.issue?.body ?? "")
                 }
                 if event.type == "IssueCommentEvent" && event.payload.comment?.body != nil {
-                    Markdown(Document(event.payload.comment?.body ?? ""))
+                    Markdown(event.payload.comment?.body ?? "")
                 }
             }
             
@@ -202,12 +202,12 @@ struct AUserEventLabel: View {
                     Text(event.payload.pullRequest?.title ?? "").bold()
                 }
                 if event.payload.pullRequest?.body != nil {
-                    Markdown(Document(event.payload.pullRequest?.body ?? ""))
+                    Markdown(event.payload.pullRequest?.body ?? "")
                 }
             }
 
             if event.payload.description != nil {
-                Markdown(Document(event.payload.description ?? ""))
+                Markdown(event.payload.description ?? "")
             }
         } // end VStack
     }

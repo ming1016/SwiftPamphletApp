@@ -24,7 +24,7 @@ struct SwiftPamphletAppApp: App {
 struct Demo: View {
     var body: some View {
         Group {
-            LabelView()
+            TextView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {
@@ -130,7 +130,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        PlayFoundation.measurement()
 //        PlayFoundation.file()
 //        PlayFoundation.scanner()
-        
+//        let _ = PlayFoundation.attributeString()
+//        PlayFoundation.coaAndCow()
         
         
 //        self.window.makeKey()

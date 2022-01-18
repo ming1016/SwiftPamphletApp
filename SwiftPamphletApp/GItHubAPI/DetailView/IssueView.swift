@@ -31,7 +31,7 @@ struct IssueView: View {
                         
                     }
                     if type == .hiddenUserInfo {
-                        Text("更新于 \(String(vm.issue.updatedAt.prefix(10)))").font(.footnote)
+                        Text(" \(howLongFromNow(timeStr:vm.issue.updatedAt))更新过").font(.footnote)
                     } else {
                         HStack {
                             AsyncImageWithPlaceholder(size: .smallSize, url: vm.issue.user.avatarUrl)
@@ -46,7 +46,7 @@ struct IssueView: View {
                             }
                         } // end HStack
                     }
-                    Markdown(Document(vm.issue.body ?? "")) // TODO: 等 SwiftUI 的 Text 支持完整的 markdown，再进行替换
+                    Markdown(vm.issue.body ?? "") // TODO: 等 SwiftUI 的 Text 支持完整的 markdown，再进行替换
                 } // end VStack
                 Spacer()
             } // end HStack
@@ -74,7 +74,7 @@ struct IssueView: View {
                         }
                         HStack {
                             VStack(alignment: .leading, spacing: 0) {
-                                Markdown(Document(comment.body))
+                                Markdown(comment.body)
                             }
                             Spacer()
                         }

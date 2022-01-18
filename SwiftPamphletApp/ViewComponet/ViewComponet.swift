@@ -25,7 +25,7 @@ struct GitHubApiTimeView: View {
     var isUnread = false
     var body: some View {
         HStack {
-            Text(timeStr.replacingOccurrences(of: "T", with: " ").replacingOccurrences(of: "Z", with: ""))
+            Text(howLongFromNow(timeStr:timeStr))
             if isUnread == true {
                 Image(systemName: "envelope.badge")
             }

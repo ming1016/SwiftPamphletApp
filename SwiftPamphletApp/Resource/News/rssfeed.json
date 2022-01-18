@@ -126,13 +126,6 @@
         "feedLink":"https://mjtsai.com/blog/feed/"
     },
     {
-        "title":"湾区日报",
-        "id":2201111107,
-        "des":"阅读湾区日报",
-        "siteLink":"https://wanqu.co",
-        "feedLink":"https://wanqu.co/feed/"
-    },
-    {
         "title":"The.Swift.Dev.",
         "id":2201111537,
         "des":"Weekly Swift articles",

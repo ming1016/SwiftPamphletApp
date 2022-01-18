@@ -31,7 +31,7 @@ struct RSSItemsView: View {
                         Text(item.title)
                             .font(.headline)
                             .foregroundColor(vm.isReadDic[item.link] ?? false ? .secondary : .primary)
-                        Text(item.pubDate)
+                        Text(howLongFromNow(timeStr:item.pubDate))
                             .font(.footnote)
                             .foregroundColor(.secondary)
                         if !item.description.isEmpty && !item.content.isEmpty {

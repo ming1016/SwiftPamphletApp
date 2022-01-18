@@ -121,7 +121,17 @@
         ]
     },
     {
-        "name":"待分类",
+        "name":"macOS",
+        "id":2201172057,
+        "repos":[
+            {
+                "id":"kendfinger/MacHack",
+                "des":"不常见但有用的命令行工具"
+            }
+        ]
+    },
+    {
+        "name":"Swift",
         "id":2201111607,
         "repos":[
             {
@@ -135,6 +145,16 @@
             {
                 "id":"Jounce/Surge",
                 "des":"Surge是一个Swift库，使用Accelerate框架为矩阵数学、数字信号处理和图像处理提供高性能函数"
+            }
+        ]
+    },
+    {
+        "name":"SwiftUI",
+        "id":2201181435,
+        "repos":[
+            {
+                "id":"exyte/ProgressIndicatorView",
+                "des":"适用 SwiftUI 的进度指示器"
             },
             {
                 "id":"Co2333/mobilePillowTalkLite",

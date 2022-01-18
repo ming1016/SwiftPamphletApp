@@ -119,7 +119,7 @@ struct ReadmeView: View {
     var content: String
     var body: some View {
         ScrollView {
-            Markdown(Document(content.base64Decoded() ?? "failed"))
+            Markdown(content.base64Decoded() ?? "failed")
                 .padding(10)
         }
     }
@@ -213,7 +213,7 @@ struct RepoCommitLabelView: View {
                 }
                 ButtonGoGitHubWeb(url: "https://github.com/\(repo.fullName)/commit/\(commit.sha ?? "")", text: "commit")
             } // end HStack
-            Markdown(Document(commit.commit.message ?? ""))
+            Markdown(commit.commit.message ?? "")
         } // end VStack
     }
 }
@@ -234,7 +234,7 @@ struct IssueLabelView: View {
                 AsyncImageWithPlaceholder(size: .tinySize, url: issue.user.avatarUrl)
                 ButtonGoGitHubWeb(url: issue.user.login, text: issue.user.login, ignoreHost: true)
             }
-            Markdown(Document(issue.body ?? ""))
+            Markdown(issue.body ?? "")
         } // end VStack
     }
 }
@@ -261,7 +261,7 @@ struct IssueEventLabelView: View {
                 AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.issue.user.avatarUrl)
                 ButtonGoGitHubWeb(url: issueEvent.issue.user.login, text: issueEvent.issue.user.login, ignoreHost: true)
             }
-            Markdown(Document(issueEvent.issue.body ?? ""))
+            Markdown(issueEvent.issue.body ?? "")
         } // end VStack
     }
 }

@@ -9,7 +9,37 @@ import Foundation
 import SwiftUI
 import Combine
 import Network
+import SwiftDate
 
+
+// MARK: - 时间
+func howLongFromNow(timeStr: String) -> String {
+    let cn = Region(zone: Zones.asiaShanghai, locale: Locales.chineseChina)
+    SwiftDate.defaultRegion = cn
+    
+    // 两个 DateInRegion 相差时间 interval
+    var r = DateInRegion(timeStr, region: cn)
+    if r == nil && !timeStr.isEmpty {
+        r = timeStr.toRSSDate(alt: false)
+    }
+    guard let r = r else {
+        return ""
+    }
+
+    let i = DateInRegion(Date(), region: cn) - r
+    let s = i.toString {
+        $0.maximumUnitCount = 1
+        $0.allowedUnits = [.year, .day, .hour, .minute]
+        $0.collapsesLargestUnit = true
+        $0.unitsStyle = .abbreviated
+        $0.locale = Locales.chineseChina
+    }
+    var reStr = s + "前"
+    if s == "0年" {
+        reStr = "\(r.year)年\(r.month)月\(r.day)日"
+    }
+    return reStr
+}
 
 // MARK: - 网络
 // 网络状态检查 network state check

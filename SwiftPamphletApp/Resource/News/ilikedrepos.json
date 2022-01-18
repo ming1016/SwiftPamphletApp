@@ -698,6 +698,14 @@
             {
                 "id":"kevquirk/simple.css",
                 "des":"简单大方基础 CSS 样式"
+            },
+            {
+                "id":"krzysztofzablocki/KZFileWatchers",
+                "des":"Swift编写的观察本地或者网络上，比如网盘和FTP的文件变化"
+            },
+            {
+                "id":"malcommac/SwiftDate",
+                "des":"Swift编写的时间时区，时间比较等复杂处理的包装"
             }
         ]
     }
