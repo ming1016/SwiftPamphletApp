@@ -226,8 +226,8 @@
         "id":2112281910,
         "repos":[
             {
-                "id":"logseq/logseq",
-                "des":"更好的知识管理工具"
+                "id":"AppFlowy-IO/appflowy",
+                "des":"Flutter 和 Rust 开发的开源 Notion"
             }
         ]
     },

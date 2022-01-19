@@ -10,13 +10,15 @@ import WebKit
 
 struct WebUIView : NSViewRepresentable {
     let html: String
+    let baseURLStr: String
     
     func makeNSView(context: Context) -> some WKWebView {
         return WKWebView()
     }
     
     func updateNSView(_ nsView: NSViewType, context: Context) {
-        nsView.loadHTMLString(html, baseURL: nil)
+        let host = URL(string: baseURLStr)?.host ?? ""
+        nsView.loadHTMLString(html, baseURL: URL(string: "https://\(host)"))
     }
 }
 
