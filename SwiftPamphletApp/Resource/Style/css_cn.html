@@ -1,0 +1,2673 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+    @charset "UTF-8";
+    /*
+     * Project: Heti homepage
+     * URL: https://github.com/sivan/heti
+     * Author: Sivan [sun.sivan@gmail.com]
+     */
+    /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+    /* Document
+       ========================================================================== */
+    /**
+     * 1. Correct the line height in all browsers.
+     * 2. Prevent adjustments of font size after orientation changes in iOS.
+     */
+    html {
+      line-height: 1.15;
+      /* 1 */
+      -webkit-text-size-adjust: 100%;
+      /* 2 */
+    }
+
+    /* Sections
+       ========================================================================== */
+    /**
+     * Remove the margin in all browsers.
+     */
+    body {
+      margin: 0;
+    }
+
+    /**
+     * Render the `main` element consistently in IE.
+     */
+    main {
+      display: block;
+    }
+
+    /**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+    }
+
+    /* Grouping content
+       ========================================================================== */
+    /**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+    hr {
+      box-sizing: content-box;
+      /* 1 */
+      height: 0;
+      /* 1 */
+      overflow: visible;
+      /* 2 */
+    }
+
+    /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+    pre {
+      font-family: monospace, monospace;
+      /* 1 */
+      font-size: 1em;
+      /* 2 */
+    }
+
+    /* Text-level semantics
+       ========================================================================== */
+    /**
+     * Remove the gray background on active links in IE 10.
+     */
+    a {
+      background-color: transparent;
+    }
+
+    /**
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+    abbr[title] {
+      border-bottom: none;
+      /* 1 */
+      text-decoration: underline;
+      /* 2 */
+      text-decoration: underline dotted;
+      /* 2 */
+    }
+
+    /**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+    b,
+    strong {
+      font-weight: bolder;
+    }
+
+    /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+    code,
+    kbd,
+    samp {
+      font-family: monospace, monospace;
+      /* 1 */
+      font-size: 1em;
+      /* 2 */
+    }
+
+    /**
+     * Add the correct font size in all browsers.
+     */
+    small {
+      font-size: 80%;
+    }
+
+    /**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    /* Embedded content
+       ========================================================================== */
+    /**
+     * Remove the border on images inside links in IE 10.
+     */
+    img {
+      border-style: none;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Forms
+       ========================================================================== */
+    /**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      /* 1 */
+      font-size: 100%;
+      /* 1 */
+      line-height: 1.15;
+      /* 1 */
+      margin: 0;
+      /* 2 */
+    }
+
+    /**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+    button,
+    input {
+      /* 1 */
+      overflow: visible;
+    }
+
+    /**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+    button,
+    select {
+      /* 1 */
+      text-transform: none;
+    }
+
+    /**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    /**
+     * Remove the inner border and padding in Firefox.
+     */
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    /**
+     * Restore the focus styles unset by the previous rule.
+     */
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+
+    /**
+     * Correct the padding in Firefox.
+     */
+    fieldset {
+      padding: 0.35em 0.75em 0.625em;
+    }
+
+    /**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+    legend {
+      box-sizing: border-box;
+      /* 1 */
+      color: inherit;
+      /* 2 */
+      display: table;
+      /* 1 */
+      max-width: 100%;
+      /* 1 */
+      padding: 0;
+      /* 3 */
+      white-space: normal;
+      /* 1 */
+    }
+
+    /**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+    progress {
+      vertical-align: baseline;
+    }
+
+    /**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+    textarea {
+      overflow: auto;
+    }
+
+    /**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+    [type="checkbox"],
+    [type="radio"] {
+      box-sizing: border-box;
+      /* 1 */
+      padding: 0;
+      /* 2 */
+    }
+
+    /**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+
+    /**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+    [type="search"] {
+      -webkit-appearance: textfield;
+      /* 1 */
+      outline-offset: -2px;
+      /* 2 */
+    }
+
+    /**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+    [type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    /**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      /* 1 */
+      font: inherit;
+      /* 2 */
+    }
+
+    /* Interactive
+       ========================================================================== */
+    /*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+    details {
+      display: block;
+    }
+
+    /*
+     * Add the correct display in all browsers.
+     */
+    summary {
+      display: list-item;
+    }
+
+    /* Misc
+       ========================================================================== */
+    /**
+     * Add the correct display in IE 10+.
+     */
+    template {
+      display: none;
+    }
+
+    /**
+     * Add the correct display in IE 10.
+     */
+    [hidden] {
+      display: none;
+    }
+
+    /* 简单模拟 css reset */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    /* 模拟不知道哪里流传出来的垃圾代码 */
+    ul,
+    li {
+      list-style: none;
+    }
+
+    .container[data-bg-grid="grid-12"] {
+      background-size: 100% 12px;
+      background-image: linear-gradient(transparent 11px, #ededed 1px), linear-gradient(to left, transparent 12px, #ededed, transparent 13px), linear-gradient(to right, transparent 12px, #ededed, transparent 13px);
+    }
+
+    .container[data-bg-grid="grid-12"] .heti--vertical {
+      outline: 1px solid #ededed;
+      background-size: 12px 100%;
+      background-image: linear-gradient(to left, transparent 11px, #ededed 1px);
+    }
+
+    .container[data-bg-grid="grid-24"] {
+      background-size: 100% 24px;
+      background-image: linear-gradient(transparent 23px, #ededed 1px), linear-gradient(to left, transparent 12px, #ededed, transparent 13px), linear-gradient(to right, transparent 12px, #ededed, transparent 13px);
+    }
+
+    .container[data-bg-grid="grid-24"] .heti--vertical {
+      outline: 1px solid #ededed;
+      background-size: 24px 100%;
+      background-image: linear-gradient(to left, transparent 23px, #ededed 1px);
+    }
+
+    [data-darkmode="dark"] .container[data-bg-grid="grid-12"] {
+      background-image: linear-gradient(transparent 11px, #333333 1px), linear-gradient(to left, transparent 12px, #333333, transparent 13px), linear-gradient(to right, transparent 12px, #333333, transparent 13px);
+    }
+
+    [data-darkmode="dark"] .container[data-bg-grid="grid-12"] .heti--vertical {
+      background-size: 12px 100%;
+      background-image: linear-gradient(to left, transparent 11px, #333333 1px);
+    }
+
+    [data-darkmode="dark"] .container[data-bg-grid="grid-24"] {
+      background-image: linear-gradient(transparent 23px, #333333 1px), linear-gradient(to left, transparent 12px, #333333, transparent 13px), linear-gradient(to right, transparent 12px, #333333, transparent 13px);
+    }
+
+    [data-darkmode="dark"] .container[data-bg-grid="grid-24"] .heti--vertical {
+      background-size: 24px 100%;
+      background-image: linear-gradient(to left, transparent 23px, #333333 1px);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .container[data-bg-grid="grid-12"] {
+        background-image: linear-gradient(transparent 11px, #333333 1px), linear-gradient(to left, transparent 12px, #333333, transparent 13px), linear-gradient(to right, transparent 12px, #333333, transparent 13px);
+      }
+      [data-darkmode="auto"] .container[data-bg-grid="grid-12"] .heti--vertical {
+        background-size: 12px 100%;
+        background-image: linear-gradient(to left, transparent 11px, #333333 1px);
+      }
+      [data-darkmode="auto"] .container[data-bg-grid="grid-24"] {
+        background-image: linear-gradient(transparent 23px, #333333 1px), linear-gradient(to left, transparent 12px, #333333, transparent 13px), linear-gradient(to right, transparent 12px, #333333, transparent 13px);
+      }
+      [data-darkmode="auto"] .container[data-bg-grid="grid-24"] .heti--vertical {
+        background-size: 24px 100%;
+        background-image: linear-gradient(to left, transparent 23px, #333333 1px);
+      }
+    }
+
+    @media screen and (min-width: 640px) {
+      .container[data-bg-grid="grid-12"] {
+        background-image: linear-gradient(transparent 11px, #ededed 1px), linear-gradient(to left, transparent 48px, #ededed, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 0, 0, 0.4), transparent 49px);
+      }
+      .container[data-bg-grid="grid-24"] {
+        background-image: linear-gradient(transparent 23px, #ededed 1px), linear-gradient(to left, transparent 48px, #ededed, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 0, 0, 0.4), transparent 49px);
+      }
+      [data-darkmode="dark"] .container[data-bg-grid="grid-12"] {
+        background-image: linear-gradient(transparent 11px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px);
+      }
+      [data-darkmode="dark"] .container[data-bg-grid="grid-24"] {
+        background-image: linear-gradient(transparent 23px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px);
+      }
+    }
+
+    @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .container[data-bg-grid="grid-12"] {
+        background-image: linear-gradient(transparent 11px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px);
+      }
+      [data-darkmode="auto"] .container[data-bg-grid="grid-24"] {
+        background-image: linear-gradient(transparent 23px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px);
+      }
+    }
+
+    .panel-list {
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      --bg-color: hsl(240, 100%, 100%);
+      --bg-tap-color: hsl(300, 3%, 94%);
+      --border-color: hsla(0, 0%, 76%, 0.88);
+      --border-inline-start-color: hsl(0, 0%, 76%);
+      --border-inline-end-color: hsl(0, 0%, 76%);
+      --border-block-start-color: hsl(0, 0%, 79%);
+      --border-block-end-color: hsl(0, 0%, 65%);
+      --text-color: hsl(60, 1%, 16%);
+      --box-shadow-color: hsla(0, 0%, 86%, 0.54);
+      --bg-highlight-color-start: hsl(216, 87%, 70%);
+      --bg-highlight-color-end: hsl(215, 93%, 52%);
+      --bg-highlight-tap-color-start: hsl(216, 92%, 65%);
+      --bg-highlight-tap-color-end: hsl(215, 95%, 44%);
+      --border-highlight-color: hsla(216, 90%, 57%, 0.88);
+      --border-highlight-tap-color: hsla(216, 85%, 52%, 0.88);
+      --border-inline-start-highlight-color: hsl(216, 90%, 57%);
+      --border-inline-end-highlight-color: hsl(216, 90%, 57%);
+      --border-inline-start-highlight-tap-color: hsl(216, 85%, 52%);
+      --border-inline-end-highlight-tap-color: hsl(216, 85%, 52%);
+      --border-block-start-highlight-color: hsl(216, 87%, 63%);
+      --border-block-end-highlight-color: hsl(215, 99%, 49%);
+      --border-block-start-highlight-tap-color: hsl(216, 93%, 57%);
+      --border-block-end-highlight-tap-color: hsl(216, 100%, 42%);
+      --text-highlight-color: hsl(0, 0%, 100%);
+    }
+
+    .panel-list--gray {
+      --bg-color: hsl(180, 100%, 100%);
+      --bg-tap-color: hsl(0, 0%, 94%);
+      --border-color: hsla(0, 0%, 72%, 0.88);
+      --border-inline-start-color: hsl(0, 0%, 76%);
+      --border-inline-end-color: hsl(0, 0%, 76%);
+      --border-block-start-color: hsl(0, 0%, 79%);
+      --border-block-end-color: hsl(0, 0%, 65%);
+      --text-color: hsl(0, 0%, 16%);
+      --box-shadow-color: hsla(0, 0%, 86%, 0.54);
+      --bg-highlight-color-start: hsl(225, 3%, 70%);
+      --bg-highlight-color-end: hsl(228, 2%, 58%);
+      --bg-highlight-tap-color-start: hsl(228, 2%, 58%);
+      --bg-highlight-tap-color-end: hsl(240, 3%, 35%);
+      --border-highlight-color: hsla(225, 2%, 64%, 0.88);
+      --border-highlight-tap-color: hsla(228, 2%, 47%, 0.88);
+      --border-inline-start-highlight-color: hsl(240, 3%, 59%);
+      --border-inline-end-highlight-color: hsl(228, 2%, 54%);
+      --border-inline-start-highlight-tap-color: hsl(240, 3%, 39%);
+      --border-inline-end-highlight-tap-color: hsl(228, 3%, 39%);
+      --border-block-start-highlight-color: hsl(240, 3%, 66%);
+      --border-block-end-highlight-color: hsl(228, 2%, 50%);
+      --border-block-start-highlight-tap-color: hsl(228, 2%, 51%);
+      --border-block-end-highlight-tap-color: hsl(228, 4%, 26%);
+      --text-highlight-color: hsl(0, 0%, 92%);
+    }
+
+    [data-darkmode="dark"] .panel-list {
+      --bg-color: hsl(225, 2%, 40%);
+      --bg-tap-color: hsl(210, 2%, 49%);
+      --border-color: hsla(210, 2%, 33%, 0.88);
+      --border-inline-start-color: hsl(210, 2%, 33%);
+      --border-inline-end-color: hsl(210, 2%, 33%);
+      --border-block-start-color: hsl(225, 2%, 45%);
+      --border-block-end-color: hsl(210, 2%, 40%);
+      --text-color: hsl(0, 0%, 91%);
+      --box-shadow-color: hsla(225, 4%, 21%, 0.54);
+      --bg-highlight-color-start: hsl(216, 77%, 49%);
+      --bg-highlight-color-end: hsl(216, 76%, 45%);
+      --bg-highlight-tap-color-start: hsl(214, 83%, 55%);
+      --bg-highlight-tap-color-end: hsl(215, 74%, 51%);
+      --border-highlight-color: hsla(215, 77%, 47%, 0.88);
+      --border-highlight-tap-color: hsla(215, 79%, 54%, 0.88);
+      --border-inline-start-highlight-color: hsl(215, 77%, 47%);
+      --border-inline-end-highlight-color: hsl(215, 77%, 47%);
+      --border-inline-start-highlight-tap-color: hsl(215, 79%, 54%);
+      --border-inline-end-highlight-tap-color: hsl(215, 79%, 54%);
+      --border-block-start-highlight-color: hsl(216, 76%, 55%);
+      --border-block-end-highlight-color: hsl(216, 76%, 44%);
+      --border-block-start-highlight-tap-color: hsl(215, 84%, 60%);
+      --border-block-end-highlight-tap-color: hsl(215, 74%, 51%);
+      --text-highlight-color: hsl(0, 0%, 100%);
+    }
+
+    [data-darkmode="dark"] .panel-list--gray {
+      --bg-color: hsl(0, 0%, 40%);
+      --bg-tap-color: hsl(0, 0%, 49%);
+      --border-color: hsla(120, 1%, 34%, 0.88);
+      --border-inline-start-color: hsl(0, 0%, 40%);
+      --border-inline-end-color: hsl(360, 0%, 40%);
+      --border-block-start-color: hsl(0, 0%, 46%);
+      --border-block-end-color: hsl(120, 0%, 40%);
+      --text-color: hsl(0, 0%, 91%);
+      --box-shadow-color: hsla(0, 0%, 17%, 0.54);
+      --bg-highlight-color-start: hsl(0, 0%, 60%);
+      --bg-highlight-color-end: hsl(0, 0%, 60%);
+      --bg-highlight-tap-color-start: hsl(0, 0%, 69%);
+      --bg-highlight-tap-color-end: hsl(0, 0%, 69%);
+      --border-highlight-color: hsla(0, 0%, 60%, 0.88);
+      --border-highlight-tap-color: hsla(0, 0%, 69%, 0.88);
+      --border-inline-start-highlight-color: hsl(0, 0%, 60%);
+      --border-inline-end-highlight-color: hsl(0, 0%, 60%);
+      --border-inline-start-highlight-tap-color: hsl(0, 0%, 69%);
+      --border-inline-end-highlight-tap-color: hsl(0, 0%, 69%);
+      --border-block-start-highlight-color: hsl(0, 0%, 64%);
+      --border-block-end-highlight-color: hsl(0, 0%, 60%);
+      --border-block-start-highlight-tap-color: hsl(0, 0%, 73%);
+      --border-block-end-highlight-tap-color: hsl(0, 0%, 69%);
+      --text-highlight-color: hsl(0, 0%, 15%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .panel-list {
+        --bg-color: hsl(225, 2%, 40%);
+        --bg-tap-color: hsl(210, 2%, 49%);
+        --border-color: hsla(210, 2%, 33%, 0.88);
+        --border-inline-start-color: hsl(210, 2%, 33%);
+        --border-inline-end-color: hsl(210, 2%, 33%);
+        --border-block-start-color: hsl(225, 2%, 45%);
+        --border-block-end-color: hsl(210, 2%, 40%);
+        --text-color: hsl(0, 0%, 91%);
+        --box-shadow-color: hsla(225, 4%, 21%, 0.54);
+        --bg-highlight-color-start: hsl(216, 77%, 49%);
+        --bg-highlight-color-end: hsl(216, 76%, 45%);
+        --bg-highlight-tap-color-start: hsl(214, 83%, 55%);
+        --bg-highlight-tap-color-end: hsl(215, 74%, 51%);
+        --border-highlight-color: hsla(215, 77%, 47%, 0.88);
+        --border-highlight-tap-color: hsla(215, 79%, 54%, 0.88);
+        --border-inline-start-highlight-color: hsl(215, 77%, 47%);
+        --border-inline-end-highlight-color: hsl(215, 77%, 47%);
+        --border-inline-start-highlight-tap-color: hsl(215, 79%, 54%);
+        --border-inline-end-highlight-tap-color: hsl(215, 79%, 54%);
+        --border-block-start-highlight-color: hsl(216, 76%, 55%);
+        --border-block-end-highlight-color: hsl(216, 76%, 44%);
+        --border-block-start-highlight-tap-color: hsl(215, 84%, 60%);
+        --border-block-end-highlight-tap-color: hsl(215, 74%, 51%);
+        --text-highlight-color: hsl(0, 0%, 100%);
+      }
+      [data-darkmode="auto"] .panel-list--gray {
+        --bg-color: hsl(0, 0%, 40%);
+        --bg-tap-color: hsl(0, 0%, 49%);
+        --border-color: hsla(120, 1%, 34%, 0.88);
+        --border-inline-start-color: hsl(0, 0%, 40%);
+        --border-inline-end-color: hsl(360, 0%, 40%);
+        --border-block-start-color: hsl(0, 0%, 46%);
+        --border-block-end-color: hsl(120, 0%, 40%);
+        --text-color: hsl(0, 0%, 91%);
+        --box-shadow-color: hsla(0, 0%, 17%, 0.54);
+        --bg-highlight-color-start: hsl(0, 0%, 60%);
+        --bg-highlight-color-end: hsl(0, 0%, 60%);
+        --bg-highlight-tap-color-start: hsl(0, 0%, 69%);
+        --bg-highlight-tap-color-end: hsl(0, 0%, 69%);
+        --border-highlight-color: hsla(0, 0%, 60%, 0.88);
+        --border-highlight-tap-color: hsla(0, 0%, 69%, 0.88);
+        --border-inline-start-highlight-color: hsl(0, 0%, 60%);
+        --border-inline-end-highlight-color: hsl(0, 0%, 60%);
+        --border-inline-start-highlight-tap-color: hsl(0, 0%, 69%);
+        --border-inline-end-highlight-tap-color: hsl(0, 0%, 69%);
+        --border-block-start-highlight-color: hsl(0, 0%, 64%);
+        --border-block-end-highlight-color: hsl(0, 0%, 60%);
+        --border-block-start-highlight-tap-color: hsl(0, 0%, 73%);
+        --border-block-end-highlight-tap-color: hsl(0, 0%, 69%);
+        --text-highlight-color: hsl(0, 0%, 15%);
+      }
+    }
+
+    .panel-list + .panel-list {
+      margin-inline-start: 12px;
+    }
+
+    .panel-list label {
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      height: 20px;
+      padding: 0;
+      padding-inline-start: 12px;
+      padding-inline-end: 12px;
+      border: 1px solid;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      user-select: none;
+      background-color: var(--bg-color);
+      border-color: var(--border-color);
+      border-block-start-color: var(--border-block-start-color);
+      border-block-end-color: var(--border-block-end-color);
+      color: var(--text-color);
+      box-shadow: 0 1px 0 var(--box-shadow-color);
+    }
+
+    .panel-list label:active {
+      background-color: var(--bg-tap-color);
+    }
+
+    .panel-list li {
+      margin-inline-end: -1px;
+    }
+
+    .panel-list li:first-child label {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-inline-start-color: var(--border-inline-start-color);
+    }
+
+    .panel-list li:last-child label {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-inline-end-color: var(--border-inline-end-color);
+    }
+
+    .panel-list input {
+      display: none;
+    }
+
+    .panel-list input:checked + label {
+      z-index: 1;
+      background-image: linear-gradient(to bottom, var(--bg-highlight-color-start), var(--bg-highlight-color-end));
+      border-color: var(--border-highlight-color);
+      border-block-start-color: var(--border-block-start-highlight-color);
+      border-block-end-color: var(--border-block-end-highlight-color);
+      color: var(--text-highlight-color);
+    }
+
+    .panel-list input:checked + label:active {
+      background-image: linear-gradient(to bottom, var(--bg-highlight-tap-color-start), var(--bg-highlight-tap-color-end));
+      border-color: var(--border-highlight-tap-color);
+      border-block-start-color: var(--border-block-start-highlight-tap-color);
+      border-block-end-color: var(--border-block-end-highlight-tap-color);
+    }
+
+    .panel-list--icon label {
+      width: 30px;
+      padding-inline-start: 8px;
+      padding-inline-end: 8px;
+    }
+
+    .anchor {
+      margin-inline-start: 0.25em;
+    }
+
+    @media screen and (min-width: 640px) {
+      .article .anchor {
+        position: absolute;
+        left: -1em;
+        width: 1em;
+        margin-inline-start: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        line-height: inherit;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+      }
+      .article .anchor:hover {
+        text-decoration: none;
+        border: 0;
+      }
+      .article h1,
+      .article h2,
+      .article h3,
+      .article h4,
+      .article h5,
+      .article h6 {
+        position: relative;
+      }
+      .article h1:hover .anchor,
+      .article h2:hover .anchor,
+      .article h3:hover .anchor,
+      .article h4:hover .anchor,
+      .article h5:hover .anchor,
+      .article h6:hover .anchor {
+        opacity: 1;
+      }
+    }
+
+    .card {
+      position: relative;
+      left: -12px;
+      width: 100%;
+      margin-block-start: 24px;
+      margin-block-end: 48px;
+      padding-block-start: 12px;
+      padding-block-end: 12px;
+      padding-inline-start: 12px;
+      padding-inline-end: 12px;
+      border-radius: 2px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+      background-color: white;
+    }
+
+    .article .card {
+      text-align: left;
+    }
+
+    .card > figcaption {
+      display: inline-block;
+      margin-block-start: 16px;
+      padding-block-start: 4px;
+      padding-block-end: 3px;
+      padding-inline-start: 0;
+      padding-inline-end: 72px;
+      line-height: 24px;
+      border-block-start: 1px solid #ededed;
+    }
+
+    .card__vertical-container {
+      box-sizing: border-box;
+      width: 100%;
+      height: 30em;
+      border: 1px solid #ededed;
+      overflow: auto;
+      writing-mode: vertical-rl;
+    }
+
+    @media screen and (min-width: 640px) {
+      .card {
+        box-sizing: border-box;
+        left: -20%;
+        width: 140%;
+        padding-block-start: 24px;
+        padding-block-end: 24px;
+        padding-inline-start: 32px;
+        padding-inline-end: 32px;
+      }
+    }
+
+    [data-darkmode="dark"] .card {
+      background-color: #292929;
+    }
+
+    [data-darkmode="dark"] .card > figcaption {
+      border-block-start: 1px solid #333333;
+    }
+
+    [data-darkmode="dark"] .card .card__vertical-container {
+      border-color: #333333;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .card {
+        background-color: #292929;
+      }
+      [data-darkmode="auto"] .card > figcaption {
+        border-block-start: 1px solid #333333;
+      }
+      [data-darkmode="auto"] .card .card__vertical-container {
+        border-color: #333333;
+      }
+    }
+
+    /** 基础样式 **/
+    body {
+      font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      background-color: white;
+    }
+
+    a {
+      color: #4387f4;
+      text-decoration: none;
+    }
+
+    .container {
+      box-sizing: border-box;
+      padding-block-start: 12px;
+      padding-block-end: 72px;
+      padding-inline-start: 12px;
+      padding-inline-end: 12px;
+    }
+
+    /** 首页样式 **/
+    .article {
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+    }
+
+    .article__nav ol {
+      margin-block-start: 24px;
+      margin-block-end: 24px;
+    }
+
+    /** 控制栏样式 **/
+    .panel {
+      position: fixed;
+      z-index: 2;
+      right: 14px;
+      top: 14px;
+      display: flex;
+      text-align: right;
+    }
+
+    /** 演示区块 **/
+    .demo {
+      margin-block-start: 24px;
+      margin-block-end: 24px;
+    }
+
+    .section {
+      width: 100%;
+      max-height: 85vh;
+      margin-block-start: 12px;
+      margin-block-end: 12px;
+      overflow: auto;
+    }
+
+    @media screen and (min-width: 640px) {
+      body {
+        min-width: 640px;
+        background-color: #ededed;
+      }
+      .container {
+        box-sizing: border-box;
+        width: 80%;
+        min-width: 640px;
+        max-width: 768px;
+        margin-block-start: 48px;
+        margin-block-end: 72px;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        padding-block-start: 48px;
+        padding-block-end: 48px;
+        padding-inline-start: 48px;
+        padding-inline-end: 48px;
+        border-radius: 2px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
+        background-color: white;
+      }
+      .section {
+        max-height: none;
+        overflow: visible;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      .article__nav {
+        position: relative;
+        z-index: 1;
+        float: right;
+        width: 192px;
+        margin-block-start: -1px;
+        margin-block-end: 12px;
+        margin-inline-start: 32px;
+        margin-inline-end: -16px;
+        padding-block-start: 12px;
+        padding-block-end: 12px;
+        padding-inline-start: 8px;
+        padding-inline-end: 8px;
+        border: 1px solid #ededed;
+        border-radius: 2px;
+      }
+      .article__nav ol {
+        margin-block-start: 12px;
+        margin-block-end: 0;
+      }
+      .article__nav ol ol {
+        margin-block-start: 0;
+      }
+    }
+
+    [data-darkmode="dark"] body {
+      background-color: #3d3d3d;
+    }
+
+    [data-darkmode="dark"] a {
+      color: #6b90cc;
+    }
+
+    [data-darkmode="dark"] a:visited {
+      color: #2f5189;
+    }
+
+    [data-darkmode="dark"] .container {
+      background-color: #292929;
+      color: #a3a3a3;
+    }
+
+    [data-darkmode="dark"] .article__nav {
+      border-color: #333333;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] body {
+        background-color: #3d3d3d;
+      }
+      [data-darkmode="auto"] a {
+        color: #6b90cc;
+      }
+      [data-darkmode="auto"] a:visited {
+        color: #2f5189;
+      }
+      [data-darkmode="auto"] .container {
+        background-color: #292929;
+        color: #a3a3a3;
+      }
+      [data-darkmode="auto"] .article__nav {
+        border-color: #333333;
+      }
+    }
+
+    @charset "UTF-8";
+    /*!
+     * Project: Heti
+     * URL: https://github.com/sivan/heti
+     * Author: Sivan [sun.sivan@gmail.com]
+     */
+    @font-face {
+      font-family: "Heti Hei";
+      src: local("PingFang SC Regular"), local("PingFang TC Regular"), local("Hiragino Sans GB W3"), local("Heiti SC Regular"), local("Heiti TC Regular"), local("Microsoft YaHei"), local("Microsoft Jhenghei"), local("Source Han Sans CN Regular"), local("Source Han Sans HK Regular"), local("Source Han Sans TW Regular"), local("Source Han Sans JP Regular"), local("Source Han Sans KR Regular"), local("Noto Sans CJK SC Regular"), local("Noto Sans CJK TC Regular"), local("Noto Sans CJK JP Regular"), local("Noto Sans CJK KR Regular"), local("WenQuanYi Micro Hei"), local("Droid Sans Fallback");
+    }
+
+    @font-face {
+      font-family: "Heti Hei";
+      font-weight: 200;
+      src: local("PingFang SC Light"), local("PingFang TC Light"), local("Heiti SC Light"), local("Heiti TC Light"), local("Microsoft YaHei Light"), local("Microsoft Jhenghei Light"), local("Source Han Sans CN Light"), local("Source Han Sans HK Light"), local("Source Han Sans TW Light"), local("Source Han Sans JP Light"), local("Source Han Sans KR Light"), local("Noto Sans CJK SC Light"), local("Noto Sans CJK TC Light"), local("Noto Sans CJK JP Light"), local("Noto Sans CJK KR Light");
+    }
+
+    @font-face {
+      font-family: "Heti Hei";
+      font-weight: 600;
+      src: local("PingFang SC Medium"), local("Hiragino Sans GB W6"), local("PingFang TC Medium"), local("Heiti SC Medium"), local("Heiti TC Medium"), local("Microsoft YaHei Bold"), local("Microsoft Jhenghei Bold"), local("Source Han Sans CN Bold"), local("Source Han Sans HK Bold"), local("Source Han Sans TW Bold"), local("Source Han Sans JP Bold"), local("Source Han Sans KR Bold"), local("Noto Sans CJK SC Bold"), local("Noto Sans CJK TC Bold"), local("Noto Sans CJK JP Bold"), local("Noto Sans CJK KR Bold");
+    }
+
+    @font-face {
+      font-family: "Heti Hei Black";
+      font-weight: 800;
+      src: local("Lantinghei SC Heavy"), local("Lantinghei TC Heavy"), local("PingFang SC Semibold"), local("PingFang TC Semibold"), local("Hiragino Sans GB W6"), local("Heiti SC Medium"), local("Heiti TC Medium"), local("Microsoft YaHei Bold"), local("Microsoft Jhenghei Bold"), local("Source Han Sans CN Heavy"), local("Source Han Sans HK Heavy"), local("Source Han Sans TW Heavy"), local("Source Han Sans JP Heavy"), local("Source Han Sans KR Heavy"), local("Noto Sans CJK SC Heavy"), local("Noto Sans CJK TC Heavy"), local("Noto Sans CJK JP Heavy"), local("Noto Sans CJK KR Heavy"), local("Droid Sans Fallback");
+    }
+
+    @font-face {
+      font-family: "Heti Song";
+      src: local("Songti SC Regular"), local("Songti TC Regular"), local("SimSun");
+    }
+
+    @font-face {
+      font-family: "Heti Song";
+      font-weight: 200;
+      src: local("Songti SC Light"), local("Songti TC Light"), local("STSong"), local("SimSun");
+    }
+
+    @font-face {
+      font-family: "Heti Song";
+      font-weight: 600;
+      src: local("Songti SC Bold"), local("Songti TC Bold"), local("SimSun");
+    }
+
+    @font-face {
+      font-family: "Heti Song Black";
+      font-weight: 800;
+      src: local("Songti SC Black"), local("SimSun");
+    }
+
+    @font-face {
+      font-family: "Heti Kai";
+      src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("BiauKai");
+    }
+
+    @font-face {
+      font-family: "Heti Kai";
+      font-weight: 600;
+      src: local("Kaiti SC Bold"), local("Kaiti TC Bold");
+    }
+
+    @font-face {
+      font-family: "Heti Kai Black";
+      font-weight: 800;
+      src: local("Kaiti SC Black"), local("Kaiti TC Black");
+    }
+
+    .heti {
+      max-width: 42em;
+      font-size: 16px;
+      font-weight: 400;
+      -webkit-font-smoothing: subpixel-antialiased;
+      line-height: 1.5;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+
+    .heti::before, .heti::after {
+      content: "";
+      display: table;
+    }
+
+    .heti::after {
+      clear: both;
+    }
+
+    .heti > *:first-child,
+    .heti section > *:first-child,
+    .heti td > *:first-child {
+      margin-block-start: 0 !important;
+    }
+
+    .heti > *:last-child,
+    .heti section > *:last-child,
+    .heti td > *:last-child {
+      margin-block-end: 0 !important;
+    }
+
+    .heti blockquote {
+      margin-block-start: 12px;
+      margin-block-end: 24px;
+      margin-inline-start: 32px;
+      margin-inline-end: 32px;
+      padding-block-start: 12px;
+      padding-block-end: 12px;
+      padding-inline-start: 16px;
+      padding-inline-end: 16px;
+      background-color: rgba(0, 0, 0, 0.054);
+    }
+
+    [data-darkmode="dark"] .heti blockquote {
+      background-color: rgba(255, 255, 255, 0.054);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti blockquote {
+        background-color: rgba(255, 255, 255, 0.054);
+      }
+    }
+
+    .heti figure {
+      display: block;
+      text-align: center;
+    }
+
+    .heti figure > img {
+      display: block;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+    }
+
+    .heti hr {
+      width: 30%;
+      height: 1px;
+      margin-block-start: 48px;
+      margin-block-end: 47px;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      border: 0;
+      background-color: #cccccc;
+    }
+
+    [data-darkmode="dark"] .heti hr {
+      background-color: #404040;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti hr {
+        background-color: #404040;
+      }
+    }
+
+    .heti p {
+      margin-block-start: 12px;
+      margin-block-end: 24px;
+      text-align: justify;
+    }
+
+    .heti p:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti p:not(:lang(zh)) {
+      text-align: start;
+    }
+
+    .heti pre {
+      margin-block-start: 12px;
+      margin-block-end: 12px;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      padding-block-start: 12px;
+      padding-block-end: 12px;
+      padding-inline-start: 16px;
+      padding-inline-end: 16px;
+      overflow: auto;
+      font-family: "SFMono-Regular", consolas, "Liberation Mono", menlo, courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      white-space: pre;
+      word-wrap: normal;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.054);
+    }
+
+    [data-darkmode="dark"] .heti pre {
+      background-color: rgba(255, 255, 255, 0.054);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti pre {
+        background-color: rgba(255, 255, 255, 0.054);
+      }
+    }
+
+    .heti pre code {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background-color: transparent;
+      color: inherit;
+    }
+
+    .heti h1,
+    .heti h2,
+    .heti h3,
+    .heti h4,
+    .heti h5,
+    .heti h6 {
+      position: relative;
+      margin: 0;
+      margin-block-start: 24px;
+      margin-block-end: 12px;
+      font-weight: 600;
+    }
+
+    .heti h1 {
+      margin-block-end: 24px;
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    .heti h2 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    .heti h3 {
+      font-size: 20px;
+      line-height: 36px;
+    }
+
+    .heti h4 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .heti h5 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .heti h6 {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .heti h1,
+    .heti h2,
+    .heti h3 {
+      letter-spacing: 0.05em;
+    }
+
+    .heti h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti h1:not(:lang(zh)),
+    .heti h2:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+    .heti h2:not(:lang(zh)),
+    .heti h3:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+    .heti h3:not(:lang(zh)) {
+      letter-spacing: 0;
+    }
+
+    .heti h1 + h2,
+    .heti h2 + h3,
+    .heti h3 + h4,
+    .heti h4 + h5,
+    .heti h5 + h6 {
+      margin-block-start: 12px;
+    }
+
+    .heti ul,
+    .heti ol,
+    .heti dl {
+      margin-block-start: 12px;
+      margin-block-end: 24px;
+    }
+
+    .heti ul,
+    .heti ol {
+      padding-inline-start: 32px;
+    }
+
+    .heti ul ul,
+    .heti ul ol,
+    .heti ol ul,
+    .heti ol ol {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    .heti ul {
+      list-style-type: disc;
+    }
+
+    .heti ol {
+      list-style-type: decimal;
+    }
+
+    .heti ul ul,
+    .heti ol ul {
+      list-style-type: circle;
+    }
+
+    .heti ul ul ul,
+    .heti ul ol ul,
+    .heti ol ul ul,
+    .heti ol ol ul {
+      list-style-type: square;
+    }
+
+    .heti li {
+      list-style-type: unset;
+    }
+
+    .heti table {
+      box-sizing: border-box;
+      table-layout: fixed;
+      margin-block-start: 12px;
+      margin-block-end: 24px;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      border-collapse: collapse;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #cccccc;
+      word-break: break-word;
+    }
+
+    [data-darkmode="dark"] .heti table {
+      border-color: #404040;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti table {
+        border-color: #404040;
+      }
+    }
+
+    .heti th,
+    .heti td {
+      padding-block-start: 6px;
+      padding-block-end: 6px;
+      padding-inline-start: 8px;
+      padding-inline-end: 8px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #cccccc;
+    }
+
+    [data-darkmode="dark"] .heti th, [data-darkmode="dark"]
+    .heti td {
+      border-color: #404040;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti th, [data-darkmode="auto"]
+      .heti td {
+        border-color: #404040;
+      }
+    }
+
+    .heti caption {
+      caption-side: bottom;
+      margin-block-start: 2px;
+      margin-block-end: -4px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .heti a {
+      text-decoration: none;
+    }
+
+    .heti a:hover {
+      padding-block-end: 1px;
+      border-block-end: 1px solid currentColor;
+      text-decoration: none;
+    }
+
+    .heti abbr[title] {
+      padding-block-end: 1px;
+      border-block-end: 1px dotted;
+      text-decoration: none;
+      cursor: help;
+    }
+
+    .heti b,
+    .heti strong {
+      font-weight: 600;
+    }
+
+    .heti code {
+      margin-inline-start: 0.25em;
+      margin-inline-end: 0.25em;
+      font-family: "SFMono-Regular", consolas, "Liberation Mono", menlo, courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 0.875em;
+    }
+
+    .heti dfn {
+      font-weight: 600;
+    }
+
+    .heti dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti dfn:not(:lang(zh)) {
+      font-weight: 400;
+    }
+
+    .heti em {
+      font-weight: 600;
+    }
+
+    .heti figcaption {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      text-align: start;
+    }
+
+    .heti i {
+      font-style: italic;
+    }
+
+    .heti ins,
+    .heti u {
+      padding-block-end: 1px;
+      border-block-end: 1px solid;
+      text-decoration: none;
+    }
+
+    .heti mark {
+      padding-block-start: 2px;
+      padding-block-end: 2px;
+      padding-inline-start: 1px;
+      padding-inline-end: 1px;
+      margin-inline-start: 1px;
+      margin-inline-end: 1px;
+      background-color: rgba(255, 247, 0, 0.88);
+      color: inherit;
+    }
+
+    [data-darkmode="dark"] .heti mark {
+      background-color: rgba(77, 74, 0, 0.88);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti mark {
+        background-color: rgba(77, 74, 0, 0.88);
+      }
+    }
+
+    .heti q {
+      quotes: "「" "」" "『" "』";
+    }
+
+    .heti q:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti q:not(:lang(zh)) {
+      quotes: initial;
+      quotes: auto;
+    }
+
+    .heti rt {
+      font-size: 0.875em;
+      font-weight: 400;
+    }
+
+    .heti small {
+      font-size: 0.875em;
+    }
+
+    .heti strong {
+      font-weight: 600;
+    }
+
+    .heti sub,
+    .heti sup {
+      position: relative;
+      margin-inline-start: 0.25em;
+      margin-inline-end: 0.25em;
+      font-size: 0.75em;
+      font-family: "Helvetica Neue", helvetica, arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-style: normal;
+      line-height: 1;
+      vertical-align: baseline;
+    }
+
+    .heti sub {
+      bottom: -0.25em;
+    }
+
+    .heti sup {
+      top: -0.5em;
+    }
+
+    .heti sup:target,
+    .heti sup a:target {
+      background-color: #dbedff;
+    }
+
+    [data-darkmode="dark"] .heti sup:target, [data-darkmode="dark"]
+    .heti sup a:target {
+      background-color: #3a6188;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti sup:target, [data-darkmode="auto"]
+      .heti sup a:target {
+        background-color: #3a6188;
+      }
+    }
+
+    .heti summary {
+      padding-inline-start: 1em;
+      outline: 0;
+      cursor: pointer;
+    }
+
+    .heti summary::-webkit-details-marker {
+      width: 0.6em;
+      margin-inline-end: 0.4em;
+    }
+
+    .heti u[title] {
+      cursor: help;
+      border-block-end-width: 3px;
+      border-block-end-style: double;
+      border-block-end-color: rgba(0, 0, 0, 0.54);
+    }
+
+    [data-darkmode="dark"] .heti u[title] {
+      border-block-end-color: rgba(255, 255, 255, 0.54);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti u[title] {
+        border-block-end-color: rgba(255, 255, 255, 0.54);
+      }
+    }
+
+    .heti address,
+    .heti cite,
+    .heti dfn,
+    .heti dt,
+    .heti em {
+      font-style: normal;
+    }
+
+    .heti address:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti address:not(:lang(zh)),
+    .heti cite:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+    .heti cite:not(:lang(zh)),
+    .heti dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+    .heti dfn:not(:lang(zh)),
+    .heti dt:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+    .heti dt:not(:lang(zh)),
+    .heti em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+    .heti em:not(:lang(zh)) {
+      font-style: italic;
+    }
+
+    .heti abbr[title],
+    .heti del,
+    .heti ins,
+    .heti s,
+    .heti u {
+      margin-inline-start: 1px;
+      margin-inline-end: 1px;
+    }
+
+    .heti, .heti--sans {
+      font-family: "Helvetica Neue", helvetica, arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .heti--serif {
+      font-family: "Times New Roman", times, "Heti Song", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .heti--classic {
+      font-family: "Times New Roman", times, "Heti Song", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .heti--classic h1,
+    .heti--classic h2,
+    .heti--classic h3,
+    .heti--classic h4,
+    .heti--classic h5,
+    .heti--classic h6 {
+      font-family: "Times New Roman", times, "Heti Kai Black", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-weight: 800;
+    }
+
+    .heti--classic blockquote,
+    .heti--classic cite,
+    .heti--classic q {
+      font-family: "Times New Roman", times, "Heti Kai", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .heti--classic figcaption,
+    .heti--classic caption,
+    .heti--classic th {
+      font-family: "Helvetica Neue", helvetica, arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .heti--hei {
+      font-family: "Helvetica Neue", helvetica, arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .heti--song {
+      font-family: "Times New Roman", times, "Heti Song", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .heti--kai {
+      font-family: "Times New Roman", times, "Heti Kai", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .heti--columns-1, .heti--columns-2, .heti--columns-3, .heti--columns-4, .heti--columns-16em, .heti--columns-20em, .heti--columns-24em, .heti--columns-28em, .heti--columns-32em, .heti--columns-36em, .heti--columns-40em, .heti--columns-44em, .heti--columns-48em, .heti comma {
+      max-width: none;
+      column-gap: 2em;
+    }
+
+    .heti--columns-1 p, .heti--columns-2 p, .heti--columns-3 p, .heti--columns-4 p, .heti--columns-16em p, .heti--columns-20em p, .heti--columns-24em p, .heti--columns-28em p, .heti--columns-32em p, .heti--columns-36em p, .heti--columns-40em p, .heti--columns-44em p, .heti--columns-48em p, .heti comma p {
+      margin-block-start: 6px;
+      margin-block-end: 12px;
+      text-indent: 2em;
+    }
+
+    .heti--columns-1 {
+      column-count: 1;
+    }
+
+    .heti--columns-2 {
+      column-count: 2;
+    }
+
+    .heti--columns-3 {
+      column-count: 3;
+    }
+
+    .heti--columns-4 {
+      column-count: 4;
+    }
+
+    .heti--columns-16em {
+      column-width: 16em;
+    }
+
+    .heti--columns-20em {
+      column-width: 20em;
+    }
+
+    .heti--columns-24em {
+      column-width: 24em;
+    }
+
+    .heti--columns-28em {
+      column-width: 28em;
+    }
+
+    .heti--columns-32em {
+      column-width: 32em;
+    }
+
+    .heti--columns-36em {
+      column-width: 36em;
+    }
+
+    .heti--columns-40em {
+      column-width: 40em;
+    }
+
+    .heti--columns-44em {
+      column-width: 44em;
+    }
+
+    .heti--columns-48em {
+      column-width: 48em;
+    }
+
+    .heti--vertical {
+      max-width: none;
+      max-height: 42em;
+      writing-mode: vertical-rl;
+      letter-spacing: 0.125em;
+    }
+
+    .heti--vertical h1,
+    .heti--vertical h2,
+    .heti--vertical h3,
+    .heti--vertical h4,
+    .heti--vertical h5,
+    .heti--vertical h6 {
+      text-align: start;
+    }
+
+    .heti--vertical q {
+      quotes: "「" "」" "『" "』";
+    }
+
+    .heti--ancient, .heti--poetry {
+      font-family: "Times New Roman", times, "Heti Song", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .heti--ancient h1,
+    .heti--ancient h2,
+    .heti--ancient h3,
+    .heti--ancient h4,
+    .heti--ancient h5,
+    .heti--ancient h6, .heti--poetry h1,
+    .heti--poetry h2,
+    .heti--poetry h3,
+    .heti--poetry h4,
+    .heti--poetry h5,
+    .heti--poetry h6 {
+      font-family: "Times New Roman", times, "Heti Kai Black", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .heti--ancient h1 .heti-meta,
+    .heti--ancient h2 .heti-meta,
+    .heti--ancient h3 .heti-meta,
+    .heti--ancient h4 .heti-meta,
+    .heti--ancient h5 .heti-meta,
+    .heti--ancient h6 .heti-meta, .heti--poetry h1 .heti-meta,
+    .heti--poetry h2 .heti-meta,
+    .heti--poetry h3 .heti-meta,
+    .heti--poetry h4 .heti-meta,
+    .heti--poetry h5 .heti-meta,
+    .heti--poetry h6 .heti-meta {
+      font-weight: 400;
+    }
+
+    @media screen and (min-width: 640px) {
+      .heti--ancient h1 .heti-meta,
+      .heti--ancient h2 .heti-meta,
+      .heti--ancient h3 .heti-meta,
+      .heti--ancient h4 .heti-meta,
+      .heti--ancient h5 .heti-meta,
+      .heti--ancient h6 .heti-meta, .heti--poetry h1 .heti-meta,
+      .heti--poetry h2 .heti-meta,
+      .heti--poetry h3 .heti-meta,
+      .heti--poetry h4 .heti-meta,
+      .heti--poetry h5 .heti-meta,
+      .heti--poetry h6 .heti-meta {
+        position: absolute;
+        line-height: inherit;
+        text-indent: 0;
+        display: inline;
+        margin-block-start: 4px;
+        margin-inline-start: 8px;
+      }
+    }
+
+    .heti--ancient .heti-meta, .heti--poetry .heti-meta {
+      line-height: 24px;
+      text-align: center;
+      text-indent: 0;
+    }
+
+    .heti--ancient p {
+      text-indent: 2em;
+    }
+
+    .heti--poetry p {
+      text-align: center;
+      text-indent: 0;
+    }
+
+    .heti--annotation p {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      line-height: 2.25;
+      text-indent: 2em;
+    }
+
+    .heti--annotation em {
+      -webkit-text-emphasis: filled circle;
+      -webkit-text-emphasis-position: under;
+      font-weight: 400;
+    }
+
+    .heti--annotation em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti--annotation em:not(:lang(zh)) {
+      -webkit-text-emphasis: none;
+    }
+
+    .heti--annotation .heti-meta {
+      margin-block-start: 12px;
+      margin-block-end: 24px;
+    }
+
+    .heti .heti-meta {
+      display: block;
+      text-indent: 0;
+    }
+
+    .heti .heti-verse {
+      text-align: center;
+      text-indent: 0;
+    }
+
+    .heti .heti-large {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .heti .heti-x-large {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+    }
+
+    .heti .heti-small {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .heti .heti-x-small {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .heti .heti-list-latin {
+      list-style-type: upper-latin;
+    }
+
+    .heti .heti-list-latin ol {
+      list-style-type: lower-roman;
+    }
+
+    .heti .heti-list-latin ol ol {
+      list-style-type: lower-latin;
+    }
+
+    .heti .heti-list-han {
+      list-style-type: cjk-ideographic;
+    }
+
+    .heti .heti-list-han ol {
+      list-style-type: decimal;
+    }
+
+    .heti .heti-list-han ol ol {
+      list-style-type: decimal-leading-zero;
+    }
+
+    .heti .heti-fn {
+      margin-block-start: 59px;
+      border-block-start: 1px solid;
+      border-block-start-color: #cccccc;
+      font-size: 14px;
+      font-family: "Helvetica Neue", helvetica, arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      line-height: 24px;
+    }
+
+    [data-darkmode="dark"] .heti .heti-fn {
+      border-block-start-color: #404040;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti .heti-fn {
+        border-block-start-color: #404040;
+      }
+    }
+
+    .heti .heti-fn ol {
+      margin-block-start: 12px;
+      margin-block-end: 0;
+    }
+
+    .heti .heti-fn li:target {
+      background-color: #dbedff;
+    }
+
+    [data-darkmode="dark"] .heti .heti-fn li:target {
+      background-color: #3a6188;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-darkmode="auto"] .heti .heti-fn li:target {
+        background-color: #3a6188;
+      }
+    }
+
+    .heti .heti-hang {
+      position: absolute;
+      line-height: inherit;
+      text-indent: 0;
+    }
+
+    .heti .heti-em {
+      -webkit-text-emphasis: filled circle;
+      -webkit-text-emphasis-position: under;
+    }
+
+    .heti .heti-em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti .heti-em:not(:lang(zh)) {
+      -webkit-text-emphasis: none;
+    }
+
+    .heti .heti-ruby--inline {
+      display: inline-flex;
+      flex-direction: column-reverse;
+      height: 1.5em;
+    }
+
+    .heti .heti-ruby--inline rt {
+      display: inline;
+      margin-bottom: -0.25em;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .heti heti-spacing {
+      display: inline;
+    }
+
+    .heti heti-spacing + sup,
+    .heti heti-spacing + sub {
+      margin-inline-start: 0;
+    }
+
+    .heti .heti-spacing-start {
+      margin-inline-end: 0.25em;
+    }
+
+    .heti .heti-spacing-end {
+      margin-inline-start: 0.25em;
+    }
+
+    .heti heti-adjacent {
+      display: inline;
+    }
+
+    .heti .heti-adjacent-half {
+      margin-inline-end: -0.5em;
+    }
+
+    .heti .heti-adjacent-quarter {
+      margin-inline-end: -0.25em;
+    }
+</style>
+<script>
+    (function (global, factory) {
+        typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+        typeof define === 'function' && define.amd ? define(factory) :
+        (global = global || self, global.Heti = factory());
+    }(this, (function () { 'use strict';
+
+        var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+        function createCommonjsModule(fn, module) {
+            return module = { exports: {} }, fn(module, module.exports), module.exports;
+        }
+
+        var findAndReplaceDOMText = createCommonjsModule(function (module) {
+        /**
+         * findAndReplaceDOMText v 0.4.6
+         * @author James Padolsey http://james.padolsey.com
+         * @license http://unlicense.org/UNLICENSE
+         *
+         * Matches the text of a DOM node against a regular expression
+         * and replaces each match (or node-separated portions of the match)
+         * in the specified element.
+         */
+         (function (root, factory) {
+             if ( module.exports) {
+                 // Node/CommonJS
+                 module.exports = factory();
+             } else {
+                 // Browser globals
+                 root.findAndReplaceDOMText = factory();
+             }
+         }(commonjsGlobal, function factory() {
+
+            var PORTION_MODE_RETAIN = 'retain';
+            var PORTION_MODE_FIRST = 'first';
+
+            var doc = document;
+            var hasOwn = {}.hasOwnProperty;
+
+            function escapeRegExp(s) {
+                return String(s).replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
+            }
+
+            function exposed() {
+                // Try deprecated arg signature first:
+                return deprecated.apply(null, arguments) || findAndReplaceDOMText.apply(null, arguments);
+            }
+
+            function deprecated(regex, node, replacement, captureGroup, elFilter) {
+                if ((node && !node.nodeType) && arguments.length <= 2) {
+                    return false;
+                }
+                var isReplacementFunction = typeof replacement == 'function';
+
+                if (isReplacementFunction) {
+                    replacement = (function(original) {
+                        return function(portion, match) {
+                            return original(portion.text, match.startIndex);
+                        };
+                    }(replacement));
+                }
+
+                // Awkward support for deprecated argument signature (<0.4.0)
+                var instance = findAndReplaceDOMText(node, {
+
+                    find: regex,
+
+                    wrap: isReplacementFunction ? null : replacement,
+                    replace: isReplacementFunction ? replacement : '$' + (captureGroup || '&'),
+
+                    prepMatch: function(m, mi) {
+
+                        // Support captureGroup (a deprecated feature)
+
+                        if (!m[0]) throw 'findAndReplaceDOMText cannot handle zero-length matches';
+
+                        if (captureGroup > 0) {
+                            var cg = m[captureGroup];
+                            m.index += m[0].indexOf(cg);
+                            m[0] = cg;
+                        }
+
+                        m.endIndex = m.index + m[0].length;
+                        m.startIndex = m.index;
+                        m.index = mi;
+
+                        return m;
+                    },
+                    filterElements: elFilter
+                });
+
+                exposed.revert = function() {
+                    return instance.revert();
+                };
+
+                return true;
+            }
+
+            /**
+             * findAndReplaceDOMText
+             *
+             * Locates matches and replaces with replacementNode
+             *
+             * @param {Node} node Element or Text node to search within
+             * @param {RegExp} options.find The regular expression to match
+             * @param {String|Element} [options.wrap] A NodeName, or a Node to clone
+             * @param {String} [options.wrapClass] A classname to append to the wrapping element
+             * @param {String|Function} [options.replace='$&'] What to replace each match with
+             * @param {Function} [options.filterElements] A Function to be called to check whether to
+             *    process an element. (returning true = process element,
+             *    returning false = avoid element)
+             */
+            function findAndReplaceDOMText(node, options) {
+                return new Finder(node, options);
+            }
+
+            exposed.NON_PROSE_ELEMENTS = {
+                br:1, hr:1,
+                // Media / Source elements:
+                script:1, style:1, img:1, video:1, audio:1, canvas:1, svg:1, map:1, object:1,
+                // Input elements
+                input:1, textarea:1, select:1, option:1, optgroup: 1, button:1
+            };
+
+            exposed.NON_CONTIGUOUS_PROSE_ELEMENTS = {
+
+                // Elements that will not contain prose or block elements where we don't
+                // want prose to be matches across element borders:
+
+                // Block Elements
+                address:1, article:1, aside:1, blockquote:1, dd:1, div:1,
+                dl:1, fieldset:1, figcaption:1, figure:1, footer:1, form:1, h1:1, h2:1, h3:1,
+                h4:1, h5:1, h6:1, header:1, hgroup:1, hr:1, main:1, nav:1, noscript:1, ol:1,
+                output:1, p:1, pre:1, section:1, ul:1,
+                // Other misc. elements that are not part of continuous inline prose:
+                br:1, li: 1, summary: 1, dt:1, details:1, rp:1, rt:1, rtc:1,
+                // Media / Source elements:
+                script:1, style:1, img:1, video:1, audio:1, canvas:1, svg:1, map:1, object:1,
+                // Input elements
+                input:1, textarea:1, select:1, option:1, optgroup:1, button:1,
+                // Table related elements:
+                table:1, tbody:1, thead:1, th:1, tr:1, td:1, caption:1, col:1, tfoot:1, colgroup:1
+
+            };
+
+            exposed.NON_INLINE_PROSE = function(el) {
+                return hasOwn.call(exposed.NON_CONTIGUOUS_PROSE_ELEMENTS, el.nodeName.toLowerCase());
+            };
+
+            // Presets accessed via `options.preset` when calling findAndReplaceDOMText():
+            exposed.PRESETS = {
+                prose: {
+                    forceContext: exposed.NON_INLINE_PROSE,
+                    filterElements: function(el) {
+                        return !hasOwn.call(exposed.NON_PROSE_ELEMENTS, el.nodeName.toLowerCase());
+                    }
+                }
+            };
+
+            exposed.Finder = Finder;
+
+            /**
+             * Finder -- encapsulates logic to find and replace.
+             */
+            function Finder(node, options) {
+
+                // Add offset to fix browsers which don't support regex lookbehind.
+                if (!options.offset) {
+                    options.offset = 0;
+                }
+
+                var preset = options.preset && exposed.PRESETS[options.preset];
+
+                options.portionMode = options.portionMode || PORTION_MODE_RETAIN;
+
+                if (preset) {
+                    for (var i in preset) {
+                        if (hasOwn.call(preset, i) && !hasOwn.call(options, i)) {
+                            options[i] = preset[i];
+                        }
+                    }
+                }
+
+                this.node = node;
+                this.options = options;
+
+                // Enable match-preparation method to be passed as option:
+                this.prepMatch = options.prepMatch || this.prepMatch;
+
+                this.reverts = [];
+
+                this.matches = this.search();
+
+                if (this.matches.length) {
+                    this.processMatches();
+                }
+
+            }
+
+            Finder.prototype = {
+
+                /**
+                 * Searches for all matches that comply with the instance's 'match' option
+                 */
+                search: function() {
+
+                    var match;
+                    var matchIndex = 0;
+                    var offset = 0;
+                    var regex = this.options.find;
+                    var textAggregation = this.getAggregateText();
+                    var matches = [];
+                    var self = this;
+
+                    regex = typeof regex === 'string' ? RegExp(escapeRegExp(regex), 'g') : regex;
+
+                    matchAggregation(textAggregation);
+
+                    function matchAggregation(textAggregation) {
+                        for (var i = 0, l = textAggregation.length; i < l; ++i) {
+
+                            var text = textAggregation[i];
+
+                            if (typeof text !== 'string') {
+                                // Deal with nested contexts: (recursive)
+                                matchAggregation(text);
+                                continue;
+                            }
+
+                            if (regex.global) {
+                                while (match = regex.exec(text)) {
+                                    matches.push(self.prepMatch(match, matchIndex++, offset));
+                                }
+                            } else {
+                                if (match = text.match(regex)) {
+                                    matches.push(self.prepMatch(match, 0, offset));
+                                }
+                            }
+
+                            offset += text.length;
+                        }
+                    }
+
+                    return matches;
+
+                },
+
+                /**
+                 * Prepares a single match with useful meta info:
+                 */
+                prepMatch: function(match, matchIndex, characterOffset) {
+
+                    if (!match[0]) {
+                        throw new Error('findAndReplaceDOMText cannot handle zero-length matches');
+                    }
+
+                    match.endIndex = characterOffset + match.index + match[0].length;
+                    match.startIndex = characterOffset + match.index;
+                    match.index = matchIndex;
+
+                    return match;
+                },
+
+                /**
+                 * Gets aggregate text within subject node
+                 */
+                getAggregateText: function() {
+
+                    var elementFilter = this.options.filterElements;
+                    var forceContext = this.options.forceContext;
+
+                    return getText(this.node);
+
+                    /**
+                     * Gets aggregate text of a node without resorting
+                     * to broken innerText/textContent
+                     */
+                    function getText(node) {
+
+                        if (node.nodeType === Node.TEXT_NODE) {
+                            return [node.data];
+                        }
+
+                        if (elementFilter && !elementFilter(node)) {
+                            return [];
+                        }
+
+                        var txt = [''];
+                        var i = 0;
+
+                        if (node = node.firstChild) do {
+
+                            if (node.nodeType === Node.TEXT_NODE) {
+                                txt[i] += node.data;
+                                continue;
+                            }
+
+                            var innerText = getText(node);
+
+                            if (
+                                forceContext &&
+                                node.nodeType === Node.ELEMENT_NODE &&
+                                (forceContext === true || forceContext(node))
+                            ) {
+                                txt[++i] = innerText;
+                                txt[++i] = '';
+                            } else {
+                                if (typeof innerText[0] === 'string') {
+                                    // Bridge nested text-node data so that they're
+                                    // not considered their own contexts:
+                                    // I.e. ['some', ['thing']] -> ['something']
+                                    txt[i] += innerText.shift();
+                                }
+                                if (innerText.length) {
+                                    txt[++i] = innerText;
+                                    txt[++i] = '';
+                                }
+                            }
+                        } while (node = node.nextSibling);
+
+                        return txt;
+
+                    }
+
+                },
+
+                /**
+                 * Steps through the target node, looking for matches, and
+                 * calling replaceFn when a match is found.
+                 */
+                processMatches: function() {
+
+                    var matches = this.matches;
+                    var node = this.node;
+                    var elementFilter = this.options.filterElements;
+
+                    var startPortion,
+                        endPortion,
+                        innerPortions = [],
+                        curNode = node,
+                        match = matches.shift(),
+                        atIndex = 0, // i.e. nodeAtIndex
+                        portionIndex = 0,
+                        doAvoidNode,
+                        nodeStack = [node];
+
+                    out: while (true) {
+
+                        if (curNode.nodeType === Node.TEXT_NODE) {
+
+                            if (!endPortion && curNode.length + atIndex >= match.endIndex) {
+                                // We've found the ending
+                                // (Note that, in the case of a single portion, it'll be an
+                                // endPortion, not a startPortion.)
+                                endPortion = {
+                                    node: curNode,
+                                    index: portionIndex++,
+                                    text: curNode.data.substring(match.startIndex - atIndex + this.options.offset, match.endIndex - atIndex),
+
+                                    // If it's the first match (atIndex==0) we should just return 0
+                                    indexInMatch: atIndex === 0 ? 0 : atIndex - match.startIndex,
+
+                                    indexInNode: match.startIndex - atIndex + this.options.offset,
+                                    endIndexInNode: match.endIndex - atIndex,
+                                    isEnd: true
+                                };
+
+                            } else if (startPortion) {
+                                // Intersecting node
+                                innerPortions.push({
+                                    node: curNode,
+                                    index: portionIndex++,
+                                    text: curNode.data,
+                                    indexInMatch: atIndex - match.startIndex,
+                                    indexInNode: 0 // always zero for inner-portions
+                                });
+                            }
+
+                            if (!startPortion && curNode.length + atIndex > match.startIndex) {
+                                // We've found the match start
+                                startPortion = {
+                                    node: curNode,
+                                    index: portionIndex++,
+                                    indexInMatch: 0,
+                                    indexInNode: match.startIndex - atIndex + this.options.offset,
+                                    endIndexInNode: match.endIndex - atIndex,
+                                    text: curNode.data.substring(match.startIndex - atIndex + this.options.offset, match.endIndex - atIndex)
+                                };
+                            }
+
+                            atIndex += curNode.data.length;
+
+                        }
+
+                        doAvoidNode = curNode.nodeType === Node.ELEMENT_NODE && elementFilter && !elementFilter(curNode);
+
+                        if (startPortion && endPortion) {
+
+                            curNode = this.replaceMatch(match, startPortion, innerPortions, endPortion);
+
+                            // processMatches has to return the node that replaced the endNode
+                            // and then we step back so we can continue from the end of the
+                            // match:
+
+                            atIndex -= (endPortion.node.data.length - endPortion.endIndexInNode);
+
+                            startPortion = null;
+                            endPortion = null;
+                            innerPortions = [];
+                            match = matches.shift();
+                            portionIndex = 0;
+
+                            if (!match) {
+                                break; // no more matches
+                            }
+
+                        } else if (
+                            !doAvoidNode &&
+                            (curNode.firstChild || curNode.nextSibling)
+                        ) {
+                            // Move down or forward:
+                            if (curNode.firstChild) {
+                                nodeStack.push(curNode);
+                                curNode = curNode.firstChild;
+                            } else {
+                                curNode = curNode.nextSibling;
+                            }
+                            continue;
+                        }
+
+                        // Move forward or up:
+                        while (true) {
+                            if (curNode.nextSibling) {
+                                curNode = curNode.nextSibling;
+                                break;
+                            }
+                            curNode = nodeStack.pop();
+                            if (curNode === node) {
+                                break out;
+                            }
+                        }
+
+                    }
+
+                },
+
+                /**
+                 * Reverts ... TODO
+                 */
+                revert: function() {
+                    // Reversion occurs backwards so as to avoid nodes subsequently
+                    // replaced during the matching phase (a forward process):
+                    for (var l = this.reverts.length; l--;) {
+                        this.reverts[l]();
+                    }
+                    this.reverts = [];
+                },
+
+                prepareReplacementString: function(string, portion, match) {
+                    var portionMode = this.options.portionMode;
+                    if (
+                        portionMode === PORTION_MODE_FIRST &&
+                        portion.indexInMatch > 0
+                    ) {
+                        return '';
+                    }
+                    string = string.replace(/\$(\d+|&|`|')/g, function($0, t) {
+                        var replacement;
+                        switch(t) {
+                            case '&':
+                                replacement = match[0];
+                                break;
+                            case '`':
+                                replacement = match.input.substring(0, match.startIndex);
+                                break;
+                            case '\'':
+                                replacement = match.input.substring(match.endIndex);
+                                break;
+                            default:
+                                replacement = match[+t] || '';
+                        }
+                        return replacement;
+                    });
+
+                    if (portionMode === PORTION_MODE_FIRST) {
+                        return string;
+                    }
+
+                    if (portion.isEnd) {
+                        return string.substring(portion.indexInMatch);
+                    }
+
+                    return string.substring(portion.indexInMatch, portion.indexInMatch + portion.text.length);
+                },
+
+                getPortionReplacementNode: function(portion, match) {
+
+                    var replacement = this.options.replace || '$&';
+                    var wrapper = this.options.wrap;
+                    var wrapperClass = this.options.wrapClass;
+
+                    if (wrapper && wrapper.nodeType) {
+                        // Wrapper has been provided as a stencil-node for us to clone:
+                        var clone = doc.createElement('div');
+                        clone.innerHTML = wrapper.outerHTML || new XMLSerializer().serializeToString(wrapper);
+                        wrapper = clone.firstChild;
+                    }
+
+                    if (typeof replacement == 'function') {
+                        replacement = replacement(portion, match);
+                        if (replacement && replacement.nodeType) {
+                            return replacement;
+                        }
+                        return doc.createTextNode(String(replacement));
+                    }
+
+                    var el = typeof wrapper == 'string' ? doc.createElement(wrapper) : wrapper;
+
+                     if (el && wrapperClass) {
+                        el.className = wrapperClass;
+                    }
+
+                    replacement = doc.createTextNode(
+                        this.prepareReplacementString(
+                            replacement, portion, match
+                        )
+                    );
+
+                    if (!replacement.data) {
+                        return replacement;
+                    }
+
+                    if (!el) {
+                        return replacement;
+                    }
+
+                    el.appendChild(replacement);
+
+                    return el;
+                },
+
+                replaceMatch: function(match, startPortion, innerPortions, endPortion) {
+
+                    var matchStartNode = startPortion.node;
+                    var matchEndNode = endPortion.node;
+
+                    var precedingTextNode;
+                    var followingTextNode;
+
+                    if (matchStartNode === matchEndNode) {
+
+                        var node = matchStartNode;
+
+                        if (startPortion.indexInNode > 0) {
+                            // Add `before` text node (before the match)
+                            precedingTextNode = doc.createTextNode(node.data.substring(0, startPortion.indexInNode));
+                            node.parentNode.insertBefore(precedingTextNode, node);
+                        }
+
+                        // Create the replacement node:
+                        var newNode = this.getPortionReplacementNode(
+                            endPortion,
+                            match
+                        );
+
+                        node.parentNode.insertBefore(newNode, node);
+
+                        if (endPortion.endIndexInNode < node.length) { // ?????
+                            // Add `after` text node (after the match)
+                            followingTextNode = doc.createTextNode(node.data.substring(endPortion.endIndexInNode));
+                            node.parentNode.insertBefore(followingTextNode, node);
+                        }
+
+                        node.parentNode.removeChild(node);
+
+                        this.reverts.push(function() {
+                            if (precedingTextNode === newNode.previousSibling) {
+                                precedingTextNode.parentNode.removeChild(precedingTextNode);
+                            }
+                            if (followingTextNode === newNode.nextSibling) {
+                                followingTextNode.parentNode.removeChild(followingTextNode);
+                            }
+                            newNode.parentNode.replaceChild(node, newNode);
+                        });
+
+                        return newNode;
+
+                    } else {
+                        // Replace matchStartNode -> [innerMatchNodes...] -> matchEndNode (in that order)
+
+
+                        precedingTextNode = doc.createTextNode(
+                            matchStartNode.data.substring(0, startPortion.indexInNode)
+                        );
+
+                        followingTextNode = doc.createTextNode(
+                            matchEndNode.data.substring(endPortion.endIndexInNode)
+                        );
+
+                        var firstNode = this.getPortionReplacementNode(
+                            startPortion,
+                            match
+                        );
+
+                        var innerNodes = [];
+
+                        for (var i = 0, l = innerPortions.length; i < l; ++i) {
+                            var portion = innerPortions[i];
+                            var innerNode = this.getPortionReplacementNode(
+                                portion,
+                                match
+                            );
+                            portion.node.parentNode.replaceChild(innerNode, portion.node);
+                            this.reverts.push((function(portion, innerNode) {
+                                return function() {
+                                    innerNode.parentNode.replaceChild(portion.node, innerNode);
+                                };
+                            }(portion, innerNode)));
+                            innerNodes.push(innerNode);
+                        }
+
+                        var lastNode = this.getPortionReplacementNode(
+                            endPortion,
+                            match
+                        );
+
+                        matchStartNode.parentNode.insertBefore(precedingTextNode, matchStartNode);
+                        matchStartNode.parentNode.insertBefore(firstNode, matchStartNode);
+                        matchStartNode.parentNode.removeChild(matchStartNode);
+
+                        matchEndNode.parentNode.insertBefore(lastNode, matchEndNode);
+                        matchEndNode.parentNode.insertBefore(followingTextNode, matchEndNode);
+                        matchEndNode.parentNode.removeChild(matchEndNode);
+
+                        this.reverts.push(function() {
+                            precedingTextNode.parentNode.removeChild(precedingTextNode);
+                            firstNode.parentNode.replaceChild(matchStartNode, firstNode);
+                            followingTextNode.parentNode.removeChild(followingTextNode);
+                            lastNode.parentNode.replaceChild(matchEndNode, lastNode);
+                        });
+
+                        return lastNode;
+                    }
+                }
+
+            };
+
+            return exposed;
+
+        }));
+        });
+
+        /**
+         * Heti add-on v 0.1.0
+         * Add right spacing between CJK & ANS characters
+         */
+
+        const hasOwn = {}.hasOwnProperty;
+        const HETI_NON_CONTIGUOUS_ELEMENTS = Object.assign({}, findAndReplaceDOMText.NON_CONTIGUOUS_PROSE_ELEMENTS, {
+          ins: 1, del: 1, s: 1, a: 1,
+        });
+        const HETI_SKIPPED_ELEMENTS = Object.assign({}, findAndReplaceDOMText.NON_PROSE_ELEMENTS, {
+          pre: 1, code: 1, sup: 1, sub: 1, 'heti-spacing': 1, 'heti-close': 1,
+        });
+        const HETI_SKIPPED_CLASS = 'heti-skip';
+
+        // 部分正则表达式修改自 pangu.js https://github.com/vinta/pangu.js
+        const CJK = '\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30fa\u30fc-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff';
+        const A = 'A-Za-z\u0080-\u00ff\u0370-\u03ff';
+        const N = '0-9';
+        const S = '`~!@#\\$%\\^&\\*\\(\\)-_=\\+\\[\\]{}\\\\\\|;:\'",<.>\\/\\?';
+        const ANS = `${A}${N}${S}`;
+        const REG_CJK_FULL = `(?<=[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`;
+        const REG_CJK_START = `([${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`;
+        const REG_CJK_END = `(?<=[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)*)`;
+        const REG_CJK_FULL_WITHOUT_LOOKBEHIND = `(?:[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`;
+        const REG_CJK_END_WITHOUT_LOOKBEHIND = `(?:[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)*)`;
+        const REG_BD_STOP = `。．，、：；！‼？⁇`;
+        const REG_BD_SEP = `·・‧`;
+        const REG_BD_OPEN = `「『（《〈【〖〔［｛`;
+        const REG_BD_CLOSE = `」』）》〉】〗〕］｝`;
+        const REG_BD_START = `${REG_BD_OPEN}${REG_BD_CLOSE}`;
+        const REG_BD_END = `${REG_BD_STOP}${REG_BD_OPEN}${REG_BD_CLOSE}`;
+        const REG_BD_HALF_OPEN = `“‘`;
+        const REG_BD_HALF_CLOSE = `”’`;
+        const REG_BD_HALF_START = `${REG_BD_HALF_OPEN}${REG_BD_HALF_CLOSE}`;
+
+        class Heti {
+          constructor (rootSelector) {
+            let supportLookBehind = true;
+
+            try {
+              new RegExp(`(?<=\d)\d`, 'g').test('');
+            } catch (err) {
+              console.info(err.name, '该浏览器尚未实现 RegExp positive lookbehind');
+              supportLookBehind = false;
+            }
+
+            this.rootSelector = rootSelector || '.heti';
+            this.REG_FULL = new RegExp(supportLookBehind ? REG_CJK_FULL : REG_CJK_FULL_WITHOUT_LOOKBEHIND, 'g');
+            this.REG_START = new RegExp(REG_CJK_START, 'g');
+            this.REG_END = new RegExp(supportLookBehind ? REG_CJK_END : REG_CJK_END_WITHOUT_LOOKBEHIND, 'g');
+            this.offsetWidth = supportLookBehind ? 0 : 1;
+            this.funcForceContext = function forceContext (el) {
+              return hasOwn.call(HETI_NON_CONTIGUOUS_ELEMENTS, el.nodeName.toLowerCase())
+            };
+            this.funcFilterElements = function filterElements (el) {
+              return (
+                !(el.classList && el.classList.contains(HETI_SKIPPED_CLASS)) &&
+                !hasOwn.call(HETI_SKIPPED_ELEMENTS, el.nodeName.toLowerCase())
+              )
+            };
+          }
+
+          spacingElements (elmList) {
+            for (let $$root of elmList) {
+              this.spacingElement($$root);
+            }
+          }
+
+          spacingElement ($$elm) {
+            const commonConfig = {
+              forceContext: this.funcForceContext,
+              filterElements: this.funcFilterElements,
+            };
+            const getWrapper = function (elementName, classList, text) {
+              const $$r = document.createElement(elementName);
+              $$r.className = classList;
+              $$r.textContent = text.trim();
+              return $$r
+            };
+
+            findAndReplaceDOMText($$elm, Object.assign({}, commonConfig, {
+              find: this.REG_FULL,
+              replace: portion => getWrapper('heti-spacing', 'heti-spacing-start heti-spacing-end', portion.text),
+              offset: this.offsetWidth,
+            }));
+
+            findAndReplaceDOMText($$elm, Object.assign({}, commonConfig, {
+              find: this.REG_START,
+              replace: portion => getWrapper('heti-spacing', 'heti-spacing-start', portion.text),
+            }));
+
+            findAndReplaceDOMText($$elm, Object.assign({}, commonConfig, {
+              find: this.REG_END,
+              replace: portion => getWrapper('heti-spacing', 'heti-spacing-end', portion.text),
+              offset: this.offsetWidth,
+            }));
+
+            findAndReplaceDOMText($$elm, Object.assign({}, commonConfig, {
+              find: new RegExp(`([${REG_BD_STOP}])(?=[${REG_BD_START}])|([${REG_BD_OPEN}])(?=[${REG_BD_OPEN}])|([${REG_BD_CLOSE}])(?=[${REG_BD_END}])`,'g'),
+              replace: portion => getWrapper('heti-adjacent', 'heti-adjacent-half', portion.text),
+              offset: this.offsetWidth,
+            }));
+
+            findAndReplaceDOMText($$elm, Object.assign({}, commonConfig, {
+              find: new RegExp(`([${REG_BD_SEP}])(?=[${REG_BD_OPEN}])|([${REG_BD_CLOSE}])(?=[${REG_BD_SEP}])`,'g'),
+              replace: portion => getWrapper('heti-adjacent', 'heti-adjacent-quarter', portion.text),
+              offset: this.offsetWidth,
+            }));
+
+            // 使用弯引号的情况下，在停顿符号接弯引号（如「。“」）或弯引号接全角开引号（如“《」）时，间距缩进调整到四分之一
+            findAndReplaceDOMText($$elm, Object.assign({}, commonConfig, {
+              find: new RegExp(`([${REG_BD_STOP}])(?=[${REG_BD_HALF_START}])|([${REG_BD_HALF_OPEN}])(?=[${REG_BD_OPEN}])`,'g'),
+              replace: portion => getWrapper('heti-adjacent', 'heti-adjacent-quarter', portion.text),
+              offset: this.offsetWidth,
+            }));
+          }
+
+          autoSpacing () {
+            document.addEventListener('DOMContentLoaded', () => {
+              const $$rootList = document.querySelectorAll(this.rootSelector);
+
+              for (let $$root of $$rootList) {
+                this.spacingElement($$root);
+              }
+            });
+          }
+        }
+
+        return Heti;
+
+    })));
+            
+    const heti = new Heti('.heti');
+    heti.autoSpacing();
+</script>
+
+</head>

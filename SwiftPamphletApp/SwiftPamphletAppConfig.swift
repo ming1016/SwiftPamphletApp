@@ -47,7 +47,7 @@ struct SPC {
     }
     
     static func rssStyle() -> String {
-        let data = loadBundleData("css.html")
+        let data = loadBundleData("css_cn.html")
         return String(data: data, encoding: .utf8) ?? ""
     }
     

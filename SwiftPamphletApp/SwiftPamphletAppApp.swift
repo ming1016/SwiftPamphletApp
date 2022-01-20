@@ -121,6 +121,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
         
+//        PlaySecurity.keyChain()
+        
 //        PlayArchitecture.error()
 //        PlayArchitecture.codable()
         

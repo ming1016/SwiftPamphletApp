@@ -155,6 +155,7 @@ final class AppVM: ObservableObject {
                     return
                 }
                 let repoName = expNotisKeys[stepCountExp]
+                await updateAlertMsg(msg: "已同步 \(repoName)：\(expNotis[repoName]?.description ?? "")")
                 // 网络请求 repo 的 commit，然后更新未读数
                 let gAPI = RESTful(host: .github)
                 do {
@@ -173,6 +174,9 @@ final class AppVM: ObservableObject {
                             i += 1
                         } // end for
                         i = f.unRead + i
+                        if i > 0 {
+                            await updateAlertMsg(msg: "有更新 \(repoName)：\(expNotis[repoName]?.description ?? "")")
+                        }
                         let _ = try RepoStoreDataHelper.update(i: DBRepoStore(
                             id: repoModel.id,
                             name: repoModel.name,
@@ -215,6 +219,7 @@ final class AppVM: ObservableObject {
                 return nil
             } else {
                 let userName = devsNotisKeys[stepCountDevs]
+                updateAlertMsg(msg: "已同步 \(userName)")
                 loadDBDevsLoal()
                 calculateDevsCountNotis()
                 stepCountDevs += 1
@@ -242,6 +247,7 @@ final class AppVM: ObservableObject {
                 return nil
             } else {
                 let repoName = reposNotisKeys[stepCountRepos]
+                updateAlertMsg(msg: "已同步 \(repoName)")
                 loadDBReposLoal()
                 calculateReposCountNotis()
                 stepCountRepos += 1
