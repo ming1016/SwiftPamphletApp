@@ -120,8 +120,7 @@ struct SwiftPamphletApp: View {
                         Text("用浏览器打开")
                         Label("Browser", systemImage: "safari")
                     }
-                    
-                    NSSharingService.menu(s: appVM.webLinkStr)
+                    ShareView(s: appVM.webLinkStr)
                 }
                 
             }
@@ -147,11 +146,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
         
+        
+        
+        
 //        PlaySecurity.keyChain()
         
 //        PlayArchitecture.error()
 //        PlayArchitecture.codable()
         
+//        PlaySyntax.generics()
 //        PlaySyntax.result()
 //        PlaySyntax.string()
 //        PlaySyntax.array()

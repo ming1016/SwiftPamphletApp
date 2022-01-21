@@ -22,8 +22,73 @@ extension URLSession {
     }
 }
 
+extension Array where Element == Int {
+    // 升序
+    func intSortedASC() -> [Int] {
+        return self.sorted(by: <)
+    }
+    // 降序
+    func intSortedDESC() -> [Int] {
+        return self.sorted(by: <)
+    }
+}
+
+protocol pc {
+    associatedtype T
+    mutating func add(_ p: T)
+}
+
 class PlaySyntax {
     
+    // MARK: - 泛型
+    static func generics() {
+        func fn<T>(p: T) -> [T] {
+            var r = [T]()
+            r.append(p)
+            return r
+        }
+
+        print(fn(p: "one"))
+
+        // 结构体
+        struct S1<T> {
+            var arr = [T]()
+            
+            mutating func add(_ p: T) {
+                arr.append(p)
+            }
+        }
+
+        var s1 = S1(arr: ["zero"])
+        s1.add("one")
+        s1.add("two")
+        print(s1.arr) // ["zero", "one", "two"]
+        
+        struct S2: pc {
+            typealias T = String // 类型推导，可省略
+            var strs = [String]()
+            mutating func add(_ p: String) {
+                strs.append(p)
+            }
+        }
+        
+        // 泛型适用于嵌套类型
+        struct S3<T> {
+            struct S4 {
+                var p: T
+            }
+            
+            var p1: T
+            var p2: S4
+        }
+        
+        let s2 = S3(p1: 1, p2: S3.S4(p: 3))
+        let s3 = S3(p1: "one", p2: S3.S4(p: "three"))
+        print(s2,s3)
+        
+    }
+    
+    // MARK: - Result
     static func result() {
         
         let url = URL(string: "https://ming1016.github.io/")!
@@ -51,6 +116,7 @@ class PlaySyntax {
         t2.resume()
     }
     
+    // MARK: - 数组
     static func array() {
         var a0: [Int] = [1, 10]
         a0.append(2)
@@ -104,6 +170,8 @@ class PlaySyntax {
         let a6 = [1,10,4,7,2]
         print(a6.sorted(by: >)) // [10, 7, 4, 2, 1]
         
+        print(a6.intSortedASC()) // 使用扩展增加自定义排序能力
+        
         // 第一个满足条件了就返回
         let a7 = a4.first {
             $0.n == 10
@@ -134,9 +202,19 @@ class PlaySyntax {
         // 去掉前3个
         print(a6.dropFirst(3)) // [7, 2]
         
-        
+        // prefix(while:) 和 drop(while:) 方法，顺序遍历执行闭包里的逻辑判断，满足条件就返回，遇到不匹配就会停止遍历。prefix 返回满足条件的元素集合，drop 返回停止遍历之后那些元素集合。
+        let a8 = [8, 9, 20, 1, 35, 3]
+        let a9 = a8.prefix {
+            $0 < 30
+        }
+        print(a9) // [8, 9, 20, 1]
+        let a10 = a8.drop {
+            $0 < 30
+        }
+        print(a10) // [35, 3]
     }
     
+    // MARK: - Set
     static func set() {
         let s0: Set<Int> = [2, 4]
         let s1: Set = [2, 10, 6, 4, 8]
@@ -167,17 +245,18 @@ class PlaySyntax {
         print(s8) // ["two", "three"]
     }
     
+    // MARK: - 字典
     static func dictionary() {
-        var d = [
+        var d1 = [
             "k1": "v1",
             "k2": "v2"
         ]
-        d["k3"] = "v3"
-        d["k4"] = nil
+        d1["k3"] = "v3"
+        d1["k4"] = nil
 
-        print(d) // ["k2": "v2", "k3": "v3", "k1": "v1"]
+        print(d1) // ["k2": "v2", "k3": "v3", "k1": "v1"]
 
-        for (k, v) in d {
+        for (k, v) in d1 {
             print("key is \(k), value is \(v)")
         }
         /*
@@ -186,11 +265,31 @@ class PlaySyntax {
          key is k3, value is v3
          */
          
-        if d.isEmpty == false {
-            print(d.count) // 3
+        if d1.isEmpty == false {
+            print(d1.count) // 3
         }
+        
+        // mapValues
+        let d2 = d1.mapValues {
+            $0 + "_new"
+        }
+        print(d2) // ["k2": "v2_new", "k3": "v3_new", "k1": "v1_new"]
+        
+        // 对字典的值或键进行分组
+        let d3 = Dictionary(grouping: d1.values) {
+            $0.count
+        }
+        print(d3) // [2: ["v1", "v2", "v3"]]
+        
+        // 从字典中取值，如果键对应无值，则使用通过 default 指定的默认值
+        d1["k5", default: "whatever"] += "."
+        print(d1["k5"] ?? "") // whatever.
+        let v1 = d1["k3", default: "whatever"]
+        print(v1) // v3
+        
     }
     
+    // MARK: - 字符串
     static func string() {
         let s1 = "Hi! This is a string. Cool?"
 
@@ -259,6 +358,10 @@ class PlaySyntax {
         let data = Data("hi".utf8)
         let s7 = String(decoding: data, as: UTF8.self)
         print(s7) // hi
+        
+        // 字符串可以当作集合来用。
+        let revered = s7.reversed()
+        print(String(revered))
     }
     
     

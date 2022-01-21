@@ -133,6 +133,10 @@
             {
                 "id":"root3nl/SupportApp",
                 "des":"企业支持 macOS 软件"
+            },
+            {
+                "id":"jaywcjlove/awesome-mac",
+                "des":"macOS 软件大全"
             }
         ]
     },
@@ -698,6 +702,10 @@
             {
                 "id":"kevquirk/simple.css",
                 "des":"简单大方基础 CSS 样式"
+            },
+            {
+                "id":"sivan/heti",
+                "des":"赫蹏（hètí）中文排版"
             },
             {
                 "id":"krzysztofzablocki/KZFileWatchers",
