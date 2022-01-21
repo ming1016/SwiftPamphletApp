@@ -106,16 +106,16 @@ struct SPSidebar: View {
         .listStyle(SidebarListStyle())
         .frame(minWidth: 160)
         .toolbar {
-            ToolbarItem {
-                Menu {
-                    Text("Ops！发现这里了")
-                    Text("彩蛋下个版本见")
-                    Text("隐藏彩蛋1")
-                    Text("隐藏彩蛋2")
-                } label: {
-                    Label("Label", systemImage: "slider.horizontal.3")
-                }
-            }
+//            ToolbarItem {
+//                Menu {
+//                    Text("Ops！发现这里了")
+//                    Text("彩蛋下个版本见")
+//                    Text("隐藏彩蛋1")
+//                    Text("隐藏彩蛋2")
+//                } label: {
+//                    Label("Label", systemImage: "slider.horizontal.3")
+//                }
+//            }
         }
         // end List
         

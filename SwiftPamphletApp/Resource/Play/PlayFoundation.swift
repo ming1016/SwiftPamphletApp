@@ -12,6 +12,17 @@ import SwiftDate
 
 class PlayFoundation {
     
+    // UserDefault
+    static func userDefaults() {
+        enum UDKey {
+            static let k1 = "token"
+        }
+        let ud = UserDefaults.standard
+        ud.set("xxxxxx", forKey: UDKey.k1)
+        let tk = ud.string(forKey: UDKey.k1)
+        print(tk ?? "")
+    }
+    
     // 随机
     static func random() {
         let ri = Int.random(in: 0..<10)

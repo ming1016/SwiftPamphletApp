@@ -94,12 +94,38 @@ struct SwiftPamphletApp: View {
         .navigationSubtitle(appVM.alertMsg)
         .toolbar {
             ToolbarItem(placement: ToolbarItemPlacement.navigation) {
+                Menu {
+                    Text("Ops！发现这里了")
+                    Text("彩蛋下个版本见")
+                    Text("隐藏彩蛋1")
+                    Text("隐藏彩蛋2")
+                } label: {
+                    Label("Label", systemImage: "slider.horizontal.3")
+                }
+            }
+            ToolbarItem(placement: ToolbarItemPlacement.navigation) {
                 Button {
                     NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
                 } label: {
                     Label("Sidebar", systemImage: "sidebar.left")
                 }
             }
+            
+            ToolbarItemGroup(placement: ToolbarItemPlacement.automatic) {
+                // 博客链接用浏览器打开，还有共享菜单进行分享用
+                if !appVM.webLinkStr.isEmpty {
+                    Button {
+                        gotoWebBrowser(urlStr: appVM.webLinkStr)
+                    } label: {
+                        Text("用浏览器打开")
+                        Label("Browser", systemImage: "safari")
+                    }
+                    
+                    NSSharingService.menu(s: appVM.webLinkStr)
+                }
+                
+            }
+            
         }
         .environmentObject(appVM)
         
@@ -132,6 +158,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        PlaySyntax.set()
 //        PlaySyntax.dictionary()
         
+        
+//        PlayFoundation.userDefaults()
 //        PlayFoundation.random()
 //        PlayFoundation.data()
 //        PlayFoundation.date()

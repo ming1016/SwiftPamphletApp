@@ -7,11 +7,25 @@
         "feedLink":"https://www.swift.org/atom.xml"
     },
     {
+        "title":"Release notes from iOS-Weekly",
+        "id":2201080951,
+        "des":"老司机 iOS 周报",
+        "siteLink":"https://github.com/SwiftOldDriver/iOS-Weekly/releases",
+        "feedLink":"https://github.com/SwiftOldDriver/iOS-Weekly/releases.atom"
+    },
+    {
         "title":"iOS摸鱼周报",
         "id":2201071620,
         "des":"iOS 摸鱼周报",
         "siteLink":"https://zhangferry.com/",
         "feedLink":"https://zhangferry.com/atom.xml"
+    },
+    {
+        "title":"Michael Tsai",
+        "id":2201111053,
+        "des":"一名 macOS 开发者的博客",
+        "siteLink":"https://mjtsai.com/blog",
+        "feedLink":"https://mjtsai.com/blog/feed/"
     },
     {
         "title":"少数派",
@@ -77,13 +91,6 @@
         "feedLink":"https://www.fivestars.blog/feed.rss"
     },
     {
-        "title":"Release notes from iOS-Weekly",
-        "id":2201080951,
-        "des":"老司机 iOS 周报",
-        "siteLink":"https://github.com/SwiftOldDriver/iOS-Weekly/releases",
-        "feedLink":"https://github.com/SwiftOldDriver/iOS-Weekly/releases.atom"
-    },
-    {
         "title":"SwiftUI Weekly",
         "id":2201081000,
         "des":"The curated collection of links about SwiftUI. Delivered every Monday.",
@@ -117,13 +124,6 @@
         "des":"Ruan YiFeng's Blog 科技爱好者周刊",
         "siteLink":"https://www.ruanyifeng.com/blog/",
         "feedLink":"https://www.ruanyifeng.com/blog/atom.xml"
-    },
-    {
-        "title":"Michael Tsai",
-        "id":2201111053,
-        "des":"一名 macOS 开发者的博客",
-        "siteLink":"https://mjtsai.com/blog",
-        "feedLink":"https://mjtsai.com/blog/feed/"
     },
     {
         "title":"The.Swift.Dev.",
