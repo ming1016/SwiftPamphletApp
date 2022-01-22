@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MarkdownUI
 
 struct IssueView: View {
     enum EnterType {
@@ -46,7 +45,7 @@ struct IssueView: View {
                             }
                         } // end HStack
                     }
-                    Markdown(vm.issue.body ?? "") // TODO: 等 SwiftUI 的 Text 支持完整的 markdown，再进行替换
+                    MarkdownView(s: vm.issue.body ?? "") // TODO: 等 SwiftUI 的 Text 支持完整的 markdown，再进行替换
                 } // end VStack
                 Spacer()
             } // end HStack
@@ -74,7 +73,7 @@ struct IssueView: View {
                         }
                         HStack {
                             VStack(alignment: .leading, spacing: 0) {
-                                Markdown(comment.body)
+                                MarkdownView(s: comment.body)
                             }
                             Spacer()
                         }

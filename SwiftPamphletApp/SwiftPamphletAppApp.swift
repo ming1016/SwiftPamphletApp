@@ -117,8 +117,8 @@ struct SwiftPamphletApp: View {
                     Button {
                         gotoWebBrowser(urlStr: appVM.webLinkStr)
                     } label: {
-                        Text("用浏览器打开")
                         Label("Browser", systemImage: "safari")
+                        Text("用浏览器打开")
                     }
                     ShareView(s: appVM.webLinkStr)
                 }

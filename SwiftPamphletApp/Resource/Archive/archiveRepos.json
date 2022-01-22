@@ -83,6 +83,10 @@
             {
                 "id":"jmpews/Dobby",
                 "des":"轻量多平台 Hook"
+            },
+            {
+                "id":"horsicq/XMachOViewer",
+                "des":"查看 Mach-O"
             }
         ]
     },

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MarkdownUI
 
 struct RepoView: View {
     enum EnterType {
@@ -119,7 +118,7 @@ struct ReadmeView: View {
     var content: String
     var body: some View {
         ScrollView {
-            Markdown(content.base64Decoded() ?? "failed")
+            MarkdownView(s: content.base64Decoded() ?? "failed")
                 .padding(10)
         }
     }
@@ -205,7 +204,6 @@ struct RepoCommitLabelView: View {
             HStack {
                 if commit.author != nil {
                     AsyncImageWithPlaceholder(size: .tinySize, url: commit.author?.avatarUrl ?? "")
-//                                Text(commit.author?.login ?? "").bold()
                     ButtonGoGitHubWeb(url: commit.author?.login ?? "", text: commit.author?.login ?? "", ignoreHost: true, bold: true)
 
                 } else {
@@ -213,7 +211,7 @@ struct RepoCommitLabelView: View {
                 }
                 ButtonGoGitHubWeb(url: "https://github.com/\(repo.fullName)/commit/\(commit.sha ?? "")", text: "commit")
             } // end HStack
-            Markdown(commit.commit.message ?? "")
+            MarkdownView(s: commit.commit.message ?? "")
         } // end VStack
     }
 }
@@ -225,7 +223,7 @@ struct IssueLabelView: View {
             GitHubApiTimeView(timeStr: issue.updatedAt)
             HStack {
                 Text(issue.title)
-                    .font(.title3)
+                    .font(.title2)
                 Text("\(issue.comments) 回复")
                     .foregroundColor(.secondary)
                     .font(.footnote)
@@ -234,7 +232,7 @@ struct IssueLabelView: View {
                 AsyncImageWithPlaceholder(size: .tinySize, url: issue.user.avatarUrl)
                 ButtonGoGitHubWeb(url: issue.user.login, text: issue.user.login, ignoreHost: true)
             }
-            Markdown(issue.body ?? "")
+            MarkdownView(s: issue.body ?? "")
         } // end VStack
     }
 }
@@ -252,7 +250,7 @@ struct IssueEventLabelView: View {
             }
             HStack {
                 Text(issueEvent.issue.title)
-                    .font(.title3)
+                    .font(.title2)
                 Text("\(issueEvent.issue.comments) 回复")
                     .foregroundColor(.secondary)
                     .font(.footnote)
@@ -261,7 +259,7 @@ struct IssueEventLabelView: View {
                 AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.issue.user.avatarUrl)
                 ButtonGoGitHubWeb(url: issueEvent.issue.user.login, text: issueEvent.issue.user.login, ignoreHost: true)
             }
-            Markdown(issueEvent.issue.body ?? "")
+            MarkdownView(s: issueEvent.issue.body ?? "")
         } // end VStack
     }
 }

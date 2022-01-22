@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MarkdownUI
 
 struct UserView: View {
     @EnvironmentObject var appVM: AppVM
@@ -131,7 +130,7 @@ struct ListCommits: View {
     var body: some View {
         ForEach(event.payload.commits ?? [PayloadCommitModel](), id: \.self) { c in
             ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/commit/\(c.sha ?? "")", text: "提交")
-            Text(c.message ?? "")
+            MarkdownView(s: c.message ?? "")
         }
     }
 }
@@ -183,13 +182,14 @@ struct AUserEventLabel: View {
             
             if event.payload.issue?.number != nil {
                 if event.payload.issue?.title != nil {
-                    Text(event.payload.issue?.title ?? "").bold()
+                    Text(event.payload.issue?.title ?? "")
+                        .font(.system(.title2))
                 }
                 if event.payload.issue?.body != nil && event.type != "IssueCommentEvent" {
-                    Markdown(event.payload.issue?.body ?? "")
+                    MarkdownView(s: event.payload.issue?.body ?? "")
                 }
                 if event.type == "IssueCommentEvent" && event.payload.comment?.body != nil {
-                    Markdown(event.payload.comment?.body ?? "")
+                    MarkdownView(s: event.payload.comment?.body ?? "")
                 }
             }
             
@@ -199,15 +199,16 @@ struct AUserEventLabel: View {
             
             if event.payload.pullRequest != nil {
                 if event.payload.pullRequest?.title != nil {
-                    Text(event.payload.pullRequest?.title ?? "").bold()
+                    Text(event.payload.pullRequest?.title ?? "")
+                        .font(.system(.title2))
                 }
                 if event.payload.pullRequest?.body != nil {
-                    Markdown(event.payload.pullRequest?.body ?? "")
+                    MarkdownView(s: event.payload.pullRequest?.body ?? "")
                 }
             }
 
             if event.payload.description != nil {
-                Markdown(event.payload.description ?? "")
+                MarkdownView(s: event.payload.description ?? "")
             }
         } // end VStack
     }

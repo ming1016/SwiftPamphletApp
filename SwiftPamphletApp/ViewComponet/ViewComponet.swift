@@ -7,6 +7,16 @@
 
 import SwiftUI
 import WebKit
+import MarkdownUI
+
+// MarkdownUI
+struct MarkdownView: View {
+    var s: String
+    var body: some View {
+        Markdown(s)
+            .markdownStyle(MarkdownStyle(font:.title3))
+    }
+}
 
 // 共享菜单
 struct ShareView: View {
@@ -18,21 +28,21 @@ struct ShareView: View {
                 p.declareTypes([.string], owner: nil)
                 p.setString(s, forType: .string)
             } label: {
-                Text("拷贝链接")
                 Image(systemName: "doc.on.doc")
+                Text("拷贝链接")
             }
             Divider()
             ForEach(NSSharingService.sharingServices(forItems: [""]), id: \.title) { item in
                 Button {
                     item.perform(withItems: [s])
                 } label: {
-                    Text(item.title)
                     Image(nsImage: item.image)
+                    Text(item.title)
                 }
             }
         } label: {
-            Text("分享")
             Image(systemName: "square.and.arrow.up")
+            Text("分享")
         }
     }
 }
