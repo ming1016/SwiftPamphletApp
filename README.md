@@ -2,7 +2,7 @@
 
 Swift 的手册，是个 macOS 程序。
 
-直接下载使用[戴铭的Swift小册子.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/7925674/Swift.zip)
+直接下载dmg使用：[戴铭的Swift小册子.dmg.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/7929581/Swift.dmg.zip)
 
 自己编译生成程序的方法是：
 
