@@ -1,4 +1,4 @@
-## 戴铭的 Swift 小册子 2.0
+## 戴铭的 Swift 小册子 3.1
 
 Swift 的手册，是个 macOS 程序。
 
