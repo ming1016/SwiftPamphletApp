@@ -1,11 +1,15 @@
 ## 戴铭的 Swift 小册子 2.0
 
-Swift 的手册，是个 macOS 程序。使用方法是：
+Swift 的手册，是个 macOS 程序。
+
+直接下载使用[戴铭的Swift小册子.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/7925674/Swift.zip)
+
+自己编译生成程序的方法是：
 
 ### 方式一：本地编译
 
-* 拉代码。
-* 在 SwiftPamphletAppConfig.swift 里 gitHubAccessToken 加入你的 GitHub Access Token。GitHub Access Token 在  [Personal Access Tokens](https://github.com/settings/tokens)  这里获取。记得scope 勾上 repo 和 user。
+* 拉代码。直接编译生成无 Github 功能的手册程序。
+* 如要带 Github 功能可在 SwiftPamphletAppConfig.swift 里 gitHubAccessToken 加入你的 GitHub Access Token。GitHub Access Token 在  [Personal Access Tokens](https://github.com/settings/tokens)  这里获取。记得scope 勾上 repo 和 user。
 * 使用Xcode编译生成这个手册程序或是连点两下compile.command。
 
 Xcode 和 macOS 都需要升到最新版。如果遇到 swift package 下载不下来的情况，参看这个议题来解决：[Issue #88](https://github.com/KwaiAppTeam/SwiftPamphletApp/issues/88)
