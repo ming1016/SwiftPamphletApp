@@ -14,7 +14,6 @@ struct SPC {
     static let githubHost = "https://github.com/"
     static let pamphletIssueRepoName = "KwaiAppTeam/SwiftPamphletApp"
     
-    static let timerForReposSec: Double = 120
     static let timerForDevsSec: Double = 160
     static let timerForExpSec: Double = 125
     static let timerForRssSec: Double = 60 * 60

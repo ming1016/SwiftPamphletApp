@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExploreRepoListView: View {
     @EnvironmentObject var appVM: AppVM
+    @State private var isExpended = false
     var body: some View {
         List {
             Section {
@@ -22,7 +23,8 @@ struct ExploreRepoListView: View {
             }
             // end Section
             ForEach(appVM.exps) { er in
-                Section {
+                
+                DisclosureGroup {
                     ForEach(er.repos) { r in
                         if (appVM.expNotis[r.id]?.unRead ?? 0) > 0 {
                             
@@ -32,10 +34,10 @@ struct ExploreRepoListView: View {
                             }
                         } // end if
                     } // end ForEach
-                } header: {
-                    Text(er.name).font(.title)
-                } // end Section
-                
+                } label: {
+                    Text(er.name).font(.title3)
+                }
+                .padding(EdgeInsets(top: 2, leading: 0, bottom: 2, trailing: 0))
             } // end ForEach
         } // end List
         .navigationTitle("👾 探索库")
@@ -106,8 +108,8 @@ struct ExpListLinkView: View {
                     .font(.footnote)
                     .foregroundColor(.secondary)
             }
-            Divider()
-                .padding(EdgeInsets(top: 5, leading: 0, bottom: 10, trailing: 0))
+//            Divider()
+//                .padding(EdgeInsets(top: 5, leading: 0, bottom: 10, trailing: 0))
         } // end VStack
         
     } // end body

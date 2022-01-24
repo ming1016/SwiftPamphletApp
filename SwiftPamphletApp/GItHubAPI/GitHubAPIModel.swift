@@ -128,6 +128,7 @@ struct RepoModel: Jsonable {
     var fullName: String = ""
     var description: String?
     var stargazersCount: Int = 0
+    var forks: Int = 0
     var openIssues: Int = 0
     var language: String?
     var htmlUrl: String?

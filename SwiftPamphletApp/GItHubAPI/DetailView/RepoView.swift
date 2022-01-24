@@ -25,7 +25,12 @@ struct RepoView: View {
                 HStack {
                     Text(vm.repo.name).font(.system(.largeTitle))
                     Text("(\(vm.repo.fullName))")
-                    Text("Star \(vm.repo.stargazersCount)")
+                }
+                HStack {
+                    Image(systemName: "star.fill").foregroundColor(.red)
+                    Text("\(vm.repo.stargazersCount)")
+                    Image(systemName: "tuningfork").foregroundColor(.cyan)
+                    Text("\(vm.repo.forks)")
                     Text("议题 \(vm.repo.openIssues)")
                     Text("语言 \(vm.repo.language ?? "")")
                     ButtonGoGitHubWeb(url: vm.repo.htmlUrl ?? "https://github.com", text: "在 GitHub 上访问")
