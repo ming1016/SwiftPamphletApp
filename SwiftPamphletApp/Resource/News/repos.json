@@ -1,5 +1,36 @@
 [
     {
+        "name":"新鲜事",
+        "id":2112231043,
+        "repos":[
+            {
+                "id":"SwiftOldDriver/iOS-Weekly",
+                "des":"老司机 iOS 周报"
+            },
+            {
+                "id":"matteocrippa/awesome-swift"
+            },
+            {
+                "id":"ruanyf/weekly",
+                "des":"科技爱好者周刊"
+            },
+            {
+                "id":"KwaiAppTeam/SwiftPamphletApp",
+                "des":"戴铭的 Swift 小册子"
+            }
+        ]
+    },
+    {
+        "name":"封装易用功能",
+        "id":2111231137,
+        "repos":[
+            {
+                "id":"SwifterSwift/SwifterSwift",
+                "des":"Handy Swift extensions"
+            }
+        ]
+    },
+    {
         "name":"SwiftUI扩展",
         "id":2112221651,
         "repos":[
@@ -25,6 +56,107 @@
             {
                 "id":"danielsaidi/SwiftUIKit",
                 "des":"给 SwiftUI 添加更多功能"
+            }
+        ]
+    },
+    {
+        "name":"图片",
+        "id":2111122010,
+        "repos":[
+            {
+                "id":"onevcat/Kingfisher"
+            },
+            {
+                "id":"kean/Nuke"
+            }
+        ]
+    },
+    {
+        "name":"文字处理",
+        "id":2111171958,
+        "repos":[
+            {
+                "id":"gonzalezreal/MarkdownUI"
+            }
+        ]
+    },
+    {
+        "name":"动画",
+        "id":2111111946,
+        "repos":[
+            {
+                "id":"recherst/kavsoft-swiftui-animations"
+            }
+        ]
+    },
+    {
+        "name":"持久化存储",
+        "id":2111231308,
+        "repos":[
+            {
+                "id":"stephencelis/SQLite.swift"
+            },
+            {
+                "id":"groue/GRDB.swift"
+            },
+            {
+                "id":"realm/realm-cocoa"
+            }
+        ]
+    },
+    {
+        "name":"编程范式",
+        "id":2111231120,
+        "repos":[
+            {
+                "id":"ReactiveX/RxSwift",
+                "des":"函数响应式编程"
+            },
+            {
+                "id":"pointfreeco/swift-composable-architecture"
+            },
+            {
+                "id":"onmyway133/awesome-ios-architecture"
+            }
+            
+        ]
+    },
+    {
+        "name":"路由",
+        "id":2111171408,
+        "repos":[
+            {
+                "id":"pointfreeco/swiftui-navigation"
+            }
+        ]
+    },
+    {
+        "name":"静态检查",
+        "id":2111231117,
+        "repos":[
+            {
+                "id":"realm/SwiftLint"
+            }
+        ]
+    },
+    {
+        "name":"系统能力",
+        "id":2111231122,
+        "repos":[
+            {
+                "id":"kishikawakatsumi/KeychainAccess"
+            }
+        ]
+    },
+    {
+        "name":"接口",
+        "id":2111212133,
+        "repos":[
+            {
+                "id":"OAuthSwift/OAuthSwift"
+            },
+            {
+                "id":"p2/OAuth2"
             }
         ]
     },
@@ -102,6 +234,16 @@
         "name":"macOS",
         "id":2112221735,
         "repos":[
+            {
+                "id":"serhii-londar/open-source-mac-os-apps",
+                "des":"开源 macOS 程序合集"
+            },
+            {
+                "id":"Ranchero-Software/NetNewsWire"
+            },
+            {
+                "id":"overtake/TelegramSwift"
+            },
             {
                 "id":"eonist/FileWatcher",
                 "des":"macOS 上监听文件变化"
@@ -190,16 +332,6 @@
         ]
     },
     {
-        "name":"新鲜事",
-        "id":2112231043,
-        "repos":[
-            {
-                "id":"ruanyf/weekly",
-                "des":"科技爱好者周刊"
-            }
-        ]
-    },
-    {
         "name":"聚合",
         "id":2112221948,
         "repos":[
@@ -240,12 +372,24 @@
         "id":2112241714,
         "repos":[
             {
+                "id":"tuist/tuist",
+                "des":"创建和维护 Xcode projects 文件"
+            },
+            {
+                "id":"swift-server/vscode-swift",
+                "des":"VSCode 的 Swift 扩展"
+            },
+            {
                 "id":"peripheryapp/periphery",
                 "des":"检测 Swift 无用代码"
             },
             {
                 "id":"nalexn/ViewInspector",
                 "des":"SwiftUI Runtime introspection 和 单元测试"
+            },
+            {
+                "id":"bazelbuild/bazel",
+                "des":"构建系统，不限于 iOS"
             }
         ]
     },
@@ -253,6 +397,12 @@
         "name":"网络",
         "id":2112231048,
         "repos":[
+            {
+                "id":"Alamofire/Alamofire"
+            },
+            {
+                "id":"socketio/socket.io-client-swift"
+            },
             {
                 "id":"Lojii/Knot",
                 "des":"使用 SwiftNIO 实现 HTTPS 抓包"
@@ -294,6 +444,10 @@
         "id":2112271545,
         "repos":[
             {
+                "id":"willdale/SwiftUICharts",
+                "des":"用于SwiftUI的图表绘图库"
+            },
+            {
                 "id":"lludo/SwiftSunburstDiagram",
                 "des":"SwiftUI 图表"
             },
@@ -312,6 +466,31 @@
         ]
     },
     {
+        "name":"音视频",
+        "id":2111241208,
+        "repos":[
+            {
+                "id":"iina/iina"
+            },
+            {
+                "id":"shogo4405/HaishinKit.swift",
+                "des":"RTMP, HLS"
+            },
+            {
+                "id":"AudioKit/AudioKit"
+            }
+        ]
+    },
+    {
+        "name":"服务器",
+        "id":2112071826,
+        "repos":[
+            {
+                "id":"vapor/vapor"
+            }
+        ]
+    },
+    {
         "name":"系统",
         "id":2112231101,
         "repos":[
@@ -325,6 +504,17 @@
         "name":"Apple",
         "id":2112212004,
         "repos":[
+            {
+                "id":"apple/swift"
+            },
+            {
+                "id":"apple/swift-evolution",
+                "des":"提案"
+            },
+            {
+                "id":"llvm/llvm-project",
+                "des":"编译器"
+            },
             {
                 "id":"apple/swift-corelibs-foundation"
             },
@@ -714,6 +904,14 @@
             {
                 "id":"malcommac/SwiftDate",
                 "des":"Swift编写的时间时区，时间比较等复杂处理的包装"
+            },
+            {
+                "id":"SwiftGGTeam/the-swift-programming-language-in-chinese",
+                "des":"中文版 Apple 官方 Swift 教程"
+            },
+            {
+                "id":"highlightjs/highlight.js",
+                "des":"语法高亮"
             }
         ]
     }

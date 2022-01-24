@@ -34,7 +34,6 @@ struct DB {
     
     func cTbs() throws {
         do {
-            try ReposNotiDataHelper.createTable()
             try DevsNotiDataHelper.createTable()
             try RepoStoreDataHelper.createTable()
             try RSSFeedDataHelper.createTable()

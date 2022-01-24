@@ -53,8 +53,6 @@ struct RepoView: View {
             }
         }
         .onDisappear {
-            appVM.reposNotis[vm.repoName] = 0
-            appVM.calculateReposCountNotis()
             appVM.expNotis[vm.repoName]?.unRead = 0
             appVM.calculateExpCountNotis()
         }
@@ -67,11 +65,6 @@ struct RepoView: View {
                 }
                 .onAppear(perform: {
                     vm.doing(.inCommit)
-                    if isCleanUnread == true {
-                        vm.doing(.clearUnReadCommit)
-                        appVM.reposNotis[vm.repoName] = SPC.unreadMagicNumber
-                        appVM.calculateReposCountNotis()
-                    }
                     if isCleanExpUnread == true {
                         vm.doing(.clearExpUnReadCommit)
                         appVM.expNotis[vm.repoName]?.unRead = SPC.unreadMagicNumber

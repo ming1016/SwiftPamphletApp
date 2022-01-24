@@ -16,76 +16,65 @@ struct SPSidebar: View {
                 NavigationLink {
                     RSSListView(vm: RSSVM())
                 } label: {
-                    Label("博客", systemImage: "r.square.on.square.fill")
+                    Label("博客与资讯", systemImage: "r.square.on.square.fill")
                         .badge(appVM.rssCountNotis)
                 }
-
-                
-                NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
-                    if appVM.devsCountNotis > 0 {
-                        Label("开发者", systemImage: "person.2.wave.2")
-                            .badge(appVM.devsCountNotis)
-                    } else {
-                        Label("开发者", systemImage: "person.2.wave.2")
-                    }
-                } // end NavigationLink
-                
-                NavigationLink(destination: GoodReposListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 31))) {
-                    if appVM.reposCountNotis > 0 {
-                        Label("好库", systemImage: "book.closed")
-                            .badge(appVM.reposCountNotis)
-                    } else {
-                        Label("好库", systemImage: "book.closed")
-                    }
-                } // end NavigationLink
-                
-                NavigationLink {
-                    ExploreRepoListView()
-                } label: {
-                    if appVM.expCountNotis > 0 {
-                        Label("探索库", systemImage: "globe.asia.australia")
-                            .badge(appVM.expCountNotis)
-                    } else {
-                        Label("探索库", systemImage: "globe.asia.australia")
-                    }
-                    
-                } // end NavigationLink
-
             }
-            Section("Swift指南") {
+            if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 19))) {
+            } else {
+                Section("Github") {
+                    NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
+                        if appVM.devsCountNotis > 0 {
+                            Label("开发者", systemImage: "person.2.wave.2")
+                                .badge(appVM.devsCountNotis)
+                        } else {
+                            Label("开发者", systemImage: "person.2.wave.2")
+                        }
+                    } // end NavigationLink
+                    
+                    NavigationLink {
+                        ExploreRepoListView()
+                    } label: {
+                        if appVM.expCountNotis > 0 {
+                            Label("探索库", systemImage: "globe.asia.australia")
+                                .badge(appVM.expCountNotis)
+                        } else {
+                            Label("探索库", systemImage: "globe.asia.australia")
+                        }
+                        
+                    } // end NavigationLink
+                    
+                    NavigationLink(destination: SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))) {
+                        Label("小册子议题", systemImage: "square.3.layers.3d.down.right")
+                    }
+                }
+            } // end if else
+            
+            Section("Swift指南") {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-syntax"))) {
                     Label("语法速查", systemImage: "function")
                 }
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 20))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-features"))) {
                     Label("特性", systemImage: "pencil")
                 }
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 21))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-subject"))) {
                     Label("专题", systemImage: "graduationcap")
                 }
             }
             Section("库使用指南") {
-                
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 60))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Combine"))) {
                     Label("Combine", systemImage: "app.connected.to.app.below.fill")
                 }
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 62))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Concurrency"))) {
                     Label("Concurrency", systemImage: "timer")
                 }
                 
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 61))) {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-SwiftUI"))) {
                     Label("SwiftUI", systemImage: "rectangle.fill.on.rectangle.fill")
-                }
-                
-                
-            }
-            
-            Section("小册子") {
-                NavigationLink(destination: SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))) {
-                    Label("小册子议题", systemImage: "square.3.layers.3d.down.right")
                 }
             }
             

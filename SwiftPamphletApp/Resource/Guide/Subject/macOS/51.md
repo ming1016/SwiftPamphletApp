@@ -1,0 +1,2 @@
+- 官方提供的两个例子，[Creating a macOS App](https://developer.apple.com/tutorials/swiftui/creating-a-macos-app)，[Building a Great Mac App with SwiftUI](https://developer.apple.com/documentation/swiftui/building_a_great_mac_app_with_swiftui) （有table和LazyVGrid的用法）。
+- [GitHub - adamayoung/Movies: Movies and TV Shows App for iOS, iPadOS, watchOS and macOS](https://github.com/adamayoung/Movies) 使用了SwiftUI和Combine，电影数据使用的是[The Movie Database (TMDB)](https://www.themoviedb.org/)的API

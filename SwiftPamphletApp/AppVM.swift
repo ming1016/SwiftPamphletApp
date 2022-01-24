@@ -14,9 +14,6 @@ final class AppVM: ObservableObject {
     @Published var alertMsg = "" // 警告信息
     @Published var webLinkStr = "" // 导航上的外部链接
     
-    // 仓库动态
-    @Published var reposNotis = [String: Int]()
-    @Published var reposCountNotis = 0
     // 开发者动态
     @Published var devsNotis = [String: Int]()
     @Published var devsCountNotis = 0
@@ -28,6 +25,19 @@ final class AppVM: ObservableObject {
     @Published var expNotis = [String: DBRepoStore]()
     @Published var expCountNotis = 0
     @Published var exps = [SPReposModel]()
+    
+    // MARK: - Combine
+    private var cc: [AnyCancellable] = []
+    private let apiSev: APISev
+    
+    // MARK: - Timer for get intervals data
+
+    // 开发者动态
+    private var stepCountDevs = 0
+    private var devsNotisKeys = [String]()
+    // 探索库
+    private var stepCountExp = 0
+    private var expNotisKeys = [String]()
     
     // MARK: - RSS 读取
     func rssFetch() {
@@ -72,15 +82,9 @@ final class AppVM: ObservableObject {
         
         Task {
             var expDic = [String: DBRepoStore]()
-            let gAPI = RESTful(host: .github)
             do {
-                let issueModel = try await gAPI.value(for: Github.repos(SPC.pamphletIssueRepoName).issues(108).get)
-                let str = issueModel.body?.base64Decoded() ?? ""
-                let data = str.data(using: String.Encoding.utf8)!
                 var grs = [SPReposModel]()
-                
-                let decoder = JSONDecoder()
-                grs = try decoder.decode([SPReposModel].self, from: data)
+                grs = loadBundleJSONFile("repos.json")
                 
                 for gr in grs {
                     for r in gr.repos {
@@ -129,15 +133,6 @@ final class AppVM: ObservableObject {
     }
     
     // MARK: - Timer for get intervals data
-    // 仓库动态
-    private var stepCountRepos = 0
-    private var reposNotisKeys = [String]()
-    // 开发者动态
-    private var stepCountDevs = 0
-    private var devsNotisKeys = [String]()
-    // 探索库
-    private var stepCountExp = 0
-    private var expNotisKeys = [String]()
     
     // 探索库
     func timeForExpEvent() {
@@ -231,94 +226,22 @@ final class AppVM: ObservableObject {
         }
     }
     
-    // 仓库动态
-    @MainActor
-    func timeForReposEvent() -> String? {
-        if reposNotis.count > 0 {
-            if stepCountRepos >= reposNotis.count {
-                stepCountRepos = 0
-            }
-            if reposNotisKeys.count == 0 {
-                for (k, _) in reposNotis {
-                    reposNotisKeys.append(k)
-                }
-            }
-            if stepCountRepos >= reposNotisKeys.count {
-                stepCountRepos = 0
-                return nil
-            } else {
-                let repoName = reposNotisKeys[stepCountRepos]
-                updateAlertMsg(msg: "已同步 \(repoName)")
-                loadDBReposLoal()
-                calculateReposCountNotis()
-                stepCountRepos += 1
-                return repoName
-            } // end if else
-            
-        } else {
-            return nil
-        }
-    }
-    
     // MARK: - On Appear Event
     func onAppearEvent() {
         nsck()
-        // 仓库数据读取
-        loadDBReposLoal()
-        apReposSj.send(())
         // 开发者数据读取
         loadDBDevsLoal()
-        apDevsSj.send(())
         // 探索更多库
         loadDBExpLoal()
         loadExpFromServer()
     }
     
-
     
-    // MARK: - Combine
-    
-    private var cc: [AnyCancellable] = []
-    
-    private let apiSev: APISev
-    
-    private let apReposSj = PassthroughSubject<Void, Never>()
-    private let resReposSj = PassthroughSubject<IssueModel, Never>()
-    private let apDevsSj = PassthroughSubject<Void, Never>()
-    private let resDevsSj = PassthroughSubject<IssueModel, Never>()
-    
-    init() {
-        self.apiSev = APISev()
-        // MARK: - 初始化数据库
-        let db = DB.shared
-        do {
-            try db.cTbs()
-        } catch {
-            
-        }
+    func refreshDev() {
         
-        // MARK: - 获取所有开发者通知信息
-        let reqDevsCustomIssues = IssueRequest(repoName: SPC.pamphletIssueRepoName, issueNumber: 30)
-        let resDevsSm = apDevsSj
-            .flatMap { [apiSev] in
-                apiSev.response(from: reqDevsCustomIssues)
-                    .catch { error -> Empty<IssueModel, Never> in
-                        return .init()
-                    }
-            }
-            .share()
-            .subscribe(resDevsSj)
-        var devsDic = [String: Int]()
-        func switchToDevsDic(issueModel: IssueModel) -> [String: Int] {
-            let str = issueModel.body?.base64Decoded() ?? ""
-            let data = str.data(using: String.Encoding.utf8)!
-            var ads = [SPActiveDevelopersModel]()
-            do {
-                let decoder = JSONDecoder()
-                ads = try decoder.decode([SPActiveDevelopersModel].self, from: data)
-            } catch {
-                return devsDic
-            }
+        func switchToDevsDic() -> [String: Int] {
+            var devsDic = [String: Int]()
+            let ads:[SPActiveDevelopersModel] = loadBundleJSONFile("developers.json")
             for ad in ads {
                 for d in ad.users {
                     do {
@@ -361,88 +284,22 @@ final class AppVM: ObservableObject {
             
             return devsDic
         }
-        let repDevsSm = resDevsSj
-            .map { issueModel in
-                return switchToDevsDic(issueModel: issueModel)
-            } // end map
-            .assign(to: \.devsNotis, on: self)
-        
-        
-        // MARK: - 获取所有仓库通知信息
-        let reqReposCustomIssues = IssueRequest(repoName: SPC.pamphletIssueRepoName, issueNumber: 31)
-        let resReposSm = apReposSj
-            .flatMap { [apiSev] in
-                apiSev.response(from: reqReposCustomIssues)
-                    .catch { error -> Empty<IssueModel, Never> in
-                        return .init()
-                    }
-            }
-            .share()
-            .subscribe(resReposSj)
-        var reposDic = [String: Int]()
-        func switchToReposDic(issueModel: IssueModel) -> [String: Int] {
-            let str = issueModel.body?.base64Decoded() ?? ""
-            let data = str.data(using: String.Encoding.utf8)!
-            var grs = [SPReposModel]()
-            do {
-                let decoder = JSONDecoder()
-                grs = try decoder.decode([SPReposModel].self, from: data)
-            } catch {
-                return reposDic
-            }
-            for gr in grs {
-                for r in gr.repos {
-                    do {
-                        if let fd = try ReposNotiDataHelper.find(sFullName: r.id) {
-                            reposDic[fd.fullName] = fd.unRead
-                        } else {
-                            do {
-                                let _ = try ReposNotiDataHelper.insert(i: DBRepoNoti(fullName: r.id, lastReadCommitSha: "", unRead: 0))
-                                reposDic[r.id] = 0
-                            } catch {
-                                return reposDic
-                            }
-                        }
-                    } catch {
-                        return reposDic
-                    }
-                    
-                } // end for
-            } // end for
+        devsNotis = switchToDevsDic()
+    }
+
+    // MARK: Combine
+    
+    init() {
+        self.apiSev = APISev()
+        // MARK: - 初始化数据库
+        let db = DB.shared
+        do {
+            try db.cTbs()
+        } catch {
             
-            // 远程已经删除的仓库，同步本地删除
-            if !(reposDic.count > 0) {
-                return reposDic
-            }
-            let reposDicKeys = reposDic.keys
-            do {
-                if let rpsn = try ReposNotiDataHelper.findAll() {
-                    for rpn in rpsn {
-                        if !reposDicKeys.contains(rpn.fullName) {
-                            do {
-                                try ReposNotiDataHelper.delete(i: rpn)
-                            } catch {
-                                return reposDic
-                            } // end do
-                        } // end if
-                    } // end for
-                } // end if let
-            } catch {
-                return reposDic
-            }
-            
-            return reposDic
         }
-        let repReposSm = resReposSj
-            .map { issueModel in
-                return switchToReposDic(issueModel: issueModel)
-            } // end map
-            .assign(to: \.reposNotis, on: self)
         
-        cc += [
-            resReposSm, repReposSm,
-            resDevsSm, repDevsSm
-        ]
+        
     }
     
     // MARK: 探索更多库，本地数据库读取
@@ -466,26 +323,6 @@ final class AppVM: ObservableObject {
                 } // end if
             } catch {}
         }
-    }
-    
-    
-    // MARK: 仓库动态，本地数据库读取
-    func loadDBReposLoal() {
-        do {
-            if let arr = try ReposNotiDataHelper.findAll() {
-                if arr.count > 0 {
-                    var ReposDic = [String: Int]()
-                    for i in arr {
-                        if reposNotis[i.fullName] ?? 0 >= SPC.unreadMagicNumber {
-                            ReposDic[i.fullName] = SPC.unreadMagicNumber
-                        } else {
-                            ReposDic[i.fullName] = i.unRead
-                        }
-                    } // end for
-                    reposNotis = ReposDic
-                } // end if
-            } // end if
-        } catch {}
     }
     
     // MARK: 开发者动态，本地数据库读取
@@ -525,23 +362,6 @@ final class AppVM: ObservableObject {
     }
     
     @MainActor
-    func calculateReposCountNotis() {
-        var count = 0
-        for i in reposNotis {
-            count += i.value
-            if count > SPC.unreadMagicNumber * 10 {
-                break
-            }
-        }
-        if count >= SPC.unreadMagicNumber {
-            count = count - SPC.unreadMagicNumber
-        }
-        reposCountNotis = count
-        showAppBadgeLabel()
-        
-    }
-    
-    @MainActor
     func calculateDevsCountNotis() {
         var count = 0
         for i in devsNotis {
@@ -558,7 +378,7 @@ final class AppVM: ObservableObject {
     }
     
     func showAppBadgeLabel() {
-        var count = reposCountNotis + devsCountNotis + expCountNotis + rssCountNotis
+        var count = devsCountNotis + expCountNotis + rssCountNotis
         if count > 0 {
             if count > SPC.unreadMagicNumber * 10 {
                 count = SPC.unreadMagicNumber * 10

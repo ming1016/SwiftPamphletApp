@@ -131,6 +131,10 @@
             {
                 "id":"kendfinger/MacHack",
                 "des":"不常见但有用的命令行工具"
+            },
+            {
+                "id":"starship/starship",
+                "des":"快速可定制提示 shell"
             }
         ]
     },

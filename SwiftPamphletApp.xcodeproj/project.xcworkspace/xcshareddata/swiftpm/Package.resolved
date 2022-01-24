@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "Ink",
+        "repositoryURL": "https://github.com/johnsundell/ink.git",
+        "state": {
+          "branch": null,
+          "revision": "77c3d8953374a9cf5418ef0bd7108524999de85a",
+          "version": "0.5.1"
+        }
+      },
+      {
         "package": "MarkdownUI",
         "repositoryURL": "https://github.com/gonzalezreal/MarkdownUI",
         "state": {

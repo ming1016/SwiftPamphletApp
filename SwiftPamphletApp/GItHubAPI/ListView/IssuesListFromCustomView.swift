@@ -15,7 +15,7 @@ struct IssuesListFromCustomView: View {
                 Section {
                     ForEach(ci.issues) { i in
                         NavigationLink {
-                            IssueView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: i.number))
+                            GuideView(number: i.number)
                         } label: {
                             Text(i.title)
                                 .bold()

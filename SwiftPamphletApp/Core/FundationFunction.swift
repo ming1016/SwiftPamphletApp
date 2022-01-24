@@ -11,6 +11,24 @@ import Combine
 import Network
 import SwiftDate
 
+
+// MARK: - Web
+func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> String {
+    return """
+<html lang="zh-Hans" data-darkmode="auto">
+\(SPC.rssStyle())
+<body>
+    <main class="container">
+        <article class="article heti heti--classic">
+        \(content)
+        </article>
+    </main>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/\(codeStyle).css">
+</html>
+"""
+}
+
 // MARK: - 时间
 func howLongFromNow(timeStr: String) -> String {
     let cn = Region(zone: Zones.asiaShanghai, locale: Locales.chineseChina)
@@ -118,7 +136,11 @@ func loadBundleData(_ filename: String) -> Data {
     } catch {
         fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
     }
-    
+}
+// 从 Bundle 中取出 String
+func loadBundleString(_ filename: String) -> String {
+    let d = loadBundleData(filename)
+    return String(decoding: d, as: UTF8.self)
 }
 
 // 读取指定路径下文件内容

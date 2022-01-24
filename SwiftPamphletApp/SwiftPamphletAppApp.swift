@@ -39,70 +39,68 @@ struct SwiftPamphletApp: View {
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
     
-    let timerForRepos = Timer.publish(every: SPC.timerForReposSec, on: .main, in: .common).autoconnect()
     let timerForDevs = Timer.publish(every: SPC.timerForDevsSec, on: .main, in: .common).autoconnect()
     let timerForExp = Timer.publish(every: SPC.timerForExpSec, on: .main, in: .common).autoconnect()
     let timerForRss = Timer.publish(every: SPC.timerForRssSec, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationView {
-            if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
-                VStack {
-                    Text("Ops!")
-                    Text("Token 未设置")
-                }
-                VStack {
-                    Text("请在 SwiftPamphletAppConfig.swift 的 gitHubAccessToken 加入你的 GitHub Access Token").font(.title)
-                    HStack {
-                        Text("在 GitHub")
-                        ButtonGoGitHubWeb(url: "settings/tokens", text: "点这里", ignoreHost: true)
-                        Text("进行申请")
-                    }
-                }
-            } else {
-                SPSidebar()
-                    .onAppear(perform: {
+            SPSidebar()
+                .onAppear(perform: {
+                    if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
+                        
+                    } else {
                         appVM.onAppearEvent()
-                        appVM.rssFetch()
-//                        SPC.outputRepo()
-                    })
-                    .onReceive(timerForRepos, perform: { time in
-                        if let repoName = appVM.timeForReposEvent() {
-                            let vm = RepoVM(repoName: repoName)
-                            vm.doing(.notiRepo)
-                        }
-                    })
-                    .onReceive(timerForDevs, perform: { time in
+                    }
+                    appVM.rssFetch()
+                })
+                .onReceive(timerForDevs, perform: { time in
+                    if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
+                        
+                    } else {
                         if let userName = appVM.timeForDevsEvent() {
                             let vm = UserVM(userName: userName)
                             vm.doing(.notiEvent)
                         }
-                        appVM.rssUpdateNotis() // 定时更新博客未读数
-                    })
-                    .onReceive(timerForExp) { time in
+                    }
+                    
+                    appVM.rssUpdateNotis() // 定时更新博客未读数
+                })
+                .onReceive(timerForExp) { time in
+                    if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
+                        
+                    } else {
                         appVM.timeForExpEvent()
                     }
-                    .onReceive(timerForRss) { time in
-                        appVM.rssFetch()
-                    }
+                }
+                .onReceive(timerForRss) { time in
+                    appVM.rssFetch()
+                }
+            if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
+                IssuesListFromCustomView(vm: IssueVM(guideName:"guide-syntax"))
+                    .frame(minWidth:60)
+            } else {
                 SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
-                IntroView()
-                NavView()
-            } // end if else
+            }
+            
+            IntroView()
+            NavView()
+            
+            
         } // end NavigationView
         .frame(minHeight: 650)
         .navigationTitle("戴铭的 Swift 小册子")
         .navigationSubtitle(appVM.alertMsg)
         .toolbar {
-            ToolbarItem(placement: ToolbarItemPlacement.navigation) {
-                Menu {
-                    Text("Ops！发现这里了")
-                    Text("彩蛋下个版本见")
-                    Text("隐藏彩蛋1")
-                    Text("隐藏彩蛋2")
-                } label: {
-                    Label("Label", systemImage: "slider.horizontal.3")
-                }
-            }
+//            ToolbarItem(placement: ToolbarItemPlacement.navigation) {
+//                Menu {
+//                    Text("Ops！发现这里了")
+//                    Text("彩蛋下个版本见")
+//                    Text("隐藏彩蛋1")
+//                    Text("隐藏彩蛋2")
+//                } label: {
+//                    Label("Label", systemImage: "slider.horizontal.3")
+//                }
+//            }
             ToolbarItem(placement: ToolbarItemPlacement.navigation) {
                 Button {
                     NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
@@ -114,27 +112,21 @@ struct SwiftPamphletApp: View {
             ToolbarItemGroup(placement: ToolbarItemPlacement.automatic) {
                 // 博客链接用浏览器打开，还有共享菜单进行分享用
                 if !appVM.webLinkStr.isEmpty {
+                    ShareView(s: appVM.webLinkStr)
                     Button {
                         gotoWebBrowser(urlStr: appVM.webLinkStr)
                     } label: {
                         Label("Browser", systemImage: "safari")
                         Text("用浏览器打开")
-                    }
-                    ShareView(s: appVM.webLinkStr)
-                }
+                    } // end Button
+                } // end if
                 
-            }
-            
-        }
+            } // end ToolbarItemGroup
+        } // end .toolbar
         .environmentObject(appVM)
         
     }
 }
-
-
-
-
-
 
 
 // MARK: - UnCat

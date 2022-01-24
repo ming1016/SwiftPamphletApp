@@ -12,12 +12,11 @@ final class IssueVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
     public let repoName: String
     public let issueNumber: Int
+    public let guideName: String
     @Published private(set) var issue: IssueModel
     @Published private(set) var comments: [IssueComment]
     @Published private(set) var customIssues: [CustomIssuesModel]
     @Published private(set) var cIADs: [SPActiveDevelopersModel] // 开发者动态
-    @Published private(set) var cIGRs: [SPReposModel] // 仓库动态
-    
     @Published var errHint = false
     @Published var errMsg = ""
     
@@ -29,18 +28,12 @@ final class IssueVM: APIVMable {
     
     private let apIssueSj = PassthroughSubject<Void, Never>()
     private let apCommentsSj = PassthroughSubject<Void, Never>()
-    private let apCustomIssuesSj = PassthroughSubject<Void, Never>()
-    private let apCIADsSj = PassthroughSubject<Void, Never>()
-    private let apCIGRsSj = PassthroughSubject<Void, Never>()
     
     private let resIssueSj = PassthroughSubject<IssueModel, Never>()
     private let resCommetsSj = PassthroughSubject<[IssueComment], Never>()
-    private let resCustomIssuesSj = PassthroughSubject<IssueModel, Never>()
-    private let resCIADsSj = PassthroughSubject<IssueModel, Never>()
-    private let resCIGRsSj = PassthroughSubject<IssueModel, Never>()
     
     enum IssueActionType {
-        case inInit, customIssues, ciads, cigrs, update
+        case inInit, customIssues, ciads, update
     }
     typealias ActionType = IssueActionType // 可在定义doing函数时，通过参数类型指定，类型推导出来
     func doing(_ somethinglike: IssueActionType) {
@@ -49,26 +42,24 @@ final class IssueVM: APIVMable {
             apIssueSj.send(())
             apCommentsSj.send(())
         case .customIssues: // 内容
-            apCustomIssuesSj.send(())
+            customIssues = loadBundleJSONFile(guideName + ".json")
         case .ciads: // 开发者动态
-            apCIADsSj.send(())
-        case .cigrs: // 仓库动态
-            apCIGRsSj.send(())
+            cIADs = loadBundleJSONFile("developers.json")
         case .update: // 更新
             apIssueSj.send(())
             apCommentsSj.send(())
         }
     }
     
-    init(repoName: String, issueNumber: Int) {
+    init(repoName: String = "", issueNumber: Int = 0, guideName: String = "") {
         self.repoName = repoName
         self.issueNumber = issueNumber
+        self.guideName = guideName
         self.apiSev = APISev()
         self.issue = IssueModel()
         self.comments = [IssueComment]()
         self.customIssues = [CustomIssuesModel]()
         self.cIADs = [SPActiveDevelopersModel]()
-        self.cIGRs = [SPReposModel]()
         
         // MARK: - 议题的信息获取
         let reqIssue = IssueRequest(repoName: repoName, issueNumber: issueNumber)
@@ -100,83 +91,6 @@ final class IssueVM: APIVMable {
         let repCommentsSm = resCommetsSj
             .assign(to: \.comments, on: self)
         
-        // MARK: - CustomIssues
-        let reqCustomIssues = IssueRequest(repoName: repoName, issueNumber: issueNumber)
-        let resCustomIssuesSm = apCustomIssuesSj
-            .flatMap { [apiSev] in
-                apiSev.response(from: reqCustomIssues)
-                    .catch { [weak self] error -> Empty<IssueModel, Never> in
-                        self?.errSj.send(error)
-                        return .init()
-                    }
-            }
-            .share()
-            .subscribe(resCustomIssuesSj)
-        let repCustomIssuesSm = resCustomIssuesSj
-            .map({ issueModel in
-                let str = issueModel.body?.base64Decoded() ?? ""
-                let data: Data
-                data = str.data(using: String.Encoding.utf8)!
-                do {
-                    let decoder = JSONDecoder()
-                    return try decoder.decode([CustomIssuesModel].self, from: data)
-                } catch {
-                    return [CustomIssuesModel]()
-                }
-            })
-            .assign(to: \.customIssues, on: self)
-        
-        // MARK: - 开发者动态
-        let resCIADsSm = apCIADsSj
-            .flatMap { [apiSev] in
-                apiSev.response(from: reqCustomIssues)
-                    .catch { [weak self] error -> Empty<IssueModel, Never> in
-                        self?.errSj.send(error)
-                        return .init()
-                    }
-            }
-            .share()
-            .subscribe(resCIADsSj)
-        let repCIADsSm = resCIADsSj
-            .map { issueModel in
-                let str = issueModel.body?.base64Decoded() ?? ""
-                let data: Data
-                data = str.data(using: String.Encoding.utf8)!
-                do {
-                    let decoder = JSONDecoder()
-                    return try decoder.decode([SPActiveDevelopersModel].self, from: data)
-                } catch {
-                    return [SPActiveDevelopersModel]()
-                }
-            }
-            .assign(to: \.cIADs, on: self)
-            
-        
-        // MARK: - 仓库动态
-        let resCIGRsSm = apCIGRsSj
-            .flatMap { [apiSev] in
-                apiSev.response(from: reqCustomIssues)
-                    .catch { [weak self] error -> Empty<IssueModel, Never> in
-                        self?.errSj.send(error)
-                        return .init()
-                    }
-            }
-            .share()
-            .subscribe(resCIGRsSj)
-        let repCIGRsSm = resCIGRsSj
-            .map { issueModel in
-                let str = issueModel.body?.base64Decoded() ?? ""
-                let data: Data
-                data = str.data(using: String.Encoding.utf8)!
-                do {
-                    let decoder = JSONDecoder()
-                    return try decoder.decode([SPReposModel].self, from: data)
-                } catch {
-                    return [SPReposModel]()
-                }
-            }
-            .assign(to: \.cIGRs, on: self)
-        
         // MARK: - 错误
         let errMsgSm = errSj
             .map { err -> String in
@@ -192,9 +106,6 @@ final class IssueVM: APIVMable {
         cancellables += [
             resIssueSm, repIssueSm,
             resCommentsSm, repCommentsSm,
-            resCustomIssuesSm, repCustomIssuesSm,
-            resCIADsSm, repCIADsSm,
-            resCIGRsSm, repCIGRsSm,
             errMsgSm, errHintSm
         ]
     }

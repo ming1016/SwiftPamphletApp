@@ -31,13 +31,8 @@ struct SPC {
         return ad
     }
     
-    static func goodRepos() -> [SPReposModel] {
-        let re: [SPReposModel] = loadBundleJSONFile("goodrepos.json")
-        return re
-    }
-    
-    static func ilikedrepos() -> [SPReposModel] {
-        let re: [SPReposModel] = loadBundleJSONFile("ilikedrepos.json")
+    static func repos() -> [SPReposModel] {
+        let re: [SPReposModel] = loadBundleJSONFile("repos.json")
         return re
     }
     
@@ -52,7 +47,7 @@ struct SPC {
     }
     
     static func outputRepo() {
-        let re = goodRepos()
+        let re = repos()
         for r in re {
             print("#### \(r.name)")
             for ar in r.repos {
