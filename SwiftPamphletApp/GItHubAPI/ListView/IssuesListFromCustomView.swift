@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct IssuesListFromCustomView: View {
+    @EnvironmentObject var appVM: AppVM
     @StateObject var vm: IssueVM
     var body: some View {
         List {
@@ -30,6 +31,9 @@ struct IssuesListFromCustomView: View {
         .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .onAppear {
             vm.doing(.customIssues)
+        }
+        .onDisappear {
+            appVM.updateWebLink(s: "")
         }
     }
 }

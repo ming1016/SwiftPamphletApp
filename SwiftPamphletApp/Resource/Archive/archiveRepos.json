@@ -169,5 +169,15 @@
                 "des":"一个基于Linux的iOS和SwiftUI服务器监控工具，使用远程proc文件系统和脚本执行。"
             }
         ]
+    },
+    {
+        "name":"待分类",
+        "id":2201250515,
+        "repos":[
+            {
+                "id":"alaskasquirrel/Lisp-China",
+                "des":"Lisp 资料"
+            }
+        ]
     }
 ]

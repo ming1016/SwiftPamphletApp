@@ -14,10 +14,7 @@ struct GuideView: View {
     var body: some View {
         WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(loadBundleString("\(number)" + ".md"))")), baseURLStr: "")
             .onAppear {
-                appVM.webLinkStr = "https://github.com/\(SPC.pamphletIssueRepoName)/issues/" + "\(number)"
-            }
-            .onDisappear {
-                appVM.webLinkStr = ""
+                appVM.updateWebLink(s: "https://github.com/\(SPC.pamphletIssueRepoName)/issues/" + "\(number)")
             }
     }
 }

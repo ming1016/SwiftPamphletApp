@@ -9,30 +9,40 @@ import SwiftUI
 
 struct ExploreRepoListView: View {
     @EnvironmentObject var appVM: AppVM
-    @State private var isExpended = false
+    @State var isExpanded = true
     var body: some View {
         List {
-            Section {
-                ForEach(appVM.exps) { er in
-                    ForEach(er.repos) { r in
-                        ExpListUnreadLinkView(r: r)
+            if SPC.gitHubAccessToken.isEmpty == false {
+                DisclosureGroup(isExpanded: $isExpanded) {
+                    ForEach(appVM.exps) { er in
+                        ForEach(er.repos) { r in
+                            ExpListUnreadLinkView(r: r)
+                        }
                     }
+                } label: {
+                    Text("刚更新的").font(.title3)
                 }
-            } header: {
-                Text("刚更新的").font(.title)
             }
+            
             // end Section
             ForEach(appVM.exps) { er in
-                
                 DisclosureGroup {
                     ForEach(er.repos) { r in
-                        if (appVM.expNotis[r.id]?.unRead ?? 0) > 0 {
+                        
+                        if SPC.gitHubAccessToken.isEmpty == false {
+                            if (appVM.expNotis[r.id]?.unRead ?? 0) > 0 {
+                                
+                            } else {
+                                NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
+                                    ExpListLinkView(r: r)
+                                }
+                            } // end if
                             
                         } else {
-                            NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
+                            NavigationLink(destination: RepoWebView(urlStr: SPC.githubHost + r.id)) {
                                 ExpListLinkView(r: r)
                             }
-                        } // end if
+                        } // end if token
                     } // end ForEach
                 } label: {
                     Text(er.name).font(.title3)
@@ -43,6 +53,9 @@ struct ExploreRepoListView: View {
         .navigationTitle("👾 探索库")
         .onAppear {
             appVM.loadExpFromServer()
+        }
+        .onDisappear {
+            appVM.updateWebLink(s: "")
         }
     }
 }

@@ -20,10 +20,20 @@ struct SPSidebar: View {
                         .badge(appVM.rssCountNotis)
                 }
             }
-            if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
+            Section("Github") {
+                NavigationLink {
+                    ExploreRepoListView()
+                } label: {
+                    if appVM.expCountNotis > 0 {
+                        Label("探索库", systemImage: "globe.asia.australia")
+                            .badge(appVM.expCountNotis)
+                    } else {
+                        Label("探索库", systemImage: "globe.asia.australia")
+                    }
+                    
+                } // end NavigationLink
                 
-            } else {
-                Section("Github") {
+                if SPC.gitHubAccessToken.isEmpty == false {
                     NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
                         if appVM.devsCountNotis > 0 {
                             Label("开发者", systemImage: "person.2.wave.2")
@@ -33,23 +43,9 @@ struct SPSidebar: View {
                         }
                     } // end NavigationLink
                     
-                    NavigationLink {
-                        ExploreRepoListView()
-                    } label: {
-                        if appVM.expCountNotis > 0 {
-                            Label("探索库", systemImage: "globe.asia.australia")
-                                .badge(appVM.expCountNotis)
-                        } else {
-                            Label("探索库", systemImage: "globe.asia.australia")
-                        }
-                        
-                    } // end NavigationLink
-                    
-                    NavigationLink(destination: SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))) {
-                        Label("小册子议题", systemImage: "square.3.layers.3d.down.right")
-                    }
-                }
-            } // end if else
+                } // end if
+            } // end Section
+            
             
             Section("Swift指南") {
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-syntax"))) {

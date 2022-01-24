@@ -14,7 +14,7 @@ import SwiftDate
 
 // MARK: - Web
 func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> String {
-    return """
+    let reStr = """
 <html lang="zh-Hans" data-darkmode="auto">
 \(SPC.rssStyle())
 <body>
@@ -24,9 +24,11 @@ func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> St
         </article>
     </main>
 </body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/\(codeStyle).css">
 </html>
 """
+    // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/\(codeStyle).css">
+    // writeToDownload(fileName: "a.html", content: reStr)
+    return reStr
 }
 
 // MARK: - 时间
@@ -112,6 +114,10 @@ func validHTTPUrlStrFromUrlStr(urlStr: String) -> String {
 
 
 // MARK: - 文件
+// just for test
+func writeToDownload(fileName: String, content: String) {
+    try! content.write(toFile: "/Users/mingdai/Downloads/\(fileName)", atomically: true, encoding: String.Encoding.utf8)
+}
 
 // 从Bundle中读取并解析JSON文件生成Model
 func loadBundleJSONFile<T: Decodable>(_ filename: String) -> T {

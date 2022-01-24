@@ -39,6 +39,12 @@ final class AppVM: ObservableObject {
     private var stepCountExp = 0
     private var expNotisKeys = [String]()
     
+    // MARK: WebLink
+    @MainActor
+    func updateWebLink(s: String) {
+        webLinkStr = s
+    }
+    
     // MARK: - RSS 读取
     func rssFetch() {
         Task {
@@ -230,6 +236,7 @@ final class AppVM: ObservableObject {
     func onAppearEvent() {
         nsck()
         // 开发者数据读取
+        refreshDev()
         loadDBDevsLoal()
         // 探索更多库
         loadDBExpLoal()
@@ -347,6 +354,9 @@ final class AppVM: ObservableObject {
     // MARK: - 计算通知数量
     @MainActor
     func calculateExpCountNotis() {
+        if SPC.gitHubAccessToken.isEmpty == true {
+            return
+        }
         var count = 0
         for i in expNotis {
             count += i.value.unRead

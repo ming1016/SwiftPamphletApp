@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct RSSItemsView: View {
+    @EnvironmentObject var appVM: AppVM
     @EnvironmentObject var vm: RSSVM
     var rssLink: String
     
     var body: some View {
         HStack {
-            
             Button {
                 vm.markAllAsRead(rssLink: rssLink)
             } label: {
@@ -47,6 +47,9 @@ struct RSSItemsView: View {
         } //  end List
         .onAppear {
             vm.showItems(rssLink: rssLink)
+        }
+        .onDisappear {
+            appVM.updateWebLink(s: "")
         }
     }
 }

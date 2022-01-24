@@ -46,17 +46,11 @@ struct SwiftPamphletApp: View {
         NavigationView {
             SPSidebar()
                 .onAppear(perform: {
-                    if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
-                        
-                    } else {
-                        appVM.onAppearEvent()
-                    }
+                    appVM.onAppearEvent()
                     appVM.rssFetch()
                 })
                 .onReceive(timerForDevs, perform: { time in
-                    if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
-                        
-                    } else {
+                    if SPC.gitHubAccessToken.isEmpty == false {
                         if let userName = appVM.timeForDevsEvent() {
                             let vm = UserVM(userName: userName)
                             vm.doing(.notiEvent)
@@ -66,22 +60,15 @@ struct SwiftPamphletApp: View {
                     appVM.rssUpdateNotis() // 定时更新博客未读数
                 })
                 .onReceive(timerForExp) { time in
-                    if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
-                        
-                    } else {
+                    if SPC.gitHubAccessToken.isEmpty == false {
                         appVM.timeForExpEvent()
                     }
                 }
                 .onReceive(timerForRss) { time in
                     appVM.rssFetch()
                 }
-            if SPC.gitHubAccessToken.isEmpty == SPC.gitHubAccessTokenJudge {
-                IssuesListFromCustomView(vm: IssueVM(guideName:"guide-syntax"))
-                    .frame(minWidth:60)
-            } else {
-                SPIssuesListView(vm: RepoVM(repoName: SPC.pamphletIssueRepoName))
-            }
-            
+            IssuesListFromCustomView(vm: IssueVM(guideName:"guide-syntax"))
+                .frame(minWidth:60)
             IntroView()
             NavView()
             

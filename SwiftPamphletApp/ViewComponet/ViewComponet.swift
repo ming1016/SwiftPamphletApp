@@ -47,7 +47,20 @@ struct ShareView: View {
     }
 }
 
-struct WebUIView : NSViewRepresentable {
+struct WebView: NSViewRepresentable {
+    let urlStr: String
+    
+    func makeNSView(context: Context) -> some WKWebView {
+        return WKWebView()
+    }
+    
+    func updateNSView(_ nsView: NSViewType, context: Context) {
+        let r = URLRequest(url: URL(string: urlStr)!)
+        nsView.load(r)
+    }
+}
+
+struct WebUIView: NSViewRepresentable {
     let html: String
     let baseURLStr: String
     
