@@ -74,6 +74,7 @@ final class AppVM: ObservableObject {
     func rssUpdateNotis() {
         do {
             rssCountNotis = try RSSItemsDataHelper.findAllUnreadCount()
+            showAppBadgeLabel()
         } catch {}
     }
     

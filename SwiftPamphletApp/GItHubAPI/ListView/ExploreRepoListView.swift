@@ -9,27 +9,26 @@ import SwiftUI
 
 struct ExploreRepoListView: View {
     @EnvironmentObject var appVM: AppVM
-    @State var isExpanded = true
     var body: some View {
         List {
             if SPC.gitHubAccessToken.isEmpty == false {
-                DisclosureGroup(isExpanded: $isExpanded) {
+                Section {
                     ForEach(appVM.exps) { er in
                         ForEach(er.repos) { r in
                             ExpListUnreadLinkView(r: r)
                         }
                     }
-                } label: {
+                } header: {
                     Text("刚更新的").font(.title3)
                 }
+                
             }
             
             // end Section
             ForEach(appVM.exps) { er in
-                DisclosureGroup {
-                    ForEach(er.repos) { r in
-                        
-                        if SPC.gitHubAccessToken.isEmpty == false {
+                if SPC.gitHubAccessToken.isEmpty == false {
+                    Section {
+                        ForEach(er.repos) { r in
                             if (appVM.expNotis[r.id]?.unRead ?? 0) > 0 {
                                 
                             } else {
@@ -38,16 +37,25 @@ struct ExploreRepoListView: View {
                                 }
                             } // end if
                             
-                        } else {
+                        }
+                    } header: {
+                        Text(er.name).font(.title3)
+                    }
+                } else {
+                    DisclosureGroup {
+                        ForEach(er.repos) { r in
                             NavigationLink(destination: RepoWebView(urlStr: SPC.githubHost + r.id)) {
                                 ExpListLinkView(r: r)
                             }
-                        } // end if token
-                    } // end ForEach
-                } label: {
-                    Text(er.name).font(.title3)
-                }
-                .padding(EdgeInsets(top: 2, leading: 0, bottom: 2, trailing: 0))
+                        } // end ForEach
+                    } label: {
+                        Text(er.name).font(.title3)
+                    }
+                    .padding(EdgeInsets(top: 2, leading: 0, bottom: 2, trailing: 0))
+                } // end if token
+                
+                
+                
             } // end ForEach
         } // end List
         .navigationTitle("👾 探索库")
