@@ -721,7 +721,7 @@
 				080387652766FF3200519B15 /* Network */,
 				086A5F482744EF2B00FECE02 /* ViewComponet */,
 				086A5F472744EF0800FECE02 /* Resource */,
-				086A5F252744ECD700FECE02 /* GItHubAPI */,
+				086A5F252744ECD700FECE02 /* GitHubAPI */,
 				08CD61F327758855008C0935 /* RSSReader */,
 				083554E227572BB60095E0EE /* AppVM.swift */,
 				086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */,
@@ -766,7 +766,7 @@
 			path = DetailView;
 			sourceTree = "<group>";
 		};
-		086A5F252744ECD700FECE02 /* GItHubAPI */ = {
+		086A5F252744ECD700FECE02 /* GitHubAPI */ = {
 			isa = PBXGroup;
 			children = (
 				086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */,
@@ -776,7 +776,7 @@
 				086A5F1E2744ECA400FECE02 /* DetailView */,
 				086A5F152744EC8900FECE02 /* ListView */,
 			);
-			path = GItHubAPI;
+			path = GitHubAPI;
 			sourceTree = "<group>";
 		};
 		086A5F3C2744EDB400FECE02 /* VM */ = {
