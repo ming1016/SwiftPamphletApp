@@ -20,13 +20,13 @@ struct DevsNotiDataHelper: DataHelperProtocol {
     static let lastReadId = Expression<String>("lastReadId")
     static let unRead = Expression<Int>("unRead")
     typealias T = DBDevNoti
-    
+
     static func createTable() throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
         do {
-            let _ = try db.run(table.create(ifNotExists: true) { t in
+            _ = try db.run(table.create(ifNotExists: true) { t in
                 t.column(login, unique: true)
                 t.column(lastReadId, defaultValue: "")
                 t.column(unRead, defaultValue: 0)
@@ -35,7 +35,7 @@ struct DevsNotiDataHelper: DataHelperProtocol {
             throw DBError.connectionErr
         }
     } // end createTable
-    
+
     static func insert(i: T) throws -> Int64 {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -51,7 +51,7 @@ struct DevsNotiDataHelper: DataHelperProtocol {
             throw DBError.insertErr
         }
     } // end insert
-    
+
     static func delete(i: T) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -66,7 +66,7 @@ struct DevsNotiDataHelper: DataHelperProtocol {
             throw DBError.deleteErr
         }
     } // end delete
-    
+
     static func find(sLogin: String) throws -> T? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -78,7 +78,7 @@ struct DevsNotiDataHelper: DataHelperProtocol {
         }
         return nil
     } // end find
-    
+
     static func update(i: T) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -86,7 +86,7 @@ struct DevsNotiDataHelper: DataHelperProtocol {
         let query = table.filter(login == i.login)
         do {
             if try db.run(query.update(lastReadId <- i.lastReadId, unRead <- i.unRead)) > 0 {
-                
+
             } else {
                 throw DBError.updateErr
             }
@@ -94,7 +94,7 @@ struct DevsNotiDataHelper: DataHelperProtocol {
             throw DBError.updateErr
         }
     } // end update
-    
+
     static func findAll() throws -> [T]? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -106,5 +106,5 @@ struct DevsNotiDataHelper: DataHelperProtocol {
         }
         return arr
     } // end find all
-    
+
 }

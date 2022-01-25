@@ -30,9 +30,9 @@ struct SPSidebar: View {
                     } else {
                         Label("探索库", systemImage: "globe.asia.australia")
                     }
-                    
+
                 } // end NavigationLink
-                
+
                 if SPC.gitHubAccessToken.isEmpty == false {
                     NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
                         if appVM.devsCountNotis > 0 {
@@ -42,20 +42,19 @@ struct SPSidebar: View {
                             Label("开发者", systemImage: "person.2.wave.2")
                         }
                     } // end NavigationLink
-                    
+
                 } // end if
             } // end Section
-            
-            
+
             Section("Swift指南") {
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-syntax"))) {
                     Label("语法速查", systemImage: "function")
                 }
-                
+
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-features"))) {
                     Label("特性", systemImage: "pencil")
                 }
-                
+
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-subject"))) {
                     Label("专题", systemImage: "graduationcap")
                 }
@@ -64,18 +63,16 @@ struct SPSidebar: View {
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Combine"))) {
                     Label("Combine", systemImage: "app.connected.to.app.below.fill")
                 }
-                
+
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Concurrency"))) {
                     Label("Concurrency", systemImage: "timer")
                 }
-                
+
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-SwiftUI"))) {
                     Label("SwiftUI", systemImage: "rectangle.fill.on.rectangle.fill")
                 }
             }
-            
-            
-            
+
 //            Section("个人") {
 //                /// isExpanded 来控制是否展开
 //                /// 详细查看WWDC：[WWDC 2020: Stacks, Grids, and Outlines in SwiftUI](https://developer.apple.com/videos/play/wwdc2020/10031/)
@@ -85,8 +82,7 @@ struct SPSidebar: View {
 //                    Label("我的", systemImage: "person")
 //                })
 //            }
-            
-            
+
         }
         .listStyle(SidebarListStyle())
         .frame(minWidth: 160)
@@ -103,7 +99,7 @@ struct SPSidebar: View {
 //            }
         }
         // end List
-        
+
         // MARK: - Mine
 //        Spacer()
 //        Mine()
@@ -117,7 +113,6 @@ struct Mine: View {
             Spacer()
         }
         .padding(20)
-        
+
     }
 }
-

@@ -12,4 +12,3 @@ struct LinkView: View {
         Link("访问我的博客",destination: URL(string: "https://ming1016.github.io/")!)
     }
 }
-

@@ -9,25 +9,25 @@ import Foundation
 import HTMLEntities
 
 final class RSSVM: ObservableObject {
-    
+
     @Published private(set) var rssFeeds = [RSSModel]()
     @Published private(set) var unReadCountDic = [String: Int]()
-    
+
     @Published private(set) var items = [RSSItemModel]()
     @Published private(set) var isReadDic = [String: Bool]()
-    
+
     func markAllAsRead(rssLink: String) {
         for item in items {
             isReadDic[item.link] = true
         }
         do {
-            let _ = try RSSItemsDataHelper.markAllRead(aRssLink: rssLink)
-            let _ = try RSSFeedDataHelper.updateUnReadCount(rssLinkStr: rssLink, unReadCountInt: 0)
-            let _ = try RSSItemsDataHelper.deleteExpiredFeedItems(aRssLink: rssLink)
+            _ = try RSSItemsDataHelper.markAllRead(aRssLink: rssLink)
+            _ = try RSSFeedDataHelper.updateUnReadCount(rssLinkStr: rssLink, unReadCountInt: 0)
+            _ = try RSSItemsDataHelper.deleteExpiredFeedItems(aRssLink: rssLink)
         } catch {}
         unReadCountDic[rssLink] = 0
     }
-    
+
     func showRssFeeds() {
         do {
             if let feeds = try RSSFeedDataHelper.findAll() {
@@ -44,10 +44,10 @@ final class RSSVM: ObservableObject {
                 }
                 rssFeeds = arr
             }
-            
+
         } catch {}
     }
-    
+
     func showItems(rssLink: String) {
         do {
             let rssItems = try RSSItemsDataHelper.findRssLink(sRssLink: rssLink)
@@ -66,23 +66,23 @@ final class RSSVM: ObservableObject {
             items = arr
         } catch {}
     }
-    
+
     func readContent(linkStr: String, rssLinkStr: String) {
         isReadDic[linkStr] = true
         do {
-            let _ = try RSSItemsDataHelper.markRead(aLink: linkStr)
+            _ = try RSSItemsDataHelper.markRead(aLink: linkStr)
             let unReadCount = try RSSItemsDataHelper.findRssLinkUnreadCount(sRssLink: rssLinkStr)
             // 未读数存储更新
-            let _ = try RSSFeedDataHelper.updateUnReadCount(rssLinkStr: rssLinkStr, unReadCountInt: unReadCount)
+            _ = try RSSFeedDataHelper.updateUnReadCount(rssLinkStr: rssLinkStr, unReadCountInt: unReadCount)
             // 未读数内存更新
             unReadCountDic[rssLinkStr] = unReadCount
         } catch {}
     }
-    
+
     static func handleFetchFeed(str: String, rssModel: RSSFeedModel) {
         var rss = RSSModel()
         let root = ParseStandXML(input: str).parse()
-        for n in root.subNodes {            
+        for n in root.subNodes {
             // MARK: - feed 的情况
             if n.name == "feed" && n.subNodes.count > 0 {
                 for n1 in n.subNodes {
@@ -129,7 +129,7 @@ final class RSSVM: ObservableObject {
                     } // end name == entry
                 } // end for n1
             } // end n name == rss
-            
+
             // MARK: - rss 的情况
             if n.name == "rss" && n.subNodes.count > 0 {
                 for n1 in n.subNodes {
@@ -153,7 +153,7 @@ final class RSSVM: ObservableObject {
                             if n2.name == "pubDate" {
                                 rss.pubDate = n2.value
                             }
-                            
+
                             if n2.name == "item" {
                                 var aItem = RSSItemModel()
                                 for n3 in n2.subNodes {
@@ -183,7 +183,7 @@ final class RSSVM: ObservableObject {
                 } // end for n1
             } // end if rss
         } // end n for
-        
+
         // for check
 //        print(rss.title)
 //        print(rss.siteLink)
@@ -193,16 +193,16 @@ final class RSSVM: ObservableObject {
 //            print(a.title)
 //            print(a.content)
 //        }
-        
+
         // 数据库操作
         do {
-            
+
             // 添加新增 rss item
             for i in rss.items {
                 if let _ = try RSSItemsDataHelper.findLink(sLink: i.link) {
-                    
+
                 } else {
-                    let _ = try RSSItemsDataHelper.insert(i: RSSItemsDataHelper.T(
+                    _ = try RSSItemsDataHelper.insert(i: RSSItemsDataHelper.T(
                         id: 0,
                         title: i.title,
                         link: i.link,
@@ -214,12 +214,12 @@ final class RSSVM: ObservableObject {
                     ))
                 }
             }
-            
+
             let unReadCount = try RSSItemsDataHelper.findRssLinkUnreadCount(sRssLink: rssModel.feedLink)
-            
+
             // 更新 rss 源的信息
             if let f = try RSSFeedDataHelper.find(sLink: rssModel.feedLink) {
-                let _ = try RSSFeedDataHelper.update(i: RSSFeedDataHelper.T(
+                _ = try RSSFeedDataHelper.update(i: RSSFeedDataHelper.T(
                     title: rss.title,
                     rssLink: f.rssLink,
                     siteLink: f.siteLink,
@@ -227,7 +227,7 @@ final class RSSVM: ObservableObject {
                     unReadCount: unReadCount
                 ))
             } else {
-                let _ = try RSSFeedDataHelper.insert(i: RSSFeedDataHelper.T(
+                _ = try RSSFeedDataHelper.insert(i: RSSFeedDataHelper.T(
                     title: rssModel.title,
                     rssLink: rssModel.feedLink,
                     siteLink: rssModel.siteLink,
@@ -235,43 +235,7 @@ final class RSSVM: ObservableObject {
                     unReadCount: unReadCount
                 ))
             }
-            
+
         } catch {}
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

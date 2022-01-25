@@ -29,21 +29,21 @@ public struct XMLTagNode {
 }
 
 public class ParseStandXMLTags {
-    
+
     private var allTagTokens: [XMLTagTokens]
     private var allTagNodes: [XMLTagNode]
-    
+
     private enum State {
         case startTagName
         case startAttributeName
         case startAttributeValue
     }
-    
+
     public init(input: String) {
         allTagTokens = ParseStandXMLTagTokens(input: input).parse()
         allTagNodes = [XMLTagNode]()
     }
-    
+
     public func parse() -> [XMLTagNode] {
         for tokens in allTagTokens {
             //
@@ -51,7 +51,7 @@ public class ParseStandXMLTags {
         }
         return allTagNodes
     }
-    
+
     static func des(tagNodes: [XMLTagNode]) {
         for tagNode in tagNodes {
             print("name:\(tagNode.name)")
@@ -61,7 +61,7 @@ public class ParseStandXMLTags {
             print("\n")
         }
     }
-    
+
     private func parseTokens(tokens: XMLTagTokens) {
         // 处理 tag 类型
         if tokens.type == .tag {
@@ -85,13 +85,13 @@ public class ParseStandXMLTags {
             var nodeType:XMLTagNodeType = .xml
             var currentXMLTagAttributeName = ""
             var currentXMLTagAttributeValue = ""
-            
+
             for token in tokens.tokens {
                 // 处理双引号字符串内的空格
                 if state != .startDoubleQuotationMarks && token == .space {
                     continue
                 }
-                
+
                 // 正常处理
                 if state == .start {
                     if token.des() == "?" {
@@ -176,7 +176,7 @@ public class ParseStandXMLTags {
                         state = .endForwardSlash
                         nodeType = .single
                     } else if token.des() == "?" {
-                        
+
                     } else {
                         state = .attributeName
                         currentXMLTagAttributeName = token.des()
@@ -184,23 +184,22 @@ public class ParseStandXMLTags {
                     continue
                 } // end if
             } // end for
-            
+
             // 添加 Node
             allTagNodes.append(XMLTagNode(type: nodeType, value: "", name: nodeName, attributes: attributes))
         }
-        
-        
+
         // 处理 value 类型
         if tokens.type == .value {
-            
+
             var value = ""
-            
+
             for token in tokens.tokens {
                 value.append(token.des())
             }
             allTagNodes.append(XMLTagNode(type: .value, value: value, name: "", attributes: [XMLTagAttribute]()))
         }
-        
+
     }
-    
+
 }

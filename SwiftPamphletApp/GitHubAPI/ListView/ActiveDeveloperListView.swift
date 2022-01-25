@@ -25,7 +25,7 @@ struct ActiveDeveloperListView: View {
                 Section {
                     ForEach(ad.users) { u in
                         if (appVM.devsNotis[u.id] ?? 0) > 0 {
-                            
+
                         } else {
                             NavigationLink(destination: UserView(vm: .init(userName: u.id))) {
                                 ActiveDeveloperListLinkView(u: u)
@@ -42,10 +42,9 @@ struct ActiveDeveloperListView: View {
         .onAppear {
             vm.doing(.ciads)
         }
-        
+
     }
 }
-
 
 // MARK: - 碎视图
 

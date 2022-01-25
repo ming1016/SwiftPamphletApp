@@ -11,15 +11,15 @@ struct IssueView: View {
     enum EnterType {
         case normal, hiddenUserInfo
     }
-    
+
     @StateObject var vm: IssueVM
     @State var type: EnterType = .normal
-    
+
     var body: some View {
         ScrollView {
             HStack {
                 VStack(alignment: .leading, spacing: 10) {
-                    HStack{
+                    HStack {
                         Text(vm.issue.title).font(.system(.largeTitle))
                         ButtonGoGitHubWeb(url: vm.issue.htmlUrl, text: "在 GitHub 上访问")
                         Button {
@@ -27,7 +27,7 @@ struct IssueView: View {
                         } label: {
                             Image(systemName: "arrow.triangle.2.circlepath")
                         }
-                        
+
                     }
                     if type == .hiddenUserInfo {
                         Text(" \(howLongFromNow(timeStr:vm.issue.updatedAt))更新过").font(.footnote)
@@ -50,7 +50,7 @@ struct IssueView: View {
                 Spacer()
             } // end HStack
             .padding(EdgeInsets(top: 20, leading: 10, bottom: 10, trailing: 10))
-            
+
             if vm.comments.count > 0 {
                 HStack {
                     VStack(alignment: .leading, spacing: 0) {
@@ -65,11 +65,11 @@ struct IssueView: View {
                         HStack {
                             AsyncImageWithPlaceholder(size: .smallSize, url: comment.user.avatarUrl)
                             ButtonGoGitHubWeb(url: comment.user.login, text: comment.user.login, ignoreHost: true)
-                            
+
                             Text(comment.authorAssociation)
                                 .font(.footnote)
                                 .foregroundColor(.secondary)
-                            
+
                         }
                         HStack {
                             VStack(alignment: .leading, spacing: 0) {
@@ -83,14 +83,13 @@ struct IssueView: View {
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                 } // end ForEach
             }
-            
+
         } // end ScrollView
         .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .frame(minWidth: SPC.detailMinWidth)
         .onAppear {
             vm.doing(.inInit)
         }
-        
+
     }
 }
-

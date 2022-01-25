@@ -16,7 +16,7 @@ struct UserView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
-                HStack() {
+                HStack {
                     AsyncImageWithPlaceholder(size: .normalSize, url: vm.user.avatarUrl)
                     VStack(alignment: .leading, spacing: 5) {
                         HStack {
@@ -32,7 +32,7 @@ struct UserView: View {
                         }
                     } // end VStack
                 } // end HStack
-                
+
                 if vm.user.bio != nil {
                     Text("简介：\(vm.user.bio ?? "")")
                 }
@@ -61,9 +61,9 @@ struct UserView: View {
             appVM.calculateDevsCountNotis()
         })
         .frame(minWidth: SPC.detailMinWidth)
-        
+
         TabView(selection: $tabSelct) {
-            
+
             UserEventView(events: vm.events, isShowUserEventLink: isShowUserEventLink)
                 .tabItem {
                     Image(systemName: "keyboard")
@@ -77,7 +77,7 @@ struct UserView: View {
                         appVM.devsNotis[vm.userName] = SPC.unreadMagicNumber
                         appVM.calculateDevsCountNotis()
                     }
-                    
+
                 }
                 .tag(1)
             UserEventView(events: vm.receivedEvents, isShowActor: true, isShowUserEventLink: isShowUserEventLink)
@@ -92,9 +92,7 @@ struct UserView: View {
         }
         .frame(minWidth: SPC.detailMinWidth)
         Spacer()
-        
-        
-        
+
     }
 }
 
@@ -102,11 +100,11 @@ struct UserEventView: View {
     var events: [EventModel]
     var isShowActor = false
     var isShowUserEventLink = true
-    
+
     var body: some View {
         List {
             ForEach(events) { event in
-                
+
                 if isShowUserEventLink == true {
                     NavigationLink {
                         UserEventLinkDestination(event: event)
@@ -165,21 +163,21 @@ struct AUserEventLabel: View {
             }
             ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)", text: event.repo.name, bold: true)
             HStack {
-                
+
                 if event.payload.issue?.number != nil {
                     ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/issues/\(String(describing: event.payload.issue?.number ?? 0))", text: "议题")
                 }
-                
+
                 if isShowActor == true {
                     AsyncImageWithPlaceholder(size: .tinySize, url: event.actor.avatarUrl)
-                    
+
                     Text(event.actor.login).bold()
 
                 } // end if
-                
+
             }
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-            
+
             if event.payload.issue?.number != nil {
                 if event.payload.issue?.title != nil {
                     Text(event.payload.issue?.title ?? "")
@@ -192,11 +190,11 @@ struct AUserEventLabel: View {
                     MarkdownView(s: event.payload.comment?.body ?? "")
                 }
             }
-            
+
             if event.payload.commits != nil {
                 ListCommits(event: event)
             }
-            
+
             if event.payload.pullRequest != nil {
                 if event.payload.pullRequest?.title != nil {
                     Text(event.payload.pullRequest?.title ?? "")

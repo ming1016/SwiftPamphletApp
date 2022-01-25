@@ -11,24 +11,24 @@ import AppKit
 
 final class UserVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
-    
+
     public let userName: String
-    
+
     @Published private(set) var user: UserModel
     @Published private(set) var events: [EventModel]
     @Published private(set) var receivedEvents: [EventModel]
-    
+
     @Published var errHint = false
     @Published var errMsg = ""
     private let errSj = PassthroughSubject<APISevError, Never>()
-    
+
     private let apiSev: APISev
-    
+
     private let appearUserSubject = PassthroughSubject<Void, Never>()
     private let appearEventsSubject = PassthroughSubject<Void, Never>()
     private let appearNotiEventsSubject = PassthroughSubject<Void, Never>()
     private let appearReceivedEventsSubject = PassthroughSubject<Void, Never>()
-    
+
     private let resUserSubject = PassthroughSubject<UserModel, Never>()
     private let resEventsSubject = PassthroughSubject<[EventModel], Never>()
     private let resNotiEventSubject = PassthroughSubject<[EventModel], Never>()
@@ -51,24 +51,24 @@ final class UserVM: APIVMable {
             clearUnReadEvent()
         }
     }
-    
+
     func clearUnReadEvent() {
         do {
             if let f = try DevsNotiDataHelper.find(sLogin: userName) {
                 do {
-                    let _ = try DevsNotiDataHelper.update(i: DBDevNoti(login: f.login, lastReadId: f.lastReadId, unRead: 0))
+                    _ = try DevsNotiDataHelper.update(i: DBDevNoti(login: f.login, lastReadId: f.lastReadId, unRead: 0))
                 } catch {}
             }
         } catch {}
     }
-    
+
     init(userName: String) {
         self.userName = userName
         self.apiSev = APISev()
         self.user = UserModel()
         self.events = [EventModel]()
         self.receivedEvents = [EventModel]()
-        
+
         // MARK: - 用户信息获取
         let reqUser = UserRequest(userName: userName)
         let resUserStream = appearUserSubject
@@ -81,10 +81,10 @@ final class UserVM: APIVMable {
             }
             .share()
             .subscribe(resUserSubject)
-        
+
         let repUserStream = resUserSubject
             .assign(to: \.user, on: self)
-        
+
         // MARK: - 用户事件
         let reqEvent = UserEventsRequest(userName: userName)
         let resEventStream = appearEventsSubject
@@ -99,7 +99,7 @@ final class UserVM: APIVMable {
             .subscribe(resEventsSubject)
         let repEventStream = resEventsSubject
             .assign(to: \.events, on: self)
-        
+
         // MARK: - 用户接受的事件
         let reqReceivedEvent = UserReceivedEventsRequest(userName: userName)
         let resReceivedEventStream = appearReceivedEventsSubject
@@ -114,13 +114,13 @@ final class UserVM: APIVMable {
             .subscribe(resReceivedEventsSubject)
         let repReceivedEventStream = resReceivedEventsSubject
             .assign(to: \.receivedEvents, on: self)
-        
+
         // MARK: - 更新用户的通知信息
         let reqNotiEvents = UserEventsRequest(userName: userName)
         let resNotiEventsStream = appearNotiEventsSubject
             .flatMap { [apiSev] in
                 apiSev.response(from: reqNotiEvents)
-                    .catch { error -> Empty<[EventModel], Never> in
+                    .catch { _ -> Empty<[EventModel], Never> in
                         return .init()
                     }
             }
@@ -142,7 +142,7 @@ final class UserVM: APIVMable {
                     }
                     i = f.unRead + i
                     do {
-                        let _ = try DevsNotiDataHelper.update(i: DBDevNoti(login: userName, lastReadId: lrid, unRead: i))
+                        _ = try DevsNotiDataHelper.update(i: DBDevNoti(login: userName, lastReadId: lrid, unRead: i))
                     } catch {}
                 } // end if let f
             } catch {}
@@ -153,7 +153,7 @@ final class UserVM: APIVMable {
                 return eventModels
             }
             .assign(to: \.events, on: self)
-        
+
         // MARK: - 错误
         let errMsgSm = errSj
             .map { err -> String in
@@ -165,7 +165,7 @@ final class UserVM: APIVMable {
                 true
             }
             .assign(to: \.errHint, on: self)
-        
+
         cancellables += [
             resUserStream, repUserStream,
             resEventStream, repEventStream,

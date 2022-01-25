@@ -19,18 +19,3 @@ func RSSReq(_ urlStr: String) async throws -> String? {
     let dataStr = String(data: data, encoding: .utf8)
     return dataStr
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

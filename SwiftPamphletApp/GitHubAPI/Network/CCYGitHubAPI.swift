@@ -39,7 +39,7 @@ extension Github.Repos {
     var commits: Commits {
         Commits(path: path + "/commits", query: [("per_page", "100")])
     }
-    
+
     struct Commits {
         let path: String
         let query: [(String, String?)]?
@@ -48,7 +48,6 @@ extension Github.Repos {
         }
     }
 }
-
 
 // MARK: - /user
 extension Github {

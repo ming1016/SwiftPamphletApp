@@ -16,7 +16,7 @@ public enum Token {
     case constant(Constant)    // float、int
     case id(String)            // string
     case string(String)        // 代码中引号内字符串
-    
+
     func des() -> String {
         switch self {
         case .space:
@@ -38,8 +38,6 @@ public enum Token {
         }
     }
 }
-
-
 
 extension Token: Equatable {
     public static func == (lhs: Token, rhs: Token) -> Bool {

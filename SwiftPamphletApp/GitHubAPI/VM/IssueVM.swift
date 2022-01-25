@@ -19,19 +19,18 @@ final class IssueVM: APIVMable {
     @Published private(set) var cIADs: [SPActiveDevelopersModel] // 开发者动态
     @Published var errHint = false
     @Published var errMsg = ""
-    
-    
+
     // MARK: - APISev
     private let apiSev: APISev
-    
+
     private let errSj = PassthroughSubject<APISevError, Never>()
-    
+
     private let apIssueSj = PassthroughSubject<Void, Never>()
     private let apCommentsSj = PassthroughSubject<Void, Never>()
-    
+
     private let resIssueSj = PassthroughSubject<IssueModel, Never>()
     private let resCommetsSj = PassthroughSubject<[IssueComment], Never>()
-    
+
     enum IssueActionType {
         case inInit, customIssues, ciads, update
     }
@@ -50,7 +49,7 @@ final class IssueVM: APIVMable {
             apCommentsSj.send(())
         }
     }
-    
+
     init(repoName: String = "", issueNumber: Int = 0, guideName: String = "") {
         self.repoName = repoName
         self.issueNumber = issueNumber
@@ -60,7 +59,7 @@ final class IssueVM: APIVMable {
         self.comments = [IssueComment]()
         self.customIssues = [CustomIssuesModel]()
         self.cIADs = [SPActiveDevelopersModel]()
-        
+
         // MARK: - 议题的信息获取
         let reqIssue = IssueRequest(repoName: repoName, issueNumber: issueNumber)
         let resIssueSm = apIssueSj
@@ -75,7 +74,7 @@ final class IssueVM: APIVMable {
             .subscribe(resIssueSj)
         let repIssueSm = resIssueSj
             .assign(to: \.issue, on: self)
-        
+
         // MARK: - 议题的留言获取
         let reqComments = IssueCommentsRequest(repoName: repoName, issueNumber: issueNumber)
         let resCommentsSm = apCommentsSj
@@ -90,7 +89,7 @@ final class IssueVM: APIVMable {
             .subscribe(resCommetsSj)
         let repCommentsSm = resCommetsSj
             .assign(to: \.comments, on: self)
-        
+
         // MARK: - 错误
         let errMsgSm = errSj
             .map { err -> String in
@@ -102,7 +101,7 @@ final class IssueVM: APIVMable {
                 true
             }
             .assign(to: \.errHint, on: self)
-        
+
         cancellables += [
             resIssueSm, repIssueSm,
             resCommentsSm, repCommentsSm,

@@ -10,26 +10,26 @@ import Combine
 import AppKit
 
 final class AppVM: ObservableObject {
-    
+
     @Published var alertMsg = "" // 警告信息
     @Published var webLinkStr = "" // 导航上的外部链接
-    
+
     // 开发者动态
     @Published var devsNotis = [String: Int]()
     @Published var devsCountNotis = 0
     // 博客动态
     @Published var rssCountNotis = 0
-    
+
     // MARK: - CCY
     // 探索更多库
     @Published var expNotis = [String: DBRepoStore]()
     @Published var expCountNotis = 0
     @Published var exps = [SPReposModel]()
-    
+
     // MARK: - Combine
     private var cc: [AnyCancellable] = []
     private let apiSev: APISev
-    
+
     // MARK: - Timer for get intervals data
 
     // 开发者动态
@@ -38,13 +38,13 @@ final class AppVM: ObservableObject {
     // 探索库
     private var stepCountExp = 0
     private var expNotisKeys = [String]()
-    
+
     // MARK: WebLink
     @MainActor
     func updateWebLink(s: String) {
         webLinkStr = s
     }
-    
+
     // MARK: - RSS 读取
     func rssFetch() {
         Task {
@@ -69,7 +69,7 @@ final class AppVM: ObservableObject {
             await updateAlertMsg(msg: "")
         }
     }
-    
+
     @MainActor
     func rssUpdateNotis() {
         do {
@@ -77,34 +77,33 @@ final class AppVM: ObservableObject {
             showAppBadgeLabel()
         } catch {}
     }
-    
+
     @MainActor
     func updateAlertMsg(msg: String) {
         alertMsg = msg
     }
-    
-    
+
     // MARK: - 获取所有探索更多库通知信息
     func loadExpFromServer() {
-        
+
         Task {
             var expDic = [String: DBRepoStore]()
             do {
                 var grs = [SPReposModel]()
                 grs = loadBundleJSONFile("repos.json")
-                
+
                 for gr in grs {
                     for r in gr.repos {
                         expDic[r.id] = RepoStoreDataHelper.createEmptyDBRepoStore(r.id)
                         if let fd = try RepoStoreDataHelper.find(sFullName: r.id) {
                             expDic[r.id]?.unRead = fd.unRead
                         } else {
-                            let _ = try RepoStoreDataHelper.insert(i: RepoStoreDataHelper.createEmptyDBRepoStore(r.id))
+                            _ = try RepoStoreDataHelper.insert(i: RepoStoreDataHelper.createEmptyDBRepoStore(r.id))
                             expDic[r.id]?.unRead = 0
                         } // end if
                     } // end for
                 } // end for
-                
+
                 // 远程已经删除的仓库，同步本地删除
                 if !(expDic.count > 0) { return }
                 let expDicKeys = expDic.keys
@@ -120,16 +119,16 @@ final class AppVM: ObservableObject {
                         } // end if else
                     } // end for
                 } // end if let
-                
+
                 await updateExps(exps: grs)
                 await updateExpNotis(expNotis: expDic)
-                
+
             } catch {
                 print("wrong")
             } // end do
         }
     }
-    
+
     @MainActor
     func updateExps(exps: [SPReposModel]) {
         self.exps = exps
@@ -138,9 +137,9 @@ final class AppVM: ObservableObject {
     func updateExpNotis(expNotis: [String: DBRepoStore]) {
         self.expNotis = expNotis
     }
-    
+
     // MARK: - Timer for get intervals data
-    
+
     // 探索库
     func timeForExpEvent() {
         Task {
@@ -180,7 +179,7 @@ final class AppVM: ObservableObject {
                         if i > 0 {
                             await updateAlertMsg(msg: "有更新 \(repoName)：\(expNotis[repoName]?.description ?? "")")
                         }
-                        let _ = try RepoStoreDataHelper.update(i: DBRepoStore(
+                        _ = try RepoStoreDataHelper.update(i: DBRepoStore(
                             id: repoModel.id,
                             name: repoModel.name,
                             fullName: repoName,
@@ -195,16 +194,16 @@ final class AppVM: ObservableObject {
                             extra: ""
                         ))
                     }
-                    
+
                 } catch { return }
-                
+
                 // 刷新数据
                 loadDBExpLoal()
                 stepCountExp += 1
             }
         }
     }
-    
+
     // 开发者动态
     @MainActor
     func timeForDevsEvent() -> String? {
@@ -232,7 +231,7 @@ final class AppVM: ObservableObject {
             return nil
         }
     }
-    
+
     // MARK: - On Appear Event
     func onAppearEvent() {
         nsck()
@@ -243,10 +242,9 @@ final class AppVM: ObservableObject {
         loadDBExpLoal()
         loadExpFromServer()
     }
-    
-    
+
     func refreshDev() {
-        
+
         func switchToDevsDic() -> [String: Int] {
             var devsDic = [String: Int]()
             let ads:[SPActiveDevelopersModel] = loadBundleJSONFile("developers.json")
@@ -257,7 +255,7 @@ final class AppVM: ObservableObject {
                             devsDic[fd.login] = fd.unRead
                         } else {
                             do {
-                                let _ = try DevsNotiDataHelper.insert(i: DBDevNoti(login: d.id, lastReadId: "", unRead: 0))
+                                _ = try DevsNotiDataHelper.insert(i: DBDevNoti(login: d.id, lastReadId: "", unRead: 0))
                                 devsDic[d.id] = 0
                             } catch {
                                 return devsDic
@@ -268,7 +266,7 @@ final class AppVM: ObservableObject {
                     } // end do
                 } // end for
             } // end for
-            
+
             // 远程已经删除的开发者，同步本地删除
             if !(devsDic.count > 0) {
                 return devsDic
@@ -289,14 +287,14 @@ final class AppVM: ObservableObject {
             } catch {
                 return devsDic
             }
-            
+
             return devsDic
         }
         devsNotis = switchToDevsDic()
     }
 
     // MARK: Combine
-    
+
     init() {
         self.apiSev = APISev()
         // MARK: - 初始化数据库
@@ -304,12 +302,11 @@ final class AppVM: ObservableObject {
         do {
             try db.cTbs()
         } catch {
-            
+
         }
-        
-        
+
     }
-    
+
     // MARK: 探索更多库，本地数据库读取
     func loadDBExpLoal() {
         Task {
@@ -332,7 +329,7 @@ final class AppVM: ObservableObject {
             } catch {}
         }
     }
-    
+
     // MARK: 开发者动态，本地数据库读取
     func loadDBDevsLoal() {
         do {
@@ -351,7 +348,7 @@ final class AppVM: ObservableObject {
             } // end if
         } catch {}
     }
-    
+
     // MARK: - 计算通知数量
     @MainActor
     func calculateExpCountNotis() {
@@ -371,7 +368,7 @@ final class AppVM: ObservableObject {
         expCountNotis = count
         showAppBadgeLabel()
     }
-    
+
     @MainActor
     func calculateDevsCountNotis() {
         var count = 0
@@ -387,7 +384,7 @@ final class AppVM: ObservableObject {
         devsCountNotis = count
         showAppBadgeLabel()
     }
-    
+
     func showAppBadgeLabel() {
         var count = devsCountNotis + expCountNotis + rssCountNotis
         if count > 0 {
@@ -400,7 +397,7 @@ final class AppVM: ObservableObject {
             NSApp.dockTile.badgeLabel = nil
         }
     }
-    
+
     // 订阅网络状态
     func nsck() {
         Nsck.shared.pb
@@ -435,5 +432,5 @@ final class AppVM: ObservableObject {
             }
             .store(in: &cc)
     }
-    
+
 }

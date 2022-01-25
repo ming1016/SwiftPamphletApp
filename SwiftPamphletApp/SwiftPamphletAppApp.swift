@@ -10,7 +10,7 @@ import Combine
 
 @main
 struct SwiftPamphletAppApp: App {
-    
+
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
@@ -28,17 +28,16 @@ struct Demo: View {
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {
-            
+
         }
     }
 }
-
 
 struct SwiftPamphletApp: View {
     @StateObject var appVM = AppVM()
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
-    
+
     let timerForDevs = Timer.publish(every: SPC.timerForDevsSec, on: .main, in: .common).autoconnect()
     let timerForExp = Timer.publish(every: SPC.timerForExpSec, on: .main, in: .common).autoconnect()
     let timerForRss = Timer.publish(every: SPC.timerForRssSec, on: .main, in: .common).autoconnect()
@@ -49,7 +48,7 @@ struct SwiftPamphletApp: View {
                     appVM.onAppearEvent()
                     appVM.rssFetch()
                 })
-                .onReceive(timerForDevs, perform: { time in
+                .onReceive(timerForDevs, perform: { _ in
                     if SPC.gitHubAccessToken.isEmpty == false {
                         if let userName = appVM.timeForDevsEvent() {
                             let vm = UserVM(userName: userName)
@@ -58,20 +57,19 @@ struct SwiftPamphletApp: View {
                     }
                     appVM.rssUpdateNotis() // 定时更新博客未读数
                 })
-                .onReceive(timerForExp) { time in
+                .onReceive(timerForExp) { _ in
                     if SPC.gitHubAccessToken.isEmpty == false {
                         appVM.timeForExpEvent()
                     }
                 }
-                .onReceive(timerForRss) { time in
+                .onReceive(timerForRss) { _ in
                     appVM.rssFetch()
                 }
             IssuesListFromCustomView(vm: IssueVM(guideName:"guide-syntax"))
                 .frame(minWidth:60)
             IntroView()
             NavView()
-            
-            
+
         } // end NavigationView
         .frame(minHeight: 650)
         .navigationTitle("戴铭的 Swift 小册子")
@@ -94,7 +92,7 @@ struct SwiftPamphletApp: View {
                     Label("Sidebar", systemImage: "sidebar.left")
                 }
             }
-            
+
             ToolbarItemGroup(placement: ToolbarItemPlacement.automatic) {
                 // 博客链接用浏览器打开，还有共享菜单进行分享用
                 if !appVM.webLinkStr.isEmpty {
@@ -106,14 +104,13 @@ struct SwiftPamphletApp: View {
                         Text("用浏览器打开")
                     } // end Button
                 } // end if
-                
+
             } // end ToolbarItemGroup
         } // end .toolbar
         .environmentObject(appVM)
-        
+
     }
 }
-
 
 // MARK: - UnCat
 protocol Jsonable : Identifiable, Decodable, Hashable {}
@@ -123,23 +120,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var op: String?
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
-        
-        
-        
-        
+
 //        PlaySecurity.keyChain()
-        
+
 //        PlayArchitecture.error()
 //        PlayArchitecture.codable()
-        
+
 //        PlaySyntax.generics()
 //        PlaySyntax.result()
 //        PlaySyntax.string()
 //        PlaySyntax.array()
 //        PlaySyntax.set()
 //        PlaySyntax.dictionary()
-        
-        
+
 //        PlayFoundation.userDefaults()
 //        PlayFoundation.random()
 //        PlayFoundation.data()
@@ -150,13 +143,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        PlayFoundation.scanner()
 //        let _ = PlayFoundation.attributeString()
 //        PlayFoundation.coaAndCow()
-        
-        
+
 //        self.window.makeKey()
     }
 }
-
-
-
-
-

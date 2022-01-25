@@ -9,22 +9,20 @@ import Foundation
 import SwiftUI
 /// 参考: https://kean.blog/post/new-api-client
 
-
-
 // MARK: - RESTful
 public actor RESTful {
     enum Host: String {
         case github = "api.github.com"
     }
-    
+
     private let conf: Conf
     private let session: URLSession
     private let serializer: Serializer
-    
+
     convenience init(host: Host, conf: URLSessionConfiguration = .default) {
         self.init(conf: Conf(host: host, sessionConf: conf))
     }
-    
+
     public init(conf: Conf) {
         self.conf = conf
         self.session = URLSession(configuration: conf.sessionConf)
@@ -36,7 +34,7 @@ public actor RESTful {
         var port: Int?
         var isInsecure = false // false 用 https，true 为 http
         var sessionConf: URLSessionConfiguration = .default
-        
+
         init(host: Host, port: Int? = nil, isInsecure: Bool = false, sessionConf: URLSessionConfiguration = .default, decoder: JSONDecoder? = nil, encoder: JSONEncoder? = nil) {
             self.host = host
             self.port = port
@@ -44,15 +42,15 @@ public actor RESTful {
             self.sessionConf = sessionConf
         } // end init
     } // end struct Conf
-    
+
     // MARK: - Return Value
     public func value<T: Decodable>(for req: Req<T>) async throws -> T {
         try await send(req).value
     }
-    
+
 }
 extension RESTful {
-    
+
     // MARK: - send
     public func send<T: Decodable>(_ req: Req<T>) async throws -> Res<T> {
         try await send(req) { data in
@@ -68,12 +66,12 @@ extension RESTful {
             }
         }
     }
-    
+
     @discardableResult
     public func send(_ req: Req<Void>) async throws -> Res<Void> {
         try await send(req) { _ in () }
     }
-    
+
     private func send<T>(_ req: Req<T>, _ decode: @escaping (Data) async throws -> T) async throws -> Res<T> {
         let res = try await data(for: req)
         let value = try await decode(res.value)
@@ -81,12 +79,12 @@ extension RESTful {
             value
         }
     }
-    
+
     public func data<T>(for req: Req<T>) async throws -> Res<Data> {
         let req = try await makeRequest(for: req)
         return try await send(req)
     }
-    
+
     private func send(_ req: URLRequest) async throws -> Res<Data> {
         do {
             return try await actuallySend(req)
@@ -94,14 +92,14 @@ extension RESTful {
             throw error
         }
     }
-    
+
     private func actuallySend(_ req: URLRequest) async throws -> Res<Data> {
         let (data, res) = try await session.data(for: req, delegate: nil)
         try validate(res: res, data: data)
         let hRes = (res as? HTTPURLResponse) ?? HTTPURLResponse()
         return Res(value: data, data: data, req: req, res: hRes, sCode: hRes.statusCode)
     }
- 
+
     // MARK: - Make
     private func makeRequest<T>(for req: Req<T>) async throws -> URLRequest {
         let url = try makeURL(path: req.path, query: req.query)
@@ -121,7 +119,7 @@ extension RESTful {
         case .github:
             req.setValue("token \(SPC.gitHubAccessToken)", forHTTPHeaderField: "Authorization")
         }
-        
+
         return req
     }
     private func makeURL(path: String, query: [(String, String?)]?) throws -> URL {
@@ -172,11 +170,11 @@ private actor Serializer {
         self.decoder = JSONDecoder()
         self.decoder.keyDecodingStrategy = .convertFromSnakeCase
         self.decoder.dateDecodingStrategy = .iso8601
-        
+
         self.encoder = JSONEncoder()
         self.encoder.dateEncodingStrategy = .iso8601
     }
-    
+
     func decode<T: Decodable>(_ data: Data) async throws -> T {
         try decoder.decode(T.self, from: data)
     }
@@ -190,26 +188,26 @@ private actor Serializer {
 public struct Req<Res> {
     public typealias ReqQType = [(String, String?)]?
     public typealias ReqHType = [String: String]?
-    
+
     public var method: String
     public var path: String
     public var query: ReqQType
     var body: AnyEncodable?
     public var headers: ReqHType
     public var id: String?
-    
+
     public static func get(_ path: String, query: ReqQType = nil, headers: ReqHType = nil) -> Req {
         Req(method: "GET", path: path, query: query, headers: headers) // GET请求传 body URLSession 会报错
     }
-    
+
     public static func post(_ path: String, query: ReqQType = nil, headers: ReqHType = nil) -> Req {
         Req(method: "POST", path: path, query: query, headers: headers)
     }
-    
+
     public static func post<U: Encodable>(_ path: String, query: ReqQType = nil, body: U?, headers: ReqHType = nil) -> Req {
         Req(method: "POST", path: path, query: query, body: body.map(AnyEncodable.init), headers: headers)
     }
-    
+
     public static func put(_ path: String, query: ReqQType = nil, headers: ReqHType = nil) -> Req {
         Req(method: "PUT", path: path, query: query, headers: headers)
     }
@@ -255,7 +253,7 @@ public struct Res<T> {
     public let req: URLRequest
     public let res: HTTPURLResponse
     public let sCode: Int
-    
+
     // 通过闭包生成指定类型
     func map<U>(_ closure: (T) -> U) -> Res<U> {
         Res<U>(value: closure(value), data: data, req: req, res: res, sCode: sCode)
@@ -283,34 +281,3 @@ extension URLRequest {
         return comps.joined(separator: " \\\n\t")
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
