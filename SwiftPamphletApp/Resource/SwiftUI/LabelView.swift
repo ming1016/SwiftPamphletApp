@@ -10,7 +10,6 @@ import SwiftUI
 struct LabelView: View {
     var body: some View {
         Label("AirPods Max", systemImage: "airpodsmax")
-        
+
     }
 }
-

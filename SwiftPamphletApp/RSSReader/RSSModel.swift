@@ -30,8 +30,3 @@ struct RSSItemModel: Identifiable {
     var content = ""
     var isRead = false
 }
-
-
-
-
-

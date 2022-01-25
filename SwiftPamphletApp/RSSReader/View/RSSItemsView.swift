@@ -11,7 +11,7 @@ struct RSSItemsView: View {
     @EnvironmentObject var appVM: AppVM
     @EnvironmentObject var vm: RSSVM
     var rssLink: String
-    
+
     var body: some View {
         HStack {
             Button {
@@ -42,7 +42,7 @@ struct RSSItemsView: View {
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                 } // end Navigation
-                
+
             } // end ForEach
         } //  end List
         .onAppear {
@@ -53,4 +53,3 @@ struct RSSItemsView: View {
         }
     }
 }
-

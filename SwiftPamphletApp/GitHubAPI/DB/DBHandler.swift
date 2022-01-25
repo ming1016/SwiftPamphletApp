@@ -19,7 +19,7 @@ struct DB {
         do {
             print(DB.path)
             BBDB = try Connection("\(DB.path)/github.sqlite3")
-            
+
         } catch {
             BBDB = nil
         }
@@ -29,9 +29,9 @@ struct DB {
         /// String = TEXT
         /// nil = NULL
         /// SQLite.Blob = BLOB
-        
+
     }
-    
+
     func cTbs() throws {
         do {
             try DevsNotiDataHelper.createTable()
@@ -42,7 +42,7 @@ struct DB {
             throw DBError.connectionErr
         }
     }
-    
+
 }
 
 enum DBError: Error {
@@ -51,14 +51,8 @@ enum DBError: Error {
 
 protocol DataHelperProtocol {
     associatedtype T
-    static func createTable() throws -> Void
+    static func createTable() throws
     static func insert(i: T) throws -> Int64
-    static func delete(i: T) throws -> Void
+    static func delete(i: T) throws
     static func findAll() throws -> [T]?
 }
-
-
-
-
-
-

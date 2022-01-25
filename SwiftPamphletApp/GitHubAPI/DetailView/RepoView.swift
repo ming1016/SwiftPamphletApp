@@ -62,7 +62,7 @@ struct RepoView: View {
             appVM.calculateExpCountNotis()
         }
         // end HStack
-        
+
         TabView(selection: $tabSelct) {
             RepoCommitsView(commits: vm.commits, repo: vm.repo, isShowLink: isShowRepoCommitsLink)
                 .tabItem {
@@ -77,7 +77,7 @@ struct RepoView: View {
                     }
                 })
                 .tag(1)
-            
+
             IssuesView(issues: vm.issues, repo: vm.repo, isShowLink: isShowIssuesLink)
                 .tabItem {
                     Text("议题列表")
@@ -86,7 +86,7 @@ struct RepoView: View {
                     vm.doing(.inIssues)
                 }
                 .tag(2)
-            
+
             IssueEventsView(issueEvents: vm.issueEvents, repo: vm.repo, isShowLink: isShowIssuesLink)
                 .tabItem {
                     Text("议题事件")
@@ -95,7 +95,7 @@ struct RepoView: View {
                     vm.doing(.inIssueEvents)
                 }
                 .tag(3)
-            
+
             ReadmeView(content: vm.readme.content.replacingOccurrences(of: "\n", with: ""))
                 .tabItem {
                     Text("README")
@@ -104,10 +104,9 @@ struct RepoView: View {
                     vm.doing(.inReadme)
                 }
                 .tag(4)
-            
-            
+
         } // end TabView
-        
+
         Spacer()
     }
 }
@@ -184,7 +183,7 @@ struct RepoCommitsView: View {
                 } else {
                     RepoCommitLabelView(repo: repo, commit: commit)
                 }
-                
+
                 Divider()
             } // end ForEach
         } // end List
@@ -261,13 +260,3 @@ struct IssueEventLabelView: View {
         } // end VStack
     }
 }
-
-
-
-
-
-
-
-
-
-

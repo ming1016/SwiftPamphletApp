@@ -39,7 +39,7 @@ protocol pc {
 }
 
 class PlaySyntax {
-    
+
     // MARK: - 泛型
     static func generics() {
         func fn<T>(p: T) -> [T] {
@@ -53,7 +53,7 @@ class PlaySyntax {
         // 结构体
         struct S1<T> {
             var arr = [T]()
-            
+
             mutating func add(_ p: T) {
                 arr.append(p)
             }
@@ -63,7 +63,7 @@ class PlaySyntax {
         s1.add("one")
         s1.add("two")
         print(s1.arr) // ["zero", "one", "two"]
-        
+
         struct S2: pc {
             typealias T = String // 类型推导，可省略
             var strs = [String]()
@@ -71,31 +71,31 @@ class PlaySyntax {
                 strs.append(p)
             }
         }
-        
+
         // 泛型适用于嵌套类型
         struct S3<T> {
             struct S4 {
                 var p: T
             }
-            
+
             var p1: T
             var p2: S4
         }
-        
+
         let s2 = S3(p1: 1, p2: S3.S4(p: 3))
         let s3 = S3(p1: "one", p2: S3.S4(p: "three"))
         print(s2,s3)
-        
+
     }
-    
+
     // MARK: - Result
     static func result() {
-        
+
         let url = URL(string: "https://ming1016.github.io/")!
-        
+
         // 以前网络请求
         let t1 = URLSession.shared.dataTask(with: url) {
-            data, response, error in
+            data, _, error in
             if let err = error {
                 print(err)
             } else if let data = data {
@@ -103,7 +103,7 @@ class PlaySyntax {
             }
         }
         t1.resume()
-        
+
         // 使用 Result 网络请求
         let t2 = URLSession.shared.dataTaskWithResult(with: url) { result in
             switch result {
@@ -115,7 +115,7 @@ class PlaySyntax {
         }
         t2.resume()
     }
-    
+
     // MARK: - 数组
     static func array() {
         var a0: [Int] = [1, 10]
@@ -143,13 +143,13 @@ class PlaySyntax {
          */
         let a3 = a2.applying(dif) ?? [] // 可以用于添加删除动画
         print(a3) // ["one", "two", "three"]
-        
+
         // 排序
         struct S1 {
             let n: Int
             var b = true
         }
-        
+
         let a4 = [
             S1(n: 1),
             S1(n: 10),
@@ -166,42 +166,42 @@ class PlaySyntax {
         /// S1(n: 2)
         /// S1(n: 3)
         /// S1(n: 10)
-        
+
         let a6 = [1,10,4,7,2]
         print(a6.sorted(by: >)) // [10, 7, 4, 2, 1]
-        
+
         print(a6.intSortedASC()) // 使用扩展增加自定义排序能力
-        
+
         // 第一个满足条件了就返回
         let a7 = a4.first {
             $0.n == 10
         }
         print(a7?.n ?? 0)
-        
+
         // 是否都满足了条件
         print(a4.allSatisfy { $0.n == 1 }) // false
         print(a4.allSatisfy(\.b)) // true
-        
+
         // 找出最大的那个
         print(a4.max(by: { e1, e2 in
             e1.n < e2.n
         }) ?? S1(n: 0))
         // S1(n: 10, b: true)
-        
+
         // 看看是否包含某个元素
         print(a4.contains(where: {
             $0.n == 7
         }))
         // false
-        
+
         // 切片
         // 取前3个，并不是直接复制，对于大的数组有性能优势。
         print(a6[..<3]) // [1, 10, 4] 需要做越界检查
         print(a6.prefix(30)) // [1, 10, 4, 7, 2] 不需要做越界检查，也是切片，性能一样
-        
+
         // 去掉前3个
         print(a6.dropFirst(3)) // [7, 2]
-        
+
         // prefix(while:) 和 drop(while:) 方法，顺序遍历执行闭包里的逻辑判断，满足条件就返回，遇到不匹配就会停止遍历。prefix 返回满足条件的元素集合，drop 返回停止遍历之后那些元素集合。
         let a8 = [8, 9, 20, 1, 35, 3]
         let a9 = a8.prefix {
@@ -213,7 +213,7 @@ class PlaySyntax {
         }
         print(a10) // [35, 3]
     }
-    
+
     // MARK: - Set
     static func set() {
         let s0: Set<Int> = [2, 4]
@@ -244,7 +244,7 @@ class PlaySyntax {
         s8.remove("one")
         print(s8) // ["two", "three"]
     }
-    
+
     // MARK: - 字典
     static func dictionary() {
         var d1 = [
@@ -264,31 +264,31 @@ class PlaySyntax {
          key is k2, value is v2
          key is k3, value is v3
          */
-         
+
         if d1.isEmpty == false {
             print(d1.count) // 3
         }
-        
+
         // mapValues
         let d2 = d1.mapValues {
             $0 + "_new"
         }
         print(d2) // ["k2": "v2_new", "k3": "v3_new", "k1": "v1_new"]
-        
+
         // 对字典的值或键进行分组
         let d3 = Dictionary(grouping: d1.values) {
             $0.count
         }
         print(d3) // [2: ["v1", "v2", "v3"]]
-        
+
         // 从字典中取值，如果键对应无值，则使用通过 default 指定的默认值
         d1["k5", default: "whatever"] += "."
         print(d1["k5"] ?? "") // whatever.
         let v1 = d1["k3", default: "whatever"]
         print(v1) // v3
-        
+
     }
-    
+
     // MARK: - 字符串
     static func string() {
         let s1 = "Hi! This is a string. Cool?"
@@ -296,9 +296,9 @@ class PlaySyntax {
         /// 转义符 \n 表示换行。
         /// 其它转义字符有 \0 空字符)、\t 水平制表符 、\n 换行符、\r 回车符
         let s2 = "Hi!\nThis is a string. Cool?"
-        
-        let _ = s1 + s2
-        
+
+        _ = s1 + s2
+
         // 多行
         let s3 = """
         Hi!
@@ -342,10 +342,10 @@ class PlaySyntax {
         let s6 = "one/two/three"
         let a1 = s6.components(separatedBy: "/") // 继承自 NSString 的接口
         print(a1) // ["one", "two", "three"]
-        
+
         let a2 = s6.split(separator: "/")
         print(a2) // ["one", "two", "three"] 属于切片，性能较 components 更好
-        
+
         // 判断是否是某种类型
         let c1: Character = "🤔"
         print(c1.isASCII) // false
@@ -353,18 +353,15 @@ class PlaySyntax {
         print(c1.isLetter) // false
         print(c1.isNumber) // false
         print(c1.isUppercase) // false
-        
+
         // 字符串和 Data 互转
         let data = Data("hi".utf8)
         let s7 = String(decoding: data, as: UTF8.self)
         print(s7) // hi
-        
+
         // 字符串可以当作集合来用。
         let revered = s7.reversed()
         print(String(revered))
     }
-    
-    
-    
-}
 
+}

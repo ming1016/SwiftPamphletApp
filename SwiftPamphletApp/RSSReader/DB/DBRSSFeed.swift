@@ -26,13 +26,13 @@ struct RSSFeedDataHelper: DataHelperProtocol {
     static let des = Expression<String>("des")
     static let unReadCount = Expression<Int>("unReadCount")
     typealias T = DBRSSFeed
-    
+
     static func createTable() throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
         do {
-            let _ = try db.run(table.create(ifNotExists: true) { t in
+            _ = try db.run(table.create(ifNotExists: true) { t in
                 t.column(title, defaultValue: "")
                 t.column(rssLink, unique: true)
                 t.column(siteLink, defaultValue: "")
@@ -43,7 +43,7 @@ struct RSSFeedDataHelper: DataHelperProtocol {
             throw DBError.connectionErr
         }
     }
-    
+
     static func insert(i: T) throws -> Int64 {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -64,7 +64,7 @@ struct RSSFeedDataHelper: DataHelperProtocol {
             throw DBError.insertErr
         }
     }
-    
+
     static func delete(i: T) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -79,7 +79,7 @@ struct RSSFeedDataHelper: DataHelperProtocol {
             throw DBError.deleteErr
         }
     }
-    
+
     static func find(sLink: String) throws -> T? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -97,7 +97,7 @@ struct RSSFeedDataHelper: DataHelperProtocol {
         }
         return nil
     } // end find
-    
+
     static func update(i: T) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -109,7 +109,7 @@ struct RSSFeedDataHelper: DataHelperProtocol {
                 des <- i.des,
                 unReadCount <- i.unReadCount
             )) > 0 {
-                
+
             } else {
                 throw DBError.updateErr
             }
@@ -117,7 +117,7 @@ struct RSSFeedDataHelper: DataHelperProtocol {
             throw DBError.updateErr
         }
     } // end update
-    
+
     static func updateUnReadCount(rssLinkStr: String, unReadCountInt: Int) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -127,7 +127,7 @@ struct RSSFeedDataHelper: DataHelperProtocol {
             if try db.run(query.update(
                 unReadCount <- unReadCountInt
             )) > 0 {
-                
+
             } else {
                 throw DBError.updateErr
             }
@@ -135,7 +135,7 @@ struct RSSFeedDataHelper: DataHelperProtocol {
             throw DBError.updateErr
         }
     } // end update unread count
-    
+
     static func findAll() throws -> [T]? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -153,5 +153,5 @@ struct RSSFeedDataHelper: DataHelperProtocol {
         }
         return arr
     } // end find all
-    
+
 }

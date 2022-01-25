@@ -12,38 +12,38 @@ struct SPC {
     static let detailMinWidth: CGFloat = 450
     static let githubHost = "https://github.com/"
     static let pamphletIssueRepoName = "KwaiAppTeam/SwiftPamphletApp"
-    
+
     static let timerForDevsSec: Double = 160
     static let timerForExpSec: Double = 125
     static let timerForRssSec: Double = 60 * 60
-    
+
     static let unreadMagicNumber = 99999
-    
+
     static func loadCustomIssues(jsonFileName: String) -> [CustomIssuesModel] {
         let lc: [CustomIssuesModel] = loadBundleJSONFile(jsonFileName + ".json")
         return lc
     }
-    
+
     static func activeDevelopers() -> [SPActiveDevelopersModel] {
         let ad: [SPActiveDevelopersModel] = loadBundleJSONFile("developers.json")
         return ad
     }
-    
+
     static func repos() -> [SPReposModel] {
         let re: [SPReposModel] = loadBundleJSONFile("repos.json")
         return re
     }
-    
+
     static func rssFeed() -> [RSSFeedModel] {
         let re: [RSSFeedModel] = loadBundleJSONFile("rssfeed.json")
         return re
     }
-    
+
     static func rssStyle() -> String {
         let data = loadBundleData("css_cn.html")
         return String(data: data, encoding: .utf8) ?? ""
     }
-    
+
     static func outputRepo() {
         let re = repos()
         for r in re {
@@ -85,5 +85,3 @@ struct RSSFeedModel: Jsonable {
     var siteLink: String
     var feedLink: String
 }
-
-

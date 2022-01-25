@@ -21,22 +21,22 @@ struct ExploreRepoListView: View {
                 } header: {
                     Text("刚更新的").font(.title3)
                 }
-                
+
             }
-            
+
             // end Section
             ForEach(appVM.exps) { er in
                 if SPC.gitHubAccessToken.isEmpty == false {
                     Section {
                         ForEach(er.repos) { r in
                             if (appVM.expNotis[r.id]?.unRead ?? 0) > 0 {
-                                
+
                             } else {
                                 NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
                                     ExpListLinkView(r: r)
                                 }
                             } // end if
-                            
+
                         }
                     } header: {
                         Text(er.name).font(.title3)
@@ -53,9 +53,7 @@ struct ExploreRepoListView: View {
                     }
                     .padding(EdgeInsets(top: 2, leading: 0, bottom: 2, trailing: 0))
                 } // end if token
-                
-                
-                
+
             } // end ForEach
         } // end List
         .navigationTitle("👾 探索库")
@@ -111,10 +109,10 @@ struct ExpListLinkView: View {
                     Text("\(appVM.expNotis[r.id]?.stargazersCount ?? 0)")
                     Image(systemName: "captions.bubble")
                     Text("\(appVM.expNotis[r.id]?.openIssues ?? 0)")
-                    
+
                 }
                 .font(.footnote)
-                
+
             }
             if appVM.expNotis[r.id]?.language.isEmpty == false {
                 HStack {
@@ -123,7 +121,7 @@ struct ExpListLinkView: View {
                 }
                 .font(.footnote)
             }
-            
+
             if appVM.expNotis[r.id]?.description.isEmpty == false {
                 Text(appVM.expNotis[r.id]?.description ?? "")
                     .font(.footnote)
@@ -132,6 +130,6 @@ struct ExpListLinkView: View {
 //            Divider()
 //                .padding(EdgeInsets(top: 5, leading: 0, bottom: 10, trailing: 0))
         } // end VStack
-        
+
     } // end body
 }

@@ -19,32 +19,32 @@ public struct XMLTagTokens {
 }
 
 public class ParseStandXMLTagTokens {
-    
+
     private enum State {
         case normal
         case startTag
         case cdata
     }
-    
+
     private var tokens: [Token]
     private var allTagTokens: [XMLTagTokens]
-    
+
     private var currentIndex: Int
     private var currentToken: Token
     private var currentState: State
     private var currentTokens: [Token]
-    
+
     public init(input: String) {
         tokens = Lexer(input: input, type: .plain).allTkFast(operaters: "<>=\"/?![]")
-        
+
         allTagTokens = [XMLTagTokens]() // 第一步 Token 整理按照 tag、value 类型整理
-        
+
         currentIndex = 0
         currentToken = tokens[currentIndex]
         currentState = .normal
         currentTokens = [Token]()
     }
-    
+
     // 解析 driver
     public func parse() -> [XMLTagTokens] {
         parseNext()
@@ -53,7 +53,7 @@ public class ParseStandXMLTagTokens {
         }
         return allTagTokens
     }
-    
+
     // 调试打印结果用
     static func des(allTagTokens: [XMLTagTokens]) {
         for tks in allTagTokens {
@@ -64,7 +64,7 @@ public class ParseStandXMLTagTokens {
             print("\n")
         }
     }
-    
+
     private func parseNext() {
         if currentToken == .newLine {
             advanceTk()
@@ -86,14 +86,14 @@ public class ParseStandXMLTagTokens {
             advanceTk()
             return
         }
-        
+
         // tag 的值 <a>value</a>
         if currentState == .normal && currentToken != .id("<") {
             currentTokens.append(currentToken)
             advanceTk()
             return
         }
-        
+
         // <tagname ...> 和 <![CDATA[
         if currentState == .normal && currentToken == .id("<") {
             // <![CDATA[
@@ -106,7 +106,7 @@ public class ParseStandXMLTagTokens {
                 advanceTk() // jump [
                 return
             }
-            
+
             // <tagname …>
             if currentTokens.count > 0 {
                 addTagTokens(type: .value) // 结束一组
@@ -115,13 +115,13 @@ public class ParseStandXMLTagTokens {
             advanceTk()
             return
         }
-        
+
         if currentState == .startTag && currentToken != .id(">") {
             currentTokens.append(currentToken)
             advanceTk()
             return
         }
-        
+
         // <tagname ...>
         if currentState == .startTag && currentToken == .id(">") {
             currentState = .normal
@@ -130,13 +130,12 @@ public class ParseStandXMLTagTokens {
             return
         }
     }
-    
-    
+
     private func addTagTokens(type: XMLTagTokensType) {
         var isValid = false
         for tk in currentTokens {
             if tk == .space {
-                
+
             } else {
                 isValid = true
             }
@@ -144,16 +143,15 @@ public class ParseStandXMLTagTokens {
         if isValid {
             allTagTokens.append(XMLTagTokens(type: type, tokens: currentTokens))
         }
-        
+
         currentTokens = [Token]()
     }
-    
-    
+
     // MARK: 辅助
     private func peekTk() -> Token? {
         return peekTkStep(step: 1)
     }
-    
+
     private func peekTkStep(step: Int) -> Token? {
         let peekIndex = currentIndex + step
         guard peekIndex < tokens.count else {
@@ -161,7 +159,7 @@ public class ParseStandXMLTagTokens {
         }
         return tokens[peekIndex]
     }
-    
+
     private func advanceTk() {
         currentIndex += 1
         guard currentIndex < tokens.count else {
@@ -169,5 +167,5 @@ public class ParseStandXMLTagTokens {
         }
         currentToken = tokens[currentIndex]
     }
-    
+
 }

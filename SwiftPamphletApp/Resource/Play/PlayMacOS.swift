@@ -15,11 +15,10 @@ class PlayMacOS {
             return
         }
         print(s)
-        
+
         // 设置剪贴板内容
         let p = NSPasteboard.general
         p.declareTypes([.string], owner: nil)
         p.setString(s, forType: .string)
     }
 }
-

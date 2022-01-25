@@ -49,11 +49,11 @@ struct ShareView: View {
 
 struct WebView: NSViewRepresentable {
     let urlStr: String
-    
+
     func makeNSView(context: Context) -> some WKWebView {
         return WKWebView()
     }
-    
+
     func updateNSView(_ nsView: NSViewType, context: Context) {
         let r = URLRequest(url: URL(string: urlStr)!)
         nsView.load(r)
@@ -63,11 +63,11 @@ struct WebView: NSViewRepresentable {
 struct WebUIView: NSViewRepresentable {
     let html: String
     let baseURLStr: String
-    
+
     func makeNSView(context: Context) -> some WKWebView {
         return WKWebView()
     }
-    
+
     func updateNSView(_ nsView: NSViewType, context: Context) {
         let host = URL(string: baseURLStr)?.host ?? ""
         nsView.loadHTMLString(html, baseURL: URL(string: "https://\(host)"))
@@ -86,7 +86,7 @@ struct GitHubApiTimeView: View {
         }
         .font(.system(.footnote))
         .foregroundColor(.secondary)
-        
+
     }
 }
 
@@ -108,7 +108,7 @@ struct FixAwfulPerformanceStyle: ButtonStyle {
 struct AsyncImageWithPlaceholder: View {
     enum Size {
         case tinySize, smallSize,normalSize, bigSize
-        
+
         var v: CGFloat {
             switch self {
             case .tinySize:
@@ -157,7 +157,7 @@ struct ButtonGoGitHubWeb: View {
             } else {
                 Text(text)
             }
-            
+
         }.buttonStyle(FixAwfulPerformanceStyle())
     }
 }

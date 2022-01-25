@@ -10,35 +10,35 @@ import Combine
 
 final class RepoVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
-    
+
     public let repoName: String
-    
+
     @Published private(set) var repo: RepoModel
     @Published private(set) var commits: [CommitModel]
     @Published private(set) var issueEvents: [IssueEventModel]
     @Published private(set) var issues: [IssueModel]
     @Published private(set) var readme: RepoContent
-    
+
     @Published var errHint = false
     @Published var errMsg = ""
     private let errSj = PassthroughSubject<APISevError, Never>()
 
     private let apiSev: APISev
-    
+
     private let apRepoSj = PassthroughSubject<Void, Never>()
     private let apCommitsSj = PassthroughSubject<Void, Never>()
-    
+
     private let apIssueEventsSj = PassthroughSubject<Void, Never>()
     private let apIssuesSj = PassthroughSubject<Void, Never>()
     private let apReadmeSj = PassthroughSubject<Void, Never>()
-    
+
     private let resRepoSj = PassthroughSubject<RepoModel, Never>()
     private let resCommitsSj = PassthroughSubject<[CommitModel], Never>()
     private let resNotiCommitsSj = PassthroughSubject<[CommitModel], Never>()
     private let resIssueEventsSj = PassthroughSubject<[IssueEventModel], Never>()
     private let resIssuesSj = PassthroughSubject<[IssueModel], Never>()
     private let resReadmeSj = PassthroughSubject<RepoContent, Never>()
-    
+
     enum RepoActionType {
         case inInit, inCommit, inInitJustRepo, inIssueEvents, inIssues, inReadme, clearExpUnReadCommit
     }
@@ -60,13 +60,13 @@ final class RepoVM: APIVMable {
             clearExpUnReadCommit()
         }
     }
-    
+
     func clearExpUnReadCommit() {
         do {
-            let _ = try RepoStoreDataHelper.updateUnread(name: self.repoName, unread: 0)
+            _ = try RepoStoreDataHelper.updateUnread(name: self.repoName, unread: 0)
         } catch {}
     }
-    
+
     init(repoName: String) {
         self.repoName = repoName
         self.apiSev = APISev()
@@ -75,7 +75,7 @@ final class RepoVM: APIVMable {
         self.issueEvents = [IssueEventModel]()
         self.issues = [IssueModel]()
         self.readme = RepoContent()
-        
+
         // MARK: - 仓库信息获取
         let reqRepo = RepoRequest(repoName: repoName)
         let resRepoSm = apRepoSj
@@ -90,7 +90,7 @@ final class RepoVM: APIVMable {
             .subscribe(resRepoSj)
         let repRepoSm = resRepoSj
             .assign(to: \.repo, on: self)
-        
+
         // MARK: - 获取Commit
         let reqCommits = CommitsRequest(repoName: repoName)
         let resCommitsSm = apCommitsSj
@@ -105,7 +105,7 @@ final class RepoVM: APIVMable {
             .subscribe(resCommitsSj)
         let repCommitsSm = resCommitsSj
             .assign(to: \.commits, on: self)
-        
+
         // MARK: - 获取议题事件
         let reqIssueEvents = IssueEventsRequest(repoName: repoName)
         let resIssueEventsSm = apIssueEventsSj
@@ -120,7 +120,7 @@ final class RepoVM: APIVMable {
             .subscribe(resIssueEventsSj)
         let repIssueEventsSm = resIssueEventsSj
             .assign(to: \.issueEvents, on: self)
-        
+
         // MARK: - 获取议题列表
         let reqIssues = IssuesRequest(repoName: repoName)
         let resIssuesSm = apIssuesSj
@@ -135,7 +135,7 @@ final class RepoVM: APIVMable {
             .subscribe(resIssuesSj)
         let repIssuesSm = resIssuesSj
             .assign(to: \.issues, on: self)
-        
+
         // MARK: - 获取 Readme
         let reqReadme = ReadmeRequest(repoName: repoName)
         let resReadmeSm = apReadmeSj
@@ -150,7 +150,7 @@ final class RepoVM: APIVMable {
             .subscribe(resReadmeSj)
         let repReadmeSm = resReadmeSj
             .assign(to: \.readme, on: self)
-        
+
         // MARK: - 错误
         let errMsgSm = errSj
             .map { err -> String in
@@ -162,7 +162,7 @@ final class RepoVM: APIVMable {
                 true
             }
             .assign(to: \.errHint, on: self)
-        
+
         cancellables += [
             resRepoSm, repRepoSm,
             resCommitsSm, repCommitsSm,
@@ -172,7 +172,7 @@ final class RepoVM: APIVMable {
             errMsgSm, errHintSm
         ]
     }
-    
+
 }
 
 struct ReadmeRequest: APIReqType {

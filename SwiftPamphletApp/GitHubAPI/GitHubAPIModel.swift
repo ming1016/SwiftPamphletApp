@@ -53,7 +53,7 @@ struct CommitModel: Decodable, Hashable {
     var sha: String?
     var author: CommitAuthorModel?
     var commit: CommitCommitModel
-    
+
 }
 extension CommitModel: Identifiable {
     var id: UUID {
@@ -102,7 +102,7 @@ struct PayloadIssueModel: Jsonable {
     var number: Int
     var title: String?
     var body: String?
-    
+
 }
 struct PayloadCommitModel: Decodable, Hashable {
     var message: String?

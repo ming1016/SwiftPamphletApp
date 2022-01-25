@@ -8,7 +8,7 @@
 import Foundation
 
 class PlaySecurity {
-    
+
     static func keyChain() {
         let d1 = Data("keyChain github token".utf8)
         let service = "access-token"
@@ -35,7 +35,7 @@ class PlaySecurity {
             ] as CFDictionary
             SecItemUpdate(q2, q3)
         }
-        
+
         // 读取
         let q4 = [
             kSecAttrService: service,
@@ -43,19 +43,19 @@ class PlaySecurity {
             kSecClass: kSecClassGenericPassword,
             kSecReturnData: true
         ] as CFDictionary
-        
+
         var re: AnyObject?
         SecItemCopyMatching(q4, &re)
         guard let reData = re as? Data else { return }
         print(String(decoding: reData, as: UTF8.self)) // keyChain github token
-        
+
         // 删除
         let q5 = [
             kSecAttrService: service,
             kSecAttrAccount: account,
-            kSecClass: kSecClassGenericPassword,
+            kSecClass: kSecClassGenericPassword
         ] as CFDictionary
-        
+
         SecItemDelete(q5)
     }
 }

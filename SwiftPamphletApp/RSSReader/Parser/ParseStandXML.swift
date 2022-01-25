@@ -16,29 +16,29 @@ public struct XMLNode {
 }
 
 public class ParseStandXML {
-    
+
     private var tagNodes: [XMLTagNode]
     private var nodeTree: XMLNode
-    
+
     enum state {
         case normal
         case start
         case value
         case end
     }
-    
+
     public init(input: String) {
         tagNodes = ParseStandXMLTags(input: input).parse()
-        //ParseStandXMLTags.des(tagNodes: tagNodes)
+        // ParseStandXMLTags.des(tagNodes: tagNodes)
         nodeTree = XMLNode(name: "root", attributes: [XMLTagAttribute](), value: "", subNodes: [XMLNode]())
-        
+
     }
-    
+
     public func parse() -> XMLNode {
         nodeTree = recusiveParseTagNodes(parentNode: XMLNode(name: "root", attributes: [XMLTagAttribute](), value: "", subNodes: [XMLNode]()), tagNodes: tagNodes)
         return nodeTree
     } // end func
-    
+
     public func recusiveParseTagNodes(parentNode: XMLNode, tagNodes: [XMLTagNode]) -> XMLNode {
         var pNode = parentNode
         var currentState:state = .normal
@@ -49,7 +49,7 @@ public class ParseStandXML {
             if (node.type == .xml || node.type == .single) && currentState != .start {
                 currentState = .normal
                 currentTagNodeArr.append(node)
-                //添加到一级
+                // 添加到一级
                 tagNodeArrs.append(currentTagNodeArr)
                 currentTagNodeArr = [XMLTagNode]()
                 continue
@@ -76,9 +76,9 @@ public class ParseStandXML {
                 currentTagName = node.name
                 continue
             }
-            
+
         } // end for
-        
+
         for tagNodeArr in tagNodeArrs {
             if tagNodeArr.count == 1 {
                 // 只有一个的情况，即 xml 和 single
@@ -93,7 +93,7 @@ public class ParseStandXML {
                 let startTagNode = tagNodeArr[0]
                 var startNode = tagNodeToNode(tagNode: startTagNode)
                 let secondTagNode = tagNodeArr[1]
-                
+
                 // 判断是否是 value 这种情况比如 <p>paragraph</p>
                 if secondTagNode.type == .value {
                     // 有 value 的处理
@@ -110,13 +110,12 @@ public class ParseStandXML {
                 } // end else
 
             } // end else if
-            
+
         } // end for
-        
-        
+
         return pNode
     }
-    
+
     private func tagNodeToNode(tagNode: XMLTagNode) -> XMLNode {
         return XMLNode(name: tagNode.name, attributes: tagNode.attributes, value: tagNode.value, subNodes: [XMLNode]())
     }

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct NavView: View {
     var body: some View {
         ScrollView {

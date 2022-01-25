@@ -11,7 +11,6 @@ import Combine
 import Network
 import SwiftDate
 
-
 // MARK: - Web
 func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> String {
     let reStr = """
@@ -35,7 +34,7 @@ func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> St
 func howLongFromNow(timeStr: String) -> String {
     let cn = Region(zone: Zones.asiaShanghai, locale: Locales.chineseChina)
     SwiftDate.defaultRegion = cn
-    
+
     // 两个 DateInRegion 相差时间 interval
     var r = DateInRegion(timeStr, region: cn)
     if r == nil && !timeStr.isEmpty {
@@ -66,11 +65,11 @@ final class Nsck: ObservableObject {
     static let shared = Nsck()
     private(set) lazy var pb = mkpb()
     @Published private(set) var pt: NWPath
-    
+
     private let monitor: NWPathMonitor
     private lazy var sj = CurrentValueSubject<NWPath, Never>(monitor.currentPath)
     private var sb: AnyCancellable?
-    
+
     init() {
         monitor = NWPathMonitor()
         pt = monitor.currentPath
@@ -80,12 +79,12 @@ final class Nsck: ObservableObject {
         }
         monitor.start(queue: DispatchQueue.main)
     }
-    
+
     deinit {
         monitor.cancel()
         sj.send(completion: .finished)
     }
-    
+
     private func mkpb() -> AnyPublisher<NWPath, Never> {
         return sj.eraseToAnyPublisher()
     }
@@ -111,8 +110,6 @@ func validHTTPUrlStrFromUrlStr(urlStr: String) -> String {
     return httpsPrefix + urlStr
 }
 
-
-
 // MARK: - 文件
 // just for test
 func writeToDownload(fileName: String, content: String) {
@@ -121,7 +118,7 @@ func writeToDownload(fileName: String, content: String) {
 
 // 从Bundle中读取并解析JSON文件生成Model
 func loadBundleJSONFile<T: Decodable>(_ filename: String) -> T {
-    
+
     do {
         let decoder = JSONDecoder()
         return try decoder.decode(T.self, from: loadBundleData(filename))
@@ -160,7 +157,7 @@ func loadFileContent(path: String) -> String {
 
 // MARK: - 基础
 // decoder
-//extension 
+// extension 
 
 // base64
 extension String {
@@ -192,31 +189,3 @@ extension View {
         return self
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

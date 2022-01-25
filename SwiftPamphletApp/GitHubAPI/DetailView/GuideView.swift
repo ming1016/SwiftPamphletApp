@@ -18,13 +18,3 @@ struct GuideView: View {
             }
     }
 }
-
-
-
-
-
-
-
-
-
-

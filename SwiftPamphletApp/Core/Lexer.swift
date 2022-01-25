@@ -14,15 +14,15 @@ public enum LexerType {
 }
 
 public class Lexer {
-    
+
     private let text: String
     private var currentIndex: Int
     private var currentCharacter: Character?
     private var type: LexerType
-    
+
     public init(input: String, type: LexerType) {
         if input.count == 0 {
-            //fatalError("Error! input can't be empty")
+            // fatalError("Error! input can't be empty")
             text = "0"
         } else {
             text = input
@@ -30,9 +30,9 @@ public class Lexer {
         currentIndex = 0
         currentCharacter = text[text.startIndex]
         self.type = type
-        
+
     }
-    
+
     public func allTkFastWithoutNewLineAndWhitespace(operaters:String) -> [Token] {
         let allToken = allTkFast(operaters: operaters)
         let flAllToken = allToken.filter {
@@ -43,7 +43,7 @@ public class Lexer {
         }
         return fwAllToken
     }
-    
+
     public func allTkFast(operaters:String) -> [Token] {
         var nText = text.replacingOccurrences(of: " ", with: " starmingspace ")
         nText = nText.replacingOccurrences(of: "\n", with: " starmingnewline ")
@@ -52,7 +52,7 @@ public class Lexer {
         var set = CharacterSet()
         set.insert(charactersIn: operaters)
         set.formUnion(CharacterSet.whitespacesAndNewlines)
-        
+
         while !scanner.isAtEnd {
             for operater in operaters {
                 let opStr = operater.description
@@ -60,7 +60,7 @@ public class Lexer {
                     tks.append(.id(opStr))
                 }
             }
-            
+
             if let result = scanner.scanUpToCharacters(from: set) {
                 let resultString = result as String
                 if resultString == "starmingnewline" {
@@ -75,7 +75,7 @@ public class Lexer {
         tks.append(.eof)
         return tks
     }
-    
+
     // 返回所有 Token
     public func allTk() -> [Token] {
         var tk = nextTk()
@@ -86,50 +86,49 @@ public class Lexer {
         }
         return all
     }
-    
+
     // 流程
     private func nextTk() -> Token {
         // 检查是否到达文件末
         if isEof() {
             return .eof
         }
-        
+
         if CharacterSet.whitespaces.contains((currentCharacter?.unicodeScalars.first!)!) {
             skipWhiteSpace()
         }
-        
+
         // 检查是否到达文件末
         if isEof() {
             return .eof
         }
-        
+
         // 换行
         if CharacterSet.newlines.contains((currentCharacter?.unicodeScalars.first!)!) {
             advance()
             return .newLine
         }
-        
+
         // 数字
         if CharacterSet.decimalDigits.contains((currentCharacter?.unicodeScalars.first!)!) {
             let n = number()
             print(n.des())
             return n
         }
-        
+
         // 字符
         if CharacterSet.alphanumerics.contains((currentCharacter?.unicodeScalars.first!)!) {
             return id()
         }
-        
+
         // 代码分析
         if type == .code {
-            
-            
+
             // 双引号内字符串
             if currentCharacter == "\"" {
                 return doubleQuotationMarksString()
             }
-            
+
             // 处理注释
             if currentCharacter == "/" {
                 // 双引号注释
@@ -144,19 +143,19 @@ public class Lexer {
                 }
             }
         }
-        
+
         // 其余当作符号处理
         guard let cStr = currentCharacter else {
             return .eof
         }
         advance()
         return .id(String(cStr))
-        
+
         // 需要处理严格规则的时候会走下面条件
 //        advance()
 //        return .eof
     }
-    
+
     // 对字符的处理
     private func id() -> Token {
         var idStr = ""
@@ -166,7 +165,7 @@ public class Lexer {
         }
         return .id(idStr)
     }
-    
+
     // 对数字的处理
     private func number() -> Token {
         var numStr = ""
@@ -174,7 +173,7 @@ public class Lexer {
                 numStr += String(character)
                 advance()
         }
-        
+
         if let character = currentCharacter, character == ".", peek() != "." {
             numStr += "."
             advance()
@@ -186,7 +185,7 @@ public class Lexer {
         }
         return .constant(.integer(Int(numStr)!))
     }
-    
+
     // MARK: 辅助函数
     private func advance() {
         currentIndex += 1
@@ -196,7 +195,7 @@ public class Lexer {
         }
         currentCharacter = text[text.index(text.startIndex, offsetBy: currentIndex)]
     }
-    
+
     // 往前探一个字符
     private func peek() -> String? {
         return peekStep(step: 1)
@@ -212,7 +211,7 @@ public class Lexer {
         }
         return reStr
     }
-    
+
     // 取 // 这种注释
     private func commentsFromDoubleSlash() -> Token {
         var cStr = ""
@@ -222,7 +221,7 @@ public class Lexer {
         }
         return .comments(cStr)
     }
-    
+
     // 取 /* */ 这样的注释
     private func commentsFromSlashAsterisk() -> Token {
         var cStr = ""
@@ -235,11 +234,11 @@ public class Lexer {
                 advance()
                 cStr += String(character)
             }
-            
+
         }
         return .comments(cStr)
     }
-    
+
     // 双引号内字符串
     private func doubleQuotationMarksString() -> Token {
         advance()
@@ -259,21 +258,19 @@ public class Lexer {
         }
         return .string(cStr)
     }
-    
+
     // 跳过空格
     private func skipWhiteSpace() {
         while let character = currentCharacter, CharacterSet.whitespacesAndNewlines.contains(character.unicodeScalars.first!) {
             advance()
         }
     }
-    
-    
-    
+
     private func isEof() -> Bool {
         if currentIndex > self.text.count - 1 {
             return true
         }
         return false
     }
-    
+
 }

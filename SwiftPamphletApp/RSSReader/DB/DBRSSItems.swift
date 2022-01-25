@@ -31,13 +31,13 @@ struct RSSItemsDataHelper: DataHelperProtocol {
     static let rssLink = Expression<String>("rssLink")
     static let isRead = Expression<Bool>("isRead")
     typealias T = DBRSSItems
-    
+
     static func createTable() throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
         do {
-            let _ = try db.run(table.create(ifNotExists: true) { t in
+            _ = try db.run(table.create(ifNotExists: true) { t in
                 t.column(id, primaryKey: .autoincrement)
                 t.column(title, defaultValue: "")
                 t.column(link, unique: true)
@@ -51,7 +51,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             throw DBError.connectionErr
         }
     }
-    
+
     static func insert(i: T) throws -> Int64 {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -75,7 +75,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             throw DBError.insertErr
         }
     } // end insert
-    
+
     static func delete(i: T) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -89,9 +89,9 @@ struct RSSItemsDataHelper: DataHelperProtocol {
         } catch {
             throw DBError.deleteErr
         }
-        
+
     } // end delete
-    
+
     static func deleteExpiredFeedItems(aRssLink: String) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -113,7 +113,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             }
         }
     }
-    
+
     static func findLink(sLink: String) throws -> T? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -134,7 +134,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
         }
         return nil
     } // end find
-    
+
     static func findRssLink(sRssLink: String) throws -> [T] {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -159,7 +159,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
         }
         return reArr
     }
-    
+
     static func findRssLinkUnreadCount(sRssLink: String) throws -> Int {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -167,7 +167,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
         let query = table.filter(rssLink == sRssLink && isRead == false)
         return try db.scalar(query.count)
     }
-    
+
     static func findAllUnreadCount() throws -> Int {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -175,7 +175,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
         let query = table.filter(isRead == false)
         return try db.scalar(query.count)
     }
-    
+
     static func update(i: T) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -190,7 +190,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
                 content <- i.content,
                 pubDate <- i.pubDate
             )) > 0 {
-                
+
             } else {
                 throw DBError.updateErr
             }
@@ -198,7 +198,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             throw DBError.updateErr
         }
     } // end update
-    
+
     static func markRead(aLink: String) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -208,7 +208,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             if try db.run(query.update(
                 isRead <- true
             )) > 0 {
-                
+
             } else {
                 throw DBError.updateErr
             }
@@ -216,7 +216,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             throw DBError.updateErr
         }
     } // end markRead
-    
+
     static func markAllRead(aRssLink: String) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -226,7 +226,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             if try db.run(query.update(
                 isRead <- true
             )) > 0 {
-                
+
             } else {
                 throw DBError.updateErr
             }
@@ -234,7 +234,7 @@ struct RSSItemsDataHelper: DataHelperProtocol {
             throw DBError.updateErr
         }
     } // end markAllRead
-    
+
     static func findAll() throws -> [T]? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -255,46 +255,5 @@ struct RSSItemsDataHelper: DataHelperProtocol {
         }
         return arr
     } // end findAll
-    
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

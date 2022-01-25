@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RSSListView: View {
     @StateObject var vm: RSSVM
-    
+
     var body: some View {
         List {
             ForEach(vm.rssFeeds) { rss in
@@ -35,4 +35,3 @@ struct RSSListView: View {
         .environmentObject(vm)
     }
 }
-

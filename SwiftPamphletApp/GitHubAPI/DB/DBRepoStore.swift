@@ -26,7 +26,7 @@ typealias DBRepoStore = (
 struct RepoStoreDataHelper: DataHelperProtocol {
     static let table = Table("RepoStore")
     typealias T = DBRepoStore
-    
+
     static let id = Expression<Int64>("id")
     static let name = Expression<String>("name")
     static let fullName = Expression<String>("fullName")
@@ -39,7 +39,7 @@ struct RepoStoreDataHelper: DataHelperProtocol {
     static let unRead = Expression<Int>("unRead")
     static let type = Expression<Int>("type")
     static let extra = Expression<String>("extra")
-    
+
     static func createEmptyDBRepoStore(_ pFullName: String) -> T {
         return T(
             id: 0,
@@ -56,13 +56,13 @@ struct RepoStoreDataHelper: DataHelperProtocol {
             extra: ""
         )
     }
-    
+
     static func createTable() throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
         }
         do {
-            let _ = try db.run(table.create(ifNotExists: true) { t in
+            _ = try db.run(table.create(ifNotExists: true) { t in
                 t.column(id, defaultValue: 0)
                 t.column(name, defaultValue: "")
                 t.column(fullName, unique: true)
@@ -80,7 +80,7 @@ struct RepoStoreDataHelper: DataHelperProtocol {
             throw DBError.connectionErr
         }
     } // end createTable
-    
+
     static func insert(i: T) throws -> Int64 {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -109,7 +109,7 @@ struct RepoStoreDataHelper: DataHelperProtocol {
             throw DBError.insertErr
         }
     } // end insert
-    
+
     static func delete(i: T) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -124,7 +124,7 @@ struct RepoStoreDataHelper: DataHelperProtocol {
             throw DBError.deleteErr
         }
     } // end delete
-    
+
     static func find(sFullName: String) throws -> T? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -149,7 +149,7 @@ struct RepoStoreDataHelper: DataHelperProtocol {
         }
         return nil
     } // end find
-    
+
     static func update(i: T) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -168,7 +168,7 @@ struct RepoStoreDataHelper: DataHelperProtocol {
                 lastReadCommitSha <- i.lastReadCommitSha,
                 unRead <- i.unRead
             )) > 0 {
-                
+
             } else {
                 throw DBError.updateErr
             }
@@ -176,7 +176,7 @@ struct RepoStoreDataHelper: DataHelperProtocol {
             throw DBError.updateErr
         }
     } // end update
-    
+
     static func updateUnread(name: String, unread: Int) throws {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -186,7 +186,7 @@ struct RepoStoreDataHelper: DataHelperProtocol {
             if try db.run(query.update(
                 unRead <- unread
             )) > 0 {
-                
+
             } else {
                 throw DBError.updateErr
             }
@@ -194,7 +194,7 @@ struct RepoStoreDataHelper: DataHelperProtocol {
             throw DBError.updateErr
         }
     }
-    
+
     static func findAll() throws -> [T]? {
         guard let db = DB.shared.BBDB else {
             throw DBError.connectionErr
@@ -219,38 +219,5 @@ struct RepoStoreDataHelper: DataHelperProtocol {
         }
         return arr
     } // end find all
-    
-    
+
 } // end RepoStore
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
