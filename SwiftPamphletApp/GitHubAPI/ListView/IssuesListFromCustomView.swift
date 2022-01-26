@@ -16,7 +16,7 @@ struct IssuesListFromCustomView: View {
                 Section {
                     ForEach(ci.issues) { i in
                         NavigationLink {
-                            GuideView(number: i.number)
+                            GuideView(number: i.number, title: i.title)
                         } label: {
                             Text(i.title)
                                 .bold()
