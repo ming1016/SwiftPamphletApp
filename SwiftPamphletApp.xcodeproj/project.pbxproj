@@ -171,6 +171,7 @@
 		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
 		08D4F0FC275F705C005FC997 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4F0FB275F705C005FC997 /* LabelView.swift */; };
 		08D4F0FE275F728C005FC997 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D4F0FD275F728C005FC997 /* LinkView.swift */; };
+		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -335,6 +336,7 @@
 		08CD61FD27758B8A008C0935 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		08D4F0FB275F705C005FC997 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		08D4F0FD275F728C005FC997 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
+		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -866,6 +868,7 @@
 			children = (
 				08AEAEF9277F3C7400B969E2 /* css.html */,
 				08448F0E2799328700B61353 /* css_cn.html */,
+				08F51BC427A374A500693AB6 /* footer_js.html */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -1036,6 +1039,7 @@
 				086A5F5A274CC17700FECE02 /* lib-Combine.json in Resources */,
 				08448FBA279EC3EA00B61353 /* 23.md in Resources */,
 				08448FD0279EC5CC00B61353 /* 35.md in Resources */,
+				08F51BC527A374A500693AB6 /* footer_js.html in Resources */,
 				08448FB4279EC37000B61353 /* 17.md in Resources */,
 				08448FA7279EBB7E00B61353 /* 11.md in Resources */,
 				08448FCA279EC56D00B61353 /* 32.md in Resources */,

@@ -23,6 +23,7 @@ func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> St
         </article>
     </main>
 </body>
+\(SPC.rssFooterJS())
 </html>
 """
     // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/\(codeStyle).css">

@@ -43,6 +43,11 @@ struct SPC {
         let data = loadBundleData("css_cn.html")
         return String(data: data, encoding: .utf8) ?? ""
     }
+    
+    static func rssFooterJS() -> String {
+        let data = loadBundleData("footer_js.html")
+        return String(data: data, encoding: .utf8) ?? ""
+    }
 
     static func outputRepo() {
         let re = repos()
