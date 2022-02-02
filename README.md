@@ -4,7 +4,7 @@ Swift 的手册，是个 macOS 程序。
 
 ## 下载
 
-直接下载dmg使用：[戴铭的Swift小册子.dmg.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/7983512/Swift.dmg.zip)
+直接下载最新 dmg 使用：[戴铭的Swift小册子.dmg.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/7983512/Swift.dmg.zip)
 
 ## 编译
 
