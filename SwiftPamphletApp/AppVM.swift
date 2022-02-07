@@ -56,7 +56,7 @@ final class AppVM: ObservableObject {
                 for r in rssFeed {
                     i += 1
                     let progressStr = "(\(i)/\(count))"
-                    await updateAlertMsg(msg: "\(progressStr) 正在同步 \(ics.randomElement ?? "") \(r.title) ：\(r.des)")
+                    await updateAlertMsg(msg: "\(progressStr) 正在同步 \(ics.randomElement() ?? "") \(r.title) ：\(r.des)")
                     let str = try await RSSReq(r.feedLink)
                     guard let str = str else {
                         break

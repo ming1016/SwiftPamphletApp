@@ -39,6 +39,77 @@ protocol pc {
 }
 
 class PlaySyntax {
+    
+    // MARK: - Hashable
+    static func hashable() {
+        struct H: Hashable {
+            var p1: String
+            var p2: Int
+            
+            // 提供随机 seed
+            func hash(into hasher: inout Hasher) {
+                hasher.combine(p1)
+            }
+        }
+        
+        let h1 = H(p1: "one", p2: 1)
+        let h2 = H(p1: "two", p2: 2)
+        
+        var hs1 = Hasher()
+        hs1.combine(h1)
+        hs1.combine(h2)
+        print(h1.hashValue) // 7417088153212460033 随机值
+        print(h2.hashValue) // -6972912482785541972 随机值
+        print(hs1.finalize()) // 7955861102637572758 随机值
+        print(h1.hashValue) // 7417088153212460033 和前面 h1 一样
+        
+        let h3 = H(p1: "one", p2: 1)
+        print(h3.hashValue) // 7417088153212460033 和前面 h1 一样
+        var hs2 = Hasher()
+        hs2.combine(h3)
+        hs2.combine(h2)
+        print(hs2.finalize()) // 7955861102637572758 和前面 hs1 一样
+    }
+    
+    // MARK: - 动态成员查询
+    static func dynamicMemberLookup() {
+        @dynamicMemberLookup
+        struct D {
+            // 找字符串
+            subscript(dynamicMember m: String) -> String {
+                let p = ["one": "first", "two": "second"]
+                return p[m, default: ""]
+            }
+            // 找整型
+            subscript(dynamicMember m: String) -> Int {
+                let p = ["one": 1, "two": 2]
+                return p[m, default: 0]
+            }
+            // 找闭包
+            subscript(dynamicMember m: String) -> (_ s: String) -> Void {
+                return {
+                    print("show \($0)")
+                }
+            }
+            // 静态数组成员
+            var p = ["This is a member"]
+            // 动态数组成员
+            subscript(dynamicMember m: String) -> [String] {
+                return ["This is a dynamic member"]
+            }
+        }
+        
+        let d = D()
+        let s1: String = d.one
+        print(s1) // first
+        let i1: Int = d.one
+        print(i1) // 1
+        d.show("something") // show something
+        print(d.p) // ["This is a member"]
+        let dynamicP:[String] = d.dp
+        print(dynamicP) // ["This is a dynamic member"]
+        
+    }
 
     // MARK: - 泛型
     static func generics() {
@@ -212,6 +283,11 @@ class PlaySyntax {
             $0 < 30
         }
         print(a10) // [35, 3]
+        
+        // 删除所有不满足条件的元素
+        var a11 = [1, 3, 5, 12, 25]
+        a11.removeAll { $0 < 10 } // 比 filter 更高效
+        print(a11)
     }
 
     // MARK: - Set
@@ -362,6 +438,18 @@ class PlaySyntax {
         // 字符串可以当作集合来用。
         let revered = s7.reversed()
         print(String(revered))
+        
+        // 原始字符串
+        let s8 = #"\(s7)\#(s7) "one" and "two"\n. \#nThe second line."#
+        print(s8)
+        /// \(s7)hi "one" and "two"\n.
+        /// The second line.
+        
+        // 原始字符串在正则使用效果更佳，反斜杠更少了。
+        let s9 = "\\\\[A-Z]+[A-Za-z]+\\.[a-z]+"
+        let s10 = #"\\[A-Z]+[A-Za-z]+\.[a-z]+"#
+        print(s9) // \\[A-Z]+[A-Za-z]+\.[a-z]+
+        print(s10) // \\[A-Z]+[A-Za-z]+\.[a-z]+
     }
 
 }

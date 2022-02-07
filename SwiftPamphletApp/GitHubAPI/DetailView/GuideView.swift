@@ -20,7 +20,7 @@ struct GuideView: View {
             NavigationLink {
                 WebView(urlStr: "https://github.com/\(SPC.pamphletIssueRepoName)/issues/" + "\(number)")
             } label: {
-                Text("议题 #\(number)")
+                Text("议题讨论 #\(number)")
             }
         }
         .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))

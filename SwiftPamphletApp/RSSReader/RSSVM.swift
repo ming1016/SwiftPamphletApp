@@ -196,9 +196,10 @@ final class RSSVM: ObservableObject {
 
         // 数据库操作
         do {
-
+            // 时间倒序
+            let reversedRssItems = rss.items.reversed()
             // 添加新增 rss item
-            for i in rss.items {
+            for i in reversedRssItems {
                 if let _ = try RSSItemsDataHelper.findLink(sLink: i.link) {
 
                 } else {
@@ -235,6 +236,9 @@ final class RSSVM: ObservableObject {
                     unReadCount: unReadCount
                 ))
             }
+            
+            // 清理过多已读的 rss
+            _ = try RSSItemsDataHelper.deleteExpiredFeedItems(aRssLink: rssModel.feedLink)
 
         } catch {}
     }

@@ -172,17 +172,6 @@ extension String {
     }
 }
 
-// 从数组中随机取一个元素
-extension Array {
-    public var randomElement: Element? {
-        guard count > 0 else {
-            return nil
-        }
-        let index = Int(arc4random_uniform(UInt32(count)))
-        return self[index]
-    }
-}
-
 // MARK: - 调试
 extension View {
     func debug() -> Self {

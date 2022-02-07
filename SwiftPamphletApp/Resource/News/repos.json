@@ -56,6 +56,10 @@
             {
                 "id":"danielsaidi/SwiftUIKit",
                 "des":"给 SwiftUI 添加更多功能"
+            },
+            {
+                "id":"Toni77777/awesome-swiftui-libraries",
+                "des":"SwiftUI 可使用的库"
             }
         ]
     },
@@ -386,10 +390,6 @@
             {
                 "id":"nalexn/ViewInspector",
                 "des":"SwiftUI Runtime introspection 和 单元测试"
-            },
-            {
-                "id":"bazelbuild/bazel",
-                "des":"构建系统，不限于 iOS"
             }
         ]
     },
@@ -510,10 +510,6 @@
             {
                 "id":"apple/swift-evolution",
                 "des":"提案"
-            },
-            {
-                "id":"llvm/llvm-project",
-                "des":"编译器"
             },
             {
                 "id":"apple/swift-corelibs-foundation"

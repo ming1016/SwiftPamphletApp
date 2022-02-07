@@ -45,6 +45,10 @@
             {
                 "id":"diasurgical/devilutionX",
                 "des":"可以运行在 macOS 上的 Diablo 1"
+            },
+            {
+                "id":"erikolsson/wordle-clone",
+                "des":"SwiftUI 和 TCA 做的 Wordle 游戏"
             }
         ]
     },
@@ -97,6 +101,20 @@
             {
                 "id":"iovisor/bpftrace",
                 "des":"追踪语言 eBPF"
+            }
+        ]
+    },
+    {
+        "name":"性能和工程构建",
+        "id":2202051047,
+        "repos":[
+            {
+                "id":"bazelbuild/bazel",
+                "des":"构建系统，不限于 iOS"
+            },
+            {
+                "id":"yonaskolb/XcodeGen",
+                "des":"生成 Xcode 项目的 Swift 命令行工具"
             }
         ]
     },
@@ -171,12 +189,36 @@
         ]
     },
     {
+        "name":"apple",
+        "id":2202041708,
+        "repos":[
+            {
+                "id":"llvm/llvm-project",
+                "des":"编译器"
+            }
+        ]
+    },
+    {
+        "name":"接口",
+        "id":2202062007,
+        "repos":[
+            {
+                "id":"samschott/maestral",
+                "des":"Dropbox 客户端"
+            }
+        ]
+    },
+    {
         "name":"待分类",
         "id":2201250515,
         "repos":[
             {
                 "id":"alaskasquirrel/Lisp-China",
                 "des":"Lisp 资料"
+            },
+            {
+                "id":"sunym1993/flash-linux0.11-talk",
+                "des":"读 Linux 0.11 核心代码"
             }
         ]
     }
