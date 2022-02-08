@@ -127,6 +127,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        PlayArchitecture.codable()
 
 //        PlaySyntax.hashable()
+//        PlaySyntax.dynamicCallable()
 //        PlaySyntax.dynamicMemberLookup()
 //        PlaySyntax.generics()
 //        PlaySyntax.result()
@@ -134,6 +135,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        PlaySyntax.array()
 //        PlaySyntax.set()
 //        PlaySyntax.dictionary()
+//        PlaySyntax.enum()
+//        PlaySyntax.number()
 
 //        PlayFoundation.userDefaults()
 //        PlayFoundation.random()

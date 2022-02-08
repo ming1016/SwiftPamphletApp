@@ -95,6 +95,11 @@
                 "id":2202071511,
                 "title":"@dynamicMemberLookup 动态成员查询",
                 "number":137
+            },
+            {
+                "id":2202081559,
+                "title":"@dynamicCallable 动态可调用类型",
+                "number":141
             }
         ]
     },

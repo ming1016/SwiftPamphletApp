@@ -146,6 +146,7 @@
 		086A5F642754C14F00FECE02 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* TextView.swift */; };
 		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
 		086A5F6A2755F3BE00FECE02 /* repos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* repos.json */; };
+		08A4FDC227B25A140068E5BC /* 141.md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* 141.md */; };
 		08AEAEDB277EA5C300B969E2 /* RSSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEDA277EA5C300B969E2 /* RSSModel.swift */; };
 		08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */; };
 		08AEAEE1277EA70500B969E2 /* DBRepoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEE0277EA70500B969E2 /* DBRepoStore.swift */; };
@@ -319,6 +320,7 @@
 		086A5F632754C14F00FECE02 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		086A5F662754C27900FECE02 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		086A5F692755F3BE00FECE02 /* repos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = repos.json; path = SwiftPamphletApp/Resource/News/repos.json; sourceTree = SOURCE_ROOT; };
+		08A4FDC127B25A140068E5BC /* 141.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 141.md; sourceTree = "<group>"; };
 		08AEAEDA277EA5C300B969E2 /* RSSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSModel.swift; sourceTree = "<group>"; };
 		08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDevNoti.swift; sourceTree = "<group>"; };
 		08AEAEE0277EA70500B969E2 /* DBRepoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBRepoStore.swift; sourceTree = "<group>"; };
@@ -719,6 +721,7 @@
 			isa = PBXGroup;
 			children = (
 				0850444F27B0FDBD0096D556 /* 137.md */,
+				08A4FDC127B25A140068E5BC /* 141.md */,
 			);
 			path = InsidePropertyWrapper;
 			sourceTree = "<group>";
@@ -1113,6 +1116,7 @@
 				08448FC5279EC4F800B61353 /* 28.md in Resources */,
 				0850445627B110DA0096D556 /* 138.md in Resources */,
 				08449020279ECDCE00B61353 /* 67.md in Resources */,
+				08A4FDC227B25A140068E5BC /* 141.md in Resources */,
 				08448FC3279EC4D600B61353 /* 27.md in Resources */,
 				08AEAEE9277EDD9000B969E2 /* rssfeed.json in Resources */,
 				0844901A279ECD4E00B61353 /* 64.md in Resources */,

@@ -71,7 +71,34 @@ class PlaySyntax {
         print(hs2.finalize()) // 7955861102637572758 和前面 hs1 一样
     }
     
-    // MARK: - 动态成员查询
+    // MARK: - @dynamicCallable 动态可调用类型
+    static func dynamicCallable() {
+        @dynamicCallable
+        struct D {
+            // 带参数说明
+            func dynamicallyCall(withKeywordArguments args: KeyValuePairs<String, Int>) -> Int {
+                let firstArg = args.first?.value ?? 0
+                return firstArg * 2
+            }
+            
+            // 无参数说明
+            func dynamicallyCall(withArguments args: [String]) -> String {
+                var firstArg = ""
+                if args.count > 0 {
+                    firstArg = args[0]
+                }
+                return "show \(firstArg)"
+            }
+        }
+        
+        let d = D()
+        let i = d(numberIs: 2)
+        print(i) // 4
+        let s = d("hi")
+        print(s) // show hi
+    }
+    
+    // MARK: - @dynamicMemberLookup 动态成员查询
     static func dynamicMemberLookup() {
         @dynamicMemberLookup
         struct D {
@@ -362,7 +389,19 @@ class PlaySyntax {
         print(d1["k5"] ?? "") // whatever.
         let v1 = d1["k3", default: "whatever"]
         print(v1) // v3
-
+        
+        // compactMapValues() 对字典值进行转换和解包。可以解可选类型，并去掉 nil 值
+        let d4 = [
+            "k1": 1,
+            "k2": 2,
+            "k3": nil
+        ]
+        let d5 = d4.mapValues { $0 }
+        let d6 = d4.compactMapValues{ $0 }
+        print(d5)
+        // ["k3": nil, "k1": Optional(1), "k2": Optional(2)]
+        print(d6)
+        // ["k1": 1, "k2": 2]
     }
 
     // MARK: - 字符串
@@ -450,6 +489,112 @@ class PlaySyntax {
         let s10 = #"\\[A-Z]+[A-Za-z]+\.[a-z]+"#
         print(s9) // \\[A-Z]+[A-Za-z]+\.[a-z]+
         print(s10) // \\[A-Z]+[A-Za-z]+\.[a-z]+
+    } // end func string
+    
+    // MARK: - 数字
+    static func number() {
+        // Int
+        let i1 = 100
+        let i2 = 22
+        print(i1 / i2) // 向下取整得 4
+
+        // Float
+        let f1: Float = 100.0
+        let f2: Float = 22.0
+        print(f1 / f2) // 4.5454545
+
+        // Double
+        let d1: Double = 100.0
+        let d2: Double = 22.0
+        print(d1 / d2) // 4.545454545454546
+
+        // 字面量
+        print(Int(0b10101)) // 0b 开头是二进制
+        print(Int(0x00afff)) // 0x 开头是十六进制
+        print(2.5e4) // 2.5x10^4 十进制用 e
+        print(0xAp2) // 10*2^2  十六进制用 p
+        print(2_000_000) // 2000000
+        
+        // isMultiple(of:) 方法检查一个数字是否是另一个数字的倍数
+        let i3 = 36
+        print(i3.isMultiple(of: 9)) // true
     }
 
+    // MARK: - 枚举
+    static func `enum`() {
+        enum E1:String, CaseIterable {
+            case e1, e2 = "12"
+        }
+
+        // 关联值
+        enum E2 {
+            case e1([String])
+            case e2(Int)
+        }
+        let e1 = E2.e1(["one","two"])
+        let e2 = E2.e2(3)
+
+        switch e1 {
+        case .e1(let array):
+            print(array)
+        case .e2(let int):
+            print(int)
+        }
+        print(e2)
+
+        // 原始值
+        print(E1.e1.rawValue)
+
+        // 遵循 CaseIterable 协议可迭代
+        for ie in E1.allCases {
+            print("show \(ie)")
+        }
+
+        // 递归枚举
+        enum RE {
+            case v(String)
+            indirect case node(l:RE, r:RE)
+        }
+
+        let lNode = RE.v("left")
+        let rNode = RE.v("right")
+        let pNode = RE.node(l: lNode, r: rNode)
+
+        switch pNode {
+        case .v(let string):
+            print(string)
+        case .node(let l, let r):
+            print(l,r)
+            switch l {
+            case .v(let string):
+                print(string)
+            case .node(let l, let r):
+                print(l, r)
+            }
+            switch r {
+            case .v(let string):
+                print(string)
+            case .node(let l, let r):
+                print(l, r)
+            }
+        }
+        
+        // @unknown
+        enum E3 {
+            case e1, e2, e3
+        }
+        
+        func fe1(e: E3) {
+            switch e {
+            case .e1:
+                print("e1 ok")
+            case .e2:
+                print("e2 ok")
+            case .e3:
+                print("e3 ok")
+            @unknown default:
+                print("not ok")
+            }
+        }
+    }
 }

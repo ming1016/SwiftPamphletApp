@@ -115,6 +115,10 @@
             {
                 "id":"yonaskolb/XcodeGen",
                 "des":"生成 Xcode 项目的 Swift 命令行工具"
+            },
+            {
+                "id":"uutils/coreutils",
+                "des":"Rust 重写跨平台 GNU coreutils"
             }
         ]
     },
