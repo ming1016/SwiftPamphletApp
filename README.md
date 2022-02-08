@@ -1,4 +1,4 @@
-# 戴铭的 Swift 小册子 3.1
+# 戴铭的 Swift 小册子 4.0
 
 Swift 的手册，是个 macOS 程序。
 ![](https://user-images.githubusercontent.com/251980/152918704-9522eb27-9304-4788-b4ed-72ffb170e1bc.png)
