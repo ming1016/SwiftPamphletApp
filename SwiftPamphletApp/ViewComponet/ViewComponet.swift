@@ -9,6 +9,20 @@ import SwiftUI
 import WebKit
 import MarkdownUI
 
+struct SideBarLabel: View {
+    var title: String
+    var imageName: String
+    var body: some View {
+        HStack {
+            Image(imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 30)
+            Text(title)
+        }
+    }
+}
+
 // MarkdownUI
 struct MarkdownView: View {
     var s: String

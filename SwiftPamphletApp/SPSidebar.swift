@@ -16,7 +16,7 @@ struct SPSidebar: View {
                 NavigationLink {
                     RSSListView(vm: RSSVM())
                 } label: {
-                    Label("博客与资讯", systemImage: "r.square.on.square.fill")
+                    SideBarLabel(title: "博客|资讯", imageName: "p21")
                         .badge(appVM.rssCountNotis)
                 }
             }
@@ -24,23 +24,15 @@ struct SPSidebar: View {
                 NavigationLink {
                     ExploreRepoListView()
                 } label: {
-                    if appVM.expCountNotis > 0 {
-                        Label("探索库", systemImage: "globe.asia.australia")
-                            .badge(appVM.expCountNotis)
-                    } else {
-                        Label("探索库", systemImage: "globe.asia.australia")
-                    }
+                    SideBarLabel(title: "探索库", imageName: "p24")
+                        .badge(appVM.expCountNotis)
 
                 } // end NavigationLink
 
                 if SPC.gitHubAccessToken.isEmpty == false {
                     NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
-                        if appVM.devsCountNotis > 0 {
-                            Label("开发者", systemImage: "person.2.wave.2")
-                                .badge(appVM.devsCountNotis)
-                        } else {
-                            Label("开发者", systemImage: "person.2.wave.2")
-                        }
+                        SideBarLabel(title: "开发者", imageName: "p5")
+                            .badge(appVM.devsCountNotis)
                     } // end NavigationLink
 
                 } // end if
@@ -48,28 +40,28 @@ struct SPSidebar: View {
 
             Section("Swift指南") {
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-syntax"))) {
-                    Label("语法速查", systemImage: "function")
+                    SideBarLabel(title: "语法速查", imageName: "p23")
                 }
 
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-features"))) {
-                    Label("特性", systemImage: "pencil")
+                    SideBarLabel(title: "特性", imageName: "p10")
                 }
 
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"guide-subject"))) {
-                    Label("专题", systemImage: "graduationcap")
+                    SideBarLabel(title: "专题", imageName: "p12")
                 }
             }
             Section("库使用指南") {
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Combine"))) {
-                    Label("Combine", systemImage: "app.connected.to.app.below.fill")
+                    SideBarLabel(title: "Combine", imageName: "p19")
                 }
 
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Concurrency"))) {
-                    Label("Concurrency", systemImage: "timer")
+                    SideBarLabel(title: "Concurrency", imageName: "p1")
                 }
 
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-SwiftUI"))) {
-                    Label("SwiftUI", systemImage: "rectangle.fill.on.rectangle.fill")
+                    SideBarLabel(title: "SwiftUI", imageName: "p3")
                 }
             }
 
