@@ -223,6 +223,10 @@
             {
                 "id":"sunym1993/flash-linux0.11-talk",
                 "des":"读 Linux 0.11 核心代码"
+            },
+            {
+                "id":"imDazui/Tvlist-awesome-m3u-m3u8",
+                "des":"直播源相关资源汇总 IPTV、M3U"
             }
         ]
     }

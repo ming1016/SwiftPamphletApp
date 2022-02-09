@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension URLSession {
     func dataTaskWithResult(
@@ -173,9 +174,9 @@ class PlaySyntax {
         struct S2 {
             static var sp = [String: Int]()
             
-            static subscript(_ s: String) -> Int {
+            static subscript(_ s: String, d: Int = 10) -> Int {
                 get {
-                    return sp[s] ?? 0
+                    return sp[s] ?? d
                 }
                 set {
                     sp[s] = newValue
@@ -185,7 +186,61 @@ class PlaySyntax {
         
         S2["key1"] = 1
         S2["key2"] = 2
-        print(S2["key2"])
+        print(S2["key2"]) // 2
+        print(S2["key3"]) // 10
+        
+        // callAsFunction()
+        struct S3 {
+            var p1: String
+            
+            func callAsFunction() -> String {
+                return "show \(p1)"
+            }
+        }
+        let s2 = S3(p1: "hi")
+        print(s2()) // show hi
+    }
+    
+    // MARK: - 属性
+    static func property() {
+        struct S {
+            static let sp = "类型属性" // 类型属性通过类型本身访问，非实例访问
+            var p1: String = ""
+            var p2: Int = 1
+            // cp 是计算属性
+            var cp: Int {
+                get {
+                    return p2 * 2
+                }
+                set {
+                    p2 = newValue + 2
+                }
+            }
+            // 只有 getter 的是只读计算属性
+            var rcp: Int {
+                p2 * 4
+            }
+        }
+        
+        print(S.sp)
+        print(S().cp) // 2
+        var s = S()
+        s.cp = 3
+        print(s.p2) // 5
+        print(S().rcp) // 4
+        
+        // 键路径表达式作为函数
+        struct S2 {
+            let p1: String
+            let p2: Int
+        }
+        
+        let s2 = S2(p1: "one", p2: 1)
+        let s3 = S2(p1: "two", p2: 2)
+        let a1 = [s2, s3]
+        let a2 = a1.map(\.p1)
+        print(a2) // ["one", "two"]
+        
     }
 
     // MARK: - 泛型
@@ -364,7 +419,14 @@ class PlaySyntax {
         // 删除所有不满足条件的元素
         var a11 = [1, 3, 5, 12, 25]
         a11.removeAll { $0 < 10 } // 比 filter 更高效
-        print(a11)
+        print(a11) // [12, 25]
+        
+        // 创建未初始化的数组
+        let a12 = (0...4).map { _ in
+            Int.random(in: 0...5)
+        }
+        print(a12) // [0, 3, 3, 2, 5] 随机
+        
     }
 
     // MARK: - Set
@@ -552,6 +614,12 @@ class PlaySyntax {
         let f1: Float = 100.0
         let f2: Float = 22.0
         print(f1 / f2) // 4.5454545
+        
+//        let f3: Float16 = 5.0 // macOS 还不能用
+        let f4: Float32 = 5.0
+        let f5: Float64 = 5.0
+        let f6: Float80 = 5.0
+        print(f4, f5, f6) // 5.0 5.0 5.0
 
         // Double
         let d1: Double = 100.0
@@ -646,5 +714,26 @@ class PlaySyntax {
                 print("not ok")
             }
         }
+        
+        // Comparable 枚举比较
+        enum E4: Comparable {
+            case e1, e2
+            case e3(i: Int)
+            case e4
+        }
+        let e3 = E4.e4
+        let e4 = E4.e3(i: 3)
+        let e5 = E4.e3(i: 2)
+        let e6 = E4.e1
+        print(e3 > e4) // true
+        let a1 = [e3, e4, e5, e6]
+        let a2 = a1.sorted()
+        for i in a2 {
+            print(i.self)
+        }
+        /// e1
+        /// e3(i: 2)
+        /// e3(i: 3)
+        /// e4
     }
 }

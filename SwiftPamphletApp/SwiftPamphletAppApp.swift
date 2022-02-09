@@ -130,6 +130,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        PlaySyntax.dynamicCallable()
 //        PlaySyntax.dynamicMemberLookup()
 //        PlaySyntax.method()
+//        PlaySyntax.property()
 //        PlaySyntax.generics()
 //        PlaySyntax.result()
 //        PlaySyntax.string()
