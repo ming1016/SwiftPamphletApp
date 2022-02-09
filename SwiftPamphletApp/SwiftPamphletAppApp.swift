@@ -129,6 +129,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        PlaySyntax.hashable()
 //        PlaySyntax.dynamicCallable()
 //        PlaySyntax.dynamicMemberLookup()
+//        PlaySyntax.method()
 //        PlaySyntax.generics()
 //        PlaySyntax.result()
 //        PlaySyntax.string()

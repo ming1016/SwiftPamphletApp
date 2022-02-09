@@ -137,6 +137,56 @@ class PlaySyntax {
         print(dynamicP) // ["This is a dynamic member"]
         
     }
+    
+    // MARK: - 方法
+    
+    static func method() {
+        enum E: String {
+            case one, two, three
+            func showRawValue() {
+                print(rawValue)
+            }
+        }
+
+        let e = E.three
+        e.showRawValue() // three
+
+        // 可变的实例方法，使用 mutating 标记
+        struct S1 {
+            var p: String
+            mutating func addFullStopForP() {
+                p += "."
+            }
+        }
+        var s = S1(p: "hi")
+        s.addFullStopForP()
+        print(s.p)
+
+        // 类方法
+        class C {
+            class func cf() {
+                print("类方法")
+            }
+        }
+        
+        // 静态下标
+        struct S2 {
+            static var sp = [String: Int]()
+            
+            static subscript(_ s: String) -> Int {
+                get {
+                    return sp[s] ?? 0
+                }
+                set {
+                    sp[s] = newValue
+                }
+            }
+        }
+        
+        S2["key1"] = 1
+        S2["key2"] = 2
+        print(S2["key2"])
+    }
 
     // MARK: - 泛型
     static func generics() {
