@@ -115,6 +115,8 @@
 		0844902E279ECF1C00B61353 /* 92.md in Resources */ = {isa = PBXBuildFile; fileRef = 0844902D279ECF1C00B61353 /* 92.md */; };
 		08449030279ECF7D00B61353 /* 1.md in Resources */ = {isa = PBXBuildFile; fileRef = 0844902F279ECF7D00B61353 /* 1.md */; };
 		08449034279F6D0D00B61353 /* RepoWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08449033279F6D0D00B61353 /* RepoWebView.swift */; };
+		084E1A5F27B4F7BB0072BBB6 /* 142.md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A5E27B4F7BB0072BBB6 /* 142.md */; };
+		084E1A6327B517FC0072BBB6 /* 143.md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A6227B517FC0072BBB6 /* 143.md */; };
 		0850444C27B0D1F80096D556 /* 135.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850444B27B0D1F80096D556 /* 135.md */; };
 		0850444E27B0D4EA0096D556 /* 136.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850444D27B0D4EA0096D556 /* 136.md */; };
 		0850445027B0FDBD0096D556 /* 137.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850444F27B0FDBD0096D556 /* 137.md */; };
@@ -287,6 +289,8 @@
 		0844902D279ECF1C00B61353 /* 92.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 92.md; sourceTree = "<group>"; };
 		0844902F279ECF7D00B61353 /* 1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 1.md; sourceTree = "<group>"; };
 		08449033279F6D0D00B61353 /* RepoWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoWebView.swift; sourceTree = "<group>"; };
+		084E1A5E27B4F7BB0072BBB6 /* 142.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 142.md; sourceTree = "<group>"; };
+		084E1A6227B517FC0072BBB6 /* 143.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 143.md; sourceTree = "<group>"; };
 		0850444B27B0D1F80096D556 /* 135.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 135.md; sourceTree = "<group>"; };
 		0850444D27B0D4EA0096D556 /* 136.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 136.md; sourceTree = "<group>"; };
 		0850444F27B0FDBD0096D556 /* 137.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 137.md; sourceTree = "<group>"; };
@@ -409,6 +413,7 @@
 		08448F46279E7E3400B61353 /* Subject */ = {
 			isa = PBXGroup;
 			children = (
+				084E1A6127B517990072BBB6 /* SwiftThoseThings */,
 				08448F61279EB2B700B61353 /* Standard */,
 				08448F5F279EB25F00B61353 /* RecommendedMaterials */,
 				08448F5C279EB19700B61353 /* ThirdLibUse */,
@@ -717,11 +722,20 @@
 			path = UseViewComponent;
 			sourceTree = "<group>";
 		};
+		084E1A6127B517990072BBB6 /* SwiftThoseThings */ = {
+			isa = PBXGroup;
+			children = (
+				084E1A6227B517FC0072BBB6 /* 143.md */,
+			);
+			path = SwiftThoseThings;
+			sourceTree = "<group>";
+		};
 		0850445127B110950096D556 /* InsidePropertyWrapper */ = {
 			isa = PBXGroup;
 			children = (
 				0850444F27B0FDBD0096D556 /* 137.md */,
 				08A4FDC127B25A140068E5BC /* 141.md */,
+				084E1A5E27B4F7BB0072BBB6 /* 142.md */,
 			);
 			path = InsidePropertyWrapper;
 			sourceTree = "<group>";
@@ -1066,6 +1080,7 @@
 				08448FFC279ECA7C00B61353 /* 79.md in Resources */,
 				08448FE4279EC7ED00B61353 /* 44.md in Resources */,
 				08448F92279EB8CA00B61353 /* 130.md in Resources */,
+				084E1A6327B517FC0072BBB6 /* 143.md in Resources */,
 				08448F6F279EB56400B61353 /* 122.md in Resources */,
 				0844900C279ECBB400B61353 /* 87.md in Resources */,
 				08448FA3279EBB1B00B61353 /* 3.md in Resources */,
@@ -1142,6 +1157,7 @@
 				08448FF8279ECA2000B61353 /* 77.md in Resources */,
 				08448F86279EB7D200B61353 /* 53.md in Resources */,
 				08448FA5279EBB4100B61353 /* 10.md in Resources */,
+				084E1A5F27B4F7BB0072BBB6 /* 142.md in Resources */,
 				08448FDC279EC71800B61353 /* 40.md in Resources */,
 				08448F43279B83C000B61353 /* archiveDevelopers.json in Resources */,
 				0844902E279ECF1C00B61353 /* 92.md in Resources */,

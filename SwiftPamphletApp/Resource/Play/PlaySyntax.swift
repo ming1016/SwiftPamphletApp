@@ -72,6 +72,72 @@ class PlaySyntax {
         print(hs2.finalize()) // 7955861102637572758 和前面 hs1 一样
     }
     
+    // MARK: - @resultBuilder
+    static func resultBuilder() {
+        
+        @resultBuilder
+        struct RBS {
+            // 基本闭包支持
+            static func buildBlock(_ components: Int...) -> Int {
+                components.reduce(0) { partialResult, i in
+                    partialResult + i
+                }
+            }
+            // 支持条件判断
+            static func buildEither(first component: Int) -> Int {
+                component
+            }
+            static func buildEither(second component: Int) -> Int {
+                component
+            }
+            // 支持循环
+            static func buildArray(_ components: [Int]) -> Int {
+                components.reduce(0) { partialResult, i in
+                    partialResult + i
+                }
+            }
+        }
+        
+        let a = RBS.buildBlock(
+            1,
+            2,
+            3
+        )
+        print(a) // 6
+        
+        // 应用到函数中
+        @RBS func f1() -> Int {
+            1
+            2
+            3
+        }
+        print(f1()) // 6
+        
+        // 设置了 buildEither 就可以在闭包中进行条件判断。
+        @RBS func f2(stopAtThree: Bool) -> Int {
+            1
+            2
+            3
+            if stopAtThree == true {
+                0
+            } else {
+                4
+                5
+                6
+            }
+        }
+        print(f2(stopAtThree: false)) // 21
+        
+        // 设置了 buildArray 就可以在闭包内使用循环了
+        @RBS func f3() -> Int {
+            for i in 1...3 {
+                i * 2
+            }
+        }
+        print(f3()) // 12
+        
+    }
+    
     // MARK: - @dynamicCallable 动态可调用类型
     static func dynamicCallable() {
         @dynamicCallable
@@ -137,6 +203,46 @@ class PlaySyntax {
         let dynamicP:[String] = d.dp
         print(dynamicP) // ["This is a dynamic member"]
         
+    }
+    
+    // MARK: - 函数
+    static func function() {
+        func f1(p: String = "p") -> String {
+            "p is \(p)"
+        }
+
+        // 函数作为参数
+        func f2(fn: (String) -> String, p: String) -> String {
+            return fn(p)
+        }
+
+        print(f2(fn:f1, p: "d")) // p is d
+
+        // 函数作为返回值
+        func f3(p: String) -> (String) -> String {
+            return f1
+        }
+
+        print(f3(p: "yes")("no")) // p is no
+        
+        // 函数中的多个变量参数
+        func f4(s: String..., i: Int...) {
+            print(s)
+            print(i)
+        }
+        
+        f4(s: "one", "two", "three", i: 1, 2, 3)
+        /// ["one", "two", "three"]
+        /// [1, 2, 3]
+        
+        // 嵌套函数可以重载，嵌套函数可以在声明函数之前调用他。
+        func f5() {
+            nf5()
+            func nf5() {
+                print("this is nested function")
+            }
+        }
+        f5() // this is nested function
     }
     
     // MARK: - 方法
@@ -427,6 +533,14 @@ class PlaySyntax {
         }
         print(a12) // [0, 3, 3, 2, 5] 随机
         
+        // #if 用于后缀表达式
+        let a13 = a11
+        #if os(iOS)
+            .count
+        #else
+            .reduce(0, +)
+        #endif
+        print(a13) //37
     }
 
     // MARK: - Set

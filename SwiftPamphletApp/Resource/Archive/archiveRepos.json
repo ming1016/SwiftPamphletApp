@@ -101,6 +101,10 @@
             {
                 "id":"iovisor/bpftrace",
                 "des":"追踪语言 eBPF"
+            },
+            {
+                "id":"sampsyo/cs6120",
+                "des":"编译器教学"
             }
         ]
     },

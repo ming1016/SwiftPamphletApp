@@ -92,6 +92,11 @@
         "id":2202071510,
         "issues":[
             {
+                "id":2202101536,
+                "title":"@resultBuilder",
+                "number":142
+            },
+            {
                 "id":2202071511,
                 "title":"@dynamicMemberLookup 动态成员查询",
                 "number":137

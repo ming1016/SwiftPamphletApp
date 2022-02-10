@@ -127,8 +127,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        PlayArchitecture.codable()
 
 //        PlaySyntax.hashable()
+//        PlaySyntax.resultBuilder()
 //        PlaySyntax.dynamicCallable()
 //        PlaySyntax.dynamicMemberLookup()
+//        PlaySyntax.function()
 //        PlaySyntax.method()
 //        PlaySyntax.property()
 //        PlaySyntax.generics()
