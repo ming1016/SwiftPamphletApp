@@ -120,7 +120,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var op: String?
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
-
+        
+//        AutoTask.buildContentMarkdownFile()
+        
 //        PlaySecurity.keyChain()
 
 //        PlayArchitecture.error()

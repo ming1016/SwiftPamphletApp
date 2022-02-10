@@ -117,6 +117,7 @@
 		08449034279F6D0D00B61353 /* RepoWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08449033279F6D0D00B61353 /* RepoWebView.swift */; };
 		084E1A5F27B4F7BB0072BBB6 /* 142.md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A5E27B4F7BB0072BBB6 /* 142.md */; };
 		084E1A6327B517FC0072BBB6 /* 143.md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A6227B517FC0072BBB6 /* 143.md */; };
+		084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E1A6427B51EDB0072BBB6 /* AutoTask.swift */; };
 		0850444C27B0D1F80096D556 /* 135.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850444B27B0D1F80096D556 /* 135.md */; };
 		0850444E27B0D4EA0096D556 /* 136.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850444D27B0D4EA0096D556 /* 136.md */; };
 		0850445027B0FDBD0096D556 /* 137.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850444F27B0FDBD0096D556 /* 137.md */; };
@@ -291,6 +292,7 @@
 		08449033279F6D0D00B61353 /* RepoWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoWebView.swift; sourceTree = "<group>"; };
 		084E1A5E27B4F7BB0072BBB6 /* 142.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 142.md; sourceTree = "<group>"; };
 		084E1A6227B517FC0072BBB6 /* 143.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 143.md; sourceTree = "<group>"; };
+		084E1A6427B51EDB0072BBB6 /* AutoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTask.swift; sourceTree = "<group>"; };
 		0850444B27B0D1F80096D556 /* 135.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 135.md; sourceTree = "<group>"; };
 		0850444D27B0D4EA0096D556 /* 136.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 136.md; sourceTree = "<group>"; };
 		0850444F27B0FDBD0096D556 /* 137.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 137.md; sourceTree = "<group>"; };
@@ -779,6 +781,7 @@
 				08AEAEF4277F0A1E00B969E2 /* SPSidebar.swift */,
 				08AEAEF0277F09D000B969E2 /* IntroView.swift */,
 				08AEAEF2277F09FA00B969E2 /* NavView.swift */,
+				084E1A6427B51EDB0072BBB6 /* AutoTask.swift */,
 				086A5F0A2744E89100FECE02 /* Assets.xcassets */,
 				086A5F0F2744E89100FECE02 /* SwiftPamphletApp.entitlements */,
 				086A5F0C2744E89100FECE02 /* Preview Content */,
@@ -1252,6 +1255,7 @@
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
 				08D4F0FE275F728C005FC997 /* LinkView.swift in Sources */,
 				08AEAEE1277EA70500B969E2 /* DBRepoStore.swift in Sources */,
+				084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */,
 				08CD61FA27758AF0008C0935 /* ParseStandXML.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
