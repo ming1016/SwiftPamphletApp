@@ -732,8 +732,8 @@ class PlaySyntax {
 //        let f3: Float16 = 5.0 // macOS 还不能用
         let f4: Float32 = 5.0
         let f5: Float64 = 5.0
-        let f6: Float80 = 5.0
-        print(f4, f5, f6) // 5.0 5.0 5.0
+//        let f6: Float80 = 5.0
+        print(f4, f5) // 5.0 5.0 5.0
 
         // Double
         let d1: Double = 100.0
