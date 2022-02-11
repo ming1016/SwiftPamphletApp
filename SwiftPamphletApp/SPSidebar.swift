@@ -21,21 +21,29 @@ struct SPSidebar: View {
                 }
             }
             Section("Github") {
-                NavigationLink {
-                    ExploreRepoListView()
-                } label: {
-                    SideBarLabel(title: "探索库", imageName: "p24")
-                        .badge(appVM.expCountNotis)
-
-                } // end NavigationLink
 
                 if SPC.gitHubAccessToken.isEmpty == false {
+                    NavigationLink {
+                        ExploreRepoListView(showAsGroup: false)
+                    } label: {
+                        SideBarLabel(title: "库动态", imageName: "p6")
+                            .badge(appVM.expCountNotis)
+
+                    } // end NavigationLink
+                    
                     NavigationLink(destination: ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))) {
                         SideBarLabel(title: "开发者", imageName: "p5")
                             .badge(appVM.devsCountNotis)
                     } // end NavigationLink
 
                 } // end if
+                
+                NavigationLink {
+                    ExploreRepoListView(showAsGroup: true)
+                } label: {
+                    SideBarLabel(title: "探索库", imageName: "p24")
+                } // end NavigationLink
+                
             } // end Section
 
             Section("Swift指南") {

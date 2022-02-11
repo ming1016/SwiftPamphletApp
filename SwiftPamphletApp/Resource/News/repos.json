@@ -27,11 +27,21 @@
             {
                 "id":"SwifterSwift/SwifterSwift",
                 "des":"Handy Swift extensions"
+            },
+            {
+                "id":"JoanKing/JKSwiftExtension",
+                "des":"Swift常用扩展、组件、协议"
+            },
+            {
+                "id":"infinum/iOS-Nuts-And-Bolts"
+            },
+            {
+                "id":"gtokman/ExtensionKit"
             }
         ]
     },
     {
-        "name":"SwiftUI扩展",
+        "name":"SwiftUI 扩展",
         "id":2112221651,
         "repos":[
             {
@@ -60,6 +70,14 @@
             {
                 "id":"Toni77777/awesome-swiftui-libraries",
                 "des":"SwiftUI 可使用的库"
+            },
+            {
+                "id":"rakutentech/AltSwiftUI",
+                "des":"类 SwiftUI"
+            },
+            {
+                "id":"gymshark/ios-stack-kit",
+                "des":"类 SwiftUI"
             }
         ]
     },
@@ -72,6 +90,10 @@
             },
             {
                 "id":"kean/Nuke"
+            },
+            {
+                "id":"suzuki-0000/SKPhotoBrowser",
+                "des":"图片浏览"
             }
         ]
     },
@@ -81,6 +103,33 @@
         "repos":[
             {
                 "id":"gonzalezreal/MarkdownUI"
+            },
+            {
+                "id":"tophat/RichTextView"
+            },
+            {
+                "id":"keitaoouchi/MarkdownView"
+            },
+            {
+                "id":"johnxnguyen/Down",
+                "des":"fast Markdown"
+            },
+            {
+                "id":"qeude/SwiftDown",
+                "des":"Swift 写的可换主题的 Markdown 编辑器组件"
+            },
+            {
+                "id":"JohnSundell/Ink",
+                "des":"Markdown 解析器"
+            },
+            {
+                "id":"tnantoka/edhita"
+            },
+            {
+                "id":"glushchenko/fsnotes"
+            },
+            {
+                "id":"coteditor/CotEditor"
             }
         ]
     },
@@ -90,6 +139,14 @@
         "repos":[
             {
                 "id":"recherst/kavsoft-swiftui-animations"
+            },
+            {
+                "id":"timdonnelly/Advance",
+                "des":"Physics-based animations"
+            },
+            {
+                "id":"MengTo/Spring",
+                "des":"动画"
             }
         ]
     },
@@ -104,7 +161,15 @@
                 "id":"groue/GRDB.swift"
             },
             {
+                "id":"caiyue1993/IceCream",
+                "des":"CloudKit 同步 Realm 数据库"
+            },
+            {
                 "id":"realm/realm-cocoa"
+            },
+            {
+                "id":"PostgresApp/PostgresApp",
+                "des":"PostgreSQL macOS 应用"
             }
         ]
     },
@@ -121,8 +186,33 @@
             },
             {
                 "id":"onmyway133/awesome-ios-architecture"
+            },
+            {
+                "id":"ReSwift/ReSwift",
+                "des":"单页面状态和数据管理"
+            },
+            {
+                "id":"gre4ixin/ReduxUI",
+                "des":"SwiftUI Redux 架构"
+            },
+            {
+                "id":"BohdanOrlov/iOS-Developer-Roadmap"
+            },
+            {
+                "id":"ReactiveCocoa/ReactiveCocoa"
+            },
+            {
+                "id":"mehdihadeli/awesome-software-architecture",
+                "des":"软件架构"
+            },
+            {
+                "id":"nalexn/clean-architecture-swiftui",
+                "des":"干净完整的SwiftUI+Combine例子，包含网络和单元测试等"
+            },
+            {
+                "id":"krzysztofzablocki/Sourcery",
+                "des":"Swift 元编程"
             }
-            
         ]
     },
     {
@@ -148,7 +238,46 @@
         "id":2111231122,
         "repos":[
             {
+                "id":"devicekit/DeviceKit",
+                "des":"UIDevice 易用封装"
+            },
+            {
                 "id":"kishikawakatsumi/KeychainAccess"
+            },
+            {
+                "id":"nvzqz/FileKit",
+                "des":"文件操作"
+            },
+            {
+                "id":"JohnSundell/Files",
+                "des":"文件操作"
+            },
+            {
+                "id":"kylef/PathKit",
+                "des":"文件操作"
+            },
+            {
+                "id":"rushisangani/BiometricAuthentication",
+                "des":"FaceID or TouchID authentication"
+            },
+            {
+                "id":"sunshinejr/SwiftyUserDefaults"
+            },
+            {
+                "id":"MonitorControl/MonitorControl",
+                "des":"亮度和声音控制"
+            },
+            {
+                "id":"carekit-apple/CareKit",
+                "des":"使用 SwiftUI 开发健康相关的库"
+            },
+            {
+                "id":"Cay-Zhang/SwiftSpeech",
+                "des":"苹果语言识别封装库，已适配 SwiftUI"
+            },
+            {
+                "id":"malcommac/SwiftDate",
+                "des":"Swift编写的时间时区，时间比较等复杂处理的包装"
             }
         ]
     },
@@ -161,6 +290,9 @@
             },
             {
                 "id":"p2/OAuth2"
+            },
+            {
+                "id":"public-apis/public-apis"
             }
         ]
     },
@@ -283,6 +415,12 @@
             {
                 "id":"jaywcjlove/awesome-mac",
                 "des":"macOS 软件大全"
+            },
+            {
+                "id":"insidegui/WWDC"
+            },
+            {
+                "id":"sindresorhus/Actions"
             }
         ]
     },
@@ -297,6 +435,25 @@
             {
                 "id":"SvenTiigi/WhatsNewKit",
                 "des":"欢迎屏"
+            },
+            {
+                "id":"kickstarter/ios-oss",
+                "des":"Kickstarter 的 iOS 版本"
+            },
+            {
+                "id":"wordpress-mobile/WordPress-iOS"
+            },
+            {
+                "id":"CoreOffice/CryptoOffice",
+                "des":"Swift 解析 Office Open XML（OOXML）包括 xlsx, docx, pptx"
+            },
+            {
+                "id":"CoreOffice/CoreXLSX",
+                "des":"Swift编写的Excel电子表格（XLSX）格式解析器"
+            },
+            {
+                "id":"analogcode/Swift-Radio-Pro",
+                "des":"电台应用"
             }
         ]
     },
@@ -320,6 +477,10 @@
                 "id":"jVirus/swiftui-2048"
             },
             {
+                "id":"schellingb/dosbox-pure",
+                "des":"DOS 游戏模拟器"
+            },
+            {
                 "id":"chrismaltby/gb-studio",
                 "des":"拖放式复古游戏创建器"
             }
@@ -332,6 +493,39 @@
             {
                 "id":"JakeLin/Moments-SwiftUI",
                 "des":"SwiftUI、Async、Actor"
+            },
+            {
+                "id":"twostraws/HackingWithSwift",
+                "des":"示例代码"
+            },
+            {
+                "id":"carson-katri/awesome-result-builders",
+                "des":"Result Builders awesome"
+            },
+            {
+                "id":"pointfreeco/episode-code-samples"
+            },
+            {
+                "id":"SwiftGGTeam/the-swift-programming-language-in-chinese",
+                "des":"中文版 Apple 官方 Swift 教程"
+            },
+            {
+                "id":"jessesquires/TIL",
+                "des":"学习笔记"
+            }
+        ]
+    },
+    {
+        "name":"Combine 扩展",
+        "id":2202111110,
+        "repos":[
+            {
+                "id":"OpenCombine/OpenCombine",
+                "des":"Combine 的开源实现"
+            },
+            {
+                "id":"CombineCommunity/CombineExt",
+                "des":"对 Combine 的补充"
             }
         ]
     },
@@ -339,6 +533,10 @@
         "name":"聚合",
         "id":2112221948,
         "repos":[
+            {
+                "id":"dkhamsing/open-source-ios-apps",
+                "des":"开源的完整 App 例子"
+            },
             {
                 "id":"timqian/chinese-independent-blogs"
             },
@@ -358,6 +556,14 @@
             {
                 "id":"Juanpe/About-SwiftUI",
                 "des":"汇总 SwiftUI 的资料"
+            },
+            {
+                "id":"sindresorhus/awesome",
+                "des":"内容广"
+            },
+            {
+                "id":"SwiftPackageIndex/PackageList",
+                "des":"Swift 开源库索引"
             }
         ]
     },
@@ -372,7 +578,7 @@
         ]
     },
     {
-        "name":"性能和工程构建",
+        "name":"性能、工程构建及自动化",
         "id":2112241714,
         "repos":[
             {
@@ -390,6 +596,54 @@
             {
                 "id":"nalexn/ViewInspector",
                 "des":"SwiftUI Runtime introspection 和 单元测试"
+            },
+            {
+                "id":"shibapm/Komondor",
+                "des":"Git Hooks for Swift projects"
+            },
+            {
+                "id":"SwiftGen/SwiftGen",
+                "des":"代码生成"
+            },
+            {
+                "id":"hyperoslo/Cache"
+            },
+            {
+                "id":"kylef/Commander",
+                "des":"命令行"
+            },
+            {
+                "id":"Carthage/Carthage"
+            },
+            {
+                "id":"NARKOZ/hacker-scripts",
+                "des":"程序员的活都让机器干的脚本（真实故事）"
+            },
+            {
+                "id":"RobotsAndPencils/XcodesApp",
+                "des":"Xcode 多版本安装"
+            },
+            {
+                "id":"ZeeZide/5GUIs",
+                "des":"可以分析程序用了哪些库，用了LLVM objdump"
+            },
+            {
+                "id":"faisalmemon/ios-crash-dump-analysis-book",
+                "des":"iOS Crash Dump Analysis Book"
+            },
+            {
+                "id":"majd/ipatool",
+                "des":"下载 ipa"
+            }
+        ]
+    },
+    {
+        "name":"测试",
+        "id":2202111426,
+        "repos":[
+            {
+                "id":"Quick/Quick",
+                "des":"测试框架"
             }
         ]
     },
@@ -436,6 +690,25 @@
             {
                 "id":"alibaba/xquic",
                 "des":"阿里巴巴发布的 XQUIC 库"
+            },
+            {
+                "id":"kasketis/netfox",
+                "des":"获取所有网络请求"
+            },
+            {
+                "id":"Moya/Moya",
+                "des":"Swift 编写的网络抽象层"
+            },
+            {
+                "id":"Kitura/BlueSocket"
+            },
+            {
+                "id":"rhummelmose/BluetoothKit",
+                "des":"蓝牙"
+            },
+            {
+                "id":"WeTransfer/Mocker",
+                "des":"Mock Alamofire and URLSession"
             }
         ]
     },
@@ -452,6 +725,12 @@
                 "des":"SwiftUI 图表"
             },
             {
+                "id":"ivanschuetz/SwiftCharts"
+            },
+            {
+                "id":"danielgindi/Charts"
+            },
+            {
                 "id":"imxieyi/waifu2x-ios",
                 "des":"waifu2x Core ML 动漫风格图片的高清渲染"
             },
@@ -462,6 +741,38 @@
             {
                 "id":"Tencent/libpag",
                 "des":"PAG（Portable Animated Graphics）实时渲染库，多个平台渲染AE动画。"
+            },
+            {
+                "id":"jathu/UIImageColors",
+                "des":"获取图片主次颜色"
+            },
+            {
+                "id":"BradLarson/GPUImage3",
+                "des":"Metal 实现"
+            },
+            {
+                "id":"exyte/Macaw",
+                "des":"SVG"
+            },
+            {
+                "id":"exyte/SVGView",
+                "des":"支持 SwiftUI 的 SVG 解析渲染视图"
+            },
+            {
+                "id":"efremidze/Magnetic",
+                "des":"SpriteKit气泡支持SwiftUI"
+            },
+            {
+                "id":"NextLevel/NextLevel",
+                "des":"相机"
+            },
+            {
+                "id":"Harley-xk/MaLiang",
+                "des":"基于 Metal 的涂鸦绘图库"
+            },
+            {
+                "id":"frzi/Model3DView",
+                "des":"毫不费力的使用 SwiftUI 渲染 3d models"
             }
         ]
     },
@@ -478,6 +789,59 @@
             },
             {
                 "id":"AudioKit/AudioKit"
+            },
+            {
+                "id":"josejuanqm/VersaPlayer"
+            },
+            {
+                "id":"bilibili/ijkplayer",
+                "des":"bilibili 播放器"
+            }
+        ]
+    },
+    {
+        "name":"安全",
+        "id":2202111418,
+        "repos":[
+            {
+                "id":"krzyzanowskim/CryptoSwift"
+            },
+            {
+                "id":"rockbruno/SwiftInfo",
+                "des":"提取和分析一个iOS应用"
+            }
+        ]
+    },
+    {
+        "name":"Web",
+        "id":2202111434,
+        "repos":[
+            {
+                "id":"Kitura/swift-html-entities",
+                "des":"HTML5 规范字符编码/解码器"
+            },
+            {
+                "id":"TokamakUI/Tokamak",
+                "des":"SwiftUI 兼容，WebAssembly 构建 HTML"
+            },
+            {
+                "id":"johnsundell/publish",
+                "des":"用 swift 来写网站"
+            },
+            {
+                "id":"highlightjs/highlight.js",
+                "des":"语法高亮"
+            },
+            {
+                "id":"sivan/heti",
+                "des":"赫蹏（hètí）中文排版"
+            },
+            {
+                "id":"kevquirk/simple.css",
+                "des":"简单大方基础 CSS 样式"
+            },
+            {
+                "id":"mozilla-mobile/firefox-ios"
             }
         ]
     },
@@ -497,6 +861,16 @@
             {
                 "id":"spevans/swift-project1",
                 "des":"Swift编写内核，可在 Mac 和 PC 启动"
+            }
+        ]
+    },
+    {
+        "name":"Web 3.0",
+        "id":2202111442,
+        "repos":[
+            {
+                "id":"chaozh/awesome-blockchain-cn",
+                "des":"区块链 awesome"
             }
         ]
     },
@@ -549,365 +923,33 @@
         ]
     },
     {
-        "name":"待分类",
-        "id":2111111948,
+        "name":"计算机科学",
+        "id":2202111422,
         "repos":[
             {
-                "id":"public-apis/public-apis"
-            },
-            {
-                "id":"insidegui/WWDC"
-            },
-            {
-                "id":"sindresorhus/Actions"
-            },
+                "id":"raywenderlich/swift-algorithm-club"
+            }
+        ]
+    },
+    {
+        "name":"扩展知识",
+        "id":2202111106,
+        "repos":[
             {
                 "id":"trimstray/the-book-of-secret-knowledge"
             },
             {
                 "id":"rossant/awesome-math"
-            },
-            {
-                "id":"rakutentech/AltSwiftUI",
-                "des":"类 SwiftUI"
-            },
-            {
-                "id":"gymshark/ios-stack-kit",
-                "des":"类 SwiftUI"
-            },
-            {
-                "id":"OpenCombine/OpenCombine",
-                "des":"Combine 的开源实现"
-            },
-            {
-                "id":"CombineCommunity/CombineExt",
-                "des":"对 Combine 的补充"
-            },
-            {
-                "id":"ReSwift/ReSwift",
-                "des":"单页面状态和数据管理"
-            },
-            {
-                "id":"devicekit/DeviceKit",
-                "des":"UIDevice 易用封装"
-            },
-            {
-                "id":"ivanschuetz/SwiftCharts"
-            },
-            {
-                "id":"nvzqz/FileKit",
-                "des":"文件操作"
-            },
-            {
-                "id":"JohnSundell/Files",
-                "des":"文件操作"
-            },
-            {
-                "id":"kylef/PathKit",
-                "des":"文件操作"
-            },
-            {
-                "id":"JohnSundell/Publish",
-                "des":"静态站点生成器"
-            },
-            {
-                "id":"caiyue1993/IceCream",
-                "des":"CloudKit 同步 Realm 数据库"
-            },
-            {
-                "id":"tophat/RichTextView"
-            },
-            {
-                "id":"tnantoka/edhita"
-            },
-            {
-                "id":"keitaoouchi/MarkdownView"
-            },
-            {
-                "id":"johnxnguyen/Down",
-                "des":"fast Markdown"
-            },
-            {
-                "id":"qeude/SwiftDown",
-                "des":"Swift 写的可换主题的 Markdown 编辑器组件"
-            },
-            {
-                "id":"shibapm/Komondor",
-                "des":"Git Hooks for Swift projects"
-            },
-            {
-                "id":"SwiftGen/SwiftGen",
-                "des":"代码生成"
-            },
-            {
-                "id":"kasketis/netfox",
-                "des":"获取所有网络请求"
-            },
-            {
-                "id":"BohdanOrlov/iOS-Developer-Roadmap"
-            },
-            {
-                "id":"kickstarter/ios-oss"
-            },
-            {
-                "id":"wordpress-mobile/WordPress-iOS"
-            },
-            {
-                "id":"josejuanqm/VersaPlayer"
-            },
-            {
-                "id":"mozilla-mobile/firefox-ios"
-            },
-            {
-                "id":"PostgresApp/PostgresApp"
-            },
-            {
-                "id":"Moya/Moya"
-            },
-            {
-                "id":"Kitura/BlueSocket"
-            },
-            {
-                "id":"rhummelmose/BluetoothKit"
-            },
-            {
-                "id":"rushisangani/BiometricAuthentication",
-                "des":"FaceID or TouchID authentication"
-            },
-            {
-                "id":"krzyzanowskim/CryptoSwift"
-            },
-            {
-                "id":"timdonnelly/Advance",
-                "des":"Physics-based animations"
-            },
-            {
-                "id":"MengTo/Spring",
-                "des":"动画"
-            },
-            {
-                "id":"jathu/UIImageColors",
-                "des":"获取图片主次颜色"
-            },
-            {
-                "id":"BradLarson/GPUImage3",
-                "des":"Metal 实现"
-            },
-            {
-                "id":"exyte/Macaw",
-                "des":"SVG"
-            },
-            {
-                "id":"efremidze/Magnetic",
-                "des":"SpriteKit气泡支持SwiftUI"
-            },
-            {
-                "id":"analogcode/Swift-Radio-Pro",
-                "des":"电台应用"
-            },
-            {
-                "id":"suzuki-0000/SKPhotoBrowser",
-                "des":"图片浏览"
-            },
-            {
-                "id":"raywenderlich/swift-algorithm-club"
-            },
-            {
-                "id":"hyperoslo/Cache"
-            },
-            {
-                "id":"sunshinejr/SwiftyUserDefaults"
-            },
-            {
-                "id":"MonitorControl/MonitorControl",
-                "des":"亮度和声音控制"
-            },
-            {
-                "id":"kylef/Commander",
-                "des":"命令行"
-            },
-            {
-                "id":"ReactiveCocoa/ReactiveCocoa"
-            },
-            {
-                "id":"Carthage/Carthage"
-            },
-            {
-                "id":"danielgindi/Charts"
-            },
-            {
-                "id":"Quick/Quick",
-                "des":"测试框架"
-            },
-            {
-                "id":"bilibili/ijkplayer",
-                "des":"播放器"
-            },
-            {
-                "id":"schellingb/dosbox-pure",
-                "des":"DOS 游戏模拟器"
-            },
-            {
-                "id":"twostraws/HackingWithSwift",
-                "des":"示例代码"
-            },
-            {
-                "id":"glushchenko/fsnotes"
-            },
-            {
-                "id":"coteditor/CotEditor"
-            },
-            {
-                "id":"JoanKing/JKSwiftExtension",
-                "des":"Swift常用扩展、组件、协议"
-            },
-            {
-                "id":"infinum/iOS-Nuts-And-Bolts"
-            },
-            {
-                "id":"gtokman/ExtensionKit"
-            },
-            {
-                "id":"johnsundell/publish",
-                "des":"用 swift 来写网站"
-            },
-            {
-                "id":"mehdihadeli/awesome-software-architecture",
-                "des":"软件架构"
-            },
-            {
-                "id":"NARKOZ/hacker-scripts",
-                "des":"程序员的活都让机器干的脚本（真实故事）"
-            },
-            {
-                "id":"nalexn/clean-architecture-swiftui",
-                "des":"干净完整的SwiftUI+Combine例子，包含网络和单元测试等"
-            },
-            {
-                "id":"carekit-apple/CareKit",
-                "des":"使用 SwiftUI 开发健康相关的库"
-            },
-            {
-                "id":"carson-katri/awesome-result-builders",
-                "des":"Result Builders awesome"
-            },
-            {
-                "id":"Cay-Zhang/SwiftSpeech",
-                "des":"苹果语言识别封装库，已适配 SwiftUI"
-            },
-            {
-                "id":"NextLevel/NextLevel",
-                "des":"相机"
-            },
-            {
-                "id":"Harley-xk/MaLiang",
-                "des":"基于 Metal 的涂鸦绘图库"
-            },
-            {
-                "id":"chaozh/awesome-blockchain-cn",
-                "des":"区块链 awesome"
-            },
-            {
-                "id":"RobotsAndPencils/XcodesApp",
-                "des":"Xcode 多版本安装"
-            },
-            {
-                "id":"WeTransfer/Mocker",
-                "des":"Mock Alamofire and URLSession"
-            },
-            {
-                "id":"gre4ixin/ReduxUI",
-                "des":"SwiftUI Redux 架构"
-            },
-            {
-                "id":"ZeeZide/5GUIs",
-                "des":"可以分析程序用了哪些库，用了LLVM objdump"
-            },
-            {
-                "id":"pointfreeco/episode-code-samples"
-            },
-            {
-                "id":"SwiftPackageIndex/PackageList"
-            },
-            {
-                "id":"sindresorhus/awesome",
-                "des":"内容广"
-            },
-            {
-                "id":"dkhamsing/open-source-ios-apps",
-                "des":"开源的完整 App 例子"
-            },
-            {
-                "id":"frzi/Model3DView",
-                "des":"毫不费力的使用 SwiftUI 渲染 3d models"
-            },
-            {
-                "id":"faisalmemon/ios-crash-dump-analysis-book",
-                "des":"iOS Crash Dump Analysis Book"
-            },
-            {
-                "id":"exyte/SVGView",
-                "des":"支持 SwiftUI 的 SVG 解析渲染视图"
-            },
-            {
-                "id":"krzysztofzablocki/Sourcery",
-                "des":"Swift 元编程"
-            },
-            {
-                "id":"jessesquires/TIL",
-                "des":"学习笔记"
-            },
-            {
-                "id":"majd/ipatool",
-                "des":"下载 ipa"
-            },
-            {
-                "id":"JohnSundell/Ink",
-                "des":"Markdown 解析器"
-            },
-            {
-                "id":"Kitura/swift-html-entities",
-                "des":"HTML5 规范字符编码/解码器"
-            },
-            {
-                "id":"TokamakUI/Tokamak",
-                "des":"SwiftUI 兼容，WebAssembly 构建 HTML"
-            },
-            {
-                "id":"rockbruno/SwiftInfo",
-                "des":"提取和分析一个iOS应用"
-            },
-            {
-                "id":"CoreOffice/CoreXLSX",
-                "des":"Swift编写的Excel电子表格（XLSX）格式解析器"
-            },
-            {
-                "id":"CoreOffice/CryptoOffice",
-                "des":"Swift 解析 Office Open XML（OOXML）包括 xlsx, docx, pptx"
-            },
-            {
-                "id":"kevquirk/simple.css",
-                "des":"简单大方基础 CSS 样式"
-            },
-            {
-                "id":"sivan/heti",
-                "des":"赫蹏（hètí）中文排版"
-            },
+            }
+        ]
+    },
+    {
+        "name":"待分类",
+        "id":2111111948,
+        "repos":[
             {
                 "id":"krzysztofzablocki/KZFileWatchers",
                 "des":"Swift编写的观察本地或者网络上，比如网盘和FTP的文件变化"
-            },
-            {
-                "id":"malcommac/SwiftDate",
-                "des":"Swift编写的时间时区，时间比较等复杂处理的包装"
-            },
-            {
-                "id":"SwiftGGTeam/the-swift-programming-language-in-chinese",
-                "des":"中文版 Apple 官方 Swift 教程"
-            },
-            {
-                "id":"highlightjs/highlight.js",
-                "des":"语法高亮"
             }
         ]
     }

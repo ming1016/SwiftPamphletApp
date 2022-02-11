@@ -14,7 +14,7 @@ func RSSReq(_ urlStr: String) async throws -> String? {
     let req = URLRequest(url: url)
     let (data, res) = try await URLSession.shared.data(for: req)
     guard (res as? HTTPURLResponse)?.statusCode == 200 else {
-        fatalError("wrong data")
+        return ""
     }
     let dataStr = String(data: data, encoding: .utf8)
     return dataStr

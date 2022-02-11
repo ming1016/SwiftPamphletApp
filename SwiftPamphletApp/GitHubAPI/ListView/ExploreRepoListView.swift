@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ExploreRepoListView: View {
     @EnvironmentObject var appVM: AppVM
+    var showAsGroup: Bool = false
     var body: some View {
         List {
-            if SPC.gitHubAccessToken.isEmpty == false {
+            if SPC.gitHubAccessToken.isEmpty == false && showAsGroup == false {
                 Section {
                     ForEach(appVM.exps) { er in
                         ForEach(er.repos) { r in
@@ -26,26 +27,32 @@ struct ExploreRepoListView: View {
 
             // end Section
             ForEach(appVM.exps) { er in
-                if SPC.gitHubAccessToken.isEmpty == false {
-                    Section {
-                        ForEach(er.repos) { r in
-                            if (appVM.expNotis[r.id]?.unRead ?? 0) > 0 {
-
-                            } else {
-                                NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
-                                    ExpListLinkView(r: r)
-                                }
-                            } // end if
-
-                        }
-                    } header: {
-                        Text(er.name).font(.title3)
-                    }
+                if SPC.gitHubAccessToken.isEmpty == false && showAsGroup == false {
+//                    Section {
+//                        ForEach(er.repos) { r in
+//                            if (appVM.expNotis[r.id]?.unRead ?? 0) > 0 {
+//
+//                            } else {
+//                                NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
+//                                    ExpListLinkView(r: r)
+//                                }
+//                            } // end if
+//
+//                        }
+//                    } header: {
+//                        Text(er.name).font(.title3)
+//                    }
                 } else {
                     DisclosureGroup {
                         ForEach(er.repos) { r in
-                            NavigationLink(destination: RepoWebView(urlStr: SPC.githubHost + r.id)) {
-                                ExpListLinkView(r: r)
+                            if SPC.gitHubAccessToken.isEmpty == false {
+                                NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
+                                    ExpListLinkView(r: r)
+                                }
+                            } else {
+                                NavigationLink(destination: RepoWebView(urlStr: SPC.githubHost + r.id)) {
+                                    ExpListLinkView(r: r)
+                                }
                             }
                         } // end ForEach
                     } label: {
@@ -56,7 +63,7 @@ struct ExploreRepoListView: View {
 
             } // end ForEach
         } // end List
-        .navigationTitle("👾 探索库")
+        .navigationTitle(showAsGroup == false ? "🥷🏻 库动态" : "👾 探索库" )
         .onAppear {
             appVM.loadExpFromServer()
         }

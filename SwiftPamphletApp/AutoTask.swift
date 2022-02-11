@@ -10,9 +10,9 @@ import Foundation
 struct AutoTask {
     
     static func buildContentMarkdownFile() {
-        let a = ["guide-syntax","guide-features","guide-subject","lib-Combine","lib-Concurrency","lib-SwiftUI"]
+        let a1 = ["guide-syntax","guide-features","guide-subject","lib-Combine","lib-Concurrency","lib-SwiftUI"]
         var mk = ""
-        for e in a {
+        for e in a1 {
             let fc:[CustomIssuesModel] = loadBundleJSONFile(e + ".json")
             if e == "guide-syntax" {
                 mk += "## 语法速查\n\n"
@@ -41,6 +41,42 @@ struct AutoTask {
                 }
             }
         }
+        
+        // 开发者
+        mk += "## 开发者\n\n"
+        let devs:[SPActiveDevelopersModel] = loadBundleJSONFile("developers.json")
+        for d1 in devs {
+            mk += "### \(d1.name)\n\n"
+            for d2 in d1.users {
+                let des = d2.des ?? ""
+                mk += "* [\(d2.id)](\(SPC.githubHost + d2.id))" + (des.isEmpty == true ? "" : "：\(des)") + "\n"
+            }
+            mk += "\n"
+        }
+        
+        // 探索库
+        mk += "## 探索库\n\n"
+        let explibs:[SPReposModel] = loadBundleJSONFile("repos.json")
+        for el1 in explibs {
+            mk += "### \(el1.name)\n\n"
+            for el2 in el1.repos {
+                var more = ""
+                let des = el2.des ?? ""
+                if des.isEmpty == false {
+                    more += des + "\n"
+                }
+                do {
+                    if let f = try RepoStoreDataHelper.find(sFullName: el2.id) {
+                        more += "Star：\(f.stargazersCount) Issue：\(f.openIssues) 开发语言：\(f.language)\n"
+                        more += f.description + "\n"
+                    }
+                } catch {}
+                mk += "*[\(el2.id)](\(SPC.githubHost + el2.id))*\n" + more + "\n"
+            }
+            
+            mk += "\n"
+        }
+        
         writeToDownload(fileName: "read.md", content: mk)
     }
     
