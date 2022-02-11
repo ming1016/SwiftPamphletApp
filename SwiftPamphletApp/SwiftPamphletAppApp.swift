@@ -55,7 +55,6 @@ struct SwiftPamphletApp: View {
                             vm.doing(.notiEvent)
                         }
                     }
-                    appVM.rssUpdateNotis() // 定时更新博客未读数
                 })
                 .onReceive(timerForExp) { _ in
                     if SPC.gitHubAccessToken.isEmpty == false {
