@@ -1433,8 +1433,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 4.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的Swift小册子";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

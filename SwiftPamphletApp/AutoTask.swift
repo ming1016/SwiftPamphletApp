@@ -77,6 +77,17 @@ struct AutoTask {
             mk += "\n"
         }
         
+        // 博客
+        mk += "## 博客和资讯\n\n"
+        let bn:[RSSFeedModel] = loadBundleJSONFile("rssfeed.json")
+        for r in bn {
+            mk += "* [\(r.title)](\(r.siteLink))" + (r.des.isEmpty ? "" : "：\(r.des)") + "\n"
+        }
+        mk += "\n"
+        
+        // 册子动态
+        mk += loadBundleString("1.md")
+        
         writeToDownload(fileName: "read.md", content: mk)
     }
     
