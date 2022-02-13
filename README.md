@@ -1,12 +1,11 @@
-# 戴铭的 Swift 小册子 4.1
+# 戴铭的开发小册子 4.3
 
-Swift 的手册，是个 macOS 程序。
-![](https://user-images.githubusercontent.com/251980/152918704-9522eb27-9304-4788-b4ed-72ffb170e1bc.png)
+Swift开发的手册，是个 macOS 程序。
+![](https://user-images.githubusercontent.com/251980/153746040-8379ad07-4f64-4cb2-b162-40a80fb87d6b.PNG)
 
 ## 下载
 
-直接下载最新 dmg 使用：[戴铭的Swift小册子4.1.dmg.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/8040117/Swift.4.1.dmg.zip)
-![](https://user-images.githubusercontent.com/251980/152918781-6bad5329-2f0f-4c52-b105-47622059b9ef.png)
+直接下载最新 dmg 使用：[戴铭的开发小册子4.1.dmg.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/8040117/Swift.4.1.dmg.zip)
 
 ## 编译
 
@@ -37,14 +36,8 @@ Requires storaging PAT to actions secrets and name it to PAT
 
 While project update ,you won't need to compile it manually in local, only need to fetch and merge commits and wait for about 3 minutes then download it
 
-![image](https://user-images.githubusercontent.com/251980/146639561-8d33bba6-8a84-44b7-b660-1d7a5fffa37a.png)
-![image](https://user-images.githubusercontent.com/251980/146639573-e556961f-2c4b-4838-83f2-8bf4665b7d9a.png)
-
-
 ### 介绍
 小册子能够方便的查看 Swift 语法，还有一些主要库的使用指南，内容还在完善中，选择的库主要就是开发小册子应用使用到的 SwitUI、Combine、Swift Concurrency
-
-![](https://ming1016.github.io/uploads/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/14.png)
 
 除了这些速查和库的使用内容外，这个应用还有一些开发者的动态，当他们有新的动作，比如提交了代码、star 了什么项目，提交和留言了议题都会直接在程序坞中提醒你。 
 
@@ -59,8 +52,6 @@ While project update ,you won't need to compile it manually in local, only need 
 ![](https://ming1016.github.io/uploads/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/17.png)
 
 博客动态的功能，可以跟进一些博客内容的更新。 
-
-![](https://ming1016.github.io/uploads/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/18.png)
 
 代码说明参看这篇[《如何用 SwiftUI + Combine + Swift Concurrency Aysnc/Await Actor 欢畅开发》](https://ming1016.github.io/2022/01/03/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/)文章
 
