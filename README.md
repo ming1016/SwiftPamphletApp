@@ -6,7 +6,6 @@ Swift开发的手册，是个 macOS 程序。
 ## 下载
 
 直接下载最新 dmg 使用：[戴铭的开发小册子4.1.dmg.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/8040117/Swift.4.1.dmg.zip)
-![](https://user-images.githubusercontent.com/251980/152918781-6bad5329-2f0f-4c52-b105-47622059b9ef.png)
 
 ## 编译
 
