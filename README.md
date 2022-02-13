@@ -1,11 +1,11 @@
-# 戴铭的 Swift 小册子 4.1
+# 戴铭的开发小册子 4.3
 
-Swift 的手册，是个 macOS 程序。
-![](https://user-images.githubusercontent.com/251980/152918704-9522eb27-9304-4788-b4ed-72ffb170e1bc.png)
+Swift开发的手册，是个 macOS 程序。
+![](https://user-images.githubusercontent.com/251980/153746040-8379ad07-4f64-4cb2-b162-40a80fb87d6b.PNG)
 
 ## 下载
 
-直接下载最新 dmg 使用：[戴铭的Swift小册子4.1.dmg.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/8040117/Swift.4.1.dmg.zip)
+直接下载最新 dmg 使用：[戴铭的开发小册子4.1.dmg.zip](https://github.com/KwaiAppTeam/SwiftPamphletApp/files/8040117/Swift.4.1.dmg.zip)
 ![](https://user-images.githubusercontent.com/251980/152918781-6bad5329-2f0f-4c52-b105-47622059b9ef.png)
 
 ## 编译
