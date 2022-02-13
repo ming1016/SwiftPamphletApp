@@ -14,9 +14,9 @@ struct IntroView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 120)
-            Text("戴铭的 Swift 小册子").bold().font(.largeTitle)
-            Text("一本活的 Swift 手册")
-            Text("版本4.2").font(.footnote)
+            Text("戴铭的开发小册子").bold().font(.largeTitle)
+            Text("一本活的开发手册")
+            Text("版本4.3").font(.footnote)
         }
         .frame(minWidth: SPC.detailMinWidth)
     }

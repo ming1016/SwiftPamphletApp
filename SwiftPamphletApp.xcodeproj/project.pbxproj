@@ -298,7 +298,7 @@
 		0850444F27B0FDBD0096D556 /* 137.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 137.md; sourceTree = "<group>"; };
 		0850445527B110DA0096D556 /* 138.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 138.md; sourceTree = "<group>"; };
 		0850445727B1228E0096D556 /* 140.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 140.md; sourceTree = "<group>"; };
-		086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的Swift小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -761,7 +761,7 @@
 		086A5F042744E88E00FECE02 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */,
+				086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1030,7 +1030,7 @@
 				08448F4D279E8CA400B61353 /* Ink */,
 			);
 			productName = SwiftPamphletApp;
-			productReference = 086A5F032744E88E00FECE02 /* 戴铭的Swift小册子.app */;
+			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1402,9 +1402,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 4.2;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletApp;
-				PRODUCT_NAME = "戴铭的Swift小册子";
+				PRODUCT_NAME = "戴铭的开发小册子";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1432,9 +1432,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 4.2;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
-				PRODUCT_NAME = "戴铭的Swift小册子";
+				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

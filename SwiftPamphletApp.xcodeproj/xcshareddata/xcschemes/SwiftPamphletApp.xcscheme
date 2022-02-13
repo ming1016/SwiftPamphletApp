@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "086A5F022744E88E00FECE02"
-               BuildableName = "&#x6234;&#x94ed;&#x7684;Swift&#x5c0f;&#x518c;&#x5b50;.app"
+               BuildableName = "&#x6234;&#x94ed;&#x7684;&#x5f00;&#x53d1;&#x5c0f;&#x518c;&#x5b50;.app"
                BlueprintName = "SwiftPamphletApp"
                ReferencedContainer = "container:SwiftPamphletApp.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "086A5F022744E88E00FECE02"
-            BuildableName = "&#x6234;&#x94ed;&#x7684;Swift&#x5c0f;&#x518c;&#x5b50;.app"
+            BuildableName = "&#x6234;&#x94ed;&#x7684;&#x5f00;&#x53d1;&#x5c0f;&#x518c;&#x5b50;.app"
             BlueprintName = "SwiftPamphletApp"
             ReferencedContainer = "container:SwiftPamphletApp.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "086A5F022744E88E00FECE02"
-            BuildableName = "&#x6234;&#x94ed;&#x7684;Swift&#x5c0f;&#x518c;&#x5b50;.app"
+            BuildableName = "&#x6234;&#x94ed;&#x7684;&#x5f00;&#x53d1;&#x5c0f;&#x518c;&#x5b50;.app"
             BlueprintName = "SwiftPamphletApp"
             ReferencedContainer = "container:SwiftPamphletApp.xcodeproj">
          </BuildableReference>

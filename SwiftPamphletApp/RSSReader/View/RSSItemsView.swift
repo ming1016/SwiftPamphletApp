@@ -27,20 +27,16 @@ struct RSSItemsView: View {
                 NavigationLink {
                     RSSItemContentView(rssItemModel: item, rssLink: rssLink)
                 } label: {
-                    VStack(alignment: .leading, spacing: 5) {
+                    HStack {
                         Text(item.title)
                             .font(.headline)
                             .foregroundColor(vm.isReadDic[item.link] ?? false ? .secondary : .primary)
+                        Spacer()
                         Text(howLongFromNow(timeStr:item.pubDate))
                             .font(.footnote)
                             .foregroundColor(.secondary)
-                        if !item.description.isEmpty && !item.content.isEmpty {
-                            Text(item.description)
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                        }
                     }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
                 } // end Navigation
 
             } // end ForEach
