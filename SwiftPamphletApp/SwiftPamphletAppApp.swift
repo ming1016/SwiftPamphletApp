@@ -24,7 +24,8 @@ struct SwiftPamphletAppApp: App {
 struct Demo: View {
     var body: some View {
         Group {
-            TextView()
+//            PlayButtonView()
+            PlayTextView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {

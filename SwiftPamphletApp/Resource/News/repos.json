@@ -483,6 +483,34 @@
             {
                 "id":"chrismaltby/gb-studio",
                 "des":"拖放式复古游戏创建器"
+            },
+            {
+                "id":"darrellroot/Netrek-SwiftUI",
+                "des":"SwiftUI 开发的1989年的 Netrek 游戏"
+            },
+            {
+                "id":"jynew/jynew",
+                "des":"Unity 引擎重制 DOS 金庸群侠传"
+            },
+            {
+                "id":"CleverRaven/Cataclysm-DDA",
+                "des":"以世界末日为背景的生存游戏"
+            },
+            {
+                "id":"freeCodeCamp/LearnToCodeRPG",
+                "des":"学习编码的游戏"
+            },
+            {
+                "id":"pmgl/microstudio",
+                "des":"游戏开发平台集搜索、开发、学习、体验、交流等功能于一身"
+            },
+            {
+                "id":"diasurgical/devilutionX",
+                "des":"可以运行在 macOS 上的 Diablo 1"
+            },
+            {
+                "id":"erikolsson/wordle-clone",
+                "des":"SwiftUI 和 TCA 做的 Wordle 游戏"
             }
         ]
     },
@@ -564,6 +592,9 @@
             {
                 "id":"SwiftPackageIndex/PackageList",
                 "des":"Swift 开源库索引"
+            },
+            {
+                "id":"matteocrippa/awesome-swift"
             }
         ]
     },
@@ -709,6 +740,14 @@
             {
                 "id":"WeTransfer/Mocker",
                 "des":"Mock Alamofire and URLSession"
+            },
+            {
+                "id":"bagder/everything-curl",
+                "des":"记录了 curl 的一切"
+            },
+            {
+                "id":"LANDrop/LANDrop",
+                "des":"全平台局域网文件传输"
             }
         ]
     },
@@ -796,6 +835,14 @@
             {
                 "id":"bilibili/ijkplayer",
                 "des":"bilibili 播放器"
+            },
+            {
+                "id":"mpv-player/mpv",
+                "des":"命令行视频播放器"
+            },
+            {
+                "id":"analogcode/Swift-Radio-Pro",
+                "des":"广播电台"
             }
         ]
     },

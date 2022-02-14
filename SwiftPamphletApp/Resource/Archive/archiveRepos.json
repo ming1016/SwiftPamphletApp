@@ -3,67 +3,28 @@
         "name":"新鲜事",
         "id":2112271200,
         "repos":[
-            {
-                "id":"matteocrippa/awesome-swift"
-            }
+            
         ]
     },
     {
         "name":"网络",
         "id":2112281351,
         "repos":[
-            {
-                "id":"bagder/everything-curl",
-                "des":"记录了 curl 的一切"
-            },
-            {
-                "id":"LANDrop/LANDrop",
-                "des":"全平台局域网文件传输"
-            }
+            
         ]
     },
     {
         "name":"游戏",
         "id":2112281224,
         "repos":[
-            {
-                "id":"jynew/jynew",
-                "des":"Unity 引擎重制 DOS 金庸群侠传"
-            },
-            {
-                "id":"CleverRaven/Cataclysm-DDA",
-                "des":"以世界末日为背景的生存游戏"
-            },
-            {
-                "id":"freeCodeCamp/LearnToCodeRPG",
-                "des":"学习编码的游戏"
-            },
-            {
-                "id":"pmgl/microstudio",
-                "des":"游戏开发平台集搜索、开发、学习、体验、交流等功能于一身"
-            },
-            {
-                "id":"diasurgical/devilutionX",
-                "des":"可以运行在 macOS 上的 Diablo 1"
-            },
-            {
-                "id":"erikolsson/wordle-clone",
-                "des":"SwiftUI 和 TCA 做的 Wordle 游戏"
-            }
+            
         ]
     },
     {
         "name":"音视频",
         "id":2112281220,
         "repos":[
-            {
-                "id":"mpv-player/mpv",
-                "des":"命令行视频播放器"
-            },
-            {
-                "id":"analogcode/Swift-Radio-Pro",
-                "des":"广播电台"
-            }
+            
         ]
     },
     {

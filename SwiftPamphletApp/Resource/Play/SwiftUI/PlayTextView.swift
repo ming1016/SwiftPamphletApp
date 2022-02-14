@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextView: View {
+struct PlayTextView: View {
     var body: some View {
         Group {
             Text("大标题").font(.largeTitle)
@@ -63,7 +63,61 @@ struct TextView: View {
                 .lineSpacing(10) // 行间距
                 .multilineTextAlignment(.leading) // 对齐
         }
-//        Text(PlayFoundation.attributeString().randomElement())
-//        Text(PlayFoundation.attributeString().randomElement())
+        
+        // 使用 AttributeString
+        PAttributeTextView()
+            .padding()
+
     }
 }
+
+struct PAttributeTextView: View {
+    let aStr: AttributedString = {
+        var a1 = AttributedString("这是一个 ")
+        var c1 = AttributeContainer()
+        c1.font = .footnote
+        c1.foregroundColor = .secondary
+        a1.setAttributes(c1)
+        
+        var a2 = AttributedString("Attribute ")
+        var c2 = AttributeContainer()
+        c2.font = .title
+        a2.setAttributes(c2)
+        
+        var a3 = AttributedString("String ")
+        var c3 = AttributeContainer()
+        c3.baselineOffset = 10
+        c3.appKit.foregroundColor = .yellow // 仅在 macOS 里显示的颜色
+        c3.swiftUI.foregroundColor = .secondary
+        c3.font = .footnote
+        a3.setAttributes(c3)
+        
+        // formatter 的支持
+        var a4 = Date.now.formatted(.dateTime
+                                        .hour()
+                                        .minute()
+                                        .weekday()
+                                        .attributed
+        )
+        let c4AMPM = AttributeContainer().dateField(.amPM)
+        let c4AMPMColor = AttributeContainer().foregroundColor(.green)
+        
+        a4.replaceAttributes(c4AMPM, with: c4AMPMColor)
+        let c4Week = AttributeContainer().dateField(.weekday)
+        let c4WeekColor = AttributeContainer().foregroundColor(.purple)
+        a4.replaceAttributes(c4Week, with: c4WeekColor)
+        
+        a1.append(a2)
+        a1.append(a3)
+        a1.append(a4)
+        
+        return a1
+    }()
+    var body: some View {
+        Text(aStr)
+        
+    }
+}
+
+
+

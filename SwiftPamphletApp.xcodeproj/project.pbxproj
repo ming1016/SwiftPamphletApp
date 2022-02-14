@@ -146,9 +146,11 @@
 		086A5F5A274CC17700FECE02 /* lib-Combine.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F59274CC17700FECE02 /* lib-Combine.json */; };
 		086A5F5D274CCAEC00FECE02 /* lib-Concurrency.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F5B274CCAEC00FECE02 /* lib-Concurrency.json */; };
 		086A5F5E274CCAEC00FECE02 /* lib-SwiftUI.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F5C274CCAEC00FECE02 /* lib-SwiftUI.json */; };
-		086A5F642754C14F00FECE02 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* TextView.swift */; };
+		086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* PlayTextView.swift */; };
 		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
 		086A5F6A2755F3BE00FECE02 /* repos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* repos.json */; };
+		0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896FB8F27BA39B100676B7F /* PlayButtonView.swift */; };
+		0896FB9227BA486900676B7F /* 145.md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* 145.md */; };
 		08A4FDC227B25A140068E5BC /* 141.md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* 141.md */; };
 		08AEAEDB277EA5C300B969E2 /* RSSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEDA277EA5C300B969E2 /* RSSModel.swift */; };
 		08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */; };
@@ -323,9 +325,11 @@
 		086A5F59274CC17700FECE02 /* lib-Combine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-Combine.json"; sourceTree = "<group>"; };
 		086A5F5B274CCAEC00FECE02 /* lib-Concurrency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-Concurrency.json"; sourceTree = "<group>"; };
 		086A5F5C274CCAEC00FECE02 /* lib-SwiftUI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-SwiftUI.json"; sourceTree = "<group>"; };
-		086A5F632754C14F00FECE02 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		086A5F632754C14F00FECE02 /* PlayTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTextView.swift; sourceTree = "<group>"; };
 		086A5F662754C27900FECE02 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		086A5F692755F3BE00FECE02 /* repos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = repos.json; path = SwiftPamphletApp/Resource/News/repos.json; sourceTree = SOURCE_ROOT; };
+		0896FB8F27BA39B100676B7F /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
+		0896FB9127BA486900676B7F /* 145.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 145.md; sourceTree = "<group>"; };
 		08A4FDC127B25A140068E5BC /* 141.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 141.md; sourceTree = "<group>"; };
 		08AEAEDA277EA5C300B969E2 /* RSSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSModel.swift; sourceTree = "<group>"; };
 		08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDevNoti.swift; sourceTree = "<group>"; };
@@ -718,6 +722,7 @@
 		0844902A279ECED300B61353 /* UseViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				0896FB9127BA486900676B7F /* 145.md */,
 				0844902B279ECEFB00B61353 /* 100.md */,
 				0844902D279ECF1C00B61353 /* 92.md */,
 			);
@@ -850,7 +855,6 @@
 				08AEAEE7277EDD5D00B969E2 /* Guide */,
 				08AEAEE6277EDD4C00B969E2 /* News */,
 				08B4C93A277477E100742084 /* Archive */,
-				086A5F622754C12800FECE02 /* SwiftUI */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -866,10 +870,11 @@
 		086A5F622754C12800FECE02 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				086A5F632754C14F00FECE02 /* TextView.swift */,
+				086A5F632754C14F00FECE02 /* PlayTextView.swift */,
 				08D4F0FB275F705C005FC997 /* LabelView.swift */,
 				08D4F0FD275F728C005FC997 /* LinkView.swift */,
 				083554E02756503B0095E0EE /* AnimateLayout.swift */,
+				0896FB8F27BA39B100676B7F /* PlayButtonView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -882,6 +887,18 @@
 				08AEAEE0277EA70500B969E2 /* DBRepoStore.swift */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		0896FB9327BA60AA00676B7F /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				08C411F127951152006FC340 /* PlayFoundation.swift */,
+				08C411F327951181006FC340 /* PlaySyntax.swift */,
+				08448F0A2797F73200B61353 /* PlayArchitecture.swift */,
+				08448F0C2799035600B61353 /* PlaySecurity.swift */,
+				08448F40279AC1A900B61353 /* PlayMacOS.swift */,
+			);
+			path = Guide;
 			sourceTree = "<group>";
 		};
 		08AEAEE6277EDD4C00B969E2 /* News */ = {
@@ -965,11 +982,8 @@
 		08C411F02795111C006FC340 /* Play */ = {
 			isa = PBXGroup;
 			children = (
-				08C411F127951152006FC340 /* PlayFoundation.swift */,
-				08C411F327951181006FC340 /* PlaySyntax.swift */,
-				08448F0A2797F73200B61353 /* PlayArchitecture.swift */,
-				08448F0C2799035600B61353 /* PlaySecurity.swift */,
-				08448F40279AC1A900B61353 /* PlayMacOS.swift */,
+				0896FB9327BA60AA00676B7F /* Guide */,
+				086A5F622754C12800FECE02 /* SwiftUI */,
 			);
 			path = Play;
 			sourceTree = "<group>";
@@ -1134,6 +1148,7 @@
 				08448FC5279EC4F800B61353 /* 28.md in Resources */,
 				0850445627B110DA0096D556 /* 138.md in Resources */,
 				08449020279ECDCE00B61353 /* 67.md in Resources */,
+				0896FB9227BA486900676B7F /* 145.md in Resources */,
 				08A4FDC227B25A140068E5BC /* 141.md in Resources */,
 				08448FC3279EC4D600B61353 /* 27.md in Resources */,
 				08AEAEE9277EDD9000B969E2 /* rssfeed.json in Resources */,
@@ -1210,6 +1225,7 @@
 			files = (
 				08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */,
 				08AEAEF7277F389300B969E2 /* RSSItemContentView.swift in Sources */,
+				0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */,
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
@@ -1242,7 +1258,7 @@
 				08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */,
 				086A5F412744EDCE00FECE02 /* UserVM.swift in Sources */,
 				08AEAEF5277F0A1E00B969E2 /* SPSidebar.swift in Sources */,
-				086A5F642754C14F00FECE02 /* TextView.swift in Sources */,
+				086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */,
 				08AEAEEB277EED9F00B969E2 /* RSSVM.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
 				083554E327572BB60095E0EE /* AppVM.swift in Sources */,
