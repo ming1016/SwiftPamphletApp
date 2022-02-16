@@ -94,6 +94,10 @@
             {
                 "id":"logseq/logseq",
                 "des":"更好的知识管理工具"
+            },
+            {
+                "id":"mattermost/focalboard",
+                "des":"类 Trello、Notion 和 Asana 的开源替代"
             }
         ]
     },

@@ -421,6 +421,10 @@
             },
             {
                 "id":"sindresorhus/Actions"
+            },
+            {
+                "id":"ObuchiYuki/DevToysMac",
+                "des":"开发者工具合集"
             }
         ]
     },
@@ -511,6 +515,10 @@
             {
                 "id":"erikolsson/wordle-clone",
                 "des":"SwiftUI 和 TCA 做的 Wordle 游戏"
+            },
+            {
+                "id":"InvadingOctopus/octopuskit",
+                "des":"2D游戏引擎，用的 GameplayKit + SpriteKit + SwiftUI"
             }
         ]
     },

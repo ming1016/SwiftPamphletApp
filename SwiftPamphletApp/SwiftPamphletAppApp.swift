@@ -35,6 +35,7 @@ struct Demo: View {
 }
 
 struct SwiftPamphletApp: View {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var appVM = AppVM()
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
@@ -87,7 +88,7 @@ struct SwiftPamphletApp: View {
 //            }
             ToolbarItem(placement: ToolbarItemPlacement.navigation) {
                 Button {
-                    NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+                    appDelegate.toggleSidebar()
                 } label: {
                     Label("Sidebar", systemImage: "sidebar.left")
                 }
@@ -104,6 +105,12 @@ struct SwiftPamphletApp: View {
                         Text("用浏览器打开")
                     } // end Button
                 } // end if
+                
+                Button {
+                    appDelegate.toggleLastView()
+                } label: {
+                    Label("LastView", systemImage: "sidebar.right")
+                } // end Button
 
             } // end ToolbarItemGroup
         } // end .toolbar
@@ -118,6 +125,16 @@ protocol Jsonable : Identifiable, Decodable, Hashable {}
 class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
     var op: String?
+    
+    @objc func toggleSidebar() {
+        ((NSApp.keyWindow?.contentView?.subviews.first?.subviews.first?.subviews.first as? NSSplitView)?.delegate as? NSSplitViewController)?.toggleSidebar(self)
+    }
+    
+    // 可收起和展开 SplitView 最右那个 View，效果类似 Xcode 的 hide or show inspectors
+    @objc func toggleLastView() {
+        ((NSApp.keyWindow?.contentView?.subviews.first?.subviews.first?.subviews.first as? NSSplitView)?.delegate as? NSSplitViewController)?.splitViewItems.last?.animator().isCollapsed.toggle()
+    }
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
         

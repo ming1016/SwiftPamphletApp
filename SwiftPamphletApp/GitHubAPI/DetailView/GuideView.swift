@@ -28,5 +28,6 @@ struct GuideView: View {
             .onAppear {
                 appVM.updateWebLink(s: "https://github.com/\(SPC.pamphletIssueRepoName)/issues/" + "\(number)")
             }
+            .frame(minWidth: SPC.detailMinWidth)
     }
 }
