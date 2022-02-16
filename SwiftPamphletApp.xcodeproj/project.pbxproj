@@ -149,6 +149,7 @@
 		086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* PlayTextView.swift */; };
 		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
 		086A5F6A2755F3BE00FECE02 /* repos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* repos.json */; };
+		088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EE8F427BD24E000764525 /* PlayLinkView.swift */; };
 		0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896FB8F27BA39B100676B7F /* PlayButtonView.swift */; };
 		0896FB9227BA486900676B7F /* 145.md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* 145.md */; };
 		08A4FDC227B25A140068E5BC /* 141.md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* 141.md */; };
@@ -328,6 +329,7 @@
 		086A5F632754C14F00FECE02 /* PlayTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTextView.swift; sourceTree = "<group>"; };
 		086A5F662754C27900FECE02 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		086A5F692755F3BE00FECE02 /* repos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = repos.json; path = SwiftPamphletApp/Resource/News/repos.json; sourceTree = SOURCE_ROOT; };
+		088EE8F427BD24E000764525 /* PlayLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLinkView.swift; sourceTree = "<group>"; };
 		0896FB8F27BA39B100676B7F /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
 		0896FB9127BA486900676B7F /* 145.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 145.md; sourceTree = "<group>"; };
 		08A4FDC127B25A140068E5BC /* 141.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 141.md; sourceTree = "<group>"; };
@@ -871,6 +873,7 @@
 			isa = PBXGroup;
 			children = (
 				086A5F632754C14F00FECE02 /* PlayTextView.swift */,
+				088EE8F427BD24E000764525 /* PlayLinkView.swift */,
 				08D4F0FB275F705C005FC997 /* LabelView.swift */,
 				08D4F0FD275F728C005FC997 /* LinkView.swift */,
 				083554E02756503B0095E0EE /* AnimateLayout.swift */,
@@ -1227,6 +1230,7 @@
 				08AEAEF7277F389300B969E2 /* RSSItemContentView.swift in Sources */,
 				0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */,
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
+				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */,

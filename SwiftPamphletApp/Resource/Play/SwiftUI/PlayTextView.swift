@@ -11,74 +11,87 @@ import SwiftUI
 struct PlayTextView: View {
     let manyString = "这是一段长文。总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么吧。"
     var body: some View {
-        Group {
-            Text("大标题").font(.largeTitle)
-            Text("说点啥呢？")
-                .tracking(30) // 字间距
-                .kerning(30) // 尾部留白
-            Text("划重点")
-                .underline()
-                .foregroundColor(.yellow)
-            Text("可旋转的文字")
-                .rotationEffect(.degrees(45))
-                .fixedSize()
-                .frame(width: 20, height: 80)
-        }
-        Group {
-            Text("有阴影")
-                .bold()
-                .italic()
-                .shadow(color: .primary, radius: 1, x: 0, y: 2)
-            Text("Gradient Background")
-                .font(.largeTitle)
-                .padding()
-                .foregroundColor(.white)
-                .background(LinearGradient(gradient: Gradient(colors: [.white, .black, .red]), startPoint: .top, endPoint: .bottom))
-                .cornerRadius(10)
-            Text("Gradient Background")
-                .padding(5)
-                .foregroundColor(.white)
-                .background(LinearGradient(gradient: Gradient(colors: [.white, .black, .purple]), startPoint: .leading, endPoint: .trailing))
-                .cornerRadius(10)
-            Text("Angular Gradient Background")
-                .padding()
-                .background(AngularGradient(colors: [.red, .yellow, .green, .blue, .purple, .red], center: .center))
-                .cornerRadius(20)
-            Text("带背景图片的")
-                .padding()
-                .font(.largeTitle)
-                .foregroundColor(.white)
-                .background {
-                    Rectangle()
-                        .fill(Color(.black))
-                        .cornerRadius(10)
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                }
-                .frame(width: 200, height: 100)
-        }
+        ScrollView {
+            Group {
+                Text("大标题").font(.largeTitle)
+                Text("说点啥呢？")
+                    .tracking(30) // 字间距
+                    .kerning(30) // 尾部留白
+                Text("划重点")
+                    .underline()
+                    .foregroundColor(.yellow)
+                    .fontWeight(.heavy)
+                Text("可旋转的文字")
+                    .rotationEffect(.degrees(45))
+                    .fixedSize()
+                    .frame(width: 20, height: 80)
+                Text("使用指定的字体")
+                    .font(.custom("Georgia", size: 24))
+            }
+            Group {
+                Text("有阴影")
+                    .font(.largeTitle)
+                    .foregroundColor(.orange)
+                    .bold()
+                    .italic()
+                    .shadow(color: .black, radius: 1, x: 0, y: 2)
+                Text("Gradient Background")
+                    .font(.largeTitle)
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(LinearGradient(gradient: Gradient(colors: [.white, .black, .red]), startPoint: .top, endPoint: .bottom))
+                    .cornerRadius(10)
+                Text("Gradient Background")
+                    .padding(5)
+                    .foregroundColor(.white)
+                    .background(LinearGradient(gradient: Gradient(colors: [.white, .black, .purple]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(10)
+                Text("Angular Gradient Background")
+                    .padding()
+                    .background(AngularGradient(colors: [.red, .yellow, .green, .blue, .purple, .red], center: .center))
+                    .cornerRadius(20)
+                Text("带背景图片的")
+                    .padding()
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .background {
+                        Rectangle()
+                            .fill(Color(.black))
+                            .cornerRadius(10)
+                        Image("logo")
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                    }
+                    .frame(width: 200, height: 100)
+            }
 
-        Group {
-            // 设置 lineLimit 依据情况依然会被裁减
-            Text(manyString)
-                .lineLimit(3) // 对行的限制，如果多余设定行数，尾部会显示...
-                .lineSpacing(10) // 行间距
-                .multilineTextAlignment(.leading) // 对齐
+            Group {
+                // 设置 lineLimit 表示最多支持行数，依据情况依然有会被减少显示行数
+                Text(manyString)
+                    .lineLimit(3) // 对行的限制，如果多余设定行数，尾部会显示...
+                    .lineSpacing(10) // 行间距
+                    .multilineTextAlignment(.leading) // 对齐
+                
+                // 使用 fixedSize 就可以在任何时候完整显示
+                Text(manyString)
+                    .fixedSize(horizontal: false, vertical: true)
+                
+            }
             
-            // 使用 fixedSize 就可以在任何时候完整显示
-            Text(manyString)
-                .fixedSize(horizontal: false, vertical: true)
-            
-        }
-        
-        // 使用 AttributeString
-        PTextViewAttribute()
-            .padding()
+            // 使用 AttributeString
+            PTextViewAttribute()
+                .padding()
 
-        // 使用 Markdown
-        PTextViewMarkdown()
-            .padding()
+            // 使用 Markdown
+            PTextViewMarkdown()
+                .padding()
+            
+            // 时间
+            PTextViewDate()
+            
+            // 插值
+            PTextViewInterpolation()
+        }
 
     }
 }
@@ -315,10 +328,11 @@ struct PTextViewInterpolation: View {
     }()
     var body: some View {
         VStack {
-            Text("图文 \(Image(systemName: "sun.min"))")
-            Text("💰 \(999 as NSNumber, formatter: nf)")
+            Text("数字格式化：\(99.9, specifier: "%.3f")")
+            Text("💰： \(999 as NSNumber, formatter: nf)")
+            Text("图文： \(Image(systemName: "sun.min"))")
                 .environment(\.locale, Locale(identifier: "zh_cn"))
-            Text("数组： \(["one", "two"])")
+            Text("数组（自定义插值支持类型）： \(["one", "two"])")
             Text("红字：\(red: "变红了")，带图标的字：\(sun: "天晴")")
         }
     }

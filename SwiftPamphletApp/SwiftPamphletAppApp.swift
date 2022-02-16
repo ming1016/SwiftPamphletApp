@@ -26,8 +26,7 @@ struct Demo: View {
         Group {
 //            PlayButtonView()
 //            PlayTextView()
-//            PTextViewDate()
-            PTextViewInterpolation()
+            PlayLinkView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {
