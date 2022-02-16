@@ -9,6 +9,7 @@ import SwiftUI
 
 // MARK: - Text
 struct PlayTextView: View {
+    let manyString = "这是一段长文。总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么吧。"
     var body: some View {
         Group {
             Text("大标题").font(.largeTitle)
@@ -59,25 +60,33 @@ struct PlayTextView: View {
         }
 
         Group {
-            Text("这是一段长文。总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么，总得说点什么吧。")
+            // 设置 lineLimit 依据情况依然会被裁减
+            Text(manyString)
                 .lineLimit(3) // 对行的限制，如果多余设定行数，尾部会显示...
                 .lineSpacing(10) // 行间距
                 .multilineTextAlignment(.leading) // 对齐
+            
+            // 使用 fixedSize 就可以在任何时候完整显示
+            Text(manyString)
+                .fixedSize(horizontal: false, vertical: true)
+            
         }
         
         // 使用 AttributeString
-        PAttributeTextView()
+        PTextViewAttribute()
             .padding()
-        
+
         // 使用 Markdown
-        PMarkdownTextView()
+        PTextViewMarkdown()
             .padding()
 
     }
 }
 
+
+
 // MARK: - Markdown
-struct PMarkdownTextView: View {
+struct PTextViewMarkdown: View {
     let mdaStr: AttributedString = {
         
         var mda = AttributedString(localized: "这是一个 **Attribute** ~string~")
@@ -147,10 +156,8 @@ struct PMarkdownTextView: View {
     }
 }
 
-
-
 // MARK: - AttributedString
-struct PAttributeTextView: View {
+struct PTextViewAttribute: View {
     let aStr: AttributedString = {
         var a1 = AttributedString("这是一个 ")
         var c1 = AttributeContainer()
@@ -278,3 +285,63 @@ extension AttributeDynamicLookup{
         self[T.self]
     }
 }
+
+// MARK: - 时间
+struct PTextViewDate: View {
+    let date: Date = Date()
+    let df: DateFormatter = {
+        let df = DateFormatter()
+        df.dateStyle = .long
+        df.timeStyle = .short
+        return df
+    }()
+    var dv: String {
+        return df.string(from: date)
+    }
+    var body: some View {
+        HStack {
+            Text(dv)
+        }
+        .environment(\.locale, Locale(identifier: "zh_cn"))
+    }
+}
+
+// MARK: - 插值
+struct PTextViewInterpolation: View {
+    let nf: NumberFormatter = {
+        let f = NumberFormatter()
+        f.numberStyle = .currencyPlural
+        return f
+    }()
+    var body: some View {
+        VStack {
+            Text("图文 \(Image(systemName: "sun.min"))")
+            Text("💰 \(999 as NSNumber, formatter: nf)")
+                .environment(\.locale, Locale(identifier: "zh_cn"))
+            Text("数组： \(["one", "two"])")
+            Text("红字：\(red: "变红了")，带图标的字：\(sun: "天晴")")
+        }
+    }
+}
+
+// 扩展 LocalizedStringKey.StringInterpolation 自定义插值
+extension LocalizedStringKey.StringInterpolation {
+    // 特定类型处理
+    mutating func appendInterpolation(_ value: [String]) {
+        for s in value {
+            appendLiteral(s + "")
+            appendInterpolation(Text(s + " ").bold().foregroundColor(.secondary))
+        }
+    }
+    
+    // 实现不同情况处理，可以简化设置修改器设置
+    mutating func appendInterpolation(red value: LocalizedStringKey) {
+        appendInterpolation(Text(value).bold().foregroundColor(.red))
+    }
+    mutating func appendInterpolation(sun value: String) {
+        appendInterpolation(Image(systemName: "sun.max.fill"))
+        appendLiteral(value)
+    }
+}
+
+
