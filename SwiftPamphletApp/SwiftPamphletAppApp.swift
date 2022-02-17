@@ -24,13 +24,28 @@ struct SwiftPamphletAppApp: App {
 struct Demo: View {
     var body: some View {
         Group {
+//            V()
 //            PlayButtonView()
 //            PlayTextView()
-            PlayLinkView()
+//            PlayLinkView()
+            PlayLabelView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {
 
+        }
+    }
+}
+
+struct V: View {
+    @StateObject var appVM = AppVM()
+    @State var isEnterFullScreen: Bool = false // 全屏控制
+    var body: some View {
+        Button {
+            isEnterFullScreen.toggle()
+            appVM.fullScreen(isEnter: isEnterFullScreen)
+        } label: {
+            Image(systemName: isEnterFullScreen == true ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
         }
     }
 }

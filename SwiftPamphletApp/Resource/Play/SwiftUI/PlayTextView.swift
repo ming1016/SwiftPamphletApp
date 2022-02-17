@@ -85,6 +85,7 @@ struct PlayTextView: View {
             // 使用 Markdown
             PTextViewMarkdown()
                 .padding()
+//                .inlineOnlyPreservingWhitespace
             
             // 时间
             PTextViewDate()
@@ -132,7 +133,7 @@ struct PTextViewMarkdown: View {
         
         // 从文件中读取 Markdown 内容
         let mdUrl = Bundle.main.url(forResource: "1", withExtension: "md")!
-        mda = try! AttributedString(contentsOf: mdUrl, baseURL: nil)
+        mda = try! AttributedString(contentsOf: mdUrl,options: AttributedString.MarkdownParsingOptions(interpretedSyntax: .inlineOnlyPreservingWhitespace), baseURL: nil) // .inlineOnlyPreservingWhitespace 支持 markdown 文件的换行
         
         // Markdown 已转换成 AtrributedString 结构。
         for r in mda.runs {

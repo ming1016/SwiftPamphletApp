@@ -170,6 +170,9 @@
 		08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4C9382770B26700742084 /* CCYRSSReq.swift */; };
 		08B4C93C2774786800742084 /* archiveRepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B4C93B2774786800742084 /* archiveRepos.json */; };
 		08BE632A27BE220D002BC6A8 /* 146.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632927BE220D002BC6A8 /* 146.md */; };
+		08BE632C27BE3762002BC6A8 /* 147.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632B27BE3762002BC6A8 /* 147.md */; };
+		08BE632E27BE3A95002BC6A8 /* PlayLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */; };
+		08BE633027BE6CAA002BC6A8 /* 148.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632F27BE6CAA002BC6A8 /* 148.md */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
@@ -349,6 +352,9 @@
 		08B4C9382770B26700742084 /* CCYRSSReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRSSReq.swift; sourceTree = "<group>"; };
 		08B4C93B2774786800742084 /* archiveRepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archiveRepos.json; sourceTree = "<group>"; };
 		08BE632927BE220D002BC6A8 /* 146.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 146.md; sourceTree = "<group>"; };
+		08BE632B27BE3762002BC6A8 /* 147.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 147.md; sourceTree = "<group>"; };
+		08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLabelView.swift; sourceTree = "<group>"; };
+		08BE632F27BE6CAA002BC6A8 /* 148.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 148.md; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
@@ -723,6 +729,8 @@
 		0844902A279ECED300B61353 /* UseViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				08BE632F27BE6CAA002BC6A8 /* 148.md */,
+				08BE632B27BE3762002BC6A8 /* 147.md */,
 				0896FB9127BA486900676B7F /* 145.md */,
 				0844902B279ECEFB00B61353 /* 100.md */,
 				0844902D279ECF1C00B61353 /* 92.md */,
@@ -875,6 +883,7 @@
 				088EE8F427BD24E000764525 /* PlayLinkView.swift */,
 				083554E02756503B0095E0EE /* AnimateLayout.swift */,
 				0896FB8F27BA39B100676B7F /* PlayButtonView.swift */,
+				08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1142,6 +1151,7 @@
 				08448FAD279EC2E900B61353 /* 14.md in Resources */,
 				08448F66279EB33F00B61353 /* 103.md in Resources */,
 				08448FDA279EC6F500B61353 /* 39.md in Resources */,
+				08BE633027BE6CAA002BC6A8 /* 148.md in Resources */,
 				08448FF1279EC96500B61353 /* 55.md in Resources */,
 				08448FB6279EC39800B61353 /* 18.md in Resources */,
 				08448F6A279EB47E00B61353 /* 120.md in Resources */,
@@ -1209,6 +1219,7 @@
 				08448FD5279EC62700B61353 /* 37.md in Resources */,
 				08448F75279EB62B00B61353 /* 125.md in Resources */,
 				086A5F6A2755F3BE00FECE02 /* repos.json in Resources */,
+				08BE632C27BE3762002BC6A8 /* 147.md in Resources */,
 				08448FE0279EC7AF00B61353 /* 42.md in Resources */,
 				08448F77279EB65800B61353 /* 126.md in Resources */,
 				08449022279ECDEF00B61353 /* 68.md in Resources */,
@@ -1271,6 +1282,7 @@
 				08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
 				08AEAEE1277EA70500B969E2 /* DBRepoStore.swift in Sources */,
+				08BE632E27BE3A95002BC6A8 /* PlayLabelView.swift in Sources */,
 				084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */,
 				08CD61FA27758AF0008C0935 /* ParseStandXML.swift in Sources */,
 			);
