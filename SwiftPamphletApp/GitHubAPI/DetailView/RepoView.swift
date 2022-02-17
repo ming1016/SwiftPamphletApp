@@ -19,6 +19,9 @@ struct RepoView: View {
     var isShowIssuesLink = true
     var isCleanUnread = false
     var isCleanExpUnread = false
+    
+    @State var isEnterFullScreen: Bool = false // 全屏控制
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
@@ -34,6 +37,13 @@ struct RepoView: View {
                     Text("议题 \(vm.repo.openIssues)")
                     Text("语言 \(vm.repo.language ?? "")")
                     ButtonGoGitHubWeb(url: vm.repo.htmlUrl ?? "https://github.com", text: "在 GitHub 上访问")
+                    Button {
+                        isEnterFullScreen.toggle()
+                        appVM.fullScreen(isEnter: isEnterFullScreen)
+                    } label: {
+                        Image(systemName: isEnterFullScreen == true ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
+                    }
+
                 }
                 if vm.repo.description != nil {
                     Text("简介：\(vm.repo.description ?? "")")
