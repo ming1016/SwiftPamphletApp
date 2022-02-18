@@ -130,6 +130,10 @@
             },
             {
                 "id":"coteditor/CotEditor"
+            },
+            {
+                "id":"mchakravarty/CodeEditorView",
+                "des":"SwiftUI 写的代码编辑器"
             }
         ]
     },

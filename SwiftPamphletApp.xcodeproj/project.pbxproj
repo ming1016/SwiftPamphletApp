@@ -173,6 +173,10 @@
 		08BE632C27BE3762002BC6A8 /* 147.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632B27BE3762002BC6A8 /* 147.md */; };
 		08BE632E27BE3A95002BC6A8 /* PlayLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */; };
 		08BE633027BE6CAA002BC6A8 /* 148.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632F27BE6CAA002BC6A8 /* 148.md */; };
+		08BE633527BF54A0002BC6A8 /* PlayTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE633427BF54A0002BC6A8 /* PlayTextEditorView.swift */; };
+		08BE633727BF6CBC002BC6A8 /* PlayTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE633627BF6CBC002BC6A8 /* PlayTextFieldView.swift */; };
+		08BE634027BF953A002BC6A8 /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = 08BE633F27BF953A002BC6A8 /* CodeEditorView */; };
+		08BE634227BFAF76002BC6A8 /* 149.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE634127BFAF76002BC6A8 /* 149.md */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
@@ -355,6 +359,9 @@
 		08BE632B27BE3762002BC6A8 /* 147.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 147.md; sourceTree = "<group>"; };
 		08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLabelView.swift; sourceTree = "<group>"; };
 		08BE632F27BE6CAA002BC6A8 /* 148.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 148.md; sourceTree = "<group>"; };
+		08BE633427BF54A0002BC6A8 /* PlayTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTextEditorView.swift; sourceTree = "<group>"; };
+		08BE633627BF6CBC002BC6A8 /* PlayTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTextFieldView.swift; sourceTree = "<group>"; };
+		08BE634127BFAF76002BC6A8 /* 149.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 149.md; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
@@ -375,6 +382,7 @@
 				08448F092796A83D00B61353 /* SwiftDate in Frameworks */,
 				08BF26D02768A59A0064DDAC /* SQLite in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
+				08BE634027BF953A002BC6A8 /* CodeEditorView in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
 				08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */,
 			);
@@ -729,6 +737,7 @@
 		0844902A279ECED300B61353 /* UseViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				08BE634127BFAF76002BC6A8 /* 149.md */,
 				08BE632F27BE6CAA002BC6A8 /* 148.md */,
 				08BE632B27BE3762002BC6A8 /* 147.md */,
 				0896FB9127BA486900676B7F /* 145.md */,
@@ -884,6 +893,8 @@
 				083554E02756503B0095E0EE /* AnimateLayout.swift */,
 				0896FB8F27BA39B100676B7F /* PlayButtonView.swift */,
 				08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */,
+				08BE633427BF54A0002BC6A8 /* PlayTextEditorView.swift */,
+				08BE633627BF6CBC002BC6A8 /* PlayTextFieldView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1051,6 +1062,7 @@
 				08D107BC278826BB007B7009 /* HTMLEntities */,
 				08448F082796A83D00B61353 /* SwiftDate */,
 				08448F4D279E8CA400B61353 /* Ink */,
+				08BE633F27BF953A002BC6A8 /* CodeEditorView */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -1086,6 +1098,7 @@
 				08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */,
 				08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */,
+				08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -1121,6 +1134,7 @@
 				08448FA7279EBB7E00B61353 /* 11.md in Resources */,
 				08448FCA279EC56D00B61353 /* 32.md in Resources */,
 				0844901C279ECD6B00B61353 /* 65.md in Resources */,
+				08BE634227BFAF76002BC6A8 /* 149.md in Resources */,
 				08448FB8279EC3C200B61353 /* 22.md in Resources */,
 				0844900F279ECC0C00B61353 /* 56.md in Resources */,
 				08448F9A279EBA2900B61353 /* 6.md in Resources */,
@@ -1235,6 +1249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BE633727BF6CBC002BC6A8 /* PlayTextFieldView.swift in Sources */,
 				08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */,
 				08AEAEF7277F389300B969E2 /* RSSItemContentView.swift in Sources */,
 				0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */,
@@ -1269,6 +1284,7 @@
 				08AEAEDB277EA5C300B969E2 /* RSSModel.swift in Sources */,
 				08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */,
 				086A5F412744EDCE00FECE02 /* UserVM.swift in Sources */,
+				08BE633527BF54A0002BC6A8 /* PlayTextEditorView.swift in Sources */,
 				08AEAEF5277F0A1E00B969E2 /* SPSidebar.swift in Sources */,
 				086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */,
 				08AEAEEB277EED9F00B969E2 /* RSSVM.swift in Sources */,
@@ -1509,6 +1525,14 @@
 				minimumVersion = 0.5.1;
 			};
 		};
+		08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mchakravarty/CodeEditorView.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
@@ -1545,6 +1569,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */;
 			productName = Ink;
+		};
+		08BE633F27BF953A002BC6A8 /* CodeEditorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */;
+			productName = CodeEditorView;
 		};
 		08BF26CF2768A59A0064DDAC /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;

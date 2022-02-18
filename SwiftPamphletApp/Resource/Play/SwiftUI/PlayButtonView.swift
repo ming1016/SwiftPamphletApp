@@ -10,6 +10,19 @@ import SwiftUI
 struct PlayButtonView: View {
     var body: some View {
         VStack {
+            
+            Button {
+                print("Clicked")
+            } label: {
+                Image(systemName: "ladybug.fill")
+                Text("Report Bug")
+            }
+
+            
+            Button(systemIconName: "ladybug.fill") {
+                print("bug")
+            }
+            
             PCustomButton("点我") {
                 print("Clicked!")
             }
@@ -23,6 +36,18 @@ struct PlayButtonView: View {
     }
 }
 
+// MARK: - 扩展 Button
+// 使用 SFSymbol 做图标
+extension Button where Label == Image {
+    init(systemIconName: String, done: @escaping () -> Void) {
+        self.init(action: done) {
+            Image(systemName: systemIconName)
+                .renderingMode(.original)
+        }
+    }
+}
+
+// MARK: - 自定义 Button
 struct PCustomButton: View {
     let desTextView: Text
     let act: () -> Void

@@ -25,10 +25,11 @@ struct Demo: View {
     var body: some View {
         Group {
 //            V()
-//            PlayButtonView()
 //            PlayTextView()
 //            PlayLinkView()
-            PlayLabelView()
+//            PlayLabelView()
+//            PlayButtonView()
+            PlayTextEditorView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {

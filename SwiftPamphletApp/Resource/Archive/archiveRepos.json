@@ -3,7 +3,24 @@
         "name":"新鲜事",
         "id":2112271200,
         "repos":[
-            
+            {
+                "id":"alaskasquirrel/Email-newsletter-RSS",
+                "des":"中文 Newsletter 收集"
+            },
+            {
+                "id":"chasays/newsletter-list",
+                "des":"有趣 Newsletter 收集"
+            }
+        ]
+    },
+    {
+        "name":"文字处理",
+        "id":2202181426,
+        "repos":[
+            {
+                "id":"sbarex/SourceCodeSyntaxHighlight",
+                "des":"源码高亮的 macOS 系统插件"
+            }
         ]
     },
     {
@@ -178,6 +195,9 @@
             {
                 "id":"samschott/maestral",
                 "des":"Dropbox 客户端"
+            },
+            {
+                "id":"HackerNews/API"
             }
         ]
     },

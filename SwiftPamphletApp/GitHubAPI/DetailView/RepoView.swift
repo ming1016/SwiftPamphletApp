@@ -48,6 +48,7 @@ struct RepoView: View {
                 if vm.repo.description != nil {
                     Text("简介：\(vm.repo.description ?? "")")
                 }
+                
                 HStack {
                     Text("作者：")
                     AsyncImageWithPlaceholder(size: .smallSize, url: vm.repo.owner.avatarUrl)
@@ -58,6 +59,7 @@ struct RepoView: View {
         }
         .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .frame(minWidth: SPC.detailMinWidth)
+        
         .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
         .onAppear {
             if type == .readme {
@@ -87,6 +89,7 @@ struct RepoView: View {
                     }
                 })
                 .tag(1)
+                
 
             IssuesView(issues: vm.issues, repo: vm.repo, isShowLink: isShowIssuesLink)
                 .tabItem {
@@ -116,9 +119,9 @@ struct RepoView: View {
                 .tag(4)
 
         } // end TabView
-
         Spacer()
     }
+        
 }
 
 struct ReadmeView: View {

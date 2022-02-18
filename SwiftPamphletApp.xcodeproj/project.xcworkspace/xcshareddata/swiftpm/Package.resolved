@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "CodeEditorView",
+        "repositoryURL": "https://github.com/mchakravarty/CodeEditorView.git",
+        "state": {
+          "branch": "main",
+          "revision": "373f3ecfaabdd06918e655cf4516b046aa7e290c",
+          "version": null
+        }
+      },
+      {
         "package": "combine-schedulers",
         "repositoryURL": "https://github.com/pointfreeco/combine-schedulers",
         "state": {

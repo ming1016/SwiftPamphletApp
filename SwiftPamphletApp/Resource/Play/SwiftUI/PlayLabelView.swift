@@ -22,6 +22,9 @@ struct PlayLabelView: View {
                     .foregroundColor(.orange)
                     .bold()
                     .font(.largeTitle)
+                    .padding()
+                    .background(.black.opacity(0.5))
+                    .clipShape(Capsule())
                     .shadow(color: .black, radius: 1, x: 0, y: 2)
             } icon: {
                 Image("p3")
@@ -35,7 +38,7 @@ struct PlayLabelView: View {
             // 自定义 LabelStyle
             Label("有边框的 Label", systemImage: "b.square.fill")
                 .labelStyle(.border)
-            
+                
             Label("仅标题有边框", systemImage: "text.bubble")
                 .labelStyle(.borderOnlyTitle)
             
@@ -68,7 +71,6 @@ struct BorderLabelStyle: LabelStyle {
                         .stroke(.purple, lineWidth: 4))
             .shadow(color: .black, radius: 4, x: 0, y: 5)
             .labelStyle(.automatic) // 样式擦除器，防止样式被 .iconOnly、.titleOnly 这样的 LabelStyle 擦除了样式。
-                        
     }
 }
 extension LabelStyle where Self == BorderLabelStyle {

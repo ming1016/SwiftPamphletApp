@@ -13,6 +13,6 @@ struct NavView: View {
             MarkdownView(s: loadBundleString("1.md"))
                 .padding(20)
         }
-        .frame(minWidth: SPC.detailMinWidth)
+        .frame(minWidth: 350)
     }
 }
