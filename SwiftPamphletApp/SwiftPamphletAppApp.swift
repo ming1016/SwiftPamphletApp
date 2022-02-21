@@ -29,7 +29,8 @@ struct Demo: View {
 //            PlayLinkView()
 //            PlayLabelView()
 //            PlayButtonView()
-            PlayTextEditorView()
+//            PlayTextEditorView()
+            PlayTextFieldView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {
