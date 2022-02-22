@@ -181,6 +181,8 @@
 		08BE634627C48C5B002BC6A8 /* PlayToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE634527C48C5A002BC6A8 /* PlayToggleView.swift */; };
 		08BE634827C4B6A2002BC6A8 /* PlayStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE634727C4B6A2002BC6A8 /* PlayStackView.swift */; };
 		08BE634A27C4BDDB002BC6A8 /* 151.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE634927C4BDDB002BC6A8 /* 151.md */; };
+		08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */; };
+		08BE635227C4D2BC002BC6A8 /* PlayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE635127C4D2BC002BC6A8 /* PlayListView.swift */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
@@ -370,6 +372,8 @@
 		08BE634527C48C5A002BC6A8 /* PlayToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayToggleView.swift; sourceTree = "<group>"; };
 		08BE634727C4B6A2002BC6A8 /* PlayStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStackView.swift; sourceTree = "<group>"; };
 		08BE634927C4BDDB002BC6A8 /* 151.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 151.md; sourceTree = "<group>"; };
+		08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFormView.swift; sourceTree = "<group>"; };
+		08BE635127C4D2BC002BC6A8 /* PlayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListView.swift; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
@@ -907,6 +911,8 @@
 				08BE633627BF6CBC002BC6A8 /* PlayTextFieldView.swift */,
 				08BE634527C48C5A002BC6A8 /* PlayToggleView.swift */,
 				08BE634727C4B6A2002BC6A8 /* PlayStackView.swift */,
+				08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */,
+				08BE635127C4D2BC002BC6A8 /* PlayListView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1272,6 +1278,7 @@
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
+				08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */,
 				08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */,
@@ -1296,6 +1303,7 @@
 				08CD61F927758AF0008C0935 /* ParseStandXMLTagTokens.swift in Sources */,
 				08449034279F6D0D00B61353 /* RepoWebView.swift in Sources */,
 				086A5F3B2744EDA500FECE02 /* GitHubAPIModel.swift in Sources */,
+				08BE635227C4D2BC002BC6A8 /* PlayListView.swift in Sources */,
 				086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */,
 				08AEAEDB277EA5C300B969E2 /* RSSModel.swift in Sources */,
 				08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */,

@@ -72,6 +72,10 @@
             {
                 "id":"horsicq/XMachOViewer",
                 "des":"查看 Mach-O"
+            },
+            {
+                "id":"White-White/mocha",
+                "des":"SwiftUI 写的 Mach-O 查看器"
             }
         ]
     },
@@ -86,6 +90,10 @@
             {
                 "id":"sampsyo/cs6120",
                 "des":"编译器教学"
+            },
+            {
+                "id":"everettjf/linkmap-rs",
+                "des":"Rust 写的 Linkmap 解析器"
             }
         ]
     },

@@ -31,8 +31,10 @@ struct Demo: View {
 //            PlayTextEditorView()
 //            PlayTextFieldView()
 //            PlayButtonView()
-            PlayStackView()
+//            PlayStackView()
+//            PlayFormView()
 //            PlayToggleView()
+            PlayListView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {

@@ -46,6 +46,22 @@ struct PlayTextView: View {
                     .foregroundColor(.white)
                     .background(LinearGradient(gradient: Gradient(colors: [.white, .black, .purple]), startPoint: .leading, endPoint: .trailing))
                     .cornerRadius(10)
+                ZStack {
+                    Text("渐变透明材质风格")
+//                        .foregroundStyle(.secondary)
+                        .padding()
+                        .background(
+                            .regularMaterial,
+                            in: RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        )
+                        .shadow(radius: 10)
+                        .padding()
+                        .font(.largeTitle.weight(.black))
+                }
+                .frame(width: 300, height: 200)
+                .background(
+                    LinearGradient(colors: [.yellow, .pink], startPoint: .topLeading, endPoint: .bottomTrailing)
+                )
                 Text("Angular Gradient Background")
                     .padding()
                     .background(AngularGradient(colors: [.red, .yellow, .green, .blue, .purple, .red], center: .center))
