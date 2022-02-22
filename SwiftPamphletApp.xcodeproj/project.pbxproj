@@ -178,6 +178,7 @@
 		08BE634027BF953A002BC6A8 /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = 08BE633F27BF953A002BC6A8 /* CodeEditorView */; };
 		08BE634227BFAF76002BC6A8 /* 149.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE634127BFAF76002BC6A8 /* 149.md */; };
 		08BE634427C3845E002BC6A8 /* 150.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE634327C3845E002BC6A8 /* 150.md */; };
+		08BE634627C48C5B002BC6A8 /* PlayToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE634527C48C5A002BC6A8 /* PlayToggleView.swift */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
@@ -364,6 +365,7 @@
 		08BE633627BF6CBC002BC6A8 /* PlayTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTextFieldView.swift; sourceTree = "<group>"; };
 		08BE634127BFAF76002BC6A8 /* 149.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 149.md; sourceTree = "<group>"; };
 		08BE634327C3845E002BC6A8 /* 150.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 150.md; sourceTree = "<group>"; };
+		08BE634527C48C5A002BC6A8 /* PlayToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayToggleView.swift; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
@@ -898,6 +900,7 @@
 				08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */,
 				08BE633427BF54A0002BC6A8 /* PlayTextEditorView.swift */,
 				08BE633627BF6CBC002BC6A8 /* PlayTextFieldView.swift */,
+				08BE634527C48C5A002BC6A8 /* PlayToggleView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1254,6 +1257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08BE633727BF6CBC002BC6A8 /* PlayTextFieldView.swift in Sources */,
+				08BE634627C48C5B002BC6A8 /* PlayToggleView.swift in Sources */,
 				08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */,
 				08AEAEF7277F389300B969E2 /* RSSItemContentView.swift in Sources */,
 				0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */,

@@ -16,7 +16,6 @@ struct PlayButtonView: View {
     @State private var isFollowed: Bool = false
     var body: some View {
         VStack {
-            
             // 常用方式
             Button {
                 print("Clicked")
@@ -37,15 +36,27 @@ struct PlayButtonView: View {
                 print("短按") // macOS 暂不支持
             }))
             
-            // 使用角色 macOS 暂不支持
+            
+            // iOS 15 修改器的使用。role 在 macOS 上暂不支持
             Button("要删除了", role: .destructive) {
                 print("删除")
             }
             .tint(.purple)
             .controlSize(.large) // .regular 是默认大小
-            .buttonStyle(.borderedProminent) // 可显示 tint 的设置
-            .cornerRadius(20)
+            .buttonStyle(.borderedProminent) // borderedProminent 可显示 tint 的设置。还有 bordered、plain 和 borderless 可选。
+            .clipShape(RoundedRectangle(cornerRadius: 5))
             .accentColor(.pink)
+            .buttonBorderShape(.automatic) // 会依据 controlSize 调整边框样式
+            .background(.ultraThinMaterial, in: Capsule()) // 添加材质就像在视图和背景间加了个透明层达到模糊的效果。效果由高到底分别是.ultraThinMaterial、.thinMaterial、.regularMaterial、.thickMaterial、.ultraThickMaterial。
+            
+            // 风格化
+            Button(action: {
+                //
+            }, label: {
+                Text("风格化").font(.largeTitle)
+            })
+            .buttonStyle(PStarmingButtonStyle())
+            
             
             // 自定义 Button
             PCustomButton("点一下触发") {
@@ -81,6 +92,8 @@ struct PlayButtonView: View {
             .buttonStyle(PCustomButtonStyle(backgroundColor: isFollowed == true ? .gray : .pink))
         }
         .padding()
+        .background(Color.skeumorphismBG)
+        
     }
 }
 
@@ -168,10 +181,11 @@ struct PCustomButtonStyle: ButtonStyle {
         .background(
             RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
                 .fill(backgroundColor)
+                .shadow(color: configuration.isPressed ? .white : .black, radius: 1, x: 0, y: 1)
         )
         .opacity(configuration.isPressed ? 0.5 : 1)
         .scaleEffect(configuration.isPressed ? 0.99 : 1)
-        .shadow(color: configuration.isPressed ? .white : .black, radius: 1, x: 0, y: 1)
+        
     }
 }
 
@@ -194,7 +208,46 @@ struct PCustomPrimitiveButtonStyle: PrimitiveButtonStyle {
     }
 }
 
+// MARK: - 风格化
+struct PStarmingButtonStyle: ButtonStyle {
+    var backgroundColor = Color.skeumorphismBG
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+            Spacer()
+            configuration.label
+            Spacer()
+        }
+        .padding(20)
+        .background(
+            ZStack {
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .shadow(color: .white, radius: configuration.isPressed ? 7 : 10, x: configuration.isPressed ? -5 : -10, y: configuration.isPressed ? -5 : -10)
+                    .shadow(color: .black, radius: configuration.isPressed ? 7 : 10, x: configuration.isPressed ? 5 : 10, y: configuration.isPressed ? 5 : 10)
+                    .blendMode(.overlay)
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .fill(backgroundColor)
+            }
+        )
+        .scaleEffect(configuration.isPressed ? 0.98 : 1)
+    }
+}
 
+extension Color {
+    static let skeumorphismBG = Color(hex: "f0f0f3")
+}
+
+extension Color {
+    init(hex: String) {
+        var rgbValue: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&rgbValue)
+
+        let r = (rgbValue & 0xff0000) >> 16
+        let g = (rgbValue & 0xff00) >> 8
+        let b = rgbValue & 0xff
+
+        self.init(red: Double(r) / 0xff, green: Double(g) / 0xff, blue: Double(b) / 0xff)
+    }
+}
 
 
 

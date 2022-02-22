@@ -31,6 +31,7 @@ struct Demo: View {
 //            PlayTextEditorView()
 //            PlayTextFieldView()
             PlayButtonView()
+//            PlayToggleView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {
