@@ -27,7 +27,10 @@
         "name":"网络",
         "id":2112281351,
         "repos":[
-            
+            {
+                "id":"nerdsupremacist/Sync",
+                "des":"对象在多个设备上同步，SwiftUI 实现"
+            }
         ]
     },
     {

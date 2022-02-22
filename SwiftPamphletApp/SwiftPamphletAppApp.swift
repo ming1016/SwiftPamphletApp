@@ -30,7 +30,8 @@ struct Demo: View {
 //            PlayLabelView()
 //            PlayTextEditorView()
 //            PlayTextFieldView()
-            PlayButtonView()
+//            PlayButtonView()
+            PlayStackView()
 //            PlayToggleView()
         }
         .frame(minWidth:300, minHeight: 550)
