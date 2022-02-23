@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CodeEditorView
 
 struct ExploreRepoListView: View {
     @EnvironmentObject var appVM: AppVM
@@ -43,7 +44,7 @@ struct ExploreRepoListView: View {
 //                        Text(er.name).font(.title3)
 //                    }
                 } else {
-                    DisclosureGroup {
+                    DisclosureGroupLikeButton {
                         ForEach(er.repos) { r in
                             if SPC.gitHubAccessToken.isEmpty == false {
                                 NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
@@ -56,7 +57,15 @@ struct ExploreRepoListView: View {
                             }
                         } // end ForEach
                     } label: {
-                        Text(er.name).font(.title3)
+                        HStack {
+                            Text(er.name).font(.title3)
+                            Spacer()
+                        }
+                        .background(
+                            // 扩大可选面积
+                            RoundedRectangle(cornerRadius: 1)
+                                .fill(Color.secondary.opacity(0.0001))
+                        )
                     }
                     .padding(EdgeInsets(top: 2, leading: 0, bottom: 2, trailing: 0))
                 } // end if token

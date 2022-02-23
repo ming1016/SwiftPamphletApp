@@ -44,7 +44,10 @@
         "name":"音视频",
         "id":2112281220,
         "repos":[
-            
+            {
+                "id":"MetalPetal/MetalPetal",
+                "des":"基于 Metal GPU 加速的图像和视频处理框架"
+            }
         ]
     },
     {

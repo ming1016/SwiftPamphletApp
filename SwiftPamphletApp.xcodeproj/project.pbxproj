@@ -183,6 +183,7 @@
 		08BE634A27C4BDDB002BC6A8 /* 151.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE634927C4BDDB002BC6A8 /* 151.md */; };
 		08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */; };
 		08BE635227C4D2BC002BC6A8 /* PlayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE635127C4D2BC002BC6A8 /* PlayListView.swift */; };
+		08BE635427C63828002BC6A8 /* 152.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635327C63828002BC6A8 /* 152.md */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
@@ -374,6 +375,7 @@
 		08BE634927C4BDDB002BC6A8 /* 151.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 151.md; sourceTree = "<group>"; };
 		08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFormView.swift; sourceTree = "<group>"; };
 		08BE635127C4D2BC002BC6A8 /* PlayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListView.swift; sourceTree = "<group>"; };
+		08BE635327C63828002BC6A8 /* 152.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 152.md; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
@@ -749,6 +751,7 @@
 		0844902A279ECED300B61353 /* UseViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				08BE635327C63828002BC6A8 /* 152.md */,
 				08BE634927C4BDDB002BC6A8 /* 151.md */,
 				08BE634327C3845E002BC6A8 /* 150.md */,
 				08BE634127BFAF76002BC6A8 /* 149.md */,
@@ -1225,6 +1228,7 @@
 				08448F43279B83C000B61353 /* archiveDevelopers.json in Resources */,
 				0844902E279ECF1C00B61353 /* 92.md in Resources */,
 				08448F5E279EB23600B61353 /* 99.md in Resources */,
+				08BE635427C63828002BC6A8 /* 152.md in Resources */,
 				08448FEA279EC86700B61353 /* 47.md in Resources */,
 				08449006279ECB4900B61353 /* 84.md in Resources */,
 				08448FB1279EC33E00B61353 /* 16.md in Resources */,
@@ -1470,7 +1474,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 4.3;
+				MARKETING_VERSION = 4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1500,7 +1504,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 4.3;
+				MARKETING_VERSION = 4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
