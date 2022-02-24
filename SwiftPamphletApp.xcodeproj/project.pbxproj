@@ -184,6 +184,10 @@
 		08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */; };
 		08BE635227C4D2BC002BC6A8 /* PlayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE635127C4D2BC002BC6A8 /* PlayListView.swift */; };
 		08BE635427C63828002BC6A8 /* 152.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635327C63828002BC6A8 /* 152.md */; };
+		08BE635627C63CF6002BC6A8 /* PlayControlGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE635527C63CF6002BC6A8 /* PlayControlGroupView.swift */; };
+		08BE635827C63F3A002BC6A8 /* 153.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635727C63F3A002BC6A8 /* 153.md */; };
+		08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE635927C6575C002BC6A8 /* PlayGroupBoxView.swift */; };
+		08BE635C27C65C7C002BC6A8 /* 154.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635B27C65C7C002BC6A8 /* 154.md */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
@@ -376,6 +380,10 @@
 		08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFormView.swift; sourceTree = "<group>"; };
 		08BE635127C4D2BC002BC6A8 /* PlayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListView.swift; sourceTree = "<group>"; };
 		08BE635327C63828002BC6A8 /* 152.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 152.md; sourceTree = "<group>"; };
+		08BE635527C63CF6002BC6A8 /* PlayControlGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayControlGroupView.swift; sourceTree = "<group>"; };
+		08BE635727C63F3A002BC6A8 /* 153.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 153.md; sourceTree = "<group>"; };
+		08BE635927C6575C002BC6A8 /* PlayGroupBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGroupBoxView.swift; sourceTree = "<group>"; };
+		08BE635B27C65C7C002BC6A8 /* 154.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 154.md; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
@@ -751,6 +759,8 @@
 		0844902A279ECED300B61353 /* UseViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				08BE635B27C65C7C002BC6A8 /* 154.md */,
+				08BE635727C63F3A002BC6A8 /* 153.md */,
 				08BE635327C63828002BC6A8 /* 152.md */,
 				08BE634927C4BDDB002BC6A8 /* 151.md */,
 				08BE634327C3845E002BC6A8 /* 150.md */,
@@ -916,6 +926,8 @@
 				08BE634727C4B6A2002BC6A8 /* PlayStackView.swift */,
 				08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */,
 				08BE635127C4D2BC002BC6A8 /* PlayListView.swift */,
+				08BE635527C63CF6002BC6A8 /* PlayControlGroupView.swift */,
+				08BE635927C6575C002BC6A8 /* PlayGroupBoxView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1200,6 +1212,7 @@
 				08A4FDC227B25A140068E5BC /* 141.md in Resources */,
 				08448FC3279EC4D600B61353 /* 27.md in Resources */,
 				08AEAEE9277EDD9000B969E2 /* rssfeed.json in Resources */,
+				08BE635C27C65C7C002BC6A8 /* 154.md in Resources */,
 				0844901A279ECD4E00B61353 /* 64.md in Resources */,
 				08449024279ECE2200B61353 /* 69.md in Resources */,
 				08448FDE279EC74200B61353 /* 41.md in Resources */,
@@ -1214,6 +1227,7 @@
 				08448F81279EB75800B61353 /* 106.md in Resources */,
 				08448FF6279EC9E800B61353 /* 76.md in Resources */,
 				0844902C279ECEFB00B61353 /* 100.md in Resources */,
+				08BE635827C63F3A002BC6A8 /* 153.md in Resources */,
 				08448F73279EB5DF00B61353 /* 124.md in Resources */,
 				08448FC8279EC54300B61353 /* 29.md in Resources */,
 				08448F7E279EB71D00B61353 /* 48.md in Resources */,
@@ -1279,6 +1293,7 @@
 				08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */,
 				08AEAEF7277F389300B969E2 /* RSSItemContentView.swift in Sources */,
 				0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */,
+				08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */,
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
@@ -1317,6 +1332,7 @@
 				086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */,
 				08AEAEEB277EED9F00B969E2 /* RSSVM.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
+				08BE635627C63CF6002BC6A8 /* PlayControlGroupView.swift in Sources */,
 				083554E327572BB60095E0EE /* AppVM.swift in Sources */,
 				086A5F3A2744EDA500FECE02 /* APIRequest.swift in Sources */,
 				086A5F522744EF4C00FECE02 /* ViewComponet.swift in Sources */,
