@@ -188,6 +188,8 @@
 		08BE635827C63F3A002BC6A8 /* 153.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635727C63F3A002BC6A8 /* 153.md */; };
 		08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE635927C6575C002BC6A8 /* PlayGroupBoxView.swift */; };
 		08BE635C27C65C7C002BC6A8 /* 154.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635B27C65C7C002BC6A8 /* 154.md */; };
+		08BE635E27C72F50002BC6A8 /* PlayNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE635D27C72F4F002BC6A8 /* PlayNavigationView.swift */; };
+		08BE636027C7A674002BC6A8 /* 155.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635F27C7A673002BC6A8 /* 155.md */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
@@ -384,6 +386,8 @@
 		08BE635727C63F3A002BC6A8 /* 153.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 153.md; sourceTree = "<group>"; };
 		08BE635927C6575C002BC6A8 /* PlayGroupBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGroupBoxView.swift; sourceTree = "<group>"; };
 		08BE635B27C65C7C002BC6A8 /* 154.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 154.md; sourceTree = "<group>"; };
+		08BE635D27C72F4F002BC6A8 /* PlayNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayNavigationView.swift; sourceTree = "<group>"; };
+		08BE635F27C7A673002BC6A8 /* 155.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 155.md; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
@@ -759,6 +763,7 @@
 		0844902A279ECED300B61353 /* UseViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				08BE635F27C7A673002BC6A8 /* 155.md */,
 				08BE635B27C65C7C002BC6A8 /* 154.md */,
 				08BE635727C63F3A002BC6A8 /* 153.md */,
 				08BE635327C63828002BC6A8 /* 152.md */,
@@ -928,6 +933,7 @@
 				08BE635127C4D2BC002BC6A8 /* PlayListView.swift */,
 				08BE635527C63CF6002BC6A8 /* PlayControlGroupView.swift */,
 				08BE635927C6575C002BC6A8 /* PlayGroupBoxView.swift */,
+				08BE635D27C72F4F002BC6A8 /* PlayNavigationView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1248,6 +1254,7 @@
 				08448FB1279EC33E00B61353 /* 16.md in Resources */,
 				08448FE6279EC82500B61353 /* 45.md in Resources */,
 				086A5F4F2744EF3B00FECE02 /* guide-syntax.json in Resources */,
+				08BE636027C7A674002BC6A8 /* 155.md in Resources */,
 				086A5F5E274CCAEC00FECE02 /* lib-SwiftUI.json in Resources */,
 				08448F51279E900500B61353 /* 132.md in Resources */,
 				08449026279ECE5400B61353 /* 70.md in Resources */,
@@ -1306,6 +1313,7 @@
 				08AEAEE5277EB36700B969E2 /* DBRSSItems.swift in Sources */,
 				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
 				08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */,
+				08BE635E27C72F50002BC6A8 /* PlayNavigationView.swift in Sources */,
 				08448F0D2799035600B61353 /* PlaySecurity.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
 				08AEAEEF277F070700B969E2 /* RSSItemsView.swift in Sources */,

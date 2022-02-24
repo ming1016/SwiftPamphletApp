@@ -38,8 +38,10 @@ struct RepoView: View {
                     Text("语言 \(vm.repo.language ?? "")")
                     ButtonGoGitHubWeb(url: vm.repo.htmlUrl ?? "https://github.com", text: "在 GitHub 上访问")
                     Button {
-                        isEnterFullScreen.toggle()
-                        appVM.fullScreen(isEnter: isEnterFullScreen)
+                        withAnimation {
+                            isEnterFullScreen.toggle()
+                            appVM.fullScreen(isEnter: isEnterFullScreen)
+                        }
                     } label: {
                         Image(systemName: isEnterFullScreen == true ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
                     }

@@ -36,7 +36,8 @@ struct Demo: View {
 //            PlayToggleView()
 //            PlayListView()
 //            PlayControlGroupView()
-            PlayGroupBoxView()
+//            PlayGroupBoxView()
+            PlayNavigationView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {
