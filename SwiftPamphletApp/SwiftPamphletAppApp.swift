@@ -25,7 +25,7 @@ struct Demo: View {
     var body: some View {
         Group {
 //            V()
-//            PlayTextView()
+            PlayTextView()
 //            PlayLinkView()
 //            PlayLabelView()
 //            PlayTextEditorView()
@@ -37,7 +37,10 @@ struct Demo: View {
 //            PlayListView()
 //            PlayControlGroupView()
 //            PlayGroupBoxView()
-            PlayNavigationView()
+//            PlayNavigationView()
+//            PlayLazyVStackAndLazyHStackView()
+//            PlayProgressView()
+//            PlayImageView()
         }
         .frame(minWidth:300, minHeight: 550)
         .onAppear {

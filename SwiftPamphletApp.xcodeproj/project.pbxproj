@@ -190,6 +190,12 @@
 		08BE635C27C65C7C002BC6A8 /* 154.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635B27C65C7C002BC6A8 /* 154.md */; };
 		08BE635E27C72F50002BC6A8 /* PlayNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE635D27C72F4F002BC6A8 /* PlayNavigationView.swift */; };
 		08BE636027C7A674002BC6A8 /* 155.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635F27C7A673002BC6A8 /* 155.md */; };
+		08BE636227C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE636127C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift */; };
+		08BE636427C886D2002BC6A8 /* 156.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE636327C886D2002BC6A8 /* 156.md */; };
+		08BE636627C88750002BC6A8 /* PlayProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE636527C88750002BC6A8 /* PlayProgressView.swift */; };
+		08BE636827C8C2A0002BC6A8 /* 157.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE636727C8C2A0002BC6A8 /* 157.md */; };
+		08BE636A27C8C409002BC6A8 /* PlayImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE636927C8C409002BC6A8 /* PlayImageView.swift */; };
+		08BE636C27C8CFA7002BC6A8 /* 158.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE636B27C8CFA7002BC6A8 /* 158.md */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
@@ -388,6 +394,12 @@
 		08BE635B27C65C7C002BC6A8 /* 154.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 154.md; sourceTree = "<group>"; };
 		08BE635D27C72F4F002BC6A8 /* PlayNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayNavigationView.swift; sourceTree = "<group>"; };
 		08BE635F27C7A673002BC6A8 /* 155.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 155.md; sourceTree = "<group>"; };
+		08BE636127C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLazyVStackAndLazyHStackView.swift; sourceTree = "<group>"; };
+		08BE636327C886D2002BC6A8 /* 156.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 156.md; sourceTree = "<group>"; };
+		08BE636527C88750002BC6A8 /* PlayProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayProgressView.swift; sourceTree = "<group>"; };
+		08BE636727C8C2A0002BC6A8 /* 157.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 157.md; sourceTree = "<group>"; };
+		08BE636927C8C409002BC6A8 /* PlayImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayImageView.swift; sourceTree = "<group>"; };
+		08BE636B27C8CFA7002BC6A8 /* 158.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 158.md; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
@@ -763,6 +775,9 @@
 		0844902A279ECED300B61353 /* UseViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				08BE636B27C8CFA7002BC6A8 /* 158.md */,
+				08BE636727C8C2A0002BC6A8 /* 157.md */,
+				08BE636327C886D2002BC6A8 /* 156.md */,
 				08BE635F27C7A673002BC6A8 /* 155.md */,
 				08BE635B27C65C7C002BC6A8 /* 154.md */,
 				08BE635727C63F3A002BC6A8 /* 153.md */,
@@ -934,6 +949,9 @@
 				08BE635527C63CF6002BC6A8 /* PlayControlGroupView.swift */,
 				08BE635927C6575C002BC6A8 /* PlayGroupBoxView.swift */,
 				08BE635D27C72F4F002BC6A8 /* PlayNavigationView.swift */,
+				08BE636127C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift */,
+				08BE636527C88750002BC6A8 /* PlayProgressView.swift */,
+				08BE636927C8C409002BC6A8 /* PlayImageView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1221,6 +1239,8 @@
 				08BE635C27C65C7C002BC6A8 /* 154.md in Resources */,
 				0844901A279ECD4E00B61353 /* 64.md in Resources */,
 				08449024279ECE2200B61353 /* 69.md in Resources */,
+				08BE636827C8C2A0002BC6A8 /* 157.md in Resources */,
+				08BE636C27C8CFA7002BC6A8 /* 158.md in Resources */,
 				08448FDE279EC74200B61353 /* 41.md in Resources */,
 				08449000279ECAE100B61353 /* 81.md in Resources */,
 				08448FAB279EC2B400B61353 /* 13.md in Resources */,
@@ -1274,6 +1294,7 @@
 				08448F5A279EA84100B61353 /* 52.md in Resources */,
 				08448F9E279EBAA800B61353 /* 8.md in Resources */,
 				08448FEC279EC8BE00B61353 /* 5.md in Resources */,
+				08BE636427C886D2002BC6A8 /* 156.md in Resources */,
 				08449030279ECF7D00B61353 /* 1.md in Resources */,
 				08448FD5279EC62700B61353 /* 37.md in Resources */,
 				08448F75279EB62B00B61353 /* 125.md in Resources */,
@@ -1296,6 +1317,7 @@
 			files = (
 				08BE633727BF6CBC002BC6A8 /* PlayTextFieldView.swift in Sources */,
 				08BE634827C4B6A2002BC6A8 /* PlayStackView.swift in Sources */,
+				08BE636227C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift in Sources */,
 				08BE634627C48C5B002BC6A8 /* PlayToggleView.swift in Sources */,
 				08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */,
 				08AEAEF7277F389300B969E2 /* RSSItemContentView.swift in Sources */,
@@ -1306,6 +1328,7 @@
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
 				08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
+				08BE636627C88750002BC6A8 /* PlayProgressView.swift in Sources */,
 				086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */,
 				08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */,
 				086A5F422744EDCE00FECE02 /* IssueVM.swift in Sources */,
@@ -1346,6 +1369,7 @@
 				086A5F522744EF4C00FECE02 /* ViewComponet.swift in Sources */,
 				086A5F672754C27900FECE02 /* DBHandler.swift in Sources */,
 				08AEAEE3277EA8F900B969E2 /* DBRSSFeed.swift in Sources */,
+				08BE636A27C8C409002BC6A8 /* PlayImageView.swift in Sources */,
 				08CD61FF27758B8A008C0935 /* Token.swift in Sources */,
 				08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,

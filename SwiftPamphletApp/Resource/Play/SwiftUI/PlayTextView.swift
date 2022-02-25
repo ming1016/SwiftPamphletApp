@@ -48,7 +48,6 @@ struct PlayTextView: View {
                     .cornerRadius(10)
                 ZStack {
                     Text("渐变透明材质风格")
-//                        .foregroundStyle(.secondary)
                         .padding()
                         .background(
                             .regularMaterial,
