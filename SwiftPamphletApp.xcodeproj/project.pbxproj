@@ -215,6 +215,8 @@
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
 		08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */; };
+		08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */; };
+		08C3BB8027CE4A8500ACF0FE /* 162.md in Resources */ = {isa = PBXBuildFile; fileRef = 08C3BB7F27CE4A8500ACF0FE /* 162.md */; };
 		08C411F227951152006FC340 /* PlayFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C411F127951152006FC340 /* PlayFoundation.swift */; };
 		08C411F427951181006FC340 /* PlaySyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C411F327951181006FC340 /* PlaySyntax.swift */; };
 		08CD61F827758AF0008C0935 /* ParseStandXMLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61F527758AF0008C0935 /* ParseStandXMLTags.swift */; };
@@ -432,6 +434,8 @@
 		08BE638E27CE157D002BC6A8 /* 161.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 161.md; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
+		08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTabView.swift; sourceTree = "<group>"; };
+		08C3BB7F27CE4A8500ACF0FE /* 162.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 162.md; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
 		08C411F327951181006FC340 /* PlaySyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySyntax.swift; sourceTree = "<group>"; };
 		08CD61F527758AF0008C0935 /* ParseStandXMLTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStandXMLTags.swift; sourceTree = "<group>"; };
@@ -805,6 +809,7 @@
 		0844902A279ECED300B61353 /* UseViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				08C3BB7F27CE4A8500ACF0FE /* 162.md */,
 				08BE638E27CE157D002BC6A8 /* 161.md */,
 				08BE637327CCAB52002BC6A8 /* 160.md */,
 				08BE636F27C8F6A7002BC6A8 /* 159.md */,
@@ -989,6 +994,7 @@
 				08BE636D27C8D6FD002BC6A8 /* PlayLazyVGridAndLazyHGridView.swift */,
 				08BE637127CC6F13002BC6A8 /* PlayScrollView.swift */,
 				08BE637527CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift */,
+				08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1303,6 +1309,7 @@
 				08448FAD279EC2E900B61353 /* 14.md in Resources */,
 				08448F66279EB33F00B61353 /* 103.md in Resources */,
 				08448FDA279EC6F500B61353 /* 39.md in Resources */,
+				08C3BB8027CE4A8500ACF0FE /* 162.md in Resources */,
 				08BE633027BE6CAA002BC6A8 /* 148.md in Resources */,
 				08448FF1279EC96500B61353 /* 55.md in Resources */,
 				08BE637027C8F6A7002BC6A8 /* 159.md in Resources */,
@@ -1438,6 +1445,7 @@
 				08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
+				08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */,
 				08CD61F927758AF0008C0935 /* ParseStandXMLTagTokens.swift in Sources */,
 				08449034279F6D0D00B61353 /* RepoWebView.swift in Sources */,
 				086A5F3B2744EDA500FECE02 /* GitHubAPIModel.swift in Sources */,
