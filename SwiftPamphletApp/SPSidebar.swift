@@ -19,6 +19,12 @@ struct SPSidebar: View {
                     SideBarLabel(title: "博客|资讯", imageName: "p21")
                         .badge(appVM.rssCountNotis)
                 }
+                
+                NavigationLink {
+                    DataSortingListView()
+                } label: {
+                    SideBarLabel(title: "资料整理", imageName: "p11")
+                }
             }
             Section("Github") {
 
@@ -44,6 +50,12 @@ struct SPSidebar: View {
                     SideBarLabel(title: "探索库", imageName: "p24")
                 } // end NavigationLink
                 
+                NavigationLink {
+                    ExploreRepoListView(showAsGroup: true, isArchive: true)
+                } label: {
+                    SideBarLabel(title: "库存档", imageName: "p25")
+                }
+                
             } // end Section
 
             Section("Swift指南") {
@@ -60,6 +72,10 @@ struct SPSidebar: View {
                 }
             }
             Section("库使用指南") {
+                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-SwiftUI"))) {
+                    SideBarLabel(title: "SwiftUI", imageName: "p3")
+                }
+                
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Combine"))) {
                     SideBarLabel(title: "Combine", imageName: "p19")
                 }
@@ -67,10 +83,7 @@ struct SPSidebar: View {
                 NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Concurrency"))) {
                     SideBarLabel(title: "Concurrency", imageName: "p1")
                 }
-
-                NavigationLink(destination: IssuesListFromCustomView(vm: IssueVM(guideName:"lib-SwiftUI"))) {
-                    SideBarLabel(title: "SwiftUI", imageName: "p3")
-                }
+                
             }
 
 //            Section("个人") {

@@ -1,0 +1,19 @@
+[
+    {
+        "t":"weak self",
+        "id":"https://weakself.dev/"
+    },
+    {
+        "t":"ggtalk",
+        "id":"https://talk.swift.gg/"
+    },
+    {
+        "t":"Swift by Sundell",
+        "id":"https://swiftbysundell.com/podcast/"
+    },
+    {
+        "t":"Swift Unwrapped",
+        "id":"https://swiftunwrapped.github.io/"
+    }
+    
+]

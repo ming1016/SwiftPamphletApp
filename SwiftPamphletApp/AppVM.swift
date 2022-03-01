@@ -19,6 +19,9 @@ final class AppVM: ObservableObject {
     @Published var devsCountNotis = 0
     // 博客动态
     @Published var rssCountNotis = 0
+    
+    // MARK: - 库存档
+    @Published var archiveRepos = [SPReposModel]()
 
     // MARK: - CCY
     // 探索更多库
@@ -112,6 +115,11 @@ final class AppVM: ObservableObject {
     @MainActor
     func updateAlertMsg(msg: String) {
         alertMsg = msg
+    }
+    
+    // MARK: - 库存档
+    func loadArchiveRepos() {
+        archiveRepos = loadBundleJSONFile("archiveRepos.json")
     }
 
     // MARK: - 获取所有探索更多库通知信息
@@ -272,6 +280,8 @@ final class AppVM: ObservableObject {
         // 探索更多库
         loadDBExpLoal()
         loadExpFromServer()
+        // 库存档
+        loadArchiveRepos()
     }
 
     func refreshDev() {

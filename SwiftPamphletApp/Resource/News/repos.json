@@ -449,9 +449,6 @@
                 "des":"Kickstarter 的 iOS 版本"
             },
             {
-                "id":"wordpress-mobile/WordPress-iOS"
-            },
-            {
                 "id":"CoreOffice/CryptoOffice",
                 "des":"Swift 解析 Office Open XML（OOXML）包括 xlsx, docx, pptx"
             },
@@ -515,10 +512,6 @@
             {
                 "id":"diasurgical/devilutionX",
                 "des":"可以运行在 macOS 上的 Diablo 1"
-            },
-            {
-                "id":"erikolsson/wordle-clone",
-                "des":"SwiftUI 和 TCA 做的 Wordle 游戏"
             },
             {
                 "id":"InvadingOctopus/octopuskit",
@@ -607,16 +600,6 @@
             },
             {
                 "id":"matteocrippa/awesome-swift"
-            }
-        ]
-    },
-    {
-        "name":"知识管理",
-        "id":2112281910,
-        "repos":[
-            {
-                "id":"AppFlowy-IO/appflowy",
-                "des":"Flutter 和 Rust 开发的开源 Notion"
             }
         ]
     },

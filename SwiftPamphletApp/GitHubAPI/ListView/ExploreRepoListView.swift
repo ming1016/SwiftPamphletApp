@@ -11,11 +11,12 @@ import CodeEditorView
 struct ExploreRepoListView: View {
     @EnvironmentObject var appVM: AppVM
     var showAsGroup: Bool = false
+    var isArchive = false
     var body: some View {
         List {
             if SPC.gitHubAccessToken.isEmpty == false && showAsGroup == false {
                 Section {
-                    ForEach(appVM.exps) { er in
+                    ForEach(isArchive ? appVM.archiveRepos : appVM.exps) { er in
                         ForEach(er.repos) { r in
                             ExpListUnreadLinkView(r: r)
                         }
@@ -27,7 +28,7 @@ struct ExploreRepoListView: View {
             }
 
             // end Section
-            ForEach(appVM.exps) { er in
+            ForEach(isArchive ? appVM.archiveRepos : appVM.exps) { er in
                 if SPC.gitHubAccessToken.isEmpty == false && showAsGroup == false {
 //                    Section {
 //                        ForEach(er.repos) { r in
@@ -74,7 +75,13 @@ struct ExploreRepoListView: View {
         } // end List
         .navigationTitle(showAsGroup == false ? "🥷🏻 库动态" : "👾 探索库" )
         .onAppear {
-            appVM.loadExpFromServer()
+            if isArchive {
+                appVM.loadArchiveRepos()
+            } else {
+                appVM.loadExpFromServer()
+            }
+            
+            
         }
         .onDisappear {
             appVM.updateWebLink(s: "")
@@ -143,8 +150,6 @@ struct ExpListLinkView: View {
                     .font(.footnote)
                     .foregroundColor(.secondary)
             }
-//            Divider()
-//                .padding(EdgeInsets(top: 5, leading: 0, bottom: 10, trailing: 0))
         } // end VStack
 
     } // end body

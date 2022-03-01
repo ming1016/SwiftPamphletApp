@@ -37,7 +37,10 @@
         "name":"游戏",
         "id":2112281224,
         "repos":[
-            
+            {
+                "id":"erikolsson/wordle-clone",
+                "des":"SwiftUI 和 TCA 做的 Wordle 游戏"
+            }
         ]
     },
     {
@@ -129,6 +132,20 @@
             {
                 "id":"mattermost/focalboard",
                 "des":"类 Trello、Notion 和 Asana 的开源替代"
+            },
+            {
+                "id":"AppFlowy-IO/appflowy",
+                "des":"Flutter 和 Rust 开发的开源 Notion"
+            }
+        ]
+    },
+    {
+        "name":"聚合",
+        "id":2203011515,
+        "repos":[
+            {
+                "id":"vsouza/awesome-ios",
+                "des":"Objective-C 和 Swift 都有"
             }
         ]
     },
@@ -143,6 +160,15 @@
             {
                 "id":"statelyai/xstate",
                 "des":"状态机"
+            }
+        ]
+    },
+    {
+        "name":"应用",
+        "id":2202281139,
+        "repos":[
+            {
+                "id":"wordpress-mobile/WordPress-iOS"
             }
         ]
     },
@@ -212,6 +238,26 @@
             },
             {
                 "id":"HackerNews/API"
+            }
+        ]
+    },
+    {
+        "name":"服务器",
+        "id":2203011050,
+        "repos":[
+            {
+                "id":"swhitty/FlyingFox",
+                "des":"Swift async/await 写的轻量 HTTP 服务器"
+            }
+        ]
+    },
+    {
+        "name":"设计",
+        "id":2203011658,
+        "repos":[
+            {
+                "id":"bradtraversy/design-resources-for-developers",
+                "des":"从图片库、网页模板、CSS框架、UI库、工具等方面整理出的设计和UI资源清单。"
             }
         ]
     },

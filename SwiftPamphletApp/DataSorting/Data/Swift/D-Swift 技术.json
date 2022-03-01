@@ -1,0 +1,49 @@
+[
+    {
+        "t":"Auto-generated documentation for Swift. Command-click no more.",
+        "d":"自动生成的 Swift 文档",
+        "id":"https://swiftdoc.org/"
+    },
+    {
+        "t":"Swift 5.1 Cheat Sheet and Quick Reference",
+        "id":"https://www.raywenderlich.com/6362977-swift-5-1-cheat-sheet-and-quick-reference"
+    },
+    {
+        "t":"Learn swift in Y Minutes",
+        "d":"快速学习 Swift",
+        "id":"https://learnxinyminutes.com/docs/swift/"
+    },
+    {
+        "t":"Stanford University's course CS193p (Developing Applications for iOS using SwiftUI)",
+        "d":"著名斯坦福 iOS 教程",
+        "id":"https://cs193p.sites.stanford.edu/"
+    },
+    {
+        "t":"Preface · Beginning iOS Programming with Swift and SwiftUI (iOS 15) - Sample",
+        "d":"从零到上架",
+        "id":"https://www.appcoda.com/learnswift/"
+    },
+    {
+        "t":"Discover The Standard Library on Swift by Sundell",
+        "d":"探索标准库",
+        "id":"https://www.swiftbysundell.com/discover/standard-library/"
+    },
+    {
+        "t":"100 Days of Swift – Hacking with Swift",
+        "id":"https://www.hackingwithswift.com/100"
+    },
+    {
+        "t":"Swift Open-Source Projects",
+        "d":"Discover trending Swift open-source projects",
+        "id":"https://www.libhunt.com/l/swift"
+    },
+    {
+        "t":"iOS Example",
+        "d":"A nice collection of often useful examples done in Objective-C and Swift.",
+        "id":"https://iosexample.com/"
+    },
+    {
+        "t":"Custom Controls for iOS, iPadOS, macOS, tvOS, and watchOS - Cocoa Controls",
+        "id":"https://www.cocoacontrols.com/"
+    }
+]

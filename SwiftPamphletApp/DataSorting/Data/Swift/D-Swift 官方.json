@@ -1,0 +1,34 @@
+[
+    {
+        "t":"Swift.org - Welcome to Swift.org",
+        "d":"Swift 官网",
+        "id":"https://www.swift.org/"
+    },
+    {
+        "t":"The Swift Programming Language",
+        "d":"Swift Github 官方地址",
+        "id":"https://github.com/apple/swift"
+    },
+    {
+        "t":"Swift.org - Blog",
+        "d":"Swift 博客",
+        "id":"https://www.swift.org/blog/"
+    },
+    {
+        "t":"The Swift Programming Language",
+        "d":"Swift 官方手册",
+        "id":"https://docs.swift.org/swift-book/"
+    },
+    {
+        "t":"中文版 Apple 官方 Swift 教程《The Swift Programming Language》",
+        "id":"https://github.com/SwiftGGTeam/the-swift-programming-language-in-chinese"
+    },
+    {
+        "t":"WWDC Session",
+        "id":"https://developer.apple.com/videos/"
+    },
+    {
+        "t":"Exploring SwiftUI Sample Apps",
+        "id":"https://developer.apple.com/tutorials/sample-apps"
+    }
+]
