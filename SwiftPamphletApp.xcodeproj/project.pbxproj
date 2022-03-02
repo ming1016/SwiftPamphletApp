@@ -123,6 +123,17 @@
 		0850445027B0FDBD0096D556 /* 137.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850444F27B0FDBD0096D556 /* 137.md */; };
 		0850445627B110DA0096D556 /* 138.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850445527B110DA0096D556 /* 138.md */; };
 		0850445827B1228E0096D556 /* 140.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850445727B1228E0096D556 /* 140.md */; };
+		08522BD627CF3218005FF059 /* 165.md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BD527CF3218005FF059 /* 165.md */; };
+		08522BD827CF344B005FF059 /* PlaySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BD727CF344B005FF059 /* PlaySliderView.swift */; };
+		08522BDA27CF5029005FF059 /* 166.md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BD927CF5029005FF059 /* 166.md */; };
+		08522BDC27CF5079005FF059 /* PlayStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BDB27CF5079005FF059 /* PlayStepperView.swift */; };
+		08522BDE27CF5133005FF059 /* 167.md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BDD27CF5133005FF059 /* 167.md */; };
+		08522BE227CF52ED005FF059 /* PlayColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BE127CF52ED005FF059 /* PlayColor.swift */; };
+		08522BE427CF5C55005FF059 /* 168.md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BE327CF5C55005FF059 /* 168.md */; };
+		08522BE627CF5E9D005FF059 /* PlayEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BE527CF5E9D005FF059 /* PlayEffect.swift */; };
+		08522BE927CF6E3B005FF059 /* 169.md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BE827CF6E3A005FF059 /* 169.md */; };
+		08522BEB27CF7744005FF059 /* PlayKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BEA27CF7744005FF059 /* PlayKeyboard.swift */; };
+		08522BED27CF7A0C005FF059 /* 170.md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BEC27CF7A0C005FF059 /* 170.md */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
@@ -217,6 +228,8 @@
 		08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */; };
 		08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */; };
 		08C3BB8027CE4A8500ACF0FE /* 162.md in Resources */ = {isa = PBXBuildFile; fileRef = 08C3BB7F27CE4A8500ACF0FE /* 162.md */; };
+		08C3BBA227CF1B2B00ACF0FE /* 164.md in Resources */ = {isa = PBXBuildFile; fileRef = 08C3BBA127CF1B2B00ACF0FE /* 164.md */; };
+		08C3BBA427CF1B7B00ACF0FE /* PlayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3BBA327CF1B7B00ACF0FE /* PlayPickerView.swift */; };
 		08C411F227951152006FC340 /* PlayFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C411F127951152006FC340 /* PlayFoundation.swift */; };
 		08C411F427951181006FC340 /* PlaySyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C411F327951181006FC340 /* PlaySyntax.swift */; };
 		08CD61F827758AF0008C0935 /* ParseStandXMLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61F527758AF0008C0935 /* ParseStandXMLTags.swift */; };
@@ -343,6 +356,17 @@
 		0850444F27B0FDBD0096D556 /* 137.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 137.md; sourceTree = "<group>"; };
 		0850445527B110DA0096D556 /* 138.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 138.md; sourceTree = "<group>"; };
 		0850445727B1228E0096D556 /* 140.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 140.md; sourceTree = "<group>"; };
+		08522BD527CF3218005FF059 /* 165.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 165.md; sourceTree = "<group>"; };
+		08522BD727CF344B005FF059 /* PlaySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySliderView.swift; sourceTree = "<group>"; };
+		08522BD927CF5029005FF059 /* 166.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 166.md; sourceTree = "<group>"; };
+		08522BDB27CF5079005FF059 /* PlayStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStepperView.swift; sourceTree = "<group>"; };
+		08522BDD27CF5133005FF059 /* 167.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 167.md; sourceTree = "<group>"; };
+		08522BE127CF52ED005FF059 /* PlayColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayColor.swift; sourceTree = "<group>"; };
+		08522BE327CF5C55005FF059 /* 168.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 168.md; sourceTree = "<group>"; };
+		08522BE527CF5E9D005FF059 /* PlayEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayEffect.swift; sourceTree = "<group>"; };
+		08522BE827CF6E3A005FF059 /* 169.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 169.md; sourceTree = "<group>"; };
+		08522BEA27CF7744005FF059 /* PlayKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayKeyboard.swift; sourceTree = "<group>"; };
+		08522BEC27CF7A0C005FF059 /* 170.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 170.md; sourceTree = "<group>"; };
 		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -436,6 +460,8 @@
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTabView.swift; sourceTree = "<group>"; };
 		08C3BB7F27CE4A8500ACF0FE /* 162.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 162.md; sourceTree = "<group>"; };
+		08C3BBA127CF1B2B00ACF0FE /* 164.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 164.md; sourceTree = "<group>"; };
+		08C3BBA327CF1B7B00ACF0FE /* PlayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPickerView.swift; sourceTree = "<group>"; };
 		08C411F127951152006FC340 /* PlayFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFoundation.swift; sourceTree = "<group>"; };
 		08C411F327951181006FC340 /* PlaySyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySyntax.swift; sourceTree = "<group>"; };
 		08CD61F527758AF0008C0935 /* ParseStandXMLTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStandXMLTags.swift; sourceTree = "<group>"; };
@@ -517,6 +543,7 @@
 		08448F47279E7E3A00B61353 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				08522BE727CF625B005FF059 /* Vsion */,
 				0844902A279ECED300B61353 /* UseViewComponent */,
 				08449027279ECEA200B61353 /* Intro */,
 			);
@@ -809,6 +836,11 @@
 		0844902A279ECED300B61353 /* UseViewComponent */ = {
 			isa = PBXGroup;
 			children = (
+				08522BEC27CF7A0C005FF059 /* 170.md */,
+				08522BDD27CF5133005FF059 /* 167.md */,
+				08522BD927CF5029005FF059 /* 166.md */,
+				08522BD527CF3218005FF059 /* 165.md */,
+				08C3BBA127CF1B2B00ACF0FE /* 164.md */,
 				08C3BB7F27CE4A8500ACF0FE /* 162.md */,
 				08BE638E27CE157D002BC6A8 /* 161.md */,
 				08BE637327CCAB52002BC6A8 /* 160.md */,
@@ -856,6 +888,56 @@
 				0850445527B110DA0096D556 /* 138.md */,
 			);
 			path = InsideProtocol;
+			sourceTree = "<group>";
+		};
+		08522BDF27CF52AB005FF059 /* ViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				086A5F632754C14F00FECE02 /* PlayTextView.swift */,
+				088EE8F427BD24E000764525 /* PlayLinkView.swift */,
+				083554E02756503B0095E0EE /* AnimateLayout.swift */,
+				0896FB8F27BA39B100676B7F /* PlayButtonView.swift */,
+				08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */,
+				08BE633427BF54A0002BC6A8 /* PlayTextEditorView.swift */,
+				08BE633627BF6CBC002BC6A8 /* PlayTextFieldView.swift */,
+				08BE634527C48C5A002BC6A8 /* PlayToggleView.swift */,
+				08BE634727C4B6A2002BC6A8 /* PlayStackView.swift */,
+				08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */,
+				08BE635127C4D2BC002BC6A8 /* PlayListView.swift */,
+				08BE635527C63CF6002BC6A8 /* PlayControlGroupView.swift */,
+				08BE635927C6575C002BC6A8 /* PlayGroupBoxView.swift */,
+				08BE635D27C72F4F002BC6A8 /* PlayNavigationView.swift */,
+				08BE636127C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift */,
+				08BE636527C88750002BC6A8 /* PlayProgressView.swift */,
+				08BE636927C8C409002BC6A8 /* PlayImageView.swift */,
+				08BE636D27C8D6FD002BC6A8 /* PlayLazyVGridAndLazyHGridView.swift */,
+				08BE637127CC6F13002BC6A8 /* PlayScrollView.swift */,
+				08BE637527CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift */,
+				08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */,
+				08C3BBA327CF1B7B00ACF0FE /* PlayPickerView.swift */,
+				08522BD727CF344B005FF059 /* PlaySliderView.swift */,
+				08522BDB27CF5079005FF059 /* PlayStepperView.swift */,
+				08522BEA27CF7744005FF059 /* PlayKeyboard.swift */,
+			);
+			path = ViewComponent;
+			sourceTree = "<group>";
+		};
+		08522BE027CF52BF005FF059 /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+				08522BE127CF52ED005FF059 /* PlayColor.swift */,
+				08522BE527CF5E9D005FF059 /* PlayEffect.swift */,
+			);
+			path = Vision;
+			sourceTree = "<group>";
+		};
+		08522BE727CF625B005FF059 /* Vsion */ = {
+			isa = PBXGroup;
+			children = (
+				08522BE827CF6E3A005FF059 /* 169.md */,
+				08522BE327CF5C55005FF059 /* 168.md */,
+			);
+			path = Vsion;
 			sourceTree = "<group>";
 		};
 		086A5EFA2744E88E00FECE02 = {
@@ -974,27 +1056,8 @@
 		086A5F622754C12800FECE02 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				086A5F632754C14F00FECE02 /* PlayTextView.swift */,
-				088EE8F427BD24E000764525 /* PlayLinkView.swift */,
-				083554E02756503B0095E0EE /* AnimateLayout.swift */,
-				0896FB8F27BA39B100676B7F /* PlayButtonView.swift */,
-				08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */,
-				08BE633427BF54A0002BC6A8 /* PlayTextEditorView.swift */,
-				08BE633627BF6CBC002BC6A8 /* PlayTextFieldView.swift */,
-				08BE634527C48C5A002BC6A8 /* PlayToggleView.swift */,
-				08BE634727C4B6A2002BC6A8 /* PlayStackView.swift */,
-				08BE634F27C4C0F2002BC6A8 /* PlayFormView.swift */,
-				08BE635127C4D2BC002BC6A8 /* PlayListView.swift */,
-				08BE635527C63CF6002BC6A8 /* PlayControlGroupView.swift */,
-				08BE635927C6575C002BC6A8 /* PlayGroupBoxView.swift */,
-				08BE635D27C72F4F002BC6A8 /* PlayNavigationView.swift */,
-				08BE636127C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift */,
-				08BE636527C88750002BC6A8 /* PlayProgressView.swift */,
-				08BE636927C8C409002BC6A8 /* PlayImageView.swift */,
-				08BE636D27C8D6FD002BC6A8 /* PlayLazyVGridAndLazyHGridView.swift */,
-				08BE637127CC6F13002BC6A8 /* PlayScrollView.swift */,
-				08BE637527CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift */,
-				08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */,
+				08522BE027CF52BF005FF059 /* Vision */,
+				08522BDF27CF52AB005FF059 /* ViewComponent */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1259,6 +1322,7 @@
 				08448FFC279ECA7C00B61353 /* 79.md in Resources */,
 				08448FE4279EC7ED00B61353 /* 44.md in Resources */,
 				08448F92279EB8CA00B61353 /* 130.md in Resources */,
+				08522BED27CF7A0C005FF059 /* 170.md in Resources */,
 				084E1A6327B517FC0072BBB6 /* 143.md in Resources */,
 				08448F6F279EB56400B61353 /* 122.md in Resources */,
 				0844900C279ECBB400B61353 /* 87.md in Resources */,
@@ -1266,6 +1330,7 @@
 				08AEAEFA277F3C7400B969E2 /* css.html in Resources */,
 				086A5F502744EF3B00FECE02 /* developers.json in Resources */,
 				0850444E27B0D4EA0096D556 /* 136.md in Resources */,
+				08C3BBA227CF1B2B00ACF0FE /* 164.md in Resources */,
 				086A5F5A274CC17700FECE02 /* lib-Combine.json in Resources */,
 				08448FBA279EC3EA00B61353 /* 23.md in Resources */,
 				08448FD0279EC5CC00B61353 /* 35.md in Resources */,
@@ -1277,6 +1342,7 @@
 				08BE634427C3845E002BC6A8 /* 150.md in Resources */,
 				0844901C279ECD6B00B61353 /* 65.md in Resources */,
 				08BE634227BFAF76002BC6A8 /* 149.md in Resources */,
+				08522BDE27CF5133005FF059 /* 167.md in Resources */,
 				08448FB8279EC3C200B61353 /* 22.md in Resources */,
 				0844900F279ECC0C00B61353 /* 56.md in Resources */,
 				08448F9A279EBA2900B61353 /* 6.md in Resources */,
@@ -1300,6 +1366,7 @@
 				08448FD3279EC60300B61353 /* 36.md in Resources */,
 				08448F64279EB32C00B61353 /* 50.md in Resources */,
 				08448FD7279EC64600B61353 /* 38.md in Resources */,
+				08522BE927CF6E3B005FF059 /* 169.md in Resources */,
 				08449004279ECB2900B61353 /* 83.md in Resources */,
 				08BE634A27C4BDDB002BC6A8 /* 151.md in Resources */,
 				08448F89279EB7FD00B61353 /* 89.md in Resources */,
@@ -1332,10 +1399,12 @@
 				08449024279ECE2200B61353 /* 69.md in Resources */,
 				08BE636827C8C2A0002BC6A8 /* 157.md in Resources */,
 				08BE636C27C8CFA7002BC6A8 /* 158.md in Resources */,
+				08522BE427CF5C55005FF059 /* 168.md in Resources */,
 				08448FDE279EC74200B61353 /* 41.md in Resources */,
 				08449000279ECAE100B61353 /* 81.md in Resources */,
 				08448FAB279EC2B400B61353 /* 13.md in Resources */,
 				08BE638827CDF1DD002BC6A8 /* D-图片工具.json in Resources */,
+				08522BD627CF3218005FF059 /* 165.md in Resources */,
 				08448FCE279EC5AA00B61353 /* 34.md in Resources */,
 				08448F71279EB58C00B61353 /* 123.md in Resources */,
 				08448FFE279ECAA100B61353 /* 80.md in Resources */,
@@ -1390,6 +1459,7 @@
 				08448FEC279EC8BE00B61353 /* 5.md in Resources */,
 				08BE636427C886D2002BC6A8 /* 156.md in Resources */,
 				08449030279ECF7D00B61353 /* 1.md in Resources */,
+				08522BDA27CF5029005FF059 /* 166.md in Resources */,
 				08448FD5279EC62700B61353 /* 37.md in Resources */,
 				08448F75279EB62B00B61353 /* 125.md in Resources */,
 				086A5F6A2755F3BE00FECE02 /* repos.json in Resources */,
@@ -1419,6 +1489,8 @@
 				08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */,
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
+				08522BEB27CF7744005FF059 /* PlayKeyboard.swift in Sources */,
+				08C3BBA427CF1B7B00ACF0FE /* PlayPickerView.swift in Sources */,
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
 				08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
@@ -1443,11 +1515,14 @@
 				08C411F227951152006FC340 /* PlayFoundation.swift in Sources */,
 				08448F0B2797F73200B61353 /* PlayArchitecture.swift in Sources */,
 				08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */,
+				08522BD827CF344B005FF059 /* PlaySliderView.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
 				08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */,
 				08CD61F927758AF0008C0935 /* ParseStandXMLTagTokens.swift in Sources */,
 				08449034279F6D0D00B61353 /* RepoWebView.swift in Sources */,
+				08522BDC27CF5079005FF059 /* PlayStepperView.swift in Sources */,
+				08522BE627CF5E9D005FF059 /* PlayEffect.swift in Sources */,
 				086A5F3B2744EDA500FECE02 /* GitHubAPIModel.swift in Sources */,
 				08BE635227C4D2BC002BC6A8 /* PlayListView.swift in Sources */,
 				086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */,
@@ -1469,6 +1544,7 @@
 				08BE637927CDCFD9002BC6A8 /* DataSortingListView.swift in Sources */,
 				08BE636E27C8D6FD002BC6A8 /* PlayLazyVGridAndLazyHGridView.swift in Sources */,
 				08AEAEE3277EA8F900B969E2 /* DBRSSFeed.swift in Sources */,
+				08522BE227CF52ED005FF059 /* PlayColor.swift in Sources */,
 				08BE636A27C8C409002BC6A8 /* PlayImageView.swift in Sources */,
 				08CD61FF27758B8A008C0935 /* Token.swift in Sources */,
 				08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */,

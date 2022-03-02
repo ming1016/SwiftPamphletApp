@@ -53,11 +53,14 @@ struct PlayTabView: View {
                         selection -= 1
                     }
                 }
+                .keyboardShortcut(.cancelAction)
                 Button("下一页") {
                     if selection < 9 {
                         selection += 1
                     }
-                } // end Button
+                }
+                .keyboardShortcut(.defaultAction)
+                // end Button
             } // end HStack
             .padding()
         }

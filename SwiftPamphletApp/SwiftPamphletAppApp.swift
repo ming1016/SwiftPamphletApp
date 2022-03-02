@@ -44,7 +44,12 @@ struct Demo: View {
 //            PlayLazyVGridAndLazyHGridView()
 //            PlayScrollView()
 //            PlaySuperposedLayerView()
-            PlayTabView()
+//            PlayTabView()
+//            PlayPickerView()
+//            PlaySliderView()
+//            PlayColor()
+//            PlayEffect()
+            PlayKeyboard()
         }
         .frame(minWidth:300, maxWidth: .infinity, minHeight: 550, maxHeight: .infinity)
         .onAppear {

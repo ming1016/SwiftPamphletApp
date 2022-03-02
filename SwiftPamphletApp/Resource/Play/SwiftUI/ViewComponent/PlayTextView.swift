@@ -25,6 +25,8 @@ struct PlayTextView: View {
                     .rotationEffect(.degrees(45))
                     .fixedSize()
                     .frame(width: 20, height: 80)
+                Text("自定义系统字体大小")
+                    .font(.system(size: 30))
                 Text("使用指定的字体")
                     .font(.custom("Georgia", size: 24))
             }
