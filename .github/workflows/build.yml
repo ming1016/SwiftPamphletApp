@@ -22,9 +22,9 @@ jobs:
           fi
           chmod +x ./compile.command
           /bin/bash -c ./compile.command
-          zip -r9 戴铭的Swift小册子.zip 戴铭的Swift小册子.app
+          zip -r9 戴铭的开发小册子.zip 戴铭的开发小册子.app
       - name: Upload App.zip
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: "戴铭的Swift小册子.zip"
-          path: "戴铭的Swift小册子.zip"
+          name: "戴铭的开发小册子.zip"
+          path: "戴铭的开发小册子.zip"
