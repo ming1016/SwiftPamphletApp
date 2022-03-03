@@ -28,6 +28,7 @@ struct PlayKeyboard: View {
             print("按了 SHIFT + p")
         }
         .keyboardShortcut("p", modifiers: [.shift])
+        
     }
 }
 

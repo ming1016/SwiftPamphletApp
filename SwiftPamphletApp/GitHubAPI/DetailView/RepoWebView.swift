@@ -15,5 +15,6 @@ struct RepoWebView: View {
             .onAppear {
                 appVM.updateWebLink(s: urlStr)
             }
+            .frame(minWidth: SPC.detailMinWidth)
     }
 }

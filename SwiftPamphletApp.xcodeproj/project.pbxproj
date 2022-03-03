@@ -134,6 +134,7 @@
 		08522BE927CF6E3B005FF059 /* 169.md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BE827CF6E3A005FF059 /* 169.md */; };
 		08522BEB27CF7744005FF059 /* PlayKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BEA27CF7744005FF059 /* PlayKeyboard.swift */; };
 		08522BED27CF7A0C005FF059 /* 170.md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BEC27CF7A0C005FF059 /* 170.md */; };
+		08522BF027CF9FFA005FF059 /* PlayAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BEF27CF9FFA005FF059 /* PlayAnimation.swift */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
@@ -367,6 +368,7 @@
 		08522BE827CF6E3A005FF059 /* 169.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 169.md; sourceTree = "<group>"; };
 		08522BEA27CF7744005FF059 /* PlayKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayKeyboard.swift; sourceTree = "<group>"; };
 		08522BEC27CF7A0C005FF059 /* 170.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 170.md; sourceTree = "<group>"; };
+		08522BEF27CF9FFA005FF059 /* PlayAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAnimation.swift; sourceTree = "<group>"; };
 		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -940,6 +942,14 @@
 			path = Vsion;
 			sourceTree = "<group>";
 		};
+		08522BEE27CF9A17005FF059 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				08522BEF27CF9FFA005FF059 /* PlayAnimation.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		086A5EFA2744E88E00FECE02 = {
 			isa = PBXGroup;
 			children = (
@@ -962,10 +972,10 @@
 				08CD61FB27758B22008C0935 /* Core */,
 				080387652766FF3200519B15 /* Network */,
 				086A5F482744EF2B00FECE02 /* ViewComponet */,
+				08BE637A27CDD9E7002BC6A8 /* DataSorting */,
 				086A5F472744EF0800FECE02 /* Resource */,
 				086A5F252744ECD700FECE02 /* GitHubAPI */,
 				08CD61F327758855008C0935 /* RSSReader */,
-				08BE637A27CDD9E7002BC6A8 /* DataSorting */,
 				083554E227572BB60095E0EE /* AppVM.swift */,
 				086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */,
 				086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */,
@@ -1056,6 +1066,7 @@
 		086A5F622754C12800FECE02 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				08522BEE27CF9A17005FF059 /* Animation */,
 				08522BE027CF52BF005FF059 /* Vision */,
 				08522BDF27CF52AB005FF059 /* ViewComponent */,
 			);
@@ -1502,6 +1513,7 @@
 				08AEAEF3277F09FA00B969E2 /* NavView.swift in Sources */,
 				08AEAEE5277EB36700B969E2 /* DBRSSItems.swift in Sources */,
 				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
+				08522BF027CF9FFA005FF059 /* PlayAnimation.swift in Sources */,
 				08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */,
 				08BE635E27C72F50002BC6A8 /* PlayNavigationView.swift in Sources */,
 				08448F0D2799035600B61353 /* PlaySecurity.swift in Sources */,

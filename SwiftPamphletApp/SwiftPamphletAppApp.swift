@@ -49,7 +49,9 @@ struct Demo: View {
 //            PlaySliderView()
 //            PlayColor()
 //            PlayEffect()
-            PlayKeyboard()
+//            PlayKeyboard()
+            PlayAnimation()
+            
         }
         .frame(minWidth:300, maxWidth: .infinity, minHeight: 550, maxHeight: .infinity)
         .onAppear {
