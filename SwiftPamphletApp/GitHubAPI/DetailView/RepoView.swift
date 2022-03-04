@@ -19,6 +19,7 @@ struct RepoView: View {
     var isShowIssuesLink = true
     var isCleanUnread = false
     var isCleanExpUnread = false
+    @State private var expUnreadCount = 0
     
     @State var isEnterFullScreen: Bool = false // 全屏控制
     
@@ -78,13 +79,14 @@ struct RepoView: View {
         // end HStack
 
         TabView(selection: $tabSelct) {
-            RepoCommitsView(commits: vm.commits, repo: vm.repo, isShowLink: isShowRepoCommitsLink)
+            RepoCommitsView(commits: vm.commits, repo: vm.repo, isShowLink: isShowRepoCommitsLink, unReadCount: expUnreadCount)
                 .tabItem {
                     Text("新提交")
                 }
                 .onAppear(perform: {
                     vm.doing(.inCommit)
                     if isCleanExpUnread == true {
+                        expUnreadCount = appVM.expNotis[vm.repoName]?.unRead ?? 0
                         vm.doing(.clearExpUnReadCommit)
                         appVM.expNotis[vm.repoName]?.unRead = SPC.unreadMagicNumber
                         appVM.calculateExpCountNotis()
@@ -180,9 +182,10 @@ struct RepoCommitsView: View {
     var commits: [CommitModel]
     var repo: RepoModel
     var isShowLink = true
+    var unReadCount = 0
     var body: some View {
         List {
-            ForEach(commits) { commit in
+            ForEach(Array(commits.enumerated()), id: \.0) { i, commit in
                 if isShowLink == true {
                     NavigationLink {
                         VStack {
@@ -193,10 +196,10 @@ struct RepoCommitsView: View {
                             }
                         }
                     } label: {
-                        RepoCommitLabelView(repo: repo, commit: commit)
+                        RepoCommitLabelView(repo: repo, commit: commit, isUnRead: unReadCount > 0 && i < unReadCount)
                     } // end NavigationLink
                 } else {
-                    RepoCommitLabelView(repo: repo, commit: commit)
+                    RepoCommitLabelView(repo: repo, commit: commit, isUnRead: unReadCount > 0 && i < unReadCount)
                 }
 
                 Divider()
@@ -210,10 +213,14 @@ struct RepoCommitsView: View {
 struct RepoCommitLabelView: View {
     var repo: RepoModel
     var commit: CommitModel
+    var isUnRead = false
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
             GitHubApiTimeView(timeStr: commit.commit.author.date)
             HStack {
+                if isUnRead {
+                    Image(systemName: "envelope.badge.fill")
+                }
                 if commit.author != nil {
                     AsyncImageWithPlaceholder(size: .tinySize, url: commit.author?.avatarUrl ?? "")
                     ButtonGoGitHubWeb(url: commit.author?.login ?? "", text: commit.author?.login ?? "", ignoreHost: true, bold: true)

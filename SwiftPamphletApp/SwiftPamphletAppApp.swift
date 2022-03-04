@@ -51,6 +51,7 @@ struct Demo: View {
 //            PlayEffect()
 //            PlayKeyboard()
             PlayAnimation()
+//            PlayCanvas()
             
         }
         .frame(minWidth:300, maxWidth: .infinity, minHeight: 550, maxHeight: .infinity)

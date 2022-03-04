@@ -135,6 +135,9 @@
 		08522BEB27CF7744005FF059 /* PlayKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BEA27CF7744005FF059 /* PlayKeyboard.swift */; };
 		08522BED27CF7A0C005FF059 /* 170.md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BEC27CF7A0C005FF059 /* 170.md */; };
 		08522BF027CF9FFA005FF059 /* PlayAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BEF27CF9FFA005FF059 /* PlayAnimation.swift */; };
+		08522BF227D1D49B005FF059 /* PlayCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BF127D1D49B005FF059 /* PlayCanvas.swift */; };
+		085BB77427D22FCA00E8F69A /* 172.md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77327D22FCA00E8F69A /* 172.md */; };
+		085BB77627D22FE300E8F69A /* 173.md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77527D22FE300E8F69A /* 173.md */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
@@ -369,6 +372,9 @@
 		08522BEA27CF7744005FF059 /* PlayKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayKeyboard.swift; sourceTree = "<group>"; };
 		08522BEC27CF7A0C005FF059 /* 170.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 170.md; sourceTree = "<group>"; };
 		08522BEF27CF9FFA005FF059 /* PlayAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAnimation.swift; sourceTree = "<group>"; };
+		08522BF127D1D49B005FF059 /* PlayCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCanvas.swift; sourceTree = "<group>"; };
+		085BB77327D22FCA00E8F69A /* 172.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 172.md; sourceTree = "<group>"; };
+		085BB77527D22FE300E8F69A /* 173.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 173.md; sourceTree = "<group>"; };
 		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -927,6 +933,8 @@
 		08522BE027CF52BF005FF059 /* Vision */ = {
 			isa = PBXGroup;
 			children = (
+				08522BEF27CF9FFA005FF059 /* PlayAnimation.swift */,
+				08522BF127D1D49B005FF059 /* PlayCanvas.swift */,
 				08522BE127CF52ED005FF059 /* PlayColor.swift */,
 				08522BE527CF5E9D005FF059 /* PlayEffect.swift */,
 			);
@@ -936,18 +944,12 @@
 		08522BE727CF625B005FF059 /* Vsion */ = {
 			isa = PBXGroup;
 			children = (
+				085BB77527D22FE300E8F69A /* 173.md */,
+				085BB77327D22FCA00E8F69A /* 172.md */,
 				08522BE827CF6E3A005FF059 /* 169.md */,
 				08522BE327CF5C55005FF059 /* 168.md */,
 			);
 			path = Vsion;
-			sourceTree = "<group>";
-		};
-		08522BEE27CF9A17005FF059 /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-				08522BEF27CF9FFA005FF059 /* PlayAnimation.swift */,
-			);
-			path = Animation;
 			sourceTree = "<group>";
 		};
 		086A5EFA2744E88E00FECE02 = {
@@ -1066,7 +1068,6 @@
 		086A5F622754C12800FECE02 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				08522BEE27CF9A17005FF059 /* Animation */,
 				08522BE027CF52BF005FF059 /* Vision */,
 				08522BDF27CF52AB005FF059 /* ViewComponent */,
 			);
@@ -1350,6 +1351,7 @@
 				08448FA7279EBB7E00B61353 /* 11.md in Resources */,
 				08448FCA279EC56D00B61353 /* 32.md in Resources */,
 				08BE638127CDDAAD002BC6A8 /* D-Swift 官方.json in Resources */,
+				085BB77427D22FCA00E8F69A /* 172.md in Resources */,
 				08BE634427C3845E002BC6A8 /* 150.md in Resources */,
 				0844901C279ECD6B00B61353 /* 65.md in Resources */,
 				08BE634227BFAF76002BC6A8 /* 149.md in Resources */,
@@ -1425,6 +1427,7 @@
 				08448F81279EB75800B61353 /* 106.md in Resources */,
 				08448FF6279EC9E800B61353 /* 76.md in Resources */,
 				0844902C279ECEFB00B61353 /* 100.md in Resources */,
+				085BB77627D22FE300E8F69A /* 173.md in Resources */,
 				08BE635827C63F3A002BC6A8 /* 153.md in Resources */,
 				08BE637427CCAB52002BC6A8 /* 160.md in Resources */,
 				08448F73279EB5DF00B61353 /* 124.md in Resources */,
@@ -1491,6 +1494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08BE633727BF6CBC002BC6A8 /* PlayTextFieldView.swift in Sources */,
+				08522BF227D1D49B005FF059 /* PlayCanvas.swift in Sources */,
 				08BE634827C4B6A2002BC6A8 /* PlayStackView.swift in Sources */,
 				08BE636227C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift in Sources */,
 				08BE634627C48C5B002BC6A8 /* PlayToggleView.swift in Sources */,

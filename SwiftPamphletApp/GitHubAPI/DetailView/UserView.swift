@@ -12,6 +12,7 @@ struct UserView: View {
     @StateObject var vm: UserVM
     var isShowUserEventLink = true
     var isCleanUnread = false
+    @State private var unReadCount = 0
     @State private var tabSelct = 1
     var body: some View {
         HStack {
@@ -64,7 +65,7 @@ struct UserView: View {
 
         TabView(selection: $tabSelct) {
 
-            UserEventView(events: vm.events, isShowUserEventLink: isShowUserEventLink)
+            UserEventView(events: vm.events, isShowUserEventLink: isShowUserEventLink, unReadCount: unReadCount)
                 .tabItem {
                     Image(systemName: "keyboard")
                     Text("事件")
@@ -74,10 +75,10 @@ struct UserView: View {
                     vm.doing(.inEvent)
                     if isCleanUnread == true {
                         vm.doing(.clearUnReadEvent)
+                        unReadCount = appVM.devsNotis[vm.userName] ?? 0
                         appVM.devsNotis[vm.userName] = SPC.unreadMagicNumber
                         appVM.calculateDevsCountNotis()
                     }
-
                 }
                 .tag(1)
             UserEventView(events: vm.receivedEvents, isShowActor: true, isShowUserEventLink: isShowUserEventLink)
@@ -100,19 +101,23 @@ struct UserEventView: View {
     var events: [EventModel]
     var isShowActor = false
     var isShowUserEventLink = true
-
+    var unReadCount = 0
     var body: some View {
         List {
-            ForEach(events) { event in
+            ForEach(Array(events.enumerated()), id: \.0) { i, event in
 
                 if isShowUserEventLink == true {
                     NavigationLink {
                         UserEventLinkDestination(event: event)
                     } label: {
-                        AUserEventLabel(event: event, isShowActor: isShowActor)
+                        AUserEventLabel(
+                            event: event,
+                            isShowActor: isShowActor,
+                            isUnRead: unReadCount > 0 && i < unReadCount
+                        )
                     } // end NavigationLink
                 } else {
-                    AUserEventLabel(event: event, isShowActor: isShowActor)
+                    AUserEventLabel(event: event, isShowActor: isShowActor, isUnRead: unReadCount > 0 && i < unReadCount)
                 }
                 Divider()
             } // end ForEach
@@ -149,10 +154,14 @@ struct UserEventLinkDestination: View {
 struct AUserEventLabel: View {
     var event: EventModel
     var isShowActor: Bool = false
+    var isUnRead = false
     var body: some View {
         VStack(alignment: .leading) {
             GitHubApiTimeView(timeStr: event.createdAt)
             HStack {
+                if isUnRead {
+                    Image(systemName: "envelope.badge.fill")
+                }
                 Group {
                     Text(event.type)
                         .bold()
@@ -163,7 +172,6 @@ struct AUserEventLabel: View {
             }
             ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)", text: event.repo.name, bold: true)
             HStack {
-
                 if event.payload.issue?.number != nil {
                     ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/issues/\(String(describing: event.payload.issue?.number ?? 0))", text: "议题")
                 }
