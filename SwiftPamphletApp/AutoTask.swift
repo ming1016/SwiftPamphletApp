@@ -11,6 +11,7 @@ struct AutoTask {
     
     static func buildContentMarkdownFile() {
         let a1 = ["guide-syntax","guide-features","guide-subject","lib-Combine","lib-Concurrency","lib-SwiftUI"]
+//        let a1 = ["lib-SwiftUI"]
         var mk = ""
         for e in a1 {
             let fc:[CustomIssuesModel] = loadBundleJSONFile(e + ".json")
@@ -87,6 +88,8 @@ struct AutoTask {
         
         // 册子动态
         mk += loadBundleString("1.md")
+        
+        
         
         writeToDownload(fileName: "read.md", content: mk)
     }

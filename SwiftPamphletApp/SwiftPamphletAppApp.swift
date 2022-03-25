@@ -115,16 +115,6 @@ struct SwiftPamphletApp: View {
         .navigationTitle("戴铭的开发小册子")
         .navigationSubtitle(appVM.alertMsg)
         .toolbar {
-//            ToolbarItem(placement: ToolbarItemPlacement.navigation) {
-//                Menu {
-//                    Text("Ops！发现这里了")
-//                    Text("彩蛋下个版本见")
-//                    Text("隐藏彩蛋1")
-//                    Text("隐藏彩蛋2")
-//                } label: {
-//                    Label("Label", systemImage: "slider.horizontal.3")
-//                }
-//            }
             ToolbarItem(placement: ToolbarItemPlacement.navigation) {
                 Button {
                     appVM.toggleSidebar()
@@ -168,7 +158,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
         
-//        AutoTask.buildContentMarkdownFile()
+        AutoTask.buildContentMarkdownFile()
         
 //        PlaySecurity.keyChain()
 

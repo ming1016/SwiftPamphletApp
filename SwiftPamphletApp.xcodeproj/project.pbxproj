@@ -246,6 +246,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		080124FD27EC62DC00E44222 /* SwiftPamphletAppDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPamphletAppDebug.entitlements; sourceTree = "<group>"; };
 		08038766276700F100519B15 /* CCYRESTfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRESTfulAPI.swift; sourceTree = "<group>"; };
 		083554E02756503B0095E0EE /* AnimateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLayout.swift; sourceTree = "<group>"; };
 		083554E227572BB60095E0EE /* AppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVM.swift; sourceTree = "<group>"; };
@@ -971,6 +972,7 @@
 		086A5F052744E88E00FECE02 /* SwiftPamphletApp */ = {
 			isa = PBXGroup;
 			children = (
+				080124FD27EC62DC00E44222 /* SwiftPamphletAppDebug.entitlements */,
 				08CD61FB27758B22008C0935 /* Core */,
 				080387652766FF3200519B15 /* Network */,
 				086A5F482744EF2B00FECE02 /* ViewComponet */,
@@ -1698,7 +1700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = SwiftPamphletApp/SwiftPamphletApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SwiftPamphletApp/SwiftPamphletAppDebug.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

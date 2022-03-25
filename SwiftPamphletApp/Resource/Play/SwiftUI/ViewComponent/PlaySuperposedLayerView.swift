@@ -16,8 +16,6 @@ struct PlaySuperposedLayerView: View {
     
     var body: some View {
         VStack {
-            
-            
             List {
                 ForEach(0..<100) { i in
                     Text("\(i)")

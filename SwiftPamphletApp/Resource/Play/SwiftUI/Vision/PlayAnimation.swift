@@ -40,7 +40,7 @@ struct PlayAnimation: View {
                 withTransaction(t) {
                     isChange.toggle()
                 }
-            } // end onHover
+            } // end onTapGesture
         
         LazyVGrid(columns: [GridItem(.adaptive(minimum: isChange ? 60 : 30), spacing: 60)]) {
             ForEach(Array(anis.keys), id: \.self) { s in

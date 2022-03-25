@@ -24,12 +24,26 @@
         ]
     },
     {
+        "name":"持久化存储",
+        "id":2203211801,
+        "repos":[
+            {
+                "id":"maticzav/swift-graphql",
+                "des":"一个GraphQL客户端，让你忘记GraphQL"
+            }
+        ]
+    },
+    {
         "name":"网络",
         "id":2112281351,
         "repos":[
             {
                 "id":"nerdsupremacist/Sync",
                 "des":"对象在多个设备上同步，SwiftUI 实现"
+            },
+            {
+                "id":"kean/PulsePro",
+                "des":"可查看网络流量的网络工具"
             }
         ]
     },
@@ -118,6 +132,10 @@
             {
                 "id":"uutils/coreutils",
                 "des":"Rust 重写跨平台 GNU coreutils"
+            },
+            {
+                "id":"icanzilb/timeui",
+                "des":"持续时间、cpu和内存使用情况"
             }
         ]
     },
@@ -160,6 +178,14 @@
             {
                 "id":"statelyai/xstate",
                 "des":"状态机"
+            },
+            {
+                "id":"tldraw/tldraw",
+                "des":"快速生成流程图，手绘风"
+            },
+            {
+                "id":"zotero/zotero",
+                "des":"收集、组织、引用和分享你的研究资料"
             }
         ]
     },
@@ -238,16 +264,24 @@
             },
             {
                 "id":"HackerNews/API"
+            },
+            {
+                "id":"hoppscotch/hoppscotch",
+                "des":"开源接口开发生态系统"
             }
         ]
     },
     {
-        "name":"服务器",
+        "name":"服务端",
         "id":2203011050,
         "repos":[
             {
                 "id":"swhitty/FlyingFox",
                 "des":"Swift async/await 写的轻量 HTTP 服务器"
+            },
+            {
+                "id":"leafac/kill-the-newsletter",
+                "des":"Newsletter 转 RSS"
             }
         ]
     },
@@ -258,6 +292,16 @@
             {
                 "id":"bradtraversy/design-resources-for-developers",
                 "des":"从图片库、网页模板、CSS框架、UI库、工具等方面整理出的设计和UI资源清单。"
+            }
+        ]
+    },
+    {
+        "name":"生活",
+        "id":2203221418,
+        "repos":[
+            {
+                "id":"Anduin2017/HowToCook",
+                "des":"程序员在家做饭方法指南"
             }
         ]
     },

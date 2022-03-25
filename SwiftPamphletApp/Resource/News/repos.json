@@ -134,6 +134,14 @@
             {
                 "id":"mchakravarty/CodeEditorView",
                 "des":"SwiftUI 写的代码编辑器"
+            },
+            {
+                "id":"CodeEditApp/CodeEdit",
+                "des":"原生，性能好的代码编辑器"
+            },
+            {
+                "id":"ZeeZide/CodeEditor",
+                "des":"使用 Highlight.js 的来做语法高亮的 SwiftUI 编辑器"
             }
         ]
     },
@@ -884,6 +892,10 @@
             },
             {
                 "id":"mozilla-mobile/firefox-ios"
+            },
+            {
+                "id":"liviuschera/noctis",
+                "des":"好看的代码编辑器配色主题"
             }
         ]
     },
@@ -893,6 +905,10 @@
         "repos":[
             {
                 "id":"vapor/vapor"
+            },
+            {
+                "id":"Lakr233/Rayon",
+                "des":"SSH 机器管理，Swift 编写"
             }
         ]
     },
