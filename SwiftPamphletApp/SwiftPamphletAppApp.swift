@@ -158,7 +158,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
         
-        AutoTask.buildContentMarkdownFile()
+//        AutoTask.buildContentMarkdownFile()
         
 //        PlaySecurity.keyChain()
 
