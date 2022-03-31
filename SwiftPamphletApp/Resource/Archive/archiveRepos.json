@@ -44,6 +44,10 @@
             {
                 "id":"kean/PulsePro",
                 "des":"可查看网络流量的网络工具"
+            },
+            {
+                "id":"cloudreve/Cloudreve",
+                "des":"云存储部署"
             }
         ]
     },
@@ -54,6 +58,14 @@
             {
                 "id":"erikolsson/wordle-clone",
                 "des":"SwiftUI 和 TCA 做的 Wordle 游戏"
+            },
+            {
+                "id":"diasurgical/devilutionX",
+                "des":"可以运行在 macOS 上的 Diablo 1"
+            },
+            {
+                "id":"VickScarlet/lifeRestart",
+                "des":"爆火网页游戏，随机出现的人生经历非常搞笑"
             }
         ]
     },
@@ -114,6 +126,10 @@
             {
                 "id":"everettjf/linkmap-rs",
                 "des":"Rust 写的 Linkmap 解析器"
+            },
+            {
+                "id":"RangerNJU/Static-Program-Analysis-Book",
+                "des":"静态程序分析入门教程"
             }
         ]
     },
@@ -164,6 +180,10 @@
             {
                 "id":"vsouza/awesome-ios",
                 "des":"Objective-C 和 Swift 都有"
+            },
+            {
+                "id":"xioacd99/study-is-wonderful",
+                "des":"公开课列表，整理的好"
             }
         ]
     },

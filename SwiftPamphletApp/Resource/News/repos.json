@@ -437,6 +437,18 @@
             {
                 "id":"ObuchiYuki/DevToysMac",
                 "des":"开发者工具合集"
+            },
+            {
+                "id":"jacklandrin/OnlySwitch",
+                "des":"macOS 状态栏一键设置工具，隐藏桌面图标、清理 Xcode 缓存、一键隐藏刘海儿、进入夜览模式等数十种功能"
+            },
+            {
+                "id":"exelban/stats",
+                "des":"macOS 系统资源监控"
+            },
+            {
+                "id":"brunophilipe/Cakebrew",
+                "des":"可视化管理 Homebrew 软件包"
             }
         ]
     },
@@ -516,10 +528,6 @@
             {
                 "id":"pmgl/microstudio",
                 "des":"游戏开发平台集搜索、开发、学习、体验、交流等功能于一身"
-            },
-            {
-                "id":"diasurgical/devilutionX",
-                "des":"可以运行在 macOS 上的 Diablo 1"
             },
             {
                 "id":"InvadingOctopus/octopuskit",
@@ -716,10 +724,6 @@
             {
                 "id":"carson-katri/swift-request",
                 "des":"声明式的网络请求"
-            },
-            {
-                "id":"cloudreve/Cloudreve",
-                "des":"云存储部署"
             },
             {
                 "id":"alibaba/xquic",
@@ -977,6 +981,10 @@
             {
                 "id":"apple/swift-atomics",
                 "des":"Swift 的低级原子操作"
+            },
+            {
+                "id":"apple/swift-async-algorithms",
+                "des":"Combine 的官方开源替代"
             }
         ]
     },
