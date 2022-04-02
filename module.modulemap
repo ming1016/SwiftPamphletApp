@@ -1,0 +1,11 @@
+//
+//  module.c
+//  SwiftPamphletApp
+//
+//  Created by Ming Dai on 2022/4/2.
+//
+
+module InstrProfiling {
+    header "InstrProfiling.h"
+    export *
+}

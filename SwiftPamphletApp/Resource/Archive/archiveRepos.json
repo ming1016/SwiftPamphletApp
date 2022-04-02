@@ -70,12 +70,16 @@
         ]
     },
     {
-        "name":"音视频",
+        "name":"音视频和图形",
         "id":2112281220,
         "repos":[
             {
                 "id":"MetalPetal/MetalPetal",
                 "des":"基于 Metal GPU 加速的图像和视频处理框架"
+            },
+            {
+                "id":"blender/blender",
+                "des":"新起开源 3D 建模渲染软件"
             }
         ]
     },
@@ -229,6 +233,14 @@
             {
                 "id":"starship/starship",
                 "des":"快速可定制提示 shell"
+            },
+            {
+                "id":"37iOS/iAppStore-SwiftUI",
+                "des":"SwiftUI 打造的苹果商店工具类 App"
+            },
+            {
+                "id":"37iOS/AppleParty",
+                "des":"快速操作 App Store Connect 后台的自动化 macOS 工具"
             }
         ]
     },
@@ -247,6 +259,10 @@
             {
                 "id":"Jounce/Surge",
                 "des":"Surge是一个Swift库，使用Accelerate框架为矩阵数学、数字信号处理和图像处理提供高性能函数"
+            },
+            {
+                "id":"Lision/WKWebViewJavascriptBridge",
+                "des":"通过 WKWebViews 在 Swift 和 JavaScript 之间发送消息"
             }
         ]
     },
@@ -302,6 +318,10 @@
             {
                 "id":"leafac/kill-the-newsletter",
                 "des":"Newsletter 转 RSS"
+            },
+            {
+                "id":"agarrharr/awesome-cli-apps",
+                "des":"命令行应用程序收藏"
             }
         ]
     },

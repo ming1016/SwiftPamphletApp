@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import InstrProfiling
 
 @main
 struct SwiftPamphletAppApp: App {
@@ -158,6 +159,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
         
+        
+
+
+        
 //        AutoTask.buildContentMarkdownFile()
         
 //        PlaySecurity.keyChain()
@@ -194,4 +199,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 //        self.window.makeKey()
     }
+    
+    func applicationWillTerminate(_ notification: Notification) {
+//        codeCoverageProfrawDump()
+    }
+    
 }

@@ -164,6 +164,7 @@
 		086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* PlayTextView.swift */; };
 		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
 		086A5F6A2755F3BE00FECE02 /* repos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* repos.json */; };
+		0886702E27F804010001EA81 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 0886702D27F804010001EA81 /* module.modulemap */; };
 		088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EE8F427BD24E000764525 /* PlayLinkView.swift */; };
 		0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896FB8F27BA39B100676B7F /* PlayButtonView.swift */; };
 		0896FB9227BA486900676B7F /* 145.md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* 145.md */; };
@@ -404,6 +405,10 @@
 		086A5F632754C14F00FECE02 /* PlayTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTextView.swift; sourceTree = "<group>"; };
 		086A5F662754C27900FECE02 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		086A5F692755F3BE00FECE02 /* repos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = repos.json; path = SwiftPamphletApp/Resource/News/repos.json; sourceTree = SOURCE_ROOT; };
+		0886702A27F803E20001EA81 /* InstrProfiling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstrProfiling.h; sourceTree = "<group>"; };
+		0886702B27F804010001EA81 /* SwiftPamphletApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPamphletApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		0886702C27F804010001EA81 /* module.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = module.h; sourceTree = "<group>"; };
+		0886702D27F804010001EA81 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		088EE8F427BD24E000764525 /* PlayLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLinkView.swift; sourceTree = "<group>"; };
 		0896FB8F27BA39B100676B7F /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
 		0896FB9127BA486900676B7F /* 145.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 145.md; sourceTree = "<group>"; };
@@ -956,8 +961,12 @@
 		086A5EFA2744E88E00FECE02 = {
 			isa = PBXGroup;
 			children = (
+				0886702A27F803E20001EA81 /* InstrProfiling.h */,
+				0886702C27F804010001EA81 /* module.h */,
+				0886702D27F804010001EA81 /* module.modulemap */,
 				086A5F052744E88E00FECE02 /* SwiftPamphletApp */,
 				086A5F042744E88E00FECE02 /* Products */,
+				0886702B27F804010001EA81 /* SwiftPamphletApp-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1297,6 +1306,7 @@
 				TargetAttributes = {
 					086A5F022744E88E00FECE02 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -1500,6 +1510,7 @@
 				08BE634827C4B6A2002BC6A8 /* PlayStackView.swift in Sources */,
 				08BE636227C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift in Sources */,
 				08BE634627C48C5B002BC6A8 /* PlayToggleView.swift in Sources */,
+				0886702E27F804010001EA81 /* module.modulemap in Sources */,
 				08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */,
 				08AEAEF7277F389300B969E2 /* RSSItemContentView.swift in Sources */,
 				0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */,
@@ -1700,6 +1711,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SwiftPamphletApp/SwiftPamphletAppDebug.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -1717,9 +1729,12 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 4.4;
+				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPamphletApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1730,6 +1745,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SwiftPamphletApp/SwiftPamphletApp.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -1751,6 +1767,7 @@
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPamphletApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

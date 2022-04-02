@@ -10,6 +10,7 @@ import SwiftUI
 import Combine
 import Network
 import SwiftDate
+import InstrProfiling
 
 // MARK: - Web
 func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> String {
@@ -177,5 +178,20 @@ extension View {
     func debug() -> Self {
         print(Mirror(reflecting: self).subjectType)
         return self
+    }
+}
+
+// MARK: - 代码覆盖率
+func codeCoverageProfrawDump(fileName: String = "cc") {
+    let name = "\(fileName).profraw"
+    let fileManager = FileManager.default
+    do {
+        let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
+        let filePath: NSString = documentDirectory.appendingPathComponent(name).path as NSString
+        __llvm_profile_set_filename(filePath.utf8String)
+        print("File at: \(String(cString: __llvm_profile_get_filename()))")
+        __llvm_profile_write_file()
+    } catch {
+        print(error)
     }
 }
