@@ -156,6 +156,18 @@
             {
                 "id":"icanzilb/timeui",
                 "des":"持续时间、cpu和内存使用情况"
+            },
+            {
+                "id":"krzysztofzablocki/Inject",
+                "des":"Hot reloading workflow"
+            },
+            {
+                "id":"johnno1962/InjectionIII",
+                "des":"Hot reload"
+            },
+            {
+                "id":"hughkli/Lookin",
+                "des":"Xcode 的 UI Inspector 和 Reveal 的开源实现"
             }
         ]
     },
@@ -263,6 +275,14 @@
             {
                 "id":"Lision/WKWebViewJavascriptBridge",
                 "des":"通过 WKWebViews 在 Swift 和 JavaScript 之间发送消息"
+            },
+            {
+                "id":"nicklockwood/SwiftFormat",
+                "des":"格式化 Swift 代码的命令行工具和 Xcode 扩展程序"
+            },
+            {
+                "id":"swiftfiddle/swiftfiddle-web",
+                "des":"直接在浏览器中运行的小 Swift 程序"
             }
         ]
     },

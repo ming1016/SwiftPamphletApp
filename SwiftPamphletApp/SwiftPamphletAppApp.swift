@@ -63,6 +63,7 @@ struct Demo: View {
 }
 
 struct V: View {
+    
     @StateObject var appVM = AppVM()
     @State var isEnterFullScreen: Bool = false // 全屏控制
     var body: some View {
@@ -76,6 +77,7 @@ struct V: View {
 }
 
 struct SwiftPamphletApp: View {
+    
     @StateObject var appVM = AppVM()
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
@@ -145,7 +147,6 @@ struct SwiftPamphletApp: View {
             } // end ToolbarItemGroup
         } // end .toolbar
         .environmentObject(appVM)
-
     }
 }
 
@@ -158,9 +159,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
-        
-        
-
 
         
 //        AutoTask.buildContentMarkdownFile()

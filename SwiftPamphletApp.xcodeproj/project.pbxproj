@@ -165,6 +165,7 @@
 		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
 		086A5F6A2755F3BE00FECE02 /* repos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* repos.json */; };
 		0886702E27F804010001EA81 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 0886702D27F804010001EA81 /* module.modulemap */; };
+		0886703227FD77F90001EA81 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 0886703127FD77F90001EA81 /* Inject */; };
 		088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EE8F427BD24E000764525 /* PlayLinkView.swift */; };
 		0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896FB8F27BA39B100676B7F /* PlayButtonView.swift */; };
 		0896FB9227BA486900676B7F /* 145.md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* 145.md */; };
@@ -407,7 +408,6 @@
 		086A5F692755F3BE00FECE02 /* repos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = repos.json; path = SwiftPamphletApp/Resource/News/repos.json; sourceTree = SOURCE_ROOT; };
 		0886702A27F803E20001EA81 /* InstrProfiling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstrProfiling.h; sourceTree = "<group>"; };
 		0886702B27F804010001EA81 /* SwiftPamphletApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPamphletApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		0886702C27F804010001EA81 /* module.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = module.h; sourceTree = "<group>"; };
 		0886702D27F804010001EA81 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		088EE8F427BD24E000764525 /* PlayLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLinkView.swift; sourceTree = "<group>"; };
 		0896FB8F27BA39B100676B7F /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
@@ -494,6 +494,7 @@
 				08448F092796A83D00B61353 /* SwiftDate in Frameworks */,
 				08BF26D02768A59A0064DDAC /* SQLite in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
+				0886703227FD77F90001EA81 /* Inject in Frameworks */,
 				08BE634027BF953A002BC6A8 /* CodeEditorView in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
 				08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */,
@@ -962,7 +963,6 @@
 			isa = PBXGroup;
 			children = (
 				0886702A27F803E20001EA81 /* InstrProfiling.h */,
-				0886702C27F804010001EA81 /* module.h */,
 				0886702D27F804010001EA81 /* module.modulemap */,
 				086A5F052744E88E00FECE02 /* SwiftPamphletApp */,
 				086A5F042744E88E00FECE02 /* Products */,
@@ -1289,6 +1289,7 @@
 				08448F082796A83D00B61353 /* SwiftDate */,
 				08448F4D279E8CA400B61353 /* Ink */,
 				08BE633F27BF953A002BC6A8 /* CodeEditorView */,
+				0886703127FD77F90001EA81 /* Inject */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -1326,6 +1327,7 @@
 				08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */,
 				08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */,
+				0886703027FD77F90001EA81 /* XCRemoteSwiftPackageReference "Inject" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -1643,6 +1645,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1729,6 +1732,12 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 4.4;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+					"-undefined",
+					dynamic_lookup,
+				);
 				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
@@ -1812,6 +1821,14 @@
 				minimumVersion = 0.5.1;
 			};
 		};
+		0886703027FD77F90001EA81 /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mchakravarty/CodeEditorView.git";
@@ -1856,6 +1873,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */;
 			productName = Ink;
+		};
+		0886703127FD77F90001EA81 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0886703027FD77F90001EA81 /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
 		};
 		08BE633F27BF953A002BC6A8 /* CodeEditorView */ = {
 			isa = XCSwiftPackageProductDependency;
