@@ -66,6 +66,14 @@
             {
                 "id":"VickScarlet/lifeRestart",
                 "des":"爆火网页游戏，随机出现的人生经历非常搞笑"
+            },
+            {
+                "id":"jynew/jynew",
+                "des":"Unity 引擎重制 DOS 金庸群侠传"
+            },
+            {
+                "id":"CleverRaven/Cataclysm-DDA",
+                "des":"以世界末日为背景的生存游戏"
             }
         ]
     },
@@ -112,6 +120,14 @@
             {
                 "id":"White-White/mocha",
                 "des":"SwiftUI 写的 Mach-O 查看器"
+            },
+            {
+                "id":"horsicq/Detect-It-Easy",
+                "des":"用于确定 Windows、Linux 和 MacOS 的文件类型的程序"
+            },
+            {
+                "id":"DynamoRIO/dynamorio",
+                "des":"通过强大的 IA-32/AMD64/ARM/AArch64 指令操作库，允许任意修改应用程序指令"
             }
         ]
     },
@@ -166,6 +182,10 @@
                 "des":"Hot reload"
             },
             {
+                "id":"johnno1962/HotSwiftUI",
+                "des":"SwiftUI 的热重载"
+            },
+            {
                 "id":"hughkli/Lookin",
                 "des":"Xcode 的 UI Inspector 和 Reveal 的开源实现"
             }
@@ -200,6 +220,10 @@
             {
                 "id":"xioacd99/study-is-wonderful",
                 "des":"公开课列表，整理的好"
+            },
+            {
+                "id":"Wechat-ggGitHub/Awesome-GitHub-Repo",
+                "des":"收集整理 GitHub 上高质量、有趣的开源项目"
             }
         ]
     },
@@ -253,6 +277,10 @@
             {
                 "id":"37iOS/AppleParty",
                 "des":"快速操作 App Store Connect 后台的自动化 macOS 工具"
+            },
+            {
+                "id":"rxhanson/Rectangle",
+                "des":"在 macOS 上用键盘快捷键和捕捉区移动和调整窗口大小"
             }
         ]
     },
@@ -342,6 +370,40 @@
             {
                 "id":"agarrharr/awesome-cli-apps",
                 "des":"命令行应用程序收藏"
+            }
+        ]
+    },
+    {
+        "name":"书籍和教程",
+        "id":2204131046,
+        "repos":[
+            {
+                "id":"EbookFoundation/free-programming-books",
+                "des":"编程书籍开源项目，很全，内有中文书籍分类"
+            },
+            {
+                "id":"realpython/python-guide",
+                "des":"介绍 Python 的安装和基本用法，还有很多常用的库和框架的介绍"
+            },
+            {
+                "id":"justjavac/free-programming-books-zh_CN",
+                "des":"免费的计算机编程类中文书籍"
+            },
+            {
+                "id":"dypsilon/frontend-dev-bookmarks",
+                "des":"前端电子书资源集合"
+            },
+            {
+                "id":"chenyuntc/pytorch-book",
+                "des":"深度学习框架PyTorch：入门与实践"
+            },
+            {
+                "id":"woai3c/introduction-to-front-end-engineering",
+                "des":"一本小书《带你入门前端工程》"
+            },
+            {
+                "id":"datawhalechina/pumpkin-book",
+                "des":"《机器学习》（西瓜书）公式详解"
             }
         ]
     },
