@@ -26,6 +26,7 @@ struct Demo: View {
     var body: some View {
         Group {
 //            V()
+//            PlayCharts()
 //            PlayTextView()
 //            PlayLinkView()
 //            PlayLabelView()
@@ -51,7 +52,7 @@ struct Demo: View {
 //            PlayColor()
 //            PlayEffect()
 //            PlayKeyboard()
-            PlayAnimation()
+//            PlayAnimation()
 //            PlayCanvas()
             
         }

@@ -1,5 +1,31 @@
 [
     {
+        "name":"编译",
+        "id":2204191232,
+        "users":[
+            {
+                "id":"AlexDenisov",
+                "des":"写过很多 LLVM 相关文章"
+            },
+            {
+                "id":"CodaFi",
+                "des":"Swift 编译开发"
+            },
+            {
+                "id":"harlanhaskins",
+                "des":"Swift 编译开发"
+            },
+            {
+                "id":"LiarPrincess",
+                "des":"做过 python 解释器和 gb 模拟器"
+            },
+            {
+                "id":"banach-space",
+                "des":"LLVM 开发者，llvm-tutor 作者"
+            }
+        ]
+    },
+    {
         "name":"逆向",
         "id":2201220814,
         "users":[

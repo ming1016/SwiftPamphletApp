@@ -20,6 +20,30 @@
             {
                 "id":"sbarex/SourceCodeSyntaxHighlight",
                 "des":"源码高亮的 macOS 系统插件"
+            },
+            {
+                "id":"krzyzanowskim/STTextView",
+                "des":"没有 NSTextView 包袱的 TextKit2 文本视图"
+            },
+            {
+                "id":"Witiko/markdown",
+                "des":"一个用于在TeX中转换和渲染markdown文档的软件包"
+            },
+            {
+                "id":"simonbs/Runestone",
+                "des":"适用于iOS的高性能纯文本编辑器，具有语法高亮、行数、隐形字符和更多功能。"
+            },
+            {
+                "id":"pbek/QOwnNotes",
+                "des":"纯文本文件记事本和待办事项列表管理器"
+            },
+            {
+                "id":"codemirror/codemirror.next",
+                "des":"前端处理超大容量文本不卡的库"
+            },
+            {
+                "id":"danielsaidi/RichTextKit",
+                "des":"RichTextKit 是一个基于 Swift 的库，用于在 UIKit、AppKit 和 SwiftUI 中处理富文本。"
             }
         ]
     },
@@ -48,6 +72,18 @@
             {
                 "id":"cloudreve/Cloudreve",
                 "des":"云存储部署"
+            },
+            {
+                "id":"omniedgeio/n2n",
+                "des":"Peer-to-peer VPN"
+            },
+            {
+                "id":"omniedgeio/omniedge-macOS",
+                "des":"OmniEdge macOS App"
+            },
+            {
+                "id":"omniedgeio/omniedge-iOS",
+                "des":"OmniEdge iOS Client"
             }
         ]
     },
@@ -74,6 +110,18 @@
             {
                 "id":"CleverRaven/Cataclysm-DDA",
                 "des":"以世界末日为背景的生存游戏"
+            },
+            {
+                "id":"LiarPrincess/Swift-plays-Pokemon",
+                "des":"用 Swift 编写的 Game Boy 模拟器"
+            },
+            {
+                "id":"CytopiaTeam/Cytopia",
+                "des":"像素艺术风格的开源城市模拟器45度角"
+            },
+            {
+                "id":"microsoft/Microsoft-3D-Movie-Maker",
+                "des":"这是1995年发布的 Microsoft 3D Movie Maker 的原始源代码"
             }
         ]
     },
@@ -88,6 +136,10 @@
             {
                 "id":"blender/blender",
                 "des":"新起开源 3D 建模渲染软件"
+            },
+            {
+                "id":"mifi/lossless-cut",
+                "des":"LosslessCut 的目标是成为跨平台 FFmpeg GUI，用于对视频、音频、字幕和其他相关媒体文件进行快速无损的操作"
             }
         ]
     },
@@ -150,6 +202,18 @@
             {
                 "id":"RangerNJU/Static-Program-Analysis-Book",
                 "des":"静态程序分析入门教程"
+            },
+            {
+                "id":"LiarPrincess/Violet",
+                "des":"用 Swift 编写的 Python 虚拟机"
+            },
+            {
+                "id":"Enna1/LLVM-Clang-Study-Notes",
+                "des":"LLVM/Clang 学习笔记"
+            },
+            {
+                "id":"cesanta/elk",
+                "des":"用于嵌入式系统的低占用 JavaScript 引擎"
             }
         ]
     },
@@ -188,6 +252,18 @@
             {
                 "id":"hughkli/Lookin",
                 "des":"Xcode 的 UI Inspector 和 Reveal 的开源实现"
+            },
+            {
+                "id":"dani-gavrilov/GDPerformanceView-Swift",
+                "des":"在状态栏上方显示 FPS、CPU 和内存使用情况、设备型号、应用程序和 iOS 版本，并通过代理回调报告 FPS、CPU 和内存使用情况。"
+            },
+            {
+                "id":"cirruslabs/tart",
+                "des":"swift 写的 在 Apple Silicon 上的 macOS 虚拟机可用于 CI 和其他自动化工作"
+            },
+            {
+                "id":"Kiprey/Skr_Learning",
+                "des":"天问之路 - 学习笔记&学习周报。内容包括但不限于C++ STL、编译原理、LLVM IR Pass代码优化、CSAPP Lab、uCore操作系统等等。持续更新ing..."
             }
         ]
     },
@@ -224,6 +300,13 @@
             {
                 "id":"Wechat-ggGitHub/Awesome-GitHub-Repo",
                 "des":"收集整理 GitHub 上高质量、有趣的开源项目"
+            },
+            {
+                "id":"timqian/chinese-independent-blogs"
+            },
+            {
+                "id":"papers-we-love/papers-we-love",
+                "des":"来自计算机科学界的论文，可以阅读和讨论。"
             }
         ]
     },
@@ -246,6 +329,22 @@
             {
                 "id":"zotero/zotero",
                 "des":"收集、组织、引用和分享你的研究资料"
+            },
+            {
+                "id":"facebook/lexical",
+                "des":"facebook 开源的编辑器"
+            },
+            {
+                "id":"source-academy/sicp",
+                "des":"SICP JS 版本"
+            },
+            {
+                "id":"alex/what-happens-when",
+                "des":"当你在浏览器中输入 google.com 并且按下回车之后发生了什么？完整详细完美解释"
+            },
+            {
+                "id":"lxgw/LxgwWenKai",
+                "des":"一款开源中文字体，基于 FONTWORKS 出品字体 Klee One 衍生。"
             }
         ]
     },
@@ -255,6 +354,14 @@
         "repos":[
             {
                 "id":"wordpress-mobile/WordPress-iOS"
+            },
+            {
+                "id":"SwiftcordApp/Swiftcord",
+                "des":"一个完全原生的 MacOS Discord 客户端，100% 由 Swift 和 SwiftUI 构建"
+            },
+            {
+                "id":"signalapp/Signal-iOS",
+                "des":"聊天"
             }
         ]
     },
@@ -281,6 +388,10 @@
             {
                 "id":"rxhanson/Rectangle",
                 "des":"在 macOS 上用键盘快捷键和捕捉区移动和调整窗口大小"
+            },
+            {
+                "id":"lexrus/SwiftyMenu",
+                "des":"Finder 菜单"
             }
         ]
     },
@@ -370,6 +481,14 @@
             {
                 "id":"agarrharr/awesome-cli-apps",
                 "des":"命令行应用程序收藏"
+            },
+            {
+                "id":"httpswift/swifter",
+                "des":"swift 写的 http 服务器引擎"
+            },
+            {
+                "id":"swhitty/FlyingFox",
+                "des":"使用 async/await 用 Swift 编写的轻量级 HTTP 服务器。"
             }
         ]
     },

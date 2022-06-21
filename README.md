@@ -56,6 +56,6 @@ While project update ,you won't need to compile it manually in local, only need 
 
 代码说明参看这篇[《如何用 SwiftUI + Combine + Swift Concurrency Aysnc/Await Actor 欢畅开发》](https://ming1016.github.io/2022/01/03/develop-macos-with-swiftui-combine-concurrency-aysnc-await-actor/)文章
 
-
+小册子文字版 《[戴铭的 Swift 小册子](https://ming1016.github.io/2021/11/23/daiming-swift-pamphlet/)》
 
 
