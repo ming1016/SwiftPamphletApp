@@ -21,7 +21,7 @@ struct IntroView: View {
                 Text("一本活的开发手册")
                 Link("GitHub 地址", destination: URL(string: "https://github.com/KwaiAppTeam/SwiftPamphletApp")!)
             }
-            Text("版本4.6").font(.footnote)
+            Text("版本5.0").font(.footnote)
         }
         .frame(minWidth: SPC.detailMinWidth)
         .enableInjection()

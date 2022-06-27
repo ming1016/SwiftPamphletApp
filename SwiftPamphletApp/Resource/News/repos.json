@@ -78,6 +78,10 @@
             {
                 "id":"gymshark/ios-stack-kit",
                 "des":"类 SwiftUI"
+            },
+            {
+                "id":"jordibruin/Swift-Charts-Examples",
+                "des":"Swift Charts 制作的不同类型图表示例"
             }
         ]
     },

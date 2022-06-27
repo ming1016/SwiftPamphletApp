@@ -29,6 +29,11 @@
                 "number":67
             },
             {
+                "id":2206271528,
+                "title":"Distributed Actors",
+                "number":178
+            },
+            {
                 "id":2111231532,
                 "title":"相关提案",
                 "number":68
@@ -42,6 +47,11 @@
                 "id":2111231534,
                 "title":"Swift Concurrency 和 Combine",
                 "number":70
+            },
+            {
+                "id":2206271523,
+                "title":"Concurrency 5.7 版本更新",
+                "number":177
             }
         ]
     }

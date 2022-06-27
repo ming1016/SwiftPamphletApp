@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08026C412869B1BF00792EF1 /* 183.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C402869B1BF00792EF1 /* 183.md */; };
+		08026C432869B22E00792EF1 /* 176.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C422869B22E00792EF1 /* 176.md */; };
+		08026C442869B24F00792EF1 /* 177.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C2F2869945300792EF1 /* 177.md */; };
+		08026C452869B25700792EF1 /* 178.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C302869948400792EF1 /* 178.md */; };
+		08026C462869B26000792EF1 /* 179.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C322869991200792EF1 /* 179.md */; };
+		08026C472869B26900792EF1 /* 180.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C34286999BB00792EF1 /* 180.md */; };
+		08026C482869B28A00792EF1 /* 181.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3528699AAA00792EF1 /* 181.md */; };
+		08026C492869B38300792EF1 /* 182.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3628699C8700792EF1 /* 182.md */; };
+		08026C4A2869B38F00792EF1 /* 184.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3828699EB700792EF1 /* 184.md */; };
+		08026C4B2869B39700792EF1 /* 185.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C392869A17800792EF1 /* 185.md */; };
+		08026C4C2869B39F00792EF1 /* 186.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3A2869A21000792EF1 /* 186.md */; };
+		08026C4D2869B3A600792EF1 /* 187.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3B2869A2F100792EF1 /* 187.md */; };
+		08026C4E2869B3B500792EF1 /* 188.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3C2869A35800792EF1 /* 188.md */; };
+		08026C4F2869B3BE00792EF1 /* 189.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3D2869A51200792EF1 /* 189.md */; };
+		08026C512869B43500792EF1 /* 190.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C502869B41B00792EF1 /* 190.md */; };
+		08026C522869B43D00792EF1 /* 191.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3E2869AD7800792EF1 /* 191.md */; };
+		08026C532869B44400792EF1 /* 192.md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3F2869B00D00792EF1 /* 192.md */; };
 		08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08038766276700F100519B15 /* CCYRESTfulAPI.swift */; };
 		083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E02756503B0095E0EE /* AnimateLayout.swift */; };
 		083554E327572BB60095E0EE /* AppVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E227572BB60095E0EE /* AppVM.swift */; };
@@ -251,6 +268,23 @@
 
 /* Begin PBXFileReference section */
 		080124FD27EC62DC00E44222 /* SwiftPamphletAppDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPamphletAppDebug.entitlements; sourceTree = "<group>"; };
+		08026C2F2869945300792EF1 /* 177.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 177.md; sourceTree = "<group>"; };
+		08026C302869948400792EF1 /* 178.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 178.md; sourceTree = "<group>"; };
+		08026C322869991200792EF1 /* 179.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 179.md; sourceTree = "<group>"; };
+		08026C34286999BB00792EF1 /* 180.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 180.md; sourceTree = "<group>"; };
+		08026C3528699AAA00792EF1 /* 181.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 181.md; sourceTree = "<group>"; };
+		08026C3628699C8700792EF1 /* 182.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 182.md; sourceTree = "<group>"; };
+		08026C3828699EB700792EF1 /* 184.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 184.md; sourceTree = "<group>"; };
+		08026C392869A17800792EF1 /* 185.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 185.md; sourceTree = "<group>"; };
+		08026C3A2869A21000792EF1 /* 186.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 186.md; sourceTree = "<group>"; };
+		08026C3B2869A2F100792EF1 /* 187.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 187.md; sourceTree = "<group>"; };
+		08026C3C2869A35800792EF1 /* 188.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 188.md; sourceTree = "<group>"; };
+		08026C3D2869A51200792EF1 /* 189.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 189.md; sourceTree = "<group>"; };
+		08026C3E2869AD7800792EF1 /* 191.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 191.md; sourceTree = "<group>"; };
+		08026C3F2869B00D00792EF1 /* 192.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 192.md; sourceTree = "<group>"; };
+		08026C402869B1BF00792EF1 /* 183.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 183.md; sourceTree = "<group>"; };
+		08026C422869B22E00792EF1 /* 176.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 176.md; sourceTree = "<group>"; };
+		08026C502869B41B00792EF1 /* 190.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 190.md; sourceTree = "<group>"; };
 		08038766276700F100519B15 /* CCYRESTfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRESTfulAPI.swift; sourceTree = "<group>"; };
 		083554E02756503B0095E0EE /* AnimateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLayout.swift; sourceTree = "<group>"; };
 		083554E227572BB60095E0EE /* AppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVM.swift; sourceTree = "<group>"; };
@@ -508,6 +542,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08026C312869990100792EF1 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				08026C322869991200792EF1 /* 179.md */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		08026C332869999800792EF1 /* APMAndBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				08026C34286999BB00792EF1 /* 180.md */,
+				08026C3528699AAA00792EF1 /* 181.md */,
+				08026C3628699C8700792EF1 /* 182.md */,
+				08026C402869B1BF00792EF1 /* 183.md */,
+			);
+			path = APMAndBuilder;
+			sourceTree = "<group>";
+		};
 		080387652766FF3200519B15 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +586,7 @@
 		08448F45279E7E1A00B61353 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				08026C312869990100792EF1 /* Tool */,
 				0850445227B110A50096D556 /* InsideProtocol */,
 				0850445127B110950096D556 /* InsidePropertyWrapper */,
 				08448F90279EB8A300B61353 /* Engineering */,
@@ -550,6 +604,7 @@
 		08448F46279E7E3400B61353 /* Subject */ = {
 			isa = PBXGroup;
 			children = (
+				08026C332869999800792EF1 /* APMAndBuilder */,
 				084E1A6127B517990072BBB6 /* SwiftThoseThings */,
 				08448F61279EB2B700B61353 /* Standard */,
 				08448F5F279EB25F00B61353 /* RecommendedMaterials */,
@@ -595,6 +650,7 @@
 				08448F56279EA84100B61353 /* 51.md */,
 				08448F57279EA84100B61353 /* 52.md */,
 				08448F58279EA84100B61353 /* 131.md */,
+				08026C3F2869B00D00792EF1 /* 192.md */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -708,6 +764,7 @@
 				08448F9B279EBA8200B61353 /* 7.md */,
 				08448F9D279EBAA800B61353 /* 8.md */,
 				08448F9F279EBAD900B61353 /* 9.md */,
+				08026C422869B22E00792EF1 /* 176.md */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -840,6 +897,8 @@
 				08449021279ECDEF00B61353 /* 68.md */,
 				08449023279ECE2200B61353 /* 69.md */,
 				08449025279ECE5400B61353 /* 70.md */,
+				08026C2F2869945300792EF1 /* 177.md */,
+				08026C302869948400792EF1 /* 178.md */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -848,6 +907,7 @@
 			isa = PBXGroup;
 			children = (
 				08449028279ECEB100B61353 /* 71.md */,
+				08026C3828699EB700792EF1 /* 184.md */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -879,6 +939,12 @@
 				0896FB9127BA486900676B7F /* 145.md */,
 				0844902B279ECEFB00B61353 /* 100.md */,
 				0844902D279ECF1C00B61353 /* 92.md */,
+				08026C392869A17800792EF1 /* 185.md */,
+				08026C3A2869A21000792EF1 /* 186.md */,
+				08026C3B2869A2F100792EF1 /* 187.md */,
+				08026C3C2869A35800792EF1 /* 188.md */,
+				08026C3D2869A51200792EF1 /* 189.md */,
+				08026C502869B41B00792EF1 /* 190.md */,
 			);
 			path = UseViewComponent;
 			sourceTree = "<group>";
@@ -960,6 +1026,7 @@
 				085BB77327D22FCA00E8F69A /* 172.md */,
 				08522BE827CF6E3A005FF059 /* 169.md */,
 				08522BE327CF5C55005FF059 /* 168.md */,
+				08026C3E2869AD7800792EF1 /* 191.md */,
 			);
 			path = Vsion;
 			sourceTree = "<group>";
@@ -1349,6 +1416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08026C512869B43500792EF1 /* 190.md in Resources */,
 				0850445027B0FDBD0096D556 /* 137.md in Resources */,
 				08449015279ECC8300B61353 /* 59.md in Resources */,
 				08448FFC279ECA7C00B61353 /* 79.md in Resources */,
@@ -1361,6 +1429,7 @@
 				08448FA3279EBB1B00B61353 /* 3.md in Resources */,
 				08AEAEFA277F3C7400B969E2 /* css.html in Resources */,
 				086A5F502744EF3B00FECE02 /* developers.json in Resources */,
+				08026C492869B38300792EF1 /* 182.md in Resources */,
 				0850444E27B0D4EA0096D556 /* 136.md in Resources */,
 				08C3BBA227CF1B2B00ACF0FE /* 164.md in Resources */,
 				086A5F5A274CC17700FECE02 /* lib-Combine.json in Resources */,
@@ -1379,6 +1448,7 @@
 				08448FB8279EC3C200B61353 /* 22.md in Resources */,
 				0844900F279ECC0C00B61353 /* 56.md in Resources */,
 				08448F9A279EBA2900B61353 /* 6.md in Resources */,
+				08026C472869B26900792EF1 /* 180.md in Resources */,
 				08448F8C279EB84800B61353 /* 93.md in Resources */,
 				08BE638727CDF1DD002BC6A8 /* D-技术播客.json in Resources */,
 				08448FC1279EC4B500B61353 /* 26.md in Resources */,
@@ -1390,6 +1460,7 @@
 				08BE632A27BE220D002BC6A8 /* 146.md in Resources */,
 				08448F5B279EA84100B61353 /* 131.md in Resources */,
 				0844900A279ECB8C00B61353 /* 86.md in Resources */,
+				08026C4D2869B3A600792EF1 /* 187.md in Resources */,
 				08B4C93C2774786800742084 /* archiveRepos.json in Resources */,
 				08449011279ECC3E00B61353 /* 57.md in Resources */,
 				08448FE2279EC7CF00B61353 /* 43.md in Resources */,
@@ -1398,7 +1469,10 @@
 				0844901E279ECD9D00B61353 /* 66.md in Resources */,
 				08448FD3279EC60300B61353 /* 36.md in Resources */,
 				08448F64279EB32C00B61353 /* 50.md in Resources */,
+				08026C482869B28A00792EF1 /* 181.md in Resources */,
 				08448FD7279EC64600B61353 /* 38.md in Resources */,
+				08026C412869B1BF00792EF1 /* 183.md in Resources */,
+				08026C4F2869B3BE00792EF1 /* 189.md in Resources */,
 				08522BE927CF6E3B005FF059 /* 169.md in Resources */,
 				08449004279ECB2900B61353 /* 83.md in Resources */,
 				08BE634A27C4BDDB002BC6A8 /* 151.md in Resources */,
@@ -1407,6 +1481,7 @@
 				08449018279ECD2400B61353 /* 63.md in Resources */,
 				086A5F58274CB8B500FECE02 /* guide-subject.json in Resources */,
 				08448FAD279EC2E900B61353 /* 14.md in Resources */,
+				08026C532869B44400792EF1 /* 192.md in Resources */,
 				08448F66279EB33F00B61353 /* 103.md in Resources */,
 				08448FDA279EC6F500B61353 /* 39.md in Resources */,
 				08C3BB8027CE4A8500ACF0FE /* 162.md in Resources */,
@@ -1424,6 +1499,7 @@
 				0850445627B110DA0096D556 /* 138.md in Resources */,
 				08449020279ECDCE00B61353 /* 67.md in Resources */,
 				0896FB9227BA486900676B7F /* 145.md in Resources */,
+				08026C442869B24F00792EF1 /* 177.md in Resources */,
 				08A4FDC227B25A140068E5BC /* 141.md in Resources */,
 				08448FC3279EC4D600B61353 /* 27.md in Resources */,
 				08AEAEE9277EDD9000B969E2 /* rssfeed.json in Resources */,
@@ -1446,6 +1522,7 @@
 				08448F83279EB78A00B61353 /* 49.md in Resources */,
 				08448F81279EB75800B61353 /* 106.md in Resources */,
 				08448FF6279EC9E800B61353 /* 76.md in Resources */,
+				08026C452869B25700792EF1 /* 178.md in Resources */,
 				0844902C279ECEFB00B61353 /* 100.md in Resources */,
 				085BB77627D22FE300E8F69A /* 173.md in Resources */,
 				08BE635827C63F3A002BC6A8 /* 153.md in Resources */,
@@ -1456,13 +1533,16 @@
 				08448F8F279EB88500B61353 /* 129.md in Resources */,
 				08448FA0279EBAD900B61353 /* 9.md in Resources */,
 				08448FFA279ECA5300B61353 /* 78.md in Resources */,
+				08026C462869B26000792EF1 /* 179.md in Resources */,
 				08448FF8279ECA2000B61353 /* 77.md in Resources */,
 				08448F86279EB7D200B61353 /* 53.md in Resources */,
 				08448FA5279EBB4100B61353 /* 10.md in Resources */,
+				08026C522869B43D00792EF1 /* 191.md in Resources */,
 				084E1A5F27B4F7BB0072BBB6 /* 142.md in Resources */,
 				08448FDC279EC71800B61353 /* 40.md in Resources */,
 				08448F43279B83C000B61353 /* archiveDevelopers.json in Resources */,
 				0844902E279ECF1C00B61353 /* 92.md in Resources */,
+				08026C4A2869B38F00792EF1 /* 184.md in Resources */,
 				08448F5E279EB23600B61353 /* 99.md in Resources */,
 				08BE635427C63828002BC6A8 /* 152.md in Resources */,
 				08448FEA279EC86700B61353 /* 47.md in Resources */,
@@ -1486,11 +1566,14 @@
 				08448FEF279EC93D00B61353 /* 54.md in Resources */,
 				08448FA9279EBBB900B61353 /* 12.md in Resources */,
 				08448FE8279EC84B00B61353 /* 46.md in Resources */,
+				08026C4C2869B39F00792EF1 /* 186.md in Resources */,
 				086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */,
 				08448F0F2799328700B61353 /* css_cn.html in Resources */,
 				08448F5A279EA84100B61353 /* 52.md in Resources */,
 				08448F9E279EBAA800B61353 /* 8.md in Resources */,
 				08448FEC279EC8BE00B61353 /* 5.md in Resources */,
+				08026C4E2869B3B500792EF1 /* 188.md in Resources */,
+				08026C432869B22E00792EF1 /* 176.md in Resources */,
 				08BE636427C886D2002BC6A8 /* 156.md in Resources */,
 				08449030279ECF7D00B61353 /* 1.md in Resources */,
 				08522BDA27CF5029005FF059 /* 166.md in Resources */,
@@ -1503,6 +1586,7 @@
 				08449022279ECDEF00B61353 /* 68.md in Resources */,
 				086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */,
 				08448FBF279EC45E00B61353 /* 25.md in Resources */,
+				08026C4B2869B39700792EF1 /* 185.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1739,7 +1823,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 4.6;
+				MARKETING_VERSION = 5.0;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1779,7 +1863,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 4.6;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";

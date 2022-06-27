@@ -7,6 +7,11 @@
                 "id":2111231603,
                 "title":"SwiftUI 是什么？",
                 "number":71
+            },
+            {
+                "id":2206271614,
+                "title":"SwiftUI 参考资料",
+                "number":184
             }
         ]
     },
@@ -51,7 +56,7 @@
             },
             {
                 "id":2202251554,
-                "title":"ProgressView",
+                "title":"进度",
                 "number":157
             },
             {
@@ -75,8 +80,13 @@
                 "number":151
             },
             {
+                "id":2206271629,
+                "title":"Advanced layout control",
+                "number":186
+            },
+            {
                 "id":2202241942,
-                "title":"NavigationView",
+                "title":"Navigation",
                 "number":155
             },
             {
@@ -95,6 +105,11 @@
                 "number":159
             },
             {
+                "id":2206271714,
+                "title":"table",
+                "number":190
+            },
+            {
                 "id":2202281504,
                 "title":"ScrollView",
                 "number":160
@@ -108,6 +123,11 @@
                 "id":2203012035,
                 "title":"TabView",
                 "number":162
+            },
+            {
+                "id":2206271625,
+                "title":"Swift Charts",
+                "number":185
             },
             {
                 "id":2203021125,
@@ -130,9 +150,24 @@
                 "number":167
             },
             {
+                "id":2206271641,
+                "title":"Form",
+                "number":189
+            },
+            {
                 "id":2203021810,
                 "title":"Keyboard",
                 "number":170
+            },
+            {
+                "id":2206271633,
+                "title":"Transferable",
+                "number":187
+            },
+            {
+                "id":2206271634,
+                "title":"ShareLink",
+                "number":188
             }
         ]
     },
@@ -159,6 +194,11 @@
                 "id":2203041932,
                 "title":"Canvas",
                 "number":173
+            },
+            {
+                "id":2206271717,
+                "title":"SF Symbol",
+                "number":191
             }
         ]
     }
