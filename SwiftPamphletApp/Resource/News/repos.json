@@ -130,9 +130,6 @@
                 "id":"tnantoka/edhita"
             },
             {
-                "id":"glushchenko/fsnotes"
-            },
-            {
                 "id":"coteditor/CotEditor"
             },
             {
@@ -182,7 +179,7 @@
             },
             {
                 "id":"caiyue1993/IceCream",
-                "des":"CloudKit 同步 Realm 数据库"
+                "des":"一行代码同步多设备，使用的是 CloudKit、Realm 数据库"
             },
             {
                 "id":"realm/realm-cocoa"
@@ -190,6 +187,10 @@
             {
                 "id":"PostgresApp/PostgresApp",
                 "des":"PostgreSQL macOS 应用"
+            },
+            {
+                "id":"mergesort/Boutique",
+                "des":"只需两行代码即可构建实时更新的 Swift 离线就绪应用程序，快速集成。"
             }
         ]
     },
@@ -217,9 +218,6 @@
             },
             {
                 "id":"BohdanOrlov/iOS-Developer-Roadmap"
-            },
-            {
-                "id":"ReactiveCocoa/ReactiveCocoa"
             },
             {
                 "id":"mehdihadeli/awesome-software-architecture",
@@ -457,6 +455,10 @@
             {
                 "id":"brunophilipe/Cakebrew",
                 "des":"可视化管理 Homebrew 软件包"
+            },
+            {
+                "id":"insidegui/VirtualBuddy",
+                "des":"使用官方 Virtualization 框架做的应用"
             }
         ]
     },
@@ -491,10 +493,6 @@
             {
                 "id":"bizz84/SwiftyStoreKit",
                 "des":"应用内购框架"
-            },
-            {
-                "id":"wikimedia/wikipedia-ios",
-                "des":""
             }
         ]
     },
@@ -532,10 +530,6 @@
             {
                 "id":"freeCodeCamp/LearnToCodeRPG",
                 "des":"学习编码的游戏"
-            },
-            {
-                "id":"pmgl/microstudio",
-                "des":"游戏开发平台集搜索、开发、学习、体验、交流等功能于一身"
             },
             {
                 "id":"InvadingOctopus/octopuskit",
@@ -904,9 +898,6 @@
                 "des":"简单大方基础 CSS 样式"
             },
             {
-                "id":"mozilla-mobile/firefox-ios"
-            },
-            {
                 "id":"liviuschera/noctis",
                 "des":"好看的代码编辑器配色主题"
             }
@@ -990,10 +981,6 @@
             {
                 "id":"apple/swift-crypto",
                 "des":"CryptoKit 的开源实现"
-            },
-            {
-                "id":"apple/swift-driver",
-                "des":"用 Swift 语言重新实现的编译器的驱动程序库"
             },
             {
                 "id":"apple/swift-numerics",

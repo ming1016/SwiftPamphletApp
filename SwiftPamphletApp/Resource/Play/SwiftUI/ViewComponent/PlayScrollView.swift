@@ -20,19 +20,27 @@ struct PlayScrollView: View {
     var body: some View {
         // 标准用法
         ScrollViewReader { s in
-            if #available(macOS 13.0, *) {
-                ScrollView {
-                    ForEach(0..<300) { i in
-                        Text("\(i)")
-                            .id(i)
-                    }
+//            if #available(macOS 13.0, *) {
+//                ScrollView {
+//                    ForEach(0..<300) { i in
+//                        Text("\(i)")
+//                            .id(i)
+//                    }
+//                }
+//                .scrollDisabled(false)
+//                .scrollDismissesKeyboard(.interactively)
+//                .scrollIndicators(.visible)
+//            } else {
+//                // Fallback on earlier versions
+//            }
+            
+            ScrollView {
+                ForEach(0..<300) { i in
+                    Text("\(i)")
+                        .id(i)
                 }
-                .scrollDisabled(false)
-                .scrollDismissesKeyboard(.interactively)
-                .scrollIndicators(.visible)
-            } else {
-                // Fallback on earlier versions
             }
+            
             Button("跳到150") {
                 withAnimation {
                     s.scrollTo(150, anchor: .top)

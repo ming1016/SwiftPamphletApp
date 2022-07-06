@@ -44,6 +44,9 @@
             {
                 "id":"danielsaidi/RichTextKit",
                 "des":"RichTextKit 是一个基于 Swift 的库，用于在 UIKit、AppKit 和 SwiftUI 中处理富文本。"
+            },
+            {
+                "id":"glushchenko/fsnotes"
             }
         ]
     },
@@ -54,6 +57,15 @@
             {
                 "id":"maticzav/swift-graphql",
                 "des":"一个GraphQL客户端，让你忘记GraphQL"
+            }
+        ]
+    },
+    {
+        "name":"编程范式",
+        "id":2207041719,
+        "repos":[
+            {
+                "id":"ReactiveCocoa/ReactiveCocoa"
             }
         ]
     },
@@ -122,6 +134,18 @@
             {
                 "id":"microsoft/Microsoft-3D-Movie-Maker",
                 "des":"这是1995年发布的 Microsoft 3D Movie Maker 的原始源代码"
+            },
+            {
+                "id":"pmgl/microstudio",
+                "des":"游戏开发平台集搜索、开发、学习、体验、交流等功能于一身"
+            },
+            {
+                "id":"Ryujinx/Ryujinx",
+                "des":"任天堂模拟器，C# 开发的。"
+            },
+            {
+                "id":"yuzu-emu/yuzu",
+                "des":"Nintendo Switch Emulator"
             }
         ]
     },
@@ -214,6 +238,10 @@
             {
                 "id":"cesanta/elk",
                 "des":"用于嵌入式系统的低占用 JavaScript 引擎"
+            },
+            {
+                "id":"shining1984/PL-Compiler-Resource",
+                "des":"程序语言与编译技术相关资料，有大学教学、书籍、论文、项目、博客和大会的收集"
             }
         ]
     },
@@ -362,6 +390,10 @@
             {
                 "id":"signalapp/Signal-iOS",
                 "des":"聊天"
+            },
+            {
+                "id":"wikimedia/wikipedia-ios",
+                "des":"wikipedia 客户端"
             }
         ]
     },
@@ -436,16 +468,24 @@
             {
                 "id":"Co2333/mobilePillowTalkLite",
                 "des":"一个基于Linux的iOS和SwiftUI服务器监控工具，使用远程proc文件系统和脚本执行。"
+            },
+            {
+                "id":"ThasianX/ElegantTimeline-SwiftUI",
+                "des":"日历、列表和应用程序主题之间交互的多面时间线视图的优雅演示"
             }
         ]
     },
     {
-        "name":"apple",
+        "name":"Apple",
         "id":2202041708,
         "repos":[
             {
                 "id":"llvm/llvm-project",
                 "des":"编译器"
+            },
+            {
+                "id":"apple/swift-driver",
+                "des":"用 Swift 语言重新实现的编译器的驱动程序库"
             }
         ]
     },
@@ -467,6 +507,15 @@
             {
                 "id":"lukepistrol/Pexels-Swift",
                 "des":"照片展示 pexel 接口"
+            }
+        ]
+    },
+    {
+        "name":"Web",
+        "id":2207041739,
+        "repos":[
+            {
+                "id":"mozilla-mobile/firefox-ios"
             }
         ]
     },
@@ -493,6 +542,10 @@
             {
                 "id":"swhitty/FlyingFox",
                 "des":"使用 async/await 用 Swift 编写的轻量级 HTTP 服务器。"
+            },
+            {
+                "id":"lxgr-linux/pokete",
+                "des":"在 Terminal 玩 Pokemon 的项目"
             }
         ]
     },
