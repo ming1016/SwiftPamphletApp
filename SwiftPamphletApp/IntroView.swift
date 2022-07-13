@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import Inject
+//import Inject
 
 struct IntroView: View {
-    @ObservedObject private var iO = Inject.observer
+//    @ObservedObject private var iO = Inject.observer
     var body: some View {
         VStack(spacing: 15) {
             Image("logo")
@@ -24,7 +24,7 @@ struct IntroView: View {
             Text("版本5.0").font(.footnote)
         }
         .frame(minWidth: SPC.detailMinWidth)
-        .enableInjection()
+//        .enableInjection()
     }
 }
 
