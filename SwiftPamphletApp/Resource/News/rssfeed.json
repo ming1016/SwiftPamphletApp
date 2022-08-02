@@ -84,13 +84,6 @@
         "feedLink":"https://nilcoalescing.com/feed.rss"
     },
     {
-        "title":"SwiftUI Weekly",
-        "id":2201081000,
-        "des":"The curated collection of links about SwiftUI. Delivered every Monday.",
-        "siteLink":"http://weekly.swiftwithmajid.com/",
-        "feedLink":"https://s3.amazonaws.com/revue/accounts/rss_feeds/000/057/272/original/rss_feed_57272.xml?1640019207"
-    },
-    {
         "title":"Not Only Swift Weekly",
         "id":2201081003,
         "des":"Xcode tips & tricks, Swift, SwiftUI, Combine, Firebase, computing and internet history, and - of course - some fun stuff.",
