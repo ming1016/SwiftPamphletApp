@@ -427,15 +427,8 @@
                 "des":"Markdown 编辑器"
             },
             {
-                "id":"root3nl/SupportApp",
-                "des":"企业支持 macOS 软件"
-            },
-            {
                 "id":"jaywcjlove/awesome-mac",
                 "des":"macOS 软件大全"
-            },
-            {
-                "id":"insidegui/WWDC"
             },
             {
                 "id":"sindresorhus/Actions"
@@ -534,10 +527,6 @@
             {
                 "id":"InvadingOctopus/octopuskit",
                 "des":"2D游戏引擎，用的 GameplayKit + SpriteKit + SwiftUI"
-            },
-            {
-                "id":"a-little-org-called-mario/a-little-game-called-mario",
-                "des":"用 Godot 引擎做的马里奥游戏"
             }
         ]
     },

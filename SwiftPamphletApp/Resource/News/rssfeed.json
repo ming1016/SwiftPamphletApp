@@ -7,13 +7,6 @@
         "feedLink":"https://www.swift.org/atom.xml"
     },
     {
-        "title":"Release notes from iOS-Weekly",
-        "id":2201080951,
-        "des":"老司机 iOS 周报",
-        "siteLink":"https://github.com/SwiftOldDriver/iOS-Weekly/releases",
-        "feedLink":"https://github.com/SwiftOldDriver/iOS-Weekly/releases.atom"
-    },
-    {
         "title":"iOS摸鱼周报",
         "id":2201071620,
         "des":"iOS 摸鱼周报",

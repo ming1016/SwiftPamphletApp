@@ -146,6 +146,10 @@
             {
                 "id":"yuzu-emu/yuzu",
                 "des":"Nintendo Switch Emulator"
+            },
+            {
+                "id":"a-little-org-called-mario/a-little-game-called-mario",
+                "des":"用 Godot 引擎做的马里奥游戏"
             }
         ]
     },
@@ -424,6 +428,13 @@
             {
                 "id":"lexrus/SwiftyMenu",
                 "des":"Finder 菜单"
+            },
+            {
+                "id":"root3nl/SupportApp",
+                "des":"企业支持 macOS 软件"
+            },
+            {
+                "id":"insidegui/WWDC"
             }
         ]
     },
