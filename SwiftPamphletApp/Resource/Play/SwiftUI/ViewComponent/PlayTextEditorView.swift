@@ -16,7 +16,7 @@ struct PlayTextEditorView: View {
     // for CodeEditorView
     @Environment(\.colorScheme) private var colorScheme: ColorScheme
     @State private var codeMessages: Set<Located<Message>> = Set ()
-    @SceneStorage("editLocation") private var editLocation: CodeEditor.Location = CodeEditor.Location()
+    @SceneStorage("editLocation") private var editLocation: CodeEditor.Position  = CodeEditor.Position()
     var body: some View {
         
         // 使用 SwiftUI 自带 TextEditor
@@ -65,7 +65,7 @@ static func number() {
     let i3 = 36
     print(i3.isMultiple(of: 9)) // true
 }
-"""),
+"""), position: $editLocation,
                    messages: $codeMessages,
                    language: .swift,
                    layout: CodeEditor.LayoutConfiguration(showMinimap: true)
@@ -237,6 +237,3 @@ final class PNSTextConfiguredView: NSView {
     } // end viewWillDraw
 
 }
-
-
-
