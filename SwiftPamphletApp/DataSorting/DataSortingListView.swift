@@ -25,12 +25,14 @@ struct DataSortingListView: View {
     }
     
     @State private var model = [
+        M(name: "新鲜事", subs: [
+            M(name: "周报"),
+            M(name: "播客")
+        ]),
         M(name: "Swift", subs: [
             M(name: "Swift 官方"),
             M(name: "Swift 技术"),
-            M(name: "SwiftUI"),
-            M(name: "技术周报"),
-            M(name: "技术播客")
+            M(name: "SwiftUI")
         ]),
         M(name: "美术", subs: [
             M(name: "图片工具"),
@@ -56,8 +58,10 @@ struct DataSortingListView: View {
                     Text(m.name)
                         .font(.title)
                 }
+                
             }
         }
+        
     }
 }
 

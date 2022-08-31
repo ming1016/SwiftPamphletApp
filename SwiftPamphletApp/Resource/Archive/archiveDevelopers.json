@@ -40,6 +40,40 @@
         "id":2201261741,
         "users":[
             {
+                "id":"jessesquires"
+            },
+            {
+                "id":"mecid",
+                "des":"Swift with Majid"
+            },
+            {
+                "id":"kylef",
+                "des":"Commander"
+            },
+            {
+                "id":"joshaber",
+                "des":"at GitHub"
+            },
+            {
+                "id":"hebertialmeida"
+            },
+            {
+                "id":"onmyway133"
+            },
+            {
+                "id":"lkzhao"
+            },
+            {
+                "id":"insidegui"
+            },
+            {
+                "id":"Kyle-Ye"
+            },
+            {
+                "id":"ashfurrow",
+                "des":"Moya"
+            },
+            {
                 "id":"sindresorhus"
             }
         ]

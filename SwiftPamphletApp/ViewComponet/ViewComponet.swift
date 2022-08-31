@@ -130,30 +130,60 @@ struct ShareView: View {
 }
 
 // MARK: - WebView
-struct WebView: NSViewRepresentable {
-    let urlStr: String
-
-    func makeNSView(context: Context) -> some WKWebView {
-        return WKWebView()
-    }
-
-    func updateNSView(_ nsView: NSViewType, context: Context) {
-        let r = URLRequest(url: URL(string: urlStr)!)
-        nsView.load(r)
-    }
-}
-
 struct WebUIView: NSViewRepresentable {
-    let html: String
-    let baseURLStr: String
+    var urlStr: String = ""
+    var html: String = ""
+    var baseURLStr: String = ""
 
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+    
     func makeNSView(context: Context) -> some WKWebView {
-        return WKWebView()
+        let webView = WKWebView()
+        webView.navigationDelegate = context.coordinator
+        return webView
     }
 
     func updateNSView(_ nsView: NSViewType, context: Context) {
-        let host = URL(string: baseURLStr)?.host ?? ""
-        nsView.loadHTMLString(html, baseURL: URL(string: "https://\(host)"))
+        if urlStr.isEmpty {
+            let host = URL(string: baseURLStr)?.host ?? ""
+            nsView.loadHTMLString(html, baseURL: URL(string: "https://\(host)"))
+        } else {
+            let r = URLRequest(url: URL(string: urlStr)!)
+            nsView.load(r)
+        }
+    }
+    
+    class Coordinator: NSObject, WKNavigationDelegate {
+        
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            if navigationAction.navigationType == .linkActivated {
+                if let url = navigationAction.request.url {
+                    let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+                    if components?.scheme == "http" || components?.scheme == "https" {
+                        NSWorkspace.shared.open(url)
+                        decisionHandler(.cancel)
+                        return
+                    }
+                }
+            }
+            decisionHandler(.allow)
+        }
+        
+//        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+//            if navigationAction.navigationType == .linkActivated {
+//                if let url = navigationAction.request.url {
+//                    let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+//                    if components?.scheme == "http" || components?.scheme == "https" {
+//                        NSWorkspace.shared.open(url)
+//                        decisionHandler(.cancel)
+//                        return
+//                    }
+//                }
+//            }
+//            decisionHandler(.allow)
+//        }
     }
 }
 

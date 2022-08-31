@@ -11,7 +11,7 @@ struct RepoWebView: View {
     @EnvironmentObject var appVM: AppVM
     var urlStr: String
     var body: some View {
-        WebView(urlStr: urlStr)
+        WebUIView(urlStr: urlStr)
             .onAppear {
                 appVM.updateWebLink(s: urlStr)
             }

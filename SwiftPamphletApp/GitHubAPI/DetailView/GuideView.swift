@@ -19,7 +19,7 @@ struct GuideView: View {
             Spacer()
 
             NavigationLink {
-                WebView(urlStr: "https://github.com/\(SPC.pamphletIssueRepoName)/issues/" + "\(number)")
+                WebUIView(urlStr: "https://github.com/\(SPC.pamphletIssueRepoName)/issues/" + "\(number)")
             } label: {
                 Text("议题讨论 #\(number)")
             }

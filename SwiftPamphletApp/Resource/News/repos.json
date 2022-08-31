@@ -8,9 +8,6 @@
                 "des":"老司机 iOS 周报"
             },
             {
-                "id":"matteocrippa/awesome-swift"
-            },
-            {
                 "id":"ruanyf/weekly",
                 "des":"科技爱好者周刊"
             },
@@ -106,28 +103,8 @@
         "id":2111171958,
         "repos":[
             {
-                "id":"gonzalezreal/MarkdownUI"
-            },
-            {
-                "id":"tophat/RichTextView"
-            },
-            {
-                "id":"keitaoouchi/MarkdownView"
-            },
-            {
-                "id":"johnxnguyen/Down",
-                "des":"fast Markdown"
-            },
-            {
-                "id":"qeude/SwiftDown",
-                "des":"Swift 写的可换主题的 Markdown 编辑器组件"
-            },
-            {
                 "id":"JohnSundell/Ink",
                 "des":"Markdown 解析器"
-            },
-            {
-                "id":"tnantoka/edhita"
             },
             {
                 "id":"coteditor/CotEditor"
@@ -191,6 +168,10 @@
             {
                 "id":"mergesort/Boutique",
                 "des":"只需两行代码即可构建实时更新的 Swift 离线就绪应用程序，快速集成。"
+            },
+            {
+                "id":"Lighter-swift/Lighter",
+                "des":"轻量写法简单的访问 SQLite3"
             }
         ]
     },
@@ -319,34 +300,7 @@
         "id":2112221710,
         "repos":[
             {
-                "id":"bpisano/Weather",
-                "des":"天气应用"
-            },
-            {
-                "id":"Dimillian/MovieSwiftUI",
-                "des":"电影 MovieDB 应用"
-            },
-            {
-                "id":"chojnac/NotionSwift"
-            },
-            {
-                "id":"Dimillian/RedditOS",
-                "des":"SwiftUI 写的 Reddit客户端"
-            },
-            {
-                "id":"carson-katri/reddit-swiftui",
-                "des":"SwiftUI 写的 Reddit客户端"
-            },
-            {
-                "id":"Dimillian/SwiftHN",
-                "des":"Hacker News 阅读"
-            },
-            {
                 "id":"tatsuz0u/EhPanda"
-            },
-            {
-                "id":"Dimillian/MortyUI",
-                "des":"GraphQL + SwiftUI 开发的瑞克和莫蒂应用"
             },
             {
                 "id":"Finb/V2ex-Swift",
@@ -588,10 +542,6 @@
                 "id":"ivanvorobei/SwiftUI"
             },
             {
-                "id":"kon9chunkit/GitHub-Chinese-Top-Charts",
-                "des":"GitHub中文排行榜"
-            },
-            {
                 "id":"onmyway133/awesome-swiftui"
             },
             {
@@ -601,10 +551,6 @@
             {
                 "id":"sindresorhus/awesome",
                 "des":"内容广"
-            },
-            {
-                "id":"SwiftPackageIndex/PackageList",
-                "des":"Swift 开源库索引"
             },
             {
                 "id":"matteocrippa/awesome-swift"
@@ -716,10 +662,6 @@
             {
                 "id":"carson-katri/swift-request",
                 "des":"声明式的网络请求"
-            },
-            {
-                "id":"alibaba/xquic",
-                "des":"阿里巴巴发布的 XQUIC 库"
             },
             {
                 "id":"kasketis/netfox",
@@ -875,18 +817,6 @@
                 "des":"用 swift 来写网站"
             },
             {
-                "id":"highlightjs/highlight.js",
-                "des":"语法高亮"
-            },
-            {
-                "id":"sivan/heti",
-                "des":"赫蹏（hètí）中文排版"
-            },
-            {
-                "id":"kevquirk/simple.css",
-                "des":"简单大方基础 CSS 样式"
-            },
-            {
                 "id":"liviuschera/noctis",
                 "des":"好看的代码编辑器配色主题"
             }
@@ -941,13 +871,6 @@
         "name":"Apple",
         "id":2112212004,
         "repos":[
-            {
-                "id":"apple/swift"
-            },
-            {
-                "id":"apple/swift-evolution",
-                "des":"提案"
-            },
             {
                 "id":"apple/swift-corelibs-foundation"
             },
@@ -1012,7 +935,7 @@
         "repos":[
             {
                 "id":"krzysztofzablocki/KZFileWatchers",
-                "des":"Swift编写的观察本地或者网络上，比如网盘和FTP的文件变化"
+                "des":"Swift 编写的观察本地或者网络上，比如网盘和FTP的文件变化"
             }
         ]
     }

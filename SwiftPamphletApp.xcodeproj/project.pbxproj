@@ -239,10 +239,10 @@
 		08BE637D27CDDA47002BC6A8 /* DataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE637C27CDDA47002BC6A8 /* DataListView.swift */; };
 		08BE638027CDDAAD002BC6A8 /* D-SwiftUI.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE637E27CDDAAD002BC6A8 /* D-SwiftUI.json */; };
 		08BE638127CDDAAD002BC6A8 /* D-Swift 官方.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE637F27CDDAAD002BC6A8 /* D-Swift 官方.json */; };
-		08BE638727CDF1DD002BC6A8 /* D-技术播客.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638227CDF1DD002BC6A8 /* D-技术播客.json */; };
+		08BE638727CDF1DD002BC6A8 /* D-播客.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638227CDF1DD002BC6A8 /* D-播客.json */; };
 		08BE638827CDF1DD002BC6A8 /* D-图片工具.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638327CDF1DD002BC6A8 /* D-图片工具.json */; };
 		08BE638927CDF1DD002BC6A8 /* D-Swift 技术.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638427CDF1DD002BC6A8 /* D-Swift 技术.json */; };
-		08BE638A27CDF1DD002BC6A8 /* D-技术周报.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638527CDF1DD002BC6A8 /* D-技术周报.json */; };
+		08BE638A27CDF1DD002BC6A8 /* D-周报.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638527CDF1DD002BC6A8 /* D-周报.json */; };
 		08BE638B27CDF1DD002BC6A8 /* D-美术素材.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638627CDF1DD002BC6A8 /* D-美术素材.json */; };
 		08BE638F27CE157D002BC6A8 /* 161.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638E27CE157D002BC6A8 /* 161.md */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
@@ -500,10 +500,10 @@
 		08BE637C27CDDA47002BC6A8 /* DataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListView.swift; sourceTree = "<group>"; };
 		08BE637E27CDDAAD002BC6A8 /* D-SwiftUI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-SwiftUI.json"; sourceTree = "<group>"; };
 		08BE637F27CDDAAD002BC6A8 /* D-Swift 官方.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-Swift 官方.json"; sourceTree = "<group>"; };
-		08BE638227CDF1DD002BC6A8 /* D-技术播客.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-技术播客.json"; sourceTree = "<group>"; };
+		08BE638227CDF1DD002BC6A8 /* D-播客.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-播客.json"; sourceTree = "<group>"; };
 		08BE638327CDF1DD002BC6A8 /* D-图片工具.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-图片工具.json"; sourceTree = "<group>"; };
 		08BE638427CDF1DD002BC6A8 /* D-Swift 技术.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-Swift 技术.json"; sourceTree = "<group>"; };
-		08BE638527CDF1DD002BC6A8 /* D-技术周报.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-技术周报.json"; sourceTree = "<group>"; };
+		08BE638527CDF1DD002BC6A8 /* D-周报.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-周报.json"; sourceTree = "<group>"; };
 		08BE638627CDF1DD002BC6A8 /* D-美术素材.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-美术素材.json"; sourceTree = "<group>"; };
 		08BE638E27CE157D002BC6A8 /* 161.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 161.md; sourceTree = "<group>"; };
 		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
@@ -567,6 +567,15 @@
 				08038766276700F100519B15 /* CCYRESTfulAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		08401CDD28BF7F0900883D8B /* 新鲜事 */ = {
+			isa = PBXGroup;
+			children = (
+				08BE638227CDF1DD002BC6A8 /* D-播客.json */,
+				08BE638527CDF1DD002BC6A8 /* D-周报.json */,
+			);
+			path = "新鲜事";
 			sourceTree = "<group>";
 		};
 		08448F44279E7E0300B61353 /* Syntax */ = {
@@ -1261,6 +1270,7 @@
 		08BE637B27CDDA2B002BC6A8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				08401CDD28BF7F0900883D8B /* 新鲜事 */,
 				08BE638D27CE0521002BC6A8 /* 美术 */,
 				08BE638C27CDF438002BC6A8 /* Swift */,
 			);
@@ -1273,8 +1283,6 @@
 				08BE637F27CDDAAD002BC6A8 /* D-Swift 官方.json */,
 				08BE637E27CDDAAD002BC6A8 /* D-SwiftUI.json */,
 				08BE638427CDF1DD002BC6A8 /* D-Swift 技术.json */,
-				08BE638227CDF1DD002BC6A8 /* D-技术播客.json */,
-				08BE638527CDF1DD002BC6A8 /* D-技术周报.json */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -1450,7 +1458,7 @@
 				08448F9A279EBA2900B61353 /* 6.md in Resources */,
 				08026C472869B26900792EF1 /* 180.md in Resources */,
 				08448F8C279EB84800B61353 /* 93.md in Resources */,
-				08BE638727CDF1DD002BC6A8 /* D-技术播客.json in Resources */,
+				08BE638727CDF1DD002BC6A8 /* D-播客.json in Resources */,
 				08448FC1279EC4B500B61353 /* 26.md in Resources */,
 				08448F9C279EBA8200B61353 /* 7.md in Resources */,
 				08448FAF279EC31200B61353 /* 15.md in Resources */,
@@ -1552,7 +1560,7 @@
 				086A5F4F2744EF3B00FECE02 /* guide-syntax.json in Resources */,
 				08BE636027C7A674002BC6A8 /* 155.md in Resources */,
 				086A5F5E274CCAEC00FECE02 /* lib-SwiftUI.json in Resources */,
-				08BE638A27CDF1DD002BC6A8 /* D-技术周报.json in Resources */,
+				08BE638A27CDF1DD002BC6A8 /* D-周报.json in Resources */,
 				08448F51279E900500B61353 /* 132.md in Resources */,
 				08449026279ECE5400B61353 /* 70.md in Resources */,
 				08448F95279EB96F00B61353 /* 2.md in Resources */,

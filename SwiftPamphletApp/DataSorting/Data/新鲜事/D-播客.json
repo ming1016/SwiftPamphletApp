@@ -1,0 +1,38 @@
+[
+    {
+        "t":"weak self",
+        "id":"https://weakself.dev/"
+    },
+    {
+        "t":"ggtalk",
+        "id":"https://talk.swift.gg/"
+    },
+    {
+        "t":"Swift by Sundell",
+        "id":"https://swiftbysundell.com/podcast/"
+    },
+    {
+        "t":"Swift Unwrapped",
+        "id":"https://swiftunwrapped.github.io/"
+    },
+    {
+        "t":"中文播客榜",
+        "d":"枫言枫语出品",
+        "id":"https://xyzrank.com/"
+    },
+    {
+        "t":"乱翻书",
+        "d":"这是一档关注商业、科技和互联网的从业者对话节目。关心How和Why，以及少有人注意到的What。内容主要方向是科技考古、产品复盘和热点解读，希望能够为你带来信息增量。 「乱翻书」主理人是潘乱，代表作品有《腾讯没有梦想》、字节跳动/快手早期关键节点的系列特写。",
+        "id":"https://www.xiaoyuzhoufm.com/podcast/61358d971c5d56efe5bcb5d2"
+    },
+    {
+        "t":"漫编室",
+        "d":"编辑与漫画有关的书籍，思考与漫画有关的困境。 漫编室主编，铁雄。",
+        "id":"https://www.xiaoyuzhoufm.com/podcast/5fab75d183c34e85dda07f5d"
+    },
+    {
+        "t":"Anyway.FM 设计杂谈",
+        "d":"由 UI 设计师 JJ Ying 和 Leon Gao 主播的 podcast，主题包括但不限于视觉设计。",
+        "id":"https://www.xiaoyuzhoufm.com/podcast/5e280faf418a84a0461fba0e"
+    }
+]

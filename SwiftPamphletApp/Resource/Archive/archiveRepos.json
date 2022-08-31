@@ -10,6 +10,9 @@
             {
                 "id":"chasays/newsletter-list",
                 "des":"有趣 Newsletter 收集"
+            },
+            {
+                "id":"matteocrippa/awesome-swift"
             }
         ]
     },
@@ -17,6 +20,30 @@
         "name":"文字处理",
         "id":2202181426,
         "repos":[
+            {
+                "id":"twostraws/Sourceful",
+                "des":"使用 UITextView 和 NSTextView 的 iOS 和 macOS 的语法高亮源编辑器。"
+            },
+            {
+                "id":"gonzalezreal/MarkdownUI"
+            },
+            {
+                "id":"tophat/RichTextView"
+            },
+            {
+                "id":"keitaoouchi/MarkdownView"
+            },
+            {
+                "id":"johnxnguyen/Down",
+                "des":"fast Markdown"
+            },
+            {
+                "id":"qeude/SwiftDown",
+                "des":"Swift 写的可换主题的 Markdown 编辑器组件"
+            },
+            {
+                "id":"tnantoka/edhita"
+            },
             {
                 "id":"sbarex/SourceCodeSyntaxHighlight",
                 "des":"源码高亮的 macOS 系统插件"
@@ -73,6 +100,10 @@
         "name":"网络",
         "id":2112281351,
         "repos":[
+            {
+                "id":"alibaba/xquic",
+                "des":"阿里巴巴发布的 XQUIC 库"
+            },
             {
                 "id":"nerdsupremacist/Sync",
                 "des":"对象在多个设备上同步，SwiftUI 实现"
@@ -322,6 +353,14 @@
         "id":2203011515,
         "repos":[
             {
+                "id":"kon9chunkit/GitHub-Chinese-Top-Charts",
+                "des":"GitHub中文排行榜"
+            },
+            {
+                "id":"SwiftPackageIndex/PackageList",
+                "des":"Swift 开源库索引"
+            },
+            {
                 "id":"vsouza/awesome-ios",
                 "des":"Objective-C 和 Swift 都有"
             },
@@ -491,6 +530,13 @@
         "id":2202041708,
         "repos":[
             {
+                "id":"apple/swift"
+            },
+            {
+                "id":"apple/swift-evolution",
+                "des":"提案"
+            },
+            {
                 "id":"llvm/llvm-project",
                 "des":"编译器"
             },
@@ -504,6 +550,33 @@
         "name":"接口",
         "id":2202062007,
         "repos":[
+            {
+                "id":"Dimillian/MortyUI",
+                "des":"GraphQL + SwiftUI 开发的瑞克和莫蒂应用"
+            },
+            {
+                "id":"bpisano/Weather",
+                "des":"天气应用"
+            },
+            {
+                "id":"Dimillian/MovieSwiftUI",
+                "des":"电影 MovieDB 应用"
+            },
+            {
+                "id":"chojnac/NotionSwift"
+            },
+            {
+                "id":"Dimillian/RedditOS",
+                "des":"SwiftUI 写的 Reddit客户端"
+            },
+            {
+                "id":"carson-katri/reddit-swiftui",
+                "des":"SwiftUI 写的 Reddit客户端"
+            },
+            {
+                "id":"Dimillian/SwiftHN",
+                "des":"Hacker News 阅读"
+            },
             {
                 "id":"samschott/maestral",
                 "des":"Dropbox 客户端"
@@ -525,6 +598,18 @@
         "name":"Web",
         "id":2207041739,
         "repos":[
+            {
+                "id":"highlightjs/highlight.js",
+                "des":"语法高亮"
+            },
+            {
+                "id":"sivan/heti",
+                "des":"赫蹏（hètí）中文排版"
+            },
+            {
+                "id":"kevquirk/simple.css",
+                "des":"简单大方基础 CSS 样式"
+            },
             {
                 "id":"mozilla-mobile/firefox-ios"
             }
