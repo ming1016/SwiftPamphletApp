@@ -19,7 +19,7 @@ struct IntroView: View {
             Text("戴铭的开发小册子").bold().font(.largeTitle)
             HStack {
                 Text("一本活的开发手册")
-                Link("GitHub 地址", destination: URL(string: "https://github.com/KwaiAppTeam/SwiftPamphletApp")!)
+                Link("GitHub 地址", destination: URL(string: "https://github.com/ming1016/SwiftPamphletApp")!)
             }
             Text("版本5.0").font(.footnote)
         }

@@ -11,7 +11,7 @@ struct SPC {
     static let gitHubAccessToken = "" // 在这里写上 Github 的access token。在 https://github.com/settings/tokens 申请你的access token。
     static let detailMinWidth: CGFloat = 550
     static let githubHost = "https://github.com/"
-    static let pamphletIssueRepoName = "KwaiAppTeam/SwiftPamphletApp"
+    static let pamphletIssueRepoName = "ming1016/SwiftPamphletApp"
 
     static let timerForDevsSec: Double = 160
     static let timerForExpSec: Double = 125
