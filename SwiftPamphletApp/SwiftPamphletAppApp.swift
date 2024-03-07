@@ -61,14 +61,6 @@ struct SwiftPamphletApp: View {
     var body: some View {
         NavigationView {
             SPSidebar()
-                .onAppear(perform: {
-#if DEBUG
-                    // do nothing
-#else
-                    appVM.onAppearEvent()
-                    appVM.rssFetch()
-#endif
-                })
                 .onReceive(timerForDevs, perform: { _ in
                     if SPC.gitHubAccessToken.isEmpty == false {
                         if let userName = appVM.timeForDevsEvent() {
@@ -81,9 +73,6 @@ struct SwiftPamphletApp: View {
                     if SPC.gitHubAccessToken.isEmpty == false {
                         appVM.timeForExpEvent()
                     }
-                }
-                .onReceive(timerForRss) { _ in
-                    appVM.rssFetch()
                 }
             IssuesListFromCustomView(vm: IssueVM(guideName:"guide-syntax"))
                 .frame(minWidth:60)

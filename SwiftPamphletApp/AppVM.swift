@@ -17,8 +17,6 @@ final class AppVM: ObservableObject {
     // 开发者动态
     @Published var devsNotis = [String: Int]()
     @Published var devsCountNotis = 0
-    // 博客动态
-    @Published var rssCountNotis = 0
     
     // MARK: - 库存档
     @Published var archiveRepos = [SPReposModel]()
@@ -79,38 +77,7 @@ final class AppVM: ObservableObject {
         webLinkStr = s
     }
 
-    // MARK: - RSS 读取
-    func rssFetch() {
-        Task {
-            do {
-                let rssFeed = SPC.rssFeed() // 获取所有 rss 源的模型
-                var i = 0
-                let count = rssFeed.count
-                let ics = ["🚶","🏃🏽","👩‍🦽","💃🏿","🐕","🤸🏻‍♀️","🤾🏾","🏂","🏊🏻","🚴🏼","🛩","🚠","🚕","🛴","🛸","🚁"]
-                for r in rssFeed {
-                    i += 1
-                    let progressStr = "(\(i)/\(count))"
-                    await updateAlertMsg(msg: "\(progressStr) 正在同步 \(ics.randomElement() ?? "") \(r.title) ：\(r.des)")
-                    let str = try await RSSReq(r.feedLink)
-                    guard let str = str else {
-                        break
-                    }
-                    RSSVM.handleFetchFeed(str: str, rssModel: r)
-                    // 在 Main Actor 更新通知数
-                    await rssUpdateNotis()
-                }
-            } catch {}
-            await updateAlertMsg(msg: "")
-        }
-    }
 
-    @MainActor
-    func rssUpdateNotis() {
-        do {
-            rssCountNotis = try RSSItemsDataHelper.findAllUnreadCount()
-            showAppBadgeLabel()
-        } catch {}
-    }
 
     @MainActor
     func updateAlertMsg(msg: String) {

@@ -14,13 +14,6 @@ struct SPSidebar: View {
         List {
             Section("新动态") {
                 NavigationLink {
-                    RSSListView(vm: RSSVM())
-                } label: {
-                    SideBarLabel(title: "博客|资讯", imageName: "p21")
-                        .badge(appVM.rssCountNotis)
-                }
-                
-                NavigationLink {
                     DataSortingListView()
                 } label: {
                     SideBarLabel(title: "资料整理", imageName: "p11")

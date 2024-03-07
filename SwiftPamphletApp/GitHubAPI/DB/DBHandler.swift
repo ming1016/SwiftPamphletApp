@@ -36,8 +36,6 @@ struct DB {
         do {
             try DevsNotiDataHelper.createTable()
             try RepoStoreDataHelper.createTable()
-            try RSSFeedDataHelper.createTable()
-            try RSSItemsDataHelper.createTable()
         } catch {
             throw DBError.connectionErr
         }
