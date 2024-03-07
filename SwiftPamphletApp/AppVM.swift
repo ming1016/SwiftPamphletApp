@@ -426,17 +426,18 @@ final class AppVM: ObservableObject {
         showAppBadgeLabel()
     }
 
+    // 更新 Dock 栏，显示未读数
     func showAppBadgeLabel() {
-        var count = devsCountNotis + expCountNotis + rssCountNotis
-        if count > 0 {
-            if count > SPC.unreadMagicNumber * 10 {
-                count = SPC.unreadMagicNumber * 10
-            }
-            NSApp.dockTile.showsApplicationBadge = true
-            NSApp.dockTile.badgeLabel = "\(count)"
-        } else {
-            NSApp.dockTile.badgeLabel = nil
-        }
+//        var count = devsCountNotis + expCountNotis + rssCountNotis
+//        if count > 0 {
+//            if count > SPC.unreadMagicNumber * 10 {
+//                count = SPC.unreadMagicNumber * 10
+//            }
+//            NSApp.dockTile.showsApplicationBadge = true
+//            NSApp.dockTile.badgeLabel = "\(count)"
+//        } else {
+//            NSApp.dockTile.badgeLabel = nil
+//        }
     }
 
     // 订阅网络状态

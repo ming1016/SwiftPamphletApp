@@ -27,6 +27,9 @@
 		08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08038766276700F100519B15 /* CCYRESTfulAPI.swift */; };
 		083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E02756503B0095E0EE /* AnimateLayout.swift */; };
 		083554E327572BB60095E0EE /* AppVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E227572BB60095E0EE /* AppVM.swift */; };
+		084417752B99B9060049297D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417742B99B9060049297D /* HomeView.swift */; };
+		084417772B99BA3F0049297D /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417762B99BA3F0049297D /* SidebarView.swift */; };
+		084417792B99BE720049297D /* DataLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417782B99BE720049297D /* DataLink.swift */; };
 		08448F092796A83D00B61353 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 08448F082796A83D00B61353 /* SwiftDate */; };
 		08448F0B2797F73200B61353 /* PlayArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08448F0A2797F73200B61353 /* PlayArchitecture.swift */; };
 		08448F0D2799035600B61353 /* PlaySecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08448F0C2799035600B61353 /* PlaySecurity.swift */; };
@@ -286,6 +289,9 @@
 		08038766276700F100519B15 /* CCYRESTfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRESTfulAPI.swift; sourceTree = "<group>"; };
 		083554E02756503B0095E0EE /* AnimateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLayout.swift; sourceTree = "<group>"; };
 		083554E227572BB60095E0EE /* AppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVM.swift; sourceTree = "<group>"; };
+		084417742B99B9060049297D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		084417762B99BA3F0049297D /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		084417782B99BE720049297D /* DataLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLink.swift; sourceTree = "<group>"; };
 		08448F0A2797F73200B61353 /* PlayArchitecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayArchitecture.swift; sourceTree = "<group>"; };
 		08448F0C2799035600B61353 /* PlaySecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySecurity.swift; sourceTree = "<group>"; };
 		08448F0E2799328700B61353 /* css_cn.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css_cn.html; sourceTree = "<group>"; };
@@ -571,6 +577,16 @@
 				08BE638527CDF1DD002BC6A8 /* D-周报.json */,
 			);
 			path = "新鲜事";
+			sourceTree = "<group>";
+		};
+		084417732B99B8EA0049297D /* HomeUI */ = {
+			isa = PBXGroup;
+			children = (
+				084417742B99B9060049297D /* HomeView.swift */,
+				084417762B99BA3F0049297D /* SidebarView.swift */,
+				084417782B99BE720049297D /* DataLink.swift */,
+			);
+			path = HomeUI;
 			sourceTree = "<group>";
 		};
 		08448F44279E7E0300B61353 /* Syntax */ = {
@@ -1063,6 +1079,7 @@
 				086A5F472744EF0800FECE02 /* Resource */,
 				086A5F252744ECD700FECE02 /* GitHubAPI */,
 				08CD61F327758855008C0935 /* RSSReader */,
+				084417732B99B8EA0049297D /* HomeUI */,
 				083554E227572BB60095E0EE /* AppVM.swift */,
 				086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */,
 				086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */,
@@ -1607,12 +1624,14 @@
 				08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */,
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
+				084417792B99BE720049297D /* DataLink.swift in Sources */,
 				08522BEB27CF7744005FF059 /* PlayKeyboard.swift in Sources */,
 				08C3BBA427CF1B7B00ACF0FE /* PlayPickerView.swift in Sources */,
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
 				08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				08BE636627C88750002BC6A8 /* PlayProgressView.swift in Sources */,
+				084417772B99BA3F0049297D /* SidebarView.swift in Sources */,
 				08F4BE6028609D8700733F12 /* PlayCharts.swift in Sources */,
 				086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */,
 				08BE637227CC6F13002BC6A8 /* PlayScrollView.swift in Sources */,
@@ -1640,6 +1659,7 @@
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
 				08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */,
 				08CD61F927758AF0008C0935 /* ParseStandXMLTagTokens.swift in Sources */,
+				084417752B99B9060049297D /* HomeView.swift in Sources */,
 				08449034279F6D0D00B61353 /* RepoWebView.swift in Sources */,
 				08522BDC27CF5079005FF059 /* PlayStepperView.swift in Sources */,
 				08522BE627CF5E9D005FF059 /* PlayEffect.swift in Sources */,
@@ -1822,6 +1842,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 5.0;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
@@ -1863,6 +1884,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";

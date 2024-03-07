@@ -15,6 +15,7 @@ struct SwiftPamphletAppApp: App {
     var body: some Scene {
         WindowGroup {
             SwiftPamphletApp()
+//            HomeView()
 //            Demo()
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
@@ -24,34 +25,6 @@ struct SwiftPamphletAppApp: App {
 struct Demo: View {
     var body: some View {
         Group {
-//            V()
-//            PlayCharts()
-//            PlayTextView()
-//            PlayLinkView()
-//            PlayLabelView()
-//            PlayTextEditorView()
-//            PlayTextFieldView()
-//            PlayButtonView()
-//            PlayStackView()
-//            PlayFormView()
-//            PlayToggleView()
-//            PlayListView()
-//            PlayControlGroupView()
-//            PlayGroupBoxView()
-//            PlayNavigationView()
-//            PlayLazyVStackAndLazyHStackView()
-//            PlayProgressView()
-//            PlayImageView()
-//            PlayLazyVGridAndLazyHGridView()
-//            PlayScrollView()
-//            PlaySuperposedLayerView()
-//            PlayTabView()
-//            PlayPickerView()
-//            PlaySliderView()
-//            PlayColor()
-//            PlayEffect()
-//            PlayKeyboard()
-//            PlayAnimation()
 //            PlayCanvas()
             
         }
@@ -164,42 +137,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
 
-        
+        // 生成 Markdown 文件
 //        AutoTask.buildContentMarkdownFile()
-        
-//        PlaySecurity.keyChain()
 
-//        PlayArchitecture.error()
-//        PlayArchitecture.codable()
-
-//        PlaySyntax.hashable()
-//        PlaySyntax.resultBuilder()
-//        PlaySyntax.dynamicCallable()
-//        PlaySyntax.dynamicMemberLookup()
-//        PlaySyntax.function()
-//        PlaySyntax.method()
-//        PlaySyntax.property()
-//        PlaySyntax.generics()
-//        PlaySyntax.result()
-//        PlaySyntax.string()
-//        PlaySyntax.array()
-//        PlaySyntax.set()
-//        PlaySyntax.dictionary()
-//        PlaySyntax.enum()
-//        PlaySyntax.number()
-
-//        PlayFoundation.userDefaults()
-//        PlayFoundation.random()
-//        PlayFoundation.data()
-//        PlayFoundation.date()
-//        PlayFoundation.formatter()
-//        PlayFoundation.measurement()
-//        PlayFoundation.file()
-//        PlayFoundation.scanner()
-//        let _ = PlayFoundation.attributeString()
-//        PlayFoundation.coaAndCow()
-
-//        self.window.makeKey()
     }
     
     func applicationWillTerminate(_ notification: Notification) {
