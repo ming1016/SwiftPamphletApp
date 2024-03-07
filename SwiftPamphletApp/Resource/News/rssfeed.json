@@ -7,13 +7,6 @@
         "feedLink":"https://www.swift.org/atom.xml"
     },
     {
-        "title":"iOS摸鱼周报",
-        "id":2201071620,
-        "des":"iOS 摸鱼周报",
-        "siteLink":"https://zhangferry.com/",
-        "feedLink":"https://zhangferry.com/atom.xml"
-    },
-    {
         "title":"Michael Tsai",
         "id":2201111053,
         "des":"一名 macOS 开发者的博客",
@@ -61,13 +54,6 @@
         "des":"一个人走得快，一群人走的远",
         "siteLink":"https://ming1016.github.io",
         "feedLink":"https://ming1016.github.io/atom.xml"
-    },
-    {
-        "title":"Swift by Sundell",
-        "id":2112311444,
-        "des":"Weekly Swift articles, podcasts and tips by John Sundell",
-        "siteLink":"https://www.swiftbysundell.com",
-        "feedLink":"https://www.swiftbysundell.com/rss"
     },
     {
         "title":"FIVE STARS",

@@ -1,115 +1,105 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "AttributedText",
-        "repositoryURL": "https://github.com/gonzalezreal/AttributedText",
-        "state": {
-          "branch": null,
-          "revision": "2dc2d7864e0fee4b524a5850d7d7cf9a7eeda0fc",
-          "version": "1.0.0"
-        }
-      },
-      {
-        "package": "CodeEditorView",
-        "repositoryURL": "https://github.com/mchakravarty/CodeEditorView.git",
-        "state": {
-          "branch": "main",
-          "revision": "373f3ecfaabdd06918e655cf4516b046aa7e290c",
-          "version": null
-        }
-      },
-      {
-        "package": "combine-schedulers",
-        "repositoryURL": "https://github.com/pointfreeco/combine-schedulers",
-        "state": {
-          "branch": null,
-          "revision": "4cf088c29a20f52be0f2ca54992b492c54e0076b",
-          "version": "0.5.3"
-        }
-      },
-      {
-        "package": "Inject",
-        "repositoryURL": "https://github.com/krzysztofzablocki/Inject.git",
-        "state": {
-          "branch": null,
-          "revision": "84ebbde86df4ec7532e8bfc6ad1fe4ed2ca1114f",
-          "version": "1.0.3"
-        }
-      },
-      {
-        "package": "Ink",
-        "repositoryURL": "https://github.com/johnsundell/ink.git",
-        "state": {
-          "branch": null,
-          "revision": "77c3d8953374a9cf5418ef0bd7108524999de85a",
-          "version": "0.5.1"
-        }
-      },
-      {
-        "package": "MarkdownUI",
-        "repositoryURL": "https://github.com/gonzalezreal/MarkdownUI",
-        "state": {
-          "branch": null,
-          "revision": "94e07c111f1ef0a9c997d2fadac984e8bb7d7405",
-          "version": "1.0.0"
-        }
-      },
-      {
-        "package": "NetworkImage",
-        "repositoryURL": "https://github.com/gonzalezreal/NetworkImage",
-        "state": {
-          "branch": null,
-          "revision": "f8b8ed0be39d2f4aa00a6e8d3b18a62a94eff8d8",
-          "version": "4.0.0"
-        }
-      },
-      {
-        "package": "SQLite.swift",
-        "repositoryURL": "https://github.com/stephencelis/SQLite.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "60a65015f6402b7c34b9a924f755ca0a73afeeaa",
-          "version": "0.13.1"
-        }
-      },
-      {
-        "package": "HTMLEntities",
-        "repositoryURL": "https://github.com/Kitura/swift-html-entities.git",
-        "state": {
-          "branch": null,
-          "revision": "3686a2b931be24dd2531307f89e2f1d648c0200e",
-          "version": "4.0.0"
-        }
-      },
-      {
-        "package": "SwiftCommonMark",
-        "repositoryURL": "https://github.com/gonzalezreal/SwiftCommonMark",
-        "state": {
-          "branch": null,
-          "revision": "ed252beaddecce28ea6363f800c773d6169011b8",
-          "version": "1.0.0"
-        }
-      },
-      {
-        "package": "SwiftDate",
-        "repositoryURL": "https://github.com/malcommac/SwiftDate",
-        "state": {
-          "branch": null,
-          "revision": "6190d0cefff3013e77ed567e6b074f324e5c5bf5",
-          "version": "6.3.1"
-        }
-      },
-      {
-        "package": "xctest-dynamic-overlay",
-        "repositoryURL": "https://github.com/pointfreeco/xctest-dynamic-overlay",
-        "state": {
-          "branch": null,
-          "revision": "50a70a9d3583fe228ce672e8923010c8df2deddd",
-          "version": "0.2.1"
-        }
+  "originHash" : "444bf76c1a8e33e1b420e260bf0545c937e0cf4b69b77cc9417a74ab5f5a1b40",
+  "pins" : [
+    {
+      "identity" : "attributedtext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonzalezreal/AttributedText",
+      "state" : {
+        "revision" : "2dc2d7864e0fee4b524a5850d7d7cf9a7eeda0fc",
+        "version" : "1.0.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "codeeditorview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mchakravarty/CodeEditorView.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "373f3ecfaabdd06918e655cf4516b046aa7e290c"
+      }
+    },
+    {
+      "identity" : "combine-schedulers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/combine-schedulers",
+      "state" : {
+        "revision" : "4cf088c29a20f52be0f2ca54992b492c54e0076b",
+        "version" : "0.5.3"
+      }
+    },
+    {
+      "identity" : "ink",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/johnsundell/ink.git",
+      "state" : {
+        "revision" : "77c3d8953374a9cf5418ef0bd7108524999de85a",
+        "version" : "0.5.1"
+      }
+    },
+    {
+      "identity" : "markdownui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonzalezreal/MarkdownUI",
+      "state" : {
+        "revision" : "94e07c111f1ef0a9c997d2fadac984e8bb7d7405",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "networkimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonzalezreal/NetworkImage",
+      "state" : {
+        "revision" : "f8b8ed0be39d2f4aa00a6e8d3b18a62a94eff8d8",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "sqlite.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stephencelis/SQLite.swift.git",
+      "state" : {
+        "revision" : "60a65015f6402b7c34b9a924f755ca0a73afeeaa",
+        "version" : "0.13.1"
+      }
+    },
+    {
+      "identity" : "swift-html-entities",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Kitura/swift-html-entities.git",
+      "state" : {
+        "revision" : "3686a2b931be24dd2531307f89e2f1d648c0200e",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "swiftcommonmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonzalezreal/SwiftCommonMark",
+      "state" : {
+        "revision" : "ed252beaddecce28ea6363f800c773d6169011b8",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftdate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/malcommac/SwiftDate",
+      "state" : {
+        "revision" : "6190d0cefff3013e77ed567e6b074f324e5c5bf5",
+        "version" : "6.3.1"
+      }
+    },
+    {
+      "identity" : "xctest-dynamic-overlay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "state" : {
+        "revision" : "50a70a9d3583fe228ce672e8923010c8df2deddd",
+        "version" : "0.2.1"
+      }
+    }
+  ],
+  "version" : 3
 }

@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Combine
-import InstrProfiling
 
 @main
 struct SwiftPamphletAppApp: App {
@@ -90,8 +89,12 @@ struct SwiftPamphletApp: View {
         NavigationView {
             SPSidebar()
                 .onAppear(perform: {
+#if DEBUG
+                    // do nothing
+#else
                     appVM.onAppearEvent()
                     appVM.rssFetch()
+#endif
                 })
                 .onReceive(timerForDevs, perform: { _ in
                     if SPC.gitHubAccessToken.isEmpty == false {
