@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import SMNetwork
 
 @main
 struct SwiftPamphletAppApp: App {
@@ -52,8 +53,12 @@ struct V: View {
 struct SwiftPamphletApp: View {
     
     @StateObject var appVM = AppVM()
+    @State var networkMonitor = NetworkMonitor()
+    
     @State var sb = Set<AnyCancellable>()
     @State var alertMsg = ""
+    
+    @State private var showNetworkAlert = false // 网络监控
 
     let timerForDevs = Timer.publish(every: SPC.timerForDevsSec, on: .main, in: .common).autoconnect()
     let timerForExp = Timer.publish(every: SPC.timerForExpSec, on: .main, in: .common).autoconnect()
@@ -113,6 +118,16 @@ struct SwiftPamphletApp: View {
             } // end ToolbarItemGroup
         } // end .toolbar
         .environmentObject(appVM)
+        // 网络监控
+        .environment(networkMonitor)
+        .onChange(of: networkMonitor.hasNetworkConnection, { oldValue, newValue in
+            showNetworkAlert = !newValue
+        })
+        .alert("NO INTERNET",
+               isPresented: $showNetworkAlert,
+               actions: {
+            Text("Close")
+        })
     }
 }
 

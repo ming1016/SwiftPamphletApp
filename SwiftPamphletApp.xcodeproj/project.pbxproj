@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -251,6 +251,7 @@
 		08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FC27758B8A008C0935 /* Lexer.swift */; };
 		08CD61FF27758B8A008C0935 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FD27758B8A008C0935 /* Token.swift */; };
 		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
+		08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 08ED80152B9C54DE0069B7EC /* SMNetwork */; };
 		08F4BE6028609D8700733F12 /* PlayCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE5F28609D8600733F12 /* PlayCharts.swift */; };
 		08F4BE6228616DC100733F12 /* PlayWeatherKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */; };
 		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
@@ -514,6 +515,7 @@
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
 				08BE634027BF953A002BC6A8 /* CodeEditorView in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
+				08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */,
 				08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1315,6 +1317,7 @@
 				08448F082796A83D00B61353 /* SwiftDate */,
 				08448F4D279E8CA400B61353 /* Ink */,
 				08BE633F27BF953A002BC6A8 /* CodeEditorView */,
+				08ED80152B9C54DE0069B7EC /* SMNetwork */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -1352,6 +1355,7 @@
 				08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */,
 				08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */,
+				08ED80142B9C54DE0069B7EC /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMNetwork" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -1842,6 +1846,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		08ED80142B9C54DE0069B7EC /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMNetwork" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SwiftPamphletApp/SharePackage/SMNetwork;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -1923,6 +1934,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */;
 			productName = HTMLEntities;
+		};
+		08ED80152B9C54DE0069B7EC /* SMNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SMNetwork;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
