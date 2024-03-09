@@ -11,7 +11,7 @@ struct RepoView: View {
     enum EnterType {
         case normal, readme
     }
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     @State var vm: RepoVM
     @State private var tabSelct = 1
     @State var type: EnterType = .normal

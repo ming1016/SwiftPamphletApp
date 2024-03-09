@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - Sidebar
 struct SPSidebar: View {
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     var body: some View {
         List {
             Section("新动态") {

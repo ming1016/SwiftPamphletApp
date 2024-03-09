@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActiveDeveloperListView: View {
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     @State var vm: IssueVM
     var body: some View {
         List {
@@ -49,7 +49,7 @@ struct ActiveDeveloperListView: View {
 // MARK: - 碎视图
 
 struct ActiveDeveloperUnreadLinkView: View {
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     var u: ADeveloperModel
     var body: some View {
         if appVM.devsNotis[u.id] ?? 0 > 0 {

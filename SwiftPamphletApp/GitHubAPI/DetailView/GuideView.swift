@@ -9,7 +9,7 @@ import SwiftUI
 import Ink
 
 struct GuideView: View {
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     var number: Int
     var title: String
     var body: some View {

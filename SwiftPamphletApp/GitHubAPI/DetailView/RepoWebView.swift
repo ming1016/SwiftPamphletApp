@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RepoWebView: View {
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     var urlStr: String
     var body: some View {
         WebUIView(urlStr: urlStr)

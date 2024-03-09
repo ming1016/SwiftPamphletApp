@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var appVM = AppVM()
+    @State var appVM = AppVM()
     @State private var selectedDataLinkString: String?
     
     var body: some View {
@@ -17,6 +17,6 @@ struct HomeView: View {
         } detail: {
           DataLink.viewToShow(for: selectedDataLinkString)
         }
-        .environmentObject(appVM)
+        .environment(appVM)
     }
 }

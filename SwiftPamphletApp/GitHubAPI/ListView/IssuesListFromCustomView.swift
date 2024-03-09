@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IssuesListFromCustomView: View {
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     @State var vm: IssueVM
     var body: some View {
         List {

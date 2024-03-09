@@ -9,23 +9,24 @@ import Foundation
 import Combine
 import AppKit
 
-final class AppVM: ObservableObject {
+@Observable
+final class AppVM {
 
-    @Published var alertMsg = "" // 警告信息
-    @Published var webLinkStr = "" // 导航上的外部链接
+    var alertMsg = "" // 警告信息
+    var webLinkStr = "" // 导航上的外部链接
 
     // 开发者动态
-    @Published var devsNotis = [String: Int]()
-    @Published var devsCountNotis = 0
+    var devsNotis = [String: Int]()
+    var devsCountNotis = 0
     
     // MARK: - 库存档
-    @Published var archiveRepos = [SPReposModel]()
+    var archiveRepos = [SPReposModel]()
 
     // MARK: - CCY
     // 探索更多库
-    @Published var expNotis = [String: DBRepoStore]()
-    @Published var expCountNotis = 0
-    @Published var exps = [SPReposModel]()
+    var expNotis = [String: DBRepoStore]()
+    var expCountNotis = 0
+    var exps = [SPReposModel]()
 
     // MARK: - Combine
     private var cc: [AnyCancellable] = []

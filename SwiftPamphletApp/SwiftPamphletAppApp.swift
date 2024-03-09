@@ -38,7 +38,7 @@ struct Demo: View {
 
 struct V: View {
     
-    @StateObject var appVM = AppVM()
+    @State var appVM = AppVM()
     @State var isEnterFullScreen: Bool = false // 全屏控制
     var body: some View {
         Button {
@@ -52,7 +52,7 @@ struct V: View {
 
 struct SwiftPamphletApp: View {
     
-    @StateObject var appVM = AppVM()
+    @State var appVM = AppVM()
     @State var networkMonitor = NetworkMonitor()
     
     @State var sb = Set<AnyCancellable>()
@@ -117,7 +117,7 @@ struct SwiftPamphletApp: View {
 
             } // end ToolbarItemGroup
         } // end .toolbar
-        .environmentObject(appVM)
+        .environment(appVM)
         // 网络监控
         .environment(networkMonitor)
         .onChange(of: networkMonitor.hasNetworkConnection, { oldValue, newValue in

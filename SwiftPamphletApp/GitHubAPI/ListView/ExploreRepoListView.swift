@@ -9,7 +9,7 @@ import SwiftUI
 import CodeEditorView
 
 struct ExploreRepoListView: View {
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     var showAsGroup: Bool = false
     var isArchive = false
     var body: some View {
@@ -91,7 +91,7 @@ struct ExploreRepoListView: View {
 
 // MARK: - 碎视图
 struct ExpListUnreadLinkView: View {
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     var r: ARepoModel
     var body: some View {
         if appVM.expNotis[r.id]?.unRead ?? 0 > 0 {
@@ -106,7 +106,7 @@ struct ExpListUnreadLinkView: View {
 }
 
 struct ExpListLinkView: View {
-    @EnvironmentObject var appVM: AppVM
+    @Environment(AppVM.self) var appVM
     var r: ARepoModel
     var rIdArr: [String] {
         r.id.components(separatedBy: "/")
