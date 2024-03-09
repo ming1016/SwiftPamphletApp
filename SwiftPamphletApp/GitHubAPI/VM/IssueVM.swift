@@ -8,17 +8,23 @@
 import Foundation
 import Combine
 
+@Observable
 final class IssueVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
+    
+    @ObservationIgnored
     public let repoName: String
+    @ObservationIgnored
     public let issueNumber: Int
+    @ObservationIgnored
     public let guideName: String
-    @Published private(set) var issue: IssueModel
-    @Published private(set) var comments: [IssueComment]
-    @Published private(set) var customIssues: [CustomIssuesModel]
-    @Published private(set) var cIADs: [SPActiveDevelopersModel] // 开发者动态
-    @Published var errHint = false
-    @Published var errMsg = ""
+    
+    var issue: IssueModel
+    var comments: [IssueComment]
+    var customIssues: [CustomIssuesModel]
+    var cIADs: [SPActiveDevelopersModel] // 开发者动态
+    var errHint = false
+    var errMsg = ""
 
     // MARK: - APISev
     private let apiSev: APISev

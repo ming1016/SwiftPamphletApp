@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IssuesListFromCustomView: View {
     @EnvironmentObject var appVM: AppVM
-    @StateObject var vm: IssueVM
+    @State var vm: IssueVM
     var body: some View {
         List {
             ForEach(vm.customIssues) { ci in

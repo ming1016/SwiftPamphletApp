@@ -12,7 +12,7 @@ struct IssueView: View {
         case normal, hiddenUserInfo
     }
 
-    @StateObject var vm: IssueVM
+    @State var vm: IssueVM
     @State var type: EnterType = .normal
 
     var body: some View {
