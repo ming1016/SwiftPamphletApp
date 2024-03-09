@@ -8,18 +8,21 @@
 import Foundation
 import Combine
 import AppKit
+import Observation
 
+@Observable
 final class UserVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
 
+    @ObservationIgnored
     public let userName: String
 
-    @Published private(set) var user: UserModel
-    @Published private(set) var events: [EventModel]
-    @Published private(set) var receivedEvents: [EventModel]
+    var user: UserModel
+    var events: [EventModel]
+    var receivedEvents: [EventModel]
 
-    @Published var errHint = false
-    @Published var errMsg = ""
+    var errHint = false
+    var errMsg = ""
     private let errSj = PassthroughSubject<APISevError, Never>()
 
     private let apiSev: APISev

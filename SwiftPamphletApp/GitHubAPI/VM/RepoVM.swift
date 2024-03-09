@@ -8,19 +8,21 @@
 import Foundation
 import Combine
 
+@Observable
 final class RepoVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
 
+    @ObservationIgnored
     public let repoName: String
 
-    @Published private(set) var repo: RepoModel
-    @Published private(set) var commits: [CommitModel]
-    @Published private(set) var issueEvents: [IssueEventModel]
-    @Published private(set) var issues: [IssueModel]
-    @Published private(set) var readme: RepoContent
+    var repo: RepoModel
+    var commits: [CommitModel]
+    var issueEvents: [IssueEventModel]
+    var issues: [IssueModel]
+    var readme: RepoContent
 
-    @Published var errHint = false
-    @Published var errMsg = ""
+    var errHint = false
+    var errMsg = ""
     private let errSj = PassthroughSubject<APISevError, Never>()
 
     private let apiSev: APISev

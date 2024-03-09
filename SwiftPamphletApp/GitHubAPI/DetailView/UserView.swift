@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserView: View {
     @EnvironmentObject var appVM: AppVM
-    @StateObject var vm: UserVM
+    @State var vm: UserVM
     var isShowUserEventLink = true
     var isCleanUnread = false
     @State private var unReadCount = 0

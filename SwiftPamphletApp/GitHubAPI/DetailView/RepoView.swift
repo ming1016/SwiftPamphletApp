@@ -12,7 +12,7 @@ struct RepoView: View {
         case normal, readme
     }
     @EnvironmentObject var appVM: AppVM
-    @StateObject var vm: RepoVM
+    @State var vm: RepoVM
     @State private var tabSelct = 1
     @State var type: EnterType = .normal
     var isShowRepoCommitsLink = true
