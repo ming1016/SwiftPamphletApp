@@ -67,7 +67,7 @@ struct SwiftPamphletApp: View {
         NavigationView {
             SPSidebar()
                 .onReceive(timerForDevs, perform: { _ in
-                    if SPC.gitHubAccessToken.isEmpty == false {
+                    if SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false {
                         if let userName = appVM.timeForDevsEvent() {
                             let vm = UserVM(userName: userName)
                             vm.doing(.notiEvent)
@@ -75,7 +75,7 @@ struct SwiftPamphletApp: View {
                     }
                 })
                 .onReceive(timerForExp) { _ in
-                    if SPC.gitHubAccessToken.isEmpty == false {
+                    if SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false {
                         appVM.timeForExpEvent()
                     }
                 }

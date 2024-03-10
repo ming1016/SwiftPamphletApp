@@ -115,9 +115,18 @@ extension RESTful {
         }
         req.setValue("application/json", forHTTPHeaderField: "Accept")
         // 不同平台接口的 token
+        // 处理 github token
+        var githubat = ""
+        if SPC.gitHubAccessToken.isEmpty == true {
+            githubat = SPC.githubAccessToken()
+        } else {
+            githubat = SPC.gitHubAccessToken
+        }
+        
+        // 不同情况的设置
         switch self.conf.host {
         case .github:
-            req.setValue("token \(SPC.gitHubAccessToken)", forHTTPHeaderField: "Authorization")
+            req.setValue("token \(githubat)", forHTTPHeaderField: "Authorization")
         }
 
         return req

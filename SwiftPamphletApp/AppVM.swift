@@ -361,7 +361,7 @@ final class AppVM {
     // MARK: - 计算通知数量
     @MainActor
     func calculateExpCountNotis() {
-        if SPC.gitHubAccessToken.isEmpty == true {
+        if SPC.gitHubAccessToken.isEmpty == true && SPC.githubAccessToken().isEmpty == true {
             return
         }
         var count = 0

@@ -38,6 +38,8 @@ struct DataLink: Identifiable {
             IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Combine"))
         case "Concurrency":
             IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Concurrency"))
+        case "设置":
+            SettingView()
         default:
             // 默认是语法速查
             IssuesListFromCustomView(vm: IssueVM(guideName: "guide-syntax"))
@@ -65,6 +67,9 @@ extension DataLink {
             DataLink(title: "SwiftUI", imageName: "p3"),
             DataLink(title: "Combine", imageName: "p19"),
             DataLink(title: "Concurrency", imageName: "p1")
+        ]),
+        DataLink(title: "更多", imageName: "", children: [
+            DataLink(title: "设置", imageName: "p4")
         ])
     ]
 }

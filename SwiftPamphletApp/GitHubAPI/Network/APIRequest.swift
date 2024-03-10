@@ -42,7 +42,14 @@ final class APISev: APISevType {
         // token 处理
         // TODO: 支持 OAuth
         // TODO: 访问受限后会crash，异常待处理
-        req.addValue("token \(SPC.gitHubAccessToken)", forHTTPHeaderField: "Authorization")
+        var githubat = ""
+        if SPC.gitHubAccessToken.isEmpty == true {
+            githubat = SPC.githubAccessToken()
+        } else {
+            githubat = SPC.gitHubAccessToken
+        }
+        
+        req.addValue("token \(githubat)", forHTTPHeaderField: "Authorization")
 
 //        print(req.allHTTPHeaderFields!)
         let de = JSONDecoder()

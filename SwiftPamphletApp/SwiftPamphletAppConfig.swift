@@ -8,7 +8,13 @@
 import Foundation
 
 struct SPC {
-    static let gitHubAccessToken = "" // 在这里写上 Github 的access token。在 https://github.com/settings/tokens 申请你的access token。
+    static let gitHubAccessToken = "" // 在这里可以手动写上 Github 的 access token。在 https://github.com/settings/tokens 申请你的access token。
+    static let githubUDTokenKey = "udtoken" // UserDefault 存储 token 的 key
+    static func githubAccessToken() -> String {
+        let ud = UserDefaults.standard
+        return ud.string(forKey: SPC.githubUDTokenKey) ?? ""
+    }
+    
     static let detailMinWidth: CGFloat = 550
     static let githubHost = "https://github.com/"
     static let pamphletIssueRepoName = "ming1016/SwiftPamphletApp"

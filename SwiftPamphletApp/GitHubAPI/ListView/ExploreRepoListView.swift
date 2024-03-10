@@ -14,7 +14,7 @@ struct ExploreRepoListView: View {
     var isArchive = false
     var body: some View {
         List {
-            if SPC.gitHubAccessToken.isEmpty == false && showAsGroup == false {
+            if (SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false) && showAsGroup == false {
                 Section {
                     ForEach(isArchive ? appVM.archiveRepos : appVM.exps) { er in
                         ForEach(er.repos) { r in
@@ -29,7 +29,7 @@ struct ExploreRepoListView: View {
 
             // end Section
             ForEach(isArchive ? appVM.archiveRepos : appVM.exps) { er in
-                if SPC.gitHubAccessToken.isEmpty == false && showAsGroup == false {
+                if (SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false) && showAsGroup == false {
 //                    Section {
 //                        ForEach(er.repos) { r in
 //                            if (appVM.expNotis[r.id]?.unRead ?? 0) > 0 {
@@ -47,7 +47,7 @@ struct ExploreRepoListView: View {
                 } else {
                     DisclosureGroupLikeButton {
                         ForEach(er.repos) { r in
-                            if SPC.gitHubAccessToken.isEmpty == false {
+                            if SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false {
                                 NavigationLink(destination: RepoView(vm: RepoVM(repoName: r.id))) {
                                     ExpListLinkView(r: r)
                                 }

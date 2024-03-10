@@ -21,7 +21,7 @@ struct SPSidebar: View {
             }
             Section("Github") {
 
-                if SPC.gitHubAccessToken.isEmpty == false {
+                if SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false {
                     NavigationLink {
                         ExploreRepoListView(showAsGroup: false)
                     } label: {
