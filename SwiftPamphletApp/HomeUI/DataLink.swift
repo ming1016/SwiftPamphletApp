@@ -17,7 +17,7 @@ struct DataLink: Identifiable {
     static func viewToShow(for title: String?) -> some View {
         switch title {
         case "资料整理":
-            DataSortingListView()
+            InfoListView()
         case "库动态":
             ExploreRepoListView(showAsGroup: false)
         case "开发者":

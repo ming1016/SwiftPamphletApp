@@ -30,6 +30,8 @@
 		08397E232B9EE8F400DFDD02 /* InfoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */; };
 		08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E242B9EEE1300DFDD02 /* InfoListView.swift */; };
 		08397E272B9EF37600DFDD02 /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E262B9EF37600DFDD02 /* InfosView.swift */; };
+		08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E282B9F0A9100DFDD02 /* EditInfoView.swift */; };
+		08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */; };
 		084417752B99B9060049297D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417742B99B9060049297D /* HomeView.swift */; };
 		084417772B99BA3F0049297D /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417762B99BA3F0049297D /* SidebarView.swift */; };
 		084417792B99BE720049297D /* DataLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417782B99BE720049297D /* DataLink.swift */; };
@@ -286,6 +288,8 @@
 		08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDataModel.swift; sourceTree = "<group>"; };
 		08397E242B9EEE1300DFDD02 /* InfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListView.swift; sourceTree = "<group>"; };
 		08397E262B9EF37600DFDD02 /* InfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosView.swift; sourceTree = "<group>"; };
+		08397E282B9F0A9100DFDD02 /* EditInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoView.swift; sourceTree = "<group>"; };
+		08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryView.swift; sourceTree = "<group>"; };
 		084417742B99B9060049297D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		084417762B99BA3F0049297D /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		084417782B99BE720049297D /* DataLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLink.swift; sourceTree = "<group>"; };
@@ -564,6 +568,8 @@
 				08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */,
 				08397E242B9EEE1300DFDD02 /* InfoListView.swift */,
 				08397E262B9EF37600DFDD02 /* InfosView.swift */,
+				08397E282B9F0A9100DFDD02 /* EditInfoView.swift */,
+				08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */,
 			);
 			path = InfoOrganizer;
 			sourceTree = "<group>";
@@ -1594,6 +1600,7 @@
 				08522BEB27CF7744005FF059 /* PlayKeyboard.swift in Sources */,
 				08C3BBA427CF1B7B00ACF0FE /* PlayPickerView.swift in Sources */,
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
+				08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */,
 				08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */,
 				08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
@@ -1637,6 +1644,7 @@
 				08BE633527BF54A0002BC6A8 /* PlayTextEditorView.swift in Sources */,
 				08AEAEF5277F0A1E00B969E2 /* SPSidebar.swift in Sources */,
 				086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */,
+				08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
 				08BE635627C63CF6002BC6A8 /* PlayControlGroupView.swift in Sources */,
 				083554E327572BB60095E0EE /* AppVM.swift in Sources */,

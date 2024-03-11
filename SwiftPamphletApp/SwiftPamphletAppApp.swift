@@ -19,7 +19,6 @@ struct SwiftPamphletAppApp: App {
             SwiftPamphletApp()
 //            HomeView()
 //                .modelContainer(for: [IOInfo.self])
-//            Demo()
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
     }
