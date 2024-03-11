@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import SMNetwork
+import SwiftData
 
 @main
 struct SwiftPamphletAppApp: App {
@@ -17,6 +18,7 @@ struct SwiftPamphletAppApp: App {
         WindowGroup {
             SwiftPamphletApp()
 //            HomeView()
+//                .modelContainer(for: [IOInfo.self])
 //            Demo()
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题

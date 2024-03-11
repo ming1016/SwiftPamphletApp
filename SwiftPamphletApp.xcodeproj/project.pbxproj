@@ -27,6 +27,9 @@
 		08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08038766276700F100519B15 /* CCYRESTfulAPI.swift */; };
 		083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E02756503B0095E0EE /* AnimateLayout.swift */; };
 		083554E327572BB60095E0EE /* AppVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E227572BB60095E0EE /* AppVM.swift */; };
+		08397E232B9EE8F400DFDD02 /* InfoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */; };
+		08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E242B9EEE1300DFDD02 /* InfoListView.swift */; };
+		08397E272B9EF37600DFDD02 /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E262B9EF37600DFDD02 /* InfosView.swift */; };
 		084417752B99B9060049297D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417742B99B9060049297D /* HomeView.swift */; };
 		084417772B99BA3F0049297D /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417762B99BA3F0049297D /* SidebarView.swift */; };
 		084417792B99BE720049297D /* DataLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417782B99BE720049297D /* DataLink.swift */; };
@@ -280,6 +283,9 @@
 		08038766276700F100519B15 /* CCYRESTfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRESTfulAPI.swift; sourceTree = "<group>"; };
 		083554E02756503B0095E0EE /* AnimateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLayout.swift; sourceTree = "<group>"; };
 		083554E227572BB60095E0EE /* AppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVM.swift; sourceTree = "<group>"; };
+		08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDataModel.swift; sourceTree = "<group>"; };
+		08397E242B9EEE1300DFDD02 /* InfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListView.swift; sourceTree = "<group>"; };
+		08397E262B9EF37600DFDD02 /* InfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosView.swift; sourceTree = "<group>"; };
 		084417742B99B9060049297D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		084417762B99BA3F0049297D /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		084417782B99BE720049297D /* DataLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLink.swift; sourceTree = "<group>"; };
@@ -550,6 +556,16 @@
 				08038766276700F100519B15 /* CCYRESTfulAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		08397E212B9EE83F00DFDD02 /* InfoOrganizer */ = {
+			isa = PBXGroup;
+			children = (
+				08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */,
+				08397E242B9EEE1300DFDD02 /* InfoListView.swift */,
+				08397E262B9EF37600DFDD02 /* InfosView.swift */,
+			);
+			path = InfoOrganizer;
 			sourceTree = "<group>";
 		};
 		08401CDD28BF7F0900883D8B /* 新鲜事 */ = {
@@ -1053,6 +1069,7 @@
 		086A5F052744E88E00FECE02 /* SwiftPamphletApp */ = {
 			isa = PBXGroup;
 			children = (
+				08397E212B9EE83F00DFDD02 /* InfoOrganizer */,
 				08ED801A2B9D1EDA0069B7EC /* Setting */,
 				080124FD27EC62DC00E44222 /* SwiftPamphletAppDebug.entitlements */,
 				08CD61FB27758B22008C0935 /* Core */,
@@ -1572,11 +1589,13 @@
 				08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */,
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
+				08397E232B9EE8F400DFDD02 /* InfoDataModel.swift in Sources */,
 				084417792B99BE720049297D /* DataLink.swift in Sources */,
 				08522BEB27CF7744005FF059 /* PlayKeyboard.swift in Sources */,
 				08C3BBA427CF1B7B00ACF0FE /* PlayPickerView.swift in Sources */,
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
 				08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */,
+				08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				08BE636627C88750002BC6A8 /* PlayProgressView.swift in Sources */,
 				084417772B99BA3F0049297D /* SidebarView.swift in Sources */,
@@ -1602,6 +1621,7 @@
 				08522BD827CF344B005FF059 /* PlaySliderView.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
+				08397E272B9EF37600DFDD02 /* InfosView.swift in Sources */,
 				08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */,
 				084417752B99B9060049297D /* HomeView.swift in Sources */,
 				08449034279F6D0D00B61353 /* RepoWebView.swift in Sources */,
