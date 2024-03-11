@@ -12,7 +12,7 @@ struct InfoListView: View {
     @Environment(\.modelContext) var modelContext
     @State private var path = NavigationPath()
     @State private var searchText = ""
-    @State private var sortOrder = [SortDescriptor(\IOInfo.updateDate)]
+    @State private var sortOrder = [SortDescriptor(\IOInfo.updateDate, order: .reverse)]
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -23,7 +23,7 @@ struct InfoListView: View {
                 }
                 .toolbar {
                     Menu("Sort", systemImage: "arrow.up.arrow.down") {
-                        Picker("Sort", selection: $sortOrder) {
+                        Picker("排序", selection: $sortOrder) {
                             Text("正序")
                                 .tag([SortDescriptor(\IOInfo.updateDate)])
                             Text("倒序")

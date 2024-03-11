@@ -27,7 +27,11 @@ struct InfosView: View {
         List {
             ForEach(infos) { info in
                 NavigationLink(value: info) {
-                    Text(info.name)
+                    HStack {
+                        Text(info.name)
+                        Spacer()
+                        Text(info.category?.name ?? "")
+                    }
                 }
             }
             .onDelete(perform: { indexSet in

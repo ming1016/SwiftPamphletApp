@@ -32,6 +32,8 @@
 		08397E272B9EF37600DFDD02 /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E262B9EF37600DFDD02 /* InfosView.swift */; };
 		08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E282B9F0A9100DFDD02 /* EditInfoView.swift */; };
 		08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */; };
+		08397E2F2B9F353B00DFDD02 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E2E2B9F353B00DFDD02 /* CategoryListView.swift */; };
+		08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 08397E312B9F39C100DFDD02 /* SwiftSoup */; };
 		084417752B99B9060049297D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417742B99B9060049297D /* HomeView.swift */; };
 		084417772B99BA3F0049297D /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417762B99BA3F0049297D /* SidebarView.swift */; };
 		084417792B99BE720049297D /* DataLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417782B99BE720049297D /* DataLink.swift */; };
@@ -290,6 +292,7 @@
 		08397E262B9EF37600DFDD02 /* InfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosView.swift; sourceTree = "<group>"; };
 		08397E282B9F0A9100DFDD02 /* EditInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoView.swift; sourceTree = "<group>"; };
 		08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryView.swift; sourceTree = "<group>"; };
+		08397E2E2B9F353B00DFDD02 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		084417742B99B9060049297D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		084417762B99BA3F0049297D /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		084417782B99BE720049297D /* DataLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLink.swift; sourceTree = "<group>"; };
@@ -527,6 +530,7 @@
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
 				08BE634027BF953A002BC6A8 /* CodeEditorView in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
+				08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */,
 				08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */,
 				08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */,
 			);
@@ -567,6 +571,7 @@
 			children = (
 				08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */,
 				08397E242B9EEE1300DFDD02 /* InfoListView.swift */,
+				08397E2E2B9F353B00DFDD02 /* CategoryListView.swift */,
 				08397E262B9EF37600DFDD02 /* InfosView.swift */,
 				08397E282B9F0A9100DFDD02 /* EditInfoView.swift */,
 				08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */,
@@ -1352,6 +1357,7 @@
 				08448F4D279E8CA400B61353 /* Ink */,
 				08BE633F27BF953A002BC6A8 /* CodeEditorView */,
 				08ED80152B9C54DE0069B7EC /* SMNetwork */,
+				08397E312B9F39C100DFDD02 /* SwiftSoup */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -1390,6 +1396,7 @@
 				08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */,
 				08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */,
 				08ED80142B9C54DE0069B7EC /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMNetwork" */,
+				08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -1603,6 +1610,7 @@
 				08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */,
 				08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */,
 				08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */,
+				08397E2F2B9F353B00DFDD02 /* CategoryListView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				08BE636627C88750002BC6A8 /* PlayProgressView.swift in Sources */,
 				084417772B99BA3F0049297D /* SidebarView.swift in Sources */,
@@ -1894,6 +1902,14 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
 		08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/malcommac/SwiftDate";
@@ -1945,6 +1961,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		08397E312B9F39C100DFDD02 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
 		08448F082796A83D00B61353 /* SwiftDate */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */;
