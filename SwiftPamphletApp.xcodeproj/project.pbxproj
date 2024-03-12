@@ -29,11 +29,11 @@
 		083554E327572BB60095E0EE /* AppVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E227572BB60095E0EE /* AppVM.swift */; };
 		08397E232B9EE8F400DFDD02 /* InfoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */; };
 		08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E242B9EEE1300DFDD02 /* InfoListView.swift */; };
-		08397E272B9EF37600DFDD02 /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E262B9EF37600DFDD02 /* InfosView.swift */; };
 		08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E282B9F0A9100DFDD02 /* EditInfoView.swift */; };
 		08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */; };
 		08397E2F2B9F353B00DFDD02 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E2E2B9F353B00DFDD02 /* CategoryListView.swift */; };
 		08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 08397E312B9F39C100DFDD02 /* SwiftSoup */; };
+		08397E342BA0178500DFDD02 /* DetailLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E332BA0178500DFDD02 /* DetailLink.swift */; };
 		084417752B99B9060049297D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417742B99B9060049297D /* HomeView.swift */; };
 		084417772B99BA3F0049297D /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417762B99BA3F0049297D /* SidebarView.swift */; };
 		084417792B99BE720049297D /* DataLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417782B99BE720049297D /* DataLink.swift */; };
@@ -191,6 +191,9 @@
 		086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* PlayTextView.swift */; };
 		086A5F672754C27900FECE02 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F662754C27900FECE02 /* DBHandler.swift */; };
 		086A5F6A2755F3BE00FECE02 /* repos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* repos.json */; };
+		0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C6182BA040E5000B620D /* InfoRowView.swift */; };
+		0871C61B2BA04D23000B620D /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61A2BA04D23000B620D /* CategoryRowView.swift */; };
+		0871C61D2BA05F44000B620D /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61C2BA05F44000B620D /* InfosView.swift */; };
 		088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EE8F427BD24E000764525 /* PlayLinkView.swift */; };
 		0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896FB8F27BA39B100676B7F /* PlayButtonView.swift */; };
 		0896FB9227BA486900676B7F /* 145.md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* 145.md */; };
@@ -289,10 +292,10 @@
 		083554E227572BB60095E0EE /* AppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVM.swift; sourceTree = "<group>"; };
 		08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDataModel.swift; sourceTree = "<group>"; };
 		08397E242B9EEE1300DFDD02 /* InfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListView.swift; sourceTree = "<group>"; };
-		08397E262B9EF37600DFDD02 /* InfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosView.swift; sourceTree = "<group>"; };
 		08397E282B9F0A9100DFDD02 /* EditInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoView.swift; sourceTree = "<group>"; };
 		08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryView.swift; sourceTree = "<group>"; };
 		08397E2E2B9F353B00DFDD02 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		08397E332BA0178500DFDD02 /* DetailLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLink.swift; sourceTree = "<group>"; };
 		084417742B99B9060049297D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		084417762B99BA3F0049297D /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		084417782B99BE720049297D /* DataLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLink.swift; sourceTree = "<group>"; };
@@ -450,6 +453,9 @@
 		086A5F632754C14F00FECE02 /* PlayTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTextView.swift; sourceTree = "<group>"; };
 		086A5F662754C27900FECE02 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		086A5F692755F3BE00FECE02 /* repos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = repos.json; path = SwiftPamphletApp/Resource/News/repos.json; sourceTree = SOURCE_ROOT; };
+		0871C6182BA040E5000B620D /* InfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRowView.swift; sourceTree = "<group>"; };
+		0871C61A2BA04D23000B620D /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
+		0871C61C2BA05F44000B620D /* InfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosView.swift; sourceTree = "<group>"; };
 		0886702B27F804010001EA81 /* SwiftPamphletApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPamphletApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		088EE8F427BD24E000764525 /* PlayLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLinkView.swift; sourceTree = "<group>"; };
 		0896FB8F27BA39B100676B7F /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
@@ -571,8 +577,10 @@
 			children = (
 				08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */,
 				08397E242B9EEE1300DFDD02 /* InfoListView.swift */,
+				0871C61C2BA05F44000B620D /* InfosView.swift */,
+				0871C6182BA040E5000B620D /* InfoRowView.swift */,
 				08397E2E2B9F353B00DFDD02 /* CategoryListView.swift */,
-				08397E262B9EF37600DFDD02 /* InfosView.swift */,
+				0871C61A2BA04D23000B620D /* CategoryRowView.swift */,
 				08397E282B9F0A9100DFDD02 /* EditInfoView.swift */,
 				08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */,
 			);
@@ -594,6 +602,7 @@
 				084417742B99B9060049297D /* HomeView.swift */,
 				084417762B99BA3F0049297D /* SidebarView.swift */,
 				084417782B99BE720049297D /* DataLink.swift */,
+				08397E332BA0178500DFDD02 /* DetailLink.swift */,
 			);
 			path = HomeUI;
 			sourceTree = "<group>";
@@ -1593,6 +1602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08BE633727BF6CBC002BC6A8 /* PlayTextFieldView.swift in Sources */,
+				0871C61B2BA04D23000B620D /* CategoryRowView.swift in Sources */,
 				08522BF227D1D49B005FF059 /* PlayCanvas.swift in Sources */,
 				08BE634827C4B6A2002BC6A8 /* PlayStackView.swift in Sources */,
 				08BE636227C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift in Sources */,
@@ -1606,6 +1616,7 @@
 				084417792B99BE720049297D /* DataLink.swift in Sources */,
 				08522BEB27CF7744005FF059 /* PlayKeyboard.swift in Sources */,
 				08C3BBA427CF1B7B00ACF0FE /* PlayPickerView.swift in Sources */,
+				0871C61D2BA05F44000B620D /* InfosView.swift in Sources */,
 				08448F4B279E872B00B61353 /* GuideView.swift in Sources */,
 				08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */,
 				08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */,
@@ -1623,9 +1634,11 @@
 				08AEAEF3277F09FA00B969E2 /* NavView.swift in Sources */,
 				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
 				08522BF027CF9FFA005FF059 /* PlayAnimation.swift in Sources */,
+				08397E342BA0178500DFDD02 /* DetailLink.swift in Sources */,
 				08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */,
 				08BE635E27C72F50002BC6A8 /* PlayNavigationView.swift in Sources */,
 				08448F0D2799035600B61353 /* PlaySecurity.swift in Sources */,
+				0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
 				08C411F427951181006FC340 /* PlaySyntax.swift in Sources */,
 				083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */,
@@ -1636,7 +1649,6 @@
 				08522BD827CF344B005FF059 /* PlaySliderView.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
-				08397E272B9EF37600DFDD02 /* InfosView.swift in Sources */,
 				08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */,
 				084417752B99B9060049297D /* HomeView.swift in Sources */,
 				08449034279F6D0D00B61353 /* RepoWebView.swift in Sources */,

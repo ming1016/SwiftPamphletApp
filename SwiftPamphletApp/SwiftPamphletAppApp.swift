@@ -16,8 +16,8 @@ struct SwiftPamphletAppApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            SwiftPamphletApp()
-//            HomeView()
+            SwiftPamphletApp() // 老版本
+//            HomeView() // 新版本
 //                .modelContainer(for: [IOInfo.self])
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
@@ -28,7 +28,6 @@ struct Demo: View {
     var body: some View {
         Group {
 //            PlayCanvas()
-            
         }
         .frame(minWidth:300, maxWidth: .infinity, minHeight: 550, maxHeight: .infinity)
         .onAppear {

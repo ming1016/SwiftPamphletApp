@@ -14,10 +14,10 @@ struct DataLink: Identifiable {
     var children: [DataLink]?
     
     @ViewBuilder
-    static func viewToShow(for title: String?) -> some View {
+    static func viewToShow(for title: String?, selectInfo:Binding<IOInfo?>) -> some View {
         switch title {
         case "资料整理":
-            InfoListView()
+            InfoListView(selectInfo: selectInfo)
         case "库动态":
             ExploreRepoListView(showAsGroup: false)
         case "开发者":
@@ -52,12 +52,12 @@ extension DataLink {
         DataLink(title: "动态", imageName: "", children: [
             DataLink(title: "资料整理", imageName: "p11")
         ]),
-        DataLink(title: "Github", imageName: "", children: [
+//        DataLink(title: "Github", imageName: "", children: [
 //            DataLink(title: "库动态", imageName: "p6"),
 //            DataLink(title: "开发者", imageName: "p5"),
-            DataLink(title: "探索库", imageName: "p24"),
-            DataLink(title: "库存档", imageName: "p25")
-        ]),
+//            DataLink(title: "探索库", imageName: "p24"),
+//            DataLink(title: "库存档", imageName: "p25")
+//        ]),
         DataLink(title: "Swift指南", imageName: "", children: [
             DataLink(title: "语法速查", imageName: "p23"),
             DataLink(title: "特性", imageName: "p10"),

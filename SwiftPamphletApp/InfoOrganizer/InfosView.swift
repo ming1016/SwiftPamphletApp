@@ -2,7 +2,7 @@
 //  InfosView.swift
 //  SwiftPamphletApp
 //
-//  Created by Ming Dai on 2024/3/11.
+//  Created by Ming Dai on 2024/3/12.
 //
 
 import SwiftUI
@@ -11,7 +11,9 @@ import SwiftData
 struct InfosView: View {
     @Environment(\.modelContext) var modelContext
     @Query var infos: [IOInfo]
-    init(searchString: String = "", sortOrder:[SortDescriptor<IOInfo>] = []) {
+    @Binding var selectInfo: IOInfo?
+    
+    init(searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = []) {
         _infos = Query(filter: #Predicate { info in
             if searchString.isEmpty {
                 true
@@ -21,29 +23,19 @@ struct InfosView: View {
                 || info.des.localizedStandardContains(searchString)
             }
         }, sort: sortOrder)
+        
+        self._selectInfo = selectInfo
     }
     
     var body: some View {
-        List {
+        List(selection: $selectInfo) {
             ForEach(infos) { info in
-                NavigationLink(value: info) {
-                    HStack {
-                        Text(info.name)
-                        Spacer()
-                        Text(info.category?.name ?? "")
-                    }
-                }
+//                NavigationLink(value: info) {
+//
+//                }
+                InfoRowView(info: info, selectedInfo: selectInfo)
+                .tag(info)
             }
-            .onDelete(perform: { indexSet in
-                deleteInfos(at: indexSet)
-            })
-        }
-    }
-    
-    func deleteInfos(at offsets: IndexSet) {
-        for offset in offsets {
-            let info = infos[offset]
-            modelContext.delete(info)
         }
     }
 }

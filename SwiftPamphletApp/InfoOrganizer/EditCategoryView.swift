@@ -13,11 +13,13 @@ struct EditCategoryView: View {
     
     var body: some View {
         VStack {
-            Form {
-                TextField("分类名", text: $cate.name)
+            if cate.name != "unavailable.com" {
+                Form {
+                    TextField("分类名", text: $cate.name)
+                }
+                .navigationTitle("编辑分类")
+                .padding(30)
             }
-            .navigationTitle("编辑分类")
-            .padding(30)
             CategoryListView()
             Spacer()
         }

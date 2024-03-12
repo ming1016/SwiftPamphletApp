@@ -10,11 +10,9 @@ import SwiftUI
 struct SidebarView: View {
     @Binding var selectedDataLinkString: String?
     
+    @Binding var selectInfo: IOInfo?
+    
     var body: some View {
-//        List(DataLink.dataLinks, children: \.children, selection: $selectedDataLinkString) { link in
-//            SideBarLabel(title: link.title, imageName: link.imageName)
-//                .tag(link.title)
-//        }
         List(selection: $selectedDataLinkString, content: {
             ForEach(DataLink.dataLinks) { link in
                 Section {

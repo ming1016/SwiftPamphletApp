@@ -11,21 +11,15 @@ import SwiftData
 struct CategoryListView: View {
     @Environment(\.modelContext) var modelContext
     @Query var cates: [IOCategory]
+    @State var selectCate: IOCategory?
     
     var body: some View {
-        List {
+        List(selection: $selectCate) {
             ForEach(cates) { cate in
                 NavigationLink(value: cate) {
-                    Text(cate.name)
+                    CategoryRowView(cate: cate, selectedCate: selectCate)
                 }
             }
-            .onDelete(perform: deleteCates(at:))
-        }
-    }
-    func deleteCates(at offsets: IndexSet) {
-        for offset in offsets {
-            let cate = cates[offset]
-            modelContext.delete(cate)
         }
     }
 }

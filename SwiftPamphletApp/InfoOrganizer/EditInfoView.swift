@@ -10,14 +10,15 @@ import SwiftData
 import SwiftSoup
 
 struct EditInfoView: View {
+    @Environment(\.modelContext) var modelContext
     @Bindable var info: IOInfo
-    @Binding var navigationPath: NavigationPath
     
     @Query(sort: [
-        SortDescriptor(\IOCategory.updateDate)
+        SortDescriptor(\IOCategory.updateDate, order: .reverse)
     ]) var categories: [IOCategory]
     
-    @Environment(\.modelContext) var modelContext
+    @State var isShowInspector = false
+    @State var cate:IOCategory? = nil
     
     var body: some View {
         VStack {
@@ -44,7 +45,13 @@ struct EditInfoView: View {
                             }
                         }
                     }
-                    Button("添加和管理分类", action: addCate)
+                    .onChange(of: info.category) { oldValue, newValue in
+                        info.category?.updateDate = Date.now
+                    }
+                    HStack {
+                        Button("添加分类", action: addCate)
+                        Button("管理分类", action: manageCate)
+                    }
                 }
                 
                 Section("描述") {
@@ -52,18 +59,28 @@ struct EditInfoView: View {
                 }
             }
             .navigationTitle("编辑资料")
-            .navigationDestination(for: IOCategory.self) { cate in
-                EditCategoryView(cate: cate)
-            }
             .padding(30)
+            .inspector(isPresented: $isShowInspector) {
+                EditCategoryView(cate: cate ?? IOCategory(name: "unavailable.com", createDate: Date.now, updateDate: Date.now))
+            }
+            .toolbar {
+                Button("关闭", systemImage: "sidebar.right") {
+                    isShowInspector.toggle()
+                }
+                
+            }
             Spacer()
         }
     }
     func addCate() {
-        let cate = IOCategory(name: "", createDate: Date.now, updateDate: Date.now)
-        modelContext.insert(cate)
-        navigationPath.append(cate)
+        cate = IOCategory(name: "", createDate: Date.now, updateDate: Date.now)
+        modelContext.insert(cate!)
+        isShowInspector = true
     }
+    func manageCate() {
+        isShowInspector.toggle()
+    }
+
     func fetchTitleFromUrl(urlString: String) async {
         guard let url = URL(string: urlString) else {
             return

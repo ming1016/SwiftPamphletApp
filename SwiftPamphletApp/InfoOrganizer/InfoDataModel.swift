@@ -9,14 +9,14 @@ import Foundation
 import SwiftData
 
 @Model
-class IOInfo {
+final class IOInfo {
     var name: String = ""
     var url: String = ""
     var des: String = ""
     var category: IOCategory?
     
-    var createDate: Date
-    var updateDate: Date
+    var createDate: Date = Date.now
+    var updateDate: Date = Date.now
     
     init(name: String, 
          url: String,
@@ -32,6 +32,12 @@ class IOInfo {
         self.createDate = createDate
         self.updateDate = updateDate
     }
+    
+    static func delete(_ info: IOInfo) {
+        if let context = info.modelContext {
+            context.delete(info)
+        }
+    }
 }
 
 @Model
@@ -39,8 +45,8 @@ class IOCategory {
     var name: String = ""
     var infos: [IOInfo]? = [IOInfo]()
     
-    var createDate: Date
-    var updateDate: Date
+    var createDate: Date = Date.now
+    var updateDate: Date = Date.now
     
     init(name: String, 
          createDate: Date,
@@ -49,5 +55,11 @@ class IOCategory {
         self.name = name
         self.createDate = createDate
         self.updateDate = updateDate
+    }
+    
+    static func delete(_ cate: IOCategory) {
+        if let context = cate.modelContext {
+            context.delete(cate)
+        }
     }
 }

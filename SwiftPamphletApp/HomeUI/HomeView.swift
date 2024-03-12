@@ -10,12 +10,25 @@ import SwiftUI
 struct HomeView: View {
     @State var appVM = AppVM()
     @State private var selectedDataLinkString: String?
+    @State private var selectInfo: IOInfo? = nil
     
     var body: some View {
         NavigationSplitView {
-            SidebarView(selectedDataLinkString: $selectedDataLinkString)
+            SidebarView(selectedDataLinkString: $selectedDataLinkString, selectInfo: $selectInfo)
+        } content: {
+            if let link = selectedDataLinkString {
+                DataLink.viewToShow(for: link, selectInfo: $selectInfo)
+            } else {
+                Text("请选择")
+            }
         } detail: {
-          DataLink.viewToShow(for: selectedDataLinkString)
+            if let info = selectInfo {
+                DetailLink.viewToShow(for: "资料", selectInfo: info)
+            } else {
+                Text("请选择")
+            }
+//            Text("请选择")
+//          DataLink.viewToShow(for: selectedDataLinkString)
         }
         .environment(appVM)
     }
