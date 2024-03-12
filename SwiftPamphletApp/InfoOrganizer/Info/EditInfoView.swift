@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import SwiftSoup
+import CodeEditor
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
@@ -25,12 +26,19 @@ struct EditInfoView: View {
             Form {
                 Section {
                     TextField("标题", text: $info.name)
-                    TextField("地址", text: $info.url)
-                        .onChange(of: info.url) { oldValue, newValue in
-                            Task {
-                                await fetchTitleFromUrl(urlString:newValue)
+                    HStack {
+                        TextField("地址", text: $info.url)
+                            .onChange(of: info.url) { oldValue, newValue in
+                                Task {
+                                    await fetchTitleFromUrl(urlString:newValue)
+                                }
                             }
-                        }
+                        Button {
+                            gotoWebBrowser(urlStr: info.url)
+                        } label: {
+                            Label("浏览器打开", systemImage: "safari")
+                        } // end Button
+                    }
                 }
                 
                 Section("选择分类") {
@@ -54,8 +62,8 @@ struct EditInfoView: View {
                     }
                 }
                 
-                Section("描述") {
-                    TextField("详细描述", text: $info.des, axis: .vertical)
+                Section("备注") {
+                    TextEditor(text: $info.des)
                 }
             }
             .navigationTitle("编辑资料")

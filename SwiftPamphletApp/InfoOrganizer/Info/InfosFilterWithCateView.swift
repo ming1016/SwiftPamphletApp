@@ -1,5 +1,5 @@
 //
-//  InfosView.swift
+//  InfosFilterWithCateView.swift
 //  SwiftPamphletApp
 //
 //  Created by Ming Dai on 2024/3/12.
@@ -8,19 +8,17 @@
 import SwiftUI
 import SwiftData
 
-struct InfosView: View {
+struct InfosFilterWithCateView: View {
     @Environment(\.modelContext) var modelContext
     @Query var infos: [IOInfo]
     @Binding var selectInfo: IOInfo?
     
-    init(searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = []) {
+    init(filterCateName: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = []) {
         _infos = Query(filter: #Predicate { info in
-            if searchString.isEmpty {
+            if filterCateName.isEmpty {
                 true
             } else {
-                info.name.localizedStandardContains(searchString)
-                || info.url.localizedStandardContains(searchString)
-                || info.des.localizedStandardContains(searchString)
+                info.category?.name == filterCateName
             }
         }, sort: sortOrder)
         
@@ -30,13 +28,9 @@ struct InfosView: View {
     var body: some View {
         List(selection: $selectInfo) {
             ForEach(infos) { info in
-//                NavigationLink(value: info) {
-//
-//                }
                 InfoRowView(info: info, selectedInfo: selectInfo)
                 .tag(info)
             }
         }
     }
 }
-

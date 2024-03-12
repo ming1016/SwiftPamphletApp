@@ -160,6 +160,13 @@ func loadFileContent(path: String) -> String {
 // decoder
 // extension 
 
+extension NSPasteboard {
+    func copyText(_ text: String) {
+        self.clearContents()
+        self.setString(text, forType: .string)
+    }
+}
+
 // base64
 extension String {
     func base64Encoded() -> String? {
