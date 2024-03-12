@@ -22,44 +22,51 @@ struct InfoListView: View {
             InfosView(searchString: searchText, selectInfo: $selectInfo, sortOrder: sortOrder)
                 .navigationTitle("资料列表")
                 .toolbar {
-                    Menu("Sort", systemImage: "arrow.up.arrow.down") {
-                        Picker("分类", selection: $filterCate) {
-                            ForEach(cates) { cate in
-                                Text(cate.name)
-                                    .tag(cate.name)
+                    ToolbarItem(placement: .navigation) {
+                        Button("添加资料", systemImage: "plus", action: addInfo)
+                    }
+                    ToolbarItem(placement: .navigation) {
+                        Menu("Sort", systemImage: "tag") {
+                            Picker("分类", selection: $filterCate) {
+                                ForEach(cates) { cate in
+                                    Text(cate.name)
+                                        .tag(cate.name)
+                                }
+                            }
+                            Picker("排序", selection: $sortOrder) {
+                                Text("正序")
+                                    .tag([SortDescriptor(\IOInfo.updateDate)])
+                                Text("倒序")
+                                    .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
                             }
                         }
-                        Picker("排序", selection: $sortOrder) {
-                            Text("正序")
-                                .tag([SortDescriptor(\IOInfo.updateDate)])
-                            Text("倒序")
-                                .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
-                        }
                     }
-                    Button("添加资料", systemImage: "plus", action: addInfo)
-                    
                 }
                 .searchable(text: $searchText)
         } else {
             InfosFilterWithCateView(filterCateName: filterCate, selectInfo: $selectInfo, sortOrder: sortOrder)
-                .navigationTitle("资料列表")
+                .navigationTitle("分类 - \(filterCate)")
                 .toolbar {
-                    Menu("Sort", systemImage: "arrow.up.arrow.down") {
-                        Picker("分类", selection: $filterCate) {
-                            ForEach(cates) { cate in
-                                Text(cate.name)
-                                    .tag(cate.name)
-                            }
-                        }
-                        Picker("排序", selection: $sortOrder) {
-                            Text("正序")
-                                .tag([SortDescriptor(\IOInfo.updateDate)])
-                            Text("倒序")
-                                .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
-                        }
-                        
+                    ToolbarItem(placement: .navigation) {
+                        Button("添加资料", systemImage: "plus", action: addInfoWithCate)
                     }
-                    Button("添加资料", systemImage: "plus", action: addInfoWithCate)
+                    ToolbarItem(placement: .navigation) {
+                        Menu("Sort", systemImage: "tag") {
+                            Picker("分类", selection: $filterCate) {
+                                ForEach(cates) { cate in
+                                    Text(cate.name)
+                                        .tag(cate.name)
+                                }
+                            }
+                            Picker("排序", selection: $sortOrder) {
+                                Text("正序")
+                                    .tag([SortDescriptor(\IOInfo.updateDate)])
+                                Text("倒序")
+                                    .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
+                            }
+                            
+                        }
+                    }
                 }
         }
         

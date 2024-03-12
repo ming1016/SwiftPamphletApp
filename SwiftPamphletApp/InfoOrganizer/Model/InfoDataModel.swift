@@ -57,6 +57,11 @@ class IOCategory {
         self.updateDate = updateDate
     }
     
+    static var all: FetchDescriptor<IOCategory> {
+        var fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.updateDate, order: .reverse)])
+        return fd
+    }
+    
     static func delete(_ cate: IOCategory) {
         if let context = cate.modelContext {
             context.delete(cate)

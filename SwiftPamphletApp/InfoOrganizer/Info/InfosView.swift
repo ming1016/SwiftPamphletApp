@@ -14,7 +14,7 @@ struct InfosView: View {
     @Binding var selectInfo: IOInfo?
     
     init(searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = []) {
-        _infos = Query(filter: #Predicate { info in
+        var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
             if searchString.isEmpty {
                 true
             } else {
@@ -22,7 +22,9 @@ struct InfosView: View {
                 || info.url.localizedStandardContains(searchString)
                  || info.des.localizedStandardContains(searchString)
             }
-        }, sort: sortOrder)
+        }, sortBy: sortOrder)
+        fd.fetchLimit = 1000
+        _infos = Query(fd)
         
         self._selectInfo = selectInfo
     }

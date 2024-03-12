@@ -14,13 +14,16 @@ struct InfosFilterWithCateView: View {
     @Binding var selectInfo: IOInfo?
     
     init(filterCateName: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = []) {
-        _infos = Query(filter: #Predicate { info in
+        
+        var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
             if filterCateName.isEmpty {
                 true
             } else {
                 info.category?.name == filterCateName
             }
-        }, sort: sortOrder)
+        }, sortBy: sortOrder)
+        fd.fetchLimit = 1000
+        _infos = Query(fd)
         
         self._selectInfo = selectInfo
     }

@@ -8,18 +8,17 @@
 import SwiftUI
 import SwiftData
 import SwiftSoup
-import CodeEditor
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
     @Bindable var info: IOInfo
     
-    @Query(sort: [
-        SortDescriptor(\IOCategory.updateDate, order: .reverse)
-    ]) var categories: [IOCategory]
+    @Query(IOCategory.all) var categories: [IOCategory]
     
     @State var isShowInspector = false
     @State var cate:IOCategory? = nil
+    
+    @State var urlContent = ""
     
     var body: some View {
         VStack {
@@ -36,8 +35,13 @@ struct EditInfoView: View {
                         Button {
                             gotoWebBrowser(urlStr: info.url)
                         } label: {
-                            Label("浏览器打开", systemImage: "safari")
-                        } // end Button
+                            Image(systemName: "safari")
+                        }
+                        Button {
+                            info.des = urlContent
+                        } label: {
+                            Image(systemName: "square.and.arrow.down")
+                        }
                     }
                 }
                 
@@ -63,11 +67,16 @@ struct EditInfoView: View {
                 }
                 
                 Section("备注") {
-                    TextEditor(text: $info.des)
+                    TabView {
+                        TextEditor(text: $info.des)
+                            .tabItem { Label("文本", systemImage: "circle") }
+                        WebUIView(html: info.des)
+                            .tabItem { Label("预览", systemImage: "circle") }
+                    }
                 }
             }
             .navigationTitle("编辑资料")
-            .padding(30)
+            .padding(10)
             .inspector(isPresented: $isShowInspector) {
                 EditCategoryView(cate: cate ?? IOCategory(name: "unavailable.com", createDate: Date.now, updateDate: Date.now))
             }
@@ -110,6 +119,7 @@ struct EditInfoView: View {
             title = soupTitle ?? "没找到标题"
         }
         info.name = title
+        urlContent = homepageHTML
     }
 }
 
