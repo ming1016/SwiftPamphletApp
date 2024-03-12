@@ -16,9 +16,9 @@ struct SwiftPamphletAppApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            SwiftPamphletApp() // 老版本
-//            HomeView() // 新版本
-//                .modelContainer(for: [IOInfo.self])
+//            SwiftPamphletApp() // 老版本
+            HomeView() // 新版本
+                .modelContainer(for: [IOInfo.self])
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
     }

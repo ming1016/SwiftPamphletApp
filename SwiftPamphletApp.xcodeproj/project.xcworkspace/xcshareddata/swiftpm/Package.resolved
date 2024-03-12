@@ -1,5 +1,5 @@
 {
-  "originHash" : "6a874d716a9c7970eea7ff4adf766f0bd0249a42c9e0f1e4db26ad9d1d9123ea",
+  "originHash" : "eb1bc0d69758f54e9355dfcb786f3dffd822e69deee747fba303fc1467b42e40",
   "pins" : [
     {
       "identity" : "attributedtext",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "2dc2d7864e0fee4b524a5850d7d7cf9a7eeda0fc",
         "version" : "1.0.0"
-      }
-    },
-    {
-      "identity" : "codeeditorview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mchakravarty/CodeEditorView.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "373f3ecfaabdd06918e655cf4516b046aa7e290c"
       }
     },
     {

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CodeEditorView
 
 struct ExploreRepoListView: View {
     @Environment(AppVM.self) var appVM

@@ -212,7 +212,6 @@
 		08BE633027BE6CAA002BC6A8 /* 148.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632F27BE6CAA002BC6A8 /* 148.md */; };
 		08BE633527BF54A0002BC6A8 /* PlayTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE633427BF54A0002BC6A8 /* PlayTextEditorView.swift */; };
 		08BE633727BF6CBC002BC6A8 /* PlayTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE633627BF6CBC002BC6A8 /* PlayTextFieldView.swift */; };
-		08BE634027BF953A002BC6A8 /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = 08BE633F27BF953A002BC6A8 /* CodeEditorView */; };
 		08BE634227BFAF76002BC6A8 /* 149.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE634127BFAF76002BC6A8 /* 149.md */; };
 		08BE634427C3845E002BC6A8 /* 150.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE634327C3845E002BC6A8 /* 150.md */; };
 		08BE634627C48C5B002BC6A8 /* PlayToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE634527C48C5A002BC6A8 /* PlayToggleView.swift */; };
@@ -534,7 +533,6 @@
 				08448F092796A83D00B61353 /* SwiftDate in Frameworks */,
 				08BF26D02768A59A0064DDAC /* SQLite in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
-				08BE634027BF953A002BC6A8 /* CodeEditorView in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
 				08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */,
 				08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */,
@@ -1364,7 +1362,6 @@
 				08D107BC278826BB007B7009 /* HTMLEntities */,
 				08448F082796A83D00B61353 /* SwiftDate */,
 				08448F4D279E8CA400B61353 /* Ink */,
-				08BE633F27BF953A002BC6A8 /* CodeEditorView */,
 				08ED80152B9C54DE0069B7EC /* SMNetwork */,
 				08397E312B9F39C100DFDD02 /* SwiftSoup */,
 			);
@@ -1403,7 +1400,6 @@
 				08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */,
 				08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */,
-				08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */,
 				08ED80142B9C54DE0069B7EC /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMNetwork" */,
 				08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
@@ -1938,14 +1934,6 @@
 				minimumVersion = 0.5.1;
 			};
 		};
-		08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mchakravarty/CodeEditorView.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
@@ -1987,11 +1975,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */;
 			productName = Ink;
-		};
-		08BE633F27BF953A002BC6A8 /* CodeEditorView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08BE633E27BF953A002BC6A8 /* XCRemoteSwiftPackageReference "CodeEditorView" */;
-			productName = CodeEditorView;
 		};
 		08BF26CF2768A59A0064DDAC /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;
