@@ -27,8 +27,6 @@ struct HomeView: View {
             } else {
                 Text("请选择")
             }
-//            Text("请选择")
-//          DataLink.viewToShow(for: selectedDataLinkString)
         }
         .environment(appVM)
     }

@@ -109,7 +109,7 @@ struct EditInfoView: View {
             return
         }
         
-        var title = "无标题"
+        var title = "没找到标题"
         let soupTitle = try? soup.title()
         let h1Title = try? soup.select("h1").first()?.text()
         if let okH1Title = h1Title {

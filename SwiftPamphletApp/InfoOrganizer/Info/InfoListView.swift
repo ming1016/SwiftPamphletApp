@@ -27,6 +27,7 @@ struct InfoListView: View {
                     }
                     ToolbarItem(placement: .navigation) {
                         Menu("Sort", systemImage: "tag") {
+                            
                             Picker("分类", selection: $filterCate) {
                                 ForEach(cates) { cate in
                                     Text(cate.name)
@@ -40,6 +41,23 @@ struct InfoListView: View {
                                     .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
                             }
                         }
+                    }
+                    
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: {
+                            modelContext.undoManager?.undo()
+                        }, label: {
+                            Image(systemName: "arrow.left")
+                        })
+                        .disabled(modelContext.undoManager?.canUndo == false)
+                    }
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: {
+                            modelContext.undoManager?.redo()
+                        }, label: {
+                            Image(systemName: "arrow.right")
+                        })
+                        .disabled(modelContext.undoManager?.canRedo == false)
                     }
                 }
                 .searchable(text: $searchText)
@@ -73,12 +91,12 @@ struct InfoListView: View {
     }
     
     func addInfo() {
-        let info = IOInfo(name: "无标题", url: "", des: "\n", createDate: Date.now, updateDate: Date.now)
+        let info = IOInfo(name: "简单记录", url: "", des: "\n", createDate: Date.now, updateDate: Date.now)
         modelContext.insert(info)
         selectInfo = info
     }
     func addInfoWithCate() {
-        let info = IOInfo(name: "无标题", url: "", des: "\n", createDate: Date.now, updateDate: Date.now)
+        let info = IOInfo(name: "\(filterCate) - 简单记录", url: "", des: "\n", createDate: Date.now, updateDate: Date.now)
         for cate in cates {
             if cate.name == filterCate {
                 info.category = cate

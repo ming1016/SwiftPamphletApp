@@ -180,6 +180,15 @@ extension String {
 }
 
 // MARK: - 调试
+func showSwiftDataStoreFileLocation() {
+    guard let urlApp = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).last else { return }
+
+    let url = urlApp.appendingPathComponent("default.store")
+    if FileManager.default.fileExists(atPath: url.path) {
+        print("swiftdata db at \(url.absoluteString)")
+    }
+}
+
 extension View {
     func debug() -> Self {
         print(Mirror(reflecting: self).subjectType)
