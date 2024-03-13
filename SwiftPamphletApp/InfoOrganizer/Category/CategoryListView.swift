@@ -10,7 +10,7 @@ import SwiftData
 
 struct CategoryListView: View {
     @Environment(\.modelContext) var modelContext
-    @Query var cates: [IOCategory]
+    @Query(IOCategory.all) var cates: [IOCategory]
     @State var selectCate: IOCategory?
     
     var body: some View {

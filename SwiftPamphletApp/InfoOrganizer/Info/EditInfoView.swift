@@ -29,8 +29,15 @@ struct EditInfoView: View {
                         TextField("地址", text: $info.url)
                             .onChange(of: info.url) { oldValue, newValue in
                                 Task {
-                                    await fetchTitleFromUrl(urlString:newValue)
-                                }
+                                    let re = await fetchTitleFromUrl(urlString:newValue)
+                                    
+                                    DispatchQueue.main.async {
+                                        if re.title.isEmpty == false {
+                                            info.name = re.title
+                                            urlContent = re.homepageHTML
+                                        }
+                                    }
+                                } // end Task
                             }
                         Button {
                             gotoWebBrowser(urlStr: info.url)
@@ -98,15 +105,15 @@ struct EditInfoView: View {
         isShowInspector.toggle()
     }
 
-    func fetchTitleFromUrl(urlString: String) async {
+    func fetchTitleFromUrl(urlString: String) async -> (title:String, homepageHTML:String) {
         guard let url = URL(string: urlString) else {
-            return
+            return ("","")
         }
         guard let (data, _) = try? await URLSession.shared.data(from: url) else {
-            return
+            return ("","")
         }
         guard let homepageHTML = String(data: data, encoding: .utf8), let soup = try? SwiftSoup.parse(homepageHTML) else {
-            return
+            return ("","")
         }
         
         var title = "没找到标题"
@@ -118,8 +125,7 @@ struct EditInfoView: View {
         if soupTitle?.isEmpty == false {
             title = soupTitle ?? "没找到标题"
         }
-        info.name = title
-        urlContent = homepageHTML
+        return (title, homepageHTML)
     }
 }
 
