@@ -22,7 +22,7 @@ struct InfosFilterWithCateView: View {
                 info.category?.name == filterCateName
             }
         }, sortBy: sortOrder)
-        fd.fetchLimit = 1000
+        fd.fetchLimit = 10000
         _infos = Query(fd)
         
         self._selectInfo = selectInfo

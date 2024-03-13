@@ -29,6 +29,9 @@ struct InfoListView: View {
                         Menu("Sort", systemImage: "tag") {
                             
                             Picker("分类", selection: $filterCate) {
+                                Text("全部")
+                                    .tag("")
+                                
                                 ForEach(cates) { cate in
                                     Text(cate.name)
                                         .tag(cate.name)
@@ -71,6 +74,8 @@ struct InfoListView: View {
                     ToolbarItem(placement: .navigation) {
                         Menu("Sort", systemImage: "tag") {
                             Picker("分类", selection: $filterCate) {
+                                Text("全部")
+                                    .tag("")
                                 ForEach(cates) { cate in
                                     Text(cate.name)
                                         .tag(cate.name)

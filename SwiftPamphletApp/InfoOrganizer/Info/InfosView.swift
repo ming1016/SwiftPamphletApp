@@ -23,7 +23,7 @@ struct InfosView: View {
                  || info.des.localizedStandardContains(searchString)
             }
         }, sortBy: sortOrder)
-        fd.fetchLimit = 1000
+        fd.fetchLimit = 10000
         _infos = Query(fd)
         
         self._selectInfo = selectInfo

@@ -13,7 +13,7 @@ final class IOInfo {
     var name: String = ""
     var url: String = ""
     var des: String = ""
-    var category: IOCategory?
+    var category: IOCategory? = nil// 关系字段，链接 IOCategory
     
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
@@ -43,7 +43,7 @@ final class IOInfo {
 @Model
 class IOCategory {
     var name: String = ""
-    var infos: [IOInfo]? = [IOInfo]()
+    var infos: [IOInfo]? = [IOInfo]() // 关系字段，链接 IOInfo
     
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
@@ -58,7 +58,7 @@ class IOCategory {
     }
     
     static var all: FetchDescriptor<IOCategory> {
-        var fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.updateDate, order: .reverse)])
+        let fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.updateDate, order: .reverse)])
         return fd
     }
     
