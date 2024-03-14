@@ -17,8 +17,10 @@ struct SwiftPamphletAppApp: App {
     var body: some Scene {
         WindowGroup {
 //            SwiftPamphletApp() // 老版本
-            HomeView() // 新版本
+//            HomeView() // 新版本
+            TestCSGuideView()
                 .modelContainer(for: [IOInfo.self], isUndoEnabled: true)
+            
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
     }

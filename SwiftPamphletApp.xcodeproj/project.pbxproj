@@ -194,6 +194,7 @@
 		0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C6182BA040E5000B620D /* InfoRowView.swift */; };
 		0871C61B2BA04D23000B620D /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61A2BA04D23000B620D /* CategoryRowView.swift */; };
 		0871C61D2BA05F44000B620D /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61C2BA05F44000B620D /* InfosView.swift */; };
+		0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887A5992BA28F6D00131359 /* CSGuideView.swift */; };
 		088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EE8F427BD24E000764525 /* PlayLinkView.swift */; };
 		0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896FB8F27BA39B100676B7F /* PlayButtonView.swift */; };
 		0896FB9227BA486900676B7F /* 145.md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* 145.md */; };
@@ -458,6 +459,7 @@
 		0871C61A2BA04D23000B620D /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
 		0871C61C2BA05F44000B620D /* InfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosView.swift; sourceTree = "<group>"; };
 		0886702B27F804010001EA81 /* SwiftPamphletApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPamphletApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		0887A5992BA28F6D00131359 /* CSGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuideView.swift; sourceTree = "<group>"; };
 		088EE8F427BD24E000764525 /* PlayLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLinkView.swift; sourceTree = "<group>"; };
 		0896FB8F27BA39B100676B7F /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
 		0896FB9127BA486900676B7F /* 145.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 145.md; sourceTree = "<group>"; };
@@ -1086,6 +1088,7 @@
 		086A5F052744E88E00FECE02 /* SwiftPamphletApp */ = {
 			isa = PBXGroup;
 			children = (
+				0887A5982BA28F3600131359 /* Guide */,
 				08397E212B9EE83F00DFDD02 /* InfoOrganizer */,
 				08ED801A2B9D1EDA0069B7EC /* Setting */,
 				080124FD27EC62DC00E44222 /* SwiftPamphletAppDebug.entitlements */,
@@ -1200,6 +1203,14 @@
 				08AEAEE0277EA70500B969E2 /* DBRepoStore.swift */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		0887A5982BA28F3600131359 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				0887A5992BA28F6D00131359 /* CSGuideView.swift */,
+			);
+			path = Guide;
 			sourceTree = "<group>";
 		};
 		0896FB9327BA60AA00676B7F /* Guide */ = {
@@ -1674,6 +1685,7 @@
 				08448F0B2797F73200B61353 /* PlayArchitecture.swift in Sources */,
 				08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */,
 				08522BD827CF344B005FF059 /* PlaySliderView.swift in Sources */,
+				0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
 				08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */,
