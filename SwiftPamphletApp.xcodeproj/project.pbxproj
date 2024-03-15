@@ -207,6 +207,7 @@
 		08AEAEFA277F3C7400B969E2 /* css.html in Resources */ = {isa = PBXBuildFile; fileRef = 08AEAEF9277F3C7400B969E2 /* css.html */; };
 		08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4C9382770B26700742084 /* CCYRSSReq.swift */; };
 		08B4C93C2774786800742084 /* archiveRepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B4C93B2774786800742084 /* archiveRepos.json */; };
+		08B9D5312BA3E08300CACCBE /* SwiftHTMLtoMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = 08B9D5302BA3E08300CACCBE /* SwiftHTMLtoMarkdown */; };
 		08BE632A27BE220D002BC6A8 /* 146.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632927BE220D002BC6A8 /* 146.md */; };
 		08BE632C27BE3762002BC6A8 /* 147.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632B27BE3762002BC6A8 /* 147.md */; };
 		08BE632E27BE3A95002BC6A8 /* PlayLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */; };
@@ -538,6 +539,7 @@
 				08448F092796A83D00B61353 /* SwiftDate in Frameworks */,
 				08BF26D02768A59A0064DDAC /* SQLite in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
+				08B9D5312BA3E08300CACCBE /* SwiftHTMLtoMarkdown in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
 				08F1AB612BA0821900AEA0CA /* CodeEditor in Frameworks */,
 				08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */,
@@ -1405,6 +1407,7 @@
 				08ED80152B9C54DE0069B7EC /* SMNetwork */,
 				08397E312B9F39C100DFDD02 /* SwiftSoup */,
 				08F1AB602BA0821900AEA0CA /* CodeEditor */,
+				08B9D5302BA3E08300CACCBE /* SwiftHTMLtoMarkdown */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -1444,6 +1447,7 @@
 				08ED80142B9C54DE0069B7EC /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMNetwork" */,
 				08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				08F1AB5F2BA0821900AEA0CA /* XCRemoteSwiftPackageReference "CodeEditor" */,
+				08B9D52F2BA3E08300CACCBE /* XCRemoteSwiftPackageReference "SwiftHTMLToMarkdown" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -1978,6 +1982,14 @@
 				minimumVersion = 0.5.1;
 			};
 		};
+		08B9D52F2BA3E08300CACCBE /* XCRemoteSwiftPackageReference "SwiftHTMLToMarkdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ActuallyTaylor/SwiftHTMLToMarkdown.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
 		08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
@@ -2027,6 +2039,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */;
 			productName = Ink;
+		};
+		08B9D5302BA3E08300CACCBE /* SwiftHTMLtoMarkdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08B9D52F2BA3E08300CACCBE /* XCRemoteSwiftPackageReference "SwiftHTMLToMarkdown" */;
+			productName = SwiftHTMLtoMarkdown;
 		};
 		08BF26CF2768A59A0064DDAC /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;

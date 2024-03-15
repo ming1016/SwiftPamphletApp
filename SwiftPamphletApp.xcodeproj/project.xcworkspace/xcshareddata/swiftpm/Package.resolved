@@ -1,5 +1,5 @@
 {
-  "originHash" : "db2ef4a661890fce166f443fd797e0492fd1c68e7b7be7ed3327c121a2649f2a",
+  "originHash" : "7c70638e3fb5008cbd59b13621b056f21917734e94c1f40700eca2528a2e37be",
   "pins" : [
     {
       "identity" : "attributedtext",
@@ -98,6 +98,15 @@
       "state" : {
         "revision" : "6190d0cefff3013e77ed567e6b074f324e5c5bf5",
         "version" : "6.3.1"
+      }
+    },
+    {
+      "identity" : "swifthtmltomarkdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ActuallyTaylor/SwiftHTMLToMarkdown.git",
+      "state" : {
+        "revision" : "d533b9cb47a8defaa8d9432fad20ecf5964c0668",
+        "version" : "1.1.1"
       }
     },
     {

@@ -8,6 +8,8 @@
 import SwiftUI
 import SwiftData
 import SwiftSoup
+import SwiftHTMLtoMarkdown
+import Ink
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
@@ -34,23 +36,35 @@ struct EditInfoView: View {
                                     DispatchQueue.main.async {
                                         if re.title.isEmpty == false {
                                             info.name = re.title
-                                            urlContent = re.homepageHTML
+                                            urlContent = re.content
                                         }
                                     }
                                 } // end Task
                             }
-                        Button {
-                            gotoWebBrowser(urlStr: info.url)
-                        } label: {
-                            Image(systemName: "safari")
-                        }
-                        Button {
-                            info.des = urlContent
-                        } label: {
-                            Image(systemName: "square.and.arrow.down")
-                        }
+                        if info.url.isEmpty == false {
+                            Button {
+                                gotoWebBrowser(urlStr: info.url)
+                            } label: {
+                                Image(systemName: "safari")
+                            }
+                            // TODO: 图片可选，下载到照片
+                            Button {
+                                Task {
+                                    let re = await fetchTitleFromUrl(urlString:info.url, isFetchContent: true)
+                                    
+                                    DispatchQueue.main.async {
+                                        if re.content.isEmpty == false {
+                                            info.des = re.content
+                                        }
+                                    }
+                                } // end Task
+                            } label: {
+                                Image(systemName: "square.and.arrow.down")
+                            }
+                        } // end if
+                        
                     }
-                }
+                } // end Section
                 
                 Section("选择分类") {
                     Picker("分类", selection: $info.category) {
@@ -74,14 +88,17 @@ struct EditInfoView: View {
                 }
                 
                 Section("备注") {
+//                    TextEditor(text: $info.des)
+//                        .tabItem { Label("文本", systemImage: "circle") }
+                    // TODO: markdown 获取图片链接，并能显示
                     TabView {
                         TextEditor(text: $info.des)
                             .tabItem { Label("文本", systemImage: "circle") }
-                        WebUIView(html: info.des)
+                        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
                             .tabItem { Label("预览", systemImage: "circle") }
                     }
                 }
-            }
+            } // end form
             .navigationTitle("编辑资料")
             .padding(10)
             .inspector(isPresented: $isShowInspector) {
@@ -94,7 +111,7 @@ struct EditInfoView: View {
                 
             }
             Spacer()
-        }
+        } // end VStack
     }
     func addCate() {
         cate = IOCategory(name: "", createDate: Date.now, updateDate: Date.now)
@@ -105,7 +122,7 @@ struct EditInfoView: View {
         isShowInspector.toggle()
     }
 
-    func fetchTitleFromUrl(urlString: String) async -> (title:String, homepageHTML:String) {
+    func fetchTitleFromUrl(urlString: String, isFetchContent: Bool = false) async -> (title:String, content:String) {
         guard let url = URL(string: urlString) else {
             return ("","")
         }
@@ -116,6 +133,7 @@ struct EditInfoView: View {
             return ("","")
         }
         
+        // 获取标题
         var title = "没找到标题"
         let soupTitle = try? soup.title()
         let h1Title = try? soup.select("h1").first()?.text()
@@ -125,7 +143,21 @@ struct EditInfoView: View {
         if soupTitle?.isEmpty == false {
             title = soupTitle ?? "没找到标题"
         }
-        return (title, homepageHTML)
+        
+        // HTML 转 Markdown
+        var content = ""
+        if isFetchContent == true {
+            do {
+                var document = BasicHTML(rawHTML: homepageHTML)
+                try document.parse()
+                        
+                content = try document.asMarkdown()
+            } catch {
+                print("html to markdown fail")
+            }
+        }
+        
+        return (title, content)
     }
 }
 
