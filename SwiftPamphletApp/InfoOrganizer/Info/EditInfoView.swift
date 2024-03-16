@@ -26,13 +26,13 @@ struct EditInfoView: View {
         VStack {
             Form {
                 Section {
-                    TextField("标题", text: $info.name)
+                    TextField("标题:", text: $info.name)
                     HStack {
-                        TextField("地址", text: $info.url)
-                            .onChange(of: info.url) { oldValue, newValue in
+                        TextField("地址:", text: $info.url)
+                            .onSubmit {
                                 Task {
-                                    let re = await fetchTitleFromUrl(urlString:newValue)
-                                    
+                                    info.name = "获取标题中......"
+                                    let re = await fetchTitleFromUrl(urlString:info.url)
                                     DispatchQueue.main.async {
                                         if re.title.isEmpty == false {
                                             info.name = re.title
@@ -41,6 +41,9 @@ struct EditInfoView: View {
                                     }
                                 } // end Task
                             }
+//                            .onChange(of: info.url) { oldValue, newValue in
+//                                
+//                            }
                         if info.url.isEmpty == false {
                             Button {
                                 gotoWebBrowser(urlStr: info.url)
@@ -66,8 +69,8 @@ struct EditInfoView: View {
                     }
                 } // end Section
                 
-                Section("选择分类") {
-                    Picker("分类", selection: $info.category) {
+                Section {
+                    Picker("分类:", selection: $info.category) {
                         Text("未分类")
                             .tag(Optional<IOCategory>.none)
                         if categories.isEmpty == false {
@@ -87,7 +90,7 @@ struct EditInfoView: View {
                     }
                 }
                 
-                Section("备注") {
+                Section {
 //                    TextEditor(text: $info.des)
 //                        .tabItem { Label("文本", systemImage: "circle") }
                     // TODO: markdown 获取图片链接，并能显示

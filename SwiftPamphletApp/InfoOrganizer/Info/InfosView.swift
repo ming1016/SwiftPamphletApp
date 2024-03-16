@@ -36,6 +36,8 @@ struct InfosView: View {
                 .tag(info)
             }
         }
+        .listStyle(.inset)
+        .alternatingRowBackgrounds()
     }
 }
 
