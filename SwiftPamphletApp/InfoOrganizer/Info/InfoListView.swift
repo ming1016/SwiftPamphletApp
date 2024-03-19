@@ -18,81 +18,51 @@ struct InfoListView: View {
     @State private var filterCate = ""
     
     var body: some View {
-        if filterCate.isEmpty {
-            InfosView(searchString: searchText, selectInfo: $selectInfo, sortOrder: sortOrder)
-                .navigationTitle("资料列表")
-                .toolbar {
-                    ToolbarItem(placement: .navigation) {
-                        Button("添加资料", systemImage: "plus", action: addInfo)
-                    }
-                    ToolbarItem(placement: .navigation) {
-                        Menu("Sort", systemImage: "tag") {
-                            
-                            Picker("分类", selection: $filterCate) {
-                                Text("全部")
-                                    .tag("")
-                                
-                                ForEach(cates) { cate in
-                                    Text(cate.name)
-                                        .tag(cate.name)
-                                }
-                            }
-                            Picker("排序", selection: $sortOrder) {
-                                Text("正序")
-                                    .tag([SortDescriptor(\IOInfo.updateDate)])
-                                Text("倒序")
-                                    .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
-                            }
-                        }
-                    }
-                    
-                    ToolbarItem(placement: .primaryAction) {
-                        Button(action: {
-                            modelContext.undoManager?.undo()
-                        }, label: {
-                            Image(systemName: "arrow.left")
-                        })
-                        .disabled(modelContext.undoManager?.canUndo == false)
-                    }
-                    ToolbarItem(placement: .primaryAction) {
-                        Button(action: {
-                            modelContext.undoManager?.redo()
-                        }, label: {
-                            Image(systemName: "arrow.right")
-                        })
-                        .disabled(modelContext.undoManager?.canRedo == false)
-                    }
+        InfosView(filterCateName: filterCate, searchString: searchText, selectInfo: $selectInfo, sortOrder: sortOrder)
+            .navigationTitle("资料列表")
+            .toolbar {
+                ToolbarItem(placement: .navigation) {
+                    Button("添加资料", systemImage: "plus", action: addInfo)
                 }
-                .searchable(text: $searchText)
-        } else {
-            InfosFilterWithCateView(filterCateName: filterCate, selectInfo: $selectInfo, sortOrder: sortOrder)
-                .navigationTitle("分类 - \(filterCate)")
-                .toolbar {
-                    ToolbarItem(placement: .navigation) {
-                        Button("添加资料", systemImage: "plus", action: addInfoWithCate)
-                    }
-                    ToolbarItem(placement: .navigation) {
-                        Menu("Sort", systemImage: "tag") {
-                            Picker("分类", selection: $filterCate) {
-                                Text("全部")
-                                    .tag("")
-                                ForEach(cates) { cate in
-                                    Text(cate.name)
-                                        .tag(cate.name)
-                                }
-                            }
-                            Picker("排序", selection: $sortOrder) {
-                                Text("正序")
-                                    .tag([SortDescriptor(\IOInfo.updateDate)])
-                                Text("倒序")
-                                    .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
-                            }
-                            
+                ToolbarItem(placement: .navigation) {
+                    Picker("分类", selection: $filterCate) {
+                        Text("全部")
+                            .tag("")
+                        
+                        ForEach(cates) { cate in
+                            Text(cate.name)
+                                .tag(cate.name)
                         }
                     }
                 }
-        }
-        
+                ToolbarItem(placement: .navigation) {
+                    Menu("Sort", systemImage: "arrow.up.arrow.down.square") {
+                        Picker("排序", selection: $sortOrder) {
+                            Text("正序")
+                                .tag([SortDescriptor(\IOInfo.updateDate)])
+                            Text("倒序")
+                                .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
+                        }
+                    }
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        modelContext.undoManager?.undo()
+                    }, label: {
+                        Image(systemName: "arrow.left")
+                    })
+                    .disabled(modelContext.undoManager?.canUndo == false)
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        modelContext.undoManager?.redo()
+                    }, label: {
+                        Image(systemName: "arrow.right")
+                    })
+                    .disabled(modelContext.undoManager?.canRedo == false)
+                }
+            }
+            .searchable(text: $searchText)
     }
     
     func addInfo() {

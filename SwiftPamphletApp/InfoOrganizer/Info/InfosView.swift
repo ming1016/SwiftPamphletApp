@@ -13,9 +13,11 @@ struct InfosView: View {
     @Query var infos: [IOInfo]
     @Binding var selectInfo: IOInfo?
     
-    init(searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = []) {
+    init(filterCateName: String = "", searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = []) {
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
-            if searchString.isEmpty {
+            if !filterCateName.isEmpty {
+                info.category?.name == filterCateName
+            } else if searchString.isEmpty {
                 true
             } else {
                 info.name.localizedStandardContains(searchString)
