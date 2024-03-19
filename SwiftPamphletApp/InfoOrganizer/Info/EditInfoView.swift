@@ -126,18 +126,18 @@ struct EditInfoView: View {
     }
 
     func fetchTitleFromUrl(urlString: String, isFetchContent: Bool = false) async -> (title:String, content:String) {
+        var title = "没找到标题"
         guard let url = URL(string: urlString) else {
-            return ("","")
+            return (title,"")
         }
         guard let (data, _) = try? await URLSession.shared.data(from: url) else {
-            return ("","")
+            return (title,"")
         }
         guard let homepageHTML = String(data: data, encoding: .utf8), let soup = try? SwiftSoup.parse(homepageHTML) else {
-            return ("","")
+            return (title,"")
         }
         
         // 获取标题
-        var title = "没找到标题"
         let soupTitle = try? soup.title()
         let h1Title = try? soup.select("h1").first()?.text()
         if let okH1Title = h1Title {
