@@ -16,10 +16,16 @@ struct InfoRowView: View {
     }
     
     var body: some View {
-        HStack {
+        VStack(alignment:.leading) {
+            HStack {
+                Text(info.category?.name ?? "")
+                if info.star == true {
+                    Image(systemName: "star.fill")
+                }
+                Spacer()
+            }
+            .foregroundColor(light: .secondary, dark: .secondary)
             Text(info.name)
-            Spacer()
-            Text(info.category?.name ?? "")
         }
         .swipeActions {
             Button(role: .destructive) {

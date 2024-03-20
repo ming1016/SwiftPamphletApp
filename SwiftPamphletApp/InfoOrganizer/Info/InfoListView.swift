@@ -16,9 +16,10 @@ struct InfoListView: View {
     
     @Query(sort: [SortDescriptor(\IOCategory.updateDate, order: .reverse)]) var cates: [IOCategory]
     @State private var filterCate = ""
+    @State var limit: Int = 100
     
     var body: some View {
-        InfosView(filterCateName: filterCate, searchString: searchText, selectInfo: $selectInfo, sortOrder: sortOrder)
+        InfosView(filterCateName: filterCate, searchString: searchText, selectInfo: $selectInfo, sortOrder: sortOrder, limit: $limit)
             .navigationTitle("资料列表")
             .toolbar {
                 ToolbarItem(placement: .navigation) {
@@ -49,7 +50,8 @@ struct InfoListView: View {
                     Button(action: {
                         modelContext.undoManager?.undo()
                     }, label: {
-                        Image(systemName: "arrow.left")
+                        Image(systemName: "arrow.uturn.backward.circle")
+                        Text("撤回")
                     })
                     .disabled(modelContext.undoManager?.canUndo == false)
                 }
@@ -57,7 +59,8 @@ struct InfoListView: View {
                     Button(action: {
                         modelContext.undoManager?.redo()
                     }, label: {
-                        Image(systemName: "arrow.right")
+                        Image(systemName: "arrow.uturn.forward.circle")
+                        Text("重做")
                     })
                     .disabled(modelContext.undoManager?.canRedo == false)
                 }

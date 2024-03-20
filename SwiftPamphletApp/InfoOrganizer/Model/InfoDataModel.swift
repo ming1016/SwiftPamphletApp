@@ -14,6 +14,7 @@ final class IOInfo {
     var url: String = ""
     var des: String = ""
     var category: IOCategory? = nil// 关系字段，链接 IOCategory
+    var star: Bool = false
     
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
@@ -44,6 +45,7 @@ final class IOInfo {
 class IOCategory {
     var name: String = ""
     var infos: [IOInfo]? = [IOInfo]() // 关系字段，链接 IOInfo
+    var star: Bool = false
     
     var createDate: Date = Date.now
     var updateDate: Date = Date.now

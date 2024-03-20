@@ -12,10 +12,15 @@ struct InfosView: View {
     @Environment(\.modelContext) var modelContext
     @Query var infos: [IOInfo]
     @Binding var selectInfo: IOInfo?
+    @Binding var limit: Int
     
-    init(filterCateName: String = "", searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = []) {
+    init(filterCateName: String = "", searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = [], limit: Binding<Int>) {
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
-            if !filterCateName.isEmpty {
+            if !filterCateName.isEmpty && !searchString.isEmpty {
+                (info.name.localizedStandardContains(searchString)
+                || info.url.localizedStandardContains(searchString)
+                 || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName
+            } else if !filterCateName.isEmpty {
                 info.category?.name == filterCateName
             } else if searchString.isEmpty {
                 true
@@ -25,10 +30,11 @@ struct InfosView: View {
                  || info.des.localizedStandardContains(searchString)
             }
         }, sortBy: sortOrder)
-        fd.fetchLimit = 10000
+        fd.fetchLimit = limit.wrappedValue
         _infos = Query(fd)
         
         self._selectInfo = selectInfo
+        self._limit = limit
     }
     
     var body: some View {
@@ -36,7 +42,15 @@ struct InfosView: View {
             ForEach(infos) { info in
                 InfoRowView(info: info, selectedInfo: selectInfo)
                 .tag(info)
+                .onAppear {
+                    if info == infos.last {
+                        if limit <= infos.count {
+                            limit += 100
+                        }
+                    }
+                }
             }
+            
         }
         .listStyle(.inset)
         .alternatingRowBackgrounds()

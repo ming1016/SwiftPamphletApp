@@ -23,6 +23,9 @@ struct SwiftPamphletAppApp: App {
             
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
+        Settings {
+            SettingView()
+        }
     }
 }
 

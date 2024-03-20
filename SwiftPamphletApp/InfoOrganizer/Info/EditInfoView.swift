@@ -26,7 +26,13 @@ struct EditInfoView: View {
         VStack {
             Form {
                 Section {
-                    TextField("标题:", text: $info.name)
+                    HStack {
+                        TextField("标题:", text: $info.name)
+                        Toggle(isOn: $info.star) {
+                            Image(systemName: info.star ? "star.fill" : "star")
+                        }
+                        .toggleStyle(.button)
+                    }
                     HStack {
                         TextField("地址:", text: $info.url)
                             .onSubmit {
@@ -41,9 +47,9 @@ struct EditInfoView: View {
                                     }
                                 } // end Task
                             }
-//                            .onChange(of: info.url) { oldValue, newValue in
-//                                
-//                            }
+                            .onChange(of: info.url) { oldValue, newValue in
+                                
+                            }
                         if info.url.isEmpty == false {
                             Button {
                                 gotoWebBrowser(urlStr: info.url)
@@ -70,29 +76,28 @@ struct EditInfoView: View {
                 } // end Section
                 
                 Section {
-                    Picker("分类:", selection: $info.category) {
-                        Text("未分类")
-                            .tag(Optional<IOCategory>.none)
-                        if categories.isEmpty == false {
-                            Divider()
-                            ForEach(categories) { cate in
-                                Text(cate.name)
-                                    .tag(Optional(cate))
+                    
+                    HStack {
+                        Picker("分类:", selection: $info.category) {
+                            Text("未分类")
+                                .tag(Optional<IOCategory>.none)
+                            if categories.isEmpty == false {
+                                Divider()
+                                ForEach(categories) { cate in
+                                    Text(cate.name)
+                                        .tag(Optional(cate))
+                                }
                             }
                         }
-                    }
-                    .onChange(of: info.category) { oldValue, newValue in
-                        info.category?.updateDate = Date.now
-                    }
-                    HStack {
+                        .onHover(perform: { hovering in
+                            info.category?.updateDate = Date.now
+                        })
                         Button("添加分类", action: addCate)
                         Button("管理分类", action: manageCate)
                     }
                 }
                 
-                Section {
-//                    TextEditor(text: $info.des)
-//                        .tabItem { Label("文本", systemImage: "circle") }
+                Section(footer: Text("支持 markdown 格式的文本")) {
                     // TODO: markdown 获取图片链接，并能显示
                     TabView {
                         TextEditor(text: $info.des)
@@ -102,7 +107,6 @@ struct EditInfoView: View {
                     }
                 }
             } // end form
-            .navigationTitle("编辑资料")
             .padding(10)
             .inspector(isPresented: $isShowInspector) {
                 EditCategoryView(cate: cate ?? IOCategory(name: "unavailable.com", createDate: Date.now, updateDate: Date.now))
