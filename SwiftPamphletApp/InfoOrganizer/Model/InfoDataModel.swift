@@ -45,7 +45,7 @@ final class IOInfo {
 class IOCategory {
     var name: String = ""
     var infos: [IOInfo]? = [IOInfo]() // 关系字段，链接 IOInfo
-    var star: Bool = false
+    var pin: Int = 0
     
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
@@ -60,12 +60,22 @@ class IOCategory {
     }
     
     static var all: FetchDescriptor<IOCategory> {
-        let fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.updateDate, order: .reverse)])
+        let fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.pin, order: .reverse), SortDescriptor(\IOCategory.updateDate, order: .reverse)])
         return fd
     }
     static var allOrderByName: FetchDescriptor<IOCategory> {
-        let fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.name, order: .forward)])
+        let fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.pin, order: .reverse), SortDescriptor(\IOCategory.name, order: .forward)])
         return fd
+    }
+    
+    static func pin(_ cate: IOCategory) {
+        if cate.modelContext != nil {
+            if cate.pin == 0 {
+                cate.pin = 1
+            } else {
+                cate.pin = 0
+            }
+        }
     }
     
     static func delete(_ cate: IOCategory) {
