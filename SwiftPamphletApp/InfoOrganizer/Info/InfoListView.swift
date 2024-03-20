@@ -14,7 +14,7 @@ struct InfoListView: View {
     @Binding var selectInfo:IOInfo?
     @State private var sortOrder = [SortDescriptor(\IOInfo.updateDate, order: .reverse)]
     
-    @Query(sort: [SortDescriptor(\IOCategory.updateDate, order: .reverse)]) var cates: [IOCategory]
+    @Query(IOCategory.allOrderByName) var cates: [IOCategory]
     @State private var filterCate = ""
     @State var limit: Int = 100
     @State var filterStar: Bool = false
@@ -28,20 +28,27 @@ struct InfoListView: View {
                 }
                 ToolbarItem(placement: .navigation) {
                     Picker("分类", selection: $filterCate) {
-                        Text("全部")
-                            .tag("")
+                        HStack {
+                            Image(systemName: "books.vertical")
+                            Text("全部")
+                        }
+                        .tag("")
                         
                         ForEach(cates) { cate in
-                            Text(cate.name)
-                                .tag(cate.name)
+                            HStack {
+                                if cate.pin == 1 {
+                                    Image(systemName: "pin.fill")
+                                }
+                                Text(cate.name)
+                            }
+                            .tag(cate.name)
                         }
                     }
                 }
                 ToolbarItem(placement: .navigation) {
                     Toggle(isOn: $filterStar) {
-                        Image(systemName: filterStar ? "star.fill" : "star")
                     }
-                    .toggleStyle(.button)
+                    .toggleStyle(SymbolToggleStyle(systemImage: "star.fill", activeColor: .yellow))
                 }
                 ToolbarItem(placement: .navigation) {
                     Menu("Sort", systemImage: "arrow.up.arrow.down.square") {

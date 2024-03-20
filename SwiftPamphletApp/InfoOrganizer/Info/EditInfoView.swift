@@ -84,8 +84,13 @@ struct EditInfoView: View {
                             if categories.isEmpty == false {
                                 Divider()
                                 ForEach(categories) { cate in
-                                    Text(cate.name)
-                                        .tag(Optional(cate))
+                                    HStack {
+                                        if cate.pin == 1 {
+                                            Image(systemName: "pin.fill")
+                                        }
+                                        Text(cate.name)
+                                    }
+                                    .tag(Optional(cate))
                                 }
                             }
                         }
