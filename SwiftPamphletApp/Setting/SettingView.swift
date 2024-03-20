@@ -17,9 +17,11 @@ struct SettingView: View {
                     TextField("", text: $tokenString)
                         .padding(10)
                         .onSubmit {
-                            let ud = UserDefaults.standard
-                            ud.set(tokenString, forKey: SPC.githubUDTokenKey)
+                            save()
                         }
+                    Button("保存") {
+                        save()
+                    }
                 }
                 .onAppear(perform: {
                     let ud = UserDefaults.standard
@@ -31,5 +33,10 @@ struct SettingView: View {
                 Label("设置", systemImage: "gearshape")
             }
         }
+    }
+    
+    func save() {
+        let ud = UserDefaults.standard
+        ud.set(tokenString, forKey: SPC.githubUDTokenKey)
     }
 }

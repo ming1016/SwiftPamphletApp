@@ -114,7 +114,7 @@ struct EditInfoView: View {
             } // end form
             .padding(10)
             .inspector(isPresented: $isShowInspector) {
-                EditCategoryView(cate: cate ?? IOCategory(name: "unavailable.com", createDate: Date.now, updateDate: Date.now))
+                EditCategoryView(cate: cate ?? IOCategory(name: "unavailable.com", infos: [IOInfo](), pin: 0, createDate: Date.now, updateDate: Date.now))
             }
             .toolbar {
                 Button("关闭", systemImage: "sidebar.right") {
@@ -126,7 +126,7 @@ struct EditInfoView: View {
         } // end VStack
     }
     func addCate() {
-        cate = IOCategory(name: "", createDate: Date.now, updateDate: Date.now)
+        cate = IOCategory(name: "", infos: [IOInfo](), pin: 0, createDate: Date.now, updateDate: Date.now)
         modelContext.insert(cate!)
         isShowInspector = true
     }

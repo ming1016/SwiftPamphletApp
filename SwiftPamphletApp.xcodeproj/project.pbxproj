@@ -34,7 +34,6 @@
 		08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */; };
 		08397E2F2B9F353B00DFDD02 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E2E2B9F353B00DFDD02 /* CategoryListView.swift */; };
 		08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 08397E312B9F39C100DFDD02 /* SwiftSoup */; };
-		08397E342BA0178500DFDD02 /* DetailLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E332BA0178500DFDD02 /* DetailLink.swift */; };
 		084417752B99B9060049297D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417742B99B9060049297D /* HomeView.swift */; };
 		084417772B99BA3F0049297D /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417762B99BA3F0049297D /* SidebarView.swift */; };
 		084417792B99BE720049297D /* DataLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417782B99BE720049297D /* DataLink.swift */; };
@@ -269,6 +268,9 @@
 		08F4BE6028609D8700733F12 /* PlayCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE5F28609D8600733F12 /* PlayCharts.swift */; };
 		08F4BE6228616DC100733F12 /* PlayWeatherKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */; };
 		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
+		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
+		3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */; };
+		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -299,7 +301,6 @@
 		08397E282B9F0A9100DFDD02 /* EditInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoView.swift; sourceTree = "<group>"; };
 		08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryView.swift; sourceTree = "<group>"; };
 		08397E2E2B9F353B00DFDD02 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
-		08397E332BA0178500DFDD02 /* DetailLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLink.swift; sourceTree = "<group>"; };
 		084417742B99B9060049297D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		084417762B99BA3F0049297D /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		084417782B99BE720049297D /* DataLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLink.swift; sourceTree = "<group>"; };
@@ -529,6 +530,9 @@
 		08F4BE5F28609D8600733F12 /* PlayCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCharts.swift; sourceTree = "<group>"; };
 		08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWeatherKit.swift; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
+		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
+		3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperModel.swift; sourceTree = "<group>"; };
+		3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeveloper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -603,7 +607,6 @@
 				084417742B99B9060049297D /* HomeView.swift */,
 				084417762B99BA3F0049297D /* SidebarView.swift */,
 				084417782B99BE720049297D /* DataLink.swift */,
-				08397E332BA0178500DFDD02 /* DetailLink.swift */,
 			);
 			path = HomeUI;
 			sourceTree = "<group>";
@@ -1148,6 +1151,7 @@
 		086A5F252744ECD700FECE02 /* GitHubAPI */ = {
 			isa = PBXGroup;
 			children = (
+				3AE0D5962BAB09AB00D6D925 /* Developer */,
 				086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */,
 				08BF26D4276B18380064DDAC /* Network */,
 				086A5F652754C23200FECE02 /* DB */,
@@ -1380,6 +1384,16 @@
 				08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		3AE0D5962BAB09AB00D6D925 /* Developer */ = {
+			isa = PBXGroup;
+			children = (
+				3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */,
+				3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */,
+				3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */,
+			);
+			path = Developer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1651,6 +1665,7 @@
 				08BE634627C48C5B002BC6A8 /* PlayToggleView.swift in Sources */,
 				08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */,
 				0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */,
+				3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */,
 				08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */,
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
@@ -1666,6 +1681,7 @@
 				08397E2F2B9F353B00DFDD02 /* CategoryListView.swift in Sources */,
 				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				08BE636627C88750002BC6A8 /* PlayProgressView.swift in Sources */,
+				3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */,
 				084417772B99BA3F0049297D /* SidebarView.swift in Sources */,
 				08F4BE6028609D8700733F12 /* PlayCharts.swift in Sources */,
 				086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */,
@@ -1676,7 +1692,6 @@
 				08AEAEF3277F09FA00B969E2 /* NavView.swift in Sources */,
 				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
 				08522BF027CF9FFA005FF059 /* PlayAnimation.swift in Sources */,
-				08397E342BA0178500DFDD02 /* DetailLink.swift in Sources */,
 				08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */,
 				08BE635E27C72F50002BC6A8 /* PlayNavigationView.swift in Sources */,
 				08448F0D2799035600B61353 /* PlaySecurity.swift in Sources */,
@@ -1721,6 +1736,7 @@
 				08522BE227CF52ED005FF059 /* PlayColor.swift in Sources */,
 				08BE636A27C8C409002BC6A8 /* PlayImageView.swift in Sources */,
 				08CD61FF27758B8A008C0935 /* Token.swift in Sources */,
+				3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */,
 				08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
 				08AEAEE1277EA70500B969E2 /* DBRepoStore.swift in Sources */,

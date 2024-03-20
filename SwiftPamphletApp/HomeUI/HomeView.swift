@@ -11,13 +11,21 @@ struct HomeView: View {
     @State var appVM = AppVM()
     @State private var selectedDataLinkString: String?
     @State private var selectInfo: IOInfo? = nil
+    @State private var selectDev: DeveloperModel? = nil
     
     var body: some View {
         NavigationSplitView {
-            SidebarView(selectedDataLinkString: $selectedDataLinkString, selectInfo: $selectInfo)
+            SidebarView(
+                selectedDataLinkString: $selectedDataLinkString,
+                selectInfo: $selectInfo
+            )
         } content: {
             if let link = selectedDataLinkString {
-                DataLink.viewToShow(for: link, selectInfo: $selectInfo)
+                DataLink.viewToShow(
+                    for: link,
+                    selectInfo: $selectInfo,
+                    selectDev: $selectDev
+                )
             } else {
                 ContentUnavailableView {
                     Label("未选择栏目",
@@ -28,13 +36,15 @@ struct HomeView: View {
             }
         } detail: {
             if let info = selectInfo {
-                DetailLink.viewToShow(for: "资料", selectInfo: info)
+                EditInfoView(info: info)
+            } else if let dev = selectDev {
+                EditDeveloper(dev: dev)
             } else {
                 ContentUnavailableView {
                     Label("未选",
                           systemImage: "pencil.tip.crop.circle.badge.plus")
                 } description: {
-                    Text("请选择或按+号增加一个资料")
+                    Text("请选择或按+号添加内容")
                 }
             }
         }

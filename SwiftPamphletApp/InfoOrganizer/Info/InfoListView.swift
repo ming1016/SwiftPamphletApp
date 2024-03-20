@@ -83,12 +83,12 @@ struct InfoListView: View {
     }
     
     func addInfo() {
-        let info = IOInfo(name: "简单记录", url: "", des: "\n", createDate: Date.now, updateDate: Date.now)
+        let info = IOInfo(name: "简单记录", url: "", des: "\n", star: false, createDate: Date.now, updateDate: Date.now)
         modelContext.insert(info)
         selectInfo = info
     }
     func addInfoWithCate() {
-        let info = IOInfo(name: "\(filterCate) - 简单记录", url: "", des: "\n", createDate: Date.now, updateDate: Date.now)
+        let info = IOInfo(name: "\(filterCate) - 简单记录", url: "", des: "\n", star: false, createDate: Date.now, updateDate: Date.now)
         for cate in cates {
             if cate.name == filterCate {
                 info.category = cate

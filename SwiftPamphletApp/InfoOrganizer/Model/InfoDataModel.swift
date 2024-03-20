@@ -23,6 +23,7 @@ final class IOInfo {
          url: String,
          des: String,
          category: IOCategory? = nil,
+         star: Bool,
          createDate: Date,
          updateDate: Date
     ) {
@@ -30,6 +31,7 @@ final class IOInfo {
         self.url = url
         self.des = des
         self.category = category
+        self.star = star
         self.createDate = createDate
         self.updateDate = updateDate
     }
@@ -50,11 +52,15 @@ class IOCategory {
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
     
-    init(name: String, 
+    init(name: String,
+         infos: [IOInfo]?,
+         pin: Int,
          createDate: Date,
          updateDate: Date
     ) {
         self.name = name
+        self.infos = [IOInfo]()
+        self.pin = pin
         self.createDate = createDate
         self.updateDate = updateDate
     }

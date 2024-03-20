@@ -14,14 +14,19 @@ struct DataLink: Identifiable {
     var children: [DataLink]?
     
     @ViewBuilder
-    static func viewToShow(for title: String?, selectInfo:Binding<IOInfo?>) -> some View {
+    static func viewToShow(
+        for title: String?,
+        selectInfo:Binding<IOInfo?>,
+        selectDev:Binding<DeveloperModel?>
+    ) -> some View {
         switch title {
         case "资料整理":
             InfoListView(selectInfo: selectInfo)
         case "库动态":
             ExploreRepoListView(showAsGroup: false)
         case "开发者":
-            ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))
+            DeveloperListView(selectDev:selectDev)
+//            ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))
         case "探索库":
             ExploreRepoListView(showAsGroup: true)
         case "库存档":
@@ -38,8 +43,6 @@ struct DataLink: Identifiable {
             IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Combine"))
         case "Concurrency":
             IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Concurrency"))
-        case "设置":
-            SettingView()
         default:
             // 默认是语法速查
             IssuesListFromCustomView(vm: IssueVM(guideName: "guide-syntax"))
@@ -52,12 +55,12 @@ extension DataLink {
         DataLink(title: "资料", imageName: "", children: [
             DataLink(title: "资料整理", imageName: "p11")
         ]),
-//        DataLink(title: "Github", imageName: "", children: [
+        DataLink(title: "Github", imageName: "", children: [
 //            DataLink(title: "库动态", imageName: "p6"),
-//            DataLink(title: "开发者", imageName: "p5"),
+            DataLink(title: "开发者", imageName: "p5"),
 //            DataLink(title: "探索库", imageName: "p24"),
 //            DataLink(title: "库存档", imageName: "p25")
-//        ]),
+        ]),
         DataLink(title: "Swift指南", imageName: "", children: [
             DataLink(title: "语法速查", imageName: "p23"),
             DataLink(title: "特性", imageName: "p10"),
@@ -67,9 +70,6 @@ extension DataLink {
             DataLink(title: "SwiftUI", imageName: "p3"),
             DataLink(title: "Combine", imageName: "p19"),
             DataLink(title: "Concurrency", imageName: "p1")
-        ]),
-        DataLink(title: "更多", imageName: "", children: [
-            DataLink(title: "设置", imageName: "p4")
         ])
     ]
 }
