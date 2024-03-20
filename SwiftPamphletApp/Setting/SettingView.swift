@@ -28,7 +28,7 @@ struct SettingView: View {
             }
             .padding(20)
             .tabItem {
-                Label("通常", systemImage: "gearshape")
+                Label("设置", systemImage: "gearshape")
             }
         }
     }

@@ -14,7 +14,7 @@ struct InfoListView: View {
     @Binding var selectInfo:IOInfo?
     @State private var sortOrder = [SortDescriptor(\IOInfo.updateDate, order: .reverse)]
     
-    @Query(sort: [SortDescriptor(\IOCategory.updateDate, order: .reverse)]) var cates: [IOCategory]
+    @Query(sort: [SortDescriptor(\IOCategory.name, order: .forward)]) var cates: [IOCategory]
     @State private var filterCate = ""
     @State var limit: Int = 100
     @State var filterStar: Bool = false
@@ -39,9 +39,8 @@ struct InfoListView: View {
                 }
                 ToolbarItem(placement: .navigation) {
                     Toggle(isOn: $filterStar) {
-                        Image(systemName: filterStar ? "star.fill" : "star")
                     }
-                    .toggleStyle(.button)
+                    .toggleStyle(SymbolToggleStyle(systemImage: "star.fill", activeColor: .yellow))
                 }
                 ToolbarItem(placement: .navigation) {
                     Menu("Sort", systemImage: "arrow.up.arrow.down.square") {
