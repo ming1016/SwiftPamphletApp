@@ -14,16 +14,16 @@ struct InfosView: View {
     @Binding var selectInfo: IOInfo?
     @Binding var limit: Int
     
-    init(filterCateName: String = "", searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = [], limit: Binding<Int>) {
+    init(filterCateName: String = "", searchString: String = "", filterStar: Bool = false ,selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = [], limit: Binding<Int>) {
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
             if !filterCateName.isEmpty && !searchString.isEmpty {
                 (info.name.localizedStandardContains(searchString)
                 || info.url.localizedStandardContains(searchString)
-                 || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName
+                 || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName && info.star == filterStar
             } else if !filterCateName.isEmpty {
-                info.category?.name == filterCateName
+                info.category?.name == filterCateName && info.star == filterStar
             } else if searchString.isEmpty {
-                true
+                info.star == filterStar
             } else {
                 info.name.localizedStandardContains(searchString)
                 || info.url.localizedStandardContains(searchString)

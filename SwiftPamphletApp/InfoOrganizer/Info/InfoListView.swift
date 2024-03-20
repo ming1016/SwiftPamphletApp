@@ -17,9 +17,10 @@ struct InfoListView: View {
     @Query(sort: [SortDescriptor(\IOCategory.updateDate, order: .reverse)]) var cates: [IOCategory]
     @State private var filterCate = ""
     @State var limit: Int = 100
+    @State var filterStar: Bool = false
     
     var body: some View {
-        InfosView(filterCateName: filterCate, searchString: searchText, selectInfo: $selectInfo, sortOrder: sortOrder, limit: $limit)
+        InfosView(filterCateName: filterCate, searchString: searchText, filterStar: filterStar, selectInfo: $selectInfo, sortOrder: sortOrder, limit: $limit)
             .navigationTitle("资料列表")
             .toolbar {
                 ToolbarItem(placement: .navigation) {
@@ -35,6 +36,12 @@ struct InfoListView: View {
                                 .tag(cate.name)
                         }
                     }
+                }
+                ToolbarItem(placement: .navigation) {
+                    Toggle(isOn: $filterStar) {
+                        Image(systemName: filterStar ? "star.fill" : "star")
+                    }
+                    .toggleStyle(.button)
                 }
                 ToolbarItem(placement: .navigation) {
                     Menu("Sort", systemImage: "arrow.up.arrow.down.square") {
