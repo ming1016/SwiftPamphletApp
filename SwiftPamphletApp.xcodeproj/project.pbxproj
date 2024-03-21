@@ -991,6 +991,20 @@
 			path = UseViewComponent;
 			sourceTree = "<group>";
 		};
+		0846234D2BAC59AF003373D9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				083554E227572BB60095E0EE /* AppVM.swift */,
+				086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */,
+				086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */,
+				08AEAEF4277F0A1E00B969E2 /* SPSidebar.swift */,
+				08AEAEF0277F09D000B969E2 /* IntroView.swift */,
+				08AEAEF2277F09FA00B969E2 /* NavView.swift */,
+				084E1A6427B51EDB0072BBB6 /* AutoTask.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		084E1A6127B517990072BBB6 /* SwiftThoseThings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1093,8 +1107,11 @@
 		086A5F052744E88E00FECE02 /* SwiftPamphletApp */ = {
 			isa = PBXGroup;
 			children = (
+				0846234D2BAC59AF003373D9 /* App */,
+				084417732B99B8EA0049297D /* HomeUI */,
 				0887A5982BA28F3600131359 /* Guide */,
 				08397E212B9EE83F00DFDD02 /* InfoOrganizer */,
+				086A5F252744ECD700FECE02 /* GitHubAPI */,
 				08ED801A2B9D1EDA0069B7EC /* Setting */,
 				080124FD27EC62DC00E44222 /* SwiftPamphletAppDebug.entitlements */,
 				08CD61FB27758B22008C0935 /* Core */,
@@ -1102,15 +1119,6 @@
 				086A5F482744EF2B00FECE02 /* ViewComponet */,
 				08BE637A27CDD9E7002BC6A8 /* DataSorting */,
 				086A5F472744EF0800FECE02 /* Resource */,
-				086A5F252744ECD700FECE02 /* GitHubAPI */,
-				084417732B99B8EA0049297D /* HomeUI */,
-				083554E227572BB60095E0EE /* AppVM.swift */,
-				086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */,
-				086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */,
-				08AEAEF4277F0A1E00B969E2 /* SPSidebar.swift */,
-				08AEAEF0277F09D000B969E2 /* IntroView.swift */,
-				08AEAEF2277F09FA00B969E2 /* NavView.swift */,
-				084E1A6427B51EDB0072BBB6 /* AutoTask.swift */,
 				086A5F0A2744E89100FECE02 /* Assets.xcassets */,
 				086A5F0F2744E89100FECE02 /* SwiftPamphletApp.entitlements */,
 				086A5F0C2744E89100FECE02 /* Preview Content */,

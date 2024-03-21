@@ -12,9 +12,6 @@ struct EditDeveloper: View {
     @Bindable var dev: DeveloperModel
     @State var vm: UserVM
     @State private var tabSelct = 1
-    var isCleanUnread = false
-    @State private var unReadCount = 0
-    var isShowUserEventLink = true
     
     var body: some View {
         TextField("请输入账号:", text: $dev.name)
@@ -73,7 +70,7 @@ struct EditDeveloper: View {
         
         TabView(selection: $tabSelct) {
 
-            DeveloperEventView(events: vm.events, isShowUserEventLink: isShowUserEventLink, unReadCount: unReadCount)
+            DeveloperEventView(events: vm.events)
                 .tabItem {
                     Image(systemName: "keyboard")
                     Text("事件")
@@ -83,7 +80,7 @@ struct EditDeveloper: View {
                     vm.doing(.inEvent)
                 }
                 .tag(1)
-            DeveloperEventView(events: vm.receivedEvents, isShowActor: true, isShowUserEventLink: isShowUserEventLink)
+            DeveloperEventView(events: vm.receivedEvents)
                 .tabItem {
                     Image(systemName: "keyboard.badge.ellipsis")
                     Text("Ta 接收的事件")
@@ -100,26 +97,19 @@ struct EditDeveloper: View {
 
 struct DeveloperEventView: View {
     var events: [EventModel]
-    var isShowActor = false
-    var isShowUserEventLink = true
-    var unReadCount = 0
     var body: some View {
         List {
             ForEach(Array(events.enumerated()), id: \.0) { i, event in
-
-                if isShowUserEventLink == true {
-                    NavigationLink {
-                        UserEventLinkDestination(event: event)
-                    } label: {
-                        AUserEventLabel(
-                            event: event,
-                            isShowActor: isShowActor,
-                            isUnRead: unReadCount > 0 && i < unReadCount
-                        )
-                    } // end NavigationLink
-                } else {
-                    AUserEventLabel(event: event, isShowActor: isShowActor, isUnRead: unReadCount > 0 && i < unReadCount)
-                }
+                
+                NavigationLink {
+                    UserEventLinkDestination(event: event)
+                } label: {
+                    AUserEventLabel(
+                        event: event,
+                        isShowActor: false,
+                        isUnRead: false
+                    )
+                } // end NavigationLink
             } // end ForEach
         }//  end List
         .id(UUID()) // 优化 commits 有多个时数据变化可能影响的性能。这样做每次更新都产生新的视图，因此无法做动画效果。相当于 UITableView 上的 reloadData()
