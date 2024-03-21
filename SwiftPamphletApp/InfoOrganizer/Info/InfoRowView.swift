@@ -18,7 +18,9 @@ struct InfoRowView: View {
     var body: some View {
         VStack(alignment:.leading) {
             HStack {
-                Text(info.category?.name ?? "")
+                if info.category != nil {
+                    Text(info.category?.name ?? "")
+                }
                 if info.star == true {
                     Image(systemName: "star.fill")
                 }

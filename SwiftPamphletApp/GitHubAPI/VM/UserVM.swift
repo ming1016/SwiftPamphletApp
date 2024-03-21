@@ -14,8 +14,8 @@ import Observation
 final class UserVM: APIVMable {
     private var cancellables: [AnyCancellable] = []
 
-    @ObservationIgnored
-    public let userName: String
+//    @ObservationIgnored
+    var userName: String
 
     var user: UserModel
     var events: [EventModel]
@@ -38,10 +38,14 @@ final class UserVM: APIVMable {
     private let resReceivedEventsSubject = PassthroughSubject<[EventModel], Never>()
 
     enum UserActionType {
-        case inInit, inEvent, inReceivedEvent, notiEvent, clearUnReadEvent
+        case updateAll, inInit, inEvent, inReceivedEvent, notiEvent, clearUnReadEvent
     }
     func doing(_ somethinglike: UserActionType) {
         switch somethinglike {
+        case .updateAll:
+            appearUserSubject.send(())
+            appearEventsSubject.send(())
+            appearReceivedEventsSubject.send(())
         case .inInit:
             appearUserSubject.send(())
         case .inEvent:

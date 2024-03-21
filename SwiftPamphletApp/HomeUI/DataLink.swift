@@ -13,24 +13,46 @@ struct DataLink: Identifiable {
     let imageName: String
     var children: [DataLink]?
     
+    enum ShowType {
+    case content,detail
+    }
+    
     @ViewBuilder
     static func viewToShow(
         for title: String?,
         selectInfo:Binding<IOInfo?>,
-        selectDev:Binding<DeveloperModel?>
+        selectDev:Binding<DeveloperModel?>,
+        selectInfoBindable: IOInfo?,
+        selectDevBindable: DeveloperModel?,
+        type: ShowType
     ) -> some View {
         switch title {
         case "资料整理":
-            InfoListView(selectInfo: selectInfo)
-        case "库动态":
-            ExploreRepoListView(showAsGroup: false)
+            switch type {
+            case .content:
+                InfoListView(selectInfo: selectInfo)
+            case .detail:
+                if let info = selectInfoBindable {
+                    EditInfoView(info: info)
+                } else {
+                    EmptyView()
+                }
+            }
         case "开发者":
-            DeveloperListView(selectDev:selectDev)
-//            ActiveDeveloperListView(vm: IssueVM(repoName: SPC.pamphletIssueRepoName, issueNumber: 30))
-        case "探索库":
-            ExploreRepoListView(showAsGroup: true)
-        case "库存档":
-            ExploreRepoListView(showAsGroup: true, isArchive: true)
+            switch type {
+            case .content:
+                DeveloperListView(selectDev:selectDev)
+            case .detail:
+                if let dev = selectDevBindable {
+                    if SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false {
+                        EditDeveloper(dev: dev, vm: UserVM(userName: dev.name))
+                    } else {
+                        Text("请在设置里写上 Github 的 access token")
+                    }
+                } else {
+                    EmptyView()
+                }
+            }
         case "语法速查":
             IssuesListFromCustomView(vm: IssueVM(guideName: "guide-syntax"))
         case "特性":
@@ -56,10 +78,7 @@ extension DataLink {
             DataLink(title: "资料整理", imageName: "p11")
         ]),
         DataLink(title: "Github", imageName: "", children: [
-//            DataLink(title: "库动态", imageName: "p6"),
             DataLink(title: "开发者", imageName: "p5"),
-//            DataLink(title: "探索库", imageName: "p24"),
-//            DataLink(title: "库存档", imageName: "p25")
         ]),
         DataLink(title: "Swift指南", imageName: "", children: [
             DataLink(title: "语法速查", imageName: "p23"),

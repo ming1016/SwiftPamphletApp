@@ -12,13 +12,15 @@ import SwiftData
 final class DeveloperModel {
     var name: String = ""
     var unread: Int = 0
+    var lastEventIdStr: String = ""
     
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
     
-    init(name: String, unread: Int, createDate: Date, updateDate: Date) {
+    init(name: String, unread: Int, lastEventIdStr: String, createDate: Date, updateDate: Date) {
         self.name = name
         self.unread = unread
+        self.lastEventIdStr = lastEventIdStr
         self.createDate = createDate
         self.updateDate = updateDate
     }

@@ -17,6 +17,8 @@ struct DeveloperListView: View {
         List(selection: $selectDev) {
             ForEach(devs) { dev in
                 Text(dev.name)
+                    .badge(dev.unread)
+                    .tag(dev)
                     .swipeActions {
                         Button(role: .destructive) {
                             DeveloperModel.delete(dev)
@@ -29,6 +31,7 @@ struct DeveloperListView: View {
                             DeveloperModel.delete(dev)
                         }
                     }
+                    
             }
         }
         .listStyle(.inset)
@@ -37,31 +40,14 @@ struct DeveloperListView: View {
             ToolbarItem(placement: .navigation) {
                 Button("添加开发者", systemImage: "plus", action: addDev)
             }
-            ToolbarItem(placement: .primaryAction) {
-                Button(action: {
-                    modelContext.undoManager?.undo()
-                }, label: {
-                    Image(systemName: "arrow.uturn.backward.circle")
-                    Text("撤回")
-                })
-                .disabled(modelContext.undoManager?.canUndo == false)
-            }
-            ToolbarItem(placement: .primaryAction) {
-                Button(action: {
-                    modelContext.undoManager?.redo()
-                }, label: {
-                    Image(systemName: "arrow.uturn.forward.circle")
-                    Text("重做")
-                })
-                .disabled(modelContext.undoManager?.canRedo == false)
-            }
         })
     }
     
     func addDev() {
-        let dev = DeveloperModel(name: "new", unread: 0, createDate: Date.now, updateDate: Date.now)
+        let dev = DeveloperModel(name: "", unread: 0, lastEventIdStr: "", createDate: Date.now, updateDate: Date.now)
         modelContext.insert(dev)
         selectDev = dev
     }
+    
 }
 

@@ -24,7 +24,10 @@ struct HomeView: View {
                 DataLink.viewToShow(
                     for: link,
                     selectInfo: $selectInfo,
-                    selectDev: $selectDev
+                    selectDev: $selectDev,
+                    selectInfoBindable: selectInfo,
+                    selectDevBindable: selectDev,
+                    type: .content
                 )
             } else {
                 ContentUnavailableView {
@@ -35,10 +38,16 @@ struct HomeView: View {
                 }
             }
         } detail: {
-            if let info = selectInfo {
-                EditInfoView(info: info)
-            } else if let dev = selectDev {
-                EditDeveloper(dev: dev)
+            
+            if let link = selectedDataLinkString {
+                DataLink.viewToShow(
+                    for: link,
+                    selectInfo: $selectInfo,
+                    selectDev: $selectDev,
+                    selectInfoBindable: selectInfo,
+                    selectDevBindable: selectDev,
+                    type: .detail
+                )
             } else {
                 ContentUnavailableView {
                     Label("未选",
