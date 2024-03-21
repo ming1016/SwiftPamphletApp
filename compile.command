@@ -9,7 +9,7 @@ GIT_ROOT=$(pwd)
 
 rm -rf build 戴铭的开发小册子.app
 cd SwiftPamphletApp
-if grep -q 'gitHubAccessToken = ""' ./SwiftPamphletAppConfig.swift ; then
+if grep -q 'gitHubAccessToken = ""' ./App/SwiftPamphletAppConfig.swift ; then
     echo "please setup your personal access token to SwiftPamphletAppConfig.swift" && exit
 fi
 cd ..
