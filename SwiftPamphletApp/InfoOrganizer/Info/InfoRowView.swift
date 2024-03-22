@@ -10,6 +10,7 @@ import SwiftUI
 struct InfoRowView: View {
     @State var info: IOInfo
     let selectedInfo: IOInfo?
+    @State private var showAlert = false
     
     var infoColor: Color {
         selectedInfo == info ? Color.white : Color.accentColor
@@ -25,9 +26,16 @@ struct InfoRowView: View {
                     Text(info.category?.name ?? "")
                 }
                 Spacer()
+                
             }
             .foregroundColor(light: .secondary, dark: .secondary)
             Text(info.name)
+            HStack {
+                Text(dateString(date: info.updateDate))
+                    .font(.footnote)
+                Spacer()
+            }
+            .foregroundColor(light: .secondary, dark: .secondary)
         }
         .swipeActions {
             Button(role: .destructive) {
@@ -35,12 +43,22 @@ struct InfoRowView: View {
             } label: {
                 Label("删除", systemImage: "trash")
             }
+            
         }
         .contextMenu {
             Button("删除") {
                 IOInfo.delete(info)
             }
         }
+    }
+    
+    func dateString(date: Date) -> String {
+        var re = ""
+        if date.year != Date.now.year {
+            re += date.year.description + "."
+        }
+        re += date.month.description + "." + date.day.description
+        return re
     }
 }
 

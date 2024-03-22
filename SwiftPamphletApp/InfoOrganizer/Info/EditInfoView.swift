@@ -21,6 +21,7 @@ struct EditInfoView: View {
     @State var cate:IOCategory? = nil
     
     @State var urlContent = ""
+    @State var selectedTab = 1
     
     var body: some View {
         VStack {
@@ -102,13 +103,27 @@ struct EditInfoView: View {
                     }
                 }
                 
-                Section(footer: Text("支持 markdown 格式的文本")) {
+                Section(footer: Text("文本支持 markdown 格式")) {
                     // TODO: markdown 获取图片链接，并能显示
-                    TabView {
+                    TabView(selection: $selectedTab) {
                         TextEditor(text: $info.des)
                             .tabItem { Label("文本", systemImage: "circle") }
+                            .tag(1)
                         WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
                             .tabItem { Label("预览", systemImage: "circle") }
+                            .tag(2)
+                        if !info.url.isEmpty {
+                            WebUIView(urlStr: info.url)
+                                .tabItem { Label("网页", systemImage: "circle") }
+                                .tag(3)
+                        }
+                    }
+                    .onChange(of: info.url) { oldValue, newValue in
+                        if newValue.isEmpty {
+                            selectedTab = 0
+                        } else {
+                            selectedTab = 3
+                        }
                     }
                 }
             } // end form

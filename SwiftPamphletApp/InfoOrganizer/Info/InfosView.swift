@@ -45,7 +45,7 @@ struct InfosView: View {
                 .onAppear {
                     if info == infos.last {
                         if limit <= infos.count {
-                            limit += 100
+                            limit += 300
                         }
                     }
                 }

@@ -16,7 +16,7 @@ struct InfoListView: View {
     
     @Query(IOCategory.allOrderByName) var cates: [IOCategory]
     @State private var filterCate = ""
-    @State var limit: Int = 100
+    @State var limit: Int = 300
     @State var filterStar: Bool = false
     
     var body: some View {
@@ -33,7 +33,7 @@ struct InfoListView: View {
                             Text("全部")
                         }
                         .tag("")
-                        
+                        Divider()
                         ForEach(cates) { cate in
                             HStack {
                                 if cate.pin == 1 {
