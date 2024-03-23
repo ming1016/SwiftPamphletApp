@@ -4,7 +4,7 @@
 //
 //  Created by Ming Dai on 2024/3/11.
 //
-
+//import Foundation
 import SwiftUI
 import SwiftData
 
@@ -12,7 +12,7 @@ struct InfoListView: View {
     @Environment(\.modelContext) var modelContext
     @State private var searchText = ""
     @Binding var selectInfo:IOInfo?
-    @State private var sortOrder = [SortDescriptor(\IOInfo.updateDate, order: .reverse)]
+    @State private var sortOrder = [SortDescriptor(\IOInfo.star, order: .reverse),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
     
     @Query(IOCategory.allOrderByName) var cates: [IOCategory]
     @State private var filterCate = ""
@@ -45,10 +45,12 @@ struct InfoListView: View {
                         }
                     }
                 }
-                ToolbarItem(placement: .navigation) {
-                    Toggle(isOn: $filterStar) {
+                if filterCate.isEmpty {
+                    ToolbarItem(placement: .navigation) {
+                        Toggle(isOn: $filterStar) {
+                        }
+                        .toggleStyle(SymbolToggleStyle(systemImage: "star.fill", activeColor: .yellow))
                     }
-                    .toggleStyle(SymbolToggleStyle(systemImage: "star.fill", activeColor: .yellow))
                 }
                 ToolbarItem(placement: .navigation) {
                     Menu("Sort", systemImage: "arrow.up.arrow.down.square") {
@@ -83,12 +85,7 @@ struct InfoListView: View {
     }
     
     func addInfo() {
-        let info = IOInfo(name: "简单记录", url: "", des: "\n", star: false, createDate: Date.now, updateDate: Date.now)
-        modelContext.insert(info)
-        selectInfo = info
-    }
-    func addInfoWithCate() {
-        let info = IOInfo(name: "\(filterCate) - 简单记录", url: "", des: "\n", star: false, createDate: Date.now, updateDate: Date.now)
+        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", des: "\n", star: false, createDate: Date.now, updateDate: Date.now)
         for cate in cates {
             if cate.name == filterCate {
                 info.category = cate
@@ -96,6 +93,10 @@ struct InfoListView: View {
         }
         modelContext.insert(info)
         selectInfo = info
+    }
+    func nowDateString() -> String {
+        let locale = Locale(identifier: "zh_Hans")
+        return Date.now.formatted(.dateTime.locale(locale))
     }
     
 }

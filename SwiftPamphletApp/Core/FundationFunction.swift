@@ -32,6 +32,11 @@ func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> St
 }
 
 // MARK: - 时间
+func howLongAgo(date: Date) -> String {
+    let simplifiedChinese = Locale(identifier: "zh_Hans")
+    return date.formatted(.relative(presentation: .named,
+                                    unitsStyle: .spellOut).locale(simplifiedChinese))
+}
 func howLongFromNow(timeStr: String) -> String {
     let cn = Region(zone: Zones.asiaShanghai, locale: Locales.chineseChina)
     SwiftDate.defaultRegion = cn
@@ -176,6 +181,13 @@ extension String {
     func base64Decoded() -> String? {
         guard let data = Data(base64Encoded: self) else { return nil }
         return String(data: data, encoding: .utf8)
+    }
+}
+// 用于 SwiftData，让布尔值可排序
+extension Bool: Comparable {
+    public static func <(lhs: Self, rhs: Self) -> Bool {
+        // the only true inequality is false < true
+        !lhs && rhs
     }
 }
 

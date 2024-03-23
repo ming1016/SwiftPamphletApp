@@ -11,16 +11,16 @@ import SwiftData
 @Model
 final class DeveloperModel {
     var name: String = ""
-    var unread: Int = 0
-    var lastEventIdStr: String = ""
+    var des: String = ""
+    var avatar: String = ""
     
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
     
-    init(name: String, unread: Int, lastEventIdStr: String, createDate: Date, updateDate: Date) {
+    init(name: String, des: String, avatar: String, createDate: Date, updateDate: Date) {
         self.name = name
-        self.unread = unread
-        self.lastEventIdStr = lastEventIdStr
+        self.des = des
+        self.avatar = avatar
         self.createDate = createDate
         self.updateDate = updateDate
     }

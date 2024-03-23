@@ -16,21 +16,39 @@ struct DeveloperListView: View {
     var body: some View {
         List(selection: $selectDev) {
             ForEach(devs) { dev in
-                Text(dev.name)
-                    .badge(dev.unread)
-                    .tag(dev)
-                    .swipeActions {
-                        Button(role: .destructive) {
-                            DeveloperModel.delete(dev)
-                        } label: {
-                            Label("删除", systemImage: "trash")
+                HStack {
+                    AsyncImageWithPlaceholder(size: .smallSize, url: dev.avatar)
+                    VStack {
+                        HStack {
+                            Text(dev.name)
+                            Spacer()
+                            Text(howLongAgo(date: dev.updateDate))
+                                .font(.footnote)
+                                .foregroundColor(light: .secondary, dark: .secondary)
                         }
-                    }
-                    .contextMenu {
-                        Button("删除") {
-                            DeveloperModel.delete(dev)
+                        HStack {
+                            Text(dev.des)
+                                .font(.footnote)
+                                .foregroundColor(light: .secondary, dark: .secondary)
+                            Spacer()
                         }
+                        Spacer()
                     }
+                }
+                .tag(dev)
+                .swipeActions {
+                    Button(role: .destructive) {
+                        DeveloperModel.delete(dev)
+                    } label: {
+                        Label("删除", systemImage: "trash")
+                    }
+                }
+                .contextMenu {
+                    Button("删除") {
+                        DeveloperModel.delete(dev)
+                    }
+                }
+                    
                     
             }
         }
@@ -44,7 +62,7 @@ struct DeveloperListView: View {
     }
     
     func addDev() {
-        let dev = DeveloperModel(name: "", unread: 0, lastEventIdStr: "", createDate: Date.now, updateDate: Date.now)
+        let dev = DeveloperModel(name: "", des: "", avatar: "", createDate: Date.now, updateDate: Date.now)
         modelContext.insert(dev)
         selectDev = dev
     }

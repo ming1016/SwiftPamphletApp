@@ -14,12 +14,17 @@ struct EditDeveloper: View {
     @State private var tabSelct = 1
     
     var body: some View {
-        TextField("请输入账号:", text: $dev.name)
-            .onSubmit {
-                vm = UserVM(userName: dev.name)
-                vm.doing(.updateAll)
+        Form {
+            HStack {
+                TextField("用户名:", text: $dev.name, prompt: Text("输入 Github 用户名"))
+                    .onSubmit {
+                        vm = UserVM(userName: dev.name)
+                        vm.doing(.updateAll)
+                    }
+                TextField("描述:", text: $dev.des)
             }
-            .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
+        }
+        .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
         
         HStack {
             VStack(alignment: .leading, spacing: 10) {
@@ -65,6 +70,15 @@ struct EditDeveloper: View {
         .onChange(of: dev.name, { oldValue, newValue in
             vm = UserVM(userName: newValue)
             vm.doing(.updateAll)
+        })
+        .onChange(of: vm.events, { oldValue, newValue in
+            if ((newValue.first?.createdAt.isEmpty) != nil) {
+                let iso8601String = newValue.first?.createdAt ?? ""
+                let formatter = ISO8601DateFormatter()
+                dev.updateDate = formatter.date(from: iso8601String) ?? Date.now
+                dev.avatar = vm.user.avatarUrl
+            }
+            
         })
         .frame(minWidth: SPC.detailMinWidth)
         

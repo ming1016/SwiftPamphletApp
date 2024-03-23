@@ -19,19 +19,26 @@ struct InfoRowView: View {
     var body: some View {
         VStack(alignment:.leading) {
             HStack {
-                if info.star == true {
-                    Image(systemName: "star.fill")
-                }
+                
                 if info.category != nil {
                     Text(info.category?.name ?? "")
                 }
+                if info.des == "\n" || info.des.isEmpty {
+                    
+                } else {
+                    Image(systemName: "pencil.and.list.clipboard")
+                }
+                if info.star == true {
+                    Image(systemName: "star.fill")
+                }
                 Spacer()
-                
             }
+            .font(.footnote)
             .foregroundColor(light: .secondary, dark: .secondary)
+            
             Text(info.name)
             HStack {
-                Text(dateString(date: info.updateDate))
+                Text(howLongAgo(date: info.updateDate))
                     .font(.footnote)
                 Spacer()
             }
@@ -52,14 +59,6 @@ struct InfoRowView: View {
         }
     }
     
-    func dateString(date: Date) -> String {
-        var re = ""
-        if date.year != Date.now.year {
-            re += date.year.description + "."
-        }
-        re += date.month.description + "." + date.day.description
-        return re
-    }
 }
 
 

@@ -33,6 +33,11 @@ struct EditInfoView: View {
                             Image(systemName: info.star ? "star.fill" : "star")
                         }
                         .toggleStyle(.button)
+                        Button(action: {
+                            info.updateDate = Date.now
+                        }, label: {
+                            Image(systemName: "arrow.up.square")
+                        })
                     }
                     HStack {
                         TextField("地址:", text: $info.url)
@@ -119,11 +124,10 @@ struct EditInfoView: View {
                         }
                     }
                     .onChange(of: info.url) { oldValue, newValue in
-                        if newValue.isEmpty {
-                            selectedTab = 0
-                        } else {
-                            selectedTab = 3
-                        }
+                        tabSwitch()
+                    }
+                    .onAppear {
+                        tabSwitch()
                     }
                 }
             } // end form
@@ -139,6 +143,13 @@ struct EditInfoView: View {
             }
             Spacer()
         } // end VStack
+    }
+    func tabSwitch() {
+        if info.url.isEmpty {
+            selectedTab = 1
+        } else {
+            selectedTab = 3
+        }
     }
     func addCate() {
         cate = IOCategory(name: "", infos: [IOInfo](), pin: 0, createDate: Date.now, updateDate: Date.now)
