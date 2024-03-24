@@ -29,7 +29,7 @@ struct InfoListView: View {
                 ToolbarItem(placement: .navigation) {
                     Picker("分类", selection: $filterCate) {
                         HStack {
-                            Image(systemName: "books.vertical")
+//                            Image(systemName: "books.vertical")
                             Text("全部")
                         }
                         .tag("")

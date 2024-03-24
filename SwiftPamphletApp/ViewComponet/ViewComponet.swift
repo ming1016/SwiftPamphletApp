@@ -150,8 +150,10 @@ struct WebUIView: NSViewRepresentable {
             let host = URL(string: baseURLStr)?.host ?? ""
             nsView.loadHTMLString(html, baseURL: URL(string: "https://\(host)"))
         } else {
-            let r = URLRequest(url: URL(string: urlStr)!)
-            nsView.load(r)
+            if let url = URL(string: urlStr) {
+                let r = URLRequest(url: url)
+                nsView.load(r)
+            }
         }
     }
     
