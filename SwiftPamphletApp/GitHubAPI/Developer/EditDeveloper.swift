@@ -76,9 +76,12 @@ struct EditDeveloper: View {
                 let iso8601String = newValue.first?.createdAt ?? ""
                 let formatter = ISO8601DateFormatter()
                 dev.updateDate = formatter.date(from: iso8601String) ?? Date.now
+            }
+        })
+        .onChange(of: vm.user, { oldValue, newValue in
+            if !newValue.avatarUrl.isEmpty {
                 dev.avatar = vm.user.avatarUrl
             }
-            
         })
         .frame(minWidth: SPC.detailMinWidth)
         
