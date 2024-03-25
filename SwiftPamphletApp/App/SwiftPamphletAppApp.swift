@@ -17,8 +17,8 @@ struct SwiftPamphletAppApp: App {
     var body: some Scene {
         WindowGroup {
 //            SwiftPamphletApp() // 老版本
-            HomeView() // 新版本
-//            TestCSGuideView()
+//            HomeView() // 新版本
+            PlayWeatherView()
                 .modelContainer(for: [IOInfo.self, DeveloperModel.self], isUndoEnabled: true)
             
         }
