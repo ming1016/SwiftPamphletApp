@@ -20,7 +20,18 @@ struct DeveloperListView: View {
                     AsyncImageWithPlaceholder(size: .smallSize, url: dev.avatar)
                     VStack {
                         HStack {
-                            Text(dev.name)
+                            if dev.repoName.isEmpty {
+                                Text(dev.name)
+                                
+                            } else {
+                                VStack(alignment:.leading) {
+                                    Text(dev.repoOwner)
+                                        .font(.footnote)
+                                        .foregroundColor(light: .secondary, dark: .secondary)
+                                    Text(dev.repoName)
+                                }
+                            }
+                            
                             Spacer()
                             Text(howLongAgo(date: dev.updateDate))
                                 .font(.footnote)
@@ -62,7 +73,7 @@ struct DeveloperListView: View {
     }
     
     func addDev() {
-        let dev = DeveloperModel(name: "", des: "", avatar: "", createDate: Date.now, updateDate: Date.now)
+        let dev = DeveloperModel(name: "", des: "", avatar: "", repoOwner: "", repoName: "", createDate: Date.now, updateDate: Date.now)
         modelContext.insert(dev)
         selectDev = dev
     }

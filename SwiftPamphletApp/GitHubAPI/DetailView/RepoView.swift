@@ -152,7 +152,6 @@ struct IssuesView: View {
                 } else {
                     IssueLabelView(issue: issue)
                 }
-                Divider()
             } // end ForEach
         } // end List
     } // end body
@@ -172,7 +171,6 @@ struct IssueEventsView: View {
                 } else {
                     IssueEventLabelView(issueEvent: issueEvent)
                 }
-                Divider()
             } //  end ForEach
         } // end List
     } // end body
@@ -201,8 +199,6 @@ struct RepoCommitsView: View {
                 } else {
                     RepoCommitLabelView(repo: repo, commit: commit, isUnRead: unReadCount > 0 && i < unReadCount)
                 }
-
-                Divider()
             } // end ForEach
         } // end List
         .frame(minWidth: SPC.detailMinWidth)

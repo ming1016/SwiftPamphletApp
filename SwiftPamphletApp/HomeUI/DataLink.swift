@@ -38,14 +38,14 @@ struct DataLink: Identifiable {
                     EmptyView()
                 }
             }
-        case "开发者":
+        case "开发/仓库":
             switch type {
             case .content:
                 DeveloperListView(selectDev:selectDev)
             case .detail:
                 if let dev = selectDevBindable {
                     if SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false {
-                        EditDeveloper(dev: dev, vm: UserVM(userName: dev.name))
+                        EditDeveloper(dev: dev, vm: UserVM(userName: dev.name), vmRepo: RepoVM(repoName: dev.name))
                     } else {
                         Text("请在设置里写上 Github 的 access token")
                     }
@@ -78,7 +78,7 @@ extension DataLink {
             DataLink(title: "资料整理", imageName: "p11")
         ]),
         DataLink(title: "Github", imageName: "", children: [
-            DataLink(title: "开发者", imageName: "p5"),
+            DataLink(title: "开发/仓库", imageName: "p5"),
         ]),
         DataLink(title: "Swift指南", imageName: "", children: [
             DataLink(title: "语法速查", imageName: "p23"),

@@ -48,6 +48,9 @@ final class RepoVM: APIVMable {
         switch somethinglike {
         case .inInit:
             apRepoSj.send(())
+            apCommitsSj.send(())
+            apIssueEventsSj.send(())
+            apIssuesSj.send(())
         case .inCommit:
             apCommitsSj.send(())
         case .inInitJustRepo:

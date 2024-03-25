@@ -117,8 +117,8 @@ struct EditInfoView: View {
                         WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
                             .tabItem { Label("预览", systemImage: "circle") }
                             .tag(2)
-                        if !info.url.isEmpty {
-                            WebUIView(urlStr: info.url)
+                        if let url = URL(string: info.url) {
+                            WebUIView(urlStr: url.absoluteString)
                                 .tabItem { Label("网页", systemImage: "circle") }
                                 .tag(3)
                         }

@@ -35,7 +35,7 @@ func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> St
 func howLongAgo(date: Date) -> String {
     let simplifiedChinese = Locale(identifier: "zh_Hans")
     return date.formatted(.relative(presentation: .named,
-                                    unitsStyle: .spellOut).locale(simplifiedChinese))
+                                    unitsStyle: .wide).locale(simplifiedChinese))
 }
 func howLongFromNow(timeStr: String) -> String {
     let cn = Region(zone: Zones.asiaShanghai, locale: Locales.chineseChina)

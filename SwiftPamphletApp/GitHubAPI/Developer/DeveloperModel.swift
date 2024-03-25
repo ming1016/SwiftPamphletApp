@@ -14,13 +14,18 @@ final class DeveloperModel {
     var des: String = ""
     var avatar: String = ""
     
+    var repoOwner: String = ""
+    var repoName: String = ""
+    
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
     
-    init(name: String, des: String, avatar: String, createDate: Date, updateDate: Date) {
+    init(name: String, des: String, avatar: String, repoOwner: String, repoName: String, createDate: Date, updateDate: Date) {
         self.name = name
         self.des = des
         self.avatar = avatar
+        self.repoOwner = repoOwner
+        self.repoName = repoName
         self.createDate = createDate
         self.updateDate = updateDate
     }
