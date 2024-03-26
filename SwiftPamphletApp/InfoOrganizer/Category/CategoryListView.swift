@@ -22,25 +22,29 @@ struct CategoryListView: View {
                 }
             }
         }
-        ScrollView(.horizontal) {
-            Chart {
-                ForEach(cates) { cate in
-                    BarMark(
-                        x: .value("名字", cate.name),
-                        y: .value("数量", cate.infos?.count ?? 0)
-                    )
-                    .foregroundStyle(.orange)
-                    .symbol(.circle)
-                    .interpolationMethod(.catmullRom)
-                }
+        GroupBox("图表显示") {
+            Chart(cates) { cate in
+//                BarMark(
+//                    x: .value("数量", cate.infos?.count ?? 0),
+//                    y: .value("名字", cate.name)
+//                )
+//                .annotation(position: .overlay, alignment: .trailing, spacing: 3) {
+//                    Text("\(cate.infos?.count ?? 0)")
+//                        .font(.footnote)
+//                        .foregroundColor(light: .white, dark: .white)
+//                }
+                SectorMark(angle: .value("数量", cate.infos?.count ?? 0), innerRadius: .ratio(0.5),
+                           angularInset: 1.5)
+                    .foregroundStyle(by: .value("名字", cate.name))
+                    .annotation(position: .overlay, alignment: .trailing, spacing: 3) {
+                        Text("\(cate.infos?.count ?? 0)")
+                            .font(.footnote)
+                            .foregroundColor(light: .white, dark: .white)
+                    }
             }
-            .chartXAxis {
-                AxisMarks(values: .automatic(minimumStride: 10)) { _ in
-                    AxisGridLine()
-                    AxisTick()
-                    
-                }
-            }
+            .chartXAxis(.hidden)
+//            .chartYAxis(.hidden)
+//            .aspectRatio(1, contentMode: .fit)
         }
         
     }

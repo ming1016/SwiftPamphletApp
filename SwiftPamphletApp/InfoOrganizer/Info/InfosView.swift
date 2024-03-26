@@ -19,7 +19,7 @@ struct InfosView: View {
             if !filterCateName.isEmpty && !searchString.isEmpty {
                 (info.name.localizedStandardContains(searchString)
                 || info.url.localizedStandardContains(searchString)
-                 || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName && info.star == filterStar
+                 || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName
             } else if !filterCateName.isEmpty {
                 info.category?.name == filterCateName
             } else if searchString.isEmpty {
