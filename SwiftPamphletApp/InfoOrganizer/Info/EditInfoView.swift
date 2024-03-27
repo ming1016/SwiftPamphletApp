@@ -23,8 +23,10 @@ struct EditInfoView: View {
     @State var urlContent = ""
     @State var selectedTab = 1
     
+    @State var isStopLoadingWeb = false
     // webarchive
     @State var savingDataTrigger = false
+
     
     var body: some View {
         VStack {
@@ -141,7 +143,8 @@ struct EditInfoView: View {
                             WebUIViewWithSave(
                                 urlStr: url.absoluteString,
                                 savingDataTrigger: $savingDataTrigger,
-                                savingData: $info.webArchive
+                                savingData: $info.webArchive,
+                                isStop: $isStopLoadingWeb
                             )
                                 .tabItem { Label("网页", systemImage: "circle") }
                                 .tag(3)
@@ -149,6 +152,7 @@ struct EditInfoView: View {
                     }
                     .onChange(of: info.url) { oldValue, newValue in
                         tabSwitch()
+                        isStopLoadingWeb = false
                     }
                     .onAppear {
                         tabSwitch()

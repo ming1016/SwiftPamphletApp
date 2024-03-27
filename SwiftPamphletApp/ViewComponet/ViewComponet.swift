@@ -197,6 +197,8 @@ struct WebUIViewWithSave: NSViewRepresentable {
     
     @Binding var savingDataTrigger: Bool
     @Binding var savingData: Data?
+    
+    @Binding var isStop: Bool
 
     func makeCoordinator() -> Coordinator {
         Coordinator()
@@ -209,20 +211,6 @@ struct WebUIViewWithSave: NSViewRepresentable {
     }
 
     func updateNSView(_ nsView: NSViewType, context: Context) {
-        if savingData != nil {
-            if let data = savingData {
-                nsView.load(data, mimeType: "application/x-webarchive", characterEncodingName: "utf-8", baseURL: getDocumentsDirectory())
-            }
-        } else if urlStr.isEmpty {
-            let host = URL(string: baseURLStr)?.host ?? ""
-            nsView.loadHTMLString(html, baseURL: URL(string: "https://\(host)"))
-        } else {
-            if let url = URL(string: urlStr) {
-                let r = URLRequest(url: url)
-                nsView.load(r)
-            }
-        }
-        
         if savingDataTrigger == true {
             nsView.createWebArchiveData { result in
                 do {
@@ -234,6 +222,25 @@ struct WebUIViewWithSave: NSViewRepresentable {
             }
             savingDataTrigger = false
         }
+        
+        if isStop == true {
+            return
+        }
+        
+        if savingData != nil {
+            if let data = savingData {
+                nsView.load(data, mimeType: "application/x-webarchive", characterEncodingName: "utf-8", baseURL: getDocumentsDirectory())
+                isStop = true
+            }
+        } else {
+            if let url = URL(string: urlStr) {
+                let r = URLRequest(url: url)
+                nsView.load(r)
+                isStop = true
+            }
+        }
+        
+        
     }
     
     class Coordinator: NSObject, WKNavigationDelegate {
