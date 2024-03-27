@@ -19,7 +19,6 @@ struct InfoRowView: View {
     var body: some View {
         VStack(alignment:.leading) {
             HStack {
-                
                 if info.category != nil {
                     Text(info.category?.name ?? "")
                 }
@@ -31,13 +30,16 @@ struct InfoRowView: View {
                 if info.star == true {
                     Image(systemName: "star.fill")
                 }
+                if info.webArchive != nil {
+                    Image(systemName: "square.and.arrow.down.fill")
+                }
                 Spacer()
             }
             .font(.footnote)
             .foregroundColor(light: .secondary, dark: .secondary)
             
             Text(info.name)
-            HStack {
+            HStack(alignment: .center) {
                 Text(howLongAgo(date: info.updateDate))
                     .font(.footnote)
                 Spacer()

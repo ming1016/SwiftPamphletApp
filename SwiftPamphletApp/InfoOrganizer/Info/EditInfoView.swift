@@ -23,6 +23,9 @@ struct EditInfoView: View {
     @State var urlContent = ""
     @State var selectedTab = 1
     
+    // webarchive
+    @State var savingDataTrigger = false
+    
     var body: some View {
         VStack {
             Form {
@@ -63,19 +66,36 @@ struct EditInfoView: View {
                                 Image(systemName: "safari")
                             }
                             // TODO: 图片可选，下载到照片
+//                            Button {
+//                                
+//                                Task {
+//                                    let re = await fetchTitleFromUrl(urlString:info.url, isFetchContent: true)
+//                                    
+//                                    DispatchQueue.main.async {
+//                                        if re.content.isEmpty == false {
+//                                            info.des = re.content
+//                                        }
+//                                    }
+//                                } // end Task
+//                            } label: {
+//                                Image(systemName: "square.and.arrow.down")
+//                            }
+                            // 本地存
                             Button {
-                                Task {
-                                    let re = await fetchTitleFromUrl(urlString:info.url, isFetchContent: true)
-                                    
-                                    DispatchQueue.main.async {
-                                        if re.content.isEmpty == false {
-                                            info.des = re.content
-                                        }
-                                    }
-                                } // end Task
+                                if info.webArchive == nil {
+                                    savingDataTrigger = true
+                                } else {
+                                    info.webArchive = nil
+                                }
                             } label: {
-                                Image(systemName: "square.and.arrow.down")
+                                if info.webArchive == nil {
+                                    Image(systemName: "square.and.arrow.down")
+                                } else {
+                                    Image(systemName: "square.and.arrow.down.fill")
+                                }
                             }
+
+                            
                         } // end if
                         
                     }
@@ -118,7 +138,11 @@ struct EditInfoView: View {
                             .tabItem { Label("预览", systemImage: "circle") }
                             .tag(2)
                         if let url = URL(string: info.url) {
-                            WebUIView(urlStr: url.absoluteString)
+                            WebUIViewWithSave(
+                                urlStr: url.absoluteString,
+                                savingDataTrigger: $savingDataTrigger,
+                                savingData: $info.webArchive
+                            )
                                 .tabItem { Label("网页", systemImage: "circle") }
                                 .tag(3)
                         }

@@ -116,7 +116,35 @@ func validHTTPUrlStrFromUrlStr(urlStr: String) -> String {
     return httpsPrefix + urlStr
 }
 
-// MARK: - 文件
+// MARK: - 文件 - 沙盒
+// 获取沙盒Document目录路径
+func getDocumentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
+}
+
+// 保存数据到沙盒中
+func saveDataToSandbox(data: Data, fileName: String) {
+    let fileURL = getDocumentsDirectory().appendingPathComponent(fileName)
+    do {
+        try data.write(to: fileURL)
+        print("文件保存成功：\(fileURL.path)")
+    } catch {
+        print("保存文件时出错：\(error)")
+    }
+}
+// 删除沙盒中的文件
+func deleteFileFromSandbox(fileName: String) {
+    let fileURL = getDocumentsDirectory().appendingPathComponent(fileName)
+    do {
+        try FileManager.default.removeItem(at: fileURL)
+        print("文件删除成功：\(fileURL.path)")
+    } catch {
+        print("删除文件时出错：\(error)")
+    }
+}
+
+// MARK: - 文件 - 系统和 Bundle
 // just for test
 func writeToDownload(fileName: String, content: String) {
     try! content.write(toFile: "/Users/mingdai/Downloads/\(fileName)", atomically: true, encoding: String.Encoding.utf8)

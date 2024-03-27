@@ -15,6 +15,7 @@ final class IOInfo {
     var des: String = ""
     var category: IOCategory? = nil// 关系字段，链接 IOCategory
     var star: Bool = false
+    @Attribute(.externalStorage) var webArchive: Data? = nil
     
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
@@ -24,6 +25,7 @@ final class IOInfo {
          des: String,
          category: IOCategory? = nil,
          star: Bool,
+         webArchive: Data? = nil,
          createDate: Date,
          updateDate: Date
     ) {
@@ -32,6 +34,7 @@ final class IOInfo {
         self.des = des
         self.category = category
         self.star = star
+        self.webArchive = webArchive
         self.createDate = createDate
         self.updateDate = updateDate
     }

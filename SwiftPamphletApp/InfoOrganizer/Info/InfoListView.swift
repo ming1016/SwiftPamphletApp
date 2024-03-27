@@ -85,7 +85,7 @@ struct InfoListView: View {
     }
     
     func addInfo() {
-        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", des: "\n", star: false, createDate: Date.now, updateDate: Date.now)
+        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", des: "\n", star: false, webArchive: nil , createDate: Date.now, updateDate: Date.now)
         for cate in cates {
             if cate.name == filterCate {
                 info.category = cate

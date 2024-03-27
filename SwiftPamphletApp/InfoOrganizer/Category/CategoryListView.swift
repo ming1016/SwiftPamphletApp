@@ -24,24 +24,25 @@ struct CategoryListView: View {
         }
         GroupBox("图表显示") {
             Chart(cates) { cate in
-//                BarMark(
-//                    x: .value("数量", cate.infos?.count ?? 0),
-//                    y: .value("名字", cate.name)
-//                )
-//                .annotation(position: .overlay, alignment: .trailing, spacing: 3) {
-//                    Text("\(cate.infos?.count ?? 0)")
-//                        .font(.footnote)
-//                        .foregroundColor(light: .white, dark: .white)
-//                }
-                SectorMark(angle: .value("数量", cate.infos?.count ?? 0), innerRadius: .ratio(0.5),
-                           angularInset: 1.5)
-                    .foregroundStyle(by: .value("名字", cate.name))
-                    .annotation(position: .overlay, alignment: .trailing, spacing: 3) {
-                        Text("\(cate.infos?.count ?? 0)")
-                            .font(.footnote)
-                            .foregroundColor(light: .white, dark: .white)
-                    }
+                BarMark(
+                    x: .value("数量", cate.infos?.count ?? 0),
+                    y: .value("名字", cate.name)
+                )
+                .annotation(position: .overlay, alignment: .trailing, spacing: 3) {
+                    Text("\(cate.infos?.count ?? 0)")
+                        .font(.footnote)
+                        .foregroundColor(light: .white, dark: .white)
+                }
+//                SectorMark(angle: .value("数量", cate.infos?.count ?? 0), innerRadius: .ratio(0.5),
+//                           angularInset: 1.5)
+//                    .foregroundStyle(by: .value("名字", cate.name))
+//                    .annotation(position: .overlay, alignment: .trailing, spacing: 3) {
+//                        Text(cate.name)
+//                            .font(.footnote)
+//                            .foregroundColor(light: .white, dark: .white)
+//                    }
             }
+            .chartLegend(.hidden)
             .chartXAxis(.hidden)
 //            .chartYAxis(.hidden)
 //            .aspectRatio(1, contentMode: .fit)

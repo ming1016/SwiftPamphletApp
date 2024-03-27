@@ -155,6 +155,7 @@ struct WebUIView: NSViewRepresentable {
                 nsView.load(r)
             }
         }
+        
     }
     
     class Coordinator: NSObject, WKNavigationDelegate {
@@ -187,6 +188,70 @@ struct WebUIView: NSViewRepresentable {
 //            decisionHandler(.allow)
 //        }
     }
+}
+
+struct WebUIViewWithSave: NSViewRepresentable {
+    var urlStr: String = ""
+    var html: String = ""
+    var baseURLStr: String = ""
+    
+    @Binding var savingDataTrigger: Bool
+    @Binding var savingData: Data?
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+    
+    func makeNSView(context: Context) -> some WKWebView {
+        let webView = WKWebView()
+        webView.navigationDelegate = context.coordinator
+        return webView
+    }
+
+    func updateNSView(_ nsView: NSViewType, context: Context) {
+        if savingData != nil {
+            if let data = savingData {
+                nsView.load(data, mimeType: "application/x-webarchive", characterEncodingName: "utf-8", baseURL: getDocumentsDirectory())
+            }
+        } else if urlStr.isEmpty {
+            let host = URL(string: baseURLStr)?.host ?? ""
+            nsView.loadHTMLString(html, baseURL: URL(string: "https://\(host)"))
+        } else {
+            if let url = URL(string: urlStr) {
+                let r = URLRequest(url: url)
+                nsView.load(r)
+            }
+        }
+        
+        if savingDataTrigger == true {
+            nsView.createWebArchiveData { result in
+                do {
+                    let data = try result.get()
+                    savingData = data
+                } catch {
+                    print("创建 webarchivedata 数据失败，\(error)")
+                }
+            }
+            savingDataTrigger = false
+        }
+    }
+    
+    class Coordinator: NSObject, WKNavigationDelegate {
+        
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            if navigationAction.navigationType == .linkActivated {
+                if let url = navigationAction.request.url {
+                    let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+                    if components?.scheme == "http" || components?.scheme == "https" {
+                        NSWorkspace.shared.open(url)
+                        decisionHandler(.cancel)
+                        return
+                    }
+                }
+            }
+            decisionHandler(.allow)
+        }
+    } // end Coordinator
 }
 
 // MARK: - Time
