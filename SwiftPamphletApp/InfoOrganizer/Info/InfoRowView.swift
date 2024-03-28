@@ -22,17 +22,6 @@ struct InfoRowView: View {
                 if info.category != nil {
                     Text(info.category?.name ?? "")
                 }
-                if info.des == "\n" || info.des.isEmpty {
-                    
-                } else {
-                    Image(systemName: "pencil.and.list.clipboard")
-                }
-                if info.star == true {
-                    Image(systemName: "star.fill")
-                }
-                if info.webArchive != nil {
-                    Image(systemName: "square.and.arrow.down.fill")
-                }
                 Spacer()
             }
             .font(.footnote)
@@ -43,6 +32,18 @@ struct InfoRowView: View {
                 Text(howLongAgo(date: info.updateDate))
                     .font(.footnote)
                 Spacer()
+                if info.star == true {
+                    Image(systemName: "star.square.fill")
+                        .symbolRenderingMode(.multicolor)
+                }
+                if info.des == "\n" || info.des.isEmpty {
+                    
+                } else {
+                    Image(systemName: "pencil.and.list.clipboard")
+                }
+                if info.webArchive != nil {
+                    Image(systemName: "square.and.arrow.down.fill")
+                }
             }
             .foregroundColor(light: .secondary, dark: .secondary)
         }

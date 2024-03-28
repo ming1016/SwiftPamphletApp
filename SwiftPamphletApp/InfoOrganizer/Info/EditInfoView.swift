@@ -38,6 +38,7 @@ struct EditInfoView: View {
                             Image(systemName: info.star ? "star.fill" : "star")
                         }
                         .toggleStyle(.button)
+                        
                         Button(action: {
                             info.updateDate = Date.now
                         }, label: {
@@ -67,21 +68,6 @@ struct EditInfoView: View {
                             } label: {
                                 Image(systemName: "safari")
                             }
-                            // TODO: 图片可选，下载到照片
-//                            Button {
-//                                
-//                                Task {
-//                                    let re = await fetchTitleFromUrl(urlString:info.url, isFetchContent: true)
-//                                    
-//                                    DispatchQueue.main.async {
-//                                        if re.content.isEmpty == false {
-//                                            info.des = re.content
-//                                        }
-//                                    }
-//                                } // end Task
-//                            } label: {
-//                                Image(systemName: "square.and.arrow.down")
-//                            }
                             // 本地存
                             Button {
                                 if info.webArchive == nil {

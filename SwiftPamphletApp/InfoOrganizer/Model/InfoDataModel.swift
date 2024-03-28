@@ -76,6 +76,10 @@ class IOCategory {
         let fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.pin, order: .reverse), SortDescriptor(\IOCategory.name, order: .forward)])
         return fd
     }
+    static var allOrderByCount: FetchDescriptor<IOCategory> {
+        let fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.infos?.capacity, order: .reverse)])
+        return fd
+    }
     
     static func pin(_ cate: IOCategory) {
         if cate.modelContext != nil {
