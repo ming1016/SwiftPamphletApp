@@ -22,7 +22,6 @@ struct CategoryRowView: View {
             }
             TextField("name", text: $cate.name)
             Spacer()
-            Text("\(cate.infos?.count ?? 0)")
         }
         .swipeActions {
             Button {

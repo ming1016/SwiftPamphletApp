@@ -49,20 +49,17 @@ final class IOInfo {
 @Model
 class IOCategory {
     var name: String = ""
-    var infos: [IOInfo]? = [IOInfo]() // 关系字段，链接 IOInfo
     var pin: Int = 0
     
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
     
     init(name: String,
-         infos: [IOInfo]?,
          pin: Int,
          createDate: Date,
          updateDate: Date
     ) {
         self.name = name
-        self.infos = [IOInfo]()
         self.pin = pin
         self.createDate = createDate
         self.updateDate = updateDate
@@ -74,10 +71,6 @@ class IOCategory {
     }
     static var allOrderByName: FetchDescriptor<IOCategory> {
         let fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.pin, order: .reverse), SortDescriptor(\IOCategory.name, order: .forward)])
-        return fd
-    }
-    static var allOrderByCount: FetchDescriptor<IOCategory> {
-        let fd = FetchDescriptor(sortBy: [SortDescriptor(\IOCategory.infos?.capacity, order: .reverse)])
         return fd
     }
     
