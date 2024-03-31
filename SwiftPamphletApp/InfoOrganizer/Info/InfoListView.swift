@@ -29,7 +29,6 @@ struct InfoListView: View {
                 ToolbarItem(placement: .navigation) {
                     Picker("分类", selection: $filterCate) {
                         HStack {
-//                            Image(systemName: "books.vertical")
                             Text("全部")
                         }
                         .tag("")
@@ -85,7 +84,7 @@ struct InfoListView: View {
     }
     
     func addInfo() {
-        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", des: "\n", star: false, webArchive: nil , createDate: Date.now, updateDate: Date.now)
+        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", coverImageUrl: "", des: "\n", star: false, webArchive: nil , createDate: Date.now, updateDate: Date.now)
         for cate in cates {
             if cate.name == filterCate {
                 info.category = cate

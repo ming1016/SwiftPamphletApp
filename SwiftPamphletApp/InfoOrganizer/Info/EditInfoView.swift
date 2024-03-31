@@ -20,7 +20,6 @@ struct EditInfoView: View {
     @State var isShowInspector = false
     @State var cate:IOCategory? = nil
     
-    @State var urlContent = ""
     @State var selectedTab = 1
     
     @State var isStopLoadingWeb = false
@@ -54,7 +53,7 @@ struct EditInfoView: View {
                                     DispatchQueue.main.async {
                                         if re.title.isEmpty == false {
                                             info.name = re.title
-                                            urlContent = re.content
+                                            info.coverImageUrl = re.imageUrl
                                         }
                                     }
                                 } // end Task
@@ -174,7 +173,7 @@ struct EditInfoView: View {
         isShowInspector.toggle()
     }
 
-    func fetchTitleFromUrl(urlString: String, isFetchContent: Bool = false) async -> (title:String, content:String) {
+    func fetchTitleFromUrl(urlString: String, isFetchContent: Bool = false) async -> (title:String, imageUrl:String) {
         var title = "没找到标题"
         guard let url = URL(string: urlString) else {
             return (title,"")
@@ -189,6 +188,18 @@ struct EditInfoView: View {
         // 获取标题
         let soupTitle = try? soup.title()
         let h1Title = try? soup.select("h1").first()?.text()
+        
+        let imgs = try? soup.select("img").array()
+        var imageUrl = ""
+        if imgs?.count ?? 0 > 0 {
+            let imgUrl = try? imgs?.randomElement()?.attr("src")
+            if let okCoverImageUrl = imgUrl {
+                if okCoverImageUrl.hasPrefix("http") {
+                    imageUrl = okCoverImageUrl
+                }
+            }
+        }
+
         if let okH1Title = h1Title {
             title = okH1Title
         }
@@ -197,19 +208,19 @@ struct EditInfoView: View {
         }
         
         // HTML 转 Markdown
-        var content = ""
+//        var content = ""
         if isFetchContent == true {
             do {
                 var document = BasicHTML(rawHTML: homepageHTML)
                 try document.parse()
                         
-                content = try document.asMarkdown()
+//                content = try document.asMarkdown()
             } catch {
                 print("html to markdown fail")
             }
         }
         
-        return (title, content)
+        return (title, imageUrl)
     }
 }
 

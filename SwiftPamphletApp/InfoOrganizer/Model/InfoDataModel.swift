@@ -12,6 +12,7 @@ import SwiftData
 final class IOInfo {
     var name: String = ""
     var url: String = ""
+    var coverImageUrl: String = ""
     var des: String = ""
     var category: IOCategory? = nil// 关系字段，链接 IOCategory
     var star: Bool = false
@@ -22,6 +23,7 @@ final class IOInfo {
     
     init(name: String, 
          url: String,
+         coverImageUrl: String,
          des: String,
          category: IOCategory? = nil,
          star: Bool,
@@ -31,6 +33,7 @@ final class IOInfo {
     ) {
         self.name = name
         self.url = url
+        self.coverImageUrl = coverImageUrl
         self.des = des
         self.category = category
         self.star = star
@@ -50,7 +53,6 @@ final class IOInfo {
 class IOCategory {
     var name: String = ""
     var pin: Int = 0
-    
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
     

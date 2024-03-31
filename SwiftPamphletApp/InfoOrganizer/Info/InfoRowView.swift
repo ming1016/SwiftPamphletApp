@@ -18,19 +18,32 @@ struct InfoRowView: View {
     
     var body: some View {
         VStack(alignment:.leading) {
-            HStack {
+
+            
+            HStack(alignment:.top) {
+                if info.coverImageUrl.isEmpty == false {
+                    AsyncImage(url: URL(string: info.coverImageUrl), content: { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 60, height: 60)
+                            .cornerRadius(5)
+                    },
+                    placeholder: {
+                        Image(systemName: "photo")
+                            .frame(width: 60, height: 60)
+                    })
+                }
+                Text(info.name)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            
+            
+            HStack(alignment: .center) {
                 if info.category != nil {
                     Text(info.category?.name ?? "")
                 }
-                Spacer()
-            }
-            .font(.footnote)
-            .foregroundColor(light: .secondary, dark: .secondary)
-            
-            Text(info.name)
-            HStack(alignment: .center) {
-                Text(howLongAgo(date: info.updateDate))
-                    .font(.footnote)
+                
                 Spacer()
                 if info.star == true {
                     Image(systemName: "star.square.fill")
@@ -44,8 +57,13 @@ struct InfoRowView: View {
                 if info.webArchive != nil {
                     Image(systemName: "square.and.arrow.down.fill")
                 }
+                Text(howLongAgo(date: info.updateDate))
+                    
+                
             }
             .foregroundColor(light: .secondary, dark: .secondary)
+            .font(.footnote)
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
         }
         .swipeActions {
             Button(role: .destructive) {
