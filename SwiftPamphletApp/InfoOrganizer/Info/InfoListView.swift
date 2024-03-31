@@ -16,7 +16,7 @@ struct InfoListView: View {
     
     @Query(IOCategory.allOrderByName) var cates: [IOCategory]
     @State private var filterCate = ""
-    @State var limit: Int = 300
+    @State var limit: Int = 50
     @State var filterStar: Bool = false
     
     var body: some View {
