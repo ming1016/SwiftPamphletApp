@@ -141,7 +141,7 @@ struct EditInfoView: View {
                         }
                         VStack {
                             HStack {
-                                PhotosPicker(selection: $selectedPhotos, matching: .images) {
+                                PhotosPicker(selection: $selectedPhotos, matching: .not(.videos)) {
                                     Label("选择照片图片", systemImage: "photo.on.rectangle.angled")
                                 }
                                 .onChange(of: selectedPhotos) { oldValue, newValue in
@@ -315,31 +315,17 @@ struct EditInfoView: View {
         var imageUrls = [String]()
         
         // 获取图集
-        var schemeStr = ""
-        var hostStr = ""
-        if let scheme = url.scheme, let host = url.host {
-            schemeStr = scheme
-            hostStr = host
-        }
+        
         do {
             let imgs = try soup.select("img").array()
             if imgs.count > 0 {
                 let imgUrl = try imgs.randomElement()?.attr("src")
                 if let okImgUrl = imgUrl {
-                    if okImgUrl.hasPrefix("http") {
-                        imageUrl = okImgUrl
-                    } else {
-                        imageUrl = "\(schemeStr)://\(hostStr)/\(okImgUrl)"
-                    }
+                    imageUrl = urlWithSchemeAndHost(url: url, urlStr: okImgUrl)
                 }
                 for elm in imgs {
                     let elmUrl = try elm.attr("src")
-                    if elmUrl.hasPrefix("http") {
-                        imageUrls.append(elmUrl)
-                    } else {
-                        imageUrls.append("\(schemeStr)://\(hostStr)/\(elmUrl)")
-                    }
-                    
+                    imageUrls.append(urlWithSchemeAndHost(url: url, urlStr: elmUrl))
                 }
             }
         } catch {}

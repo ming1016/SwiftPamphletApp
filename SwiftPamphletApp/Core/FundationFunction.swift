@@ -116,6 +116,26 @@ func validHTTPUrlStrFromUrlStr(urlStr: String) -> String {
     return httpsPrefix + urlStr
 }
 
+// 网页的相对地址转绝对地址
+func urlWithSchemeAndHost(url: URL, urlStr: String) -> String {
+    var schemeStr = ""
+    var hostStr = ""
+    if let scheme = url.scheme, let host = url.host {
+        schemeStr = scheme
+        hostStr = host
+    }
+    
+    if urlStr.hasPrefix("http") {
+        return urlStr
+    } else {
+        var slash = ""
+        if urlStr.hasPrefix("/") == false {
+            slash = "/"
+        }
+        return "\(schemeStr)://\(hostStr)\(slash)\(urlStr)"
+    }
+}
+
 // MARK: - 文件 - 沙盒
 // 获取沙盒Document目录路径
 func getDocumentsDirectory() -> URL {
