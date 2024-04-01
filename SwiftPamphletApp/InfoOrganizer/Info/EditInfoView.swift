@@ -204,11 +204,6 @@ struct EditInfoView: View {
                                                             } label: {
                                                                 Label("删除", image: "circle")
                                                             }
-                                                            Button {
-                                                                
-                                                            } label: {
-                                                                Label(img.url, image: "doc.text.image")
-                                                            }
                                                         }
                                                     }
                                                 } // end VStack
@@ -233,11 +228,6 @@ struct EditInfoView: View {
                                                     IOInfo.updateCoverImage(info: info, img: IOImg(url: img))
                                                 } label: {
                                                     Label("设为封面图", image: "doc.text.image")
-                                                }
-                                                Button {
-                                                    
-                                                } label: {
-                                                    Label(img, image: "doc.text.image")
                                                 }
                                             }
                                         }
