@@ -21,18 +21,29 @@ struct InfoRowView: View {
 
             
             HStack(alignment:.top) {
-                if info.coverImageUrl.isEmpty == false {
-                    AsyncImage(url: URL(string: info.coverImageUrl), content: { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 60, height: 60)
-                            .cornerRadius(5)
-                    },
-                    placeholder: {
-                        Image(systemName: "photo")
-                            .frame(width: 60, height: 60)
-                    })
+                if let coverImg = info.coverImage {
+                    if coverImg.url.isEmpty == false {
+                        AsyncImage(url: URL(string: coverImg.url), content: { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 60, height: 60)
+                                .cornerRadius(5)
+                        },
+                        placeholder: {
+                            Image(systemName: "photo.fill")
+                                .frame(width: 60, height: 60)
+                        })
+                    } else if let imgData = coverImg.imgData {
+                        if let nsImage = NSImage(data: imgData) {
+                            Image(nsImage: nsImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 60, height: 60)
+                                .cornerRadius(5)
+                        }
+                    }
+                    
                 }
                 Text(info.name)
                     .fixedSize(horizontal: false, vertical: true)

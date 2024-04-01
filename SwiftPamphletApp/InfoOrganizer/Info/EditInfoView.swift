@@ -10,6 +10,7 @@ import SwiftData
 import SwiftSoup
 import SwiftHTMLtoMarkdown
 import Ink
+import PhotosUI
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
@@ -26,6 +27,9 @@ struct EditInfoView: View {
     // webarchive
     @State var savingDataTrigger = false
 
+    // 图集
+    @State var selectedPhotos = [PhotosPickerItem]()
+    @State var addWebImageUrl = ""
     
     var body: some View {
         VStack {
@@ -48,18 +52,19 @@ struct EditInfoView: View {
                         TextField("地址:", text: $info.url)
                             .onSubmit {
                                 Task {
+                                    // MARK: 获取 Web 内容
                                     info.name = "获取标题中......"
                                     let re = await fetchTitleFromUrl(urlString:info.url)
                                     DispatchQueue.main.async {
                                         if re.title.isEmpty == false {
                                             info.name = re.title
-                                            info.coverImageUrl = re.imageUrl
+                                            if re.imageUrl.isEmpty == false {
+                                                IOInfo.updateCoverImage(info: info, img: IOImg(url: re.imageUrl))
+                                            }
+                                            info.imageUrls = re.imageUrls
                                         }
                                     }
                                 } // end Task
-                            }
-                            .onChange(of: info.url) { oldValue, newValue in
-                                
                             }
                         if info.url.isEmpty == false {
                             Button {
@@ -114,7 +119,7 @@ struct EditInfoView: View {
                         Button("管理分类", action: manageCate)
                     }
                 }
-                
+                // MARK: Tab 切换
                 Section(footer: Text("文本支持 markdown 格式")) {
                     // TODO: markdown 获取图片链接，并能显示
                     TabView(selection: $selectedTab) {
@@ -132,8 +137,116 @@ struct EditInfoView: View {
                                 isStop: $isStopLoadingWeb
                             )
                                 .tabItem { Label("网页", systemImage: "circle") }
-                                .tag(3)
+                                .tag(4)
                         }
+                        VStack {
+                            HStack {
+                                PhotosPicker(selection: $selectedPhotos, matching: .images) {
+                                    Label("选择照片图片", systemImage: "photo.on.rectangle.angled")
+                                }
+                                .onChange(of: selectedPhotos) { oldValue, newValue in
+                                    convertDataToImage()
+                                }
+                                TextField("添加图片 url:", text: $addWebImageUrl)
+                                    .onSubmit {
+                                        if let webImageUrl = URL(string: addWebImageUrl) {
+                                            info.imgs?.append(IOImg(url: webImageUrl.absoluteString))
+                                            addWebImageUrl = ""
+                                        }
+                                    }
+                            }
+                            ScrollView {
+                                if let infoImgs = info.imgs {
+                                    if infoImgs.count > 0 {
+                                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150),spacing: 10)]) {
+                                            ForEach(Array(infoImgs.enumerated()), id:\.0) {i, img in
+                                                VStack {
+                                                    if let data = img.imgData {
+                                                        if let nsImg = NSImage(data: data) {
+                                                            Image(nsImage: nsImg)
+                                                                .resizable()
+                                                                .aspectRatio(contentMode: .fit)
+                                                                .cornerRadius(5)
+                                                                .contextMenu {
+                                                                    Button {
+                                                                        IOInfo.updateCoverImage(info: info, img: img)
+                                                                    } label: {
+                                                                        Label("设为封面图", image: "doc.text.image")
+                                                                    }
+                                                                    Button {
+                                                                        info.imgs?.remove(at: i)
+                                                                        IOImg.delete(img)
+                                                                    } label: {
+                                                                        Label("删除", image: "circle")
+                                                                    }
+
+                                                                }
+                                                        }
+                                                    } else if img.url.isEmpty == false {
+                                                        AsyncImage(url: URL(string: img.url), content: { image in
+                                                            image
+                                                                .resizable()
+                                                                .aspectRatio(contentMode: .fit)
+                                                                .cornerRadius(5)
+                                                        },
+                                                        placeholder: {
+                                                            Image(systemName: "photo.fill")
+                                                        })
+                                                        .contextMenu {
+                                                            Button {
+                                                                IOInfo.updateCoverImage(info: info, img: IOImg(url: img.url))
+                                                            } label: {
+                                                                Label("设为封面图", image: "doc.text.image")
+                                                            }
+                                                            Button {
+                                                                info.imgs?.remove(at: i)
+                                                                IOImg.delete(img)
+                                                            } label: {
+                                                                Label("删除", image: "circle")
+                                                            }
+                                                            Button {
+                                                                
+                                                            } label: {
+                                                                Label(img.url, image: "doc.text.image")
+                                                            }
+                                                        }
+                                                    }
+                                                } // end VStack
+                                            } // end ForEach
+                                        } // end LazyVGrid
+                                    }
+                                } // end if let
+                                if info.imageUrls.isEmpty == false {
+                                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)]) {
+                                        ForEach(info.imageUrls, id:\.self) { img in
+                                            AsyncImage(url: URL(string: img), content: { image in
+                                                image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .cornerRadius(5)
+                                            },
+                                            placeholder: {
+                                                Image(systemName: "photo.fill")
+                                            })
+                                            .contextMenu {
+                                                Button {
+                                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: img))
+                                                } label: {
+                                                    Label("设为封面图", image: "doc.text.image")
+                                                }
+                                                Button {
+                                                    
+                                                } label: {
+                                                    Label(img, image: "doc.text.image")
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .tabItem { Label("图集", systemImage: "circle")}
+                        .tag(5)
                     }
                     .onChange(of: info.url) { oldValue, newValue in
                         tabSwitch()
@@ -157,11 +270,14 @@ struct EditInfoView: View {
             Spacer()
         } // end VStack
     }
+    
+    
+    // MARK: 数据管理
     func tabSwitch() {
         if info.url.isEmpty {
             selectedTab = 1
         } else {
-            selectedTab = 3
+            selectedTab = 4
         }
     }
     func addCate() {
@@ -172,33 +288,72 @@ struct EditInfoView: View {
     func manageCate() {
         isShowInspector.toggle()
     }
-
-    func fetchTitleFromUrl(urlString: String, isFetchContent: Bool = false) async -> (title:String, imageUrl:String) {
+    
+    // MARK: 图集处理
+    @MainActor
+    func convertDataToImage() {
+        if !selectedPhotos.isEmpty {
+            for item in selectedPhotos {
+                Task {
+                    if let imageData = try? await item.loadTransferable(type: Data.self) {
+                        info.imgs?.append(IOImg(url: "", imgData: imageData))
+                    }
+                }
+            }
+        }
+        selectedPhotos.removeAll()
+    }
+    
+    // MARK: 获取网页内容
+    func fetchTitleFromUrl(urlString: String, isFetchContent: Bool = false) async -> (title:String, imageUrl:String, imageUrls:[String]) {
         var title = "没找到标题"
         guard let url = URL(string: urlString) else {
-            return (title,"")
+            return (title,"",[String]())
         }
         guard let (data, _) = try? await URLSession.shared.data(from: url) else {
-            return (title,"")
+            return (title,"",[String]())
         }
         guard let homepageHTML = String(data: data, encoding: .utf8), let soup = try? SwiftSoup.parse(homepageHTML) else {
-            return (title,"")
+            return (title,"",[String]())
         }
         
         // 获取标题
         let soupTitle = try? soup.title()
         let h1Title = try? soup.select("h1").first()?.text()
         
-        let imgs = try? soup.select("img").array()
         var imageUrl = ""
-        if imgs?.count ?? 0 > 0 {
-            let imgUrl = try? imgs?.randomElement()?.attr("src")
-            if let okCoverImageUrl = imgUrl {
-                if okCoverImageUrl.hasPrefix("http") {
-                    imageUrl = okCoverImageUrl
+        var imageUrls = [String]()
+        
+        // 获取图集
+        var schemeStr = ""
+        var hostStr = ""
+        if let scheme = url.scheme, let host = url.host {
+            schemeStr = scheme
+            hostStr = host
+        }
+        do {
+            let imgs = try soup.select("img").array()
+            if imgs.count > 0 {
+                let imgUrl = try imgs.randomElement()?.attr("src")
+                if let okImgUrl = imgUrl {
+                    if okImgUrl.hasPrefix("http") {
+                        imageUrl = okImgUrl
+                    } else {
+                        imageUrl = "\(schemeStr)://\(hostStr)/\(okImgUrl)"
+                    }
+                }
+                for elm in imgs {
+                    let elmUrl = try elm.attr("src")
+                    if elmUrl.hasPrefix("http") {
+                        imageUrls.append(elmUrl)
+                    } else {
+                        imageUrls.append("\(schemeStr)://\(hostStr)/\(elmUrl)")
+                    }
+                    
                 }
             }
-        }
+        } catch {}
+
 
         if let okH1Title = h1Title {
             title = okH1Title
@@ -220,7 +375,7 @@ struct EditInfoView: View {
             }
         }
         
-        return (title, imageUrl)
+        return (title, imageUrl, imageUrls)
     }
 }
 

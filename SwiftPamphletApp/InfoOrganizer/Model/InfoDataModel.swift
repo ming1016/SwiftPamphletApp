@@ -12,7 +12,9 @@ import SwiftData
 final class IOInfo {
     var name: String = ""
     var url: String = ""
-    var coverImageUrl: String = ""
+    var coverImage: IOImg? = nil // 封面图
+    var imageUrls: [String] = [String]() // 图集
+    var imgs: [IOImg]? = [IOImg]() // 本地图集
     var des: String = ""
     var category: IOCategory? = nil// 关系字段，链接 IOCategory
     var star: Bool = false
@@ -23,7 +25,9 @@ final class IOInfo {
     
     init(name: String, 
          url: String,
-         coverImageUrl: String,
+         coverImage: IOImg? = nil,
+         imageUrls: [String],
+         imgs: [IOImg]? = [IOImg](),
          des: String,
          category: IOCategory? = nil,
          star: Bool,
@@ -33,7 +37,9 @@ final class IOInfo {
     ) {
         self.name = name
         self.url = url
-        self.coverImageUrl = coverImageUrl
+        self.coverImage = coverImage
+        self.imageUrls = imageUrls
+        self.imgs = imgs
         self.des = des
         self.category = category
         self.star = star
@@ -45,6 +51,30 @@ final class IOInfo {
     static func delete(_ info: IOInfo) {
         if let context = info.modelContext {
             context.delete(info)
+        }
+    }
+    static func updateCoverImage(info: IOInfo, img: IOImg) {
+        if let coverImg = info.coverImage {
+            if coverImg.imgData == nil {
+                IOImg.delete(coverImg)
+            }
+        }
+        info.coverImage = img
+    }
+}
+
+@Model
+class IOImg {
+    var url: String = ""
+    @Attribute(.externalStorage) var imgData: Data? = nil
+    init(url: String, imgData: Data? = nil) {
+        self.url = url
+        self.imgData = imgData
+    }
+    
+    static func delete(_ img: IOImg) {
+        if let context = img.modelContext {
+            context.delete(img)
         }
     }
 }
