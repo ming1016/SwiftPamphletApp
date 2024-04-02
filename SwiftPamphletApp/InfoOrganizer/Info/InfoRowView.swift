@@ -26,7 +26,7 @@ struct InfoRowView: View {
                         AsyncImage(url: URL(string: coverImg.url), content: { image in
                             image
                                 .resizable()
-                                .aspectRatio(contentMode: .fill)
+                                .scaledToFill()
                                 .frame(width: 60, height: 60)
                                 .cornerRadius(5)
                         },
@@ -38,7 +38,7 @@ struct InfoRowView: View {
                         if let nsImage = NSImage(data: imgData) {
                             Image(nsImage: nsImage)
                                 .resizable()
-                                .aspectRatio(contentMode: .fill)
+                                .scaledToFill()
                                 .frame(width: 60, height: 60)
                                 .cornerRadius(5)
                         }
@@ -69,6 +69,7 @@ struct InfoRowView: View {
                     Image(systemName: "square.and.arrow.down.fill")
                 }
                 Text(howLongAgo(date: info.updateDate))
+//                Text(info.updateDate, style: .relative)
                     
                 
             }

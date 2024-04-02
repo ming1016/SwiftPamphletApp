@@ -86,8 +86,6 @@ struct EditInfoView: View {
                                     Image(systemName: "square.and.arrow.down.fill")
                                 }
                             }
-
-                            
                         } // end if
                         
                     }
@@ -165,7 +163,7 @@ struct EditInfoView: View {
                                                         if let nsImg = NSImage(data: data) {
                                                             Image(nsImage: nsImg)
                                                                 .resizable()
-                                                                .aspectRatio(contentMode: .fit)
+                                                                .scaledToFit()
                                                                 .cornerRadius(5)
                                                                 .contextMenu {
                                                                     Button {
@@ -186,7 +184,7 @@ struct EditInfoView: View {
                                                         AsyncImage(url: URL(string: img.url), content: { image in
                                                             image
                                                                 .resizable()
-                                                                .aspectRatio(contentMode: .fit)
+                                                                .scaledToFit()
                                                                 .cornerRadius(5)
                                                         },
                                                         placeholder: {
