@@ -23,17 +23,7 @@ struct InfoRowView: View {
             HStack(alignment:.top) {
                 if let coverImg = info.coverImage {
                     if coverImg.url.isEmpty == false {
-                        AsyncImage(url: URL(string: coverImg.url), content: { image in
-                            image
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 60, height: 60)
-                                .cornerRadius(5)
-                        },
-                        placeholder: {
-                            Image(systemName: "photo.fill")
-                                .frame(width: 60, height: 60)
-                        })
+                        NukeImage(width: 60, height: 60, url: coverImg.url, contentModel: .fill)
                     } else if let imgData = coverImg.imgData {
                         if let nsImage = NSImage(data: imgData) {
                             Image(nsImage: nsImage)

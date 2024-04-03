@@ -17,7 +17,7 @@ struct DeveloperListView: View {
         List(selection: $selectDev) {
             ForEach(devs) { dev in
                 HStack {
-                    AsyncImageWithPlaceholder(size: .smallSize, url: dev.avatar)
+                    NukeImage(width: 40, height: 40, url: dev.avatar)
                     VStack {
                         HStack {
                             if dev.repoName.isEmpty {

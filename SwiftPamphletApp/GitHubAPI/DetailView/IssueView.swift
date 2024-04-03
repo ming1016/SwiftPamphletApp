@@ -33,7 +33,7 @@ struct IssueView: View {
                         Text(" \(howLongFromNow(timeStr:vm.issue.updatedAt))更新过").font(.footnote)
                     } else {
                         HStack {
-                            AsyncImageWithPlaceholder(size: .smallSize, url: vm.issue.user.avatarUrl)
+                            NukeImage(width: 40, height:40, url: vm.issue.user.avatarUrl)
                             VStack(alignment:.leading) {
                                 NavigationLink(destination: UserView(vm: UserVM(userName: vm.issue.user.login)), label: {
                                     Text(vm.issue.user.login)
@@ -63,7 +63,7 @@ struct IssueView: View {
                     VStack(alignment: .leading) {
                         GitHubApiTimeView(timeStr: comment.updatedAt)
                         HStack {
-                            AsyncImageWithPlaceholder(size: .smallSize, url: comment.user.avatarUrl)
+                            NukeImage(width: 40, height: 40, url: comment.user.avatarUrl)
                             ButtonGoGitHubWeb(url: comment.user.login, text: comment.user.login, ignoreHost: true)
 
                             Text(comment.authorAssociation)

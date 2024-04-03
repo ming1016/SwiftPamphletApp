@@ -54,7 +54,7 @@ struct RepoView: View {
                 
                 HStack {
                     Text("作者：")
-                    AsyncImageWithPlaceholder(size: .smallSize, url: vm.repo.owner.avatarUrl)
+                    NukeImage(width: 40, height: 40, url: vm.repo.owner.avatarUrl)
                     ButtonGoGitHubWeb(url: vm.repo.owner.login, text: vm.repo.owner.login, ignoreHost: true)
                 }
             } // end VStack
@@ -218,7 +218,7 @@ struct RepoCommitLabelView: View {
                     Image(systemName: "envelope.badge.fill")
                 }
                 if commit.author != nil {
-                    AsyncImageWithPlaceholder(size: .tinySize, url: commit.author?.avatarUrl ?? "")
+                    NukeImage(width: 20, height: 20, url: commit.author?.avatarUrl ?? "")
                     ButtonGoGitHubWeb(url: commit.author?.login ?? "", text: commit.author?.login ?? "", ignoreHost: true, bold: true)
 
                 } else {
@@ -244,7 +244,7 @@ struct IssueLabelView: View {
                     .font(.footnote)
             }
             HStack {
-                AsyncImageWithPlaceholder(size: .tinySize, url: issue.user.avatarUrl)
+                NukeImage(width: 20, height: 20, url: issue.user.avatarUrl)
                 ButtonGoGitHubWeb(url: issue.user.login, text: issue.user.login, ignoreHost: true)
             }
             MarkdownView(s: issue.body ?? "")
@@ -258,7 +258,7 @@ struct IssueEventLabelView: View {
         VStack(alignment: .leading, spacing: 5) {
             GitHubApiTimeView(timeStr: issueEvent.createdAt)
             HStack {
-                AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.actor.avatarUrl)
+                NukeImage(width: 20, height: 20, url: issueEvent.actor.avatarUrl)
                 ButtonGoGitHubWeb(url: issueEvent.actor.login, text: issueEvent.actor.login, ignoreHost: true)
                 Text(issueEvent.event)
                     .foregroundColor(.secondary)
@@ -271,7 +271,7 @@ struct IssueEventLabelView: View {
                     .font(.footnote)
             }
             HStack {
-                AsyncImageWithPlaceholder(size: .tinySize, url: issueEvent.issue.user.avatarUrl)
+                NukeImage(width: 20, height: 20, url: issueEvent.issue.user.avatarUrl)
                 ButtonGoGitHubWeb(url: issueEvent.issue.user.login, text: issueEvent.issue.user.login, ignoreHost: true)
             }
             MarkdownView(s: issueEvent.issue.body ?? "")

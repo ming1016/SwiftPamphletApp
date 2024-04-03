@@ -71,7 +71,7 @@ struct EditDeveloper: View {
                 
                 HStack {
                     Text("作者：")
-                    AsyncImageWithPlaceholder(size: .smallSize, url: vmRepo.repo.owner.avatarUrl)
+                    NukeImage(width:40, height: 40, url: vmRepo.repo.owner.avatarUrl)
                     ButtonGoGitHubWeb(url: vmRepo.repo.owner.login, text: vmRepo.repo.owner.login, ignoreHost: true)
                 }
             } // end VStack
@@ -142,7 +142,7 @@ struct EditDeveloper: View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    AsyncImageWithPlaceholder(size: .normalSize, url: vm.user.avatarUrl)
+                    NukeImage(width:60, height: 60, url: vm.user.avatarUrl)
                     VStack(alignment: .leading, spacing: 5) {
                         HStack {
                             Text(vm.user.name ?? vm.user.login).font(.system(.title))

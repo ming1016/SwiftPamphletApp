@@ -188,15 +188,7 @@ struct EditInfoView: View {
                                                                 }
                                                         }
                                                     } else if img.url.isEmpty == false {
-                                                        AsyncImage(url: URL(string: img.url), content: { image in
-                                                            image
-                                                                .resizable()
-                                                                .scaledToFit()
-                                                                .cornerRadius(5)
-                                                        },
-                                                        placeholder: {
-                                                            Image(systemName: "photo.fill")
-                                                        })
+                                                        NukeImage(url: img.url)
                                                         .contextMenu {
                                                             Button {
                                                                 IOInfo.updateCoverImage(info: info, img: IOImg(url: img.url))
@@ -219,15 +211,7 @@ struct EditInfoView: View {
                                 if info.imageUrls.isEmpty == false {
                                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)]) {
                                         ForEach(info.imageUrls, id:\.self) { img in
-                                            AsyncImage(url: URL(string: img), content: { image in
-                                                image
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .cornerRadius(5)
-                                            },
-                                            placeholder: {
-                                                Image(systemName: "photo.fill")
-                                            })
+                                            NukeImage(url: img)
                                             .contextMenu {
                                                 Button {
                                                     IOInfo.updateCoverImage(info: info, img: IOImg(url: img))

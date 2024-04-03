@@ -8,6 +8,8 @@
 import SwiftUI
 import WebKit
 import MarkdownUI
+import Nuke
+import NukeUI
 
 // MARK: - 大纲
 struct SPOutlineListView<D, Content>: View where D: RandomAccessCollection, D.Element: Identifiable, Content: View {
@@ -294,6 +296,36 @@ struct FixAwfulPerformanceStyle: ButtonStyle {
 }
 
 // MARK: - 图片
+struct NukeImage: View {
+    private let pipeline = ImagePipeline {
+        $0.dataLoader = {
+            let config = DataLoader.defaultConfiguration
+            config.urlCache = DataLoader.sharedUrlCache
+            return DataLoader(configuration: config)
+        }()
+    }
+    var width: CGFloat? = nil
+    var height: CGFloat? = nil
+    var url: String
+    var contentModel: ContentMode = .fit
+    var body: some View {
+        LazyImage(url: URL(string: url)) { state in
+            if let image = state.image {
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: contentModel)
+                    .frame(width: width, height: height)
+                    .cornerRadius(5)
+            } else {
+                Color.gray.opacity(0.2) // Placeholder
+                    .frame(width: width, height: height)
+            }
+        }
+        .pipeline(pipeline)
+            
+    }
+}
+
 struct AsyncImageWithPlaceholder: View {
     enum Size {
         case tinySize, smallSize,normalSize, bigSize

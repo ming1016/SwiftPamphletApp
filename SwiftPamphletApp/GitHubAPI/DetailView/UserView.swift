@@ -18,7 +18,7 @@ struct UserView: View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    AsyncImageWithPlaceholder(size: .normalSize, url: vm.user.avatarUrl)
+                    NukeImage(width: 60, height: 60, url: vm.user.avatarUrl)
                     VStack(alignment: .leading, spacing: 5) {
                         HStack {
                             Text(vm.user.name ?? vm.user.login).font(.system(.title))
@@ -177,8 +177,7 @@ struct AUserEventLabel: View {
                 }
 
                 if isShowActor == true {
-                    AsyncImageWithPlaceholder(size: .tinySize, url: event.actor.avatarUrl)
-
+                    NukeImage(width: 20, height: 20, url: event.actor.avatarUrl)
                     Text(event.actor.login).bold()
 
                 } // end if
