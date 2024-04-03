@@ -37,6 +37,7 @@ struct EditInfoView: View {
                 Section {
                     HStack {
                         TextField("标题:", text: $info.name)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
                         Toggle(isOn: $info.star) {
                             Image(systemName: info.star ? "star.fill" : "star")
                         }
@@ -50,6 +51,7 @@ struct EditInfoView: View {
                     }
                     HStack {
                         TextField("地址:", text: $info.url)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
                             .onSubmit {
                                 Task {
                                     // MARK: 获取 Web 内容
@@ -122,6 +124,10 @@ struct EditInfoView: View {
                     // TODO: markdown 获取图片链接，并能显示
                     TabView(selection: $selectedTab) {
                         TextEditor(text: $info.des)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(.secondary, lineWidth: 1)
+                              )
                             .tabItem { Label("文本", systemImage: "circle") }
                             .tag(1)
                         WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
@@ -146,6 +152,7 @@ struct EditInfoView: View {
                                     convertDataToImage()
                                 }
                                 TextField("添加图片 url:", text: $addWebImageUrl)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
                                     .onSubmit {
                                         if let webImageUrl = URL(string: addWebImageUrl) {
                                             info.imgs?.append(IOImg(url: webImageUrl.absoluteString))
@@ -233,6 +240,7 @@ struct EditInfoView: View {
                                 }
                             }
                         }
+                        .padding(10)
                         .tabItem { Label("图集", systemImage: "circle")}
                         .tag(5)
                     }
