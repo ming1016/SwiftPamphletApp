@@ -309,14 +309,26 @@ struct EditInfoView: View {
         do {
             let imgs = try soup.select("img").array()
             if imgs.count > 0 {
-                let imgUrl = try imgs.randomElement()?.attr("src")
-                if let okImgUrl = imgUrl {
-                    imageUrl = urlWithSchemeAndHost(url: url, urlStr: okImgUrl)
-                }
+
                 for elm in imgs {
-                    let elmUrl = try elm.attr("src")
-                    imageUrls.append(urlWithSchemeAndHost(url: url, urlStr: elmUrl))
+                    if let elmUrl = try? elm.attr("src") {
+                        if elmUrl.isEmpty == false {
+                            imageUrls.append(urlWithSchemeAndHost(url: url, urlStr: elmUrl))
+                        }
+                    }
                 }
+                var imgUrl:String?
+                if imageUrls.count > 0 {
+                    if imageUrls.count > 3 {
+                        imgUrl = imageUrls.randomElement()
+                    } else {
+                        imgUrl = imageUrls.first
+                    }
+                    if let okImgUrl = imgUrl {
+                        imageUrl = urlWithSchemeAndHost(url: url, urlStr: okImgUrl)
+                    }
+                }
+                
             }
         } catch {}
 

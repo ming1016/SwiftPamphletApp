@@ -183,7 +183,7 @@
 		086A5F4D2744EF3B00FECE02 /* guide-features.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F492744EF3B00FECE02 /* guide-features.json */; };
 		086A5F4F2744EF3B00FECE02 /* guide-syntax.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F4B2744EF3B00FECE02 /* guide-syntax.json */; };
 		086A5F502744EF3B00FECE02 /* developers.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F4C2744EF3B00FECE02 /* developers.json */; };
-		086A5F522744EF4C00FECE02 /* ViewComponet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F512744EF4C00FECE02 /* ViewComponet.swift */; };
+		086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F512744EF4C00FECE02 /* ViewComponent.swift */; };
 		086A5F58274CB8B500FECE02 /* guide-subject.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F57274CB8B500FECE02 /* guide-subject.json */; };
 		086A5F5A274CC17700FECE02 /* lib-Combine.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F59274CC17700FECE02 /* lib-Combine.json */; };
 		086A5F5D274CCAEC00FECE02 /* lib-Concurrency.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F5B274CCAEC00FECE02 /* lib-Concurrency.json */; };
@@ -268,6 +268,7 @@
 		08F14B3E2BBDA3EA005B46CC /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3D2BBDA3EA005B46CC /* NukeExtensions */; };
 		08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3F2BBDA3EA005B46CC /* NukeUI */; };
 		08F14B422BBDA3EA005B46CC /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B412BBDA3EA005B46CC /* NukeVideo */; };
+		08F14B442BBE2865005B46CC /* ViewComponentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F14B432BBE2865005B46CC /* ViewComponentImage.swift */; };
 		08F1AB612BA0821900AEA0CA /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 08F1AB602BA0821900AEA0CA /* CodeEditor */; };
 		08F4BE6028609D8700733F12 /* PlayCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE5F28609D8600733F12 /* PlayCharts.swift */; };
 		08F4BE6228616DC100733F12 /* PlayWeatherKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */; };
@@ -454,7 +455,7 @@
 		086A5F492744EF3B00FECE02 /* guide-features.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "guide-features.json"; sourceTree = "<group>"; };
 		086A5F4B2744EF3B00FECE02 /* guide-syntax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "guide-syntax.json"; sourceTree = "<group>"; };
 		086A5F4C2744EF3B00FECE02 /* developers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = developers.json; sourceTree = "<group>"; };
-		086A5F512744EF4C00FECE02 /* ViewComponet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewComponet.swift; sourceTree = "<group>"; };
+		086A5F512744EF4C00FECE02 /* ViewComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
 		086A5F57274CB8B500FECE02 /* guide-subject.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "guide-subject.json"; sourceTree = "<group>"; };
 		086A5F59274CC17700FECE02 /* lib-Combine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-Combine.json"; sourceTree = "<group>"; };
 		086A5F5B274CCAEC00FECE02 /* lib-Concurrency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-Concurrency.json"; sourceTree = "<group>"; };
@@ -532,6 +533,7 @@
 		08CD61FC27758B8A008C0935 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		08CD61FD27758B8A008C0935 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		08ED801B2B9D1EEC0069B7EC /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		08F14B432BBE2865005B46CC /* ViewComponentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentImage.swift; sourceTree = "<group>"; };
 		08F4BE5F28609D8600733F12 /* PlayCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCharts.swift; sourceTree = "<group>"; };
 		08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWeatherKit.swift; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
@@ -1205,7 +1207,8 @@
 		086A5F482744EF2B00FECE02 /* ViewComponet */ = {
 			isa = PBXGroup;
 			children = (
-				086A5F512744EF4C00FECE02 /* ViewComponet.swift */,
+				086A5F512744EF4C00FECE02 /* ViewComponent.swift */,
+				08F14B432BBE2865005B46CC /* ViewComponentImage.swift */,
 				0805F4952BAAABEA0008BB52 /* ViewStyle.swift */,
 			);
 			path = ViewComponet;
@@ -1688,6 +1691,7 @@
 				08BE634627C48C5B002BC6A8 /* PlayToggleView.swift in Sources */,
 				08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */,
 				0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */,
+				08F14B442BBE2865005B46CC /* ViewComponentImage.swift in Sources */,
 				3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */,
 				08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */,
 				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
@@ -1751,7 +1755,7 @@
 				083554E327572BB60095E0EE /* AppVM.swift in Sources */,
 				08BE637627CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift in Sources */,
 				086A5F3A2744EDA500FECE02 /* APIRequest.swift in Sources */,
-				086A5F522744EF4C00FECE02 /* ViewComponet.swift in Sources */,
+				086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */,
 				086A5F672754C27900FECE02 /* DBHandler.swift in Sources */,
 				0805F4962BAAABEA0008BB52 /* ViewStyle.swift in Sources */,
 				08BE637927CDCFD9002BC6A8 /* DataSortingListView.swift in Sources */,
