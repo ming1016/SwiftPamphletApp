@@ -125,9 +125,13 @@ struct EditInfoView: View {
                     TabView(selection: $selectedTab) {
                         TextEditor(text: $info.des)
                             .overlay(
-                                RoundedRectangle(cornerRadius: 5)
+                                Rectangle()
                                     .stroke(.secondary, lineWidth: 1)
+                                    .opacity(0.5)
                               )
+                            .lineSpacing(5)
+                            .disableAutocorrection(true)
+                            .padding(10)
                             .tabItem { Label("文本", systemImage: "circle") }
                             .tag(1)
                         WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
