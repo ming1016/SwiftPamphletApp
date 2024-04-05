@@ -97,7 +97,7 @@ struct MarkdownView: View {
     var s: String
     var body: some View {
         Markdown(s)
-            .markdownStyle(MarkdownStyle(font:.title3))
+            .markdownTheme(.gitHub)
     }
 }
 

@@ -68,6 +68,7 @@ struct DeveloperListView: View {
         .toolbar(content: {
             ToolbarItem(placement: .navigation) {
                 Button("添加开发者", systemImage: "plus", action: addDev)
+                    .keyboardShortcut(KeyEquivalent("a"), modifiers: .option)
             }
         })
     }

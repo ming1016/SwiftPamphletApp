@@ -50,7 +50,7 @@ struct EditInfoView: View {
                         })
                     }
                     HStack {
-                        TextField("地址:", text: $info.url)
+                        TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://www.starming.com"))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .onSubmit {
                                 Task {
@@ -89,7 +89,6 @@ struct EditInfoView: View {
                                 }
                             }
                         } // end if
-                        
                     }
                 } // end Section
                 
@@ -129,7 +128,6 @@ struct EditInfoView: View {
                                     .stroke(.secondary, lineWidth: 1)
                                     .opacity(0.5)
                               )
-                            .lineSpacing(5)
                             .disableAutocorrection(true)
                             .padding(10)
                             .tabItem { Label("文本", systemImage: "circle") }
