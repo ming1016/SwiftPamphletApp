@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 @Observable
 final class APIRepoVM {
@@ -14,6 +13,8 @@ final class APIRepoVM {
     var repo: RepoModel = RepoModel()
     var commits: [CommitModel] = [CommitModel]()
     var issues: [IssueModel] = [IssueModel]()
+    var issuesEvents: [IssueEventModel] = [IssueEventModel]()
+    var readme: RepoContent = RepoContent()
     
     init(name: String) {
         self.name = name
@@ -23,6 +24,8 @@ final class APIRepoVM {
         await obtainRepos()
         await obtainCommits()
         await obtainIssues()
+        await obtainIssuesEvents()
+        await obtainReadme()
     }
     
     // https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28
@@ -52,27 +55,27 @@ final class APIRepoVM {
         } catch { print("问题是：\(error)") }
     }
     
+    // https://docs.github.com/en/rest/issues/events?apiVersion=2022-11-28#about-events
+    @MainActor
+    func obtainIssuesEvents() async {
+        do {
+            let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)/issues/events"))
+            issuesEvents = try GitHubReq.jsonDecoder().decode([IssueEventModel].self, from: data)
+        } catch { print("问题是：\(error)") }
+    }
+    
+    // https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28
+    @MainActor
+    func obtainReadme() async {
+        do {
+            let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)/readme"))
+            readme = try GitHubReq.jsonDecoder().decode(RepoContent.self, from: data)
+        } catch { print("问题是：\(error)") }
+    }
+    
+    // TODO: 下载内容
 }
 
-// github api 入口 https://api.github.com
-class GitHubReq {
-    static func jsonDecoder() -> JSONDecoder {
-        let de = JSONDecoder()
-        de.keyDecodingStrategy = .convertFromSnakeCase
-        return de
-    }
-    static func req(_ path: String) -> URLRequest {
-        let req = URLRequest(url: URL(string: "https://api.github.com/\(path)")!)
-//        var githubat = ""
-//        if SPC.gitHubAccessToken.isEmpty == true {
-//            githubat = SPC.githubAccessToken()
-//        } else {
-//            githubat = SPC.gitHubAccessToken
-//        }
-//        
-//        req.addValue("token \(githubat)", forHTTPHeaderField: "Authorization")
-        return req
-    }
-}
+
 
 

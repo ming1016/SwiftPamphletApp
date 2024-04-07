@@ -129,12 +129,14 @@ struct RepoView: View {
 }
 
 struct ReadmeView: View {
+    @Environment(\.colorScheme) private var colorScheme
     var content: String
     var body: some View {
         ScrollView {
             MarkdownView(s: content.base64Decoded() ?? "failed")
                 .padding(10)
         }
+        .background(colorScheme == .light ? Color.white : Color.black)
     }
 }
 

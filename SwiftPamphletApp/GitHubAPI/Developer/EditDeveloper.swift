@@ -10,13 +10,11 @@ import SwiftData
 
 struct EditDeveloper: View {
     @Bindable var dev: DeveloperModel
-    @State var vm: UserVM
     @State private var tabSelct = 1
-    
-    @State var vmRepo: RepoVM
     @State private var tabSelctRepo = 1
     
     @State var repoVM: APIRepoVM
+    @State var userVM: APIUserVM
     
     var body: some View {
         Form {
@@ -33,8 +31,11 @@ struct EditDeveloper: View {
                             dev.repoName = dn.last ?? ""
                             dev.repoOwner = dn.first ?? ""
                         } else {
-                            vm = UserVM(userName: dev.name)
-                            vm.doing(.updateAll)
+                            userVM = APIUserVM(name: dev.name)
+                            Task {
+                                await userVM.updateAllData()
+                            }
+                            
                             dev.repoName = ""
                             dev.repoOwner = ""
                         }
@@ -81,7 +82,6 @@ struct EditDeveloper: View {
             } // end VStack
             Spacer()
         }
-        .frame(minWidth: SPC.detailMinWidth)
         .onChange(of: repoVM.repo, { oldValue, newValue in
             if !newValue.owner.avatarUrl.isEmpty {
                 dev.avatar = newValue.owner.avatarUrl
@@ -115,21 +115,15 @@ struct EditDeveloper: View {
                 }
                 .tag(2)
 
-            IssueEventsView(issueEvents: vmRepo.issueEvents, repo: vmRepo.repo)
+            IssueEventsView(issueEvents: repoVM.issuesEvents, repo: repoVM.repo)
                 .tabItem {
                     Text("议题事件")
                 }
-                .onAppear {
-                    vmRepo.doing(.inIssueEvents)
-                }
                 .tag(3)
 
-            ReadmeView(content: vmRepo.readme.content.replacingOccurrences(of: "\n", with: ""))
+            ReadmeView(content: repoVM.readme.content.replacingOccurrences(of: "\n", with: ""))
                 .tabItem {
                     Text("README")
-                }
-                .onAppear {
-                    vmRepo.doing(.inReadme)
                 }
                 .tag(4)
 
@@ -142,37 +136,37 @@ struct EditDeveloper: View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    NukeImage(width:60, height: 60, url: vm.user.avatarUrl)
+                    NukeImage(width:60, height: 60, url: userVM.user.avatarUrl)
                     VStack(alignment: .leading, spacing: 5) {
                         HStack {
-                            Text(vm.user.name ?? vm.user.login).font(.system(.title))
-                            if !vm.user.login.isEmpty {
-                                Text("(\(vm.user.login))")
+                            Text(userVM.user.name ?? userVM.user.login).font(.system(.title))
+                            if !userVM.user.login.isEmpty {
+                                Text("(\(userVM.user.login))")
                             }
-                            Text("订阅者 \(vm.user.followers) 人，仓库 \(vm.user.publicRepos) 个")
+                            Text("订阅者 \(userVM.user.followers) 人，仓库 \(userVM.user.publicRepos) 个")
                         }
                         HStack {
-                            ButtonGoGitHubWeb(url: vm.user.htmlUrl, text: "在 GitHub 上访问")
-                            if vm.user.location != nil {
-                                Text("居住：\(vm.user.location ?? "")").font(.system(.subheadline))
+                            ButtonGoGitHubWeb(url: userVM.user.htmlUrl, text: "在 GitHub 上访问")
+                            if userVM.user.location != nil {
+                                Text("居住：\(userVM.user.location ?? "")").font(.system(.subheadline))
                             }
                         }
                     } // end VStack
                 } // end HStack
 
-                if vm.user.bio != nil {
-                    Text("简介：\(vm.user.bio ?? "")")
+                if userVM.user.bio != nil {
+                    Text("简介：\(userVM.user.bio ?? "")")
                 }
                 HStack {
-                    if vm.user.blog != nil {
-                        if !vm.user.blog!.isEmpty {
-                            Text("博客：\(vm.user.blog ?? "")")
-                            ButtonGoGitHubWeb(url: vm.user.blog ?? "", text: "访问")
+                    if userVM.user.blog != nil {
+                        if !userVM.user.blog!.isEmpty {
+                            Text("博客：\(userVM.user.blog ?? "")")
+                            ButtonGoGitHubWeb(url: userVM.user.blog ?? "", text: "访问")
                         }
                     }
-                    if vm.user.twitterUsername != nil {
+                    if userVM.user.twitterUsername != nil {
                         Text("Twitter：")
-                        ButtonGoGitHubWeb(url: "https://twitter.com/\(vm.user.twitterUsername ?? "")", text: "@\(vm.user.twitterUsername ?? "")")
+                        ButtonGoGitHubWeb(url: "https://twitter.com/\(userVM.user.twitterUsername ?? "")", text: "@\(userVM.user.twitterUsername ?? "")")
                     }
                 } // end HStack
             } // end VStack
@@ -180,50 +174,39 @@ struct EditDeveloper: View {
         }
         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
         .onAppear {
-            vm.doing(.updateAll)
+            Task {
+                await userVM.updateAllData()
+            }
         }
-        .onChange(of: dev.name, { oldValue, newValue in
-            vm = UserVM(userName: newValue)
-            vm.doing(.updateAll)
-        })
-        .onChange(of: vm.events, { oldValue, newValue in
+        .onChange(of: userVM.events, { oldValue, newValue in
             if ((newValue.first?.createdAt.isEmpty) != nil) {
                 let iso8601String = newValue.first?.createdAt ?? ""
                 let formatter = ISO8601DateFormatter()
                 dev.updateDate = formatter.date(from: iso8601String) ?? Date.now
             }
         })
-        .onChange(of: vm.user, { oldValue, newValue in
+        .onChange(of: userVM.user, { oldValue, newValue in
             if !newValue.avatarUrl.isEmpty {
-                dev.avatar = vm.user.avatarUrl
+                dev.avatar = userVM.user.avatarUrl
             }
         })
-        .frame(minWidth: SPC.detailMinWidth)
         
         TabView(selection: $tabSelct) {
 
-            DeveloperEventView(events: vm.events)
+            DeveloperEventView(events: userVM.events)
                 .tabItem {
                     Image(systemName: "keyboard")
                     Text("事件")
                 }
-                .onAppear {
-                    // 如果是从列表未读section里来的会检查清理未读
-                    vm.doing(.inEvent)
-                }
                 .tag(1)
             
-            DeveloperEventView(events: vm.receivedEvents)
+            DeveloperEventView(events: userVM.receivedEvents)
                 .tabItem {
                     Image(systemName: "keyboard.badge.ellipsis")
                     Text("Ta 接收的事件")
                 }
-                .onAppear {
-                    vm.doing(.inReceivedEvent)
-                }
                 .tag(2)
         }
-        .frame(minWidth: SPC.detailMinWidth)
         Spacer()
     }
 }

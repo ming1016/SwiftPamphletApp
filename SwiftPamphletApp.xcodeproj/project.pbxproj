@@ -199,8 +199,10 @@
 		0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896FB8F27BA39B100676B7F /* PlayButtonView.swift */; };
 		0896FB9227BA486900676B7F /* 145.md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* 145.md */; };
 		08A4FDC227B25A140068E5BC /* 141.md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* 141.md */; };
-		08A9E19F2BC18EF400A73764 /* APIVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E19E2BC18EF400A73764 /* APIVM.swift */; };
+		08A9E19F2BC18EF400A73764 /* APIRepoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E19E2BC18EF400A73764 /* APIRepoVM.swift */; };
 		08A9E1A22BC25D0700A73764 /* ViewComponetMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponetMarkdown.swift */; };
+		08A9E1A42BC2837500A73764 /* APIUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A32BC2837500A73764 /* APIUserVM.swift */; };
+		08A9E1A62BC2861100A73764 /* GitHubReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A52BC2861100A73764 /* GitHubReq.swift */; };
 		08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */; };
 		08AEAEE1277EA70500B969E2 /* DBRepoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEE0277EA70500B969E2 /* DBRepoStore.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
@@ -475,8 +477,10 @@
 		0896FB8F27BA39B100676B7F /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
 		0896FB9127BA486900676B7F /* 145.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 145.md; sourceTree = "<group>"; };
 		08A4FDC127B25A140068E5BC /* 141.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 141.md; sourceTree = "<group>"; };
-		08A9E19E2BC18EF400A73764 /* APIVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIVM.swift; sourceTree = "<group>"; };
+		08A9E19E2BC18EF400A73764 /* APIRepoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepoVM.swift; sourceTree = "<group>"; };
 		08A9E1A12BC25D0700A73764 /* ViewComponetMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponetMarkdown.swift; sourceTree = "<group>"; };
+		08A9E1A32BC2837500A73764 /* APIUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUserVM.swift; sourceTree = "<group>"; };
+		08A9E1A52BC2861100A73764 /* GitHubReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReq.swift; sourceTree = "<group>"; };
 		08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDevNoti.swift; sourceTree = "<group>"; };
 		08AEAEE0277EA70500B969E2 /* DBRepoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBRepoStore.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
@@ -1263,7 +1267,9 @@
 		08A9E1A02BC1919C00A73764 /* APIVM */ = {
 			isa = PBXGroup;
 			children = (
-				08A9E19E2BC18EF400A73764 /* APIVM.swift */,
+				08A9E19E2BC18EF400A73764 /* APIRepoVM.swift */,
+				08A9E1A32BC2837500A73764 /* APIUserVM.swift */,
+				08A9E1A52BC2861100A73764 /* GitHubReq.swift */,
 			);
 			path = APIVM;
 			sourceTree = "<group>";
@@ -1738,6 +1744,7 @@
 				08448F0D2799035600B61353 /* PlaySecurity.swift in Sources */,
 				0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
+				08A9E1A62BC2861100A73764 /* GitHubReq.swift in Sources */,
 				08C411F427951181006FC340 /* PlaySyntax.swift in Sources */,
 				083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */,
 				08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */,
@@ -1761,6 +1768,7 @@
 				08BE637D27CDDA47002BC6A8 /* DataListView.swift in Sources */,
 				08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */,
 				086A5F412744EDCE00FECE02 /* UserVM.swift in Sources */,
+				08A9E1A42BC2837500A73764 /* APIUserVM.swift in Sources */,
 				08BE633527BF54A0002BC6A8 /* PlayTextEditorView.swift in Sources */,
 				08AEAEF5277F0A1E00B969E2 /* SPSidebar.swift in Sources */,
 				086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */,
@@ -1776,7 +1784,7 @@
 				08BE637927CDCFD9002BC6A8 /* DataSortingListView.swift in Sources */,
 				08BE636E27C8D6FD002BC6A8 /* PlayLazyVGridAndLazyHGridView.swift in Sources */,
 				08522BE227CF52ED005FF059 /* PlayColor.swift in Sources */,
-				08A9E19F2BC18EF400A73764 /* APIVM.swift in Sources */,
+				08A9E19F2BC18EF400A73764 /* APIRepoVM.swift in Sources */,
 				08BE636A27C8C409002BC6A8 /* PlayImageView.swift in Sources */,
 				08CD61FF27758B8A008C0935 /* Token.swift in Sources */,
 				3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */,
