@@ -16,7 +16,7 @@ struct EditDeveloper: View {
     @State var vmRepo: RepoVM
     @State private var tabSelctRepo = 1
     
-    @State var repoVM: APIRepoVM = APIRepoVM()
+    @State var repoVM: APIRepoVM
     
     var body: some View {
         Form {
@@ -25,8 +25,9 @@ struct EditDeveloper: View {
                     .onChange(of: dev.name) { oldValue, newValue in
                         let dn =  dev.name.components(separatedBy: "/") 
                         if dn.count > 1 {
+                            repoVM = APIRepoVM(name: dev.name)
                             Task {
-                                await repoVM.repos(dev.name)
+                                await repoVM.updateAllData()
                             }
                             
                             dev.repoName = dn.last ?? ""
@@ -86,7 +87,7 @@ struct EditDeveloper: View {
                 dev.avatar = newValue.owner.avatarUrl
             }
         })
-        .onChange(of: vmRepo.commits, { oldValue, newValue in
+        .onChange(of: repoVM.commits, { oldValue, newValue in
             if ((newValue.first?.commit.author.date.isEmpty) != nil) {
                 let iso8601String = newValue.first?.commit.author.date ?? ""
                 let formatter = ISO8601DateFormatter()
@@ -96,19 +97,21 @@ struct EditDeveloper: View {
         .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
         .onAppear {
             Task {
-                await repoVM.repos(dev.name)
+                await repoVM.updateAllData()
             }
         }
         // end HStack
 
         TabView(selection: $tabSelct) {
-            RepoCommitsView(commits: vmRepo.commits, repo: vmRepo.repo)
+            RepoCommitsView(commits: repoVM.commits, repo: repoVM.repo)
                 .tabItem {
                     Text("新提交")
                 }
-                .onAppear {
-                    vmRepo.doing(.inCommit)
-                }
+//                .onAppear {
+//                    Task {
+//                        await repoVM.obtainCommits()
+//                    }
+//                }
                 .tag(1)
 
             IssuesView(issues: vmRepo.issues, repo: vmRepo.repo)
