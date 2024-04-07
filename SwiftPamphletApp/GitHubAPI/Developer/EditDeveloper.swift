@@ -20,6 +20,7 @@ struct EditDeveloper: View {
         Form {
             HStack {
                 TextField("用户名:", text: $dev.name, prompt: Text("输入 Github 用户名 dev 或仓库名 dev/repo"))
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .onChange(of: dev.name) { oldValue, newValue in
                         let dn =  dev.name.components(separatedBy: "/") 
                         if dn.count > 1 {
@@ -41,6 +42,7 @@ struct EditDeveloper: View {
                         }
                     }
                 TextField("描述:", text: $dev.des)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }
         }
         .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
@@ -103,19 +105,19 @@ struct EditDeveloper: View {
         // end HStack
 
         TabView(selection: $tabSelct) {
-            RepoCommitsView(commits: repoVM.commits, repo: repoVM.repo)
+            RepoCommitsView(commits: repoVM.commits, repo: repoVM.repo, isShowLink: false)
                 .tabItem {
                     Text("新提交")
                 }
                 .tag(1)
 
-            IssuesView(issues: repoVM.issues, repo: repoVM.repo)
+            IssuesView(issues: repoVM.issues, repo: repoVM.repo, isShowLink: false)
                 .tabItem {
                     Text("议题列表")
                 }
                 .tag(2)
 
-            IssueEventsView(issueEvents: repoVM.issuesEvents, repo: repoVM.repo)
+            IssueEventsView(issueEvents: repoVM.issuesEvents, repo: repoVM.repo, isShowLink: false)
                 .tabItem {
                     Text("议题事件")
                 }
@@ -216,16 +218,11 @@ struct DeveloperEventView: View {
     var body: some View {
         List {
             ForEach(Array(events.enumerated()), id: \.0) { i, event in
-                
-                NavigationLink {
-                    UserEventLinkDestination(event: event)
-                } label: {
-                    AUserEventLabel(
-                        event: event,
-                        isShowActor: false,
-                        isUnRead: false
-                    )
-                } // end NavigationLink
+                AUserEventLabel(
+                    event: event,
+                    isShowActor: false,
+                    isUnRead: false
+                )
             } // end ForEach
         }//  end List
         .id(UUID()) // 优化 commits 有多个时数据变化可能影响的性能。这样做每次更新都产生新的视图，因此无法做动画效果。相当于 UITableView 上的 reloadData()

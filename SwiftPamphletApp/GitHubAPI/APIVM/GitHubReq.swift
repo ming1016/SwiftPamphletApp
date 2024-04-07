@@ -15,15 +15,15 @@ class GitHubReq {
         return de
     }
     static func req(_ path: String) -> URLRequest {
-        let req = URLRequest(url: URL(string: "https://api.github.com/\(path)")!)
-//        var githubat = ""
-//        if SPC.gitHubAccessToken.isEmpty == true {
-//            githubat = SPC.githubAccessToken()
-//        } else {
-//            githubat = SPC.gitHubAccessToken
-//        }
-//
-//        req.addValue("token \(githubat)", forHTTPHeaderField: "Authorization")
+        var req = URLRequest(url: URL(string: "https://api.github.com/\(path)")!)
+        var githubat = ""
+        if SPC.gitHubAccessToken.isEmpty == true {
+            githubat = SPC.githubAccessToken()
+        } else {
+            githubat = SPC.gitHubAccessToken
+        }
+
+        req.addValue("token \(githubat)", forHTTPHeaderField: "Authorization")
         return req
     }
 }
