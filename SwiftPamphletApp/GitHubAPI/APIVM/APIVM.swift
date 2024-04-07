@@ -13,6 +13,7 @@ final class APIRepoVM {
     var name: String = ""
     var repo: RepoModel = RepoModel()
     var commits: [CommitModel] = [CommitModel]()
+    var issues: [IssueModel] = [IssueModel]()
     
     init(name: String) {
         self.name = name
@@ -21,17 +22,16 @@ final class APIRepoVM {
     func updateAllData() async {
         await obtainRepos()
         await obtainCommits()
+        await obtainIssues()
     }
     
-    // https://docs.github.com/zh/rest/repos/repos?apiVersion=2022-11-28
+    // https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28
     @MainActor
     func obtainRepos() async {
         do {
             let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)"))
             repo = try GitHubReq.jsonDecoder().decode(RepoModel.self, from: data)
-        } catch {
-            print("问题是：\(error)")
-        }
+        } catch { print("问题是：\(error)") }
     }
 
     // https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28
@@ -40,13 +40,21 @@ final class APIRepoVM {
         do {
             let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)/commits"))
             commits = try GitHubReq.jsonDecoder().decode([CommitModel].self, from: data)
-        } catch {
-            print("问题是：\(error)")
-        }
+        } catch { print("问题是：\(error)") }
+    }
+    
+    // https://docs.github.com/en/rest/issues/issues?apiVersion=2022-11-28
+    @MainActor
+    func obtainIssues() async {
+        do {
+            let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)/issues"))
+            issues = try GitHubReq.jsonDecoder().decode([IssueModel].self, from: data)
+        } catch { print("问题是：\(error)") }
     }
     
 }
 
+// github api 入口 https://api.github.com
 class GitHubReq {
     static func jsonDecoder() -> JSONDecoder {
         let de = JSONDecoder()

@@ -92,14 +92,7 @@ struct SideBarLabel: View {
     }
 }
 
-// MARK: - MarkdownUI
-struct MarkdownView: View {
-    var s: String
-    var body: some View {
-        Markdown(s)
-            .markdownTheme(.gitHub)
-    }
-}
+
 
 // MARK: - 共享菜单
 struct ShareView: View {

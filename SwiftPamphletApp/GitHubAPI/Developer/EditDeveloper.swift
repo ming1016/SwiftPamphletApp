@@ -107,19 +107,11 @@ struct EditDeveloper: View {
                 .tabItem {
                     Text("新提交")
                 }
-//                .onAppear {
-//                    Task {
-//                        await repoVM.obtainCommits()
-//                    }
-//                }
                 .tag(1)
 
-            IssuesView(issues: vmRepo.issues, repo: vmRepo.repo)
+            IssuesView(issues: repoVM.issues, repo: repoVM.repo)
                 .tabItem {
                     Text("议题列表")
-                }
-                .onAppear {
-                    vmRepo.doing(.inIssues)
                 }
                 .tag(2)
 
