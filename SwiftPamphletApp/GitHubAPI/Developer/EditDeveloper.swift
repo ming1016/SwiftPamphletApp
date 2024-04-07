@@ -16,6 +16,7 @@ struct EditDeveloper: View {
     @State var vmRepo: RepoVM
     @State private var tabSelctRepo = 1
     
+    @State var repoVM: APIRepoVM = APIRepoVM()
     
     var body: some View {
         Form {
@@ -24,8 +25,10 @@ struct EditDeveloper: View {
                     .onChange(of: dev.name) { oldValue, newValue in
                         let dn =  dev.name.components(separatedBy: "/") 
                         if dn.count > 1 {
-                            vmRepo = RepoVM(repoName: dev.name)
-                            vmRepo.doing(.inInit)
+                            Task {
+                                await repoVM.repos(dev.name)
+                            }
+                            
                             dev.repoName = dn.last ?? ""
                             dev.repoOwner = dn.first ?? ""
                         } else {
@@ -52,33 +55,33 @@ struct EditDeveloper: View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    Text(vmRepo.repo.name).font(.system(.largeTitle))
-                    Text("(\(vmRepo.repo.fullName))")
+                    Text(repoVM.repo.name).font(.system(.largeTitle))
+                    Text("(\(repoVM.repo.fullName))")
                 }
                 HStack {
                     Image(systemName: "star.fill").foregroundColor(.red)
-                    Text("\(vmRepo.repo.stargazersCount)")
+                    Text("\(repoVM.repo.stargazersCount)")
                     Image(systemName: "tuningfork").foregroundColor(.cyan)
-                    Text("\(vmRepo.repo.forks)")
-                    Text("议题 \(vmRepo.repo.openIssues)")
-                    Text("语言 \(vmRepo.repo.language ?? "")")
-                    ButtonGoGitHubWeb(url: vmRepo.repo.htmlUrl ?? "https://github.com", text: "在 GitHub 上访问")
+                    Text("\(repoVM.repo.forks)")
+                    Text("议题 \(repoVM.repo.openIssues)")
+                    Text("语言 \(repoVM.repo.language ?? "")")
+                    ButtonGoGitHubWeb(url: repoVM.repo.htmlUrl ?? "https://github.com", text: "在 GitHub 上访问")
 
                 }
-                if vmRepo.repo.description != nil {
-                    Text("简介：\(vmRepo.repo.description ?? "")")
+                if repoVM.repo.description != nil {
+                    Text("简介：\(repoVM.repo.description ?? "")")
                 }
                 
                 HStack {
                     Text("作者：")
-                    NukeImage(width:40, height: 40, url: vmRepo.repo.owner.avatarUrl)
-                    ButtonGoGitHubWeb(url: vmRepo.repo.owner.login, text: vmRepo.repo.owner.login, ignoreHost: true)
+                    NukeImage(width:40, height: 40, url: repoVM.repo.owner.avatarUrl)
+                    ButtonGoGitHubWeb(url: repoVM.repo.owner.login, text: repoVM.repo.owner.login, ignoreHost: true)
                 }
             } // end VStack
             Spacer()
         }
         .frame(minWidth: SPC.detailMinWidth)
-        .onChange(of: vmRepo.repo, { oldValue, newValue in
+        .onChange(of: repoVM.repo, { oldValue, newValue in
             if !newValue.owner.avatarUrl.isEmpty {
                 dev.avatar = newValue.owner.avatarUrl
             }
@@ -92,7 +95,9 @@ struct EditDeveloper: View {
         })
         .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
         .onAppear {
-            vmRepo.doing(.inInit)
+            Task {
+                await repoVM.repos(dev.name)
+            }
         }
         // end HStack
 

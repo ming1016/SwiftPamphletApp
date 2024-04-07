@@ -14,23 +14,32 @@ final class APIRepoVM {
     
     @MainActor
     func repos(_ name: String) async {
-        var ct = githubAPIUC()
-        ct.path = "repos/\(name)"
-        guard let url = ct.url else {
-            return
-        }
+        
         do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            repo = try JSONDecoder().decode(RepoModel.self, from: data)
+            let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)"))
+            let de = JSONDecoder()
+            de.keyDecodingStrategy = .convertFromSnakeCase
+            repo = try de.decode(RepoModel.self, from: data)
         } catch {
             print("问题是：\(error)")
         }
     }
 }
 
-func githubAPIUC() -> URLComponents {
-    var ct = URLComponents()
-    ct.scheme = "https"
-    ct.host = "api.github.com"
-    return ct
+class GitHubReq {
+    
+    static func req(_ path: String) -> URLRequest {
+        var req = URLRequest(url: URL(string: "https://api.github.com/\(path)")!)
+        var githubat = ""
+        if SPC.gitHubAccessToken.isEmpty == true {
+            githubat = SPC.githubAccessToken()
+        } else {
+            githubat = SPC.gitHubAccessToken
+        }
+        
+        req.addValue("token \(githubat)", forHTTPHeaderField: "Authorization")
+        return req
+    }
 }
+
+
