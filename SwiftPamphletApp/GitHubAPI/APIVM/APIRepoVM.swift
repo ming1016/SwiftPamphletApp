@@ -32,8 +32,7 @@ final class APIRepoVM {
     @MainActor
     func obtainRepos() async {
         do {
-            let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)"))
-            repo = try GitHubReq.jsonDecoder().decode(RepoModel.self, from: data)
+            repo = try await GitHubReq.req("repos/\(name)", type: RepoModel.self)
         } catch { print("问题是：\(error)") }
     }
 
@@ -41,8 +40,7 @@ final class APIRepoVM {
     @MainActor
     func obtainCommits() async {
         do {
-            let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)/commits"))
-            commits = try GitHubReq.jsonDecoder().decode([CommitModel].self, from: data)
+            commits = try await GitHubReq.req("repos/\(name)/commits", type: [CommitModel].self)
         } catch { print("问题是：\(error)") }
     }
     
@@ -50,8 +48,7 @@ final class APIRepoVM {
     @MainActor
     func obtainIssues() async {
         do {
-            let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)/issues"))
-            issues = try GitHubReq.jsonDecoder().decode([IssueModel].self, from: data)
+            issues = try await GitHubReq.req("repos/\(name)/issues", type: [IssueModel].self)
         } catch { print("问题是：\(error)") }
     }
     
@@ -59,8 +56,7 @@ final class APIRepoVM {
     @MainActor
     func obtainIssuesEvents() async {
         do {
-            let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)/issues/events"))
-            issuesEvents = try GitHubReq.jsonDecoder().decode([IssueEventModel].self, from: data)
+            issuesEvents = try await GitHubReq.req("repos/\(name)/issues/events", type: [IssueEventModel].self)
         } catch { print("问题是：\(error)") }
     }
     
@@ -68,8 +64,7 @@ final class APIRepoVM {
     @MainActor
     func obtainReadme() async {
         do {
-            let (data, _) = try await  URLSession.shared.data(for: GitHubReq.req("repos/\(name)/readme"))
-            readme = try GitHubReq.jsonDecoder().decode(RepoContent.self, from: data)
+            readme = try await GitHubReq.req("repos/\(name)/readme", type: RepoContent.self)
         } catch { print("问题是：\(error)") }
     }
     
