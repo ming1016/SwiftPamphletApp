@@ -210,10 +210,10 @@ struct PlayAnimation: View {
                     .scaledToFit()
                     .frame(height: 40)
                     .animation(.easeIn(duration: 1), value: date)
-                    .onChange(of: date) { newValue in
+                    .onChange(of: date, { oldValue, newValue in
                         advanceIndex(count: 30)
-                        s = "\(date.hour):\(date.minute):\(date.second)"
-                    }
+                        s = "\(date.description)"
+                    })
                     .onAppear {
                         advanceIndex(count: 30)
                     }

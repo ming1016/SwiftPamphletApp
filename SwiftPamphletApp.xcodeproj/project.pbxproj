@@ -35,12 +35,10 @@
 		084417752B99B9060049297D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417742B99B9060049297D /* HomeView.swift */; };
 		084417772B99BA3F0049297D /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417762B99BA3F0049297D /* SidebarView.swift */; };
 		084417792B99BE720049297D /* DataLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084417782B99BE720049297D /* DataLink.swift */; };
-		08448F092796A83D00B61353 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 08448F082796A83D00B61353 /* SwiftDate */; };
 		08448F0B2797F73200B61353 /* PlayArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08448F0A2797F73200B61353 /* PlayArchitecture.swift */; };
 		08448F0D2799035600B61353 /* PlaySecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08448F0C2799035600B61353 /* PlaySecurity.swift */; };
 		08448F0F2799328700B61353 /* css_cn.html in Resources */ = {isa = PBXBuildFile; fileRef = 08448F0E2799328700B61353 /* css_cn.html */; };
 		08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08448F40279AC1A900B61353 /* PlayMacOS.swift */; };
-		08448F43279B83C000B61353 /* archiveDevelopers.json in Resources */ = {isa = PBXBuildFile; fileRef = 08448F42279B83C000B61353 /* archiveDevelopers.json */; };
 		08448F4B279E872B00B61353 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08448F4A279E872B00B61353 /* GuideView.swift */; };
 		08448F4E279E8CA400B61353 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 08448F4D279E8CA400B61353 /* Ink */; };
 		08448F51279E900500B61353 /* 132.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F50279E900500B61353 /* 132.md */; };
@@ -175,14 +173,12 @@
 		086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F452744EEB900FECE02 /* FundationFunction.swift */; };
 		086A5F4D2744EF3B00FECE02 /* guide-features.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F492744EF3B00FECE02 /* guide-features.json */; };
 		086A5F4F2744EF3B00FECE02 /* guide-syntax.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F4B2744EF3B00FECE02 /* guide-syntax.json */; };
-		086A5F502744EF3B00FECE02 /* developers.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F4C2744EF3B00FECE02 /* developers.json */; };
 		086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F512744EF4C00FECE02 /* ViewComponent.swift */; };
 		086A5F58274CB8B500FECE02 /* guide-subject.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F57274CB8B500FECE02 /* guide-subject.json */; };
 		086A5F5A274CC17700FECE02 /* lib-Combine.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F59274CC17700FECE02 /* lib-Combine.json */; };
 		086A5F5D274CCAEC00FECE02 /* lib-Concurrency.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F5B274CCAEC00FECE02 /* lib-Concurrency.json */; };
 		086A5F5E274CCAEC00FECE02 /* lib-SwiftUI.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F5C274CCAEC00FECE02 /* lib-SwiftUI.json */; };
 		086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F632754C14F00FECE02 /* PlayTextView.swift */; };
-		086A5F6A2755F3BE00FECE02 /* repos.json in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F692755F3BE00FECE02 /* repos.json */; };
 		0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C6182BA040E5000B620D /* InfoRowView.swift */; };
 		0871C61B2BA04D23000B620D /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61A2BA04D23000B620D /* CategoryRowView.swift */; };
 		0871C61D2BA05F44000B620D /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61C2BA05F44000B620D /* InfosView.swift */; };
@@ -198,7 +194,6 @@
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
 		08AEAEFA277F3C7400B969E2 /* css.html in Resources */ = {isa = PBXBuildFile; fileRef = 08AEAEF9277F3C7400B969E2 /* css.html */; };
 		08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4C9382770B26700742084 /* CCYRSSReq.swift */; };
-		08B4C93C2774786800742084 /* archiveRepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B4C93B2774786800742084 /* archiveRepos.json */; };
 		08BE632A27BE220D002BC6A8 /* 146.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632927BE220D002BC6A8 /* 146.md */; };
 		08BE632C27BE3762002BC6A8 /* 147.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632B27BE3762002BC6A8 /* 147.md */; };
 		08BE632E27BE3A95002BC6A8 /* PlayLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */; };
@@ -290,7 +285,6 @@
 		08448F0C2799035600B61353 /* PlaySecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySecurity.swift; sourceTree = "<group>"; };
 		08448F0E2799328700B61353 /* css_cn.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css_cn.html; sourceTree = "<group>"; };
 		08448F40279AC1A900B61353 /* PlayMacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMacOS.swift; sourceTree = "<group>"; };
-		08448F42279B83C000B61353 /* archiveDevelopers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archiveDevelopers.json; sourceTree = "<group>"; };
 		08448F4A279E872B00B61353 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		08448F50279E900500B61353 /* 132.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 132.md; sourceTree = "<group>"; };
 		08448F56279EA84100B61353 /* 51.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 51.md; sourceTree = "<group>"; };
@@ -426,14 +420,12 @@
 		086A5F452744EEB900FECE02 /* FundationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundationFunction.swift; sourceTree = "<group>"; };
 		086A5F492744EF3B00FECE02 /* guide-features.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "guide-features.json"; sourceTree = "<group>"; };
 		086A5F4B2744EF3B00FECE02 /* guide-syntax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "guide-syntax.json"; sourceTree = "<group>"; };
-		086A5F4C2744EF3B00FECE02 /* developers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = developers.json; sourceTree = "<group>"; };
 		086A5F512744EF4C00FECE02 /* ViewComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
 		086A5F57274CB8B500FECE02 /* guide-subject.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "guide-subject.json"; sourceTree = "<group>"; };
 		086A5F59274CC17700FECE02 /* lib-Combine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-Combine.json"; sourceTree = "<group>"; };
 		086A5F5B274CCAEC00FECE02 /* lib-Concurrency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-Concurrency.json"; sourceTree = "<group>"; };
 		086A5F5C274CCAEC00FECE02 /* lib-SwiftUI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lib-SwiftUI.json"; sourceTree = "<group>"; };
 		086A5F632754C14F00FECE02 /* PlayTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTextView.swift; sourceTree = "<group>"; };
-		086A5F692755F3BE00FECE02 /* repos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = repos.json; path = SwiftPamphletApp/Resource/News/repos.json; sourceTree = SOURCE_ROOT; };
 		086D48A02BBB820100835544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0871C6182BA040E5000B620D /* InfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRowView.swift; sourceTree = "<group>"; };
 		0871C61A2BA04D23000B620D /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
@@ -451,7 +443,6 @@
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		08AEAEF9277F3C7400B969E2 /* css.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css.html; sourceTree = "<group>"; };
 		08B4C9382770B26700742084 /* CCYRSSReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRSSReq.swift; sourceTree = "<group>"; };
-		08B4C93B2774786800742084 /* archiveRepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archiveRepos.json; sourceTree = "<group>"; };
 		08BE632927BE220D002BC6A8 /* 146.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 146.md; sourceTree = "<group>"; };
 		08BE632B27BE3762002BC6A8 /* 147.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 147.md; sourceTree = "<group>"; };
 		08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLabelView.swift; sourceTree = "<group>"; };
@@ -508,7 +499,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08448F092796A83D00B61353 /* SwiftDate in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
 				08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */,
 				08F14B422BBDA3EA005B46CC /* NukeVideo in Frameworks */,
@@ -1128,8 +1118,6 @@
 				08C411F02795111C006FC340 /* Play */,
 				08AEAEF8277F3C5A00B969E2 /* Style */,
 				08AEAEE7277EDD5D00B969E2 /* Guide */,
-				08AEAEE6277EDD4C00B969E2 /* News */,
-				08B4C93A277477E100742084 /* Archive */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1185,15 +1173,6 @@
 			path = APIVM;
 			sourceTree = "<group>";
 		};
-		08AEAEE6277EDD4C00B969E2 /* News */ = {
-			isa = PBXGroup;
-			children = (
-				086A5F692755F3BE00FECE02 /* repos.json */,
-				086A5F4C2744EF3B00FECE02 /* developers.json */,
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
 		08AEAEE7277EDD5D00B969E2 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
@@ -1222,15 +1201,6 @@
 				08F51BC427A374A500693AB6 /* footer_js.html */,
 			);
 			path = Style;
-			sourceTree = "<group>";
-		};
-		08B4C93A277477E100742084 /* Archive */ = {
-			isa = PBXGroup;
-			children = (
-				08B4C93B2774786800742084 /* archiveRepos.json */,
-				08448F42279B83C000B61353 /* archiveDevelopers.json */,
-			);
-			path = Archive;
 			sourceTree = "<group>";
 		};
 		08BF26D4276B18380064DDAC /* Network */ = {
@@ -1328,7 +1298,6 @@
 			packageProductDependencies = (
 				08BF26D22768A5B40064DDAC /* MarkdownUI */,
 				08D107BC278826BB007B7009 /* HTMLEntities */,
-				08448F082796A83D00B61353 /* SwiftDate */,
 				08448F4D279E8CA400B61353 /* Ink */,
 				08ED80152B9C54DE0069B7EC /* SMNetwork */,
 				08397E312B9F39C100DFDD02 /* SwiftSoup */,
@@ -1369,7 +1338,6 @@
 			packageReferences = (
 				08BF26D12768A5B40064DDAC /* XCRemoteSwiftPackageReference "MarkdownUI" */,
 				08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */,
-				08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */,
 				08ED80142B9C54DE0069B7EC /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMNetwork" */,
 				08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
@@ -1401,7 +1369,6 @@
 				0844900C279ECBB400B61353 /* 87.md in Resources */,
 				08448FA3279EBB1B00B61353 /* 3.md in Resources */,
 				08AEAEFA277F3C7400B969E2 /* css.html in Resources */,
-				086A5F502744EF3B00FECE02 /* developers.json in Resources */,
 				08026C492869B38300792EF1 /* 182.md in Resources */,
 				0850444E27B0D4EA0096D556 /* 136.md in Resources */,
 				08C3BBA227CF1B2B00ACF0FE /* 164.md in Resources */,
@@ -1432,7 +1399,6 @@
 				08448F5B279EA84100B61353 /* 131.md in Resources */,
 				0844900A279ECB8C00B61353 /* 86.md in Resources */,
 				08026C4D2869B3A600792EF1 /* 187.md in Resources */,
-				08B4C93C2774786800742084 /* archiveRepos.json in Resources */,
 				08449011279ECC3E00B61353 /* 57.md in Resources */,
 				08448FE2279EC7CF00B61353 /* 43.md in Resources */,
 				08449002279ECB0500B61353 /* 82.md in Resources */,
@@ -1506,7 +1472,6 @@
 				08026C522869B43D00792EF1 /* 191.md in Resources */,
 				084E1A5F27B4F7BB0072BBB6 /* 142.md in Resources */,
 				08448FDC279EC71800B61353 /* 40.md in Resources */,
-				08448F43279B83C000B61353 /* archiveDevelopers.json in Resources */,
 				0844902E279ECF1C00B61353 /* 92.md in Resources */,
 				08026C4A2869B38F00792EF1 /* 184.md in Resources */,
 				08448F5E279EB23600B61353 /* 99.md in Resources */,
@@ -1544,7 +1509,6 @@
 				08522BDA27CF5029005FF059 /* 166.md in Resources */,
 				08448FD5279EC62700B61353 /* 37.md in Resources */,
 				08448F75279EB62B00B61353 /* 125.md in Resources */,
-				086A5F6A2755F3BE00FECE02 /* repos.json in Resources */,
 				08BE632C27BE3762002BC6A8 /* 147.md in Resources */,
 				08448FE0279EC7AF00B61353 /* 42.md in Resources */,
 				08448F77279EB65800B61353 /* 126.md in Resources */,
@@ -1879,14 +1843,6 @@
 				minimumVersion = 2.7.1;
 			};
 		};
-		08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/malcommac/SwiftDate";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 		08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/johnsundell/ink.git";
@@ -1926,11 +1882,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
-		};
-		08448F082796A83D00B61353 /* SwiftDate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */;
-			productName = SwiftDate;
 		};
 		08448F4D279E8CA400B61353 /* Ink */ = {
 			isa = XCSwiftPackageProductDependency;

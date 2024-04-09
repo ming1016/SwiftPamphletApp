@@ -8,7 +8,6 @@
 import Foundation
 import Contacts
 import SwiftUI
-import SwiftDate
 
 class PlayFoundation {
 
@@ -239,29 +238,6 @@ three3.
         let date = Date(timeIntervalSince1970: interval)
         print(date) // 2022-01-17 06:11:41 +0000
 
-        // 使用 SwiftDate 库
-        let cn = Region(zone: Zones.asiaShanghai, locale: Locales.chineseChina)
-        SwiftDate.defaultRegion = cn
-        print("2008-02-14 23:12:14".toDate()?.year ?? "") // 2008
-
-        let d1 = "2022-01-17T23:20:35".toISODate(region: cn)
-        guard let d1 = d1 else {
-            return
-        }
-        print(d1.minute) // 20
-        let d2 = d1 + 1.minutes
-        print(d2.minute)
-
-        // 两个 DateInRegion 相差时间 interval
-        let i1 = DateInRegion(Date(), region: cn) - d1
-        let s1 = i1.toString {
-            $0.maximumUnitCount = 4
-            $0.allowedUnits = [.day, .hour, .minute]
-            $0.collapsesLargestUnit = true
-            $0.unitsStyle = .abbreviated
-            $0.locale = Locales.chineseChina
-        }
-        print(s1) // 9小时45分钟
 
     }
 
