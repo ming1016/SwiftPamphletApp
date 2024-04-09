@@ -27,7 +27,6 @@ struct IssuesListFromCustomView: View {
 
             }
         }
-        .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
         .onAppear {
             vm.doing(.customIssues)
         }
