@@ -33,9 +33,7 @@ class GitHubReq {
         let de = JSONDecoder()
         de.keyDecodingStrategy = .convertFromSnakeCase
         
-        let typeData = try de.decode(type.self, from: data)
-        
-        return typeData
+        return try de.decode(type.self, from: data)
     }
 }
 
@@ -49,7 +47,7 @@ enum APIError: Error {
         case .server:
             return "api 服务出错"
         case .client:
-            return "客户端出错"
+            return "端侧网络出错"
         case .parseError:
             return "网络出错"
         }

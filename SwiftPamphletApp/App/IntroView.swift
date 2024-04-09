@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
-//import Inject
+import MarkdownUI
 
 struct IntroView: View {
-//    @ObservedObject private var iO = Inject.observer
     var body: some View {
         VStack(spacing: 15) {
             Image("logo")
@@ -21,7 +20,10 @@ struct IntroView: View {
                 Text("一本活的开发手册")
                 Link("GitHub 地址", destination: URL(string: "https://github.com/ming1016/SwiftPamphletApp")!)
             }
-            Text("版本5.0").font(.footnote)
+            if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+                Text("版本\(version)").font(.footnote)
+            }
+            Markdown(loadBundleString("1.md"))
         }
         .frame(minWidth: SPC.detailMinWidth)
 //        .enableInjection()

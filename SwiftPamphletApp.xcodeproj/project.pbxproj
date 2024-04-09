@@ -206,8 +206,6 @@
 		08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */; };
 		08AEAEE1277EA70500B969E2 /* DBRepoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEE0277EA70500B969E2 /* DBRepoStore.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
-		08AEAEF3277F09FA00B969E2 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF2277F09FA00B969E2 /* NavView.swift */; };
-		08AEAEF5277F0A1E00B969E2 /* SPSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF4277F0A1E00B969E2 /* SPSidebar.swift */; };
 		08AEAEFA277F3C7400B969E2 /* css.html in Resources */ = {isa = PBXBuildFile; fileRef = 08AEAEF9277F3C7400B969E2 /* css.html */; };
 		08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4C9382770B26700742084 /* CCYRSSReq.swift */; };
 		08B4C93C2774786800742084 /* archiveRepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B4C93B2774786800742084 /* archiveRepos.json */; };
@@ -484,8 +482,6 @@
 		08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDevNoti.swift; sourceTree = "<group>"; };
 		08AEAEE0277EA70500B969E2 /* DBRepoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBRepoStore.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
-		08AEAEF2277F09FA00B969E2 /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
-		08AEAEF4277F0A1E00B969E2 /* SPSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPSidebar.swift; sourceTree = "<group>"; };
 		08AEAEF9277F3C7400B969E2 /* css.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css.html; sourceTree = "<group>"; };
 		08B4C9382770B26700742084 /* CCYRSSReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRSSReq.swift; sourceTree = "<group>"; };
 		08B4C93B2774786800742084 /* archiveRepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archiveRepos.json; sourceTree = "<group>"; };
@@ -1016,9 +1012,7 @@
 				083554E227572BB60095E0EE /* AppVM.swift */,
 				086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */,
 				086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */,
-				08AEAEF4277F0A1E00B969E2 /* SPSidebar.swift */,
 				08AEAEF0277F09D000B969E2 /* IntroView.swift */,
-				08AEAEF2277F09FA00B969E2 /* NavView.swift */,
 				084E1A6427B51EDB0072BBB6 /* AutoTask.swift */,
 			);
 			path = App;
@@ -1736,7 +1730,6 @@
 				08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */,
 				08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */,
 				086A5F422744EDCE00FECE02 /* IssueVM.swift in Sources */,
-				08AEAEF3277F09FA00B969E2 /* NavView.swift in Sources */,
 				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
 				08522BF027CF9FFA005FF059 /* PlayAnimation.swift in Sources */,
 				08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */,
@@ -1770,7 +1763,6 @@
 				086A5F412744EDCE00FECE02 /* UserVM.swift in Sources */,
 				08A9E1A42BC2837500A73764 /* APIUserVM.swift in Sources */,
 				08BE633527BF54A0002BC6A8 /* PlayTextEditorView.swift in Sources */,
-				08AEAEF5277F0A1E00B969E2 /* SPSidebar.swift in Sources */,
 				086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */,
 				08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
@@ -1943,7 +1935,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1986,7 +1978,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";

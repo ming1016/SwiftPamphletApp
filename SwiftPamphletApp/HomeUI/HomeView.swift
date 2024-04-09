@@ -49,12 +49,7 @@ struct HomeView: View {
                     type: .detail
                 )
             } else {
-                ContentUnavailableView {
-                    Label("未选",
-                          systemImage: "pencil.tip.crop.circle.badge.plus")
-                } description: {
-                    Text("请选择或按+号添加内容")
-                }
+                IntroView()
             }
         }
         .environment(appVM)
