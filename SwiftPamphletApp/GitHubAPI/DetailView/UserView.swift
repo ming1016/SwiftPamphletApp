@@ -106,19 +106,7 @@ struct UserEventView: View {
         List {
             ForEach(Array(events.enumerated()), id: \.0) { i, event in
 
-                if isShowUserEventLink == true {
-                    NavigationLink {
-                        UserEventLinkDestination(event: event)
-                    } label: {
-                        AUserEventLabel(
-                            event: event,
-                            isShowActor: isShowActor,
-                            isUnRead: unReadCount > 0 && i < unReadCount
-                        )
-                    } // end NavigationLink
-                } else {
-                    AUserEventLabel(event: event, isShowActor: isShowActor, isUnRead: unReadCount > 0 && i < unReadCount)
-                }
+                AUserEventLabel(event: event, isShowActor: isShowActor, isUnRead: unReadCount > 0 && i < unReadCount)
                 Divider()
             } // end ForEach
         }//  end List
@@ -134,19 +122,6 @@ struct ListCommits: View {
         ForEach(event.payload.commits ?? [PayloadCommitModel](), id: \.self) { c in
             ButtonGoGitHubWeb(url: "https://github.com/\(event.repo.name)/commit/\(c.sha ?? "")", text: "提交")
             MarkdownView(s: c.message ?? "")
-        }
-    }
-}
-
-struct UserEventLinkDestination: View {
-    var event: EventModel
-    var body: some View {
-        VStack {
-            if event.payload.issue?.number != nil {
-                IssueView(vm: IssueVM(repoName: event.repo.name, issueNumber: event.payload.issue?.number ?? 0))
-            } else {
-                RepoView(vm: RepoVM(repoName: event.repo.name), type: .readme, isShowRepoCommitsLink: false, isShowIssuesLink: false)
-            }
         }
     }
 }

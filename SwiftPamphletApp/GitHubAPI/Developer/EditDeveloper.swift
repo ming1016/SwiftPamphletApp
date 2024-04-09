@@ -111,13 +111,13 @@ struct EditDeveloper: View {
                 }
                 .tag(1)
 
-            IssuesView(issues: repoVM.issues, repo: repoVM.repo, isShowLink: false)
+            IssuesView(issues: repoVM.issues, repo: repoVM.repo)
                 .tabItem {
                     Text("议题列表")
                 }
                 .tag(2)
 
-            IssueEventsView(issueEvents: repoVM.issuesEvents, repo: repoVM.repo, isShowLink: false)
+            IssueEventsView(issueEvents: repoVM.issuesEvents, repo: repoVM.repo)
                 .tabItem {
                     Text("议题事件")
                 }

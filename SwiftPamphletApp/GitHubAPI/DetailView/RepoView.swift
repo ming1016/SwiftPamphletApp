@@ -7,127 +7,6 @@
 
 import SwiftUI
 
-struct RepoView: View {
-    enum EnterType {
-        case normal, readme
-    }
-    @Environment(AppVM.self) var appVM
-    @State var vm: RepoVM
-    @State private var tabSelct = 1
-    @State var type: EnterType = .normal
-    var isShowRepoCommitsLink = true
-    var isShowIssuesLink = true
-    var isCleanUnread = false
-    var isCleanExpUnread = false
-    @State private var expUnreadCount = 0
-    
-    @State var isEnterFullScreen: Bool = false // 全屏控制
-    
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    Text(vm.repo.name).font(.system(.largeTitle))
-                    Text("(\(vm.repo.fullName))")
-                }
-                HStack {
-                    Image(systemName: "star.fill").foregroundColor(.red)
-                    Text("\(vm.repo.stargazersCount)")
-                    Image(systemName: "tuningfork").foregroundColor(.cyan)
-                    Text("\(vm.repo.forks)")
-                    Text("议题 \(vm.repo.openIssues)")
-                    Text("语言 \(vm.repo.language ?? "")")
-                    ButtonGoGitHubWeb(url: vm.repo.htmlUrl ?? "https://github.com", text: "在 GitHub 上访问")
-                    Button {
-                        withAnimation {
-                            isEnterFullScreen.toggle()
-                            appVM.fullScreen(isEnter: isEnterFullScreen)
-                        }
-                    } label: {
-                        Image(systemName: isEnterFullScreen == true ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
-                    }
-
-                }
-                if vm.repo.description != nil {
-                    Text("简介：\(vm.repo.description ?? "")")
-                }
-                
-                HStack {
-                    Text("作者：")
-                    NukeImage(width: 40, height: 40, url: vm.repo.owner.avatarUrl)
-                    ButtonGoGitHubWeb(url: vm.repo.owner.login, text: vm.repo.owner.login, ignoreHost: true)
-                }
-            } // end VStack
-            Spacer()
-        }
-        .alert(vm.errMsg, isPresented: $vm.errHint, actions: {})
-        .frame(minWidth: SPC.detailMinWidth)
-        
-        .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
-        .onAppear {
-            if type == .readme {
-                vm.doing(.inInitJustRepo)
-                tabSelct = 4
-            } else {
-                vm.doing(.inInit)
-            }
-        }
-        .onDisappear {
-            appVM.expNotis[vm.repoName]?.unRead = 0
-            appVM.calculateExpCountNotis()
-        }
-        // end HStack
-
-        TabView(selection: $tabSelct) {
-            RepoCommitsView(commits: vm.commits, repo: vm.repo, isShowLink: isShowRepoCommitsLink, unReadCount: expUnreadCount)
-                .tabItem {
-                    Text("新提交")
-                }
-                .onAppear(perform: {
-                    vm.doing(.inCommit)
-                    if isCleanExpUnread == true {
-                        expUnreadCount = appVM.expNotis[vm.repoName]?.unRead ?? 0
-                        vm.doing(.clearExpUnReadCommit)
-                        appVM.expNotis[vm.repoName]?.unRead = SPC.unreadMagicNumber
-                        appVM.calculateExpCountNotis()
-                    }
-                })
-                .tag(1)
-                
-
-            IssuesView(issues: vm.issues, repo: vm.repo, isShowLink: isShowIssuesLink)
-                .tabItem {
-                    Text("议题列表")
-                }
-                .onAppear {
-                    vm.doing(.inIssues)
-                }
-                .tag(2)
-
-            IssueEventsView(issueEvents: vm.issueEvents, repo: vm.repo, isShowLink: isShowIssuesLink)
-                .tabItem {
-                    Text("议题事件")
-                }
-                .onAppear {
-                    vm.doing(.inIssueEvents)
-                }
-                .tag(3)
-
-            ReadmeView(content: vm.readme.content.replacingOccurrences(of: "\n", with: ""))
-                .tabItem {
-                    Text("README")
-                }
-                .onAppear {
-                    vm.doing(.inReadme)
-                }
-                .tag(4)
-
-        } // end TabView
-        Spacer()
-    }
-        
-}
-
 struct ReadmeView: View {
     @Environment(\.colorScheme) private var colorScheme
     var content: String
@@ -143,17 +22,10 @@ struct ReadmeView: View {
 struct IssuesView: View {
     var issues: [IssueModel]
     var repo: RepoModel
-    var isShowLink = true
     var body: some View {
         List {
             ForEach(issues) { issue in
-                if isShowLink == true {
-                    NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issue.number))) {
-                        IssueLabelView(issue: issue)
-                    }
-                } else {
-                    IssueLabelView(issue: issue)
-                }
+                IssueLabelView(issue: issue)
             } // end ForEach
         } // end List
     } // end body
@@ -162,17 +34,10 @@ struct IssuesView: View {
 struct IssueEventsView: View {
     var issueEvents: [IssueEventModel]
     var repo: RepoModel
-    var isShowLink = true
     var body: some View {
         List {
             ForEach(issueEvents) { issueEvent in
-                if isShowLink == true {
-                    NavigationLink(destination: IssueView(vm: IssueVM(repoName: repo.fullName, issueNumber: issueEvent.issue.number))) {
-                        IssueEventLabelView(issueEvent: issueEvent)
-                    } // end NavigationLink
-                } else {
-                    IssueEventLabelView(issueEvent: issueEvent)
-                }
+                IssueEventLabelView(issueEvent: issueEvent)
             } //  end ForEach
         } // end List
     } // end body

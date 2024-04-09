@@ -170,12 +170,10 @@
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
 		086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F2A2744ED8600FECE02 /* ActiveDeveloperListView.swift */; };
 		086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F2C2744ED8600FECE02 /* IssuesListFromCustomView.swift */; };
-		086A5F352744ED9600FECE02 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F322744ED9600FECE02 /* IssueView.swift */; };
 		086A5F362744ED9600FECE02 /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F332744ED9600FECE02 /* RepoView.swift */; };
 		086A5F372744ED9600FECE02 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F342744ED9600FECE02 /* UserView.swift */; };
 		086A5F3A2744EDA500FECE02 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F382744EDA500FECE02 /* APIRequest.swift */; };
 		086A5F3B2744EDA500FECE02 /* GitHubAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */; };
-		086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F3D2744EDCE00FECE02 /* RepoVM.swift */; };
 		086A5F412744EDCE00FECE02 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F3E2744EDCE00FECE02 /* UserVM.swift */; };
 		086A5F422744EDCE00FECE02 /* IssueVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F3F2744EDCE00FECE02 /* IssueVM.swift */; };
 		086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */; };
@@ -444,12 +442,10 @@
 		086A5F0F2744E89100FECE02 /* SwiftPamphletApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPamphletApp.entitlements; sourceTree = "<group>"; };
 		086A5F2A2744ED8600FECE02 /* ActiveDeveloperListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveDeveloperListView.swift; sourceTree = "<group>"; };
 		086A5F2C2744ED8600FECE02 /* IssuesListFromCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesListFromCustomView.swift; sourceTree = "<group>"; };
-		086A5F322744ED9600FECE02 /* IssueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		086A5F332744ED9600FECE02 /* RepoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
 		086A5F342744ED9600FECE02 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		086A5F382744EDA500FECE02 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIModel.swift; sourceTree = "<group>"; };
-		086A5F3D2744EDCE00FECE02 /* RepoVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoVM.swift; sourceTree = "<group>"; };
 		086A5F3E2744EDCE00FECE02 /* UserVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		086A5F3F2744EDCE00FECE02 /* IssueVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueVM.swift; sourceTree = "<group>"; };
 		086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppConfig.swift; sourceTree = "<group>"; };
@@ -1161,7 +1157,6 @@
 		086A5F1E2744ECA400FECE02 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
-				086A5F322744ED9600FECE02 /* IssueView.swift */,
 				086A5F332744ED9600FECE02 /* RepoView.swift */,
 				086A5F342744ED9600FECE02 /* UserView.swift */,
 				08448F4A279E872B00B61353 /* GuideView.swift */,
@@ -1189,7 +1184,6 @@
 			isa = PBXGroup;
 			children = (
 				086A5F3F2744EDCE00FECE02 /* IssueVM.swift */,
-				086A5F3D2744EDCE00FECE02 /* RepoVM.swift */,
 				086A5F3E2744EDCE00FECE02 /* UserVM.swift */,
 			);
 			path = VM;
@@ -1720,7 +1714,6 @@
 				08BE635027C4C0F2002BC6A8 /* PlayFormView.swift in Sources */,
 				08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */,
 				08397E2F2B9F353B00DFDD02 /* CategoryListView.swift in Sources */,
-				086A5F402744EDCE00FECE02 /* RepoVM.swift in Sources */,
 				08BE636627C88750002BC6A8 /* PlayProgressView.swift in Sources */,
 				3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */,
 				084417772B99BA3F0049297D /* SidebarView.swift in Sources */,
@@ -1730,7 +1723,6 @@
 				08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */,
 				08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */,
 				086A5F422744EDCE00FECE02 /* IssueVM.swift in Sources */,
-				086A5F352744ED9600FECE02 /* IssueView.swift in Sources */,
 				08522BF027CF9FFA005FF059 /* PlayAnimation.swift in Sources */,
 				08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */,
 				08BE635E27C72F50002BC6A8 /* PlayNavigationView.swift in Sources */,
