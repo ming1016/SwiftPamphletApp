@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var appVM = AppVM()
     @State private var selectedDataLinkString: String?
     @State private var selectInfo: IOInfo? = nil
     @State private var selectDev: DeveloperModel? = nil
@@ -52,6 +51,5 @@ struct HomeView: View {
                 IntroView()
             }
         }
-        .environment(appVM)
     }
 }

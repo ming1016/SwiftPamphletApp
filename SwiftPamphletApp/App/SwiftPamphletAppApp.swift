@@ -38,20 +38,6 @@ struct Demo: View {
     }
 }
 
-struct V: View {
-    
-    @State var appVM = AppVM()
-    @State var isEnterFullScreen: Bool = false // 全屏控制
-    var body: some View {
-        Button {
-            isEnterFullScreen.toggle()
-            appVM.fullScreen(isEnter: isEnterFullScreen)
-        } label: {
-            Image(systemName: isEnterFullScreen == true ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
-        }
-    }
-}
-
 
 
 // MARK: - UnCat
