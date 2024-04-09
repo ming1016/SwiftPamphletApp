@@ -53,7 +53,6 @@ struct RepoCommitsView: View {
                 RepoCommitLabelView(repo: repo, commit: commit, isUnRead: unReadCount > 0 && i < unReadCount)
             } // end ForEach
         } // end List
-        .frame(minWidth: SPC.detailMinWidth)
     } // end body
 }
 
