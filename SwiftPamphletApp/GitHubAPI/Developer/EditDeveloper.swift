@@ -105,7 +105,7 @@ struct EditDeveloper: View {
         // end HStack
 
         TabView(selection: $tabSelct) {
-            RepoCommitsView(commits: repoVM.commits, repo: repoVM.repo, isShowLink: false)
+            RepoCommitsView(commits: repoVM.commits, repo: repoVM.repo)
                 .tabItem {
                     Text("新提交")
                 }

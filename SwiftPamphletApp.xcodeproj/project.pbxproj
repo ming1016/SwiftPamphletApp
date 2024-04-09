@@ -168,13 +168,11 @@
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
-		086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F2A2744ED8600FECE02 /* ActiveDeveloperListView.swift */; };
 		086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F2C2744ED8600FECE02 /* IssuesListFromCustomView.swift */; };
 		086A5F362744ED9600FECE02 /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F332744ED9600FECE02 /* RepoView.swift */; };
 		086A5F372744ED9600FECE02 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F342744ED9600FECE02 /* UserView.swift */; };
 		086A5F3A2744EDA500FECE02 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F382744EDA500FECE02 /* APIRequest.swift */; };
 		086A5F3B2744EDA500FECE02 /* GitHubAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */; };
-		086A5F412744EDCE00FECE02 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F3E2744EDCE00FECE02 /* UserVM.swift */; };
 		086A5F422744EDCE00FECE02 /* IssueVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F3F2744EDCE00FECE02 /* IssueVM.swift */; };
 		086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */; };
 		086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F452744EEB900FECE02 /* FundationFunction.swift */; };
@@ -198,7 +196,7 @@
 		0896FB9227BA486900676B7F /* 145.md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* 145.md */; };
 		08A4FDC227B25A140068E5BC /* 141.md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* 141.md */; };
 		08A9E19F2BC18EF400A73764 /* APIRepoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E19E2BC18EF400A73764 /* APIRepoVM.swift */; };
-		08A9E1A22BC25D0700A73764 /* ViewComponetMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponetMarkdown.swift */; };
+		08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */; };
 		08A9E1A42BC2837500A73764 /* APIUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A32BC2837500A73764 /* APIUserVM.swift */; };
 		08A9E1A62BC2861100A73764 /* GitHubReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A52BC2861100A73764 /* GitHubReq.swift */; };
 		08AEAEDD277EA64900B969E2 /* DBDevNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */; };
@@ -239,19 +237,9 @@
 		08BE637227CC6F13002BC6A8 /* PlayScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE637127CC6F13002BC6A8 /* PlayScrollView.swift */; };
 		08BE637427CCAB52002BC6A8 /* 160.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE637327CCAB52002BC6A8 /* 160.md */; };
 		08BE637627CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE637527CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift */; };
-		08BE637927CDCFD9002BC6A8 /* DataSortingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE637827CDCFD9002BC6A8 /* DataSortingListView.swift */; };
-		08BE637D27CDDA47002BC6A8 /* DataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE637C27CDDA47002BC6A8 /* DataListView.swift */; };
-		08BE638027CDDAAD002BC6A8 /* D-SwiftUI.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE637E27CDDAAD002BC6A8 /* D-SwiftUI.json */; };
-		08BE638127CDDAAD002BC6A8 /* D-Swift 官方.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE637F27CDDAAD002BC6A8 /* D-Swift 官方.json */; };
-		08BE638727CDF1DD002BC6A8 /* D-播客.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638227CDF1DD002BC6A8 /* D-播客.json */; };
-		08BE638827CDF1DD002BC6A8 /* D-图片工具.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638327CDF1DD002BC6A8 /* D-图片工具.json */; };
-		08BE638927CDF1DD002BC6A8 /* D-Swift 技术.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638427CDF1DD002BC6A8 /* D-Swift 技术.json */; };
-		08BE638A27CDF1DD002BC6A8 /* D-周报.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638527CDF1DD002BC6A8 /* D-周报.json */; };
-		08BE638B27CDF1DD002BC6A8 /* D-美术素材.json in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638627CDF1DD002BC6A8 /* D-美术素材.json */; };
 		08BE638F27CE157D002BC6A8 /* 161.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638E27CE157D002BC6A8 /* 161.md */; };
 		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
-		08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */; };
 		08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */; };
 		08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */; };
 		08C3BB8027CE4A8500ACF0FE /* 162.md in Resources */ = {isa = PBXBuildFile; fileRef = 08C3BB7F27CE4A8500ACF0FE /* 162.md */; };
@@ -440,13 +428,11 @@
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		086A5F0F2744E89100FECE02 /* SwiftPamphletApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPamphletApp.entitlements; sourceTree = "<group>"; };
-		086A5F2A2744ED8600FECE02 /* ActiveDeveloperListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveDeveloperListView.swift; sourceTree = "<group>"; };
 		086A5F2C2744ED8600FECE02 /* IssuesListFromCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesListFromCustomView.swift; sourceTree = "<group>"; };
 		086A5F332744ED9600FECE02 /* RepoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
 		086A5F342744ED9600FECE02 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		086A5F382744EDA500FECE02 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIModel.swift; sourceTree = "<group>"; };
-		086A5F3E2744EDCE00FECE02 /* UserVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		086A5F3F2744EDCE00FECE02 /* IssueVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueVM.swift; sourceTree = "<group>"; };
 		086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppConfig.swift; sourceTree = "<group>"; };
 		086A5F452744EEB900FECE02 /* FundationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundationFunction.swift; sourceTree = "<group>"; };
@@ -472,7 +458,7 @@
 		0896FB9127BA486900676B7F /* 145.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 145.md; sourceTree = "<group>"; };
 		08A4FDC127B25A140068E5BC /* 141.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 141.md; sourceTree = "<group>"; };
 		08A9E19E2BC18EF400A73764 /* APIRepoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepoVM.swift; sourceTree = "<group>"; };
-		08A9E1A12BC25D0700A73764 /* ViewComponetMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponetMarkdown.swift; sourceTree = "<group>"; };
+		08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentMarkdown.swift; sourceTree = "<group>"; };
 		08A9E1A32BC2837500A73764 /* APIUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUserVM.swift; sourceTree = "<group>"; };
 		08A9E1A52BC2861100A73764 /* GitHubReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReq.swift; sourceTree = "<group>"; };
 		08AEAEDC277EA64900B969E2 /* DBDevNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDevNoti.swift; sourceTree = "<group>"; };
@@ -512,17 +498,7 @@
 		08BE637127CC6F13002BC6A8 /* PlayScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScrollView.swift; sourceTree = "<group>"; };
 		08BE637327CCAB52002BC6A8 /* 160.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 160.md; sourceTree = "<group>"; };
 		08BE637527CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySuperposedLayerView.swift; sourceTree = "<group>"; };
-		08BE637827CDCFD9002BC6A8 /* DataSortingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataSortingListView.swift; path = SwiftPamphletApp/DataSorting/DataSortingListView.swift; sourceTree = SOURCE_ROOT; };
-		08BE637C27CDDA47002BC6A8 /* DataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListView.swift; sourceTree = "<group>"; };
-		08BE637E27CDDAAD002BC6A8 /* D-SwiftUI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-SwiftUI.json"; sourceTree = "<group>"; };
-		08BE637F27CDDAAD002BC6A8 /* D-Swift 官方.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-Swift 官方.json"; sourceTree = "<group>"; };
-		08BE638227CDF1DD002BC6A8 /* D-播客.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-播客.json"; sourceTree = "<group>"; };
-		08BE638327CDF1DD002BC6A8 /* D-图片工具.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-图片工具.json"; sourceTree = "<group>"; };
-		08BE638427CDF1DD002BC6A8 /* D-Swift 技术.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-Swift 技术.json"; sourceTree = "<group>"; };
-		08BE638527CDF1DD002BC6A8 /* D-周报.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-周报.json"; sourceTree = "<group>"; };
-		08BE638627CDF1DD002BC6A8 /* D-美术素材.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "D-美术素材.json"; sourceTree = "<group>"; };
 		08BE638E27CE157D002BC6A8 /* 161.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 161.md; sourceTree = "<group>"; };
-		08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoListView.swift; sourceTree = "<group>"; };
 		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTabView.swift; sourceTree = "<group>"; };
 		08C3BB7F27CE4A8500ACF0FE /* 162.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 162.md; sourceTree = "<group>"; };
@@ -601,15 +577,6 @@
 				08F1AB622BA083DD00AEA0CA /* Model */,
 			);
 			path = InfoOrganizer;
-			sourceTree = "<group>";
-		};
-		08401CDD28BF7F0900883D8B /* 新鲜事 */ = {
-			isa = PBXGroup;
-			children = (
-				08BE638227CDF1DD002BC6A8 /* D-播客.json */,
-				08BE638527CDF1DD002BC6A8 /* D-周报.json */,
-			);
-			path = "新鲜事";
 			sourceTree = "<group>";
 		};
 		084417732B99B8EA0049297D /* HomeUI */ = {
@@ -1127,7 +1094,6 @@
 				08CD61FB27758B22008C0935 /* Core */,
 				080387652766FF3200519B15 /* Network */,
 				086A5F482744EF2B00FECE02 /* ViewComponet */,
-				08BE637A27CDD9E7002BC6A8 /* DataSorting */,
 				086A5F472744EF0800FECE02 /* Resource */,
 				086A5F0A2744E89100FECE02 /* Assets.xcassets */,
 				086A5F0F2744E89100FECE02 /* SwiftPamphletApp.entitlements */,
@@ -1147,9 +1113,7 @@
 		086A5F152744EC8900FECE02 /* ListView */ = {
 			isa = PBXGroup;
 			children = (
-				086A5F2A2744ED8600FECE02 /* ActiveDeveloperListView.swift */,
 				086A5F2C2744ED8600FECE02 /* IssuesListFromCustomView.swift */,
-				08BF26D7276B5D7F0064DDAC /* ExploreRepoListView.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -1184,7 +1148,6 @@
 			isa = PBXGroup;
 			children = (
 				086A5F3F2744EDCE00FECE02 /* IssueVM.swift */,
-				086A5F3E2744EDCE00FECE02 /* UserVM.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -1205,7 +1168,7 @@
 			isa = PBXGroup;
 			children = (
 				086A5F512744EF4C00FECE02 /* ViewComponent.swift */,
-				08A9E1A12BC25D0700A73764 /* ViewComponetMarkdown.swift */,
+				08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */,
 				08F14B432BBE2865005B46CC /* ViewComponentImage.swift */,
 				0805F4952BAAABEA0008BB52 /* ViewStyle.swift */,
 			);
@@ -1308,45 +1271,6 @@
 				08448F42279B83C000B61353 /* archiveDevelopers.json */,
 			);
 			path = Archive;
-			sourceTree = "<group>";
-		};
-		08BE637A27CDD9E7002BC6A8 /* DataSorting */ = {
-			isa = PBXGroup;
-			children = (
-				08BE637827CDCFD9002BC6A8 /* DataSortingListView.swift */,
-				08BE637C27CDDA47002BC6A8 /* DataListView.swift */,
-				08BE637B27CDDA2B002BC6A8 /* Data */,
-			);
-			path = DataSorting;
-			sourceTree = "<group>";
-		};
-		08BE637B27CDDA2B002BC6A8 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				08401CDD28BF7F0900883D8B /* 新鲜事 */,
-				08BE638D27CE0521002BC6A8 /* 美术 */,
-				08BE638C27CDF438002BC6A8 /* Swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		08BE638C27CDF438002BC6A8 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				08BE637F27CDDAAD002BC6A8 /* D-Swift 官方.json */,
-				08BE637E27CDDAAD002BC6A8 /* D-SwiftUI.json */,
-				08BE638427CDF1DD002BC6A8 /* D-Swift 技术.json */,
-			);
-			path = Swift;
-			sourceTree = "<group>";
-		};
-		08BE638D27CE0521002BC6A8 /* 美术 */ = {
-			isa = PBXGroup;
-			children = (
-				08BE638327CDF1DD002BC6A8 /* D-图片工具.json */,
-				08BE638627CDF1DD002BC6A8 /* D-美术素材.json */,
-			);
-			path = "美术";
 			sourceTree = "<group>";
 		};
 		08BF26D4276B18380064DDAC /* Network */ = {
@@ -1534,7 +1458,6 @@
 				08448FB4279EC37000B61353 /* 17.md in Resources */,
 				08448FA7279EBB7E00B61353 /* 11.md in Resources */,
 				08448FCA279EC56D00B61353 /* 32.md in Resources */,
-				08BE638127CDDAAD002BC6A8 /* D-Swift 官方.json in Resources */,
 				085BB77427D22FCA00E8F69A /* 172.md in Resources */,
 				08BE634427C3845E002BC6A8 /* 150.md in Resources */,
 				0844901C279ECD6B00B61353 /* 65.md in Resources */,
@@ -1545,7 +1468,6 @@
 				08448F9A279EBA2900B61353 /* 6.md in Resources */,
 				08026C472869B26900792EF1 /* 180.md in Resources */,
 				08448F8C279EB84800B61353 /* 93.md in Resources */,
-				08BE638727CDF1DD002BC6A8 /* D-播客.json in Resources */,
 				08448FC1279EC4B500B61353 /* 26.md in Resources */,
 				08448F9C279EBA8200B61353 /* 7.md in Resources */,
 				08448FAF279EC31200B61353 /* 15.md in Resources */,
@@ -1584,12 +1506,9 @@
 				08448FF1279EC96500B61353 /* 55.md in Resources */,
 				08BE637027C8F6A7002BC6A8 /* 159.md in Resources */,
 				08448FB6279EC39800B61353 /* 18.md in Resources */,
-				08BE638027CDDAAD002BC6A8 /* D-SwiftUI.json in Resources */,
-				08BE638927CDF1DD002BC6A8 /* D-Swift 技术.json in Resources */,
 				08BE638F27CE157D002BC6A8 /* 161.md in Resources */,
 				08448F6A279EB47E00B61353 /* 120.md in Resources */,
 				08448F97279EB9B000B61353 /* 4.md in Resources */,
-				08BE638B27CDF1DD002BC6A8 /* D-美术素材.json in Resources */,
 				08448FC5279EC4F800B61353 /* 28.md in Resources */,
 				0850445627B110DA0096D556 /* 138.md in Resources */,
 				08449020279ECDCE00B61353 /* 67.md in Resources */,
@@ -1606,7 +1525,6 @@
 				08448FDE279EC74200B61353 /* 41.md in Resources */,
 				08449000279ECAE100B61353 /* 81.md in Resources */,
 				08448FAB279EC2B400B61353 /* 13.md in Resources */,
-				08BE638827CDF1DD002BC6A8 /* D-图片工具.json in Resources */,
 				08522BD627CF3218005FF059 /* 165.md in Resources */,
 				08448FCE279EC5AA00B61353 /* 34.md in Resources */,
 				08448F71279EB58C00B61353 /* 123.md in Resources */,
@@ -1646,7 +1564,6 @@
 				086A5F4F2744EF3B00FECE02 /* guide-syntax.json in Resources */,
 				08BE636027C7A674002BC6A8 /* 155.md in Resources */,
 				086A5F5E274CCAEC00FECE02 /* lib-SwiftUI.json in Resources */,
-				08BE638A27CDF1DD002BC6A8 /* D-周报.json in Resources */,
 				08448F51279E900500B61353 /* 132.md in Resources */,
 				08449026279ECE5400B61353 /* 70.md in Resources */,
 				08448F95279EB96F00B61353 /* 2.md in Resources */,
@@ -1702,7 +1619,6 @@
 				08F14B442BBE2865005B46CC /* ViewComponentImage.swift in Sources */,
 				3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */,
 				08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */,
-				08BF26D8276B5D7F0064DDAC /* ExploreRepoListView.swift in Sources */,
 				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
 				08397E232B9EE8F400DFDD02 /* InfoDataModel.swift in Sources */,
 				084417792B99BE720049297D /* DataLink.swift in Sources */,
@@ -1718,7 +1634,6 @@
 				3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */,
 				084417772B99BA3F0049297D /* SidebarView.swift in Sources */,
 				08F4BE6028609D8700733F12 /* PlayCharts.swift in Sources */,
-				086A5F2E2744ED8600FECE02 /* ActiveDeveloperListView.swift in Sources */,
 				08BE637227CC6F13002BC6A8 /* PlayScrollView.swift in Sources */,
 				08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */,
 				08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */,
@@ -1737,7 +1652,7 @@
 				08448F0B2797F73200B61353 /* PlayArchitecture.swift in Sources */,
 				08038767276700F100519B15 /* CCYRESTfulAPI.swift in Sources */,
 				08522BD827CF344B005FF059 /* PlaySliderView.swift in Sources */,
-				08A9E1A22BC25D0700A73764 /* ViewComponetMarkdown.swift in Sources */,
+				08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */,
 				0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */,
@@ -1750,9 +1665,7 @@
 				08BE635227C4D2BC002BC6A8 /* PlayListView.swift in Sources */,
 				086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */,
 				08F4BE6228616DC100733F12 /* PlayWeatherKit.swift in Sources */,
-				08BE637D27CDDA47002BC6A8 /* DataListView.swift in Sources */,
 				08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */,
-				086A5F412744EDCE00FECE02 /* UserVM.swift in Sources */,
 				08A9E1A42BC2837500A73764 /* APIUserVM.swift in Sources */,
 				08BE633527BF54A0002BC6A8 /* PlayTextEditorView.swift in Sources */,
 				086A5F642754C14F00FECE02 /* PlayTextView.swift in Sources */,
@@ -1765,7 +1678,6 @@
 				086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */,
 				086A5F672754C27900FECE02 /* DBHandler.swift in Sources */,
 				0805F4962BAAABEA0008BB52 /* ViewStyle.swift in Sources */,
-				08BE637927CDCFD9002BC6A8 /* DataSortingListView.swift in Sources */,
 				08BE636E27C8D6FD002BC6A8 /* PlayLazyVGridAndLazyHGridView.swift in Sources */,
 				08522BE227CF52ED005FF059 /* PlayColor.swift in Sources */,
 				08A9E19F2BC18EF400A73764 /* APIRepoVM.swift in Sources */,

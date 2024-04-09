@@ -46,26 +46,11 @@ struct IssueEventsView: View {
 struct RepoCommitsView: View {
     var commits: [CommitModel]
     var repo: RepoModel
-    var isShowLink = true
     var unReadCount = 0
     var body: some View {
         List {
             ForEach(Array(commits.enumerated()), id: \.0) { i, commit in
-                if isShowLink == true {
-                    NavigationLink {
-                        VStack {
-                            if commit.author?.login != nil {
-                                UserView(vm: UserVM(userName: commit.author?.login ?? ""), isShowUserEventLink: false)
-                            } else {
-                                Text(commit.commit.author.name ?? "")
-                            }
-                        }
-                    } label: {
-                        RepoCommitLabelView(repo: repo, commit: commit, isUnRead: unReadCount > 0 && i < unReadCount)
-                    } // end NavigationLink
-                } else {
-                    RepoCommitLabelView(repo: repo, commit: commit, isUnRead: unReadCount > 0 && i < unReadCount)
-                }
+                RepoCommitLabelView(repo: repo, commit: commit, isUnRead: unReadCount > 0 && i < unReadCount)
             } // end ForEach
         } // end List
         .frame(minWidth: SPC.detailMinWidth)
