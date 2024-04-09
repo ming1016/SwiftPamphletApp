@@ -8,7 +8,6 @@
 import SwiftUI
 import SwiftData
 import SwiftSoup
-import SwiftHTMLtoMarkdown
 import Ink
 import PhotosUI
 
@@ -340,19 +339,6 @@ struct EditInfoView: View {
         }
         if soupTitle?.isEmpty == false {
             title = soupTitle ?? "没找到标题"
-        }
-        
-        // HTML 转 Markdown
-//        var content = ""
-        if isFetchContent == true {
-            do {
-                var document = BasicHTML(rawHTML: homepageHTML)
-                try document.parse()
-                        
-//                content = try document.asMarkdown()
-            } catch {
-                print("html to markdown fail")
-            }
         }
         
         return (title, imageUrl, imageUrls)

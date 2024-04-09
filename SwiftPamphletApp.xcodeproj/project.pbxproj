@@ -199,7 +199,6 @@
 		08AEAEFA277F3C7400B969E2 /* css.html in Resources */ = {isa = PBXBuildFile; fileRef = 08AEAEF9277F3C7400B969E2 /* css.html */; };
 		08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4C9382770B26700742084 /* CCYRSSReq.swift */; };
 		08B4C93C2774786800742084 /* archiveRepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 08B4C93B2774786800742084 /* archiveRepos.json */; };
-		08B9D5312BA3E08300CACCBE /* SwiftHTMLtoMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = 08B9D5302BA3E08300CACCBE /* SwiftHTMLtoMarkdown */; };
 		08BE632A27BE220D002BC6A8 /* 146.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632927BE220D002BC6A8 /* 146.md */; };
 		08BE632C27BE3762002BC6A8 /* 147.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632B27BE3762002BC6A8 /* 147.md */; };
 		08BE632E27BE3A95002BC6A8 /* PlayLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */; };
@@ -232,7 +231,6 @@
 		08BE637427CCAB52002BC6A8 /* 160.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE637327CCAB52002BC6A8 /* 160.md */; };
 		08BE637627CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE637527CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift */; };
 		08BE638F27CE157D002BC6A8 /* 161.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638E27CE157D002BC6A8 /* 161.md */; };
-		08BF26D02768A59A0064DDAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26CF2768A59A0064DDAC /* SQLite */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
 		08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */; };
 		08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */; };
@@ -251,7 +249,6 @@
 		08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3F2BBDA3EA005B46CC /* NukeUI */; };
 		08F14B422BBDA3EA005B46CC /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B412BBDA3EA005B46CC /* NukeVideo */; };
 		08F14B442BBE2865005B46CC /* ViewComponentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F14B432BBE2865005B46CC /* ViewComponentImage.swift */; };
-		08F1AB612BA0821900AEA0CA /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 08F1AB602BA0821900AEA0CA /* CodeEditor */; };
 		08F4BE6028609D8700733F12 /* PlayCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE5F28609D8600733F12 /* PlayCharts.swift */; };
 		08F4BE6228616DC100733F12 /* PlayWeatherKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */; };
 		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
@@ -512,14 +509,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				08448F092796A83D00B61353 /* SwiftDate in Frameworks */,
-				08BF26D02768A59A0064DDAC /* SQLite in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
 				08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */,
 				08F14B422BBDA3EA005B46CC /* NukeVideo in Frameworks */,
 				08F14B3E2BBDA3EA005B46CC /* NukeExtensions in Frameworks */,
-				08B9D5312BA3E08300CACCBE /* SwiftHTMLtoMarkdown in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
-				08F1AB612BA0821900AEA0CA /* CodeEditor in Frameworks */,
 				08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */,
 				08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */,
 				08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */,
@@ -1332,15 +1326,12 @@
 			);
 			name = SwiftPamphletApp;
 			packageProductDependencies = (
-				08BF26CF2768A59A0064DDAC /* SQLite */,
 				08BF26D22768A5B40064DDAC /* MarkdownUI */,
 				08D107BC278826BB007B7009 /* HTMLEntities */,
 				08448F082796A83D00B61353 /* SwiftDate */,
 				08448F4D279E8CA400B61353 /* Ink */,
 				08ED80152B9C54DE0069B7EC /* SMNetwork */,
 				08397E312B9F39C100DFDD02 /* SwiftSoup */,
-				08F1AB602BA0821900AEA0CA /* CodeEditor */,
-				08B9D5302BA3E08300CACCBE /* SwiftHTMLtoMarkdown */,
 				08F14B3B2BBDA3EA005B46CC /* Nuke */,
 				08F14B3D2BBDA3EA005B46CC /* NukeExtensions */,
 				08F14B3F2BBDA3EA005B46CC /* NukeUI */,
@@ -1376,15 +1367,12 @@
 			);
 			mainGroup = 086A5EFA2744E88E00FECE02;
 			packageReferences = (
-				08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 				08BF26D12768A5B40064DDAC /* XCRemoteSwiftPackageReference "MarkdownUI" */,
 				08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */,
 				08448F072796A83D00B61353 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */,
 				08ED80142B9C54DE0069B7EC /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMNetwork" */,
 				08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
-				08F1AB5F2BA0821900AEA0CA /* XCRemoteSwiftPackageReference "CodeEditor" */,
-				08B9D52F2BA3E08300CACCBE /* XCRemoteSwiftPackageReference "SwiftHTMLToMarkdown" */,
 				08F14B3A2BBDA3EA005B46CC /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
@@ -1907,22 +1895,6 @@
 				minimumVersion = 0.5.1;
 			};
 		};
-		08B9D52F2BA3E08300CACCBE /* XCRemoteSwiftPackageReference "SwiftHTMLToMarkdown" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ActuallyTaylor/SwiftHTMLToMarkdown.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.1;
-			};
-		};
-		08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.13.1;
-			};
-		};
 		08BF26D12768A5B40064DDAC /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
@@ -1947,14 +1919,6 @@
 				minimumVersion = 12.5.0;
 			};
 		};
-		08F1AB5F2BA0821900AEA0CA /* XCRemoteSwiftPackageReference "CodeEditor" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ZeeZide/CodeEditor.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1972,16 +1936,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */;
 			productName = Ink;
-		};
-		08B9D5302BA3E08300CACCBE /* SwiftHTMLtoMarkdown */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08B9D52F2BA3E08300CACCBE /* XCRemoteSwiftPackageReference "SwiftHTMLToMarkdown" */;
-			productName = SwiftHTMLtoMarkdown;
-		};
-		08BF26CF2768A59A0064DDAC /* SQLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08BF26CE2768A59A0064DDAC /* XCRemoteSwiftPackageReference "SQLite.swift" */;
-			productName = SQLite;
 		};
 		08BF26D22768A5B40064DDAC /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -2016,11 +1970,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08F14B3A2BBDA3EA005B46CC /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeVideo;
-		};
-		08F1AB602BA0821900AEA0CA /* CodeEditor */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08F1AB5F2BA0821900AEA0CA /* XCRemoteSwiftPackageReference "CodeEditor" */;
-			productName = CodeEditor;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

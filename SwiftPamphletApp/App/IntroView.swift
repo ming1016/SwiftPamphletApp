@@ -26,7 +26,6 @@ struct IntroView: View {
             Markdown(loadBundleString("1.md"))
         }
         .frame(minWidth: SPC.detailMinWidth)
-//        .enableInjection()
     }
 }
 
