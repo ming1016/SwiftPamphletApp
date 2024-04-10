@@ -17,9 +17,14 @@ struct EditInfoView: View {
     
     @Query(IOCategory.all) var categories: [IOCategory]
     
+    // Inspector
     @State var isShowInspector = false
-    @State var cate:IOCategory? = nil
+    enum InspectorType {
+        case category, customSearch
+    }
+    @State var inspectorType: InspectorType = .category
     
+    // Tab
     @State var selectedTab = 1
     
     @State var isStopLoadingWeb = false
@@ -113,8 +118,9 @@ struct EditInfoView: View {
                         .onHover(perform: { hovering in
                             info.category?.updateDate = Date.now
                         })
-                        Button("添加分类", action: addCate)
                         Button("管理分类", action: manageCate)
+                        Button("管理自定检索", action: manageCustomSearch)
+                        
                     }
                 }
                 // MARK: Tab 切换
@@ -244,7 +250,13 @@ struct EditInfoView: View {
             } // end form
             .padding(10)
             .inspector(isPresented: $isShowInspector) {
-                EditCategoryView(cate: cate ?? IOCategory(name: "unavailable.com", pin: 0, createDate: Date.now, updateDate: Date.now))
+                switch inspectorType {
+                case .category:
+                    EditCategoryView()
+                case .customSearch:
+                    EditCustomSearchView()
+                }
+                
             }
             .toolbar {
                 Button("关闭", systemImage: "sidebar.right") {
@@ -265,13 +277,23 @@ struct EditInfoView: View {
             selectedTab = 4
         }
     }
-    func addCate() {
-        cate = IOCategory(name: "", pin: 0, createDate: Date.now, updateDate: Date.now)
-        modelContext.insert(cate!)
-        isShowInspector = true
-    }
     func manageCate() {
-        isShowInspector.toggle()
+        switch inspectorType {
+        case .category:
+            isShowInspector.toggle()
+        case .customSearch:
+            inspectorType = .category
+            isShowInspector = true
+        }
+    }
+    func manageCustomSearch() {
+        switch inspectorType {
+        case .category:
+            inspectorType = .customSearch
+            isShowInspector = true
+        case .customSearch:
+            isShowInspector.toggle()
+        }
     }
     
     // MARK: 图集处理

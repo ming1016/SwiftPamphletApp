@@ -103,7 +103,7 @@ struct InfoListView: View {
             Text("自定检索")
                 .tag("")
             ForEach(searchTerms, id: \.self) { term in
-                Text(term)
+                Text(customSearchLabel(term))
                     .tag(term)
             }
         }
@@ -119,6 +119,28 @@ struct InfoListView: View {
                 searchTerms.append(String(t))
             }
         }
+    }
+    func customSearchLabel(_ string: String) -> String {
+        let strs = string.split(separator: "/")
+        if strs.count > 0 {
+            var reStr = ""
+            if strs.count == 1 {
+                if strs.first?.hasPrefix("《") == false {
+                    reStr.append("  ")
+                }
+            } else {
+                for a in 1...(strs.count) {
+                    reStr.append("  ")
+                }
+            }
+            if let last = strs.last {
+                reStr.append(String(last))
+            }
+            
+            
+            return reStr
+        }
+        return string
     }
     
     // MARK: 资料整理数据方面

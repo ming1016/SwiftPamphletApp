@@ -9,21 +9,32 @@ import SwiftUI
 import SwiftData
 
 struct EditCategoryView: View {
-    @Bindable var cate: IOCategory
+    @Environment(\.modelContext) var modelContext
+    @State var cate: String = ""
     
     var body: some View {
         VStack {
-            if cate.name != "unavailable.com" {
-                Form {
-                    TextField("分类名", text: $cate.name)
+            HStack {
+                TextField("请填写新增的分类名", text: $cate)
+                    .textFieldStyle(.roundedBorder)
+                    .onSubmit {
+                        add()
+                    }
+                Button("添加") {
+                    add()
                 }
-                .navigationTitle("编辑分类")
-                .padding(30)
             }
+            .padding(5)
             CategoryListView()
             Spacer()
         }
         
+    }
+    
+    func add() {
+        let cateModel = IOCategory(name: cate, pin: 0, createDate: Date.now, updateDate: Date.now)
+        modelContext.insert(cateModel)
+        cate = ""
     }
 }
 
