@@ -96,7 +96,7 @@ struct EditDeveloper: View {
                 dev.updateDate = formatter.date(from: iso8601String) ?? Date.now
             }
         })
-        .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10))
+        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
         .onAppear {
             Task {
                 await repoVM.updateAllData()

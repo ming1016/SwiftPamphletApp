@@ -45,6 +45,11 @@ struct InfoListView: View {
                         }
                     }
                 }
+                if searchTerms.isEmpty == false {
+                    ToolbarItem(placement: .navigation) {
+                        customSearchView()
+                    }
+                }
                 if filterCate.isEmpty {
                     ToolbarItem(placement: .navigation) {
                         Toggle(isOn: $filterStar) {
@@ -82,10 +87,43 @@ struct InfoListView: View {
                 }
             }
             .searchable(text: $searchText)
+            .onAppear {
+                parseSearchTerms()
+            }
+            .onChange(of: term) { oldValue, newValue in
+                parseSearchTerms()
+            }
     }
     
+    
+    // MARK: 自定义搜索
+    @ViewBuilder
+    func customSearchView() -> some View {
+        Picker("自定检索", selection: $searchText) {
+            Text("自定检索")
+                .tag("")
+            ForEach(searchTerms, id: \.self) { term in
+                Text(term)
+                    .tag(term)
+            }
+        }
+    }
+    
+    @AppStorage("customSearchTerm") var term = ""
+    @State private var searchTerms: [String] = [String]()
+    func parseSearchTerms() {
+        let terms = term.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: "\n")
+        searchTerms = [String]()
+        for t in terms {
+            if t.isEmpty == false {
+                searchTerms.append(String(t))
+            }
+        }
+    }
+    
+    // MARK: 资料整理数据方面
     func addInfo() {
-        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", coverImage: nil, imageUrls: [String](), imgs: [IOImg](), des: "\n", star: false, webArchive: nil , createDate: Date.now, updateDate: Date.now)
+        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", coverImage: nil, imageUrls: [String](), imgs: [IOImg](), des: "", star: false, webArchive: nil , createDate: Date.now, updateDate: Date.now)
         for cate in cates {
             if cate.name == filterCate {
                 info.category = cate

@@ -25,17 +25,6 @@ struct SwiftPamphletAppApp: App {
     }
 }
 
-struct Demo: View {
-    var body: some View {
-        Group {
-//            PlayCanvas()
-        }
-        .frame(minWidth:300, maxWidth: .infinity, minHeight: 550, maxHeight: .infinity)
-        .onAppear {
-
-        }
-    }
-}
 
 
 

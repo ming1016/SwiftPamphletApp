@@ -135,12 +135,16 @@ struct EditInfoView: View {
                             .tabItem { Label("预览", systemImage: "circle") }
                             .tag(2)
                         if let url = URL(string: info.url) {
-                            WebUIViewWithSave(
-                                urlStr: url.absoluteString,
-                                savingDataTrigger: $savingDataTrigger,
-                                savingData: $info.webArchive,
-                                isStop: $isStopLoadingWeb
-                            )
+                            VStack {
+                                WebUIViewWithSave(
+                                    urlStr: url.absoluteString,
+                                    savingDataTrigger: $savingDataTrigger,
+                                    savingData: $info.webArchive,
+                                    isStop: $isStopLoadingWeb
+                                )
+                                TextField(text: $info.des, prompt: Text("输入文本进行记录"), axis: .vertical) {}
+                                    .padding(5)
+                            }
                                 .tabItem { Label("网页", systemImage: "circle") }
                                 .tag(4)
                         }

@@ -51,5 +51,11 @@ struct HomeView: View {
                 IntroView()
             }
         }
+        .task {
+            #if DEBUG
+            let sandboxDirectory = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+            print(sandboxDirectory.debugDescription)
+            #endif
+        }
     }
 }
