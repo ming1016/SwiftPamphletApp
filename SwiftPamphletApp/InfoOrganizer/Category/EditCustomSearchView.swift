@@ -12,7 +12,7 @@ struct EditCustomSearchView: View {
     
     var body: some View {
         VStack {
-            Text("自定义的搜索关键字，以换行作为间隔")
+            Text("自定检索，换行间隔，同行逗号间隔")
             TextEditor(text: $term)
                 .overlay {
                     Rectangle()

@@ -207,6 +207,13 @@ struct EditInfoView: View {
                                                                 Label("设为封面图", image: "doc.text.image")
                                                             }
                                                             Button {
+                                                                let p = NSPasteboard.general
+                                                                p.declareTypes([.string], owner: nil)
+                                                                p.setString(img.url, forType: .string)
+                                                            } label: {
+                                                                Label("复制图片链接", image: "circle")
+                                                            }
+                                                            Button {
                                                                 info.imgs?.remove(at: i)
                                                                 IOImg.delete(img)
                                                             } label: {
@@ -228,6 +235,13 @@ struct EditInfoView: View {
                                                     IOInfo.updateCoverImage(info: info, img: IOImg(url: img))
                                                 } label: {
                                                     Label("设为封面图", image: "doc.text.image")
+                                                }
+                                                Button {
+                                                    let p = NSPasteboard.general
+                                                    p.declareTypes([.string], owner: nil)
+                                                    p.setString(img, forType: .string)
+                                                } label: {
+                                                    Label("复制图片链接", image: "circle")
                                                 }
                                             }
                                         }

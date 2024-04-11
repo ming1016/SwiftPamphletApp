@@ -117,9 +117,18 @@ struct InfoListView: View {
         searchTerms = [String]()
         for t in terms {
             if t.isEmpty == false {
-                searchTerms.append(String(t))
-            }
-        }
+                let tWithoutWhitespaces = t.trimmingCharacters(in: .whitespaces)
+                if tWithoutWhitespaces.hasPrefix("//") { continue }
+                let ts = t.trimmingCharacters(in: .whitespaces).split(separator: ",")
+                if ts.count > 1 {
+                    for oneT in ts {
+                        searchTerms.append(String(oneT.trimmingCharacters(in: .whitespaces)))
+                    }
+                } else {
+                    searchTerms.append(String(tWithoutWhitespaces))
+                }
+            } // end if
+        } // end for
     }
     func customSearchLabel(_ string: String) -> String {
         let strs = string.split(separator: "/")

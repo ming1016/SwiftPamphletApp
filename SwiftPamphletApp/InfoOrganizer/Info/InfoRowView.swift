@@ -35,8 +35,14 @@ struct InfoRowView: View {
                     }
                     
                 }
-                Text(info.name)
-                    .fixedSize(horizontal: false, vertical: true)
+                VStack(alignment: .leading) {
+                    Text(info.name)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(shortDes())
+                        .fixedSize(horizontal: false, vertical: true)
+                        .font(.footnote)
+                        .foregroundColor(light: .secondary, dark: .secondary)
+                }
             }
             
             
@@ -80,6 +86,14 @@ struct InfoRowView: View {
                 IOInfo.delete(info)
             }
         }
+    }
+    
+    func shortDes() -> String {
+        let shortDes = info.des.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: "\n")
+        if let re = shortDes.first {
+            return String(re)
+        }
+        return ""
     }
     
 }
