@@ -262,7 +262,6 @@ struct EditInfoView: View {
                 Button("关闭", systemImage: "sidebar.right") {
                     isShowInspector.toggle()
                 }
-                
             }
             Spacer()
         } // end VStack

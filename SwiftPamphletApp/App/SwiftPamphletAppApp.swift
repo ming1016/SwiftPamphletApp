@@ -11,7 +11,6 @@ import SwiftData
 
 @main
 struct SwiftPamphletAppApp: App {
-
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
@@ -24,9 +23,6 @@ struct SwiftPamphletAppApp: App {
         }
     }
 }
-
-
-
 
 // MARK: - UnCat
 protocol Jsonable : Identifiable, Decodable, Hashable {}

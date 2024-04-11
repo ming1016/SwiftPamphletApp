@@ -74,6 +74,9 @@ struct DataLink: Identifiable {
 
 extension DataLink {
     static var dataLinks = [
+        DataLink(title: "Github", imageName: "", children: [
+            DataLink(title: "开发/仓库", imageName: "p5"),
+        ]),
         DataLink(title: "资料", imageName: "", children: [
             DataLink(title: "资料整理", imageName: "p11")
         ]),
@@ -86,9 +89,6 @@ extension DataLink {
             DataLink(title: "SwiftUI", imageName: "p3"),
             DataLink(title: "Combine", imageName: "p19"),
             DataLink(title: "Concurrency", imageName: "p1")
-        ]),
-        DataLink(title: "Github", imageName: "", children: [
-            DataLink(title: "开发/仓库", imageName: "p5"),
-        ]),
+        ])
     ]
 }

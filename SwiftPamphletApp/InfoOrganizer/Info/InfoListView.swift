@@ -102,6 +102,7 @@ struct InfoListView: View {
         Picker("自定检索", selection: $searchText) {
             Text("自定检索")
                 .tag("")
+            Divider()
             ForEach(searchTerms, id: \.self) { term in
                 Text(customSearchLabel(term))
                     .tag(term)
@@ -129,7 +130,7 @@ struct InfoListView: View {
                     reStr.append("  ")
                 }
             } else {
-                for a in 1...(strs.count) {
+                for _ in 1...strs.count {
                     reStr.append("  ")
                 }
             }
