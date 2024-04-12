@@ -25,7 +25,7 @@ struct InfoListView: View {
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     Button("添加资料", systemImage: "plus", action: addInfo)
-                        .keyboardShortcut(KeyEquivalent("a"), modifiers: .option)
+                        .keyboardShortcut(KeyEquivalent("i"), modifiers: .command)
                 }
                 ToolbarItem(placement: .navigation) {
                     Picker("分类", selection: $filterCate) {

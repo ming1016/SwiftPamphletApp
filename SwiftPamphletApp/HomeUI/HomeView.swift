@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var selectedDataLinkString: String?
+    @State private var selectedDataLinkString: String = ""
     @State private var selectInfo: IOInfo? = nil
     @State private var selectDev: DeveloperModel? = nil
+    @AppStorage("selectedDataLinkString") var sdLinkStr: String = ""
+    
+    @AppStorage("isFirstRun") var isFirstRun = true
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         NavigationSplitView {
@@ -19,9 +23,9 @@ struct HomeView: View {
                 selectInfo: $selectInfo
             )
         } content: {
-            if let link = selectedDataLinkString {
+            if !selectedDataLinkString.isEmpty {
                 DataLink.viewToShow(
-                    for: link,
+                    for: selectedDataLinkString,
                     selectInfo: $selectInfo,
                     selectDev: $selectDev,
                     selectInfoBindable: selectInfo,
@@ -38,9 +42,9 @@ struct HomeView: View {
             }
         } detail: {
             
-            if let link = selectedDataLinkString {
+            if !selectedDataLinkString.isEmpty {
                 DataLink.viewToShow(
-                    for: link,
+                    for: selectedDataLinkString,
                     selectInfo: $selectInfo,
                     selectDev: $selectDev,
                     selectInfoBindable: selectInfo,
@@ -51,6 +55,20 @@ struct HomeView: View {
                 IntroView()
             }
         }
+        .onAppear(perform: {
+            if isFirstRun {
+                isFirstRun = false
+                // 第一次运行需要处理的
+            }
+            selectedDataLinkString = sdLinkStr
+        })
+        .onChange(of: selectedDataLinkString, {
+            sdLinkStr = selectedDataLinkString
+        })
+        .onChange(of: scenePhase, {
+            guard scenePhase == .active else { return } // 只处理 active 状态
+            debugPrint("active")
+        })
         .task {
             #if DEBUG
             let sandboxDirectory = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!

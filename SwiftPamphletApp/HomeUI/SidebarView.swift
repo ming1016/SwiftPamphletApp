@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SidebarView: View {
-    @Binding var selectedDataLinkString: String?
+    @Binding var selectedDataLinkString: String
     
     @Binding var selectInfo: IOInfo?
     

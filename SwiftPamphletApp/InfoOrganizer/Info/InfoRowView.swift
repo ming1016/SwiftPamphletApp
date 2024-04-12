@@ -18,33 +18,32 @@ struct InfoRowView: View {
     
     var body: some View {
         VStack(alignment:.leading) {
-
-            
-            HStack(alignment:.top) {
-                if let coverImg = info.coverImage {
-                    if coverImg.url.isEmpty == false {
-                        NukeImage(width: 60, height: 60, url: coverImg.url, contentModel: .fill)
-                    } else if let imgData = coverImg.imgData {
-                        if let nsImage = NSImage(data: imgData) {
-                            Image(nsImage: nsImage)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 60, height: 60)
-                                .cornerRadius(5)
+            if let coverImg = info.coverImage {
+                ZStack {
+                    Rectangle()
+                        .fill(Color.clear)
+                        .frame(height: 80)
+                    GeometryReader { geometry in
+                        if coverImg.url.isEmpty == false {
+                            NukeImage(width: geometry.size.width, height: geometry.size.height, url: coverImg.url, contentModel: .fill)
+                        } else if let imgData = coverImg.imgData {
+                            if let nsImage = NSImage(data: imgData) {
+                                Image(nsImage: nsImage)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: geometry.size.width, height: geometry.size.height)
+                                    .cornerRadius(5)
+                            }
                         }
                     }
-                    
-                }
-                VStack(alignment: .leading) {
-                    Text(info.name)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text(shortDes())
-                        .fixedSize(horizontal: false, vertical: true)
-                        .font(.footnote)
-                        .foregroundColor(light: .secondary, dark: .secondary)
                 }
             }
-            
+            Text(info.name)
+                .fixedSize(horizontal: false, vertical: true)
+            Text(shortDes())
+                .fixedSize(horizontal: false, vertical: true)
+                .font(.footnote)
+                .foregroundColor(light: .secondary, dark: .secondary)
             
             HStack(alignment: .center) {
                 if info.category != nil {
@@ -66,7 +65,6 @@ struct InfoRowView: View {
                 }
                 Text(howLongAgo(date: info.updateDate))
 //                Text(info.updateDate, style: .relative)
-                    
                 
             }
             .foregroundColor(light: .secondary, dark: .secondary)
@@ -89,7 +87,7 @@ struct InfoRowView: View {
     }
     
     func shortDes() -> String {
-        let shortDes = info.des.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: "\n")
+        let shortDes = info.des.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines)
         if let re = shortDes.first {
             return String(re)
         }

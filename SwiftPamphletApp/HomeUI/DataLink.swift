@@ -35,7 +35,7 @@ struct DataLink: Identifiable {
                 if let info = selectInfoBindable {
                     EditInfoView(info: info)
                 } else {
-                    EmptyView()
+                    IntroView()
                 }
             }
         case "开发/仓库":
@@ -50,25 +50,60 @@ struct DataLink: Identifiable {
                         Text("请在设置里写上 Github 的 access token")
                     }
                 } else {
-                    EmptyView()
+                    IntroView()
                 }
             }
         case "语法速查":
-            IssuesListFromCustomView(vm: IssueVM(guideName: "guide-syntax"))
+            switch type {
+            case .content:
+                IssuesListFromCustomView(vm: IssueVM(guideName: "guide-syntax"))
+            case .detail:
+                IntroView()
+            }
         case "特性":
-            IssuesListFromCustomView(vm: IssueVM(guideName:"guide-features"))
+            switch type {
+            case .content:
+                IssuesListFromCustomView(vm: IssueVM(guideName:"guide-features"))
+            case .detail:
+                IntroView()
+            }
         case "专题":
-            IssuesListFromCustomView(vm: IssueVM(guideName:"guide-subject"))
+            switch type {
+            case .content:
+                IssuesListFromCustomView(vm: IssueVM(guideName:"guide-subject"))
+            case .detail:
+                IntroView()
+            }
         case "SwiftUI":
-            IssuesListFromCustomView(vm: IssueVM(guideName:"lib-SwiftUI"))
+            switch type {
+            case .content:
+                IssuesListFromCustomView(vm: IssueVM(guideName:"lib-SwiftUI"))
+            case .detail:
+                IntroView()
+            }
         case "Combine":
-            IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Combine"))
+            switch type {
+            case .content:
+                IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Combine"))
+            case .detail:
+                IntroView()
+            }
         case "Concurrency":
-            IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Concurrency"))
+            switch type {
+            case .content:
+                IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Concurrency"))
+            case .detail:
+                IntroView()
+            }
         default:
-            // 默认是语法速查
-            IssuesListFromCustomView(vm: IssueVM(guideName: "guide-syntax"))
-        }
+            switch type {
+            case .content:
+                // 默认是语法速查
+                IssuesListFromCustomView(vm: IssueVM(guideName: "guide-syntax"))
+            case .detail:
+                IntroView()
+            }
+        } // end switch
     }
 }
 
