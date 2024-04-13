@@ -25,7 +25,7 @@ struct SettingView: View {
     }
     
     // MARK: custom search
-    @AppStorage("customSearchTerm") var term = ""
+    @AppStorage(SPC.customSearchTerm) var term = ""
     @ViewBuilder
     func customSearch() -> some View {
         VStack {

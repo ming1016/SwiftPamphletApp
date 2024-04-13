@@ -17,12 +17,16 @@ struct EditInfoView: View {
     
     @Query(IOCategory.all) var categories: [IOCategory]
     
+    @State private var showSheet = false
+    
     // Inspector
     @State var isShowInspector = false
     enum InspectorType {
         case category, customSearch
     }
     @State var inspectorType: InspectorType = .category
+    @AppStorage(SPC.isShowInspector) var asIsShowInspector: Bool = false
+    @AppStorage(SPC.inspectorType) var asInspectorType: Int = 0
     
     // Tab
     @State var selectedTab = 1
@@ -30,7 +34,7 @@ struct EditInfoView: View {
     @State var isStopLoadingWeb = false
     // webarchive
     @State var savingDataTrigger = false
-
+    
     // 图集
     @State var selectedPhotos = [PhotosPickerItem]()
     @State var addWebImageUrl = ""
@@ -119,8 +123,35 @@ struct EditInfoView: View {
                             info.category?.updateDate = Date.now
                         })
                         Button("管理分类", action: manageCate)
+                        Button("自定检索") {
+                            showSheet = true
+                        }
+                        .help("command + s")
+                        .sheet(isPresented: $showSheet, content: {
+                            ScrollView(.vertical) {
+                                ForEach(parseSearchTerms(), id: \.self) { term in
+                                    HStack {
+                                        ForEach(term, id: \.self) { oneTerm in
+                                            if oneTerm.description.hasPrefix("《") {
+                                                Text(oneTerm)
+                                                    .bold()
+                                            } else {
+                                                Button(oneTerm) {
+                                                    showSheet = false
+                                                    info.des = oneTerm + "\n" + info.des
+                                                }
+                                            }
+                                        }
+                                        Spacer()
+                                    }
+                                    .padding(.leading, 1)
+                                }
+                            }
+                            .padding(20)
+                        })
+                        .keyboardShortcut(KeyEquivalent("s"), modifiers: .command)
+
                         Button("管理自定检索", action: manageCustomSearch)
-                        
                     }
                 }
                 // MARK: Tab 切换
@@ -277,10 +308,58 @@ struct EditInfoView: View {
                     isShowInspector.toggle()
                 }
             }
+            .onAppear(perform: {
+                _ = parseSearchTerms()
+                // AppStorage
+                if asInspectorType == 0 {
+                    inspectorType = .category
+                } else if asInspectorType == 1 {
+                    inspectorType = .customSearch
+                }
+                isShowInspector = asIsShowInspector
+            })
+            .onChange(of: term) { oldValue, newValue in
+                _ = parseSearchTerms()
+            }
+            .onChange(of: isShowInspector) { oldValue, newValue in
+                asIsShowInspector = newValue
+            }
+            .onChange(of: inspectorType) { oldValue, newValue in
+                if newValue == InspectorType.category {
+                    asInspectorType = 0
+                } else if newValue == InspectorType.customSearch {
+                    asInspectorType = 1
+                }
+            }
             Spacer()
         } // end VStack
     }
     
+    // MARK: 自定检索
+    @AppStorage(SPC.customSearchTerm) var term = ""
+    @State private var searchTerms: [[String]] = [[String]]()
+    func parseSearchTerms() -> [[String]] {
+        let terms = term.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: "\n")
+        var sterms = [[String]]()
+        for t in terms {
+            if t.isEmpty == false {
+                let tWithoutWhitespaces = t.trimmingCharacters(in: .whitespaces)
+                if tWithoutWhitespaces.hasPrefix("//") { continue }
+                let ts = t.trimmingCharacters(in: .whitespaces).split(separator: ",")
+                var lineTs = [String]()
+                if ts.count > 1 {
+                    for oneT in ts {
+                        lineTs.append(String(oneT.trimmingCharacters(in: .whitespaces)))
+                    }
+                } else {
+                    lineTs.append(String(tWithoutWhitespaces))
+                }
+                sterms.append(lineTs)
+            } // end if
+        } // end for
+        searchTerms = sterms
+        return sterms
+    }
     
     // MARK: 数据管理
     func tabSwitch() {

@@ -17,6 +17,13 @@ struct SPC {
     
     static let detailMinWidth: CGFloat = 550
     static let githubHost = "https://github.com/"
+    
+    // MARK: AppStorage
+    static let selectedDataLinkString = "selectedDataLinkString"
+    static let isFirstRun = "isFirstRun"
+    static let customSearchTerm = "customSearchTerm"
+    static let isShowInspector = "isShowInspector"
+    static let inspectorType = "inspectorType"
 
     static func loadCustomIssues(jsonFileName: String) -> [CustomIssuesModel] {
         let lc: [CustomIssuesModel] = loadBundleJSONFile(jsonFileName + ".json")

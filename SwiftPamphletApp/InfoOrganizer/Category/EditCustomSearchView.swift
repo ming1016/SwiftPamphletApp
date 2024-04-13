@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditCustomSearchView: View {
-    @AppStorage("customSearchTerm") var term = ""
+    @AppStorage(SPC.customSearchTerm) var term = ""
     
     var body: some View {
         VStack {

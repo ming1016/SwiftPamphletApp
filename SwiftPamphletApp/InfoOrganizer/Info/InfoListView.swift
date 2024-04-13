@@ -19,13 +19,16 @@ struct InfoListView: View {
     @State var limit: Int = 50
     @State var filterStar: Bool = false
     
+    @State private var showSheet = false
+    
     var body: some View {
         InfosView(filterCateName: filterCate, searchString: searchText, filterStar: filterStar, selectInfo: $selectInfo, sortOrder: sortOrder, limit: $limit)
             .navigationTitle("资料列表")
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     Button("添加资料", systemImage: "plus", action: addInfo)
-                        .keyboardShortcut(KeyEquivalent("i"), modifiers: .command)
+                        .help("command + =")
+                        .keyboardShortcut(KeyEquivalent("="), modifiers: .command)
                 }
                 ToolbarItem(placement: .navigation) {
                     Picker("分类", selection: $filterCate) {
@@ -88,10 +91,10 @@ struct InfoListView: View {
             }
             .searchable(text: $searchText)
             .onAppear {
-                parseSearchTerms()
+                _ = parseSearchTerms()
             }
             .onChange(of: term) { oldValue, newValue in
-                parseSearchTerms()
+                _ = parseSearchTerms()
             }
     }
     
@@ -99,36 +102,58 @@ struct InfoListView: View {
     // MARK: 自定义搜索
     @ViewBuilder
     func customSearchView() -> some View {
-        Picker("自定检索", selection: $searchText) {
-            Text("自定检索")
-                .tag("")
-            Divider()
-            ForEach(searchTerms, id: \.self) { term in
-                Text(customSearchLabel(term))
-                    .tag(term)
+        Button(action: {
+            showSheet = true
+        }, label: {
+            Image(systemName: "mail.and.text.magnifyingglass")
+        })
+        .sheet(isPresented: $showSheet, content: {
+            ScrollView(.vertical) {
+                ForEach(parseSearchTerms(), id: \.self) { term in
+                    HStack {
+                        ForEach(term, id: \.self) { oneTerm in
+                            if oneTerm.description.hasPrefix("《") {
+                                Text(oneTerm)
+                                    .bold()
+                            } else {
+                                Button(oneTerm) {
+                                    showSheet = false
+                                    searchText = oneTerm
+                                }
+                            }
+                        }
+                        Spacer()
+                    }
+                    .padding(.leading, 1)
+                }
             }
-        }
+            .padding(20)
+        })
     }
     
-    @AppStorage("customSearchTerm") var term = ""
-    @State private var searchTerms: [String] = [String]()
-    func parseSearchTerms() {
+    @AppStorage(SPC.customSearchTerm) var term = ""
+    @State private var searchTerms: [[String]] = [[String]]()
+    func parseSearchTerms() -> [[String]] {
         let terms = term.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: "\n")
-        searchTerms = [String]()
+        var sterms = [[String]]()
         for t in terms {
             if t.isEmpty == false {
                 let tWithoutWhitespaces = t.trimmingCharacters(in: .whitespaces)
                 if tWithoutWhitespaces.hasPrefix("//") { continue }
                 let ts = t.trimmingCharacters(in: .whitespaces).split(separator: ",")
+                var lineTs = [String]()
                 if ts.count > 1 {
                     for oneT in ts {
-                        searchTerms.append(String(oneT.trimmingCharacters(in: .whitespaces)))
+                        lineTs.append(String(oneT.trimmingCharacters(in: .whitespaces)))
                     }
                 } else {
-                    searchTerms.append(String(tWithoutWhitespaces))
+                    lineTs.append(String(tWithoutWhitespaces))
                 }
+                sterms.append(lineTs)
             } // end if
         } // end for
+        searchTerms = sterms
+        return sterms
     }
     func customSearchLabel(_ string: String) -> String {
         let strs = string.split(separator: "/")

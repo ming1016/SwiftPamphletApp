@@ -11,9 +11,9 @@ struct HomeView: View {
     @State private var selectedDataLinkString: String = ""
     @State private var selectInfo: IOInfo? = nil
     @State private var selectDev: DeveloperModel? = nil
-    @AppStorage("selectedDataLinkString") var sdLinkStr: String = ""
+    @AppStorage(SPC.selectedDataLinkString) var sdLinkStr: String = ""
     
-    @AppStorage("isFirstRun") var isFirstRun = true
+    @AppStorage(SPC.isFirstRun) var isFirstRun = true
     @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
