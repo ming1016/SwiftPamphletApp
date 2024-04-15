@@ -32,7 +32,7 @@ struct NukeImage: View {
             } else if state.isLoading == false {
                 ZStack {
                     Color.gray.opacity(0.2) // Placeholder
-                    Text(url)
+                    Text(url.prefix(100))
                         .font(.footnote)
                         .foregroundColor(light: .secondary, dark: .secondary)
                 }

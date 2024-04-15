@@ -39,7 +39,7 @@ struct CategoryRowView: View {
             Button {
                 IOCategory.pin(cate)
             } label: {
-                Label("置顶", systemImage: cate.pin == 1 ? "pin.slash.fill" : "pin.fill")
+                Label(cate.pin == 1 ? "取消置顶" : "置顶", systemImage: cate.pin == 1 ? "pin.slash.fill" : "pin.fill")
             }
             Button(role: .destructive) {
                 IOCategory.delete(cate)

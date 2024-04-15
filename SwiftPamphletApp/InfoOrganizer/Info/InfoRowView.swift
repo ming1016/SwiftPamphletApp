@@ -88,10 +88,14 @@ struct InfoRowView: View {
     
     func shortDes() -> String {
         let shortDes = info.des.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines)
-        if let re = shortDes.first {
-            return String(re)
+        var reStr = ""
+        if let first = shortDes.first {
+            reStr += first
         }
-        return ""
+        if shortDes.count > 1 {
+            reStr += "\n" + shortDes[1]
+        }
+        return reStr
     }
     
 }
