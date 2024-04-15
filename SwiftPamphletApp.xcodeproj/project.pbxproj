@@ -248,6 +248,7 @@
 		08F4BE6028609D8700733F12 /* PlayCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE5F28609D8600733F12 /* PlayCharts.swift */; };
 		08F4BE6228616DC100733F12 /* PlayWeatherKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */; };
 		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
+		08FEC00C2BCD6F5B0009B6A9 /* ViewComponentTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FEC00B2BCD6F5B0009B6A9 /* ViewComponentTextEditor.swift */; };
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
 		3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */; };
 		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
@@ -491,6 +492,7 @@
 		08F4BE5F28609D8600733F12 /* PlayCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCharts.swift; sourceTree = "<group>"; };
 		08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWeatherKit.swift; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
+		08FEC00B2BCD6F5B0009B6A9 /* ViewComponentTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentTextEditor.swift; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
 		3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperModel.swift; sourceTree = "<group>"; };
 		3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeveloper.swift; sourceTree = "<group>"; };
@@ -1131,6 +1133,7 @@
 				08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */,
 				08F14B432BBE2865005B46CC /* ViewComponentImage.swift */,
 				0805F4952BAAABEA0008BB52 /* ViewStyle.swift */,
+				08FEC00B2BCD6F5B0009B6A9 /* ViewComponentTextEditor.swift */,
 			);
 			path = ViewComponet;
 			sourceTree = "<group>";
@@ -1531,6 +1534,7 @@
 			files = (
 				08BE633727BF6CBC002BC6A8 /* PlayTextFieldView.swift in Sources */,
 				0871C61B2BA04D23000B620D /* CategoryRowView.swift in Sources */,
+				08FEC00C2BCD6F5B0009B6A9 /* ViewComponentTextEditor.swift in Sources */,
 				08522BF227D1D49B005FF059 /* PlayCanvas.swift in Sources */,
 				08BE634827C4B6A2002BC6A8 /* PlayStackView.swift in Sources */,
 				08BE636227C878EC002BC6A8 /* PlayLazyVStackAndLazyHStackView.swift in Sources */,

@@ -158,13 +158,18 @@ struct EditInfoView: View {
                 Section(footer: Text("文本支持 markdown 格式")) {
                     // TODO: markdown 获取图片链接，并能显示
                     TabView(selection: $selectedTab) {
-                        TextEditor(text: $info.des)
-                            .overlay(
-                                Rectangle()
-                                    .stroke(.secondary, lineWidth: 1)
-                                    .opacity(0.5)
-                              )
-                            .disableAutocorrection(true)
+//                        TextEditor(text: $info.des)
+//                            .overlay(
+//                                Rectangle()
+//                                    .stroke(.secondary, lineWidth: 1)
+//                                    .opacity(0.5)
+//                              )
+//                            .disableAutocorrection(true)
+                        MacEditorTextView(
+                            text: $info.des,
+                            isEditable: true,
+                            font: .systemFont(ofSize: 14, weight: .regular)
+                        )
                             .padding(10)
                             .tabItem { Label("文本", systemImage: "circle") }
                             .tag(1)

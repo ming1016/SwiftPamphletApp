@@ -51,8 +51,8 @@ struct InfosView: View {
                 }
             }
         }
-        .listStyle(.inset)
-        .alternatingRowBackgrounds()
+//        .listStyle(.inset)
+//        .alternatingRowBackgrounds()
     }
 }
 
