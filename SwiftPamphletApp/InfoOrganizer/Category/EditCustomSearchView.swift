@@ -14,13 +14,7 @@ struct EditCustomSearchView: View {
         VStack {
             Text("自定检索，换行间隔，同行逗号间隔")
             TextEditor(text: $term)
-                .overlay {
-                    Rectangle()
-                        .stroke(.secondary, lineWidth: 1)
-                        .opacity(0.5)
-                        .disableAutocorrection(true)
-                        
-                }
+                .te()
         }
         .padding(20)
     }

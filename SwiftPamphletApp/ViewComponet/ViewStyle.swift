@@ -7,6 +7,35 @@
 
 import SwiftUI
 
+struct TEModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .overlay(
+                Rectangle()
+                    .stroke(.secondary, lineWidth: 1)
+                    .opacity(0.5)
+              )
+            .disableAutocorrection(true)
+    }
+}
+extension View {
+    func te() -> some View {
+        modifier(TEModifier())
+    }
+}
+
+struct TFRoundedModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+    }
+}
+extension View {
+    func tfRounded() -> some View {
+        modifier(TFRoundedModifier())
+    }
+}
+
 struct SymbolToggleStyle: ToggleStyle {
 
     var systemImage: String = "checkmark"

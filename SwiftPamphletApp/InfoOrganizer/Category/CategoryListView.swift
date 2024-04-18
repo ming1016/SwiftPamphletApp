@@ -14,10 +14,6 @@ struct CategoryListView: View {
     @Query(IOCategory.allOrderByName) var cates: [IOCategory]
     @State var selectCate: IOCategory?
     
-    let linearGradient = LinearGradient(gradient: Gradient(colors: [Color.pink.opacity(0.8), Color.pink.opacity(0.01)]),
-                                        startPoint: .top,
-                                        endPoint: .bottom)
-    
     var body: some View {
         List(selection: $selectCate) {
             Section("编辑分类") {

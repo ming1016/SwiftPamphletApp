@@ -50,9 +50,7 @@ struct InfosView: View {
                     }
                 }
             }
-        }
-//        .listStyle(.inset)
-//        .alternatingRowBackgrounds()
-    }
+        } // end List
+    } // end body
 }
 
