@@ -43,11 +43,19 @@ struct InfoRowView: View {
             Text(shortDes())
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.footnote)
-                .foregroundColor(light: .secondary, dark: .secondary)
+                .foregroundColor(.secondary)
             
             HStack(alignment: .center) {
                 if info.category != nil {
                     Text(info.category?.name ?? "")
+                        .padding(4)
+//                        .background(.tertiary)
+//                        .clipShape(.rect(cornerRadius: 4))
+//                        .foregroundColor(.white)
+                        .overlay {
+                                RoundedRectangle(cornerRadius: 4)
+                                    .stroke(lineWidth: 1)
+                            }
                 }
                 
                 Spacer()
@@ -64,10 +72,8 @@ struct InfoRowView: View {
                     Image(systemName: "square.and.arrow.down.fill")
                 }
                 Text(howLongAgo(date: info.updateDate))
-//                Text(info.updateDate, style: .relative)
-                
+                    .foregroundColor(.secondary)
             }
-            .foregroundColor(light: .secondary, dark: .secondary)
             .font(.footnote)
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
         }

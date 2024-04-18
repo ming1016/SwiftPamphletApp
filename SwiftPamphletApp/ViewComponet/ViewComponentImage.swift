@@ -34,7 +34,7 @@ struct NukeImage: View {
                     Color.gray.opacity(0.2) // Placeholder
                     Text(url.prefix(100))
                         .font(.footnote)
-                        .foregroundColor(light: .secondary, dark: .secondary)
+                        .foregroundColor(.secondary)
                 }
             } else {
                 ProgressView()

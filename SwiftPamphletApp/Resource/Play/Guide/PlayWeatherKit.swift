@@ -123,7 +123,7 @@ struct PDayDetailsCell: View {
                 Image(systemName: day.symbolName)
                 HStack {
                     Text("\(Int(day.lowTemperature.value))")
-                        .foregroundColor(light: .secondary, dark: .secondary)
+                        .foregroundColor(.secondary)
                     Text("\(Int(day.highTemperature.value))°")
                         .bold()
                 }

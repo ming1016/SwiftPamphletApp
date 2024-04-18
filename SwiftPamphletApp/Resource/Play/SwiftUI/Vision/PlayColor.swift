@@ -14,7 +14,7 @@ struct PlayColor: View {
             
             VStack(spacing: 10) {
                 Text("这是一个适配了暗黑的文字颜色")
-                    .foregroundColor(light: .purple, dark: .pink)
+//                    .foregroundColor(light: .purple, dark: .pink)
                     .background(Color(nsColor: .quaternaryLabelColor)) // 使用以前 NSColor
                 
                 Text("自定义颜色")
@@ -48,8 +48,8 @@ struct PCColorModifier: ViewModifier {
     }
 }
 
-extension View {
-    func foregroundColor(light: Color, dark: Color) -> some View {
-        modifier(PCColorModifier(light: light, dark: dark))
-    }
-}
+//extension View {
+//    func foregroundColor(light: Color, dark: Color) -> some View {
+//        modifier(PCColorModifier(light: light, dark: dark))
+//    }
+//}

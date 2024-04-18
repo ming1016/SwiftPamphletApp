@@ -7,32 +7,29 @@
 
 import SwiftUI
 
-struct TEModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .overlay(
-                Rectangle()
-                    .stroke(.secondary, lineWidth: 1)
-                    .opacity(0.5)
-              )
-            .disableAutocorrection(true)
-    }
-}
-extension View {
-    func te() -> some View {
-        modifier(TEModifier())
+extension Text {
+    func gradientTitle(color: Color = .primary) -> some View {
+        font(.largeTitle)
+        .fontWeight(.bold)
+        .foregroundStyle(color.gradient)
+        .fontDesign(.rounded)
     }
 }
 
-struct TFRoundedModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .textFieldStyle(RoundedBorderTextFieldStyle())
+extension TextEditor {
+    func border() -> some View {
+        overlay(
+            Rectangle()
+                .stroke(.secondary, lineWidth: 1)
+                .opacity(0.5)
+          )
+        .disableAutocorrection(true)
     }
 }
-extension View {
-    func tfRounded() -> some View {
-        modifier(TFRoundedModifier())
+
+extension TextField {
+    func rounded() -> some View {
+        textFieldStyle(RoundedBorderTextFieldStyle())
     }
 }
 

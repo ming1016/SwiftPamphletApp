@@ -15,7 +15,8 @@ struct IntroView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 120)
-            Text("戴铭的开发小册子").bold().font(.largeTitle)
+            Text("戴铭的开发小册子").bold()
+            Text("Swift Pamphlet App").gradientTitle(color: .mint)
             HStack {
                 Text("一本活的开发手册")
                 Link("GitHub 地址", destination: URL(string: "https://github.com/ming1016/SwiftPamphletApp")!)

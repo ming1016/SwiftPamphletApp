@@ -15,8 +15,7 @@ struct EditCategoryView: View {
     var body: some View {
         VStack {
             HStack {
-                TextField("请填写新增的分类名", text: $cate)
-                    .tfRounded()
+                TextField("请填写新增的分类名", text: $cate).rounded()
                     .onSubmit {
                         add()
                     }

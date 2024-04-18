@@ -27,7 +27,7 @@ struct DeveloperListView: View {
                                 VStack(alignment:.leading) {
                                     Text(dev.repoOwner)
                                         .font(.footnote)
-                                        .foregroundColor(light: .secondary, dark: .secondary)
+                                        .foregroundColor(.secondary)
                                     Text(dev.repoName)
                                 }
                             }
@@ -35,12 +35,12 @@ struct DeveloperListView: View {
                             Spacer()
                             Text(howLongAgo(date: dev.updateDate))
                                 .font(.footnote)
-                                .foregroundColor(light: .secondary, dark: .secondary)
+                                .foregroundColor(.secondary)
                         }
                         HStack {
                             Text(dev.des)
                                 .font(.footnote)
-                                .foregroundColor(light: .secondary, dark: .secondary)
+                                .foregroundColor(.secondary)
                             Spacer()
                         }
                         Spacer()

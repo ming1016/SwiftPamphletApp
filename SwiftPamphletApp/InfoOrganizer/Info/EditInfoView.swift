@@ -44,8 +44,7 @@ struct EditInfoView: View {
             Form {
                 Section {
                     HStack {
-                        TextField("标题:", text: $info.name)
-                            .tfRounded()
+                        TextField("标题:", text: $info.name).rounded()
                         Toggle(isOn: $info.star) {
                             Image(systemName: info.star ? "star.fill" : "star")
                         }
@@ -58,24 +57,19 @@ struct EditInfoView: View {
                         })
                     }
                     HStack {
-                        TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://www.starming.com"))
-                            .tfRounded()
+                        TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://www.starming.com")).rounded()
                             .onSubmit {
                                 Task {
-                                    // MARK: 获取 Web 内容
-                                    info.name = "获取标题中......"
-                                    let re = await fetchTitleFromUrl(urlString:info.url)
-                                    DispatchQueue.main.async {
-                                        if re.title.isEmpty == false {
-                                            info.name = re.title
-                                            if re.imageUrl.isEmpty == false {
-                                                IOInfo.updateCoverImage(info: info, img: IOImg(url: re.imageUrl))
-                                            }
-                                            info.imageUrls = re.imageUrls
-                                        }
-                                    }
-                                } // end Task
+                                    await urlSubmit()
+                                }
                             }
+                        Button {
+                            Task {
+                                await urlSubmit()
+                            }
+                        } label: {
+                            Text("解析")
+                        }
                         if info.url.isEmpty == false {
                             Button {
                                 gotoWebBrowser(urlStr: info.url)
@@ -158,8 +152,7 @@ struct EditInfoView: View {
                 Section(footer: Text("文本支持 markdown 格式")) {
                     // TODO: markdown 获取图片链接，并能显示
                     TabView(selection: $selectedTab) {
-                        TextEditor(text: $info.des)
-                            .te()
+                        TextEditor(text: $info.des).border()
                             .padding(10)
                             .tabItem { Label("文本", systemImage: "circle") }
                             .tag(1)
@@ -188,8 +181,7 @@ struct EditInfoView: View {
                                 .onChange(of: selectedPhotos) { oldValue, newValue in
                                     convertDataToImage()
                                 }
-                                TextField("添加图片 url:", text: $addWebImageUrl)
-                                    .tfRounded()
+                                TextField("添加图片 url:", text: $addWebImageUrl).rounded()
                                     .onSubmit {
                                         if let webImageUrl = URL(string: addWebImageUrl) {
                                             info.imgs?.append(IOImg(url: webImageUrl.absoluteString))
@@ -328,6 +320,23 @@ struct EditInfoView: View {
             }
             Spacer()
         } // end VStack
+    }
+    
+    // MARK: 地址提交
+    func urlSubmit() async {
+        
+        // MARK: 获取 Web 内容
+        info.name = "获取标题中......"
+        let re = await fetchTitleFromUrl(urlString:info.url)
+        DispatchQueue.main.async {
+            if re.title.isEmpty == false {
+                info.name = re.title
+                if re.imageUrl.isEmpty == false {
+                    IOInfo.updateCoverImage(info: info, img: IOImg(url: re.imageUrl))
+                }
+                info.imageUrls = re.imageUrls
+            }
+        }
     }
     
     // MARK: 自定检索
