@@ -75,5 +75,8 @@ struct HomeView: View {
             print(sandboxDirectory.debugDescription)
             #endif
         }
+        .onOpenURL(perform: { url in
+            // 处理外部链接
+        })
     }
 }
