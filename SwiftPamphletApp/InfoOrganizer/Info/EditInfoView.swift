@@ -43,233 +43,20 @@ struct EditInfoView: View {
         VStack {
             Form {
                 Section {
-                    HStack {
-                        TextField("标题:", text: $info.name).rounded()
-                        Toggle(isOn: $info.star) {
-                            Image(systemName: info.star ? "star.fill" : "star")
-                        }
-                        .toggleStyle(.button)
-                        
-                        Button(action: {
-                            info.updateDate = Date.now
-                        }, label: {
-                            Image(systemName: "arrow.up.square")
-                        })
-                    }
-                    HStack {
-                        TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://www.starming.com")).rounded()
-                            .onSubmit {
-                                Task {
-                                    await urlSubmit()
-                                }
-                            }
-                        Button {
-                            Task {
-                                await urlSubmit()
-                            }
-                        } label: {
-                            Text("解析")
-                        }
-                        if info.url.isEmpty == false {
-                            Button {
-                                gotoWebBrowser(urlStr: info.url)
-                            } label: {
-                                Image(systemName: "safari")
-                            }
-                            // 本地存
-                            Button {
-                                if info.webArchive == nil {
-                                    savingDataTrigger = true
-                                } else {
-                                    info.webArchive = nil
-                                }
-                            } label: {
-                                if info.webArchive == nil {
-                                    Image(systemName: "square.and.arrow.down")
-                                } else {
-                                    Image(systemName: "square.and.arrow.down.fill")
-                                }
-                            }
-                        } // end if
-                    }
+                    titleInputView()
+                    urlInputView()
                 } // end Section
                 
                 Section {
-                    
-                    HStack {
-                        Picker("分类:", selection: $info.category) {
-                            Text("未分类")
-                                .tag(Optional<IOCategory>.none)
-                            if categories.isEmpty == false {
-                                Divider()
-                                ForEach(categories) { cate in
-                                    HStack {
-                                        if cate.pin == 1 {
-                                            Image(systemName: "pin.fill")
-                                        }
-                                        Text(cate.name)
-                                    }
-                                    .tag(Optional(cate))
-                                }
-                            }
-                        }
-                        .onHover(perform: { hovering in
-                            info.category?.updateDate = Date.now
-                        })
-                        Button("管理分类", action: manageCate)
-                        Button("自定检索") {
-                            showSheet = true
-                        }
-                        .help("command + s")
-                        .sheet(isPresented: $showSheet, content: {
-                            ScrollView(.vertical) {
-                                ForEach(parseSearchTerms(), id: \.self) { term in
-                                    HStack {
-                                        ForEach(term, id: \.self) { oneTerm in
-                                            if oneTerm.description.hasPrefix("《") {
-                                                Text(oneTerm)
-                                                    .bold()
-                                            } else {
-                                                Button(oneTerm) {
-                                                    showSheet = false
-                                                    info.des = oneTerm + "\n" + info.des
-                                                }
-                                            }
-                                        }
-                                        Spacer()
-                                    }
-                                    .padding(.leading, 1)
-                                }
-                            }
-                            .padding(20)
-                        })
-                        .keyboardShortcut(KeyEquivalent("s"), modifiers: .command)
-
-                        Button("管理自定检索", action: manageCustomSearch)
-                    }
+                    categoryInputView()
                 }
                 // MARK: Tab 切换
                 Section(footer: Text("文本支持 markdown 格式")) {
                     // TODO: markdown 获取图片链接，并能显示
                     TabView(selection: $selectedTab) {
-                        TextEditor(text: $info.des).border()
-                            .padding(10)
-                            .tabItem { Label("文本", systemImage: "circle") }
-                            .tag(1)
-                        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
-                            .tabItem { Label("预览", systemImage: "circle") }
-                            .tag(2)
-                        if let url = URL(string: info.url) {
-                            VStack {
-                                WebUIViewWithSave(
-                                    urlStr: url.absoluteString,
-                                    savingDataTrigger: $savingDataTrigger,
-                                    savingData: $info.webArchive,
-                                    isStop: $isStopLoadingWeb
-                                )
-                                TextField(text: $info.des, prompt: Text("输入文本进行记录"), axis: .vertical) {}
-                                    .padding(5)
-                            }
-                                .tabItem { Label("网页", systemImage: "circle") }
-                                .tag(4)
-                        }
-                        VStack {
-                            HStack {
-                                PhotosPicker(selection: $selectedPhotos, matching: .not(.videos)) {
-                                    Label("选择照片图片", systemImage: "photo.on.rectangle.angled")
-                                }
-                                .onChange(of: selectedPhotos) { oldValue, newValue in
-                                    convertDataToImage()
-                                }
-                                TextField("添加图片 url:", text: $addWebImageUrl).rounded()
-                                    .onSubmit {
-                                        if let webImageUrl = URL(string: addWebImageUrl) {
-                                            info.imgs?.append(IOImg(url: webImageUrl.absoluteString))
-                                            addWebImageUrl = ""
-                                        }
-                                    }
-                            }
-                            ScrollView {
-                                if let infoImgs = info.imgs {
-                                    if infoImgs.count > 0 {
-                                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150),spacing: 10)]) {
-                                            ForEach(Array(infoImgs.enumerated()), id:\.0) {i, img in
-                                                VStack {
-                                                    if let data = img.imgData {
-                                                        if let nsImg = NSImage(data: data) {
-                                                            Image(nsImage: nsImg)
-                                                                .resizable()
-                                                                .scaledToFit()
-                                                                .cornerRadius(5)
-                                                                .contextMenu {
-                                                                    Button {
-                                                                        IOInfo.updateCoverImage(info: info, img: img)
-                                                                    } label: {
-                                                                        Label("设为封面图", image: "doc.text.image")
-                                                                    }
-                                                                    Button {
-                                                                        info.imgs?.remove(at: i)
-                                                                        IOImg.delete(img)
-                                                                    } label: {
-                                                                        Label("删除", image: "circle")
-                                                                    }
-
-                                                                }
-                                                        }
-                                                    } else if img.url.isEmpty == false {
-                                                        NukeImage(url: img.url)
-                                                        .contextMenu {
-                                                            Button {
-                                                                IOInfo.updateCoverImage(info: info, img: IOImg(url: img.url))
-                                                            } label: {
-                                                                Label("设为封面图", image: "doc.text.image")
-                                                            }
-                                                            Button {
-                                                                let p = NSPasteboard.general
-                                                                p.declareTypes([.string], owner: nil)
-                                                                p.setString(img.url, forType: .string)
-                                                            } label: {
-                                                                Label("复制图片链接", image: "circle")
-                                                            }
-                                                            Button {
-                                                                info.imgs?.remove(at: i)
-                                                                IOImg.delete(img)
-                                                            } label: {
-                                                                Label("删除", image: "circle")
-                                                            }
-                                                        }
-                                                    }
-                                                } // end VStack
-                                            } // end ForEach
-                                        } // end LazyVGrid
-                                    }
-                                } // end if let
-                                if info.imageUrls.isEmpty == false {
-                                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)]) {
-                                        ForEach(info.imageUrls, id:\.self) { img in
-                                            NukeImage(url: img)
-                                            .contextMenu {
-                                                Button {
-                                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: img))
-                                                } label: {
-                                                    Label("设为封面图", image: "doc.text.image")
-                                                }
-                                                Button {
-                                                    let p = NSPasteboard.general
-                                                    p.declareTypes([.string], owner: nil)
-                                                    p.setString(img, forType: .string)
-                                                } label: {
-                                                    Label("复制图片链接", image: "circle")
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .padding(10)
-                        .tabItem { Label("图集", systemImage: "circle")}
-                        .tag(5)
+                        textAndPreviewView()
+                        webViewView()
+                        imagePickAndShowView()
                     }
                     .onChange(of: info.url) { oldValue, newValue in
                         tabSwitch()
@@ -322,22 +109,261 @@ struct EditInfoView: View {
         } // end VStack
     }
     
-    // MARK: 地址提交
-    func urlSubmit() async {
-        
-        // MARK: 获取 Web 内容
-        info.name = "获取标题中......"
-        let re = await fetchTitleFromUrl(urlString:info.url)
-        DispatchQueue.main.async {
-            if re.title.isEmpty == false {
-                info.name = re.title
-                if re.imageUrl.isEmpty == false {
-                    IOInfo.updateCoverImage(info: info, img: IOImg(url: re.imageUrl))
+    // MARK: Image
+    @MainActor
+    @ViewBuilder
+    func imagePickAndShowView() -> some View {
+        VStack {
+            HStack {
+                PhotosPicker(selection: $selectedPhotos, matching: .not(.videos)) {
+                    Label("选择照片图片", systemImage: "photo.on.rectangle.angled")
                 }
-                info.imageUrls = re.imageUrls
+                .onChange(of: selectedPhotos) { oldValue, newValue in
+                    convertDataToImage()
+                }
+                TextField("添加图片 url:", text: $addWebImageUrl).rounded()
+                    .onSubmit {
+                        if let webImageUrl = URL(string: addWebImageUrl) {
+                            info.imgs?.append(IOImg(url: webImageUrl.absoluteString))
+                            addWebImageUrl = ""
+                        }
+                    }
+            }
+            ScrollView {
+                if let infoImgs = info.imgs {
+                    if infoImgs.count > 0 {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150),spacing: 10)]) {
+                            ForEach(Array(infoImgs.enumerated()), id:\.0) {i, img in
+                                VStack {
+                                    if let data = img.imgData {
+                                        if let nsImg = NSImage(data: data) {
+                                            Image(nsImage: nsImg)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .cornerRadius(5)
+                                                .contextMenu {
+                                                    Button {
+                                                        IOInfo.updateCoverImage(info: info, img: img)
+                                                    } label: {
+                                                        Label("设为封面图", image: "doc.text.image")
+                                                    }
+                                                    Button {
+                                                        info.imgs?.remove(at: i)
+                                                        IOImg.delete(img)
+                                                    } label: {
+                                                        Label("删除", image: "circle")
+                                                    }
+
+                                                }
+                                        }
+                                    } else if img.url.isEmpty == false {
+                                        NukeImage(url: img.url)
+                                        .contextMenu {
+                                            Button {
+                                                IOInfo.updateCoverImage(info: info, img: IOImg(url: img.url))
+                                            } label: {
+                                                Label("设为封面图", image: "doc.text.image")
+                                            }
+                                            Button {
+                                                let p = NSPasteboard.general
+                                                p.declareTypes([.string], owner: nil)
+                                                p.setString(img.url, forType: .string)
+                                            } label: {
+                                                Label("复制图片链接", image: "circle")
+                                            }
+                                            Button {
+                                                info.imgs?.remove(at: i)
+                                                IOImg.delete(img)
+                                            } label: {
+                                                Label("删除", image: "circle")
+                                            }
+                                        }
+                                    }
+                                } // end VStack
+                            } // end ForEach
+                        } // end LazyVGrid
+                    }
+                } // end if let
+                if info.imageUrls.isEmpty == false {
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)]) {
+                        ForEach(info.imageUrls, id:\.self) { img in
+                            NukeImage(url: img)
+                            .contextMenu {
+                                Button {
+                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: img))
+                                } label: {
+                                    Label("设为封面图", image: "doc.text.image")
+                                }
+                                Button {
+                                    let p = NSPasteboard.general
+                                    p.declareTypes([.string], owner: nil)
+                                    p.setString(img, forType: .string)
+                                } label: {
+                                    Label("复制图片链接", image: "circle")
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
+        .padding(10)
+        .tabItem { Label("图集", systemImage: "circle")}
+        .tag(5)
     }
+    
+    // MARK: WebView
+    @ViewBuilder
+    func webViewView() -> some View {
+        if let url = URL(string: info.url) {
+            VStack {
+                WebUIViewWithSave(
+                    urlStr: url.absoluteString,
+                    savingDataTrigger: $savingDataTrigger,
+                    savingData: $info.webArchive,
+                    isStop: $isStopLoadingWeb
+                )
+                TextField(text: $info.des, prompt: Text("输入文本进行记录"), axis: .vertical) {}
+                    .padding(5)
+            }
+                .tabItem { Label("网页", systemImage: "circle") }
+                .tag(4)
+        }
+    }
+    
+    // MARK: Text And Preview
+    @ViewBuilder
+    func textAndPreviewView() -> some View {
+        TextEditor(text: $info.des).border()
+            .padding(10)
+            .tabItem { Label("文本", systemImage: "circle") }
+            .tag(1)
+        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
+            .tabItem { Label("预览", systemImage: "circle") }
+            .tag(2)
+    }
+    
+    
+    
+    // MARK: Category
+    @ViewBuilder
+    func categoryInputView() -> some View {
+        HStack {
+            Picker("分类:", selection: $info.category) {
+                Text("未分类")
+                    .tag(Optional<IOCategory>.none)
+                if categories.isEmpty == false {
+                    Divider()
+                    ForEach(categories) { cate in
+                        HStack {
+                            if cate.pin == 1 {
+                                Image(systemName: "pin.fill")
+                            }
+                            Text(cate.name)
+                        }
+                        .tag(Optional(cate))
+                    }
+                }
+            }
+            .onHover(perform: { hovering in
+                info.category?.updateDate = Date.now
+            })
+            Button("管理分类", action: manageCate)
+            Button("自定检索") {
+                showSheet = true
+            }
+            .help("command + s")
+            .sheet(isPresented: $showSheet, content: {
+                ScrollView(.vertical) {
+                    ForEach(parseSearchTerms(), id: \.self) { term in
+                        HStack {
+                            ForEach(term, id: \.self) { oneTerm in
+                                if oneTerm.description.hasPrefix("《") {
+                                    Text(oneTerm)
+                                        .bold()
+                                } else {
+                                    Button(oneTerm) {
+                                        showSheet = false
+                                        info.des = oneTerm + "\n" + info.des
+                                    }
+                                }
+                            }
+                            Spacer()
+                        }
+                        .padding(.leading, 1)
+                    }
+                }
+                .padding(20)
+            })
+            .keyboardShortcut(KeyEquivalent("s"), modifiers: .command)
+
+            Button("管理自定检索", action: manageCustomSearch)
+        }
+    }
+    
+    // MARK: URL
+    @ViewBuilder
+    func urlInputView() -> some View {
+        HStack {
+            TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://www.starming.com")).rounded()
+                .onSubmit {
+                    Task {
+                        // MARK: 获取 Web 内容
+                        info.name = "获取标题中......"
+                        let re = await fetchTitleFromUrl(urlString:info.url)
+                        DispatchQueue.main.async {
+                            if re.title.isEmpty == false {
+                                info.name = re.title
+                                if re.imageUrl.isEmpty == false {
+                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: re.imageUrl))
+                                }
+                                info.imageUrls = re.imageUrls
+                            }
+                        }
+                    }
+                }
+            if info.url.isEmpty == false {
+                Button {
+                    gotoWebBrowser(urlStr: info.url)
+                } label: {
+                    Image(systemName: "safari")
+                }
+                // 本地存
+                Button {
+                    if info.webArchive == nil {
+                        savingDataTrigger = true
+                    } else {
+                        info.webArchive = nil
+                    }
+                } label: {
+                    if info.webArchive == nil {
+                        Image(systemName: "square.and.arrow.down")
+                    } else {
+                        Image(systemName: "square.and.arrow.down.fill")
+                    }
+                }
+            } // end if
+        }
+    }
+    
+    // MARK: 标题
+    @ViewBuilder
+    func titleInputView() -> some View {
+        HStack {
+            TextField("标题:", text: $info.name).rounded()
+            Toggle(isOn: $info.star) {
+                Image(systemName: info.star ? "star.fill" : "star")
+            }
+            .toggleStyle(.button)
+            
+            Button(action: {
+                info.updateDate = Date.now
+            }, label: {
+                Image(systemName: "arrow.up.square")
+            })
+        }
+    }
+
     
     // MARK: 自定检索
     @AppStorage(SPC.customSearchTerm) var term = ""

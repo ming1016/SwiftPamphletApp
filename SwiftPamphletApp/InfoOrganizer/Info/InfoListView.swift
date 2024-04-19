@@ -61,13 +61,20 @@ struct InfoListView: View {
                     }
                 }
                 ToolbarItem(placement: .navigation) {
-                    Menu("Sort", systemImage: "arrow.up.arrow.down.square") {
+                    Menu("More", systemImage: "ellipsis.rectangle") {
                         Picker("排序", selection: $sortOrder) {
                             Text("正序")
                                 .tag([SortDescriptor(\IOInfo.updateDate)])
                             Text("倒序")
                                 .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
                         }
+                        Button {
+                            searchText = ""
+                            filterCate = ""
+                        } label: {
+                            Text("检索重置")
+                        }
+                        .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
                     }
                 }
                 ToolbarItem(placement: .primaryAction) {
@@ -108,6 +115,8 @@ struct InfoListView: View {
             Image(systemName: "mail.and.text.magnifyingglass")
         })
         .sheet(isPresented: $showSheet, content: {
+            Text("选择一个检索词")
+                .font(.title).bold().padding(10)
             ScrollView(.vertical) {
                 ForEach(parseSearchTerms(), id: \.self) { term in
                     HStack {
@@ -129,6 +138,7 @@ struct InfoListView: View {
             }
             .padding(20)
         })
+        .keyboardShortcut(KeyEquivalent("p"), modifiers: .command)
     }
     
     @AppStorage(SPC.customSearchTerm) var term = ""

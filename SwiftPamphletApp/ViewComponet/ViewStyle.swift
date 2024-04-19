@@ -9,27 +9,30 @@ import SwiftUI
 
 extension Text {
     func gradientTitle(color: Color = .primary) -> some View {
-        font(.largeTitle)
-        .fontWeight(.bold)
-        .foregroundStyle(color.gradient)
-        .fontDesign(.rounded)
+        self
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .foregroundStyle(color.gradient)
+            .fontDesign(.rounded)
     }
 }
 
 extension TextEditor {
     func border() -> some View {
-        overlay(
-            Rectangle()
-                .stroke(.secondary, lineWidth: 1)
-                .opacity(0.5)
-          )
-        .disableAutocorrection(true)
+        self
+            .overlay(
+                Rectangle()
+                    .stroke(.secondary, lineWidth: 1)
+                    .opacity(0.5)
+            )
+            .disableAutocorrection(true)
     }
 }
 
 extension TextField {
     func rounded() -> some View {
-        textFieldStyle(RoundedBorderTextFieldStyle())
+        self
+            .textFieldStyle(RoundedBorderTextFieldStyle())
     }
 }
 
