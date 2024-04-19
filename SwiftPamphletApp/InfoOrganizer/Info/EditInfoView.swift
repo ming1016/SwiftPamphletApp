@@ -110,6 +110,9 @@ struct EditInfoView: View {
     }
     
     // MARK: Image
+    @State private var largeImageUrlStr = ""
+    @State private var largeNSImage: NSImage? = nil
+    
     @MainActor
     @ViewBuilder
     func imagePickAndShowView() -> some View {
@@ -129,84 +132,119 @@ struct EditInfoView: View {
                         }
                     }
             }
-            ScrollView {
-                if let infoImgs = info.imgs {
-                    if infoImgs.count > 0 {
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150),spacing: 10)]) {
-                            ForEach(Array(infoImgs.enumerated()), id:\.0) {i, img in
-                                VStack {
-                                    if let data = img.imgData {
-                                        if let nsImg = NSImage(data: data) {
-                                            Image(nsImage: nsImg)
-                                                .resizable()
-                                                .scaledToFit()
-                                                .cornerRadius(5)
-                                                .contextMenu {
-                                                    Button {
-                                                        IOInfo.updateCoverImage(info: info, img: img)
-                                                    } label: {
-                                                        Label("设为封面图", image: "doc.text.image")
-                                                    }
-                                                    Button {
-                                                        info.imgs?.remove(at: i)
-                                                        IOImg.delete(img)
-                                                    } label: {
-                                                        Label("删除", image: "circle")
-                                                    }
+            ZStack {
+                ScrollView {
+                    if let infoImgs = info.imgs {
+                        if infoImgs.count > 0 {
+                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 150),spacing: 10)]) {
+                                ForEach(Array(infoImgs.enumerated()), id:\.0) {i, img in
+                                    VStack {
+                                        if let data = img.imgData {
+                                            if let nsImg = NSImage(data: data) {
+                                                Image(nsImage: nsImg)
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .cornerRadius(5)
+                                                    .onTapGesture(perform: {
+                                                        largeNSImage = nsImg
+                                                    })
+                                                    .contextMenu {
+                                                        Button {
+                                                            IOInfo.updateCoverImage(info: info, img: img)
+                                                        } label: {
+                                                            Label("设为封面图", image: "doc.text.image")
+                                                        }
+                                                        Button {
+                                                            info.imgs?.remove(at: i)
+                                                            IOImg.delete(img)
+                                                        } label: {
+                                                            Label("删除", image: "circle")
+                                                        }
 
+                                                    }
+                                            }
+                                        } else if img.url.isEmpty == false {
+                                            NukeImage(url: img.url)
+                                            .contextMenu {
+                                                Button {
+                                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: img.url))
+                                                } label: {
+                                                    Label("设为封面图", image: "doc.text.image")
                                                 }
-                                        }
-                                    } else if img.url.isEmpty == false {
-                                        NukeImage(url: img.url)
-                                        .contextMenu {
-                                            Button {
-                                                IOInfo.updateCoverImage(info: info, img: IOImg(url: img.url))
-                                            } label: {
-                                                Label("设为封面图", image: "doc.text.image")
+                                                Button {
+                                                    let p = NSPasteboard.general
+                                                    p.declareTypes([.string], owner: nil)
+                                                    p.setString(img.url, forType: .string)
+                                                } label: {
+                                                    Label("复制图片链接", image: "circle")
+                                                }
+                                                Button {
+                                                    info.imgs?.remove(at: i)
+                                                    IOImg.delete(img)
+                                                } label: {
+                                                    Label("删除", image: "circle")
+                                                }
                                             }
-                                            Button {
-                                                let p = NSPasteboard.general
-                                                p.declareTypes([.string], owner: nil)
-                                                p.setString(img.url, forType: .string)
-                                            } label: {
-                                                Label("复制图片链接", image: "circle")
-                                            }
-                                            Button {
-                                                info.imgs?.remove(at: i)
-                                                IOImg.delete(img)
-                                            } label: {
-                                                Label("删除", image: "circle")
+                                            .onTapGesture {
+                                                largeImageUrlStr = img.url
                                             }
                                         }
+                                    } // end VStack
+                                } // end ForEach
+                            } // end LazyVGrid
+                        }
+                    } // end if let
+                    if info.imageUrls.isEmpty == false {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)]) {
+                            ForEach(info.imageUrls, id:\.self) { img in
+                                NukeImage(url: img)
+                                .contextMenu {
+                                    Button {
+                                        IOInfo.updateCoverImage(info: info, img: IOImg(url: img))
+                                    } label: {
+                                        Label("设为封面图", image: "doc.text.image")
                                     }
-                                } // end VStack
-                            } // end ForEach
-                        } // end LazyVGrid
-                    }
-                } // end if let
-                if info.imageUrls.isEmpty == false {
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)]) {
-                        ForEach(info.imageUrls, id:\.self) { img in
-                            NukeImage(url: img)
-                            .contextMenu {
-                                Button {
-                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: img))
-                                } label: {
-                                    Label("设为封面图", image: "doc.text.image")
+                                    Button {
+                                        let p = NSPasteboard.general
+                                        p.declareTypes([.string], owner: nil)
+                                        p.setString(img, forType: .string)
+                                    } label: {
+                                        Label("复制图片链接", image: "circle")
+                                    }
                                 }
-                                Button {
-                                    let p = NSPasteboard.general
-                                    p.declareTypes([.string], owner: nil)
-                                    p.setString(img, forType: .string)
-                                } label: {
-                                    Label("复制图片链接", image: "circle")
+                                .onTapGesture {
+                                    withAnimation {
+                                        largeImageUrlStr = img
+                                    }
                                 }
                             }
                         }
                     }
+                } // end scrollView
+                if largeImageUrlStr.isEmpty == false {
+                    NukeImage(url: largeImageUrlStr)
+                        .onTapGesture {
+                            withAnimation {
+                                largeImageUrlStr = ""
+                            }
+                        }
+                }
+                if largeNSImage != nil {
+                    Image(nsImage: largeNSImage!)
+                        .resizable()
+                        .scaledToFit()
+                        .onTapGesture {
+                            withAnimation {
+                                largeNSImage = nil
+                            }
+                        }
                 }
             }
         }
+        .onChange(of: info, { oldValue, newValue in
+            largeImageUrlStr = ""
+            largeNSImage = nil
+        })
         .padding(10)
         .tabItem { Label("图集", systemImage: "circle")}
         .tag(5)
@@ -306,7 +344,13 @@ struct EditInfoView: View {
     func urlInputView() -> some View {
         HStack {
             TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://www.starming.com")).rounded()
-                .onSubmit {
+//                .onSubmit {
+//                    Task.detached(priority: .background, operation: {
+//                        
+//                    })
+//                }
+            if info.url.isEmpty == false {
+                Button {
                     Task {
                         // MARK: 获取 Web 内容
                         info.name = "获取标题中......"
@@ -321,8 +365,9 @@ struct EditInfoView: View {
                             }
                         }
                     }
+                } label: {
+                    Text("解析")
                 }
-            if info.url.isEmpty == false {
                 Button {
                     gotoWebBrowser(urlStr: info.url)
                 } label: {
@@ -454,7 +499,6 @@ struct EditInfoView: View {
         var imageUrls = [String]()
         
         // 获取图集
-        
         do {
             let imgs = try soup.select("img").array()
             if imgs.count > 0 {
