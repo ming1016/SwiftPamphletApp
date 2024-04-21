@@ -8,6 +8,26 @@
 import SwiftUI
 import MarkdownUI
 
+struct LightingView<Content: View>: View {
+    @Environment(\.colorScheme) var colorSchemeMode
+    let content: Content
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
+    var body: some View {
+        ZStack {
+            content
+                .blendMode(colorSchemeMode == .dark ? .colorDodge : .colorBurn)
+            content
+                .blendMode(colorSchemeMode == .dark ? .softLight : .softLight)
+            content
+                .blur(radius: 1)
+            content
+                
+        }
+    }
+}
+
 struct IntroView: View {
     var body: some View {
         VStack(spacing: 15) {
@@ -16,7 +36,11 @@ struct IntroView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 120)
             Text("戴铭的开发小册子").bold()
-            Text("Swift Pamphlet App").gradientTitle(color: .mint)
+            LightingView {
+                Text("Swift Pamphlet App").gradientTitle(color: .mint)
+            }
+
+            
             HStack {
                 Text("一本活的开发手册")
                 Link("GitHub 地址", destination: URL(string: "https://github.com/ming1016/SwiftPamphletApp")!)

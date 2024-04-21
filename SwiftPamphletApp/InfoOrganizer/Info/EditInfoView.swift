@@ -43,12 +43,12 @@ struct EditInfoView: View {
         VStack {
             Form {
                 Section {
-                    titleInputView()
-                    urlInputView()
+                    titleInputView
+                    urlInputView
                 } // end Section
                 
                 Section {
-                    categoryInputView()
+                    categoryInputView
                 }
                 // MARK: Tab 切换
                 Section(footer: Text("文本支持 markdown 格式")) {
@@ -252,7 +252,7 @@ struct EditInfoView: View {
     
     // MARK: WebView
     @ViewBuilder
-    func webViewView() -> some View {
+    private func webViewView() -> some View {
         if let url = URL(string: info.url) {
             VStack {
                 WebUIViewWithSave(
@@ -271,7 +271,7 @@ struct EditInfoView: View {
     
     // MARK: Text And Preview
     @ViewBuilder
-    func textAndPreviewView() -> some View {
+    private func textAndPreviewView() -> some View {
         TextEditor(text: $info.des).border()
             .padding(10)
             .tabItem { Label("文本", systemImage: "circle") }
@@ -284,8 +284,7 @@ struct EditInfoView: View {
     
     
     // MARK: Category
-    @ViewBuilder
-    func categoryInputView() -> some View {
+    private var categoryInputView: some View {
         HStack {
             Picker("分类:", selection: $info.category) {
                 Text("未分类")
@@ -340,15 +339,9 @@ struct EditInfoView: View {
     }
     
     // MARK: URL
-    @ViewBuilder
-    func urlInputView() -> some View {
+    private var urlInputView: some View {
         HStack {
             TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://www.starming.com")).rounded()
-//                .onSubmit {
-//                    Task.detached(priority: .background, operation: {
-//                        
-//                    })
-//                }
             if info.url.isEmpty == false {
                 Button {
                     Task {
@@ -392,8 +385,7 @@ struct EditInfoView: View {
     }
     
     // MARK: 标题
-    @ViewBuilder
-    func titleInputView() -> some View {
+    private var titleInputView: some View {
         HStack {
             TextField("标题:", text: $info.name).rounded()
             Toggle(isOn: $info.star) {
