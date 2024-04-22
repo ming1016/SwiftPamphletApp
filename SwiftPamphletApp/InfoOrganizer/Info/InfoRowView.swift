@@ -49,9 +49,6 @@ struct InfoRowView: View {
                 if info.category != nil {
                     Text(info.category?.name ?? "")
                         .padding(4)
-//                        .background(.tertiary)
-//                        .clipShape(.rect(cornerRadius: 4))
-//                        .foregroundColor(.white)
                         .overlay {
                                 RoundedRectangle(cornerRadius: 4)
                                     .stroke(lineWidth: 1)

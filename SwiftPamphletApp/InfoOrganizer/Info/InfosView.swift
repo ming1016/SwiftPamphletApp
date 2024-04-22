@@ -15,7 +15,9 @@ struct InfosView: View {
     @Binding var limit: Int
     
     init(filterCateName: String = "", searchString: String = "", filterStar: Bool = false ,selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = [], limit: Binding<Int>) {
+        
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
+
             if !filterCateName.isEmpty && !searchString.isEmpty {
                 (info.name.localizedStandardContains(searchString)
                 || info.url.localizedStandardContains(searchString)
@@ -29,6 +31,7 @@ struct InfosView: View {
                 || info.url.localizedStandardContains(searchString)
                  || info.des.localizedStandardContains(searchString)
             }
+            
         }, sortBy: sortOrder)
         fd.fetchLimit = limit.wrappedValue
         _infos = Query(fd)

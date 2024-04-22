@@ -74,7 +74,6 @@ struct InfoListView: View {
                         } label: {
                             Text("检索重置")
                         }
-                        .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
                     }
                 }
                 ToolbarItem(placement: .primaryAction) {
@@ -95,6 +94,20 @@ struct InfoListView: View {
                     })
                     .disabled(modelContext.undoManager?.canRedo == false)
                 }
+                if searchText != "" || filterCate != "" {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button {
+                            searchText = ""
+                            filterCate = ""
+                        } label: {
+                            Image(systemName: "xmark.circle")
+                            Text("检索")
+                        }
+                        .help("CMD + d")
+                        .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
+                    }
+                }
+                
             }
             .searchable(text: $searchText)
             .onAppear {
@@ -116,7 +129,7 @@ struct InfoListView: View {
         })
         .sheet(isPresented: $showSheet, content: {
             Text("选择一个检索词")
-                .font(.title).bold().padding(10)
+                .font(.title).bold().padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
             ScrollView(.vertical) {
                 ForEach(parseSearchTerms(), id: \.self) { term in
                     HStack {
