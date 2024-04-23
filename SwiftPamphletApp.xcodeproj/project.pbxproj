@@ -27,7 +27,6 @@
 		0805F4962BAAABEA0008BB52 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0805F4952BAAABEA0008BB52 /* ViewStyle.swift */; };
 		0825E4872BC6596F00332378 /* EditCustomSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0825E4862BC6596F00332378 /* EditCustomSearchView.swift */; };
 		083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083554E02756503B0095E0EE /* AnimateLayout.swift */; };
-		08397E232B9EE8F400DFDD02 /* InfoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */; };
 		08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E242B9EEE1300DFDD02 /* InfoListView.swift */; };
 		08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E282B9F0A9100DFDD02 /* EditInfoView.swift */; };
 		08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */; };
@@ -167,7 +166,6 @@
 		086A5F302744ED8600FECE02 /* IssuesListFromCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F2C2744ED8600FECE02 /* IssuesListFromCustomView.swift */; };
 		086A5F362744ED9600FECE02 /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F332744ED9600FECE02 /* RepoView.swift */; };
 		086A5F372744ED9600FECE02 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F342744ED9600FECE02 /* UserView.swift */; };
-		086A5F3A2744EDA500FECE02 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F382744EDA500FECE02 /* APIRequest.swift */; };
 		086A5F3B2744EDA500FECE02 /* GitHubAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */; };
 		086A5F422744EDCE00FECE02 /* IssueVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F3F2744EDCE00FECE02 /* IssueVM.swift */; };
 		086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */; };
@@ -194,7 +192,6 @@
 		08A9E1A62BC2861100A73764 /* GitHubReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A52BC2861100A73764 /* GitHubReq.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
 		08AEAEFA277F3C7400B969E2 /* css.html in Resources */ = {isa = PBXBuildFile; fileRef = 08AEAEF9277F3C7400B969E2 /* css.html */; };
-		08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4C9382770B26700742084 /* CCYRSSReq.swift */; };
 		08BE632A27BE220D002BC6A8 /* 146.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632927BE220D002BC6A8 /* 146.md */; };
 		08BE632C27BE3762002BC6A8 /* 147.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632B27BE3762002BC6A8 /* 147.md */; };
 		08BE632E27BE3A95002BC6A8 /* PlayLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */; };
@@ -228,7 +225,6 @@
 		08BE637627CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE637527CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift */; };
 		08BE638F27CE157D002BC6A8 /* 161.md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE638E27CE157D002BC6A8 /* 161.md */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
-		08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */; };
 		08C3BB7E27CE3EBD00ACF0FE /* PlayTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */; };
 		08C3BB8027CE4A8500ACF0FE /* 162.md in Resources */ = {isa = PBXBuildFile; fileRef = 08C3BB7F27CE4A8500ACF0FE /* 162.md */; };
 		08C3BBA227CF1B2B00ACF0FE /* 164.md in Resources */ = {isa = PBXBuildFile; fileRef = 08C3BBA127CF1B2B00ACF0FE /* 164.md */; };
@@ -251,6 +247,7 @@
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
 		3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */; };
 		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
+		3AE4CA382BD7813D005BEF2C /* InfoOrganizer in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE4CA372BD7813D005BEF2C /* InfoOrganizer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -275,7 +272,6 @@
 		0805F4952BAAABEA0008BB52 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		0825E4862BC6596F00332378 /* EditCustomSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCustomSearchView.swift; sourceTree = "<group>"; };
 		083554E02756503B0095E0EE /* AnimateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLayout.swift; sourceTree = "<group>"; };
-		08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDataModel.swift; sourceTree = "<group>"; };
 		08397E242B9EEE1300DFDD02 /* InfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListView.swift; sourceTree = "<group>"; };
 		08397E282B9F0A9100DFDD02 /* EditInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoView.swift; sourceTree = "<group>"; };
 		08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryView.swift; sourceTree = "<group>"; };
@@ -415,7 +411,6 @@
 		086A5F2C2744ED8600FECE02 /* IssuesListFromCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesListFromCustomView.swift; sourceTree = "<group>"; };
 		086A5F332744ED9600FECE02 /* RepoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
 		086A5F342744ED9600FECE02 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		086A5F382744EDA500FECE02 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIModel.swift; sourceTree = "<group>"; };
 		086A5F3F2744EDCE00FECE02 /* IssueVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueVM.swift; sourceTree = "<group>"; };
 		086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppConfig.swift; sourceTree = "<group>"; };
@@ -444,7 +439,6 @@
 		08A9E1A52BC2861100A73764 /* GitHubReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReq.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		08AEAEF9277F3C7400B969E2 /* css.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css.html; sourceTree = "<group>"; };
-		08B4C9382770B26700742084 /* CCYRSSReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYRSSReq.swift; sourceTree = "<group>"; };
 		08BE632927BE220D002BC6A8 /* 146.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 146.md; sourceTree = "<group>"; };
 		08BE632B27BE3762002BC6A8 /* 147.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 147.md; sourceTree = "<group>"; };
 		08BE632D27BE3A95002BC6A8 /* PlayLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLabelView.swift; sourceTree = "<group>"; };
@@ -477,7 +471,6 @@
 		08BE637327CCAB52002BC6A8 /* 160.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 160.md; sourceTree = "<group>"; };
 		08BE637527CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySuperposedLayerView.swift; sourceTree = "<group>"; };
 		08BE638E27CE157D002BC6A8 /* 161.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 161.md; sourceTree = "<group>"; };
-		08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYGitHubAPI.swift; sourceTree = "<group>"; };
 		08C3BB7D27CE3EBD00ACF0FE /* PlayTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTabView.swift; sourceTree = "<group>"; };
 		08C3BB7F27CE4A8500ACF0FE /* 162.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 162.md; sourceTree = "<group>"; };
 		08C3BBA127CF1B2B00ACF0FE /* 164.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 164.md; sourceTree = "<group>"; };
@@ -507,6 +500,7 @@
 				08F14B3E2BBDA3EA005B46CC /* NukeExtensions in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
 				08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */,
+				3AE4CA382BD7813D005BEF2C /* InfoOrganizer in Frameworks */,
 				08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */,
 				08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */,
 				08F14B3C2BBDA3EA005B46CC /* Nuke in Frameworks */,
@@ -540,7 +534,6 @@
 			children = (
 				08F1AB642BA0840400AEA0CA /* Category */,
 				08F1AB632BA083F500AEA0CA /* Info */,
-				08F1AB622BA083DD00AEA0CA /* Model */,
 			);
 			path = InfoOrganizer;
 			sourceTree = "<group>";
@@ -1098,7 +1091,6 @@
 				08A9E1A02BC1919C00A73764 /* APIVM */,
 				3AE0D5962BAB09AB00D6D925 /* Developer */,
 				086A5F392744EDA500FECE02 /* GitHubAPIModel.swift */,
-				08BF26D4276B18380064DDAC /* Network */,
 				086A5F3C2744EDB400FECE02 /* VM */,
 				086A5F1E2744ECA400FECE02 /* DetailView */,
 				086A5F152744EC8900FECE02 /* ListView */,
@@ -1205,16 +1197,6 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
-		08BF26D4276B18380064DDAC /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				086A5F382744EDA500FECE02 /* APIRequest.swift */,
-				08BF26D9276B65160064DDAC /* CCYGitHubAPI.swift */,
-				08B4C9382770B26700742084 /* CCYRSSReq.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		08C411F02795111C006FC340 /* Play */ = {
 			isa = PBXGroup;
 			children = (
@@ -1240,14 +1222,6 @@
 				08ED801B2B9D1EEC0069B7EC /* SettingView.swift */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		08F1AB622BA083DD00AEA0CA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				08397E222B9EE8F400DFDD02 /* InfoDataModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		08F1AB632BA083F500AEA0CA /* Info */ = {
@@ -1308,6 +1282,7 @@
 				08F14B3D2BBDA3EA005B46CC /* NukeExtensions */,
 				08F14B3F2BBDA3EA005B46CC /* NukeUI */,
 				08F14B412BBDA3EA005B46CC /* NukeVideo */,
+				3AE4CA372BD7813D005BEF2C /* InfoOrganizer */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -1345,6 +1320,7 @@
 				08ED80142B9C54DE0069B7EC /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMNetwork" */,
 				08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				08F14B3A2BBDA3EA005B46CC /* XCRemoteSwiftPackageReference "Nuke" */,
+				3AE4CA362BD7813D005BEF2C /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/InfoOrganizer" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -1541,7 +1517,6 @@
 				3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */,
 				08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */,
 				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
-				08397E232B9EE8F400DFDD02 /* InfoDataModel.swift in Sources */,
 				084417792B99BE720049297D /* DataLink.swift in Sources */,
 				08522BEB27CF7744005FF059 /* PlayKeyboard.swift in Sources */,
 				08C3BBA427CF1B7B00ACF0FE /* PlayPickerView.swift in Sources */,
@@ -1568,7 +1543,6 @@
 				08A9E1A62BC2861100A73764 /* GitHubReq.swift in Sources */,
 				08C411F427951181006FC340 /* PlaySyntax.swift in Sources */,
 				083554E12756503B0095E0EE /* AnimateLayout.swift in Sources */,
-				08BF26DA276B65160064DDAC /* CCYGitHubAPI.swift in Sources */,
 				08C411F227951152006FC340 /* PlayFoundation.swift in Sources */,
 				08448F0B2797F73200B61353 /* PlayArchitecture.swift in Sources */,
 				08522BD827CF344B005FF059 /* PlaySliderView.swift in Sources */,
@@ -1592,7 +1566,6 @@
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
 				08BE635627C63CF6002BC6A8 /* PlayControlGroupView.swift in Sources */,
 				08BE637627CCAEA1002BC6A8 /* PlaySuperposedLayerView.swift in Sources */,
-				086A5F3A2744EDA500FECE02 /* APIRequest.swift in Sources */,
 				086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */,
 				0805F4962BAAABEA0008BB52 /* ViewStyle.swift in Sources */,
 				08BE636E27C8D6FD002BC6A8 /* PlayLazyVGridAndLazyHGridView.swift in Sources */,
@@ -1601,7 +1574,6 @@
 				08BE636A27C8C409002BC6A8 /* PlayImageView.swift in Sources */,
 				08CD61FF27758B8A008C0935 /* Token.swift in Sources */,
 				3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */,
-				08B4C9392770B26700742084 /* CCYRSSReq.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
 				08BE632E27BE3A95002BC6A8 /* PlayLabelView.swift in Sources */,
 				084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */,
@@ -1836,6 +1808,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = SwiftPamphletApp/SharePackage/SMNetwork;
 		};
+		3AE4CA362BD7813D005BEF2C /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/InfoOrganizer" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SwiftPamphletApp/SharePackage/InfoOrganizer;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1925,6 +1901,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08F14B3A2BBDA3EA005B46CC /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeVideo;
+		};
+		3AE4CA372BD7813D005BEF2C /* InfoOrganizer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InfoOrganizer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

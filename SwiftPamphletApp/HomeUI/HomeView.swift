@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import InfoOrganizer
 
 struct HomeView: View {
     @State private var selectedDataLinkString: String = ""

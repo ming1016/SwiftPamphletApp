@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import InfoOrganizer
 
 struct InfoRowView: View {
     @State var info: IOInfo

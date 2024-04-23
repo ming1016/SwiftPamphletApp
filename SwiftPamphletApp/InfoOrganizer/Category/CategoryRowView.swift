@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import InfoOrganizer
 
 struct CategoryRowView: View {
     @State var cate: IOCategory

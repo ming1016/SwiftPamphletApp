@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import InfoOrganizer
 
 struct EditCategoryView: View {
     @Environment(\.modelContext) var modelContext

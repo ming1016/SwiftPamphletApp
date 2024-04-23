@@ -10,6 +10,7 @@ import SwiftData
 import SwiftSoup
 import Ink
 import PhotosUI
+import InfoOrganizer
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
@@ -306,33 +307,36 @@ struct EditInfoView: View {
                 info.category?.updateDate = Date.now
             })
             Button("管理分类", action: manageCate)
-            Button("自定检索") {
-                showSheet = true
-            }
-            .help("command + s")
-            .sheet(isPresented: $showSheet, content: {
-                ScrollView(.vertical) {
-                    ForEach(parseSearchTerms(), id: \.self) { term in
-                        HStack {
-                            ForEach(term, id: \.self) { oneTerm in
-                                if oneTerm.description.hasPrefix("《") {
-                                    Text(oneTerm)
-                                        .bold()
-                                } else {
-                                    Button(oneTerm) {
-                                        showSheet = false
-                                        info.des = oneTerm + "\n" + info.des
+            if term.isEmpty == false {
+                Button("自定检索") {
+                    showSheet = true
+                }
+                .help("command + s")
+                .sheet(isPresented: $showSheet, content: {
+                    ScrollView(.vertical) {
+                        ForEach(parseSearchTerms(), id: \.self) { term in
+                            HStack {
+                                ForEach(term, id: \.self) { oneTerm in
+                                    if oneTerm.description.hasPrefix("《") {
+                                        Text(oneTerm)
+                                            .bold()
+                                    } else {
+                                        Button(oneTerm) {
+                                            showSheet = false
+                                            info.des = oneTerm + "\n" + info.des
+                                        }
                                     }
                                 }
+                                Spacer()
                             }
-                            Spacer()
+                            .padding(.leading, 1)
                         }
-                        .padding(.leading, 1)
+                        .padding(2)
                     }
-                }
-                .padding(20)
-            })
-            .keyboardShortcut(KeyEquivalent("s"), modifiers: .command)
+                    .padding(20)
+                })
+                .keyboardShortcut(KeyEquivalent("s"), modifiers: .command)
+            }
 
             Button("管理自定检索", action: manageCustomSearch)
         }

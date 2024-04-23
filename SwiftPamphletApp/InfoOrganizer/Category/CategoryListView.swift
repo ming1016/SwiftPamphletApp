@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import Charts
+import InfoOrganizer
 
 struct CategoryListView: View {
     @Environment(\.modelContext) var modelContext

@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import SwiftData
+import InfoOrganizer
 
 @main
 struct SwiftPamphletAppApp: App {

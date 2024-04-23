@@ -7,6 +7,7 @@
 //import Foundation
 import SwiftUI
 import SwiftData
+import InfoOrganizer
 
 struct InfoListView: View {
     @Environment(\.modelContext) var modelContext
@@ -130,7 +131,7 @@ struct InfoListView: View {
         })
         .sheet(isPresented: $showSheet, content: {
             Text("选择一个检索词")
-                .font(.title).bold().padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                .font(.title).bold().padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
             ScrollView(.vertical) {
                 ForEach(parseSearchTerms(), id: \.self) { term in
                     HStack {
@@ -149,6 +150,7 @@ struct InfoListView: View {
                     }
                     .padding(.leading, 1)
                 }
+                .padding(2)
             }
             .padding(20)
         })

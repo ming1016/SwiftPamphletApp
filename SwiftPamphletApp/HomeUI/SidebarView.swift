@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import InfoOrganizer
 
 struct SidebarView: View {
     @Binding var selectedDataLinkString: String

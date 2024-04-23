@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import InfoOrganizer
 
 struct DataLink: Identifiable {
     let id = UUID()
