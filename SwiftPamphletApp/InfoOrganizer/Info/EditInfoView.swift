@@ -342,11 +342,27 @@ struct EditInfoView: View {
     private var urlInputView: some View {
         HStack {
             TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://www.starming.com")).rounded()
-            if info.url.isEmpty == false {
-                Button {
+                .onSubmit {
+                    info.name = "获取标题中......"
                     Task {
                         // MARK: 获取 Web 内容
-                        info.name = "获取标题中......"
+                        let re = await fetchTitleFromUrl(urlString:info.url)
+                        DispatchQueue.main.async {
+                            if re.title.isEmpty == false {
+                                info.name = re.title
+                                if re.imageUrl.isEmpty == false {
+                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: re.imageUrl))
+                                }
+                                info.imageUrls = re.imageUrls
+                            }
+                        }
+                    }
+                }
+            if info.url.isEmpty == false {
+                Button {
+                    info.name = "获取标题中......"
+                    Task {
+                        // MARK: 获取 Web 内容
                         let re = await fetchTitleFromUrl(urlString:info.url)
                         DispatchQueue.main.async {
                             if re.title.isEmpty == false {

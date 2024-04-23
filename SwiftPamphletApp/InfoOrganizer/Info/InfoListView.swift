@@ -101,6 +101,7 @@ struct InfoListView: View {
                             filterCate = ""
                         } label: {
                             Image(systemName: "xmark.circle")
+                                .symbolRenderingMode(.multicolor)
                             Text("检索")
                         }
                         .help("CMD + d")
