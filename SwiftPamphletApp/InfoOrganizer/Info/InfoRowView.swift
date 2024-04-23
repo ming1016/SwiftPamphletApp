@@ -7,6 +7,7 @@
 
 import SwiftUI
 import InfoOrganizer
+import SMDate
 
 struct InfoRowView: View {
     @State var info: IOInfo
@@ -69,7 +70,7 @@ struct InfoRowView: View {
                 if info.webArchive != nil {
                     Image(systemName: "square.and.arrow.down.fill")
                 }
-                Text(howLongAgo(date: info.updateDate))
+                Text(SMDate.howLongAgo(date: info.updateDate))
                     .foregroundColor(.secondary)
             }
             .font(.footnote)

@@ -30,20 +30,6 @@ func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> St
     return reStr
 }
 
-// MARK: - 时间
-func howLongAgo(date: Date) -> String {
-    let simplifiedChinese = Locale(identifier: "zh_Hans")
-    return date.formatted(.relative(presentation: .named,
-                                    unitsStyle: .wide).locale(simplifiedChinese))
-}
-func howLongFromNow(timeStr: String) -> String {
-    let iso8601String = timeStr
-    let formatter = ISO8601DateFormatter()
-    let date = formatter.date(from: iso8601String) ?? .now
-    return howLongAgo(date: date)
-}
-
-
 // MARK: - 基础
 // decoder
 // extension 

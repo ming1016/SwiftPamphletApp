@@ -10,6 +10,7 @@ import WebKit
 import MarkdownUI
 import SMFile
 import SMNetwork
+import SMDate
 
 // MARK: - 大纲
 struct SPOutlineListView<D, Content>: View where D: RandomAccessCollection, D.Element: Identifiable, Content: View {
@@ -262,14 +263,13 @@ struct GitHubApiTimeView: View {
     var isUnread = false
     var body: some View {
         HStack {
-            Text(howLongFromNow(timeStr:timeStr))
+            Text(SMDate.howLongAgo(dateStr: timeStr))
             if isUnread == true {
                 Image(systemName: "envelope.badge")
             }
         }
         .font(.system(.footnote))
         .foregroundColor(.secondary)
-
     }
 }
 

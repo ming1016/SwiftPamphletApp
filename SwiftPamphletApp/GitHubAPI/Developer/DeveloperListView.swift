@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import SMDate
 
 struct DeveloperListView: View {
     @Environment(\.modelContext) var modelContext
@@ -33,7 +34,7 @@ struct DeveloperListView: View {
                             }
                             
                             Spacer()
-                            Text(howLongAgo(date: dev.updateDate))
+                            Text(SMDate.howLongAgo(date: dev.updateDate))
                                 .font(.footnote)
                                 .foregroundColor(.secondary)
                         }
