@@ -37,7 +37,9 @@ struct NukeImage: View {
                         .foregroundColor(.secondary)
                 }
             } else {
-                ProgressView()
+                Image(systemName: "chart.bar.doc.horizontal")
+                    .imageScale(.large)
+                    .symbolEffect(.variableColor.iterative.dimInactiveLayers.reversing, isActive: state.image == nil)
             }
         }
         .pipeline(pipeline)

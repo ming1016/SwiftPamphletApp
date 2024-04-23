@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: Text
 extension Text {
     func gradientTitle(color: Color = .primary) -> some View {
         self
@@ -17,6 +18,7 @@ extension Text {
     }
 }
 
+// MARK: TextEidtor
 extension TextEditor {
     func border() -> some View {
         self
@@ -29,6 +31,10 @@ extension TextEditor {
     }
 }
 
+
+// MARK: TextField
+
+// 圆角
 extension TextField {
     func rounded() -> some View {
         self
@@ -36,8 +42,8 @@ extension TextField {
     }
 }
 
+// MARK: Toggle
 struct SymbolToggleStyle: ToggleStyle {
-
     var systemImage: String = "checkmark"
     var activeColor: Color = .green
 
