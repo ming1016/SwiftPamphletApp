@@ -9,6 +9,7 @@ import SwiftUI
 import WebKit
 import MarkdownUI
 import SMFile
+import SMNetwork
 
 // MARK: - 大纲
 struct SPOutlineListView<D, Content>: View where D: RandomAccessCollection, D.Element: Identifiable, Content: View {
@@ -298,9 +299,9 @@ struct ButtonGoGitHubWeb: View {
     var body: some View {
         Button {
             if ignoreHost == true {
-                gotoWebBrowser(urlStr: SPC.githubHost + url)
+                SMNetwork.gotoWebBrowser(urlStr: SPC.githubHost + url)
             } else {
-                gotoWebBrowser(urlStr: url)
+                SMNetwork.gotoWebBrowser(urlStr: url)
             }
         } label: {
             if bold == true {

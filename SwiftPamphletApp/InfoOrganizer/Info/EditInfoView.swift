@@ -12,6 +12,7 @@ import Ink
 import PhotosUI
 import InfoOrganizer
 import SMFile
+import SMNetwork
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
@@ -383,7 +384,7 @@ struct EditInfoView: View {
                     Text("解析")
                 }
                 Button {
-                    gotoWebBrowser(urlStr: info.url)
+                    SMNetwork.gotoWebBrowser(urlStr: info.url)
                 } label: {
                     Image(systemName: "safari")
                 }
@@ -519,7 +520,7 @@ struct EditInfoView: View {
                 for elm in imgs {
                     if let elmUrl = try? elm.attr("src") {
                         if elmUrl.isEmpty == false {
-                            imageUrls.append(urlWithSchemeAndHost(url: url, urlStr: elmUrl))
+                            imageUrls.append(SMNetwork.urlWithSchemeAndHost(url: url, urlStr: elmUrl))
                         }
                     }
                 }
@@ -531,7 +532,7 @@ struct EditInfoView: View {
                         imgUrl = imageUrls.first
                     }
                     if let okImgUrl = imgUrl {
-                        imageUrl = urlWithSchemeAndHost(url: url, urlStr: okImgUrl)
+                        imageUrl = SMNetwork.urlWithSchemeAndHost(url: url, urlStr: okImgUrl)
                     }
                 }
                 

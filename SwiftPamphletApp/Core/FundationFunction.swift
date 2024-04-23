@@ -43,49 +43,6 @@ func howLongFromNow(timeStr: String) -> String {
     return howLongAgo(date: date)
 }
 
-// MARK: - 网络
-
-
-// 跳到浏览器中显示网址内容
-func gotoWebBrowser(urlStr: String) {
-    if !urlStr.isEmpty {
-        let validUrlStr = validHTTPUrlStrFromUrlStr(urlStr: urlStr)
-        NSWorkspace.shared.open(URL(string: validUrlStr)!)
-    } else {
-        print("error: url is empty!")
-    }
-}
-
-// 检查地址是否有效
-func validHTTPUrlStrFromUrlStr(urlStr: String) -> String {
-    let httpPrefix = "http://"
-    let httpsPrefix = "https://"
-    if (urlStr.hasPrefix(httpPrefix) || urlStr.hasPrefix(httpsPrefix)) {
-        return urlStr
-    }
-    return httpsPrefix + urlStr
-}
-
-// 网页的相对地址转绝对地址
-func urlWithSchemeAndHost(url: URL, urlStr: String) -> String {
-    var schemeStr = ""
-    var hostStr = ""
-    if let scheme = url.scheme, let host = url.host {
-        schemeStr = scheme
-        hostStr = host
-    }
-    
-    if urlStr.hasPrefix("http") {
-        return urlStr
-    } else {
-        var slash = ""
-        if urlStr.hasPrefix("/") == false {
-            slash = "/"
-        }
-        return "\(schemeStr)://\(hostStr)\(slash)\(urlStr)"
-    }
-}
-
 
 // MARK: - 基础
 // decoder
