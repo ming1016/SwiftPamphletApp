@@ -32,7 +32,7 @@ final class APIRepoVM {
     @MainActor
     func obtainRepos() async {
         do {
-            repo = try await GitHubReq.req("repos/\(name)", type: RepoModel.self)
+            repo = try await GitHubReq.shared.req("repos/\(name)", type: RepoModel.self)
         } catch { print("问题是：\(error)") }
     }
 
@@ -40,7 +40,7 @@ final class APIRepoVM {
     @MainActor
     func obtainCommits() async {
         do {
-            commits = try await GitHubReq.req("repos/\(name)/commits", type: [CommitModel].self)
+            commits = try await GitHubReq.shared.req("repos/\(name)/commits", type: [CommitModel].self)
         } catch { print("问题是：\(error)") }
     }
     
@@ -48,7 +48,7 @@ final class APIRepoVM {
     @MainActor
     func obtainIssues() async {
         do {
-            issues = try await GitHubReq.req("repos/\(name)/issues", type: [IssueModel].self)
+            issues = try await GitHubReq.shared.req("repos/\(name)/issues", type: [IssueModel].self)
         } catch { print("问题是：\(error)") }
     }
     
@@ -56,7 +56,7 @@ final class APIRepoVM {
     @MainActor
     func obtainIssuesEvents() async {
         do {
-            issuesEvents = try await GitHubReq.req("repos/\(name)/issues/events", type: [IssueEventModel].self)
+            issuesEvents = try await GitHubReq.shared.req("repos/\(name)/issues/events", type: [IssueEventModel].self)
         } catch { print("问题是：\(error)") }
     }
     
@@ -64,7 +64,7 @@ final class APIRepoVM {
     @MainActor
     func obtainReadme() async {
         do {
-            readme = try await GitHubReq.req("repos/\(name)/readme", type: RepoContent.self)
+            readme = try await GitHubReq.shared.req("repos/\(name)/readme", type: RepoContent.self)
         } catch { print("问题是：\(error)") }
     }
     

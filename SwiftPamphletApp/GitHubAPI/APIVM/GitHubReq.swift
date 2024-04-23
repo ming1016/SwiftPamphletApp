@@ -9,15 +9,10 @@ import Foundation
 
 // github api 入口 https://api.github.com
 class GitHubReq {
-    
-    static func req<T>(_ path: String, type: T.Type) async throws -> T where T : Decodable {
+    static let shared = GitHubReq()
+    var githubat = "" // access token
+    func req<T>(_ path: String, type: T.Type) async throws -> T where T : Decodable {
         var req = URLRequest(url: URL(string: "https://api.github.com/\(path)")!)
-        var githubat = ""
-        if SPC.gitHubAccessToken.isEmpty == true {
-            githubat = SPC.githubAccessToken()
-        } else {
-            githubat = SPC.gitHubAccessToken
-        }
 
         req.addValue("token \(githubat)", forHTTPHeaderField: "Authorization")
         let (data, response) = try await URLSession.shared.data(for: req)

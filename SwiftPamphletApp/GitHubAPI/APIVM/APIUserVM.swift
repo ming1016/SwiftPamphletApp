@@ -28,7 +28,7 @@ final class APIUserVM {
     @MainActor
     func obtainUser() async {
         do {
-            user = try await GitHubReq.req("users/\(name)", type: UserModel.self)
+            user = try await GitHubReq.shared.req("users/\(name)", type: UserModel.self)
         } catch { print("问题是：\(error)") }
     }
     
@@ -36,7 +36,7 @@ final class APIUserVM {
     @MainActor
     func obtainEvents() async {
         do {
-            events = try await GitHubReq.req("users/\(name)/events", type: [EventModel].self)
+            events = try await GitHubReq.shared.req("users/\(name)/events", type: [EventModel].self)
         } catch { print("问题是：\(error)") }
     }
     
@@ -44,7 +44,7 @@ final class APIUserVM {
     @MainActor
     func obtainReceivedEvents() async {
         do {
-            receivedEvents = try await GitHubReq.req("users/\(name)/received_events", type: [EventModel].self)
+            receivedEvents = try await GitHubReq.shared.req("users/\(name)/received_events", type: [EventModel].self)
         } catch { print("问题是：\(error)") }
     }
     

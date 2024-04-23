@@ -11,6 +11,7 @@ import SwiftSoup
 import Ink
 import PhotosUI
 import InfoOrganizer
+import SMFile
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext

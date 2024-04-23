@@ -9,10 +9,19 @@ import SwiftUI
 import Combine
 import SwiftData
 import InfoOrganizer
+import SMFile
 
 @main
 struct SwiftPamphletAppApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    init() {
+        let gr = GitHubReq.shared
+        if SPC.gitHubAccessToken.isEmpty == true {
+            gr.githubat = SPC.githubAccessToken()
+        } else {
+            gr.githubat = SPC.gitHubAccessToken
+        }
+    }
     var body: some Scene {
         WindowGroup {
             HomeView()

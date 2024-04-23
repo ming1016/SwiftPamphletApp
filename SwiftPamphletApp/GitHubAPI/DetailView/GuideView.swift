@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Ink
+import SMFile
 
 struct GuideView: View {
     var number: Int
@@ -18,6 +19,6 @@ struct GuideView: View {
             Spacer()
         }
         .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
-        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(loadBundleString("\(number)" + ".md"))")), baseURLStr: "")
+        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(SMFile.loadBundleString("\(number)" + ".md"))")), baseURLStr: "")
     }
 }

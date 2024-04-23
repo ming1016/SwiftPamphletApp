@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MarkdownUI
+import SMFile
 
 struct LightingView<Content: View>: View {
     @Environment(\.colorScheme) var colorSchemeMode
@@ -48,7 +49,7 @@ struct IntroView: View {
             if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
                 Text("版本\(version)").font(.footnote)
             }
-            Markdown(loadBundleString("1.md"))
+            Markdown(SMFile.loadBundleString("1.md"))
         }
         .frame(minWidth: SPC.detailMinWidth)
     }

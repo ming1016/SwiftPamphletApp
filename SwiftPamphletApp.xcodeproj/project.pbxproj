@@ -244,6 +244,7 @@
 		08F4BE6028609D8700733F12 /* PlayCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE5F28609D8600733F12 /* PlayCharts.swift */; };
 		08F4BE6228616DC100733F12 /* PlayWeatherKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */; };
 		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
+		3ACA74FB2BD7964A0024B18E /* SMFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACA74FA2BD7964A0024B18E /* SMFile */; };
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
 		3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */; };
 		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
@@ -502,6 +503,7 @@
 				08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */,
 				3AE4CA382BD7813D005BEF2C /* InfoOrganizer in Frameworks */,
 				08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */,
+				3ACA74FB2BD7964A0024B18E /* SMFile in Frameworks */,
 				08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */,
 				08F14B3C2BBDA3EA005B46CC /* Nuke in Frameworks */,
 			);
@@ -1283,6 +1285,7 @@
 				08F14B3F2BBDA3EA005B46CC /* NukeUI */,
 				08F14B412BBDA3EA005B46CC /* NukeVideo */,
 				3AE4CA372BD7813D005BEF2C /* InfoOrganizer */,
+				3ACA74FA2BD7964A0024B18E /* SMFile */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -1321,6 +1324,7 @@
 				08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				08F14B3A2BBDA3EA005B46CC /* XCRemoteSwiftPackageReference "Nuke" */,
 				3AE4CA362BD7813D005BEF2C /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/InfoOrganizer" */,
+				3ACA74F92BD7964A0024B18E /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMFile" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -1808,6 +1812,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = SwiftPamphletApp/SharePackage/SMNetwork;
 		};
+		3ACA74F92BD7964A0024B18E /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMFile" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SwiftPamphletApp/SharePackage/SMFile;
+		};
 		3AE4CA362BD7813D005BEF2C /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/InfoOrganizer" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = SwiftPamphletApp/SharePackage/InfoOrganizer;
@@ -1901,6 +1909,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08F14B3A2BBDA3EA005B46CC /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeVideo;
+		};
+		3ACA74FA2BD7964A0024B18E /* SMFile */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SMFile;
 		};
 		3AE4CA372BD7813D005BEF2C /* InfoOrganizer */ = {
 			isa = XCSwiftPackageProductDependency;

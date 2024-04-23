@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SMFile
 
 @Observable
 final class IssueVM {
@@ -23,7 +24,7 @@ final class IssueVM {
     func doing(_ somethinglike: IssueActionType) {
         switch somethinglike {
         case .customIssues: // 内容
-            customIssues = loadBundleJSONFile(guideName + ".json")
+            customIssues = SMFile.loadBundleJSONFile(guideName + ".json")
         }
     }
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SMFile
 
 struct AutoTask {
     
@@ -14,7 +15,7 @@ struct AutoTask {
 //        let a1 = ["lib-SwiftUI"]
         var mk = ""
         for e in a1 {
-            let fc:[CustomIssuesModel] = loadBundleJSONFile(e + ".json")
+            let fc:[CustomIssuesModel] = SMFile.loadBundleJSONFile(e + ".json")
             if e == "guide-syntax" {
                 mk += "## 语法速查\n\n"
             }
@@ -37,13 +38,13 @@ struct AutoTask {
                 mk += "### \(e1.name)\n\n"
                 for e2 in e1.issues {
                     mk += "#### \(e2.title)\n\n"
-                    let str = loadBundleString(String(e2.number) + ".md")
+                    let str = SMFile.loadBundleString(String(e2.number) + ".md")
                     mk += str + "\n\n"
                 }
             }
         }
         
-        writeToDownload(fileName: "read.md", content: mk)
+        SMFile.writeToDownload(fileName: "read.md", content: mk)
     }
     
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 import WebKit
 import MarkdownUI
-
+import SMFile
 
 // MARK: - 大纲
 struct SPOutlineListView<D, Content>: View where D: RandomAccessCollection, D.Element: Identifiable, Content: View {
@@ -223,7 +223,7 @@ struct WebUIViewWithSave: NSViewRepresentable {
         
         if savingData != nil {
             if let data = savingData {
-                nsView.load(data, mimeType: "application/x-webarchive", characterEncodingName: "utf-8", baseURL: getDocumentsDirectory())
+                nsView.load(data, mimeType: "application/x-webarchive", characterEncodingName: "utf-8", baseURL: SMFile.getDocumentsDirectory())
                 isStop = true
             }
         } else {
