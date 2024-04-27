@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import SMGitHub
 
 struct EditDeveloper: View {
     @Bindable var dev: DeveloperModel

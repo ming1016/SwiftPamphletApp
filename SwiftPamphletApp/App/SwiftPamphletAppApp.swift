@@ -10,6 +10,7 @@ import Combine
 import SwiftData
 import InfoOrganizer
 import SMFile
+import SMGitHub
 
 @main
 struct SwiftPamphletAppApp: App {

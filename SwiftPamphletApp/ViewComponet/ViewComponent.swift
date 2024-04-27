@@ -273,23 +273,6 @@ struct GitHubApiTimeView: View {
     }
 }
 
-/// 列表加按钮性能问题，需观察官方后面是否解决
-/// https://twitter.com/fcbunn/status/1259078251340800000
-struct FixAwfulPerformanceStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .font(.body)
-            .padding(EdgeInsets.init(top: 2, leading: 6, bottom: 2, trailing: 6))
-            .foregroundColor(configuration.isPressed ? Color(nsColor: NSColor.selectedControlTextColor) : Color(nsColor: NSColor.controlTextColor))
-            .background(configuration.isPressed ? Color(nsColor: NSColor.selectedControlColor) : Color(nsColor: NSColor.controlBackgroundColor))
-            .overlay(RoundedRectangle(cornerRadius: 6.0).stroke(Color(nsColor: NSColor.lightGray), lineWidth: 0.5))
-            .clipShape(RoundedRectangle(cornerRadius: 6.0))
-            .shadow(color: Color.gray, radius: 0.5, x: 0, y: 0.5)
-    }
-}
-
-
-
 // MARK: - 跳到 Github 网站
 struct ButtonGoGitHubWeb: View {
     var url: String
@@ -310,6 +293,6 @@ struct ButtonGoGitHubWeb: View {
                 Text(text)
             }
 
-        }.buttonStyle(FixAwfulPerformanceStyle())
+        }
     }
 }

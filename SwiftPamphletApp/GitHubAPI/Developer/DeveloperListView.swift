@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import SMDate
+import SMGitHub
 
 struct DeveloperListView: View {
     @Environment(\.modelContext) var modelContext

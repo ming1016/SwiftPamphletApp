@@ -7,6 +7,7 @@
 
 import SwiftUI
 import InfoOrganizer
+import SMGitHub
 
 struct DataLink: Identifiable {
     let id = UUID()

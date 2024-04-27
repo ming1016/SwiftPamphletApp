@@ -7,6 +7,7 @@
 
 import SwiftUI
 import InfoOrganizer
+import SMGitHub
 
 struct HomeView: View {
     @State private var selectedDataLinkString: String = ""

@@ -160,6 +160,7 @@
 		08522BF227D1D49B005FF059 /* PlayCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08522BF127D1D49B005FF059 /* PlayCanvas.swift */; };
 		085BB77427D22FCA00E8F69A /* 172.md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77327D22FCA00E8F69A /* 172.md */; };
 		085BB77627D22FE300E8F69A /* 173.md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77527D22FE300E8F69A /* 173.md */; };
+		0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */ = {isa = PBXBuildFile; productRef = 0868D00A2BDD37280023C871 /* SMGitHub */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
@@ -496,6 +497,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
 				08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */,
 				08F14B422BBDA3EA005B46CC /* NukeVideo in Frameworks */,
@@ -1289,6 +1291,7 @@
 				3AE4CA372BD7813D005BEF2C /* InfoOrganizer */,
 				3ACA74FA2BD7964A0024B18E /* SMFile */,
 				3A46DEF42BD7AAB2008AD993 /* SMDate */,
+				0868D00A2BDD37280023C871 /* SMGitHub */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -1329,6 +1332,7 @@
 				3AE4CA362BD7813D005BEF2C /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/InfoOrganizer" */,
 				3ACA74F92BD7964A0024B18E /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMFile" */,
 				3A46DEF32BD7AAB2008AD993 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMDate" */,
+				0868D0092BDD37280023C871 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMGitHub" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -1812,6 +1816,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		0868D0092BDD37280023C871 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMGitHub" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SwiftPamphletApp/SharePackage/SMGitHub;
+		};
 		08ED80142B9C54DE0069B7EC /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMNetwork" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = SwiftPamphletApp/SharePackage/SMNetwork;
@@ -1883,6 +1891,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08448F4C279E8CA400B61353 /* XCRemoteSwiftPackageReference "ink" */;
 			productName = Ink;
+		};
+		0868D00A2BDD37280023C871 /* SMGitHub */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SMGitHub;
 		};
 		08BF26D22768A5B40064DDAC /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;
