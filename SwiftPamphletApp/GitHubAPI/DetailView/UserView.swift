@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import SMGitHub
 
 struct UserEventView: View {
     var events: [EventModel]

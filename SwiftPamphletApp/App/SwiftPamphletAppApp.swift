@@ -36,7 +36,7 @@ struct SwiftPamphletAppApp: App {
 }
 
 // MARK: - UnCat
-protocol Jsonable : Identifiable, Decodable, Hashable {}
+
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!

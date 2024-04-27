@@ -248,7 +248,6 @@
 		3A46DEF52BD7AAB2008AD993 /* SMDate in Frameworks */ = {isa = PBXBuildFile; productRef = 3A46DEF42BD7AAB2008AD993 /* SMDate */; };
 		3ACA74FB2BD7964A0024B18E /* SMFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACA74FA2BD7964A0024B18E /* SMFile */; };
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
-		3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */; };
 		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
 		3AE4CA382BD7813D005BEF2C /* InfoOrganizer in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE4CA372BD7813D005BEF2C /* InfoOrganizer */; };
 /* End PBXBuildFile section */
@@ -488,7 +487,6 @@
 		08F4BE6128616DC100733F12 /* PlayWeatherKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWeatherKit.swift; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
-		3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperModel.swift; sourceTree = "<group>"; };
 		3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeveloper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1257,7 +1255,6 @@
 			children = (
 				3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */,
 				3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */,
-				3AE0D59B2BAB0BD800D6D925 /* DeveloperModel.swift */,
 			);
 			path = Developer;
 			sourceTree = "<group>";
@@ -1526,7 +1523,6 @@
 				08448F41279AC1A900B61353 /* PlayMacOS.swift in Sources */,
 				0896FB9027BA39B100676B7F /* PlayButtonView.swift in Sources */,
 				08F14B442BBE2865005B46CC /* ViewComponentImage.swift in Sources */,
-				3AE0D59C2BAB0BD800D6D925 /* DeveloperModel.swift in Sources */,
 				08BE635A27C6575C002BC6A8 /* PlayGroupBoxView.swift in Sources */,
 				088EE8F527BD24E000764525 /* PlayLinkView.swift in Sources */,
 				084417792B99BE720049297D /* DataLink.swift in Sources */,

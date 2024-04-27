@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SMGitHub
 
 struct ReadmeView: View {
     @Environment(\.colorScheme) private var colorScheme
