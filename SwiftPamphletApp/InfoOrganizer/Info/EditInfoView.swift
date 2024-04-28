@@ -328,7 +328,7 @@ struct EditInfoView: View {
                                     } else {
                                         Button(oneTerm) {
                                             showSheet = false
-                                            info.des = oneTerm + "\n" + info.des
+                                            info.des = "[\(oneTerm)]" + "\n" + info.des
                                         }
                                     }
                                 }

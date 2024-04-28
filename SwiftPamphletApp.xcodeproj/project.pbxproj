@@ -47,9 +47,9 @@
 		08448F59279EA84100B61353 /* 51.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F56279EA84100B61353 /* 51.md */; };
 		08448F5A279EA84100B61353 /* 52.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F57279EA84100B61353 /* 52.md */; };
 		08448F5B279EA84100B61353 /* 131.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F58279EA84100B61353 /* 131.md */; };
-		08448F5E279EB23600B61353 /* 99.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F5D279EB23600B61353 /* 99.md */; };
-		08448F64279EB32C00B61353 /* 50.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F63279EB32C00B61353 /* 50.md */; };
-		08448F66279EB33F00B61353 /* 103.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F65279EB33F00B61353 /* 103.md */; };
+		08448F5E279EB23600B61353 /* SQLite.swift的使用.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F5D279EB23600B61353 /* SQLite.swift的使用.md */; };
+		08448F64279EB32C00B61353 /* Swift规范.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F63279EB32C00B61353 /* Swift规范.md */; };
+		08448F66279EB33F00B61353 /* Swift书单.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F65279EB33F00B61353 /* Swift书单.md */; };
 		08448F6A279EB47E00B61353 /* 120.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F69279EB47E00B61353 /* 120.md */; };
 		08448F6D279EB51000B61353 /* 121.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F6C279EB51000B61353 /* 121.md */; };
 		08448F6F279EB56400B61353 /* 122.md in Resources */ = {isa = PBXBuildFile; fileRef = 08448F6E279EB56400B61353 /* 122.md */; };
@@ -140,7 +140,7 @@
 		0844902E279ECF1C00B61353 /* 92.md in Resources */ = {isa = PBXBuildFile; fileRef = 0844902D279ECF1C00B61353 /* 92.md */; };
 		08449030279ECF7D00B61353 /* 1.md in Resources */ = {isa = PBXBuildFile; fileRef = 0844902F279ECF7D00B61353 /* 1.md */; };
 		084E1A5F27B4F7BB0072BBB6 /* 142.md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A5E27B4F7BB0072BBB6 /* 142.md */; };
-		084E1A6327B517FC0072BBB6 /* 143.md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A6227B517FC0072BBB6 /* 143.md */; };
+		084E1A6327B517FC0072BBB6 /* Swift各版本演进.md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A6227B517FC0072BBB6 /* Swift各版本演进.md */; };
 		084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E1A6427B51EDB0072BBB6 /* AutoTask.swift */; };
 		0850444C27B0D1F80096D556 /* 135.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850444B27B0D1F80096D556 /* 135.md */; };
 		0850444E27B0D4EA0096D556 /* 136.md in Resources */ = {isa = PBXBuildFile; fileRef = 0850444D27B0D4EA0096D556 /* 136.md */; };
@@ -289,9 +289,9 @@
 		08448F56279EA84100B61353 /* 51.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 51.md; sourceTree = "<group>"; };
 		08448F57279EA84100B61353 /* 52.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 52.md; sourceTree = "<group>"; };
 		08448F58279EA84100B61353 /* 131.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 131.md; sourceTree = "<group>"; };
-		08448F5D279EB23600B61353 /* 99.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 99.md; sourceTree = "<group>"; };
-		08448F63279EB32C00B61353 /* 50.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 50.md; sourceTree = "<group>"; };
-		08448F65279EB33F00B61353 /* 103.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 103.md; sourceTree = "<group>"; };
+		08448F5D279EB23600B61353 /* SQLite.swift的使用.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SQLite.swift的使用.md"; sourceTree = "<group>"; };
+		08448F63279EB32C00B61353 /* Swift规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Swift规范.md"; sourceTree = "<group>"; };
+		08448F65279EB33F00B61353 /* Swift书单.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Swift书单.md"; sourceTree = "<group>"; };
 		08448F69279EB47E00B61353 /* 120.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 120.md; sourceTree = "<group>"; };
 		08448F6C279EB51000B61353 /* 121.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 121.md; sourceTree = "<group>"; };
 		08448F6E279EB56400B61353 /* 122.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 122.md; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 		0844902D279ECF1C00B61353 /* 92.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 92.md; sourceTree = "<group>"; };
 		0844902F279ECF7D00B61353 /* 1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 1.md; sourceTree = "<group>"; };
 		084E1A5E27B4F7BB0072BBB6 /* 142.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 142.md; sourceTree = "<group>"; };
-		084E1A6227B517FC0072BBB6 /* 143.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 143.md; sourceTree = "<group>"; };
+		084E1A6227B517FC0072BBB6 /* Swift各版本演进.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Swift各版本演进.md"; sourceTree = "<group>"; };
 		084E1A6427B51EDB0072BBB6 /* AutoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTask.swift; sourceTree = "<group>"; };
 		0850444B27B0D1F80096D556 /* 135.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 135.md; sourceTree = "<group>"; };
 		0850444D27B0D4EA0096D556 /* 136.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = 136.md; sourceTree = "<group>"; };
@@ -549,6 +549,9 @@
 		08448F44279E7E0300B61353 /* Swift语法 */ = {
 			isa = PBXGroup;
 			children = (
+				08448F65279EB33F00B61353 /* Swift书单.md */,
+				08448F63279EB32C00B61353 /* Swift规范.md */,
+				084E1A6227B517FC0072BBB6 /* Swift各版本演进.md */,
 				08448FD8279EC6E100B61353 /* 操作符 */,
 				08448FD1279EC5EB00B61353 /* 集合 */,
 				08448FC6279EC52300B61353 /* 控制流 */,
@@ -582,10 +585,6 @@
 			isa = PBXGroup;
 			children = (
 				08026C332869999800792EF1 /* APMAndBuilder */,
-				084E1A6127B517990072BBB6 /* SwiftThoseThings */,
-				08448F61279EB2B700B61353 /* Standard */,
-				08448F5F279EB25F00B61353 /* RecommendedMaterials */,
-				08448F5C279EB19700B61353 /* ThirdLibUse */,
 				08448F4F279E8E9F00B61353 /* macOS */,
 			);
 			path = Subject;
@@ -632,28 +631,12 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		08448F5C279EB19700B61353 /* ThirdLibUse */ = {
+		08448F5C279EB19700B61353 /* Swift三方库使用 */ = {
 			isa = PBXGroup;
 			children = (
-				08448F5D279EB23600B61353 /* 99.md */,
+				08448F5D279EB23600B61353 /* SQLite.swift的使用.md */,
 			);
-			path = ThirdLibUse;
-			sourceTree = "<group>";
-		};
-		08448F5F279EB25F00B61353 /* RecommendedMaterials */ = {
-			isa = PBXGroup;
-			children = (
-				08448F65279EB33F00B61353 /* 103.md */,
-			);
-			path = RecommendedMaterials;
-			sourceTree = "<group>";
-		};
-		08448F61279EB2B700B61353 /* Standard */ = {
-			isa = PBXGroup;
-			children = (
-				08448F63279EB32C00B61353 /* 50.md */,
-			);
-			path = Standard;
+			path = "Swift三方库使用";
 			sourceTree = "<group>";
 		};
 		08448F67279EB40D00B61353 /* BasicLibrary */ = {
@@ -937,14 +920,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		084E1A6127B517990072BBB6 /* SwiftThoseThings */ = {
-			isa = PBXGroup;
-			children = (
-				084E1A6227B517FC0072BBB6 /* 143.md */,
-			);
-			path = SwiftThoseThings;
-			sourceTree = "<group>";
-		};
 		0850445127B110950096D556 /* InsidePropertyWrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -1163,6 +1138,7 @@
 				08448F47279E7E3A00B61353 /* SwiftUI */,
 				08448F46279E7E3400B61353 /* Subject */,
 				08448F45279E7E1A00B61353 /* Features */,
+				08448F5C279EB19700B61353 /* Swift三方库使用 */,
 				08448F44279E7E0300B61353 /* Swift语法 */,
 				086A5F57274CB8B500FECE02 /* guide-subject.json */,
 				086A5F492744EF3B00FECE02 /* guide-features.json */,
@@ -1335,7 +1311,7 @@
 				08448FE4279EC7ED00B61353 /* 范围.md in Resources */,
 				08448F92279EB8CA00B61353 /* 130.md in Resources */,
 				08522BED27CF7A0C005FF059 /* 170.md in Resources */,
-				084E1A6327B517FC0072BBB6 /* 143.md in Resources */,
+				084E1A6327B517FC0072BBB6 /* Swift各版本演进.md in Resources */,
 				08448F6F279EB56400B61353 /* 122.md in Resources */,
 				0844900C279ECBB400B61353 /* 87.md in Resources */,
 				08448FA3279EBB1B00B61353 /* 数字.md in Resources */,
@@ -1376,7 +1352,7 @@
 				08449013279ECC6300B61353 /* 58.md in Resources */,
 				0844901E279ECD9D00B61353 /* 66.md in Resources */,
 				08448FD3279EC60300B61353 /* 数组.md in Resources */,
-				08448F64279EB32C00B61353 /* 50.md in Resources */,
+				08448F64279EB32C00B61353 /* Swift规范.md in Resources */,
 				08026C482869B28A00792EF1 /* 181.md in Resources */,
 				08448FD7279EC64600B61353 /* 字典.md in Resources */,
 				08026C412869B1BF00792EF1 /* 183.md in Resources */,
@@ -1390,7 +1366,7 @@
 				086A5F58274CB8B500FECE02 /* guide-subject.json in Resources */,
 				08448FAD279EC2E900B61353 /* 泛型和协议.md in Resources */,
 				08026C532869B44400792EF1 /* 192.md in Resources */,
-				08448F66279EB33F00B61353 /* 103.md in Resources */,
+				08448F66279EB33F00B61353 /* Swift书单.md in Resources */,
 				08448FDA279EC6F500B61353 /* 赋值.md in Resources */,
 				08C3BB8027CE4A8500ACF0FE /* 162.md in Resources */,
 				08BE633027BE6CAA002BC6A8 /* 148.md in Resources */,
@@ -1445,7 +1421,7 @@
 				08448FDC279EC71800B61353 /* 计算符.md in Resources */,
 				0844902E279ECF1C00B61353 /* 92.md in Resources */,
 				08026C4A2869B38F00792EF1 /* 184.md in Resources */,
-				08448F5E279EB23600B61353 /* 99.md in Resources */,
+				08448F5E279EB23600B61353 /* SQLite.swift的使用.md in Resources */,
 				08BE635427C63828002BC6A8 /* 152.md in Resources */,
 				08448FEA279EC86700B61353 /* 运算符.md in Resources */,
 				08449006279ECB4900B61353 /* 84.md in Resources */,

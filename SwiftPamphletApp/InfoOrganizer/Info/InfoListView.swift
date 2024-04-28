@@ -142,7 +142,7 @@ struct InfoListView: View {
                             } else {
                                 Button(oneTerm) {
                                     showSheet = false
-                                    searchText = oneTerm
+                                    searchText = "[\(oneTerm)]"
                                 }
                             }
                         }

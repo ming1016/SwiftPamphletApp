@@ -78,7 +78,13 @@ struct GuideListView: View {
                 L(t: "逻辑"),
                 L(t: "恒等"),
                 L(t: "运算符")
-            ])
+            ]),
+            L(t: "Swift各版本演进"),
+            L(t: "Swift规范"),
+            L(t: "Swift书单")
+        ]),
+        L(t: "Swift 三方库使用",sub: [
+            L(t: "SQLite.swift的使用")
         ])
     ]
     
