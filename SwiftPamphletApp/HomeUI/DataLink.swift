@@ -55,10 +55,10 @@ struct DataLink: Identifiable {
                     IntroView()
                 }
             }
-        case "语法速查":
+        case "Apple 技术":
             switch type {
             case .content:
-                IssuesListFromCustomView(vm: IssueVM(guideName: "guide-syntax"))
+                GuideListView()
             case .detail:
                 IntroView()
             }
@@ -117,8 +117,10 @@ extension DataLink {
         DataLink(title: "Github", imageName: "", children: [
             DataLink(title: "开发/仓库", imageName: "p5"),
         ]),
+        DataLink(title: "开发手册", imageName: "", children: [
+            DataLink(title: "Apple 技术", imageName: "p22")
+        ]),
         DataLink(title: "Swift指南", imageName: "", children: [
-            DataLink(title: "语法速查", imageName: "p23"),
             DataLink(title: "特性", imageName: "p10"),
             DataLink(title: "专题", imageName: "p12")
         ]),

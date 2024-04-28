@@ -27,6 +27,7 @@ struct SwiftPamphletAppApp: App {
         WindowGroup {
             HomeView()
                 .modelContainer(for: [IOInfo.self, DeveloperModel.self], isUndoEnabled: true)
+//            PlayListView()
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
         Settings {

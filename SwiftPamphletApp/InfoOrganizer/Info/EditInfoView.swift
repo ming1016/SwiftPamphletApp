@@ -264,7 +264,10 @@ struct EditInfoView: View {
                     savingData: $info.webArchive,
                     isStop: $isStopLoadingWeb
                 )
-                TextField(text: $info.des, prompt: Text("输入文本进行记录"), axis: .vertical) {}
+//                TextField(text: $info.des, prompt: Text("输入文本进行记录"), axis: .vertical) {}
+//                    .padding(5)
+                TextEditor(text: $info.des)
+                    .frame(height: 53)
                     .padding(5)
             }
                 .tabItem { Label("网页", systemImage: "circle") }

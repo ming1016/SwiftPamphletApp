@@ -49,7 +49,8 @@ public struct SMFile {
     public static func loadBundleData(_ filename: String) -> Data {
         let data: Data
         guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {
-            fatalError("Couldn't find \(filename) in main bundle.")
+            return Data()
+//            fatalError("Couldn't find \(filename) in main bundle.")
         }
         do {
             data = try Data(contentsOf: file)

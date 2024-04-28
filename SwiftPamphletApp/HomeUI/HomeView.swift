@@ -50,7 +50,7 @@ struct HomeView: View {
                     selectInfo: $selectInfo,
                     selectDev: $selectDev,
                     selectInfoBindable: selectInfo,
-                    selectDevBindable: selectDev,
+                    selectDevBindable: selectDev, 
                     type: .detail
                 )
             } else {
