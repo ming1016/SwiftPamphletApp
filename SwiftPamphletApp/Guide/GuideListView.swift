@@ -83,8 +83,47 @@ struct GuideListView: View {
             L(t: "Swift规范"),
             L(t: "Swift书单")
         ]),
+        L(t: "基础库", sub: [
+            L(t: "系统及设备", sub: [
+                L(t: "系统判断"),
+                L(t: "版本兼容"),
+                L(t: "canImport判断库是否可使用"),
+                L(t: "targetEnvironment环境的判断")
+            ]),
+            L(t: "自带属性包装", sub: [
+                L(t: "@resultBuilder"),
+                L(t: "@dynamicMemberLookup动态成员查询"),
+                L(t: "@dynamicCallable动态可调用类型"),
+            ]),
+            L(t: "时间"),
+            L(t: "格式化"),
+            L(t: "度量值"),
+            L(t: "Data"),
+            L(t: "文件"),
+            L(t: "Scanner"),
+            L(t: "AttributeString"),
+            L(t: "随机"),
+            L(t: "UserDefaults")
+        ]),
+        L(t: "设计模式", sub: [
+            L(t: "单例")
+        ]),
         L(t: "Swift 三方库使用",sub: [
             L(t: "SQLite.swift的使用")
+        ]),
+        L(t: "macOS", sub: [
+            L(t: "macOS技术演进"),
+            L(t: "macOS范例"),
+            L(t: "三栏结构"),
+            L(t: "全屏模式"),
+            L(t: "macOS共享菜单"),
+            L(t: "macOS剪贴板")
+        ]),
+        L(t: "性能和构建", sub: [
+            L(t: "性能技术演进"),
+            L(t: "内存管理"),
+            L(t: "调试"),
+            L(t: "链接器")
         ])
     ]
     

@@ -69,13 +69,6 @@ struct DataLink: Identifiable {
             case .detail:
                 IntroView()
             }
-        case "专题":
-            switch type {
-            case .content:
-                IssuesListFromCustomView(vm: IssueVM(guideName:"guide-subject"))
-            case .detail:
-                IntroView()
-            }
         case "SwiftUI":
             switch type {
             case .content:
@@ -122,7 +115,6 @@ extension DataLink {
         ]),
         DataLink(title: "Swift指南", imageName: "", children: [
             DataLink(title: "特性", imageName: "p10"),
-            DataLink(title: "专题", imageName: "p12")
         ]),
         DataLink(title: "库使用指南", imageName: "", children: [
             DataLink(title: "SwiftUI", imageName: "p3"),
