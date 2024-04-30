@@ -62,39 +62,11 @@ struct DataLink: Identifiable {
             case .detail:
                 IntroView()
             }
-        case "特性":
-            switch type {
-            case .content:
-                IssuesListFromCustomView(vm: IssueVM(guideName:"guide-features"))
-            case .detail:
-                IntroView()
-            }
-        case "SwiftUI":
-            switch type {
-            case .content:
-                IssuesListFromCustomView(vm: IssueVM(guideName:"lib-SwiftUI"))
-            case .detail:
-                IntroView()
-            }
-        case "Combine":
-            switch type {
-            case .content:
-                IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Combine"))
-            case .detail:
-                IntroView()
-            }
-        case "Concurrency":
-            switch type {
-            case .content:
-                IssuesListFromCustomView(vm: IssueVM(guideName:"lib-Concurrency"))
-            case .detail:
-                IntroView()
-            }
         default:
             switch type {
             case .content:
-                // 默认是语法速查
-                IssuesListFromCustomView(vm: IssueVM(guideName: "guide-syntax"))
+                // 默认
+                GuideListView()
             case .detail:
                 IntroView()
             }
@@ -112,14 +84,6 @@ extension DataLink {
         ]),
         DataLink(title: "开发手册", imageName: "", children: [
             DataLink(title: "Apple 技术", imageName: "p22")
-        ]),
-        DataLink(title: "Swift指南", imageName: "", children: [
-            DataLink(title: "特性", imageName: "p10"),
-        ]),
-        DataLink(title: "库使用指南", imageName: "", children: [
-            DataLink(title: "SwiftUI", imageName: "p3"),
-            DataLink(title: "Combine", imageName: "p19"),
-            DataLink(title: "Concurrency", imageName: "p1")
         ])
     ]
 }

@@ -26,10 +26,10 @@ struct SPC {
     static let isShowInspector = "isShowInspector"
     static let inspectorType = "inspectorType"
 
-    static func loadCustomIssues(jsonFileName: String) -> [CustomIssuesModel] {
-        let lc: [CustomIssuesModel] = SMFile.loadBundleJSONFile(jsonFileName + ".json")
-        return lc
-    }
+//    static func loadCustomIssues(jsonFileName: String) -> [CustomIssuesModel] {
+//        let lc: [CustomIssuesModel] = SMFile.loadBundleJSONFile(jsonFileName + ".json")
+//        return lc
+//    }
     
     static func rssStyle() -> String {
         let data = SMFile.loadBundleData("css_cn.html")

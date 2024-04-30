@@ -93,7 +93,11 @@ struct GuideListView: View {
             L(t: "自带属性包装", sub: [
                 L(t: "@resultBuilder"),
                 L(t: "@dynamicMemberLookup动态成员查询"),
-                L(t: "@dynamicCallable动态可调用类型"),
+                L(t: "@dynamicCallable动态可调用类型")
+            ]),
+            L(t: "自带协议", sub: [
+                L(t: "@resultBuilder"),
+                L(t: "JSON没有id字段")
             ]),
             L(t: "时间"),
             L(t: "格式化"),
@@ -105,11 +109,116 @@ struct GuideListView: View {
             L(t: "随机"),
             L(t: "UserDefaults")
         ]),
-        L(t: "设计模式", sub: [
-            L(t: "单例")
+        L(t: "SwiftUI",sub: [
+            L(t: "介绍",sub: [
+                L(t: "SwiftUI是什么"),
+                L(t: "SwiftUI参考资料")
+            ]),
+            L(t: "视图组件使用",sub: [
+                L(t: "SwiftUI对标的UIKit视图"),
+                L(t: "Text"),
+                L(t: "Link"),
+                L(t: "Label"),
+                L(t: "TextEditor"),
+                L(t: "TextField"),
+                L(t: "Button"),
+                L(t: "进度"),
+                L(t: "Image"),
+                L(t: "ControlGroup"),
+                L(t: "GroupBox"),
+                L(t: "Stack"),
+                L(t: "Advanced layout control"),
+                L(t: "Navigation"),
+                L(t: "List"),
+                L(t: "LazyVStack和LazyHStack"),
+                L(t: "LazyVGrid和LazyHGrid"),
+                L(t: "table"),
+                L(t: "ScrollView"),
+                L(t: "浮层"),
+                L(t: "TabView"),
+                L(t: "SwiftCharts"),
+                L(t: "Toggle"),
+                L(t: "Picker"),
+                L(t: "Slider"),
+                L(t: "Stepper"),
+                L(t: "Form"),
+                L(t: "Keyboard"),
+                L(t: "Transferable"),
+                L(t: "ShareLink")
+            ]),
+            L(t: "视觉",sub: [
+                L(t: "SwiftUI颜色"),
+                L(t: "SwiftUI Effect"),
+                L(t: "SwiftUI动画"),
+                L(t: "SwiftUI Canvas"),
+                L(t: "SF Symbol")
+            ])
         ]),
-        L(t: "Swift 三方库使用",sub: [
+        L(t: "Combine",sub: [
+            L(t: "介绍",sub: [
+                L(t: "Combine是什么"),
+                L(t: "Combine的资料")
+            ]),
+            L(t: "使用说明",sub: [
+                L(t: "publisher"),
+                L(t: "Just"),
+                L(t: "PassthroughSubject"),
+                L(t: "Empty"),
+                L(t: "CurrentValueSubject"),
+                L(t: "removeDuplicates"),
+                L(t: "flatMap"),
+                L(t: "append"),
+                L(t: "prepend"),
+                L(t: "merge"),
+                L(t: "zip"),
+                L(t: "combineLatest"),
+                L(t: "Scheduler")
+            ]),
+            L(t: "使用场景",sub: [
+                L(t: "Combine网络请求"),
+                L(t: "Combine KVO"),
+                L(t: "Combine通知"),
+                L(t: "Combine Timer")
+            ])
+        ]),
+        L(t: "Swift三方库使用",sub: [
             L(t: "SQLite.swift的使用")
+        ]),
+        L(t: "系统能力",sub: [
+            L(t: "Swift-DocC")
+        ]),
+        L(t: "工程模式", sub: [
+            L(t: "单例"),
+            L(t: "程序入口点")
+        ]),
+        L(t: "多线程",sub: [
+            L(t: "Swift Concurrency",sub: [
+                L(t: "Swift Concurrency是什么"),
+                L(t: "async await"),
+                L(t: "Async Sequences"),
+                L(t: "结构化并发"),
+                L(t: "Actors"),
+                L(t: "Distributed Actors"),
+                L(t: "Swift Concurrency相关提案"),
+                L(t: "Swift Concurrency学习路径"),
+                L(t: "Swift Concurrency和Combine"),
+                L(t: "Concurrency技术演进")
+            ])
+        ]),
+        L(t: "动画", sub: [
+            L(t: "布局动画")
+        ]),
+        L(t: "网络",sub: [
+            L(t: "网络状态检查")
+        ]),
+        L(t: "性能和构建", sub: [
+            L(t: "性能技术演进"),
+            L(t: "内存管理"),
+            L(t: "调试"),
+            L(t: "链接器")
+        ]),
+        L(t: "安全",sub: [
+            L(t: "Keychain")
         ]),
         L(t: "macOS", sub: [
             L(t: "macOS技术演进"),
@@ -118,12 +227,6 @@ struct GuideListView: View {
             L(t: "全屏模式"),
             L(t: "macOS共享菜单"),
             L(t: "macOS剪贴板")
-        ]),
-        L(t: "性能和构建", sub: [
-            L(t: "性能技术演进"),
-            L(t: "内存管理"),
-            L(t: "调试"),
-            L(t: "链接器")
         ])
     ]
     
