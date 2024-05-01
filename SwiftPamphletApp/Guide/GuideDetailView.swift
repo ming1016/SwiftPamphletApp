@@ -8,6 +8,7 @@
 import SwiftUI
 import Ink
 import SMFile
+import SMDate
 import SwiftData
 import InfoOrganizer
 
@@ -52,15 +53,28 @@ struct GuideDetailView: View {
             }
         }
         .inspector(isPresented: $isShowInspector) {
-            Button("添加资料") {
-                let info = IOInfo(name: "新增\(t)资料 - \(nowDateString())", url: "", des: "", relateName: t)
-                modelContext.insert(info)
-                selectInfo = info
+            HStack {
+                Spacer()
+                Button("添加资料") {
+                    let info = IOInfo(name: "新增\(t)资料 - \(SMDate.nowDateString())", url: "", des: "", relateName: t)
+                    modelContext.insert(info)
+                    selectInfo = info
+                }
+                Spacer()
+                // 关闭
+                Button(action: {
+                    isShowInspector = false
+                    selectInfo = nil
+                }, label: {
+                    Image(systemName: "xmark.circle")
+                })
+                .help("CMD + d")
+                .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
             }
-            .padding(5)
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
             List(selection: $selectInfo) {
                 ForEach(infos) { info in
-                        InfoRowView(info: info, selectedInfo: selectInfo)
+                        InfoRowView(info: info)
                         .tag(info)
                         .onAppear {
                             if info == infos.last {

@@ -16,6 +16,9 @@ struct UnCategoryInfoListView: View {
     var body: some View {
         UnCategoryInfosView(selectInfo: $selectInfo, limit: $limit)
             .navigationTitle("资料列表 - 未分类")
+            .onDisappear {
+                selectInfo = nil
+            }
     }
 }
 

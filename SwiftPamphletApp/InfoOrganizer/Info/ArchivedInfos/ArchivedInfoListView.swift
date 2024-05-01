@@ -16,6 +16,9 @@ struct ArchivedInfoListView: View {
     var body: some View {
         ArchivedInfosView(selectInfo: $selectInfo, limit: $limit)
             .navigationTitle("资料列表 - 归档")
+            .onDisappear {
+                selectInfo = nil
+            }
     }
 }
 

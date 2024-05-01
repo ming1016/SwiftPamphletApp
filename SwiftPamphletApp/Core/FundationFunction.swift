@@ -10,14 +10,13 @@ import SwiftUI
 import Combine
 import Network
 
-// MARK: - 时间
-
-func nowDateString() -> String {
-    let locale = Locale(identifier: "zh_Hans")
-    return Date.now.formatted(.dateTime.locale(locale))
+// MARK: - Web
+func hostFromString(_ urlString: String) -> String {
+    let url = URL(string: urlString)
+    return url?.host() ?? ""
 }
 
-// MARK: - Web
+
 func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> String {
     let reStr = """
 <html lang="zh-Hans" data-darkmode="auto">

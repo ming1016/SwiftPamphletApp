@@ -27,7 +27,7 @@ struct UnCategoryInfosView: View {
     var body: some View {
         List(selection: $selectInfo) {
             ForEach(infos) { info in
-                InfoRowView(info: info, selectedInfo: selectInfo)
+                InfoRowView(info: info)
                     .tag(info)
                     .onAppear {
                         if info == infos.last {

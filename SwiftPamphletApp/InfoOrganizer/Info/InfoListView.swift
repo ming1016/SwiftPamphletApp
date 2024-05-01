@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import InfoOrganizer
+import SMDate
 
 struct InfoListView: View {
     @Environment(\.modelContext) var modelContext
@@ -117,6 +118,9 @@ struct InfoListView: View {
                     sortOrder = [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
                 }
             }
+            .onDisappear {
+                selectInfo = nil
+            }
     }
     
     
@@ -205,7 +209,7 @@ struct InfoListView: View {
     
     // MARK: 资料整理数据方面
     func addInfo() {
-        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", des: "", relateName: "")
+        let info = IOInfo(name: "简单记录 - \(SMDate.nowDateString())", url: "", des: "", relateName: "")
         for cate in cates {
             if cate.name == filterCate {
                 info.category = cate

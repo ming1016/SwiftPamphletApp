@@ -15,6 +15,9 @@ struct StarInfoListView: View {
     var body: some View {
         StarInfosView(selectInfo: $selectInfo, limit: $limit)
             .navigationTitle("资料列表 - 收藏")
+            .onDisappear {
+                selectInfo = nil
+            }
     }
 }
 

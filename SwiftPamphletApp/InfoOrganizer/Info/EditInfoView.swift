@@ -52,6 +52,11 @@ struct EditInfoView: View {
                 
                 Section {
                     categoryInputView
+                    if info.relateName.isEmpty == false {
+                        TextField("关联:", text: $info.relateName)
+                            .rounded()
+                            .foregroundStyle(Color.indigo)
+                    }
                 }
                 // MARK: Tab 切换
                 Section(footer: Text("文本支持 markdown 格式")) {

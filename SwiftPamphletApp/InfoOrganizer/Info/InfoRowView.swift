@@ -11,12 +11,7 @@ import SMDate
 
 struct InfoRowView: View {
     @State var info: IOInfo
-    let selectedInfo: IOInfo?
     @State private var showAlert = false
-    
-    var infoColor: Color {
-        selectedInfo == info ? Color.white : Color.accentColor
-    }
     
     var body: some View {
         VStack(alignment:.leading) {
@@ -40,12 +35,31 @@ struct InfoRowView: View {
                     }
                 }
             }
-            Text(info.name)
+            if info.url.isEmpty == false {
+                HStack {
+                    Text(info.name) + Text(" - \(hostFromString(info.url))").font(.footnote).foregroundStyle(.secondary)
+                }
                 .fixedSize(horizontal: false, vertical: true)
+            } else {
+                Text(info.name)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            
             Text(shortDes())
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.footnote)
                 .foregroundColor(.secondary)
+            
+            if info.relateName.isEmpty == false {
+                Text(info.relateName)
+                    .font(.footnote)
+                    .foregroundStyle(.white)
+                    .padding(4)
+                    .background {
+                        RoundedRectangle(cornerRadius: 4)
+                            .foregroundStyle(.indigo)
+                    }
+            }
             
             HStack(alignment: .center) {
                 if info.category != nil {
