@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct GuideListView: View {
+    @State private var listModel = GuideListModel()
     var body: some View {
-        SPOutlineListView(d: lModel, c: \.sub) { i in
+        SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
             NavigationLink(destination: GuideDetailView(t: i.t)) {
                 HStack {
                     Text(i.t)
@@ -17,8 +18,43 @@ struct GuideListView: View {
                 }
                 .contentShape(Rectangle())
             }
+            
+        }
+        .searchable(text: $listModel.searchText)
+    }
+    
+    
+}
+
+@Observable
+final class GuideListModel {
+    var searchText = ""
+    
+    func filtered() -> [L] {
+        guard !searchText.isEmpty else { return lModel }
+//        let flatModel = lModel.flatMap({ model in
+//            model
+//        })
+        let flatModel = flatLModel(lModel)
+        return flatModel.filter { model in
+            model.t.lowercased().contains(searchText.lowercased())
         }
     }
+    
+    func flatLModel(_ models: [L]) -> [L] {
+        var fModels = [L]()
+        for model in models {
+            fModels.append(model)
+            if let subs = model.sub {
+                let reFModels = flatLModel(subs)
+                for reModel in reFModels {
+                    fModels.append(reModel)
+                }
+            }
+        }
+        return fModels
+    }
+    
     
     var lModel = [
         L(t: "Swift语法", sub: [
@@ -235,6 +271,8 @@ struct GuideListView: View {
         var t: String
         var sub: [L]?
     }
+
 }
+
 
 
