@@ -42,7 +42,7 @@ struct GuideDetailView: View {
                     }
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
-                WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(SMFile.loadBundleString("\(t)" + ".md"))")), baseURLStr: "")
+                WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(SMFile.loadBundleString("\(t)" + "(ap).md"))")), baseURLStr: "")
             } else {
                 if let info = selectInfo {
                     EditInfoView(info: info)

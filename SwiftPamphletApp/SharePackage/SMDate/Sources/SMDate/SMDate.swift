@@ -4,6 +4,11 @@
 import Foundation
 
 public struct SMDate {
+    public static func nowDateString() -> String {
+        let locale = Locale(identifier: "zh_Hans")
+        return Date.now.formatted(.dateTime.locale(locale))
+    }
+    
     public static func howLongAgo(date: Date) -> String {
         let simplifiedChinese = Locale(identifier: "zh_Hans")
         return date.formatted(.relative(presentation: .named,
