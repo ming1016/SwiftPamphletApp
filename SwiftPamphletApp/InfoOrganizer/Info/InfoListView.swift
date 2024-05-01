@@ -13,7 +13,7 @@ struct InfoListView: View {
     @Environment(\.modelContext) var modelContext
     @State private var searchText = ""
     @Binding var selectInfo:IOInfo?
-    @State private var sortOrder = [SortDescriptor(\IOInfo.updateDate, order: .reverse)]
+    @State private var sortOrder = [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
     
     @Query(IOCategory.allOrderByName) var cates: [IOCategory]
     @State private var filterCate = ""
@@ -112,9 +112,9 @@ struct InfoListView: View {
             }
             .onChange(of: filterCate) { oldValue, newValue in
                 if filterCate.isEmpty == false {
-                    sortOrder = [SortDescriptor(\IOInfo.star, order: .reverse),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
+                    sortOrder = [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.star, order: .reverse),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
                 } else {
-                    sortOrder = [SortDescriptor(\IOInfo.updateDate, order: .reverse)]
+                    sortOrder = [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
                 }
             }
     }
