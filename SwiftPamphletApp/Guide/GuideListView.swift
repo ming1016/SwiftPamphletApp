@@ -9,9 +9,10 @@ import SwiftUI
 
 struct GuideListView: View {
     @State private var listModel = GuideListModel()
+    @State private var limit: Int = 50
     var body: some View {
         SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
-            NavigationLink(destination: GuideDetailView(t: i.t)) {
+            NavigationLink(destination: GuideDetailView(t: i.t, limit: $limit)) {
                 HStack {
                     Text(i.t)
                     Spacer()
@@ -32,9 +33,6 @@ final class GuideListModel {
     
     func filtered() -> [L] {
         guard !searchText.isEmpty else { return lModel }
-//        let flatModel = lModel.flatMap({ model in
-//            model
-//        })
         let flatModel = flatLModel(lModel)
         return flatModel.filter { model in
             model.t.lowercased().contains(searchText.lowercased())

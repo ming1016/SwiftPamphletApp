@@ -214,10 +214,6 @@ struct InfoListView: View {
         modelContext.insert(info)
         selectInfo = info
     }
-    func nowDateString() -> String {
-        let locale = Locale(identifier: "zh_Hans")
-        return Date.now.formatted(.dateTime.locale(locale))
-    }
     
 }
 

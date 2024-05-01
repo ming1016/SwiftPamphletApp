@@ -8,17 +8,81 @@
 import SwiftUI
 import Ink
 import SMFile
+import SwiftData
+import InfoOrganizer
 
 struct GuideDetailView: View {
+    @Environment(\.modelContext) var modelContext
+    @State private var isShowInspector = false
+    @AppStorage(SPC.isShowPamphletInspector) var asIsShowPamphletInspector: Bool = false
     var t: String
-    var body: some View {
-        HStack {
-            Spacer()
-            Text(t).font(.title)
-            Spacer()
-        }
-        .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
-        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(SMFile.loadBundleString("\(t)" + ".md"))")), baseURLStr: "")
+    @State var selectInfo: IOInfo? = nil
+    @Query var infos: [IOInfo]
+    @Binding var limit: Int
+    
+    init(t:String,limit: Binding<Int>) {
+        self.t = t
+        var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
+            info.relateName == t && info.isArchived == false
+        }, sortBy: [SortDescriptor(\IOInfo.updateDate, order: .reverse)])
+        fd.fetchLimit = limit.wrappedValue
+        _infos = Query(fd)
+        self._limit = limit
     }
+    
+    var body: some View {
+        VStack {
+            if selectInfo == nil {
+                HStack {
+                    Spacer()
+                    Text(t).font(.title)
+                    Spacer()
+                    Button("相关资料管理") {
+                        isShowInspector.toggle()
+                    }
+                }
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
+                WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(SMFile.loadBundleString("\(t)" + ".md"))")), baseURLStr: "")
+            } else {
+                if let info = selectInfo {
+                    EditInfoView(info: info)
+                } else {
+                    EmptyView()
+                }
+            }
+        }
+        .inspector(isPresented: $isShowInspector) {
+            Button("添加资料") {
+                let info = IOInfo(name: "新增\(t)资料 - \(nowDateString())", url: "", des: "", relateName: t)
+                modelContext.insert(info)
+                selectInfo = info
+            }
+            .padding(5)
+            List(selection: $selectInfo) {
+                ForEach(infos) { info in
+                        InfoRowView(info: info, selectedInfo: selectInfo)
+                        .tag(info)
+                        .onAppear {
+                            if info == infos.last {
+                                if limit <= infos.count {
+                                    limit += 50
+                                }
+                            }
+                        }
+                }
+            }
+        }
+        .onAppear {
+            isShowInspector = asIsShowPamphletInspector
+        }
+        .onChange(of: t) { oldValue, newValue in
+            selectInfo = nil
+        }
+        .onChange(of: isShowInspector) { oldValue, newValue in
+            asIsShowPamphletInspector = newValue
+        }
+    }
+    
+    
 }
 
