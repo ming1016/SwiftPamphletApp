@@ -416,6 +416,10 @@ struct EditInfoView: View {
                 Image(systemName: info.star ? "star.fill" : "star")
             }
             .toggleStyle(.button)
+            Toggle(isOn: $info.isArchived) {
+                Image(systemName: info.isArchived ? "archivebox.fill" : "archivebox")
+            }
+            .toggleStyle(.button)
             
             Button(action: {
                 info.updateDate = Date.now

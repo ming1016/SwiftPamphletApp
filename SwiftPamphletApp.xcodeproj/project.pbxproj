@@ -203,6 +203,12 @@
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
 		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
 		3AE4CA382BD7813D005BEF2C /* InfoOrganizer in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE4CA372BD7813D005BEF2C /* InfoOrganizer */; };
+		3AF2A2DF2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */; };
+		3AF2A2E12BE22B5800F3BE1B /* UnCategoryInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2E02BE22B5800F3BE1B /* UnCategoryInfosView.swift */; };
+		3AF2A2E32BE2317300F3BE1B /* StarInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2E22BE2317300F3BE1B /* StarInfoListView.swift */; };
+		3AF2A2E52BE231BD00F3BE1B /* StarInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2E42BE231BD00F3BE1B /* StarInfosView.swift */; };
+		3AF2A2E72BE239A300F3BE1B /* ArchivedInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2E62BE239A300F3BE1B /* ArchivedInfoListView.swift */; };
+		3AF2A2E92BE239BA00F3BE1B /* ArchivedInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2E82BE239BA00F3BE1B /* ArchivedInfosView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,6 +400,12 @@
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
 		3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeveloper.swift; sourceTree = "<group>"; };
+		3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCategoryInfoListView.swift; sourceTree = "<group>"; };
+		3AF2A2E02BE22B5800F3BE1B /* UnCategoryInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCategoryInfosView.swift; sourceTree = "<group>"; };
+		3AF2A2E22BE2317300F3BE1B /* StarInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarInfoListView.swift; sourceTree = "<group>"; };
+		3AF2A2E42BE231BD00F3BE1B /* StarInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarInfosView.swift; sourceTree = "<group>"; };
+		3AF2A2E62BE239A300F3BE1B /* ArchivedInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedInfoListView.swift; sourceTree = "<group>"; };
+		3AF2A2E82BE239BA00F3BE1B /* ArchivedInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedInfosView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -970,6 +982,9 @@
 		08F1AB632BA083F500AEA0CA /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				3AF2A2DD2BE2281F00F3BE1B /* ArchivedInfos */,
+				3AF2A2DC2BE227DA00F3BE1B /* StarInfos */,
+				3AF2A2DB2BE227C700F3BE1B /* UnCategoryInfos */,
 				08397E242B9EEE1300DFDD02 /* InfoListView.swift */,
 				0871C61C2BA05F44000B620D /* InfosView.swift */,
 				0871C6182BA040E5000B620D /* InfoRowView.swift */,
@@ -996,6 +1011,33 @@
 				3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */,
 			);
 			path = Developer;
+			sourceTree = "<group>";
+		};
+		3AF2A2DB2BE227C700F3BE1B /* UnCategoryInfos */ = {
+			isa = PBXGroup;
+			children = (
+				3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */,
+				3AF2A2E02BE22B5800F3BE1B /* UnCategoryInfosView.swift */,
+			);
+			path = UnCategoryInfos;
+			sourceTree = "<group>";
+		};
+		3AF2A2DC2BE227DA00F3BE1B /* StarInfos */ = {
+			isa = PBXGroup;
+			children = (
+				3AF2A2E22BE2317300F3BE1B /* StarInfoListView.swift */,
+				3AF2A2E42BE231BD00F3BE1B /* StarInfosView.swift */,
+			);
+			path = StarInfos;
+			sourceTree = "<group>";
+		};
+		3AF2A2DD2BE2281F00F3BE1B /* ArchivedInfos */ = {
+			isa = PBXGroup;
+			children = (
+				3AF2A2E62BE239A300F3BE1B /* ArchivedInfoListView.swift */,
+				3AF2A2E82BE239BA00F3BE1B /* ArchivedInfosView.swift */,
+			);
+			path = ArchivedInfos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1255,17 +1297,23 @@
 				08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */,
 				08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */,
 				08397E2F2B9F353B00DFDD02 /* CategoryListView.swift in Sources */,
+				3AF2A2E52BE231BD00F3BE1B /* StarInfosView.swift in Sources */,
+				3AF2A2E32BE2317300F3BE1B /* StarInfoListView.swift in Sources */,
 				3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */,
 				084417772B99BA3F0049297D /* SidebarView.swift in Sources */,
 				08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */,
 				0825E4872BC6596F00332378 /* EditCustomSearchView.swift in Sources */,
+				3AF2A2E92BE239BA00F3BE1B /* ArchivedInfosView.swift in Sources */,
 				08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */,
 				0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
+				3AF2A2E12BE22B5800F3BE1B /* UnCategoryInfosView.swift in Sources */,
 				08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */,
 				0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */,
+				3AF2A2DF2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				084417752B99B9060049297D /* HomeView.swift in Sources */,
+				3AF2A2E72BE239A300F3BE1B /* ArchivedInfoListView.swift in Sources */,
 				086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */,
 				08069CAD2BDE7A6B00D48E24 /* GuideDetailView.swift in Sources */,
 				08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */,

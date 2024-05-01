@@ -15,10 +15,9 @@ struct InfosView: View {
     @Binding var selectInfo: IOInfo?
     @Binding var limit: Int
     
-    init(filterCateName: String = "", searchString: String = "", filterStar: Bool = false ,selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = [], limit: Binding<Int>) {
+    init(filterCateName: String = "", searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = [], limit: Binding<Int>) {
         
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
-
             if !filterCateName.isEmpty && !searchString.isEmpty {
                 (info.name.localizedStandardContains(searchString)
                 || info.url.localizedStandardContains(searchString)
@@ -26,7 +25,7 @@ struct InfosView: View {
             } else if !filterCateName.isEmpty {
                 info.category?.name == filterCateName
             } else if searchString.isEmpty {
-                info.star == filterStar
+                true
             } else {
                 info.name.localizedStandardContains(searchString)
                 || info.url.localizedStandardContains(searchString)

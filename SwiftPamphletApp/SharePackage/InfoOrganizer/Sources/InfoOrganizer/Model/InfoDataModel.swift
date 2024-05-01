@@ -17,35 +17,23 @@ public final class IOInfo {
     public var imgs: [IOImg]? = [IOImg]() // 本地图集
     public var des: String = ""
     public var category: IOCategory? = nil// 关系字段，链接 IOCategory
-    public var star: Bool = false
+    public var star: Bool = false // 收藏
+    public var isArchived: Bool = false // 归档
+    public var relateName: String = "" // 和哪个知识点关联
     @Attribute(.externalStorage) public  var webArchive: Data? = nil
     
     public var createDate: Date = Date.now
     public var updateDate: Date = Date.now
     
     public init(name: String,
-         url: String,
-         coverImage: IOImg? = nil,
-         imageUrls: [String],
-         imgs: [IOImg]? = [IOImg](),
-         des: String,
-         category: IOCategory? = nil,
-         star: Bool,
-         webArchive: Data? = nil,
-         createDate: Date,
-         updateDate: Date
+                url: String,
+                des: String,
+                relateName: String
     ) {
         self.name = name
         self.url = url
-        self.coverImage = coverImage
-        self.imageUrls = imageUrls
-        self.imgs = imgs
         self.des = des
-        self.category = category
-        self.star = star
-        self.webArchive = webArchive
-        self.createDate = createDate
-        self.updateDate = updateDate
+        self.relateName = relateName
     }
     
     public static func delete(_ info: IOInfo) {

@@ -29,10 +29,43 @@ struct DataLink: Identifiable {
         type: ShowType
     ) -> some View {
         switch title {
-        case "资料整理":
+        case "全部资料":
             switch type {
             case .content:
                 InfoListView(selectInfo: selectInfo)
+            case .detail:
+                if let info = selectInfoBindable {
+                    EditInfoView(info: info)
+                } else {
+                    IntroView()
+                }
+            }
+        case "未分类":
+            switch type {
+            case .content:
+                UnCategoryInfoListView(selectInfo: selectInfo)
+            case .detail:
+                if let info = selectInfoBindable {
+                    EditInfoView(info: info)
+                } else {
+                    IntroView()
+                }
+            }
+        case "收藏":
+            switch type {
+            case .content:
+                StarInfoListView(selectInfo: selectInfo)
+            case .detail:
+                if let info = selectInfoBindable {
+                    EditInfoView(info: info)
+                } else {
+                    IntroView()
+                }
+            }
+        case "归档":
+            switch type {
+            case .content:
+                ArchivedInfoListView(selectInfo: selectInfo)
             case .detail:
                 if let info = selectInfoBindable {
                     EditInfoView(info: info)
@@ -76,14 +109,17 @@ struct DataLink: Identifiable {
 
 extension DataLink {
     static var dataLinks = [
-        DataLink(title: "资料", imageName: "", children: [
-            DataLink(title: "资料整理", imageName: "p11")
+        DataLink(title: "开发手册", imageName: "", children: [
+            DataLink(title: "Apple 技术", imageName: "p22")
+        ]),
+        DataLink(title: "资料整理", imageName: "", children: [
+            DataLink(title: "全部资料", imageName: "p11"),
+            DataLink(title: "未分类", imageName: "p12"),
+            DataLink(title: "收藏", imageName: "p13"),
+            DataLink(title: "归档", imageName: "p14")
         ]),
         DataLink(title: "Github", imageName: "", children: [
             DataLink(title: "开发/仓库", imageName: "p5"),
-        ]),
-        DataLink(title: "开发手册", imageName: "", children: [
-            DataLink(title: "Apple 技术", imageName: "p22")
         ])
     ]
 }

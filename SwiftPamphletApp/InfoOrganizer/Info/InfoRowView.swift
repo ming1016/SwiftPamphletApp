@@ -62,6 +62,10 @@ struct InfoRowView: View {
                     Image(systemName: "star.square.fill")
                         .symbolRenderingMode(.multicolor)
                 }
+                if info.isArchived == true {
+                    Image(systemName: "archivebox.fill")
+                        .foregroundStyle(Color.mint)
+                }
                 if info.des == "\n" || info.des.isEmpty {
                     
                 } else {

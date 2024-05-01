@@ -13,18 +13,17 @@ struct InfoListView: View {
     @Environment(\.modelContext) var modelContext
     @State private var searchText = ""
     @Binding var selectInfo:IOInfo?
-    @State private var sortOrder = [SortDescriptor(\IOInfo.star, order: .reverse),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
+    @State private var sortOrder = [SortDescriptor(\IOInfo.updateDate, order: .reverse)]
     
     @Query(IOCategory.allOrderByName) var cates: [IOCategory]
     @State private var filterCate = ""
     @State var limit: Int = 50
-    @State var filterStar: Bool = false
     
     @State private var showSheet = false
     
     var body: some View {
-        InfosView(filterCateName: filterCate, searchString: searchText, filterStar: filterStar, selectInfo: $selectInfo, sortOrder: sortOrder, limit: $limit)
-            .navigationTitle("资料列表")
+        InfosView(filterCateName: filterCate, searchString: searchText, selectInfo: $selectInfo, sortOrder: sortOrder, limit: $limit)
+            .navigationTitle("资料列表 - \(filterCate.isEmpty ? "全部" : filterCate)")
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     Button("添加资料", systemImage: "plus", action: addInfo)
@@ -52,13 +51,6 @@ struct InfoListView: View {
                 if searchTerms.isEmpty == false {
                     ToolbarItem(placement: .navigation) {
                         customSearchView()
-                    }
-                }
-                if filterCate.isEmpty {
-                    ToolbarItem(placement: .navigation) {
-                        Toggle(isOn: $filterStar) {
-                        }
-                        .toggleStyle(SymbolToggleStyle(systemImage: "star.fill", activeColor: .yellow))
                     }
                 }
                 ToolbarItem(placement: .navigation) {
@@ -117,6 +109,13 @@ struct InfoListView: View {
             }
             .onChange(of: term) { oldValue, newValue in
                 _ = parseSearchTerms()
+            }
+            .onChange(of: filterCate) { oldValue, newValue in
+                if filterCate.isEmpty == false {
+                    sortOrder = [SortDescriptor(\IOInfo.star, order: .reverse),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
+                } else {
+                    sortOrder = [SortDescriptor(\IOInfo.updateDate, order: .reverse)]
+                }
             }
     }
     
@@ -206,7 +205,7 @@ struct InfoListView: View {
     
     // MARK: 资料整理数据方面
     func addInfo() {
-        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", coverImage: nil, imageUrls: [String](), imgs: [IOImg](), des: "", star: false, webArchive: nil , createDate: Date.now, updateDate: Date.now)
+        let info = IOInfo(name: "简单记录 - \(nowDateString())", url: "", des: "", relateName: "")
         for cate in cates {
             if cate.name == filterCate {
                 info.category = cate
