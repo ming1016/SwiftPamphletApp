@@ -1,6 +1,6 @@
 基本用法
 
-![](https://user-images.githubusercontent.com/251980/154473546-94ba6f9f-2ce3-44ef-a7c6-60d86df8c90f.png)
+![](https://starming.com/qdimg/Text-ap01.png)
 
 ```swift
 // MARK: - Text

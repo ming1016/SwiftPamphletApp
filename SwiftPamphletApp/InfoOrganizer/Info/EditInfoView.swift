@@ -388,6 +388,7 @@ struct EditInfoView: View {
                         }
                     }
                 } label: {
+                    Image(systemName: "link")
                     Text("解析")
                 }
                 Button {
