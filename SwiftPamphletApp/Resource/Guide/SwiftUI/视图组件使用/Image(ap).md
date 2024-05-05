@@ -1,4 +1,4 @@
-![](https://user-images.githubusercontent.com/251980/155683776-0f0acdee-c7c1-44e3-a68b-38f778863821.png)
+![](https://starming.com/qdimg/240505/image-ap01.png)
 
 ```swift
 struct PlayImageView: View {

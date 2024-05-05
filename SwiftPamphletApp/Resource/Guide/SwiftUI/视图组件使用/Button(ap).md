@@ -1,4 +1,4 @@
-![](https://user-images.githubusercontent.com/251980/155062538-108a79b4-3e5c-417b-867a-3f7e58316664.png)
+![](https://starming.com/qdimg/240505/button-ap01.png)
 
 ```swift
 struct PlayButtonView: View {

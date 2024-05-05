@@ -1,4 +1,4 @@
-![](https://user-images.githubusercontent.com/251980/154474725-d696d50b-9da7-4a0d-808f-07894a9597cb.png)
+![](https://starming.com/qdimg/240505/label-ap01.png)
 
 ```swift
 struct PlayLabelView: View {

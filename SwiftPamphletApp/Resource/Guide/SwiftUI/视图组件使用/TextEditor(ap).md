@@ -1,4 +1,4 @@
-![](https://user-images.githubusercontent.com/251980/154667163-e906dfd4-074e-4c04-9c80-94af86df4ba6.png)
+![](https://starming.com/qdimg/240505/texteditor-ap01.png)
 
 对应的代码如下：
 
