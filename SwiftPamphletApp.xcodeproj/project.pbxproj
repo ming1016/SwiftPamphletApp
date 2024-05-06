@@ -150,6 +150,7 @@
 		08522BED27CF7A0C005FF059 /* Keyboard(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BEC27CF7A0C005FF059 /* Keyboard(ap).md */; };
 		085BB77427D22FCA00E8F69A /* SwiftUI动画(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */; };
 		085BB77627D22FE300E8F69A /* SwiftUI Canvas(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */; };
+		08659BC72BE8FD84009B7C00 /* SwiftUI数据流(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */; };
 		0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */ = {isa = PBXBuildFile; productRef = 0868D00A2BDD37280023C871 /* SMGitHub */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
@@ -354,6 +355,7 @@
 		08522BEC27CF7A0C005FF059 /* Keyboard(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Keyboard(ap).md"; sourceTree = "<group>"; };
 		085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI动画(ap).md"; sourceTree = "<group>"; };
 		085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI Canvas(ap).md"; sourceTree = "<group>"; };
+		08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI数据流(ap).md"; sourceTree = "<group>"; };
 		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 				08449027279ECEA200B61353 /* 介绍 */,
 				0844902A279ECED300B61353 /* 视图组件使用 */,
 				08522BE727CF625B005FF059 /* 视觉 */,
+				08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1166,6 +1169,7 @@
 				08448F5B279EA84100B61353 /* macOS共享菜单(ap).md in Resources */,
 				0844900A279ECB8C00B61353 /* combineLatest(ap).md in Resources */,
 				08026C4D2869B3A600792EF1 /* Transferable(ap).md in Resources */,
+				08659BC72BE8FD84009B7C00 /* SwiftUI数据流(ap).md in Resources */,
 				08449011279ECC3E00B61353 /* Combine KVO(ap).md in Resources */,
 				08448FE2279EC7CF00B61353 /* Nil-coalescing(ap).md in Resources */,
 				08449002279ECB0500B61353 /* append(ap).md in Resources */,

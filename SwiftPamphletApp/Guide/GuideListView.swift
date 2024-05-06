@@ -186,7 +186,8 @@ final class GuideListModel {
                 L(t: "SwiftUI动画"),
                 L(t: "SwiftUI Canvas"),
                 L(t: "SF Symbol")
-            ])
+            ]),
+            L(t: "SwiftUI数据流")
         ]),
         L(t: "Combine",sub: [
             L(t: "介绍",sub: [
