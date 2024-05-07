@@ -390,7 +390,6 @@
 		0871C6182BA040E5000B620D /* InfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRowView.swift; sourceTree = "<group>"; };
 		0871C61A2BA04D23000B620D /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
 		0871C61C2BA05F44000B620D /* InfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosView.swift; sourceTree = "<group>"; };
-		0886702B27F804010001EA81 /* SwiftPamphletApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPamphletApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		0887A5992BA28F6D00131359 /* CSGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuideView.swift; sourceTree = "<group>"; };
 		0896FB9127BA486900676B7F /* Button(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Button(ap).md"; sourceTree = "<group>"; };
 		08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "@dynamicMemberLookup动态成员查询(ap).md"; sourceTree = "<group>"; };
@@ -873,7 +872,6 @@
 			children = (
 				086A5F052744E88E00FECE02 /* SwiftPamphletApp */,
 				086A5F042744E88E00FECE02 /* Products */,
-				0886702B27F804010001EA81 /* SwiftPamphletApp-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1519,18 +1517,18 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.0;
+				MARKETING_VERSION = 6.1;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
 					"-undefined",
 					dynamic_lookup,
 				);
-				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPamphletApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1562,12 +1560,12 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.0;
+				MARKETING_VERSION = 6.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPamphletApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

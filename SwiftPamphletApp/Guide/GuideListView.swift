@@ -228,7 +228,7 @@ final class GuideListModel {
             L(t: "SwiftData-模型关系"),
             L(t: "容器配置modelContainer"),
             L(t: "增删modelContext"),
-//            L(t: "检索@Query"),
+            L(t: "检索@Query"),
 //            L(t: "检索FetchDescriptor"),
 //            L(t: "SwiftData-处理大量数据"),
 //            L(t: "SwiftData多线程"),
