@@ -113,13 +113,18 @@ extension DataLink {
             DataLink(title: "Apple 技术", imageName: "p22")
         ]),
         DataLink(title: "资料整理", imageName: "", children: [
-            DataLink(title: "全部资料", imageName: "p11"),
-            DataLink(title: "未分类", imageName: "p12"),
-            DataLink(title: "收藏", imageName: "p13"),
-            DataLink(title: "归档", imageName: "p14")
-        ]),
-        DataLink(title: "Github", imageName: "", children: [
-            DataLink(title: "开发/仓库", imageName: "p5"),
+            DataLink(title: "全部资料", imageName: "p7"),
+            DataLink(title: "未分类", imageName: "p6"),
+            DataLink(title: "收藏", imageName: "p11"),
+            DataLink(title: "归档", imageName: "p3")
         ])
     ]
+    static func dataLinksWithGithub() -> [DataLink] {
+        var arr = DataLink.dataLinks
+        arr.append(
+            DataLink(title: "Github", imageName: "", children: [
+                DataLink(title: "开发/仓库", imageName: "p5"),
+            ]))
+        return arr
+    }
 }

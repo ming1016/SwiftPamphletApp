@@ -54,13 +54,6 @@ struct GuideDetailView: View {
         }
         .inspector(isPresented: $isShowInspector) {
             HStack {
-                Spacer()
-                Button("添加资料") {
-                    let info = IOInfo(name: "新增\(t)资料 - \(SMDate.nowDateString())", url: "", des: "", relateName: t)
-                    modelContext.insert(info)
-                    selectInfo = info
-                }
-                Spacer()
                 // 关闭
                 Button(action: {
                     isShowInspector = false
@@ -70,6 +63,15 @@ struct GuideDetailView: View {
                 })
                 .help("CMD + d")
                 .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
+                Spacer()
+                Text("资料")
+                    .font(.title)
+                Spacer()
+                Button("添加资料") {
+                    let info = IOInfo(name: "新增\(t)资料 - \(SMDate.nowDateString())", url: "", des: "", relateName: t)
+                    modelContext.insert(info)
+                    selectInfo = info
+                }
             }
             .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
             List(selection: $selectInfo) {

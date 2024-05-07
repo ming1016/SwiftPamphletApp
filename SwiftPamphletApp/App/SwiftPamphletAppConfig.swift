@@ -20,6 +20,7 @@ struct SPC {
     static let githubHost = "https://github.com/"
     
     // MARK: AppStorage
+    static let isShowGithub = "isShowGithub"
     static let selectedDataLinkString = "selectedDataLinkString"
     static let isFirstRun = "isFirstRun"
     static let customSearchTerm = "customSearchTerm"

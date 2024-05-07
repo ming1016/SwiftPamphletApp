@@ -14,7 +14,7 @@ struct GuideListView: View {
         SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
             NavigationLink(destination: GuideDetailView(t: i.t, limit: $limit)) {
                 HStack {
-                    Text(i.t)
+                    Text(listModel.searchText.isEmpty == true ? GuideListModel.simpleTitle(i.t) : i.t)
                     Spacer()
                 }
                 .contentShape(Rectangle())
@@ -23,8 +23,7 @@ struct GuideListView: View {
         }
         .searchable(text: $listModel.searchText)
     }
-    
-    
+
 }
 
 @Observable
@@ -53,6 +52,14 @@ final class GuideListModel {
         return fModels
     }
     
+    static func simpleTitle(_ title: String) -> String {
+        let arr = title.split(separator: "-")
+        if arr.first == arr.last {
+            return title
+        } else {
+            return arr.last?.description ?? ""
+        }
+    }
     
     var lModel = [
         L(t: "Swift语法", sub: [
@@ -216,6 +223,18 @@ final class GuideListModel {
                 L(t: "Combine Timer")
             ])
         ]),
+        L(t: "SwiftData",sub: [
+            L(t: "创建@Model模型"),
+            L(t: "SwiftData-模型关系"),
+            L(t: "容器配置modelContainer"),
+            L(t: "增删modelContext"),
+//            L(t: "检索@Query"),
+//            L(t: "检索FetchDescriptor"),
+//            L(t: "SwiftData-处理大量数据"),
+//            L(t: "SwiftData多线程"),
+//            L(t: "SwiftData-版本迁移"),
+//            L(t: "SwiftData-调试")
+        ]),
         L(t: "Swift三方库使用",sub: [
             L(t: "SQLite.swift的使用")
         ]),
@@ -226,19 +245,17 @@ final class GuideListModel {
             L(t: "单例"),
             L(t: "程序入口点")
         ]),
-        L(t: "多线程",sub: [
-            L(t: "Swift Concurrency",sub: [
-                L(t: "Swift Concurrency是什么"),
-                L(t: "async await"),
-                L(t: "Async Sequences"),
-                L(t: "结构化并发"),
-                L(t: "Actors"),
-                L(t: "Distributed Actors"),
-                L(t: "Swift Concurrency相关提案"),
-                L(t: "Swift Concurrency学习路径"),
-                L(t: "Swift Concurrency和Combine"),
-                L(t: "Concurrency技术演进")
-            ])
+        L(t: "Swift Concurrency",sub: [
+            L(t: "Swift Concurrency是什么"),
+            L(t: "async await"),
+            L(t: "Async Sequences"),
+            L(t: "结构化并发"),
+            L(t: "Actors"),
+            L(t: "Distributed Actors"),
+            L(t: "Swift Concurrency相关提案"),
+            L(t: "Swift Concurrency学习路径"),
+            L(t: "Swift Concurrency和Combine"),
+            L(t: "Concurrency技术演进")
         ]),
         L(t: "动画", sub: [
             L(t: "布局动画")

@@ -39,7 +39,7 @@ struct SPOutlineView<D, Content>: View where D: RandomAccessCollection, D.Elemen
                 SPDisclosureGroup(content: SPOutlineView(d: sub, c: c, content: content), label: content(i))
             } else {
                 content(i)
-                    .foregroundStyle(.secondary)
+//                    .foregroundStyle(.secondary)
             } // end if
         } // end ForEach
     } // end body
@@ -54,13 +54,16 @@ struct SPDisclosureGroup<C, L>: View where C: View, L: View {
             content
         } label: {
             Button {
-                isExpanded.toggle()
+                withAnimation {
+                    isExpanded.toggle()
+                }
             } label: {
                 label
-                    .foregroundStyle(.primary)
+//                    .foregroundStyle(.primary)
             }
             .buttonStyle(.plain)
         }
+        
     }
 }
 
