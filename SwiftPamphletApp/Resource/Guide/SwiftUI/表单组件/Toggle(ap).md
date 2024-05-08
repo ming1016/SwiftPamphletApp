@@ -1,4 +1,4 @@
-![](https://starming.com/qdimg/240505/toggle-ap01.png)
+![](https://ming1016.github.io/qdimg/240505/toggle-ap01.png)
 
 Toggle 可以设置 toggleStyle，可以自定义样式。使用示例如下
 

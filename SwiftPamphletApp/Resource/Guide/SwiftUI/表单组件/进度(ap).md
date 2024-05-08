@@ -1,4 +1,4 @@
-![](https://starming.com/qdimg/240505/progress-ap01.jpeg)
+![](https://ming1016.github.io/qdimg/240505/progress-ap01.jpeg)
 
 用 ProgressViewStyle 协议，可以创建自定义的进度条视图。在 WatchOS 上会多一个 Guage 视图。
 

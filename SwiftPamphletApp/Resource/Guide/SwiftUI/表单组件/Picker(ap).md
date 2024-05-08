@@ -1,4 +1,4 @@
-![](https://starming.com/qdimg/240505/picker-ap01.jpeg)
+![](https://ming1016.github.io/qdimg/240505/picker-ap01.jpeg)
 
 有 Picker 视图，还有颜色和时间选择的 ColorPicker 和 DatePicker。
 

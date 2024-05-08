@@ -1,6 +1,6 @@
 效果如下：
 
-![](https://starming.com/qdimg/240505/AttributeString-ap01.png)
+![](https://ming1016.github.io/qdimg/240505/AttributeString-ap01.png)
 
 代码如下：
 ```swift

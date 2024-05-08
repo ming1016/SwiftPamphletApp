@@ -1,4 +1,4 @@
-![](https://starming.com/qdimg/240505/uplayer-ap01.png)
+![](https://ming1016.github.io/qdimg/240505/uplayer-ap01.png)
 
 浮层有 HUD、ContextMenu、Sheet、Alert、ConfirmationDialog、Popover、ActionSheet 等几种方式。这些方式实现代码如下：
 

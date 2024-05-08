@@ -354,7 +354,7 @@ struct EditInfoView: View {
     // MARK: URL
     private var urlInputView: some View {
         HStack {
-            TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://www.starming.com")).rounded()
+            TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://ming1016.github.io")).rounded()
                 .onSubmit {
                     info.name = "获取标题中......"
                     Task {

@@ -70,5 +70,5 @@ struct SPList: View {
 ```
 
 显示效果如下：
-![](https://starming.com/qdimg/240505/threecolumnstructure-ap01.png)
+![](https://ming1016.github.io/qdimg/240505/threecolumnstructure-ap01.png)
 

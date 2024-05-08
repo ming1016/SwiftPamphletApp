@@ -1,4 +1,4 @@
-![](https://starming.com/qdimg/240505/list-ap01.jpeg)
+![](https://ming1016.github.io/qdimg/240505/list-ap01.jpeg)
 
 List 除了能够展示数据外，还有下拉刷新、过滤搜索和侧滑 Swipe 动作提供更多 Cell 操作的能力。
 

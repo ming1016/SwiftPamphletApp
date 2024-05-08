@@ -132,7 +132,7 @@ struct PNavigationStackDestination: View {
 
 以下是废弃的 NavigationView 的用法。
 
-![](https://starming.com/qdimg/240505/navigation-ap01.jpeg)
+![](https://ming1016.github.io/qdimg/240505/navigation-ap01.jpeg)
 
 对应代码如下：
 

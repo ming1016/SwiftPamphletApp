@@ -1,4 +1,4 @@
-![](https://starming.com/qdimg/240505/groupbox-ap01.png)
+![](https://ming1016.github.io/qdimg/240505/groupbox-ap01.png)
 
 ```swift
 struct PlayGroupBoxView: View {
