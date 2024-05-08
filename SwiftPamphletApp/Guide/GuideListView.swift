@@ -19,11 +19,9 @@ struct GuideListView: View {
                 }
                 .contentShape(Rectangle())
             }
-            
         }
         .searchable(text: $listModel.searchText)
     }
-
 }
 
 @Observable
