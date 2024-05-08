@@ -176,6 +176,7 @@ final class GuideListModel {
                 L(t: "ControlGroup"),
                 L(t: "GroupBox"),
                 L(t: "Advanced layout control"),
+                L(t: "ContentUnavailableView"),
             ]),
             L(t: "视图组件使用",sub: [
                 L(t: "Form"),

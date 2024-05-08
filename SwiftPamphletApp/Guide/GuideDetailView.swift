@@ -53,40 +53,47 @@ struct GuideDetailView: View {
             }
         }
         .inspector(isPresented: $isShowInspector) {
-            HStack {
-                // 关闭
-                Button(action: {
-                    isShowInspector = false
-                    selectInfo = nil
-                }, label: {
-                    Image(systemName: "xmark.circle")
-                })
-                .help("CMD + d")
-                .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
-                Spacer()
-                Text("资料")
-                    .font(.title)
-                Spacer()
-                Button("添加资料") {
-                    let info = IOInfo(name: "新增\(t)资料 - \(SMDate.nowDateString())", url: "", des: "", relateName: t)
-                    modelContext.insert(info)
-                    selectInfo = info
+            ScrollViewReader(content: { proxy in
+                HStack {
+                    // 关闭
+                    Button(action: {
+                        isShowInspector = false
+                        selectInfo = nil
+                    }, label: {
+                        Image(systemName: "xmark.circle")
+                    })
+                    .help("CMD + d")
+                    .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
+                    Spacer()
+                    Text("资料")
+                        .font(.title)
+                    Spacer()
+                    Button("添加资料") {
+                        let info = IOInfo(name: "新增\(t)资料 - \(SMDate.nowDateString())", url: "", des: "", relateName: t)
+                        modelContext.insert(info)
+                        selectInfo = info
+                        withAnimation(.easeInOut) {
+                            proxy.scrollTo(selectInfo, anchor: .top)
+                        }
+                    }
                 }
-            }
-            .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
-            List(selection: $selectInfo) {
-                ForEach(infos) { info in
-                        InfoRowView(info: info)
-                        .tag(info)
-                        .onAppear {
-                            if info == infos.last {
-                                if limit <= infos.count {
-                                    limit += 50
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
+                List(selection: $selectInfo) {
+                    ForEach(infos) { info in
+                            InfoRowView(info: info)
+                            .tag(info)
+                            .onAppear {
+                                if info == infos.last {
+                                    if limit <= infos.count {
+                                        limit += 50
+                                    }
                                 }
                             }
-                        }
+                    }
+                    
                 }
-            }
+                .id(selectInfo)
+            })
         }
         .onAppear {
             isShowInspector = asIsShowPamphletInspector

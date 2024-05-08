@@ -4,7 +4,7 @@ Swift开发的手册，是个 macOS 程序，已上线 App Store [点击安装](
 
 使用 SwiftData、Observable、NavigationSplitView 重构了戴铭的开发小册子，可自己添加管理资料。
 
-本解决了几个问题。
+本版本解决了以下几个问题。
 
 第一个，存储的问题。以前使用的是三方数据库，写法比较繁琐且和 SwiftUI 结合的不好。现在用的是 SwiftData，写法简洁了很多，代码也好维护了。更多技术重构细节可以直接查看代码。
 

@@ -17,9 +17,7 @@ import SMNetwork
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
     @Bindable var info: IOInfo
-    
     @Query(IOCategory.all) var categories: [IOCategory]
-    
     @State private var showSheet = false
     
     // Inspector
@@ -30,14 +28,11 @@ struct EditInfoView: View {
     @State var inspectorType: InspectorType = .category
     @AppStorage(SPC.isShowInspector) var asIsShowInspector: Bool = false
     @AppStorage(SPC.inspectorType) var asInspectorType: Int = 0
-    
     // Tab
     @State var selectedTab = 1
-    
     @State var isStopLoadingWeb = false
     // webarchive
     @State var savingDataTrigger = false
-    
     // 图集
     @State var selectedPhotos = [PhotosPickerItem]()
     @State var addWebImageUrl = ""
@@ -396,6 +391,7 @@ struct EditInfoView: View {
                 } label: {
                     Image(systemName: "safari")
                 }
+                .help("浏览器打开")
                 // 本地存
                 Button {
                     if info.webArchive == nil {
@@ -410,6 +406,7 @@ struct EditInfoView: View {
                         Image(systemName: "square.and.arrow.down.fill")
                     }
                 }
+                .help("离线内容")
             } // end if
         }
     }
@@ -422,16 +419,19 @@ struct EditInfoView: View {
                 Image(systemName: info.star ? "star.fill" : "star")
             }
             .toggleStyle(.button)
+            .help("收藏")
             Toggle(isOn: $info.isArchived) {
                 Image(systemName: info.isArchived ? "archivebox.fill" : "archivebox")
             }
             .toggleStyle(.button)
+            .help("归档")
             
             Button(action: {
                 info.updateDate = Date.now
             }, label: {
                 Image(systemName: "arrow.up.square")
             })
+            .help("提到前面")
         }
     }
 

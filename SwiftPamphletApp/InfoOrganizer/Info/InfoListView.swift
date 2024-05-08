@@ -23,104 +23,115 @@ struct InfoListView: View {
     @State private var showSheet = false
     
     var body: some View {
-        InfosView(filterCateName: filterCate, searchString: searchText, selectInfo: $selectInfo, sortOrder: sortOrder, limit: $limit)
-            .navigationTitle("资料列表 - \(filterCate.isEmpty ? "全部" : filterCate)")
-            .toolbar {
-                ToolbarItem(placement: .navigation) {
-                    Button("添加资料", systemImage: "plus", action: addInfo)
-                        .help("command + =")
-                        .keyboardShortcut(KeyEquivalent("="), modifiers: .command)
-                }
-                ToolbarItem(placement: .navigation) {
-                    Picker("分类", selection: $filterCate) {
-                        HStack {
-                            Text("全部")
-                        }
-                        .tag("")
-                        Divider()
-                        ForEach(cates) { cate in
-                            HStack {
-                                if cate.pin == 1 {
-                                    Image(systemName: "pin.fill")
-                                }
-                                Text(cate.name)
-                            }
-                            .tag(cate.name)
-                        }
-                    }
-                }
-                if searchTerms.isEmpty == false {
+        ScrollViewReader(content: { proxy in
+            InfosView(filterCateName: filterCate, searchString: searchText, selectInfo: $selectInfo, sortOrder: sortOrder, limit: $limit)
+                .id(selectInfo)
+                .navigationTitle("资料列表 - \(filterCate.isEmpty ? "全部" : filterCate)")
+                .toolbar {
                     ToolbarItem(placement: .navigation) {
-                        customSearchView()
+                        Button(action: {
+                            addInfo()
+                            withAnimation(.easeInOut) {
+                                proxy.scrollTo(selectInfo, anchor: .top)
+                            }
+                        }, label: {
+                            Label("添加资料", systemImage: "plus")
+                        })
+//                        Button("添加资料", systemImage: "plus", action: addInfo)
+//                            .help("command + =")
+//                            .keyboardShortcut(KeyEquivalent("="), modifiers: .command)
                     }
-                }
-                ToolbarItem(placement: .navigation) {
-                    Menu("More", systemImage: "ellipsis.rectangle") {
-                        Picker("排序", selection: $sortOrder) {
-                            Text("正序")
-                                .tag([SortDescriptor(\IOInfo.updateDate)])
-                            Text("倒序")
-                                .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
-                        }
-                        Button {
-                            searchText = ""
-                            filterCate = ""
-                        } label: {
-                            Text("检索重置")
+                    ToolbarItem(placement: .navigation) {
+                        Picker("分类", selection: $filterCate) {
+                            HStack {
+                                Text("全部")
+                            }
+                            .tag("")
+                            Divider()
+                            ForEach(cates) { cate in
+                                HStack {
+                                    if cate.pin == 1 {
+                                        Image(systemName: "pin.fill")
+                                    }
+                                    Text(cate.name)
+                                }
+                                .tag(cate.name)
+                            }
                         }
                     }
-                }
-                ToolbarItem(placement: .primaryAction) {
-                    Button(action: {
-                        modelContext.undoManager?.undo()
-                    }, label: {
-                        Image(systemName: "arrow.uturn.backward.circle")
-                        Text("撤回")
-                    })
-                    .disabled(modelContext.undoManager?.canUndo == false)
-                }
-                ToolbarItem(placement: .primaryAction) {
-                    Button(action: {
-                        modelContext.undoManager?.redo()
-                    }, label: {
-                        Image(systemName: "arrow.uturn.forward.circle")
-                        Text("重做")
-                    })
-                    .disabled(modelContext.undoManager?.canRedo == false)
-                }
-                if searchText != "" || filterCate != "" {
+                    if searchTerms.isEmpty == false {
+                        ToolbarItem(placement: .navigation) {
+                            customSearchView()
+                        }
+                    }
+                    ToolbarItem(placement: .navigation) {
+                        Menu("More", systemImage: "ellipsis.rectangle") {
+                            Picker("排序", selection: $sortOrder) {
+                                Text("正序")
+                                    .tag([SortDescriptor(\IOInfo.updateDate)])
+                                Text("倒序")
+                                    .tag([SortDescriptor(\IOInfo.updateDate, order: .reverse)])
+                            }
+                            Button {
+                                searchText = ""
+                                filterCate = ""
+                            } label: {
+                                Text("检索重置")
+                            }
+                        }
+                    }
                     ToolbarItem(placement: .primaryAction) {
-                        Button {
-                            searchText = ""
-                            filterCate = ""
-                        } label: {
-                            Image(systemName: "xmark.circle")
-                                .symbolRenderingMode(.multicolor)
-                            Text("检索")
+                        Button(action: {
+                            modelContext.undoManager?.undo()
+                        }, label: {
+                            Image(systemName: "arrow.uturn.backward.circle")
+                            Text("撤回")
+                        })
+                        .disabled(modelContext.undoManager?.canUndo == false)
+                    }
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: {
+                            modelContext.undoManager?.redo()
+                        }, label: {
+                            Image(systemName: "arrow.uturn.forward.circle")
+                            Text("重做")
+                        })
+                        .disabled(modelContext.undoManager?.canRedo == false)
+                    }
+                    if searchText != "" || filterCate != "" {
+                        ToolbarItem(placement: .primaryAction) {
+                            Button {
+                                searchText = ""
+                                filterCate = ""
+                            } label: {
+                                Image(systemName: "xmark.circle")
+                                    .symbolRenderingMode(.multicolor)
+                                Text("检索")
+                            }
+                            .help("CMD + d")
+                            .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
                         }
-                        .help("CMD + d")
-                        .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
+                    }
+                    
+                }
+                .searchable(text: $searchText)
+                .onAppear {
+                    _ = parseSearchTerms()
+                }
+                .onChange(of: term) { oldValue, newValue in
+                    _ = parseSearchTerms()
+                }
+                .onChange(of: filterCate) { oldValue, newValue in
+                    if filterCate.isEmpty == false {
+                        sortOrder = [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.star, order: .reverse),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
+                    } else {
+                        sortOrder = [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
                     }
                 }
-                
-            }
-            .searchable(text: $searchText)
-            .onAppear {
-                _ = parseSearchTerms()
-            }
-            .onChange(of: term) { oldValue, newValue in
-                _ = parseSearchTerms()
-            }
-            .onChange(of: filterCate) { oldValue, newValue in
-                if filterCate.isEmpty == false {
-                    sortOrder = [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.star, order: .reverse),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
-                } else {
-                    sortOrder = [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.updateDate, order: .reverse)]
+                .onDisappear {
+                    selectInfo = nil
                 }
-            }
-            .onDisappear {
-                selectInfo = nil
-            }
+        })
     }
     
     

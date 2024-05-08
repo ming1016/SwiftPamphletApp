@@ -1,3 +1,20 @@
+
+## 新增 modifier
+
+```swift
+ScrollView {
+    ForEach(0..<300) { i in
+        Text("\(i)")
+            .id(i)
+    }
+}
+.scrollDisabled(false) // 设置是否可滚动
+.scrollDismissesKeyboard(.interactively) // 关闭键盘
+.scrollIndicators(.visible) // 设置滚动指示器是否可见
+```
+
+## ScrollViewReader
+
 ScrollView 使用 scrollTo 可以直接滚动到指定的位置。ScrollView 还可以透出偏移量，利用偏移量可以定义自己的动态视图，比如向下向上滚动视图时有不同效果，到顶部显示标题视图等。
 
 示例代码如下：
@@ -79,15 +96,29 @@ private struct OffsetPreferenceKey: PreferenceKey {
 }
 ```
 
-新增 modifier
+## 滚动到顶部
+
+在 SwiftUI 中，目前没有直接的方法可以让 List 滚动到顶部。但你可以使用 ScrollViewReader 和 scrollTo 方法来实现滚动到顶部的功能。以下是一个例子：
+
 ```swift
-ScrollView {
-    ForEach(0..<300) { i in
-        Text("\(i)")
-            .id(i)
+struct ContentView: View {
+    let items = Array(1...100) // 你的数据
+    var body: some View {
+        ScrollViewReader { scrollView in
+            VStack {
+                ScrollView {
+                    ForEach(items, id: \.self) { item in
+                        Text("Item \(item)")
+                    }
+                    .id(items.first) // 给第一个元素设置 id
+                }
+                Button("滚动到顶部") {
+                    withAnimation {
+                        scrollView.scrollTo(items.first, anchor: .top) // 滚动到第一个元素
+                    }
+                }
+            }
+        }
     }
 }
-.scrollDisabled(false)
-.scrollDismissesKeyboard(.interactively)
-.scrollIndicators(.visible)
 ```

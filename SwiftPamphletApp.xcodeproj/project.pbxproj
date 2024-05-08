@@ -148,6 +148,7 @@
 		08522BE427CF5C55005FF059 /* SwiftUI颜色(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BE327CF5C55005FF059 /* SwiftUI颜色(ap).md */; };
 		08522BE927CF6E3B005FF059 /* SwiftUI Effect(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BE827CF6E3A005FF059 /* SwiftUI Effect(ap).md */; };
 		08522BED27CF7A0C005FF059 /* Keyboard(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BEC27CF7A0C005FF059 /* Keyboard(ap).md */; };
+		0858C5C72BEBD230004F4C04 /* ContentUnavailableView(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0858C5C62BEBD230004F4C04 /* ContentUnavailableView(ap).md */; };
 		085BB77427D22FCA00E8F69A /* SwiftUI动画(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */; };
 		085BB77627D22FE300E8F69A /* SwiftUI Canvas(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */; };
 		08659BC72BE8FD84009B7C00 /* SwiftUI数据流(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */; };
@@ -363,6 +364,7 @@
 		08522BE327CF5C55005FF059 /* SwiftUI颜色(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI颜色(ap).md"; sourceTree = "<group>"; };
 		08522BE827CF6E3A005FF059 /* SwiftUI Effect(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI Effect(ap).md"; sourceTree = "<group>"; };
 		08522BEC27CF7A0C005FF059 /* Keyboard(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Keyboard(ap).md"; sourceTree = "<group>"; };
+		0858C5C62BEBD230004F4C04 /* ContentUnavailableView(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ContentUnavailableView(ap).md"; sourceTree = "<group>"; };
 		085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI动画(ap).md"; sourceTree = "<group>"; };
 		085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI Canvas(ap).md"; sourceTree = "<group>"; };
 		08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI数据流(ap).md"; sourceTree = "<group>"; };
@@ -979,6 +981,7 @@
 				08BE635727C63F3A002BC6A8 /* ControlGroup(ap).md */,
 				08BE635B27C65C7C002BC6A8 /* GroupBox(ap).md */,
 				08026C3A2869A21000792EF1 /* Advanced layout control(ap).md */,
+				0858C5C62BEBD230004F4C04 /* ContentUnavailableView(ap).md */,
 			);
 			path = "布局组件";
 			sourceTree = "<group>";
@@ -1335,6 +1338,7 @@
 				08BE636427C886D2002BC6A8 /* LazyVStack和LazyHStack(ap).md in Resources */,
 				08449030279ECF7D00B61353 /* 1.md in Resources */,
 				08522BDA27CF5029005FF059 /* Slider(ap).md in Resources */,
+				0858C5C72BEBD230004F4C04 /* ContentUnavailableView(ap).md in Resources */,
 				08448FD5279EC62700B61353 /* Sets(ap).md in Resources */,
 				08448F75279EB62B00B61353 /* Scanner(ap).md in Resources */,
 				08BE632C27BE3762002BC6A8 /* Link(ap).md in Resources */,
@@ -1526,7 +1530,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1540,7 +1544,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.2;
+				MARKETING_VERSION = 6.3;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1569,7 +1573,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1583,7 +1587,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.2;
+				MARKETING_VERSION = 6.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
