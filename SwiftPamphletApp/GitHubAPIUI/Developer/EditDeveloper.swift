@@ -17,41 +17,60 @@ struct EditDeveloper: View {
     @State var repoVM: APIRepoVM
     @State var userVM: APIUserVM
     
+    @State var needSetGithubAccessToken = false
+    
     var body: some View {
         Form {
             HStack {
                 TextField("用户名:", text: $dev.name, prompt: Text("输入 Github 用户名 dev 或仓库名 dev/repo"))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .onChange(of: dev.name) { oldValue, newValue in
-                        let dn =  dev.name.components(separatedBy: "/") 
-                        if dn.count > 1 {
-                            repoVM = APIRepoVM(name: dev.name)
-                            Task {
-                                await repoVM.updateAllData()
-                            }
-                            
-                            dev.repoName = dn.last ?? ""
-                            dev.repoOwner = dn.first ?? ""
-                        } else {
-                            userVM = APIUserVM(name: dev.name)
-                            Task {
-                                await userVM.updateAllData()
-                            }
-                            
-                            dev.repoName = ""
-                            dev.repoOwner = ""
-                        }
+                        updateReq()
                     }
                 TextField("描述:", text: $dev.des)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
         }
         .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
+        .sheet(isPresented: $needSetGithubAccessToken) {
+            VStack {
+                GithubAccessTokenView() 
+                Button {
+                    updateReq()
+                    needSetGithubAccessToken = false
+                } label: {
+                    Text("完成")
+                }
+            }
+            .padding(20)
+
+        }
         
         if dev.name.components(separatedBy: "/").count > 1 {
             repoEventView()
         } else {
             devEventView()
+        }
+    }
+    
+    func updateReq() {
+        let dn =  dev.name.components(separatedBy: "/")
+        if dn.count > 1 {
+            repoVM = APIRepoVM(name: dev.name)
+            Task {
+                await repoVM.updateAllData()
+            }
+            
+            dev.repoName = dn.last ?? ""
+            dev.repoOwner = dn.first ?? ""
+        } else {
+            userVM = APIUserVM(name: dev.name)
+            Task {
+                await userVM.updateAllData()
+            }
+            
+            dev.repoName = ""
+            dev.repoOwner = ""
         }
     }
     

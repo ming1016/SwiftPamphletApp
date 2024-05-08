@@ -82,8 +82,10 @@ struct DataLink: Identifiable {
                     if SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false {
                         EditDeveloper(dev: dev, repoVM: APIRepoVM(name: dev.name), userVM: APIUserVM(name: dev.name))
                     } else {
-                        Text("请在设置里写上 Github 的 access token")
+//                        Text("请在设置里写上 Github 的 access token")
+                        EditDeveloper(dev: dev, repoVM: APIRepoVM(name: dev.name), userVM: APIUserVM(name: dev.name), needSetGithubAccessToken: true)
                     }
+                    
                 } else {
                     IntroView()
                 }

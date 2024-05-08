@@ -8,8 +8,10 @@
 import SwiftUI
 import SwiftData
 import InfoOrganizer
+import SMDate
 
 struct ArchivedInfosView: View {
+    @Environment(\.modelContext) var modelContext
     @Query var infos: [IOInfo]
     @Binding var selectInfo: IOInfo?
     @Binding var limit: Int
@@ -18,6 +20,12 @@ struct ArchivedInfosView: View {
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
             info.isArchived == true
         }, sortBy: [SortDescriptor(\IOInfo.updateDate, order: .reverse)])
+        
+        // 测试用
+//        var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
+//            info.isArchived == true && info.name.starts(with: "apple")
+//        }, sortBy: [SortDescriptor(\IOInfo.updateDate, order: .reverse)])
+        
         fd.fetchLimit = limit.wrappedValue
         _infos = Query(fd)
         self._selectInfo = selectInfo
@@ -37,7 +45,27 @@ struct ArchivedInfosView: View {
                         }
                     }
             }
-        }
+        } // end List
+        .overlay {
+            if infos.isEmpty {
+                ContentUnavailableView {
+                    Label("无归档", systemImage: "archivebox")
+                } description: {
+                    Text("点击下方按钮添加一个归档资料")
+                } actions: {
+                    Button("新增") {
+                        addInfo()
+                    }
+                }
+            }
+        } // end overlay
+    }
+    
+    func addInfo() {
+        let info = IOInfo(name: "简单记录 - \(SMDate.nowDateString())", url: "", des: "", relateName: "")
+        info.isArchived = true
+        modelContext.insert(info)
+        selectInfo = info
     }
 }
 

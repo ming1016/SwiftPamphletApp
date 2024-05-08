@@ -41,10 +41,8 @@ struct IntroView: View {
                 Text("Swift Pamphlet App").gradientTitle(color: .mint)
             }
 
-            
             HStack {
                 Text("一本活的开发手册")
-                Link("GitHub 地址", destination: URL(string: "https://github.com/ming1016/SwiftPamphletApp")!)
             }
             if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
                 Text("版本\(version)").font(.footnote)

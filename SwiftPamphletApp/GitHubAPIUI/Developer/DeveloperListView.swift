@@ -14,6 +14,10 @@ struct DeveloperListView: View {
     @Environment(\.modelContext) var modelContext
     @Binding var selectDev: DeveloperModel?
     @Query(DeveloperModel.all) var devs: [DeveloperModel]
+    // 测试无数据用
+//    @Query(filter: #Predicate<DeveloperModel> { dev in
+//        dev.name.starts(with: "apple")
+//    }) var devs: [DeveloperModel]
     
     var body: some View {
         List(selection: $selectDev) {
@@ -61,18 +65,28 @@ struct DeveloperListView: View {
                         DeveloperModel.delete(dev)
                     }
                 }
-                    
-                    
             }
         }
         .listStyle(.inset)
-        .alternatingRowBackgrounds()
         .toolbar(content: {
             ToolbarItem(placement: .navigation) {
                 Button("添加开发者", systemImage: "plus", action: addDev)
                     .keyboardShortcut(KeyEquivalent("a"), modifiers: .option)
             }
         })
+        .overlay {
+            if devs.isEmpty {
+                ContentUnavailableView {
+                    Label("无数据", systemImage: "person.fill.questionmark")
+                } description: {
+                    Text("点击下方按钮添加开发者或仓库")
+                } actions: {
+                    Button("新增") {
+                        addDev()
+                    }
+                }
+            }
+        }
     }
     
     func addDev() {
