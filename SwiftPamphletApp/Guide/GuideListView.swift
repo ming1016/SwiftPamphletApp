@@ -234,13 +234,11 @@ final class GuideListModel {
             L(t: "容器配置modelContainer"),
             L(t: "增删modelContext"),
             L(t: "SwiftData-检索"),
-//            L(t: "SwiftData-处理大量数据"),
-//            L(t: "SwiftData多线程"),
-//            L(t: "SwiftData-版本迁移"),
-//            L(t: "SwiftData-调试")
-        ]),
-        L(t: "Swift三方库使用",sub: [
-            L(t: "SQLite.swift的使用")
+            L(t: "SwiftData-处理大量数据"),
+            L(t: "SwiftData多线程"),
+            L(t: "SwiftData-版本迁移"),
+            L(t: "SwiftData-调试"),
+            L(t: "SwiftData-资料")
         ]),
         L(t: "系统能力",sub: [
             L(t: "Swift-DocC")
@@ -283,6 +281,9 @@ final class GuideListModel {
             L(t: "全屏模式"),
             L(t: "macOS共享菜单"),
             L(t: "macOS剪贴板")
+        ]),
+        L(t: "三方库使用",sub: [
+            L(t: "SQLite.swift的使用")
         ])
     ]
     

@@ -19,6 +19,11 @@ final class Article {
 }
 ```
 
+以下数据类型默认支持：
+- 基础类型：Int, Int8, Int16, Int32, Int64, UInt, UInt8, UInt16, UInt32, UInt64, Float, Double, Bool, String, Date, Data 等
+- 复杂的类型：Array, Dictionary, Set, Optional, Enum, Struct, Codable 等
+- 模型关系：一对一、一对多、多对多
+
 默认数据库路径： `Data/Library/Application Support/default.store`
 
 ## `@Attribute`

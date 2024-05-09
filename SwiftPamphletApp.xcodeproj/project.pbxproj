@@ -149,6 +149,7 @@
 		08522BE927CF6E3B005FF059 /* SwiftUI Effect(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BE827CF6E3A005FF059 /* SwiftUI Effect(ap).md */; };
 		08522BED27CF7A0C005FF059 /* Keyboard(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BEC27CF7A0C005FF059 /* Keyboard(ap).md */; };
 		0858C5C72BEBD230004F4C04 /* ContentUnavailableView(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0858C5C62BEBD230004F4C04 /* ContentUnavailableView(ap).md */; };
+		0858C5C92BECCD17004F4C04 /* SwiftData-资料(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0858C5C82BECCD17004F4C04 /* SwiftData-资料(ap).md */; };
 		085BB77427D22FCA00E8F69A /* SwiftUI动画(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */; };
 		085BB77627D22FE300E8F69A /* SwiftUI Canvas(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */; };
 		08659BC72BE8FD84009B7C00 /* SwiftUI数据流(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */; };
@@ -365,6 +366,7 @@
 		08522BE827CF6E3A005FF059 /* SwiftUI Effect(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI Effect(ap).md"; sourceTree = "<group>"; };
 		08522BEC27CF7A0C005FF059 /* Keyboard(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Keyboard(ap).md"; sourceTree = "<group>"; };
 		0858C5C62BEBD230004F4C04 /* ContentUnavailableView(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ContentUnavailableView(ap).md"; sourceTree = "<group>"; };
+		0858C5C82BECCD17004F4C04 /* SwiftData-资料(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftData-资料(ap).md"; sourceTree = "<group>"; };
 		085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI动画(ap).md"; sourceTree = "<group>"; };
 		085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI Canvas(ap).md"; sourceTree = "<group>"; };
 		08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI数据流(ap).md"; sourceTree = "<group>"; };
@@ -547,12 +549,12 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		08448F5C279EB19700B61353 /* Swift三方库使用 */ = {
+		08448F5C279EB19700B61353 /* 三方库使用 */ = {
 			isa = PBXGroup;
 			children = (
 				08448F5D279EB23600B61353 /* SQLite.swift的使用(ap).md */,
 			);
-			path = "Swift三方库使用";
+			path = "三方库使用";
 			sourceTree = "<group>";
 		};
 		08448F67279EB40D00B61353 /* 基础库 */ = {
@@ -850,6 +852,7 @@
 				08659BD82BE9A80E009B7C00 /* SwiftData多线程(ap).md */,
 				08659BDA2BE9A834009B7C00 /* SwiftData-版本迁移(ap).md */,
 				08659BDC2BE9E3AA009B7C00 /* SwiftData-调试(ap).md */,
+				0858C5C82BECCD17004F4C04 /* SwiftData-资料(ap).md */,
 			);
 			path = SwiftData;
 			sourceTree = "<group>";
@@ -994,7 +997,6 @@
 				08448F47279E7E3A00B61353 /* SwiftUI */,
 				08448F48279E7E4100B61353 /* Combine */,
 				08659BCB2BE9A3E6009B7C00 /* SwiftData */,
-				08448F5C279EB19700B61353 /* Swift三方库使用 */,
 				08026C312869990100792EF1 /* 系统能力 */,
 				08448F7C279EB6F700B61353 /* 工程模式 */,
 				08449016279ECD1400B61353 /* Swift Concurrency */,
@@ -1003,6 +1005,7 @@
 				08026C332869999800792EF1 /* 性能和构建 */,
 				08448F8D279EB86500B61353 /* 安全 */,
 				08448F4F279E8E9F00B61353 /* macOS */,
+				08448F5C279EB19700B61353 /* 三方库使用 */,
 				0844902F279ECF7D00B61353 /* 1.md */,
 			);
 			path = Guide;
@@ -1213,6 +1216,7 @@
 				08BE634227BFAF76002BC6A8 /* TextEditor(ap).md in Resources */,
 				08522BDE27CF5133005FF059 /* Stepper(ap).md in Resources */,
 				08448FB8279EC3C200B61353 /* 属性(ap).md in Resources */,
+				0858C5C92BECCD17004F4C04 /* SwiftData-资料(ap).md in Resources */,
 				0844900F279ECC0C00B61353 /* Combine网络请求(ap).md in Resources */,
 				08448F9A279EBA2900B61353 /* 可选(ap).md in Resources */,
 				08026C472869B26900792EF1 /* 调试(ap).md in Resources */,
@@ -1530,7 +1534,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1544,7 +1548,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.3;
+				MARKETING_VERSION = 6.3.2;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1573,7 +1577,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1587,7 +1591,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.3;
+				MARKETING_VERSION = 6.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
