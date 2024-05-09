@@ -123,6 +123,15 @@ struct SomeView: View {
 }
 ```
 
+## context
+
+View 之外的地方，可以通过 ModelContainer 的 context 属性来获取 modelContext。
+
+```swift
+let context = container.mainContext
+let context = ModelContext(container)
+```
+
 ## 预先导入数据
 
 方法如下：

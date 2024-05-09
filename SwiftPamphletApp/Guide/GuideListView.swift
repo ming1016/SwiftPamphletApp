@@ -201,33 +201,6 @@ final class GuideListModel {
             ]),
             L(t: "SwiftUI数据流")
         ]),
-        L(t: "Combine",sub: [
-            L(t: "介绍",sub: [
-                L(t: "Combine是什么"),
-                L(t: "Combine的资料")
-            ]),
-            L(t: "使用说明",sub: [
-                L(t: "publisher"),
-                L(t: "Just"),
-                L(t: "PassthroughSubject"),
-                L(t: "Empty"),
-                L(t: "CurrentValueSubject"),
-                L(t: "removeDuplicates"),
-                L(t: "flatMap"),
-                L(t: "append"),
-                L(t: "prepend"),
-                L(t: "merge"),
-                L(t: "zip"),
-                L(t: "combineLatest"),
-                L(t: "Scheduler")
-            ]),
-            L(t: "使用场景",sub: [
-                L(t: "Combine网络请求"),
-                L(t: "Combine KVO"),
-                L(t: "Combine通知"),
-                L(t: "Combine Timer")
-            ])
-        ]),
         L(t: "SwiftData",sub: [
             L(t: "创建@Model模型"),
             L(t: "SwiftData-模型关系"),
@@ -240,6 +213,7 @@ final class GuideListModel {
             L(t: "SwiftData-调试"),
             L(t: "SwiftData-资料")
         ]),
+        L(t: "Widget 小部件")
         L(t: "系统能力",sub: [
             L(t: "Swift-DocC")
         ]),
@@ -247,17 +221,46 @@ final class GuideListModel {
             L(t: "单例"),
             L(t: "程序入口点")
         ]),
-        L(t: "Swift Concurrency",sub: [
-            L(t: "Swift Concurrency是什么"),
-            L(t: "async await"),
-            L(t: "Async Sequences"),
-            L(t: "结构化并发"),
-            L(t: "Actors"),
-            L(t: "Distributed Actors"),
-            L(t: "Swift Concurrency相关提案"),
-            L(t: "Swift Concurrency学习路径"),
-            L(t: "Swift Concurrency和Combine"),
-            L(t: "Concurrency技术演进")
+        L(t: "多线程", sub: [
+            L(t: "Swift Concurrency",sub: [
+                L(t: "Swift Concurrency是什么"),
+                L(t: "async await"),
+                L(t: "Async Sequences"),
+                L(t: "结构化并发"),
+                L(t: "Actors"),
+                L(t: "Distributed Actors"),
+                L(t: "Swift Concurrency相关提案"),
+                L(t: "Swift Concurrency学习路径"),
+                L(t: "Swift Concurrency和Combine"),
+                L(t: "Concurrency技术演进")
+            ]),
+            L(t: "Combine",sub: [
+                L(t: "介绍",sub: [
+                    L(t: "Combine是什么"),
+                    L(t: "Combine的资料")
+                ]),
+                L(t: "使用说明",sub: [
+                    L(t: "publisher"),
+                    L(t: "Just"),
+                    L(t: "PassthroughSubject"),
+                    L(t: "Empty"),
+                    L(t: "CurrentValueSubject"),
+                    L(t: "removeDuplicates"),
+                    L(t: "flatMap"),
+                    L(t: "append"),
+                    L(t: "prepend"),
+                    L(t: "merge"),
+                    L(t: "zip"),
+                    L(t: "combineLatest"),
+                    L(t: "Scheduler")
+                ]),
+                L(t: "使用场景",sub: [
+                    L(t: "Combine网络请求"),
+                    L(t: "Combine KVO"),
+                    L(t: "Combine通知"),
+                    L(t: "Combine Timer")
+                ])
+            ]),
         ]),
         L(t: "动画", sub: [
             L(t: "布局动画")
