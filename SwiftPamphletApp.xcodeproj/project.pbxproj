@@ -995,11 +995,10 @@
 				08448F44279E7E0300B61353 /* Swift语法 */,
 				08448F67279EB40D00B61353 /* 基础库 */,
 				08448F47279E7E3A00B61353 /* SwiftUI */,
-				08448F48279E7E4100B61353 /* Combine */,
 				08659BCB2BE9A3E6009B7C00 /* SwiftData */,
 				08026C312869990100792EF1 /* 系统能力 */,
 				08448F7C279EB6F700B61353 /* 工程模式 */,
-				08449016279ECD1400B61353 /* Swift Concurrency */,
+				08EF35CA2BECF0B70098E2D4 /* 多线程 */,
 				08448F8A279EB82D00B61353 /* 动画 */,
 				08448F87279EB7EC00B61353 /* 网络 */,
 				08026C332869999800792EF1 /* 性能和构建 */,
@@ -1038,6 +1037,16 @@
 				08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		08EF35CA2BECF0B70098E2D4 /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				08449016279ECD1400B61353 /* Swift Concurrency */,
+				08448F48279E7E4100B61353 /* Combine */,
+			);
+			name = "多线程";
+			path = "../多线程";
 			sourceTree = "<group>";
 		};
 		08F1AB632BA083F500AEA0CA /* Info */ = {
