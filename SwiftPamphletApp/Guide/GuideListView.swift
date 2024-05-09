@@ -213,7 +213,9 @@ final class GuideListModel {
             L(t: "SwiftData-调试"),
             L(t: "SwiftData-资料")
         ]),
-        L(t: "Widget 小部件")
+        L(t: "Widget小部件", sub: [
+            L(t: "Widget访问SwiftData")
+        ]),
         L(t: "系统能力",sub: [
             L(t: "Swift-DocC")
         ]),
