@@ -65,6 +65,9 @@ struct EditInfoView: View {
                         tabSwitch()
                         isStopLoadingWeb = false
                     }
+                    .onChange(of: info, { oldValue, newValue in
+                        tabSwitch()
+                    })
                     .onAppear {
                         tabSwitch()
                     }
@@ -466,6 +469,9 @@ struct EditInfoView: View {
     func tabSwitch() {
         if info.url.isEmpty {
             selectedTab = 1
+            if info.imgs?.count ?? 0 > 0 || info.imageUrls.count > 0 {
+                selectedTab = 5
+            }
         } else {
             selectedTab = 4
         }

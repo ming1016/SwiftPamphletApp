@@ -17,7 +17,14 @@ struct GuideListView: View {
     var body: some View {
         SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
             NavigationLink(destination: GuideDetailView(t: i.t, plName: "ap", limit: $limit, trigger: $trigger)) {
-                HStack {
+                HStack(spacing:3) {
+                    if i.icon.isEmpty == false {
+                        Image(systemName: i.icon)
+                            .foregroundStyle(i.sub == nil ? Color.secondary : .indigo)
+                    } else if let sub = i.sub {
+                        Image(systemName: "folder.fill")
+                            .foregroundStyle(.gray)
+                    }
                     Text(listModel.searchText.isEmpty == true ? GuideListModel.simpleTitle(i.t) : i.t)
                     Spacer()
                     if apBookmarks.contains(i.t) {
@@ -85,7 +92,7 @@ final class GuideListModel {
     }
     
     var lModel = [
-        L(t: "Swift语法", sub: [
+        L(t: "Swift语法", icon: "swift", sub: [
             L(t: "语法基础", sub: [
                 L(t: "变量"),
                 L(t: "打印"),
@@ -96,7 +103,7 @@ final class GuideListModel {
                 L(t: "访问控制"),
                 L(t: "Regex")
             ]),
-            L(t: "基础类型",sub: [
+            L(t: "基础类型", sub: [
                 L(t: "数字"),
                 L(t: "布尔数"),
                 L(t: "字符串"),
@@ -147,7 +154,7 @@ final class GuideListModel {
             L(t: "Swift规范"),
             L(t: "Swift书单")
         ]),
-        L(t: "基础库", sub: [
+        L(t: "基础库", icon: "globe.asia.australia.fill", sub: [
             L(t: "系统及设备", sub: [
                 L(t: "系统判断"),
                 L(t: "版本兼容"),
@@ -173,7 +180,7 @@ final class GuideListModel {
             L(t: "随机"),
             L(t: "UserDefaults")
         ]),
-        L(t: "SwiftUI",sub: [
+        L(t: "SwiftUI",icon: "heart.text.square.fill",sub: [
             L(t: "介绍",sub: [
                 L(t: "SwiftUI是什么"),
                 L(t: "SwiftUI参考资料"),
@@ -226,7 +233,7 @@ final class GuideListModel {
             ]),
             L(t: "SwiftUI数据流")
         ]),
-        L(t: "SwiftData",sub: [
+        L(t: "SwiftData", icon: "swiftdata", sub: [
             L(t: "创建@Model模型"),
             L(t: "SwiftData-模型关系"),
             L(t: "容器配置modelContainer"),
@@ -238,17 +245,17 @@ final class GuideListModel {
             L(t: "SwiftData-调试"),
             L(t: "SwiftData-资料")
         ]),
-        L(t: "Widget小部件", sub: [
+        L(t: "Widget小部件", icon: "window.shade.open", sub: [
             L(t: "Widget访问SwiftData")
         ]),
-        L(t: "系统能力",sub: [
-            L(t: "Swift-DocC")
+        L(t: "系统能力",icon: "apple.terminal",sub: [
+            L(t: "Swift-DocC", icon: "doc.append")
         ]),
-        L(t: "工程模式", sub: [
+        L(t: "工程模式",icon: "building.columns", sub: [
             L(t: "单例"),
-            L(t: "程序入口点")
+            L(t: "程序入口点", icon: "door.right.hand.open")
         ]),
-        L(t: "多线程", sub: [
+        L(t: "多线程", icon: "text.line.first.and.arrowtriangle.forward", sub: [
             L(t: "Swift Concurrency",sub: [
                 L(t: "Swift Concurrency是什么"),
                 L(t: "async await"),
@@ -289,22 +296,22 @@ final class GuideListModel {
                 ])
             ]),
         ]),
-        L(t: "动画", sub: [
-            L(t: "布局动画")
+        L(t: "动画", icon: "moonphase.waning.gibbous.inverse", sub: [
+            L(t: "布局动画", icon: "squareshape.split.2x2.dotted")
         ]),
-        L(t: "网络",sub: [
+        L(t: "网络", icon:"point.3.connected.trianglepath.dotted", sub: [
             L(t: "网络状态检查")
         ]),
-        L(t: "性能和构建", sub: [
+        L(t: "性能和构建",icon: "battery.100percent.bolt", sub: [
             L(t: "性能技术演进"),
             L(t: "内存管理"),
             L(t: "调试"),
             L(t: "链接器")
         ]),
-        L(t: "安全",sub: [
+        L(t: "安全", icon: "cross.case", sub: [
             L(t: "Keychain")
         ]),
-        L(t: "macOS", sub: [
+        L(t: "macOS", icon: "macstudio", sub: [
             L(t: "macOS技术演进"),
             L(t: "macOS范例"),
             L(t: "三栏结构"),
@@ -312,7 +319,7 @@ final class GuideListModel {
             L(t: "macOS共享菜单"),
             L(t: "macOS剪贴板")
         ]),
-        L(t: "三方库使用",sub: [
+        L(t: "三方库使用", icon:"tray.2", sub: [
             L(t: "SQLite.swift的使用")
         ])
     ]
@@ -320,6 +327,7 @@ final class GuideListModel {
     struct L: Hashable, Identifiable {
         var id = UUID()
         var t: String
+        var icon: String = ""
         var sub: [L]?
     }
 

@@ -5,8 +5,3 @@ Wdiget target 访问主应用 target 的 SwiftData 数据步骤如下：
 - SwiftData 的模型同时在主应用和 Widget 的 target 中。
 - StaticConfiguration 或 AppIntentConfiguration 中添加 `modelContainer()` 修饰符，让 SwiftData 的容器可用。
 
-SwiftData 数据变化后，小组件能够及时更新的方法
-
-```swift
-WidgetCenter.shared.reloadAllTimelines()
-```

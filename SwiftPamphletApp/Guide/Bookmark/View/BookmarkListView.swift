@@ -18,11 +18,21 @@ struct BookmarkListView: View {
         List {
             ForEach(bms) { bm in
                 NavigationLink(destination: GuideDetailView(t: bm.name, plName: bm.pamphletName, limit: $limit, trigger: $trigger)) {
-                    Text(bm.name)
-                    Spacer()
-                    Image(systemName: "bookmark")
-                        .foregroundStyle(.secondary)
-                        .font(.footnote)
+                    HStack {
+                        Text(bm.name)
+                        Spacer()
+                        Image(systemName: "bookmark")
+                            .foregroundStyle(.secondary)
+                            .font(.footnote)
+                    }
+                }
+                .contextMenu {
+                    Button("前移") {
+                        bm.updateDate = Date.now
+                    }
+                    Button("删除") {
+                        BookmarkModel.delBM(bm)
+                    }
                 }
             }
         }

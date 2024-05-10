@@ -56,6 +56,12 @@ final class BookmarkModel {
             context.delete(bm)
         }
     }
+    
+    static func delBM(_ bm: BookmarkModel) {
+        if let context = bm.modelContext {
+            context.delete(bm)
+        }
+    }
 }
 
 @Model

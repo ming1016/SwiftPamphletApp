@@ -127,7 +127,6 @@ struct InfoListView: View {
             }
     }
     
-    
     // MARK: 自定义搜索
     @ViewBuilder
     func customSearchView() -> some View {

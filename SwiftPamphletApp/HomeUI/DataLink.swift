@@ -118,8 +118,8 @@ struct DataLink: Identifiable {
 extension DataLink {
     static var dataLinks = [
         DataLink(title: "开发手册", imageName: "", children: [
-            DataLink(title: "Apple技术", imageName: "p22"),
-            DataLink(title: "书签", imageName: "p24")
+            DataLink(title: "书签", imageName: "p24"),
+            DataLink(title: "Apple技术", imageName: "p22")
         ]),
         DataLink(title: "资料整理", imageName: "", children: [
             DataLink(title: "全部资料", imageName: "p7"),
