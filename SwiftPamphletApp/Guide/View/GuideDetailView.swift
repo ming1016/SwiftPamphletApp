@@ -93,7 +93,7 @@ struct GuideDetailView: View {
                 }, label: {
                     Image(systemName: "xmark.circle")
                 })
-                .help("CMD + d")
+                .help("command + d")
                 .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
                 Spacer()
                 Text("资料")

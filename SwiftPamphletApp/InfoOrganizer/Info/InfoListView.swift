@@ -102,7 +102,7 @@ struct InfoListView: View {
                                 .symbolRenderingMode(.multicolor)
                             Text("检索")
                         }
-                        .help("CMD + d")
+                        .help("command + d")
                         .keyboardShortcut(KeyEquivalent("d"), modifiers: .command)
                     }
                 }
@@ -161,6 +161,7 @@ struct InfoListView: View {
             }
             .padding(20)
         })
+        .help("command + p")
         .keyboardShortcut(KeyEquivalent("p"), modifiers: .command)
     }
     

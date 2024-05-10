@@ -19,6 +19,10 @@ struct BookmarkListView: View {
             ForEach(bms) { bm in
                 NavigationLink(destination: GuideDetailView(t: bm.name, plName: bm.pamphletName, limit: $limit, trigger: $trigger)) {
                     Text(bm.name)
+                    Spacer()
+                    Image(systemName: "bookmark")
+                        .foregroundStyle(.secondary)
+                        .font(.footnote)
                 }
             }
         }
