@@ -82,7 +82,6 @@ struct DataLink: Identifiable {
                     if SPC.gitHubAccessToken.isEmpty == false || SPC.githubAccessToken().isEmpty == false {
                         EditDeveloper(dev: dev, repoVM: APIRepoVM(name: dev.name), userVM: APIUserVM(name: dev.name))
                     } else {
-//                        Text("请在设置里写上 Github 的 access token")
                         EditDeveloper(dev: dev, repoVM: APIRepoVM(name: dev.name), userVM: APIUserVM(name: dev.name), needSetGithubAccessToken: true)
                     }
                     
@@ -90,10 +89,17 @@ struct DataLink: Identifiable {
                     IntroView()
                 }
             }
-        case "Apple 技术":
+        case "Apple技术":
             switch type {
             case .content:
                 GuideListView()
+            case .detail:
+                IntroView()
+            }
+        case "书签":
+            switch type {
+            case .content:
+                BookmarkListView()
             case .detail:
                 IntroView()
             }
@@ -112,7 +118,8 @@ struct DataLink: Identifiable {
 extension DataLink {
     static var dataLinks = [
         DataLink(title: "开发手册", imageName: "", children: [
-            DataLink(title: "Apple 技术", imageName: "p22")
+            DataLink(title: "Apple技术", imageName: "p22"),
+            DataLink(title: "书签", imageName: "p24")
         ]),
         DataLink(title: "资料整理", imageName: "", children: [
             DataLink(title: "全部资料", imageName: "p7"),

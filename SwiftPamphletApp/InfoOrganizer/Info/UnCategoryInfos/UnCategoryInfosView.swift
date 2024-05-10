@@ -41,6 +41,7 @@ struct UnCategoryInfosView: View {
                     }
             } // endforeach
         } // end list
+        .listStyle(.plain)
         .overlay {
             if infos.isEmpty {
                 ContentUnavailableView {

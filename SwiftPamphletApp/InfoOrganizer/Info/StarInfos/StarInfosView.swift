@@ -46,6 +46,7 @@ struct StarInfosView: View {
                     }
             }
         } // end List
+        .listStyle(.plain)
         .overlay {
             if infos.isEmpty {
                 ContentUnavailableView {

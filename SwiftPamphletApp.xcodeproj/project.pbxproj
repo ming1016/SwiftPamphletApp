@@ -203,9 +203,11 @@
 		08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FC27758B8A008C0935 /* Lexer.swift */; };
 		08CD61FF27758B8A008C0935 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FD27758B8A008C0935 /* Token.swift */; };
 		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
+		08D8EFE52BED825E00AA0020 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D8EFE42BED825E00AA0020 /* BookmarkListView.swift */; };
 		08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 08ED80152B9C54DE0069B7EC /* SMNetwork */; };
 		08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED801B2B9D1EEC0069B7EC /* SettingView.swift */; };
 		08EF35CD2BECF3120098E2D4 /* Widget访问SwiftData(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08EF35CC2BECF3120098E2D4 /* Widget访问SwiftData(ap).md */; };
+		08EF35D22BECFDA80098E2D4 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF35D12BECFDA80098E2D4 /* BookmarkModel.swift */; };
 		08F14B3C2BBDA3EA005B46CC /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3B2BBDA3EA005B46CC /* Nuke */; };
 		08F14B3E2BBDA3EA005B46CC /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3D2BBDA3EA005B46CC /* NukeExtensions */; };
 		08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3F2BBDA3EA005B46CC /* NukeUI */; };
@@ -421,8 +423,10 @@
 		08C3BBA127CF1B2B00ACF0FE /* Toggle(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Toggle(ap).md"; sourceTree = "<group>"; };
 		08CD61FC27758B8A008C0935 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		08CD61FD27758B8A008C0935 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		08D8EFE42BED825E00AA0020 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		08ED801B2B9D1EEC0069B7EC /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		08EF35CC2BECF3120098E2D4 /* Widget访问SwiftData(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Widget访问SwiftData(ap).md"; sourceTree = "<group>"; };
+		08EF35D12BECFDA80098E2D4 /* BookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; };
 		08F14B432BBE2865005B46CC /* ViewComponentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentImage.swift; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
@@ -945,9 +949,8 @@
 		0887A5982BA28F3600131359 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
-				0887A5992BA28F6D00131359 /* CSGuideView.swift */,
-				08069CAA2BDE01E800D48E24 /* GuideListView.swift */,
-				08069CAC2BDE7A6B00D48E24 /* GuideDetailView.swift */,
+				08EF35CF2BECFD420098E2D4 /* Bookmark */,
+				08EF35CE2BECFCD40098E2D4 /* View */,
 			);
 			path = Guide;
 			sourceTree = "<group>";
@@ -1033,6 +1036,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		08D8EFE32BED74D900AA0020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08D8EFE42BED825E00AA0020 /* BookmarkListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		08ED801A2B9D1EDA0069B7EC /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -1058,6 +1069,33 @@
 				08EF35CC2BECF3120098E2D4 /* Widget访问SwiftData(ap).md */,
 			);
 			path = "Widget小部件";
+			sourceTree = "<group>";
+		};
+		08EF35CE2BECFCD40098E2D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0887A5992BA28F6D00131359 /* CSGuideView.swift */,
+				08069CAA2BDE01E800D48E24 /* GuideListView.swift */,
+				08069CAC2BDE7A6B00D48E24 /* GuideDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08EF35CF2BECFD420098E2D4 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				08D8EFE32BED74D900AA0020 /* View */,
+				08EF35D02BECFD520098E2D4 /* Data */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		08EF35D02BECFD520098E2D4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				08EF35D12BECFDA80098E2D4 /* BookmarkModel.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		08F1AB632BA083F500AEA0CA /* Info */ = {
@@ -1404,6 +1442,7 @@
 				3AF2A2E12BE22B5800F3BE1B /* UnCategoryInfosView.swift in Sources */,
 				08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */,
 				0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */,
+				08D8EFE52BED825E00AA0020 /* BookmarkListView.swift in Sources */,
 				3AF2A2DF2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				084417752B99B9060049297D /* HomeView.swift in Sources */,
@@ -1418,6 +1457,7 @@
 				0805F4962BAAABEA0008BB52 /* ViewStyle.swift in Sources */,
 				08CD61FF27758B8A008C0935 /* Token.swift in Sources */,
 				3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */,
+				08EF35D22BECFDA80098E2D4 /* BookmarkModel.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
 				084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */,
 			);
@@ -1555,7 +1595,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1569,7 +1609,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.3.2;
+				MARKETING_VERSION = 6.4;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1598,7 +1638,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1612,7 +1652,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.3.2;
+				MARKETING_VERSION = 6.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";

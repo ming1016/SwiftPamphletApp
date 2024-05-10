@@ -6,21 +6,46 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct GuideListView: View {
+    @Query(BookmarkModel.all) var bookmarks: [BookmarkModel]
+    @State private var apBookmarks: [String] = [String]()
     @State private var listModel = GuideListModel()
     @State private var limit: Int = 50
+    @State private var trigger = false // 触发列表书签状态更新
     var body: some View {
         SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
-            NavigationLink(destination: GuideDetailView(t: i.t, limit: $limit)) {
+            NavigationLink(destination: GuideDetailView(t: i.t, plName: "ap", limit: $limit, trigger: $trigger)) {
                 HStack {
                     Text(listModel.searchText.isEmpty == true ? GuideListModel.simpleTitle(i.t) : i.t)
                     Spacer()
+                    if apBookmarks.contains(i.t) {
+                        Image(systemName: "bookmark")
+                            .foregroundStyle(.secondary)
+                            .font(.footnote)
+                    }
                 }
                 .contentShape(Rectangle())
             }
         }
         .searchable(text: $listModel.searchText)
+        .listStyle(.sidebar)
+        .onChange(of: trigger, { oldValue, newValue in
+            updateApBookmarks()
+        })
+        .onAppear(perform: {
+            updateApBookmarks()
+        })
+    }
+    
+    func updateApBookmarks() {
+        apBookmarks = [String]()
+        for bm in bookmarks {
+            if bm.pamphletName == "ap" {
+                apBookmarks.append(bm.name)
+            }
+        }
     }
 }
 

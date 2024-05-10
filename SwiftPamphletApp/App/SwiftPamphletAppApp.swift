@@ -26,7 +26,7 @@ struct SwiftPamphletAppApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
-                .modelContainer(for: [IOInfo.self, DeveloperModel.self], isUndoEnabled: true)
+                .modelContainer(for: [IOInfo.self, DeveloperModel.self, BookmarkModel.self], isUndoEnabled: true)
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
         Settings {
