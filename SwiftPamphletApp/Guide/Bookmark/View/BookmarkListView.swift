@@ -10,8 +10,8 @@ import SwiftData
 
 struct BookmarkListView: View {
     @Environment(\.modelContext) var modelContext
-//    @Binding var selectedBM: BookmarkModel?
     @Query(BookmarkModel.all) var bms: [BookmarkModel]
+//    var bms: [BookmarkModel] = [BookmarkModel]() // 测试空数据用
     @State private var limit: Int = 50
     @State private var trigger = false
     var body: some View {
@@ -37,5 +37,14 @@ struct BookmarkListView: View {
             }
         }
         .listStyle(.sidebar)
+        .overlay {
+            if bms.isEmpty {
+                ContentUnavailableView {
+                    Label("无书签", systemImage: "bookmark.slash")
+                } description: {
+                    Text("请到手册中添加书签")
+                }
+            }
+        } // end overlay
     }
 }

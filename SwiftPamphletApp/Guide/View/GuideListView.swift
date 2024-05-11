@@ -95,9 +95,9 @@ final class GuideListModel {
         L(t: "Swift语法", icon: "swift", sub: [
             L(t: "语法基础", sub: [
                 L(t: "变量"),
-                L(t: "打印"),
-                L(t: "注释"),
-                L(t: "可选"),
+                L(t: "打印", icon: "printer"),
+                L(t: "注释", icon: "number.square"),
+                L(t: "可选", icon: "exclamationmark.questionmark"),
                 L(t: "闭包"),
                 L(t: "函数"),
                 L(t: "访问控制"),
@@ -187,7 +187,10 @@ final class GuideListModel {
                 L(t: "SwiftUI对标的UIKit视图"),
             ]),
             L(t: "图文组件",sub: [
-                L(t: "Text"),
+                L(t: "Text", sub: [
+                    L(t: "Text"),
+                    L(t: "Text-动态时间")
+                ]),
                 L(t: "Link"),
                 L(t: "Label"),
                 L(t: "TextEditor"),
@@ -243,10 +246,23 @@ final class GuideListModel {
             L(t: "SwiftData多线程"),
             L(t: "SwiftData-版本迁移"),
             L(t: "SwiftData-调试"),
-            L(t: "SwiftData-资料")
+            L(t: "SwiftData-资料", icon: "books.vertical")
         ]),
-        L(t: "Widget小部件", icon: "window.shade.open", sub: [
-            L(t: "Widget访问SwiftData")
+        L(t: "小组件", icon: "window.shade.open", sub: [
+            L(t: "小组件-StaticConfiguration",icon: "doc.plaintext"),
+            L(t: "小组件-AppIntentConfiguration"),
+            L(t: "小组件-配置选项",icon: "rectangle.portrait.bottomleft.inset.filled"),
+            L(t: "AppIntentTimelineProvider"),
+            L(t: "Widget View"),
+            L(t: "刷新小组件", icon: "arrow.clockwise.circle"),
+            L(t: "小组件动画", icon: "figure.disc.sports"),
+            L(t: "小组件-远程定时获取数据", icon: "cloud"),
+            L(t: "小组件-获取位置权限更新内容", icon: "location.fill.viewfinder"),
+            L(t: "支持多个小组件"),
+            L(t: "获取小组件形状"),
+            L(t: "小组件-Deep link"),
+            L(t: "小组件访问SwiftData"),
+            L(t: "小组件-参考资料", icon: "books.vertical"),
         ]),
         L(t: "系统能力",icon: "apple.terminal",sub: [
             L(t: "Swift-DocC", icon: "doc.append")

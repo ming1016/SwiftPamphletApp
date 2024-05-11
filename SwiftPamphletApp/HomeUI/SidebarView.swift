@@ -18,7 +18,7 @@ struct SidebarView: View {
             ForEach(isShowGithub ? DataLink.dataLinksWithGithub() : DataLink.dataLinks) { link in
                 Section {
                     OutlineGroup(link.children ?? [], children: \.children) { i in
-                        SideBarLabel(title: i.title, imageName: i.imageName)
+                        SideBarLabel(title: i.title, imageName: i.imageName, color: i.color)
                             .tag(i.title)
                     }
                 } header: {

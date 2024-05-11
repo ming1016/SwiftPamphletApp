@@ -1,41 +1,69 @@
-@dynamicMemberLookup 指示访问属性时调用一个已实现的处理动态查找的下标方法 subscript(dynamicMemeber:)，通过指定属性字符串名返回值。使用方法如下：
+结果生成器（Result builders），通过传递序列创建新值，SwiftUI就是使用的结果生成器将多个视图生成一个视图
 
 ```swift
-@dynamicMemberLookup
-struct D {
-    // 找字符串
-    subscript(dynamicMember m: String) -> String {
-        let p = ["one": "first", "two": "second"]
-        return p[m, default: ""]
-    }
-    // 找整型
-    subscript(dynamicMember m: String) -> Int {
-        let p = ["one": 1, "two": 2]
-        return p[m, default: 0]
-    }
-    // 找闭包
-    subscript(dynamicMember m: String) -> (_ s: String) -> Void {
-        return {
-            print("show \($0)")
+@resultBuilder
+struct RBS {
+    // 基本闭包支持
+    static func buildBlock(_ components: Int...) -> Int {
+        components.reduce(0) { partialResult, i in
+            partialResult + i
         }
     }
-    // 静态数组成员
-    var p = ["This is a member"]
-    // 动态数组成员
-    subscript(dynamicMember m: String) -> [String] {
-        return ["This is a dynamic member"]
+    // 支持条件判断
+    static func buildEither(first component: Int) -> Int {
+        component
+    }
+    static func buildEither(second component: Int) -> Int {
+        component
+    }
+    // 支持循环
+    static func buildArray(_ components: [Int]) -> Int {
+        components.reduce(0) { partialResult, i in
+            partialResult + i
+        }
     }
 }
 
-let d = D()
-let s1: String = d.one
-print(s1) // first
-let i1: Int = d.one
-print(i1) // 1
-d.show("something") // show something
-print(d.p) // ["This is a member"]
-let dynamicP:[String] = d.dp
-print(dynamicP) // ["This is a dynamic member"]
+let a = RBS.buildBlock(
+    1,
+    2,
+    3
+)
+print(a) // 6
+
+// 应用到函数中
+@RBS func f1() -> Int {
+    1
+    2
+    3
+}
+print(f1()) // 6
+
+// 设置了 buildEither 就可以在闭包中进行条件判断。
+@RBS func f2(stopAtThree: Bool) -> Int {
+    1
+    2
+    3
+    if stopAtThree == true {
+        0
+    } else {
+        4
+        5
+        6
+    }
+}
+print(f2(stopAtThree: false)) // 21
+
+// 设置了 buildArray 就可以在闭包内使用循环了
+@RBS func f3() -> Int {
+    for i in 1...3 {
+        i * 2
+    }
+}
+print(f3()) // 12
 ```
 
-类使用 @dynamicMemberLookup，继承的类也会自动加上 @dynamicMemberLookup。协议上定义 @dynamicMemberLookup，通过扩展可以默认实现 subscript(dynamicMember:) 方法。
+[SE-0348 buildPartialBlock for result builders](https://github.com/apple/swift-evolution/blob/main/proposals/0348-buildpartialblock.md)  简化了实现复杂 result buiders 所需的重载。
+
+
+

@@ -13,6 +13,7 @@ struct DataLink: Identifiable {
     let id = UUID()
     let title: String
     let imageName: String
+    var color: Color = Color.primary
     var children: [DataLink]?
     
     enum ShowType {
@@ -118,11 +119,11 @@ struct DataLink: Identifiable {
 extension DataLink {
     static var dataLinks = [
         DataLink(title: "开发手册", imageName: "", children: [
-            DataLink(title: "书签", imageName: "p24"),
-            DataLink(title: "Apple技术", imageName: "p22")
+            DataLink(title: "书签", imageName: "p24", color: .mint),
+            DataLink(title: "Apple技术", imageName: "p22", color: .indigo)
         ]),
         DataLink(title: "资料整理", imageName: "", children: [
-            DataLink(title: "全部资料", imageName: "p7"),
+            DataLink(title: "全部资料", imageName: "p7", color: .cyan),
             DataLink(title: "未分类", imageName: "p6"),
             DataLink(title: "收藏", imageName: "p11"),
             DataLink(title: "归档", imageName: "p3")
@@ -132,7 +133,7 @@ extension DataLink {
         var arr = DataLink.dataLinks
         arr.append(
             DataLink(title: "Github", imageName: "", children: [
-                DataLink(title: "开发/仓库", imageName: "p5"),
+                DataLink(title: "开发/仓库", imageName: "p5", color: .green),
             ]))
         return arr
     }

@@ -204,9 +204,23 @@
 		08CD61FF27758B8A008C0935 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FD27758B8A008C0935 /* Token.swift */; };
 		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
 		08D8EFE52BED825E00AA0020 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D8EFE42BED825E00AA0020 /* BookmarkListView.swift */; };
+		08D8EFE92BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFE82BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md */; };
+		08D8EFEB2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFEA2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md */; };
+		08D8EFED2BEF3F2100AA0020 /* 小组件-配置选项(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFEC2BEF3F2100AA0020 /* 小组件-配置选项(ap).md */; };
+		08D8EFEF2BEF45CD00AA0020 /* AppIntentTimelineProvider(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFEE2BEF45CD00AA0020 /* AppIntentTimelineProvider(ap).md */; };
+		08D8EFF12BEF4E6900AA0020 /* Widget View(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFF02BEF4E6900AA0020 /* Widget View(ap).md */; };
+		08D8EFF32BEF78B400AA0020 /* 刷新小组件(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFF22BEF78B400AA0020 /* 刷新小组件(ap).md */; };
+		08D8EFF62BEF8CAB00AA0020 /* Text-动态时间(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFF52BEF8CAB00AA0020 /* Text-动态时间(ap).md */; };
+		08D8EFF82BEF912700AA0020 /* 小组件动画(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFF72BEF912700AA0020 /* 小组件动画(ap).md */; };
+		08D8EFFA2BEF9C9800AA0020 /* 小组件-远程定时获取数据(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFF92BEF9C9800AA0020 /* 小组件-远程定时获取数据(ap).md */; };
+		08D8EFFC2BEF9EDE00AA0020 /* 小组件-获取位置权限更新内容(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFFB2BEF9EDE00AA0020 /* 小组件-获取位置权限更新内容(ap).md */; };
+		08D8EFFE2BEFA3E300AA0020 /* 支持多个小组件(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFFD2BEFA3E300AA0020 /* 支持多个小组件(ap).md */; };
+		08D8F0002BEFA72300AA0020 /* 获取小组件形状(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFFF2BEFA72300AA0020 /* 获取小组件形状(ap).md */; };
+		08D8F0022BEFA84E00AA0020 /* 小组件-Deep link(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8F0012BEFA84E00AA0020 /* 小组件-Deep link(ap).md */; };
+		08D8F0042BEFA86C00AA0020 /* 小组件-参考资料(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8F0032BEFA86C00AA0020 /* 小组件-参考资料(ap).md */; };
 		08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 08ED80152B9C54DE0069B7EC /* SMNetwork */; };
 		08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED801B2B9D1EEC0069B7EC /* SettingView.swift */; };
-		08EF35CD2BECF3120098E2D4 /* Widget访问SwiftData(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08EF35CC2BECF3120098E2D4 /* Widget访问SwiftData(ap).md */; };
+		08EF35CD2BECF3120098E2D4 /* 小组件访问SwiftData(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08EF35CC2BECF3120098E2D4 /* 小组件访问SwiftData(ap).md */; };
 		08EF35D22BECFDA80098E2D4 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF35D12BECFDA80098E2D4 /* BookmarkModel.swift */; };
 		08F14B3C2BBDA3EA005B46CC /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3B2BBDA3EA005B46CC /* Nuke */; };
 		08F14B3E2BBDA3EA005B46CC /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3D2BBDA3EA005B46CC /* NukeExtensions */; };
@@ -424,8 +438,22 @@
 		08CD61FC27758B8A008C0935 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		08CD61FD27758B8A008C0935 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		08D8EFE42BED825E00AA0020 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
+		08D8EFE82BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-StaticConfiguration(ap).md"; sourceTree = "<group>"; };
+		08D8EFEA2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-AppIntentConfiguration(ap).md"; sourceTree = "<group>"; };
+		08D8EFEC2BEF3F2100AA0020 /* 小组件-配置选项(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-配置选项(ap).md"; sourceTree = "<group>"; };
+		08D8EFEE2BEF45CD00AA0020 /* AppIntentTimelineProvider(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AppIntentTimelineProvider(ap).md"; sourceTree = "<group>"; };
+		08D8EFF02BEF4E6900AA0020 /* Widget View(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Widget View(ap).md"; sourceTree = "<group>"; };
+		08D8EFF22BEF78B400AA0020 /* 刷新小组件(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "刷新小组件(ap).md"; sourceTree = "<group>"; };
+		08D8EFF52BEF8CAB00AA0020 /* Text-动态时间(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Text-动态时间(ap).md"; sourceTree = "<group>"; };
+		08D8EFF72BEF912700AA0020 /* 小组件动画(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件动画(ap).md"; sourceTree = "<group>"; };
+		08D8EFF92BEF9C9800AA0020 /* 小组件-远程定时获取数据(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-远程定时获取数据(ap).md"; sourceTree = "<group>"; };
+		08D8EFFB2BEF9EDE00AA0020 /* 小组件-获取位置权限更新内容(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-获取位置权限更新内容(ap).md"; sourceTree = "<group>"; };
+		08D8EFFD2BEFA3E300AA0020 /* 支持多个小组件(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "支持多个小组件(ap).md"; sourceTree = "<group>"; };
+		08D8EFFF2BEFA72300AA0020 /* 获取小组件形状(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "获取小组件形状(ap).md"; sourceTree = "<group>"; };
+		08D8F0012BEFA84E00AA0020 /* 小组件-Deep link(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-Deep link(ap).md"; sourceTree = "<group>"; };
+		08D8F0032BEFA86C00AA0020 /* 小组件-参考资料(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-参考资料(ap).md"; sourceTree = "<group>"; };
 		08ED801B2B9D1EEC0069B7EC /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		08EF35CC2BECF3120098E2D4 /* Widget访问SwiftData(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Widget访问SwiftData(ap).md"; sourceTree = "<group>"; };
+		08EF35CC2BECF3120098E2D4 /* 小组件访问SwiftData(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件访问SwiftData(ap).md"; sourceTree = "<group>"; };
 		08EF35D12BECFDA80098E2D4 /* BookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; };
 		08F14B432BBE2865005B46CC /* ViewComponentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentImage.swift; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
@@ -958,7 +986,7 @@
 		08A7FF2D2BEABDCA00E12E5A /* 图文组件 */ = {
 			isa = PBXGroup;
 			children = (
-				0844902D279ECF1C00B61353 /* Text(ap).md */,
+				08D8EFF42BEF8C9300AA0020 /* Text */,
 				08BE632B27BE3762002BC6A8 /* Link(ap).md */,
 				08BE632F27BE6CAA002BC6A8 /* Label(ap).md */,
 				08BE634127BFAF76002BC6A8 /* TextEditor(ap).md */,
@@ -1001,7 +1029,7 @@
 				08448F67279EB40D00B61353 /* 基础库 */,
 				08448F47279E7E3A00B61353 /* SwiftUI */,
 				08659BCB2BE9A3E6009B7C00 /* SwiftData */,
-				08EF35CB2BECF1690098E2D4 /* Widget小部件 */,
+				08EF35CB2BECF1690098E2D4 /* 小组件 */,
 				08026C312869990100792EF1 /* 系统能力 */,
 				08448F7C279EB6F700B61353 /* 工程模式 */,
 				08EF35CA2BECF0B70098E2D4 /* 多线程 */,
@@ -1044,6 +1072,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		08D8EFF42BEF8C9300AA0020 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				0844902D279ECF1C00B61353 /* Text(ap).md */,
+				08D8EFF52BEF8CAB00AA0020 /* Text-动态时间(ap).md */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		08ED801A2B9D1EDA0069B7EC /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -1063,12 +1100,25 @@
 			path = "../多线程";
 			sourceTree = "<group>";
 		};
-		08EF35CB2BECF1690098E2D4 /* Widget小部件 */ = {
+		08EF35CB2BECF1690098E2D4 /* 小组件 */ = {
 			isa = PBXGroup;
 			children = (
-				08EF35CC2BECF3120098E2D4 /* Widget访问SwiftData(ap).md */,
+				08D8EFE82BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md */,
+				08D8EFEA2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md */,
+				08D8EFEC2BEF3F2100AA0020 /* 小组件-配置选项(ap).md */,
+				08D8EFEE2BEF45CD00AA0020 /* AppIntentTimelineProvider(ap).md */,
+				08D8EFF02BEF4E6900AA0020 /* Widget View(ap).md */,
+				08D8EFF22BEF78B400AA0020 /* 刷新小组件(ap).md */,
+				08D8EFF72BEF912700AA0020 /* 小组件动画(ap).md */,
+				08D8EFF92BEF9C9800AA0020 /* 小组件-远程定时获取数据(ap).md */,
+				08D8EFFB2BEF9EDE00AA0020 /* 小组件-获取位置权限更新内容(ap).md */,
+				08D8EFFD2BEFA3E300AA0020 /* 支持多个小组件(ap).md */,
+				08D8EFFF2BEFA72300AA0020 /* 获取小组件形状(ap).md */,
+				08D8F0012BEFA84E00AA0020 /* 小组件-Deep link(ap).md */,
+				08D8F0032BEFA86C00AA0020 /* 小组件-参考资料(ap).md */,
+				08EF35CC2BECF3120098E2D4 /* 小组件访问SwiftData(ap).md */,
 			);
-			path = "Widget小部件";
+			path = "小组件";
 			sourceTree = "<group>";
 		};
 		08EF35CE2BECFCD40098E2D4 /* View */ = {
@@ -1254,6 +1304,7 @@
 				08448F92279EB8CA00B61353 /* 程序入口点(ap).md in Resources */,
 				08522BED27CF7A0C005FF059 /* Keyboard(ap).md in Resources */,
 				08659BDF2BEA4D8C009B7C00 /* SwiftData-模型关系(ap).md in Resources */,
+				08D8EFFC2BEF9EDE00AA0020 /* 小组件-获取位置权限更新内容(ap).md in Resources */,
 				084E1A6327B517FC0072BBB6 /* Swift各版本演进(ap).md in Resources */,
 				08448F6F279EB56400B61353 /* 度量值(ap).md in Resources */,
 				0844900C279ECBB400B61353 /* Scheduler(ap).md in Resources */,
@@ -1275,6 +1326,7 @@
 				08522BDE27CF5133005FF059 /* Stepper(ap).md in Resources */,
 				08448FB8279EC3C200B61353 /* 属性(ap).md in Resources */,
 				0858C5C92BECCD17004F4C04 /* SwiftData-资料(ap).md in Resources */,
+				08D8EFED2BEF3F2100AA0020 /* 小组件-配置选项(ap).md in Resources */,
 				0844900F279ECC0C00B61353 /* Combine网络请求(ap).md in Resources */,
 				08448F9A279EBA2900B61353 /* 可选(ap).md in Resources */,
 				08026C472869B26900792EF1 /* 调试(ap).md in Resources */,
@@ -1297,6 +1349,7 @@
 				08448FD3279EC60300B61353 /* 数组(ap).md in Resources */,
 				08448F64279EB32C00B61353 /* Swift规范(ap).md in Resources */,
 				08026C482869B28A00792EF1 /* 内存管理(ap).md in Resources */,
+				08D8EFF62BEF8CAB00AA0020 /* Text-动态时间(ap).md in Resources */,
 				08448FD7279EC64600B61353 /* 字典(ap).md in Resources */,
 				08026C412869B1BF00792EF1 /* 性能技术演进(ap).md in Resources */,
 				08026C4F2869B3BE00792EF1 /* Form(ap).md in Resources */,
@@ -1328,6 +1381,8 @@
 				08BE635C27C65C7C002BC6A8 /* GroupBox(ap).md in Resources */,
 				0844901A279ECD4E00B61353 /* async await(ap).md in Resources */,
 				08449024279ECE2200B61353 /* Swift Concurrency学习路径(ap).md in Resources */,
+				08D8EFF12BEF4E6900AA0020 /* Widget View(ap).md in Resources */,
+				08D8EFEF2BEF45CD00AA0020 /* AppIntentTimelineProvider(ap).md in Resources */,
 				08BE636827C8C2A0002BC6A8 /* 进度(ap).md in Resources */,
 				08BE636C27C8CFA7002BC6A8 /* Image(ap).md in Resources */,
 				08659BDD2BE9E3AA009B7C00 /* SwiftData-调试(ap).md in Resources */,
@@ -1336,12 +1391,14 @@
 				08448FDE279EC74200B61353 /* 比较运算符(ap).md in Resources */,
 				08659BCD2BE9A40A009B7C00 /* 创建@Model模型(ap).md in Resources */,
 				08449000279ECAE100B61353 /* flatMap(ap).md in Resources */,
+				08D8EFFE2BEFA3E300AA0020 /* 支持多个小组件(ap).md in Resources */,
 				08448FAB279EC2B400B61353 /* 枚举(ap).md in Resources */,
 				08522BD627CF3218005FF059 /* Picker(ap).md in Resources */,
 				08659BD92BE9A80E009B7C00 /* SwiftData多线程(ap).md in Resources */,
 				08448FCE279EC5AA00B61353 /* While(ap).md in Resources */,
 				08448F71279EB58C00B61353 /* Data(ap).md in Resources */,
 				08448FFE279ECAA100B61353 /* removeDuplicates(ap).md in Resources */,
+				08D8EFEB2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md in Resources */,
 				0850445827B1228E0096D556 /* Result(ap).md in Resources */,
 				08449008279ECB6500B61353 /* zip(ap).md in Resources */,
 				08448F83279EB78A00B61353 /* 版本兼容(ap).md in Resources */,
@@ -1361,22 +1418,27 @@
 				08448FFA279ECA5300B61353 /* Empty(ap).md in Resources */,
 				08026C462869B26000792EF1 /* Swift-DocC(ap).md in Resources */,
 				08448FF8279ECA2000B61353 /* PassthroughSubject(ap).md in Resources */,
+				08D8EFF82BEF912700AA0020 /* 小组件动画(ap).md in Resources */,
+				08D8F0042BEFA86C00AA0020 /* 小组件-参考资料(ap).md in Resources */,
 				08448F86279EB7D200B61353 /* JSON没有id字段(ap).md in Resources */,
 				08448FA5279EBB4100B61353 /* 布尔数(ap).md in Resources */,
 				08026C522869B43D00792EF1 /* SF Symbol(ap).md in Resources */,
+				08D8F0022BEFA84E00AA0020 /* 小组件-Deep link(ap).md in Resources */,
 				084E1A5F27B4F7BB0072BBB6 /* @dynamicCallable动态可调用类型(ap).md in Resources */,
 				08448FDC279EC71800B61353 /* 计算符(ap).md in Resources */,
 				0844902E279ECF1C00B61353 /* Text(ap).md in Resources */,
 				08026C4A2869B38F00792EF1 /* SwiftUI参考资料(ap).md in Resources */,
+				08D8EFE92BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md in Resources */,
 				08448F5E279EB23600B61353 /* SQLite.swift的使用(ap).md in Resources */,
 				08BE635427C63828002BC6A8 /* List(ap).md in Resources */,
 				08448FEA279EC86700B61353 /* 运算符(ap).md in Resources */,
 				08449006279ECB4900B61353 /* merge(ap).md in Resources */,
-				08EF35CD2BECF3120098E2D4 /* Widget访问SwiftData(ap).md in Resources */,
+				08EF35CD2BECF3120098E2D4 /* 小组件访问SwiftData(ap).md in Resources */,
 				08448FB1279EC33E00B61353 /* 类型转换(ap).md in Resources */,
 				08448FE6279EC82500B61353 /* 逻辑(ap).md in Resources */,
 				08BE636027C7A674002BC6A8 /* Navigation(ap).md in Resources */,
 				08448F51279E900500B61353 /* macOS剪贴板(ap).md in Resources */,
+				08D8EFF32BEF78B400AA0020 /* 刷新小组件(ap).md in Resources */,
 				08449026279ECE5400B61353 /* Swift Concurrency和Combine(ap).md in Resources */,
 				08448F95279EB96F00B61353 /* 变量(ap).md in Resources */,
 				08448F6D279EB51000B61353 /* 格式化(ap).md in Resources */,
@@ -1396,11 +1458,13 @@
 				08448F5A279EA84100B61353 /* 三栏结构(ap).md in Resources */,
 				08448F9E279EBAA800B61353 /* 函数(ap).md in Resources */,
 				08448FEC279EC8BE00B61353 /* 注释(ap).md in Resources */,
+				08D8F0002BEFA72300AA0020 /* 获取小组件形状(ap).md in Resources */,
 				08026C4E2869B3B500792EF1 /* ShareLink(ap).md in Resources */,
 				08026C432869B22E00792EF1 /* Regex(ap).md in Resources */,
 				08BE636427C886D2002BC6A8 /* LazyVStack和LazyHStack(ap).md in Resources */,
 				08449030279ECF7D00B61353 /* 1.md in Resources */,
 				08522BDA27CF5029005FF059 /* Slider(ap).md in Resources */,
+				08D8EFFA2BEF9C9800AA0020 /* 小组件-远程定时获取数据(ap).md in Resources */,
 				0858C5C72BEBD230004F4C04 /* ContentUnavailableView(ap).md in Resources */,
 				08448FD5279EC62700B61353 /* Sets(ap).md in Resources */,
 				08448F75279EB62B00B61353 /* Scanner(ap).md in Resources */,

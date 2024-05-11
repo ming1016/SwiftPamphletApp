@@ -86,13 +86,22 @@ struct DisclosureGroupLikeButton<C, L>: View where C: View, L: View {
 struct SideBarLabel: View {
     var title: String
     var imageName: String
+    var color: Color = Color.primary
     var body: some View {
         HStack {
             Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 30)
-            Text(title)
+            if color == Color.primary {
+                Text(title)
+            } else {
+                Text(title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(color.gradient)
+                    .fontDesign(.rounded)
+            }
+            
         }
     }
 }
