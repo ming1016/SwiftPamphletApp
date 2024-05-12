@@ -13,6 +13,7 @@ protocol Jsonable : Identifiable, Decodable, Hashable {}
 struct WWDCViewModel {
     
     static func parseModelForOutline() -> [WWDCModelForOutline] {
+        // data from https://nonstrict.eu/wwdcindex/
         let model:WWDCModel = SMFile.loadBundleJSONFile("WWDCData.json")
         
         var reModel = [WWDCModelForOutline]()

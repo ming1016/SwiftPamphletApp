@@ -1,8 +1,22 @@
 # 戴铭的开发小册子 6.0
 
-Swift开发的手册，是个 macOS 程序，已上线 App Store [点击安装](https://apps.apple.com/cn/app/%E6%88%B4%E9%93%AD%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%86%8C%E5%AD%90/id1609702529?mt=12)，后面更新会方便很多。小册子文字版 《[戴铭的 Swift 小册子](https://ming1016.github.io/2021/11/23/daiming-swift-pamphlet/)》
+Swift开发的手册，是个 macOS 程序，已上线 App Store [点击安装](https://apps.apple.com/cn/app/%E6%88%B4%E9%93%AD%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%86%8C%E5%AD%90/id1609702529?mt=12)，或直接搜索我的名字戴铭，后面更新会方便很多。小册子文字版 《[戴铭的 Swift 小册子](https://ming1016.github.io/2021/11/23/daiming-swift-pamphlet/)》
 
-使用 SwiftData、Observable、NavigationSplitView 重构了戴铭的开发小册子，可自己添加管理资料。
+使用 SwiftData、Observable、NavigationSplitView 进行了重构，现在可自己添加管理资料，和知识点做关联。
+
+内容主要包含
+
+- Apple 技术知识点以及示例
+- 历年 WWDC
+
+功能主要包含
+
+- 手册书签收藏
+- 资料收集整理
+- 知识点和资料关联
+- Github 开发者和仓库管理
+
+本应用知识点目前主要有 Swift 基础语法，SwiftUI，SwiftData，小组件等知识内容。
 
 本版本解决了以下几个问题。
 
