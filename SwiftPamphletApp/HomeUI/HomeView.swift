@@ -63,6 +63,7 @@ struct HomeView: View {
                 // 第一次运行需要处理的
             }
             selectedDataLinkString = sdLinkStr
+            _ = WWDCViewModel()
         })
         .onChange(of: selectedDataLinkString, {
             sdLinkStr = selectedDataLinkString

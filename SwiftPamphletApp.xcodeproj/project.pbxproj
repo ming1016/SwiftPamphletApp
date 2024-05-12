@@ -218,6 +218,10 @@
 		08D8F0002BEFA72300AA0020 /* 获取小组件形状(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFFF2BEFA72300AA0020 /* 获取小组件形状(ap).md */; };
 		08D8F0022BEFA84E00AA0020 /* 小组件-Deep link(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8F0012BEFA84E00AA0020 /* 小组件-Deep link(ap).md */; };
 		08D8F0042BEFA86C00AA0020 /* 小组件-参考资料(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8F0032BEFA86C00AA0020 /* 小组件-参考资料(ap).md */; };
+		08D8F0072BEFBAC700AA0020 /* WWDCData.json in Resources */ = {isa = PBXBuildFile; fileRef = 08D8F0062BEFBAC700AA0020 /* WWDCData.json */; };
+		08D8F00A2BEFBB2300AA0020 /* WWDCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D8F0092BEFBB2300AA0020 /* WWDCModel.swift */; };
+		08D8F00C2BEFCFCF00AA0020 /* WWDCListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D8F00B2BEFCFCF00AA0020 /* WWDCListView.swift */; };
+		08D8F00E2BF044FB00AA0020 /* WWDCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D8F00D2BF044FB00AA0020 /* WWDCDetailView.swift */; };
 		08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 08ED80152B9C54DE0069B7EC /* SMNetwork */; };
 		08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED801B2B9D1EEC0069B7EC /* SettingView.swift */; };
 		08EF35CD2BECF3120098E2D4 /* 小组件访问SwiftData(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08EF35CC2BECF3120098E2D4 /* 小组件访问SwiftData(ap).md */; };
@@ -452,6 +456,10 @@
 		08D8EFFF2BEFA72300AA0020 /* 获取小组件形状(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "获取小组件形状(ap).md"; sourceTree = "<group>"; };
 		08D8F0012BEFA84E00AA0020 /* 小组件-Deep link(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-Deep link(ap).md"; sourceTree = "<group>"; };
 		08D8F0032BEFA86C00AA0020 /* 小组件-参考资料(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-参考资料(ap).md"; sourceTree = "<group>"; };
+		08D8F0062BEFBAC700AA0020 /* WWDCData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WWDCData.json; sourceTree = "<group>"; };
+		08D8F0092BEFBB2300AA0020 /* WWDCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCModel.swift; sourceTree = "<group>"; };
+		08D8F00B2BEFCFCF00AA0020 /* WWDCListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCListView.swift; sourceTree = "<group>"; };
+		08D8F00D2BF044FB00AA0020 /* WWDCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCDetailView.swift; sourceTree = "<group>"; };
 		08ED801B2B9D1EEC0069B7EC /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		08EF35CC2BECF3120098E2D4 /* 小组件访问SwiftData(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件访问SwiftData(ap).md"; sourceTree = "<group>"; };
 		08EF35D12BECFDA80098E2D4 /* BookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; };
@@ -957,6 +965,7 @@
 		086A5F472744EF0800FECE02 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				08D8F0052BEFBAA300AA0020 /* WWDC */,
 				08AEAEF8277F3C5A00B969E2 /* Style */,
 				08AEAEE7277EDD5D00B969E2 /* Guide */,
 			);
@@ -977,6 +986,7 @@
 		0887A5982BA28F3600131359 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
+				08D8F0082BEFBB0500AA0020 /* WWDC */,
 				08EF35CF2BECFD420098E2D4 /* Bookmark */,
 				08EF35CE2BECFCD40098E2D4 /* View */,
 			);
@@ -1079,6 +1089,24 @@
 				08D8EFF52BEF8CAB00AA0020 /* Text-动态时间(ap).md */,
 			);
 			path = Text;
+			sourceTree = "<group>";
+		};
+		08D8F0052BEFBAA300AA0020 /* WWDC */ = {
+			isa = PBXGroup;
+			children = (
+				08D8F0062BEFBAC700AA0020 /* WWDCData.json */,
+			);
+			path = WWDC;
+			sourceTree = "<group>";
+		};
+		08D8F0082BEFBB0500AA0020 /* WWDC */ = {
+			isa = PBXGroup;
+			children = (
+				08D8F0092BEFBB2300AA0020 /* WWDCModel.swift */,
+				08D8F00B2BEFCFCF00AA0020 /* WWDCListView.swift */,
+				08D8F00D2BF044FB00AA0020 /* WWDCDetailView.swift */,
+			);
+			path = WWDC;
 			sourceTree = "<group>";
 		};
 		08ED801A2B9D1EDA0069B7EC /* Setting */ = {
@@ -1396,6 +1424,7 @@
 				08522BD627CF3218005FF059 /* Picker(ap).md in Resources */,
 				08659BD92BE9A80E009B7C00 /* SwiftData多线程(ap).md in Resources */,
 				08448FCE279EC5AA00B61353 /* While(ap).md in Resources */,
+				08D8F0072BEFBAC700AA0020 /* WWDCData.json in Resources */,
 				08448F71279EB58C00B61353 /* Data(ap).md in Resources */,
 				08448FFE279ECAA100B61353 /* removeDuplicates(ap).md in Resources */,
 				08D8EFEB2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md in Resources */,
@@ -1501,6 +1530,7 @@
 				0825E4872BC6596F00332378 /* EditCustomSearchView.swift in Sources */,
 				3AF2A2E92BE239BA00F3BE1B /* ArchivedInfosView.swift in Sources */,
 				08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */,
+				08D8F00A2BEFBB2300AA0020 /* WWDCModel.swift in Sources */,
 				0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
 				3AF2A2E12BE22B5800F3BE1B /* UnCategoryInfosView.swift in Sources */,
@@ -1512,9 +1542,11 @@
 				084417752B99B9060049297D /* HomeView.swift in Sources */,
 				3AF2A2E72BE239A300F3BE1B /* ArchivedInfoListView.swift in Sources */,
 				086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */,
+				08D8F00E2BF044FB00AA0020 /* WWDCDetailView.swift in Sources */,
 				08069CAD2BDE7A6B00D48E24 /* GuideDetailView.swift in Sources */,
 				08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */,
 				08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */,
+				08D8F00C2BEFCFCF00AA0020 /* WWDCListView.swift in Sources */,
 				08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
 				086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */,
@@ -1659,7 +1691,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1673,7 +1705,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4;
+				MARKETING_VERSION = 6.4.1;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1702,7 +1734,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1716,7 +1748,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4;
+				MARKETING_VERSION = 6.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -26,6 +26,7 @@ struct SPC {
     static let customSearchTerm = "customSearchTerm"
     static let isShowInspector = "isShowInspector"
     static let isShowPamphletInspector = "isShowPamphletInspector"
+    static let isShowWWDCInspector = "isShowWWDCInspector"
     static let inspectorType = "inspectorType"
 
 //    static func loadCustomIssues(jsonFileName: String) -> [CustomIssuesModel] {

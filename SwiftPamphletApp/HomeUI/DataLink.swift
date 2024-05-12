@@ -97,6 +97,13 @@ struct DataLink: Identifiable {
             case .detail:
                 IntroView()
             }
+        case "WWDC":
+            switch type {
+            case .content:
+                WWDCListView()
+            case .detail:
+                IntroView()
+            }
         case "书签":
             switch type {
             case .content:
@@ -120,7 +127,8 @@ extension DataLink {
     static var dataLinks = [
         DataLink(title: "开发手册", imageName: "", children: [
             DataLink(title: "书签", imageName: "p24", color: .mint),
-            DataLink(title: "Apple技术", imageName: "p22", color: .indigo)
+            DataLink(title: "Apple技术", imageName: "p19", color: .indigo),
+            DataLink(title: "WWDC", imageName: "p22")
         ]),
         DataLink(title: "资料整理", imageName: "", children: [
             DataLink(title: "全部资料", imageName: "p7", color: .cyan),
