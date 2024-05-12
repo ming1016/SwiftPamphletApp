@@ -14,7 +14,8 @@ Swift开发的手册，是个 macOS 程序，已上线 App Store [点击安装](
 - 手册书签收藏
 - 资料收集整理
 - 知识点和资料关联
-- Github 开发者和仓库管理
+- 手册、WWDC和资料可搜索
+- Github 开发者和仓库信息添加管理
 
 本应用知识点目前主要有 Swift 基础语法，SwiftUI，SwiftData，小组件等知识内容。
 
