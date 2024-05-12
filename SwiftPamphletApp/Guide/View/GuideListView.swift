@@ -15,6 +15,17 @@ struct GuideListView: View {
     @State private var limit: Int = 50
     @State private var trigger = false // 触发列表书签状态更新
     var body: some View {
+        if listModel.searchText.isEmpty == false {
+            HStack {
+                Text("搜索”\(listModel.searchText)“结果如下")
+                Button {
+                    listModel.searchText = ""
+                } label: {
+                    Image(systemName: "xmark.circle")
+                }
+            }
+            .padding(.top, 10)
+        }
         SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
             NavigationLink(destination: GuideDetailView(t: i.t, plName: "ap", limit: $limit, trigger: $trigger)) {
                 HStack(spacing:3) {
@@ -44,6 +55,15 @@ struct GuideListView: View {
         .onAppear(perform: {
             updateApBookmarks()
         })
+        .overlay {
+            if listModel.filtered().isEmpty {
+                ContentUnavailableView {
+                    Label("无结果", systemImage: "rectangle.and.text.magnifyingglass")
+                } description: {
+                    Text("请再次输入")
+                }
+            }
+        } // end overlay
     }
     
     func updateApBookmarks() {

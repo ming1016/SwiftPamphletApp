@@ -8,23 +8,28 @@
 import SwiftUI
 
 struct WWDCListView: View {
-    @State private var wwdcData: [WWDCModelForOutline] = [WWDCModelForOutline]()
+    @State private var wwdcVM = WWDCListViewModel()
     @State private var limit: Int = 50
     var body: some View {
-        SPOutlineListView(d: wwdcData, c: \.sub, content: { item in
+        if wwdcVM.searchText.isEmpty == false {
+            HStack {
+                Text("搜索”\(wwdcVM.searchText)“结果如下")
+                Button {
+                    wwdcVM.searchText = ""
+                } label: {
+                    Image(systemName: "xmark.circle")
+                }
+            }
+            .padding(.top, 10)
+        }
+        SPOutlineListView(d: wwdcVM.filtered(), c: \.sub, content: { item in
             VStack {
                 if let session = item.session {
                     NavigationLink(destination: WWDCDetailView(session: session, limit: $limit)) {
-//                        if item.sub?.count ?? 0 > 0 {
-//                            Text(item.text)
-//                        } else {
-//                            
-//                                
-//                        }
                         VStack(alignment: .leading) {
                             Text(session.title)
                             HStack {
-                                Text(simpleSessionid(id: session.id))
+                                Text("\(session.year)-" + session.eventContentId)
                                 Text(session.topic)
                             }
                             .font(.footnote)
@@ -38,17 +43,50 @@ struct WWDCListView: View {
             }
         })
         .listStyle(.sidebar)
-        .onAppear {
-            wwdcData = WWDCViewModel.parseModelForOutline()
+        .searchable(text: $wwdcVM.searchText)
+        .overlay {
+            if wwdcVM.filtered().isEmpty {
+                ContentUnavailableView {
+                    Label("无结果", systemImage: "rectangle.and.text.magnifyingglass")
+                } description: {
+                    Text("请再次输入")
+                }
+            }
+        } // end overlay
+    } // end body
+    
+}
+
+@Observable
+final class WWDCListViewModel {
+    var searchText = ""
+    var wwdcData:[WWDCModelForOutline] = [WWDCModelForOutline]()
+    
+    init() {
+        wwdcData = WWDCViewModel.parseModelForOutline()
+    }
+    
+    func filtered() -> [WWDCModelForOutline] {
+        guard !searchText.isEmpty else { return wwdcData}
+        let flatModel = flatModel(wwdcData)
+        return flatModel.filter { model in
+            model.session?.title.lowercased().contains(searchText.lowercased()) ?? false || model.session?.description?.lowercased().contains(searchText.lowercased()) ?? false
         }
         
     }
     
-    func simpleSessionid(id: String) -> String {
-        let arr = id.split(separator: "-")
-        if arr.count > 1 {
-            return "session " + (arr.last?.description ?? "")
+    func flatModel(_ models: [WWDCModelForOutline]) -> [WWDCModelForOutline] {
+        var fModels = [WWDCModelForOutline]()
+        for model in models {
+            fModels.append(model)
+            if let subs = model.sub {
+                let reFModels = flatModel(subs)
+                for reModel in reFModels {
+                    fModels.append(reModel)
+                }
+            }
         }
-        return ""
+        return fModels
     }
+    
 }

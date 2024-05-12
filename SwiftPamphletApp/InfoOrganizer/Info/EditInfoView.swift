@@ -284,9 +284,9 @@ struct EditInfoView: View {
             .padding(10)
             .tabItem { Label("文本", systemImage: "circle") }
             .tag(1)
-        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
-            .tabItem { Label("预览", systemImage: "circle") }
-            .tag(2)
+//        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
+//            .tabItem { Label("预览", systemImage: "circle") }
+//            .tag(2)
     }
     
     

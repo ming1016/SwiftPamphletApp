@@ -17,7 +17,7 @@ struct WWDCViewModel {
         
         var reModel = [WWDCModelForOutline]()
         for event in model.events {
-            reModel.append(WWDCModelForOutline(text: event.name, eventid: event.id, sub: [WWDCModelForOutline]()))
+            reModel.append(WWDCModelForOutline(text: event.name,des: event.description, eventid: event.id, sub: [WWDCModelForOutline]()))
         }
         for session in model.sessions {
             for (index,eo) in reModel.enumerated() {
@@ -35,6 +35,7 @@ struct WWDCViewModel {
 struct WWDCModelForOutline: Identifiable {
     var id = UUID()
     var text: String = ""
+    var des: String = ""
     var eventid: String = ""
     var session: WWDCSessionModel?
     var sub: [WWDCModelForOutline]?
@@ -52,6 +53,7 @@ struct WWDCSessionModel: Jsonable {
     var description: String?
     var eventId: String
     var eventContentId: String
+    var year: Int
     var topic: String
     var platforms: [String]?
     var speakers: [String]?

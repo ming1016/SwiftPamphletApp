@@ -47,10 +47,22 @@ struct WWDCDetailView: View {
                                 isShowInspector.toggle()
                             }
                         }
-                        if let vurl = ss.media.videoOriginalUrl {
-                            VideoPlayer(player: AVPlayer(url: URL(string: vurl)!))
+                        VStack(alignment:.leading, spacing: 10) {
+                            if let vurl = ss.media.videoOriginalUrl {
+                                if ss.year > 2020 {
+                                    VideoPlayer(player: AVPlayer(url: URL(string: vurl)!))
+                                } else {
+                                    Link("视频地址：\(vurl)", destination: URL(string: vurl)!)
+                                }
+                            }
+                            if let platforms = ss.platforms {
+                                Text(platformDes(platforms))
+                                    .foregroundStyle(.secondary)
+                            }
+                            Text(ss.description ?? "")
+                            
+                            
                         }
-                        Text(ss.description ?? "")
                         Spacer()
                     }
                     .padding(20)
@@ -114,5 +126,13 @@ struct WWDCDetailView: View {
             EmptyView()
         }
         
+    }
+    
+    func platformDes(_ pf: [String]) -> String {
+        var re = ""
+        if pf.count > 0 {
+            re = "平台：" + pf.joined(separator: ", ")
+        }
+        return re
     }
 }
