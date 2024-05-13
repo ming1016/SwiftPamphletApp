@@ -218,8 +218,18 @@ final class GuideListModel {
                 L(t: "Image"),
             ]),
             L(t: "数据集合组件", sub: [
-                L(t: "ScrollView"),
-                L(t: "List"),
+                L(t: "ForEach"),
+                L(t: "Scroll视图", icon: "scroll", sub: [
+                    L(t: "ScrollView"),
+                    L(t: "固定到滚动视图的顶部",icon: "pin.circle"),
+                    L(t: "滚动到特定的位置"),
+                    L(t: "scrollTargetBehavior分页滚动", icon: "book.pages"),
+                    L(t: "scrollTransition视觉效果"),
+                    L(t: "ScrollView-参考资料"),
+                ]),
+                L(t: "List列表", icon: "list.bullet.rectangle.portrait.fill", sub: [
+                    L(t: "List", icon: "list.bullet.rectangle.portrait"),
+                ]),
                 L(t: "LazyVStack和LazyHStack"),
                 L(t: "LazyVGrid和LazyHGrid"),
                 L(t: "table"),

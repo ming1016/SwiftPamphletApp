@@ -96,29 +96,4 @@ private struct OffsetPreferenceKey: PreferenceKey {
 }
 ```
 
-## 滚动到顶部
 
-在 SwiftUI 中，目前没有直接的方法可以让 List 滚动到顶部。但你可以使用 ScrollViewReader 和 scrollTo 方法来实现滚动到顶部的功能。以下是一个例子：
-
-```swift
-struct ContentView: View {
-    let items = Array(1...100) // 你的数据
-    var body: some View {
-        ScrollViewReader { scrollView in
-            VStack {
-                ScrollView {
-                    ForEach(items, id: \.self) { item in
-                        Text("Item \(item)")
-                    }
-                    .id(items.first) // 给第一个元素设置 id
-                }
-                Button("滚动到顶部") {
-                    withAnimation {
-                        scrollView.scrollTo(items.first, anchor: .top) // 滚动到第一个元素
-                    }
-                }
-            }
-        }
-    }
-}
-```

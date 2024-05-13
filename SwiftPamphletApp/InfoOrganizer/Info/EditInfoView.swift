@@ -282,6 +282,7 @@ struct EditInfoView: View {
     private func textAndPreviewView() -> some View {
         TextEditor(text: $info.des).border()
             .padding(10)
+            .contentMargins(.all, 30, for: .scrollContent)
             .tabItem { Label("文本", systemImage: "circle") }
             .tag(1)
 //        WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: info.des)), baseURLStr: "")
@@ -338,6 +339,12 @@ struct EditInfoView: View {
                             }
                             .padding(.leading, 1)
                         }
+                        .padding(2)
+                        Button(action: {
+                            showSheet = false
+                        }, label: {
+                            Label("关闭", systemImage: "xmark.circle")
+                        })
                         .padding(2)
                     }
                     .padding(20)

@@ -163,6 +163,12 @@
 		08659BDD2BE9E3AA009B7C00 /* SwiftData-调试(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08659BDC2BE9E3AA009B7C00 /* SwiftData-调试(ap).md */; };
 		08659BDF2BEA4D8C009B7C00 /* SwiftData-模型关系(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08659BDE2BEA4D8C009B7C00 /* SwiftData-模型关系(ap).md */; };
 		0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */ = {isa = PBXBuildFile; productRef = 0868D00A2BDD37280023C871 /* SMGitHub */; };
+		086923312BF171A6006779A3 /* ForEach(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086923302BF171A6006779A3 /* ForEach(ap).md */; };
+		086923342BF178D9006779A3 /* 固定到滚动视图的顶部(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086923332BF178D9006779A3 /* 固定到滚动视图的顶部(ap).md */; };
+		086923362BF18918006779A3 /* 滚动到特定的位置(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086923352BF18918006779A3 /* 滚动到特定的位置(ap).md */; };
+		086923382BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086923372BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md */; };
+		0869233A2BF1A490006779A3 /* scrollTransition视觉效果(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086923392BF1A490006779A3 /* scrollTransition视觉效果(ap).md */; };
+		0869233C2BF1BF35006779A3 /* ScrollView-参考资料(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0869233B2BF1BF35006779A3 /* ScrollView-参考资料(ap).md */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
@@ -400,6 +406,12 @@
 		08659BDA2BE9A834009B7C00 /* SwiftData-版本迁移(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftData-版本迁移(ap).md"; sourceTree = "<group>"; };
 		08659BDC2BE9E3AA009B7C00 /* SwiftData-调试(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftData-调试(ap).md"; sourceTree = "<group>"; };
 		08659BDE2BEA4D8C009B7C00 /* SwiftData-模型关系(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftData-模型关系(ap).md"; sourceTree = "<group>"; };
+		086923302BF171A6006779A3 /* ForEach(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ForEach(ap).md"; sourceTree = "<group>"; };
+		086923332BF178D9006779A3 /* 固定到滚动视图的顶部(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "固定到滚动视图的顶部(ap).md"; sourceTree = "<group>"; };
+		086923352BF18918006779A3 /* 滚动到特定的位置(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "滚动到特定的位置(ap).md"; sourceTree = "<group>"; };
+		086923372BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "scrollTargetBehavior分页滚动(ap).md"; sourceTree = "<group>"; };
+		086923392BF1A490006779A3 /* scrollTransition视觉效果(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "scrollTransition视觉效果(ap).md"; sourceTree = "<group>"; };
+		0869233B2BF1BF35006779A3 /* ScrollView-参考资料(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ScrollView-参考资料(ap).md"; sourceTree = "<group>"; };
 		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -899,6 +911,27 @@
 			path = SwiftData;
 			sourceTree = "<group>";
 		};
+		086923322BF17780006779A3 /* Scroll滚动视图 */ = {
+			isa = PBXGroup;
+			children = (
+				08BE637327CCAB52002BC6A8 /* ScrollView(ap).md */,
+				086923332BF178D9006779A3 /* 固定到滚动视图的顶部(ap).md */,
+				086923352BF18918006779A3 /* 滚动到特定的位置(ap).md */,
+				086923372BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md */,
+				086923392BF1A490006779A3 /* scrollTransition视觉效果(ap).md */,
+				0869233B2BF1BF35006779A3 /* ScrollView-参考资料(ap).md */,
+			);
+			path = "Scroll滚动视图";
+			sourceTree = "<group>";
+		};
+		0869233D2BF1C2CF006779A3 /* List列表 */ = {
+			isa = PBXGroup;
+			children = (
+				08BE635327C63828002BC6A8 /* List(ap).md */,
+			);
+			path = "List列表";
+			sourceTree = "<group>";
+		};
 		086A5EFA2744E88E00FECE02 = {
 			isa = PBXGroup;
 			children = (
@@ -1009,8 +1042,9 @@
 		08A7FF2E2BEABE0100E12E5A /* 数据集合组件 */ = {
 			isa = PBXGroup;
 			children = (
-				08BE637327CCAB52002BC6A8 /* ScrollView(ap).md */,
-				08BE635327C63828002BC6A8 /* List(ap).md */,
+				086923302BF171A6006779A3 /* ForEach(ap).md */,
+				086923322BF17780006779A3 /* Scroll滚动视图 */,
+				0869233D2BF1C2CF006779A3 /* List列表 */,
 				08BE636327C886D2002BC6A8 /* LazyVStack和LazyHStack(ap).md */,
 				08BE636F27C8F6A7002BC6A8 /* LazyVGrid和LazyHGrid(ap).md */,
 				08026C502869B41B00792EF1 /* table(ap).md */,
@@ -1361,6 +1395,7 @@
 				08448F8C279EB84800B61353 /* 布局动画(ap).md in Resources */,
 				08448FC1279EC4B500B61353 /* filter(ap).md in Resources */,
 				08448F9C279EBA8200B61353 /* 闭包(ap).md in Resources */,
+				0869233C2BF1BF35006779A3 /* ScrollView-参考资料(ap).md in Resources */,
 				08448FAF279EC31200B61353 /* 不透明类型(ap).md in Resources */,
 				08449029279ECEB100B61353 /* SwiftUI是什么(ap).md in Resources */,
 				08448F79279EB68D00B61353 /* 随机(ap).md in Resources */,
@@ -1368,6 +1403,7 @@
 				08448F5B279EA84100B61353 /* macOS共享菜单(ap).md in Resources */,
 				0844900A279ECB8C00B61353 /* combineLatest(ap).md in Resources */,
 				08026C4D2869B3A600792EF1 /* Transferable(ap).md in Resources */,
+				0869233A2BF1A490006779A3 /* scrollTransition视觉效果(ap).md in Resources */,
 				08659BC72BE8FD84009B7C00 /* SwiftUI数据流(ap).md in Resources */,
 				08449011279ECC3E00B61353 /* Combine KVO(ap).md in Resources */,
 				08448FE2279EC7CF00B61353 /* Nil-coalescing(ap).md in Resources */,
@@ -1420,6 +1456,7 @@
 				08659BCD2BE9A40A009B7C00 /* 创建@Model模型(ap).md in Resources */,
 				08449000279ECAE100B61353 /* flatMap(ap).md in Resources */,
 				08D8EFFE2BEFA3E300AA0020 /* 支持多个小组件(ap).md in Resources */,
+				086923382BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md in Resources */,
 				08448FAB279EC2B400B61353 /* 枚举(ap).md in Resources */,
 				08522BD627CF3218005FF059 /* Picker(ap).md in Resources */,
 				08659BD92BE9A80E009B7C00 /* SwiftData多线程(ap).md in Resources */,
@@ -1439,6 +1476,7 @@
 				085BB77627D22FE300E8F69A /* SwiftUI Canvas(ap).md in Resources */,
 				08BE635827C63F3A002BC6A8 /* ControlGroup(ap).md in Resources */,
 				08BE637427CCAB52002BC6A8 /* ScrollView(ap).md in Resources */,
+				086923362BF18918006779A3 /* 滚动到特定的位置(ap).md in Resources */,
 				08448F73279EB5DF00B61353 /* 文件(ap).md in Resources */,
 				08448FC8279EC54300B61353 /* If(ap).md in Resources */,
 				08448F7E279EB71D00B61353 /* 单例(ap).md in Resources */,
@@ -1484,6 +1522,7 @@
 				08026C4C2869B39F00792EF1 /* Advanced layout control(ap).md in Resources */,
 				086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */,
 				08448F0F2799328700B61353 /* css_cn.html in Resources */,
+				086923312BF171A6006779A3 /* ForEach(ap).md in Resources */,
 				08448F5A279EA84100B61353 /* 三栏结构(ap).md in Resources */,
 				08448F9E279EBAA800B61353 /* 函数(ap).md in Resources */,
 				08448FEC279EC8BE00B61353 /* 注释(ap).md in Resources */,
@@ -1496,6 +1535,7 @@
 				08D8EFFA2BEF9C9800AA0020 /* 小组件-远程定时获取数据(ap).md in Resources */,
 				0858C5C72BEBD230004F4C04 /* ContentUnavailableView(ap).md in Resources */,
 				08448FD5279EC62700B61353 /* Sets(ap).md in Resources */,
+				086923342BF178D9006779A3 /* 固定到滚动视图的顶部(ap).md in Resources */,
 				08448F75279EB62B00B61353 /* Scanner(ap).md in Resources */,
 				08BE632C27BE3762002BC6A8 /* Link(ap).md in Resources */,
 				08448FE0279EC7AF00B61353 /* 三元(ap).md in Resources */,
@@ -1691,7 +1731,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1705,7 +1745,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.2;
+				MARKETING_VERSION = 6.4.3;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1734,7 +1774,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1748,7 +1788,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.2;
+				MARKETING_VERSION = 6.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";

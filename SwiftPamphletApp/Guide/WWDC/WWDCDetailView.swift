@@ -49,10 +49,18 @@ struct WWDCDetailView: View {
                         }
                         VStack(alignment:.leading, spacing: 10) {
                             if let vurl = ss.media.videoOriginalUrl {
-                                if ss.year > 2020 {
-                                    VideoPlayer(player: AVPlayer(url: URL(string: vurl)!))
-                                } else {
-                                    Link("视频地址：\(vurl)", destination: URL(string: vurl)!)
+                                if let okVurl = URL(string: vurl) {
+                                    if ss.year > 2020 {
+                                        #if arch(arm64)
+                                        VideoPlayer(player: AVPlayer(url: okVurl))
+                                        #elseif arch(x86_64)
+                                        Link("视频地址：\(vurl)", destination: okVurl)
+                                        #else
+                                        Link("视频地址：\(vurl)", destination: okVurl)
+                                        #endif
+                                    } else {
+                                        Link("视频地址：\(vurl)", destination: okVurl)
+                                    }
                                 }
                             }
                             if let platforms = ss.platforms {
