@@ -169,6 +169,7 @@
 		086923382BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086923372BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md */; };
 		0869233A2BF1A490006779A3 /* scrollTransition视觉效果(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086923392BF1A490006779A3 /* scrollTransition视觉效果(ap).md */; };
 		0869233C2BF1BF35006779A3 /* ScrollView-参考资料(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0869233B2BF1BF35006779A3 /* ScrollView-参考资料(ap).md */; };
+		086923412BF2BFCC006779A3 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869233F2BF2BF81006779A3 /* AVKit.framework */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
@@ -412,6 +413,7 @@
 		086923372BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "scrollTargetBehavior分页滚动(ap).md"; sourceTree = "<group>"; };
 		086923392BF1A490006779A3 /* scrollTransition视觉效果(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "scrollTransition视觉效果(ap).md"; sourceTree = "<group>"; };
 		0869233B2BF1BF35006779A3 /* ScrollView-参考资料(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ScrollView-参考资料(ap).md"; sourceTree = "<group>"; };
+		0869233F2BF2BF81006779A3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086923412BF2BFCC006779A3 /* AVKit.framework in Frameworks */,
 				0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
 				08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */,
@@ -932,11 +935,20 @@
 			path = "List列表";
 			sourceTree = "<group>";
 		};
+		0869233E2BF2BF81006779A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0869233F2BF2BF81006779A3 /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		086A5EFA2744E88E00FECE02 = {
 			isa = PBXGroup;
 			children = (
 				086A5F052744E88E00FECE02 /* SwiftPamphletApp */,
 				086A5F042744E88E00FECE02 /* Products */,
+				0869233E2BF2BF81006779A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1731,7 +1743,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1745,7 +1757,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.3;
+				MARKETING_VERSION = 6.4.4;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1774,7 +1786,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1788,7 +1800,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.3;
+				MARKETING_VERSION = 6.4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";

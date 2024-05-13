@@ -51,13 +51,7 @@ struct WWDCDetailView: View {
                             if let vurl = ss.media.videoOriginalUrl {
                                 if let okVurl = URL(string: vurl) {
                                     if ss.year > 2020 {
-                                        #if arch(arm64)
                                         VideoPlayer(player: AVPlayer(url: okVurl))
-                                        #elseif arch(x86_64)
-                                        Link("视频地址：\(vurl)", destination: okVurl)
-                                        #else
-                                        Link("视频地址：\(vurl)", destination: okVurl)
-                                        #endif
                                     } else {
                                         Link("视频地址：\(vurl)", destination: okVurl)
                                     }
