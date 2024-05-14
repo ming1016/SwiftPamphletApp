@@ -34,7 +34,7 @@ struct GuideListView: View {
                             .foregroundStyle(i.sub == nil ? Color.secondary : .indigo)
                     } else if let sub = i.sub {
                         Image(systemName: "folder.fill")
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.indigo)
                     }
                     Text(listModel.searchText.isEmpty == true ? GuideListModel.simpleTitle(i.t) : i.t)
                     Spacer()
@@ -244,11 +244,12 @@ final class GuideListModel {
                     L(t: "LazyVGrid和LazyHGrid"),
                 ]),
                 L(t: "Grid", icon: "square.grid.3x2"),
-                L(t: "Table表格", sub: [
-                    L(t: "Table"),
+                L(t: "Table表格", icon: "tablecells.fill", sub: [
+                    L(t: "Table", icon: "tablecells"),
                     L(t: "Table-样式"),
-                    L(t: "Table-行的选择"),
-                    L(t: "Table-多属性排序"),
+                    L(t: "Table-行的选择", icon: "line.3.horizontal"),
+                    L(t: "Table-多属性排序", icon: "tablecells.badge.ellipsis"),
+                    L(t: "Table-contextMenu", icon: "filemenu.and.selection"),
                 ]),
             ]),
             L(t: "布局组件", sub: [

@@ -155,6 +155,7 @@
 		0850AC1C2BF3A333009FDBBF /* Table-样式(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0850AC1B2BF3A333009FDBBF /* Table-样式(ap).md */; };
 		0850AC1E2BF3B340009FDBBF /* Table-行的选择(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0850AC1D2BF3B340009FDBBF /* Table-行的选择(ap).md */; };
 		0850AC202BF3B572009FDBBF /* Table-多属性排序(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0850AC1F2BF3B572009FDBBF /* Table-多属性排序(ap).md */; };
+		0850AC222BF41F65009FDBBF /* Table-contextMenu(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0850AC212BF41F65009FDBBF /* Table-contextMenu(ap).md */; };
 		08522BD627CF3218005FF059 /* Picker(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BD527CF3218005FF059 /* Picker(ap).md */; };
 		08522BDA27CF5029005FF059 /* Slider(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BD927CF5029005FF059 /* Slider(ap).md */; };
 		08522BDE27CF5133005FF059 /* Stepper(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08522BDD27CF5133005FF059 /* Stepper(ap).md */; };
@@ -413,6 +414,7 @@
 		0850AC1B2BF3A333009FDBBF /* Table-样式(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Table-样式(ap).md"; sourceTree = "<group>"; };
 		0850AC1D2BF3B340009FDBBF /* Table-行的选择(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Table-行的选择(ap).md"; sourceTree = "<group>"; };
 		0850AC1F2BF3B572009FDBBF /* Table-多属性排序(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Table-多属性排序(ap).md"; sourceTree = "<group>"; };
+		0850AC212BF41F65009FDBBF /* Table-contextMenu(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Table-contextMenu(ap).md"; sourceTree = "<group>"; };
 		08522BD527CF3218005FF059 /* Picker(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Picker(ap).md"; sourceTree = "<group>"; };
 		08522BD927CF5029005FF059 /* Slider(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Slider(ap).md"; sourceTree = "<group>"; };
 		08522BDD27CF5133005FF059 /* Stepper(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Stepper(ap).md"; sourceTree = "<group>"; };
@@ -926,6 +928,7 @@
 				0850AC1B2BF3A333009FDBBF /* Table-样式(ap).md */,
 				0850AC1D2BF3B340009FDBBF /* Table-行的选择(ap).md */,
 				0850AC1F2BF3B572009FDBBF /* Table-多属性排序(ap).md */,
+				0850AC212BF41F65009FDBBF /* Table-contextMenu(ap).md */,
 			);
 			path = "Table表格";
 			sourceTree = "<group>";
@@ -1524,6 +1527,7 @@
 				08BE636C27C8CFA7002BC6A8 /* Image(ap).md in Resources */,
 				08659BDD2BE9E3AA009B7C00 /* SwiftData-调试(ap).md in Resources */,
 				08659BDB2BE9A834009B7C00 /* SwiftData-版本迁移(ap).md in Resources */,
+				0850AC222BF41F65009FDBBF /* Table-contextMenu(ap).md in Resources */,
 				08522BE427CF5C55005FF059 /* SwiftUI颜色(ap).md in Resources */,
 				08448FDE279EC74200B61353 /* 比较运算符(ap).md in Resources */,
 				0850AC062BF2E5DA009FDBBF /* List-移动元素(ap).md in Resources */,
@@ -1811,7 +1815,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1825,7 +1829,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.4;
+				MARKETING_VERSION = 6.4.5;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1854,7 +1858,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1868,7 +1872,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.4;
+				MARKETING_VERSION = 6.4.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
