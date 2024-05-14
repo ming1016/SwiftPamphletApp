@@ -108,7 +108,7 @@ struct InfoListView: View {
                 }
                 
             }
-            .searchable(text: $searchText)
+            .searchable(text: $searchText, prompt:"搜索资料")
             .onAppear {
                 _ = parseSearchTerms()
             }

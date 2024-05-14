@@ -43,7 +43,7 @@ struct WWDCListView: View {
             }
         })
         .listStyle(.sidebar)
-        .searchable(text: $wwdcVM.searchText)
+        .searchable(text: $wwdcVM.searchText, prompt: "搜索 WWDC Session 内容")
         .overlay {
             if wwdcVM.filtered().isEmpty {
                 ContentUnavailableView {

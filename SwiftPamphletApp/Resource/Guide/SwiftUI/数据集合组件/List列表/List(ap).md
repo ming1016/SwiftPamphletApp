@@ -4,6 +4,8 @@ List 除了能够展示数据外，还有下拉刷新、过滤搜索和侧滑 Sw
 
 通过 List 的可选子项参数提供数据模型的关键路径来制定子项路劲，还可以实现大纲视图，使用 DisclosureGroup 和 OutlineGroup  可以进一步定制大纲视图。
 
+使用 `.listRowSeparator(.hidden, edges: .all)` 可以隐藏分割线。
+
 下面是 List 使用，包括了 DisclosureGroup 和 OutlineGroup 的演示代码：
 
 ```swift

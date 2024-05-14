@@ -37,11 +37,12 @@ struct InfoRowView: View {
             }
             if info.url.isEmpty == false {
                 HStack {
-                    Text(info.name) + Text(" - \(hostFromString(info.url))").font(.footnote).foregroundStyle(.secondary)
+                    Text(info.name).bold() + Text(" - \(hostFromString(info.url))").font(.footnote).foregroundStyle(.secondary)
                 }
                 .fixedSize(horizontal: false, vertical: true)
             } else {
                 Text(info.name)
+                    .bold()
                     .fixedSize(horizontal: false, vertical: true)
             }
             
@@ -94,6 +95,7 @@ struct InfoRowView: View {
             .font(.footnote)
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
         }
+        .listRowSeparator(.hidden, edges: .all)
         .swipeActions {
             Button(role: .destructive) {
                 IOInfo.delete(info)

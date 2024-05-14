@@ -47,7 +47,7 @@ struct GuideListView: View {
                 .contentShape(Rectangle())
             }
         }
-        .searchable(text: $listModel.searchText)
+        .searchable(text: $listModel.searchText, prompt: "搜索 Apple 技术手册")
         .listStyle(.sidebar)
         .onChange(of: trigger, { oldValue, newValue in
             updateApBookmarks()
@@ -213,13 +213,13 @@ final class GuideListModel {
                 ]),
                 L(t: "Link"),
                 L(t: "Label"),
-                L(t: "TextEditor"),
+                L(t: "TextEditor", icon: "arrow.up.and.down.text.horizontal"),
                 L(t: "TextField"),
                 L(t: "Image"),
             ]),
             L(t: "数据集合组件", sub: [
                 L(t: "ForEach"),
-                L(t: "Scroll视图", icon: "scroll", sub: [
+                L(t: "Scroll视图", icon: "scroll.fill", sub: [
                     L(t: "ScrollView"),
                     L(t: "固定到滚动视图的顶部",icon: "pin.circle"),
                     L(t: "滚动到特定的位置"),
@@ -229,10 +229,27 @@ final class GuideListModel {
                 ]),
                 L(t: "List列表", icon: "list.bullet.rectangle.portrait.fill", sub: [
                     L(t: "List", icon: "list.bullet.rectangle.portrait"),
+                    L(t: "List-设置样式"),
+                    L(t: "List-移动元素"),
+                    L(t: "List-搜索", icon: "text.magnifyingglass"),
+                    L(t: "List-下拉刷新", icon: "arrow.circlepath"),
+                    L(t: "List-轻扫操作", icon: "hand.point.up.left.and.text"),
+                    L(t: "List-大纲视图"),
+                    L(t: "List-完全可点击的行"),
+                    L(t: "List-索引标题"),
+                    L(t: "List-加载更多"),
                 ]),
-                L(t: "LazyVStack和LazyHStack"),
-                L(t: "LazyVGrid和LazyHGrid"),
-                L(t: "table"),
+                L(t: "Lazy容器", sub: [
+                    L(t: "LazyVStack和LazyHStack"),
+                    L(t: "LazyVGrid和LazyHGrid"),
+                ]),
+                L(t: "Grid", icon: "square.grid.3x2"),
+                L(t: "Table表格", sub: [
+                    L(t: "Table"),
+                    L(t: "Table-样式"),
+                    L(t: "Table-行的选择"),
+                    L(t: "Table-多属性排序"),
+                ]),
             ]),
             L(t: "布局组件", sub: [
                 L(t: "Navigation"),

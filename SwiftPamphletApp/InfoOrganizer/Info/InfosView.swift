@@ -51,14 +51,15 @@ struct InfosView: View {
         List(selection: $selectInfo) {
             ForEach(infos) { info in
                 InfoRowView(info: info)
-                .tag(info)
-                .onAppear {
-                    if info == infos.last {
-                        if limit <= infos.count {
-                            limit += 50
+                    
+                    .tag(info)
+                    .onAppear {
+                        if info == infos.last {
+                            if limit <= infos.count {
+                                limit += 50
+                            }
                         }
                     }
-                }
             }
         } // end List
         .listStyle(.plain)
