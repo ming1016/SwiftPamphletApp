@@ -211,7 +211,6 @@
 		08BE635427C63828002BC6A8 /* List(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635327C63828002BC6A8 /* List(ap).md */; };
 		08BE635827C63F3A002BC6A8 /* ControlGroup(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635727C63F3A002BC6A8 /* ControlGroup(ap).md */; };
 		08BE635C27C65C7C002BC6A8 /* GroupBox(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635B27C65C7C002BC6A8 /* GroupBox(ap).md */; };
-		08BE636027C7A674002BC6A8 /* Navigation(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE635F27C7A673002BC6A8 /* Navigation(ap).md */; };
 		08BE636427C886D2002BC6A8 /* LazyVStack和LazyHStack(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE636327C886D2002BC6A8 /* LazyVStack和LazyHStack(ap).md */; };
 		08BE636827C8C2A0002BC6A8 /* 进度(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE636727C8C2A0002BC6A8 /* 进度(ap).md */; };
 		08BE636C27C8CFA7002BC6A8 /* Image(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE636B27C8CFA7002BC6A8 /* Image(ap).md */; };
@@ -224,6 +223,9 @@
 		08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FC27758B8A008C0935 /* Lexer.swift */; };
 		08CD61FF27758B8A008C0935 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FD27758B8A008C0935 /* Token.swift */; };
 		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
+		08D4EBD32BF437510031EDC5 /* Navigation(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBD22BF437510031EDC5 /* Navigation(ap).md */; };
+		08D4EBD52BF4379E0031EDC5 /* NavigationStack(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBD42BF4379E0031EDC5 /* NavigationStack(ap).md */; };
+		08D4EBD72BF43C540031EDC5 /* NavigationPath(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBD62BF43C540031EDC5 /* NavigationPath(ap).md */; };
 		08D8EFE52BED825E00AA0020 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D8EFE42BED825E00AA0020 /* BookmarkListView.swift */; };
 		08D8EFE92BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFE82BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md */; };
 		08D8EFEB2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFEA2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md */; };
@@ -472,7 +474,6 @@
 		08BE635327C63828002BC6A8 /* List(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "List(ap).md"; sourceTree = "<group>"; };
 		08BE635727C63F3A002BC6A8 /* ControlGroup(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "ControlGroup(ap).md"; sourceTree = "<group>"; };
 		08BE635B27C65C7C002BC6A8 /* GroupBox(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "GroupBox(ap).md"; sourceTree = "<group>"; };
-		08BE635F27C7A673002BC6A8 /* Navigation(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Navigation(ap).md"; sourceTree = "<group>"; };
 		08BE636327C886D2002BC6A8 /* LazyVStack和LazyHStack(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "LazyVStack和LazyHStack(ap).md"; sourceTree = "<group>"; };
 		08BE636727C8C2A0002BC6A8 /* 进度(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "进度(ap).md"; sourceTree = "<group>"; };
 		08BE636B27C8CFA7002BC6A8 /* Image(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Image(ap).md"; sourceTree = "<group>"; };
@@ -483,6 +484,9 @@
 		08C3BBA127CF1B2B00ACF0FE /* Toggle(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Toggle(ap).md"; sourceTree = "<group>"; };
 		08CD61FC27758B8A008C0935 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		08CD61FD27758B8A008C0935 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		08D4EBD22BF437510031EDC5 /* Navigation(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Navigation(ap).md"; sourceTree = "<group>"; };
+		08D4EBD42BF4379E0031EDC5 /* NavigationStack(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "NavigationStack(ap).md"; sourceTree = "<group>"; };
+		08D4EBD62BF43C540031EDC5 /* NavigationPath(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "NavigationPath(ap).md"; sourceTree = "<group>"; };
 		08D8EFE42BED825E00AA0020 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		08D8EFE82BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-StaticConfiguration(ap).md"; sourceTree = "<group>"; };
 		08D8EFEA2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-AppIntentConfiguration(ap).md"; sourceTree = "<group>"; };
@@ -933,6 +937,16 @@
 			path = "Table表格";
 			sourceTree = "<group>";
 		};
+		0850AC232BF436E8009FDBBF /* Navigation导航 */ = {
+			isa = PBXGroup;
+			children = (
+				08D4EBD22BF437510031EDC5 /* Navigation(ap).md */,
+				08D4EBD42BF4379E0031EDC5 /* NavigationStack(ap).md */,
+				08D4EBD62BF43C540031EDC5 /* NavigationPath(ap).md */,
+			);
+			path = "Navigation导航";
+			sourceTree = "<group>";
+		};
 		08522BE727CF625B005FF059 /* 视觉 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1125,7 +1139,7 @@
 		08A7FF2F2BEABE3F00E12E5A /* 布局组件 */ = {
 			isa = PBXGroup;
 			children = (
-				08BE635F27C7A673002BC6A8 /* Navigation(ap).md */,
+				0850AC232BF436E8009FDBBF /* Navigation导航 */,
 				08C3BB7F27CE4A8500ACF0FE /* TabView(ap).md */,
 				08BE634927C4BDDB002BC6A8 /* Stack(ap).md */,
 				08BE635727C63F3A002BC6A8 /* ControlGroup(ap).md */,
@@ -1428,6 +1442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08026C512869B43500792EF1 /* Table(ap).md in Resources */,
+				08D4EBD52BF4379E0031EDC5 /* NavigationStack(ap).md in Resources */,
 				0850AC142BF34D8B009FDBBF /* List-索引标题(ap).md in Resources */,
 				0850445027B0FDBD0096D556 /* @resultBuilder(ap).md in Resources */,
 				08449015279ECC8300B61353 /* Combine Timer(ap).md in Resources */,
@@ -1529,6 +1544,7 @@
 				08659BDB2BE9A834009B7C00 /* SwiftData-版本迁移(ap).md in Resources */,
 				0850AC222BF41F65009FDBBF /* Table-contextMenu(ap).md in Resources */,
 				08522BE427CF5C55005FF059 /* SwiftUI颜色(ap).md in Resources */,
+				08D4EBD32BF437510031EDC5 /* Navigation(ap).md in Resources */,
 				08448FDE279EC74200B61353 /* 比较运算符(ap).md in Resources */,
 				0850AC062BF2E5DA009FDBBF /* List-移动元素(ap).md in Resources */,
 				08659BCD2BE9A40A009B7C00 /* 创建@Model模型(ap).md in Resources */,
@@ -1581,11 +1597,11 @@
 				08448F5E279EB23600B61353 /* SQLite.swift的使用(ap).md in Resources */,
 				08BE635427C63828002BC6A8 /* List(ap).md in Resources */,
 				08448FEA279EC86700B61353 /* 运算符(ap).md in Resources */,
+				08D4EBD72BF43C540031EDC5 /* NavigationPath(ap).md in Resources */,
 				08449006279ECB4900B61353 /* merge(ap).md in Resources */,
 				08EF35CD2BECF3120098E2D4 /* 小组件访问SwiftData(ap).md in Resources */,
 				08448FB1279EC33E00B61353 /* 类型转换(ap).md in Resources */,
 				08448FE6279EC82500B61353 /* 逻辑(ap).md in Resources */,
-				08BE636027C7A674002BC6A8 /* Navigation(ap).md in Resources */,
 				08448F51279E900500B61353 /* macOS剪贴板(ap).md in Resources */,
 				08D8EFF32BEF78B400AA0020 /* 刷新小组件(ap).md in Resources */,
 				08449026279ECE5400B61353 /* Swift Concurrency和Combine(ap).md in Resources */,

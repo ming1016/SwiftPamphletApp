@@ -32,7 +32,7 @@ struct GuideListView: View {
                     if i.icon.isEmpty == false {
                         Image(systemName: i.icon)
                             .foregroundStyle(i.sub == nil ? Color.secondary : .indigo)
-                    } else if let sub = i.sub {
+                    } else if i.sub != nil {
                         Image(systemName: "folder.fill")
                             .foregroundStyle(.indigo)
                     }
@@ -253,9 +253,13 @@ final class GuideListModel {
                 ]),
             ]),
             L(t: "布局组件", sub: [
-                L(t: "Navigation"),
+                L(t: "Navigation导航", icon: "sidebar.squares.leading", sub: [
+                    L(t: "Navigation", icon: "sidebar.squares.leading"),
+                    L(t: "NavigationStack", icon: "square.stack.3d.down.forward"),
+                    L(t: "NavigationPath"),
+                ]),
                 L(t: "TabView"),
-                L(t: "Stack"),
+                L(t: "Stack", icon: "square.3.layers.3d"),
                 L(t: "ControlGroup"),
                 L(t: "GroupBox"),
                 L(t: "Advanced layout control"),
