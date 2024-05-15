@@ -52,6 +52,7 @@ struct DeveloperListView: View {
                         Spacer()
                     }
                 }
+                .listRowSeparator(.hidden, edges: .all)
                 .tag(dev)
                 .swipeActions {
                     Button(role: .destructive) {

@@ -226,6 +226,13 @@
 		08D4EBD32BF437510031EDC5 /* Navigation(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBD22BF437510031EDC5 /* Navigation(ap).md */; };
 		08D4EBD52BF4379E0031EDC5 /* NavigationStack(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBD42BF4379E0031EDC5 /* NavigationStack(ap).md */; };
 		08D4EBD72BF43C540031EDC5 /* NavigationPath(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBD62BF43C540031EDC5 /* NavigationPath(ap).md */; };
+		08D4EBD92BF44C170031EDC5 /* NavigationSplitView(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBD82BF44C170031EDC5 /* NavigationSplitView(ap).md */; };
+		08D4EBDB2BF4599D0031EDC5 /* Inspectors右侧多出一栏(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBDA2BF4599D0031EDC5 /* Inspectors右侧多出一栏(ap).md */; };
+		08D4EBDD2BF461F60031EDC5 /* 自定义导航栏(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBDC2BF461F60031EDC5 /* 自定义导航栏(ap).md */; };
+		08D4EBDF2BF497030031EDC5 /* 导航状态保存和还原(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBDE2BF497030031EDC5 /* 导航状态保存和还原(ap).md */; };
+		08D4EBE22BF4A76A0031EDC5 /* 布局-基础(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBE12BF4A76A0031EDC5 /* 布局-基础(ap).md */; };
+		08D4EBE42BF4AB9A0031EDC5 /* 布局-留白(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBE32BF4AB9A0031EDC5 /* 布局-留白(ap).md */; };
+		08D4EBE62BF4B8050031EDC5 /* 布局-对齐(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D4EBE52BF4B8050031EDC5 /* 布局-对齐(ap).md */; };
 		08D8EFE52BED825E00AA0020 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D8EFE42BED825E00AA0020 /* BookmarkListView.swift */; };
 		08D8EFE92BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFE82BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md */; };
 		08D8EFEB2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D8EFEA2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md */; };
@@ -487,6 +494,13 @@
 		08D4EBD22BF437510031EDC5 /* Navigation(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Navigation(ap).md"; sourceTree = "<group>"; };
 		08D4EBD42BF4379E0031EDC5 /* NavigationStack(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "NavigationStack(ap).md"; sourceTree = "<group>"; };
 		08D4EBD62BF43C540031EDC5 /* NavigationPath(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "NavigationPath(ap).md"; sourceTree = "<group>"; };
+		08D4EBD82BF44C170031EDC5 /* NavigationSplitView(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "NavigationSplitView(ap).md"; sourceTree = "<group>"; };
+		08D4EBDA2BF4599D0031EDC5 /* Inspectors右侧多出一栏(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Inspectors右侧多出一栏(ap).md"; sourceTree = "<group>"; };
+		08D4EBDC2BF461F60031EDC5 /* 自定义导航栏(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "自定义导航栏(ap).md"; sourceTree = "<group>"; };
+		08D4EBDE2BF497030031EDC5 /* 导航状态保存和还原(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "导航状态保存和还原(ap).md"; sourceTree = "<group>"; };
+		08D4EBE12BF4A76A0031EDC5 /* 布局-基础(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局-基础(ap).md"; sourceTree = "<group>"; };
+		08D4EBE32BF4AB9A0031EDC5 /* 布局-留白(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局-留白(ap).md"; sourceTree = "<group>"; };
+		08D4EBE52BF4B8050031EDC5 /* 布局-对齐(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局-对齐(ap).md"; sourceTree = "<group>"; };
 		08D8EFE42BED825E00AA0020 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		08D8EFE82BEEF68800AA0020 /* 小组件-StaticConfiguration(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-StaticConfiguration(ap).md"; sourceTree = "<group>"; };
 		08D8EFEA2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-AppIntentConfiguration(ap).md"; sourceTree = "<group>"; };
@@ -943,6 +957,10 @@
 				08D4EBD22BF437510031EDC5 /* Navigation(ap).md */,
 				08D4EBD42BF4379E0031EDC5 /* NavigationStack(ap).md */,
 				08D4EBD62BF43C540031EDC5 /* NavigationPath(ap).md */,
+				08D4EBD82BF44C170031EDC5 /* NavigationSplitView(ap).md */,
+				08D4EBDC2BF461F60031EDC5 /* 自定义导航栏(ap).md */,
+				08D4EBDA2BF4599D0031EDC5 /* Inspectors右侧多出一栏(ap).md */,
+				08D4EBDE2BF497030031EDC5 /* 导航状态保存和还原(ap).md */,
 			);
 			path = "Navigation导航";
 			sourceTree = "<group>";
@@ -1140,6 +1158,7 @@
 			isa = PBXGroup;
 			children = (
 				0850AC232BF436E8009FDBBF /* Navigation导航 */,
+				08D4EBE02BF4A7470031EDC5 /* 布局基础 */,
 				08C3BB7F27CE4A8500ACF0FE /* TabView(ap).md */,
 				08BE634927C4BDDB002BC6A8 /* Stack(ap).md */,
 				08BE635727C63F3A002BC6A8 /* ControlGroup(ap).md */,
@@ -1190,6 +1209,16 @@
 				08CD61FD27758B8A008C0935 /* Token.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		08D4EBE02BF4A7470031EDC5 /* 布局基础 */ = {
+			isa = PBXGroup;
+			children = (
+				08D4EBE12BF4A76A0031EDC5 /* 布局-基础(ap).md */,
+				08D4EBE32BF4AB9A0031EDC5 /* 布局-留白(ap).md */,
+				08D4EBE52BF4B8050031EDC5 /* 布局-对齐(ap).md */,
+			);
+			path = "布局基础";
 			sourceTree = "<group>";
 		};
 		08D8EFE32BED74D900AA0020 /* View */ = {
@@ -1494,8 +1523,10 @@
 				0869233A2BF1A490006779A3 /* scrollTransition视觉效果(ap).md in Resources */,
 				08659BC72BE8FD84009B7C00 /* SwiftUI数据流(ap).md in Resources */,
 				08449011279ECC3E00B61353 /* Combine KVO(ap).md in Resources */,
+				08D4EBDF2BF497030031EDC5 /* 导航状态保存和还原(ap).md in Resources */,
 				08448FE2279EC7CF00B61353 /* Nil-coalescing(ap).md in Resources */,
 				08449002279ECB0500B61353 /* append(ap).md in Resources */,
+				08D4EBDB2BF4599D0031EDC5 /* Inspectors右侧多出一栏(ap).md in Resources */,
 				08449013279ECC6300B61353 /* Combine通知(ap).md in Resources */,
 				0844901E279ECD9D00B61353 /* 结构化并发(ap).md in Resources */,
 				08448FD3279EC60300B61353 /* 数组(ap).md in Resources */,
@@ -1559,6 +1590,7 @@
 				0850AC082BF2E63C009FDBBF /* List-搜索(ap).md in Resources */,
 				08448F71279EB58C00B61353 /* Data(ap).md in Resources */,
 				08448FFE279ECAA100B61353 /* removeDuplicates(ap).md in Resources */,
+				08D4EBE62BF4B8050031EDC5 /* 布局-对齐(ap).md in Resources */,
 				08D8EFEB2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md in Resources */,
 				0850445827B1228E0096D556 /* Result(ap).md in Resources */,
 				08449008279ECB6500B61353 /* zip(ap).md in Resources */,
@@ -1574,6 +1606,7 @@
 				086923362BF18918006779A3 /* 滚动到特定的位置(ap).md in Resources */,
 				08448F73279EB5DF00B61353 /* 文件(ap).md in Resources */,
 				08448FC8279EC54300B61353 /* If(ap).md in Resources */,
+				08D4EBE22BF4A76A0031EDC5 /* 布局-基础(ap).md in Resources */,
 				08448F7E279EB71D00B61353 /* 单例(ap).md in Resources */,
 				0850AC1C2BF3A333009FDBBF /* Table-样式(ap).md in Resources */,
 				08448F8F279EB88500B61353 /* Keychain(ap).md in Resources */,
@@ -1581,6 +1614,7 @@
 				0850AC0C2BF2FA2F009FDBBF /* List-轻扫操作(ap).md in Resources */,
 				08448FFA279ECA5300B61353 /* Empty(ap).md in Resources */,
 				08026C462869B26000792EF1 /* Swift-DocC(ap).md in Resources */,
+				08D4EBE42BF4AB9A0031EDC5 /* 布局-留白(ap).md in Resources */,
 				08448FF8279ECA2000B61353 /* PassthroughSubject(ap).md in Resources */,
 				08D8EFF82BEF912700AA0020 /* 小组件动画(ap).md in Resources */,
 				08D8F0042BEFA86C00AA0020 /* 小组件-参考资料(ap).md in Resources */,
@@ -1619,6 +1653,7 @@
 				08448FE8279EC84B00B61353 /* 恒等(ap).md in Resources */,
 				08026C4C2869B39F00792EF1 /* Advanced layout control(ap).md in Resources */,
 				086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */,
+				08D4EBD92BF44C170031EDC5 /* NavigationSplitView(ap).md in Resources */,
 				08448F0F2799328700B61353 /* css_cn.html in Resources */,
 				086923312BF171A6006779A3 /* ForEach(ap).md in Resources */,
 				08448F5A279EA84100B61353 /* 三栏结构(ap).md in Resources */,
@@ -1627,6 +1662,7 @@
 				08D8F0002BEFA72300AA0020 /* 获取小组件形状(ap).md in Resources */,
 				08026C4E2869B3B500792EF1 /* ShareLink(ap).md in Resources */,
 				08026C432869B22E00792EF1 /* Regex(ap).md in Resources */,
+				08D4EBDD2BF461F60031EDC5 /* 自定义导航栏(ap).md in Resources */,
 				08BE636427C886D2002BC6A8 /* LazyVStack和LazyHStack(ap).md in Resources */,
 				08449030279ECF7D00B61353 /* 1.md in Resources */,
 				08522BDA27CF5029005FF059 /* Slider(ap).md in Resources */,

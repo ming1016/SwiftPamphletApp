@@ -217,7 +217,7 @@ final class GuideListModel {
                 L(t: "TextField"),
                 L(t: "Image"),
             ]),
-            L(t: "数据集合组件", sub: [
+            L(t: "数据集合组件",icon: "list.bullet.rectangle.fill", sub: [
                 L(t: "ForEach"),
                 L(t: "Scroll视图", icon: "scroll.fill", sub: [
                     L(t: "ScrollView"),
@@ -252,11 +252,20 @@ final class GuideListModel {
                     L(t: "Table-contextMenu", icon: "filemenu.and.selection"),
                 ]),
             ]),
-            L(t: "布局组件", sub: [
+            L(t: "布局组件",icon: "rectangle.3.group.fill", sub: [
                 L(t: "Navigation导航", icon: "sidebar.squares.leading", sub: [
                     L(t: "Navigation", icon: "sidebar.squares.leading"),
                     L(t: "NavigationStack", icon: "square.stack.3d.down.forward"),
-                    L(t: "NavigationPath"),
+                    L(t: "NavigationPath", icon: "arrow.3.trianglepath"),
+                    L(t: "NavigationSplitView", icon: "rectangle.split.3x1"),
+                    L(t: "自定义导航栏"),
+                    L(t: "Inspectors右侧多出一栏", icon: "rectangle.split.3x1"),
+                    L(t: "导航状态保存和还原"),
+                ]),
+                L(t: "布局基础",icon: "rectangle.3.group", sub: [
+                    L(t: "布局-基础"),
+                    L(t: "布局-留白"),
+                    L(t: "布局-对齐"),
                 ]),
                 L(t: "TabView"),
                 L(t: "Stack", icon: "square.3.layers.3d"),
