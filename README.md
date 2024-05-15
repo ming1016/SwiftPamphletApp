@@ -1,6 +1,7 @@
 # 戴铭的开发小册子 6.0
 [![Available on the App Store](https://ming1016.github.io/qdimg/badge-download-on-the-mac-app-store.svg)](https://apps.apple.com/cn/app/id1609702529)
-Swift开发的手册，是个 macOS 程序，已上线 App Store [点击安装](https://apps.apple.com/cn/app/%E6%88%B4%E9%93%AD%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%86%8C%E5%AD%90/id1609702529?mt=12)，或直接搜索我的名字戴铭，后面更新会方便很多。小册子文字版 《[戴铭的 Swift 小册子](https://ming1016.github.io/2021/11/23/daiming-swift-pamphlet/)》
+
+Swift开发的手册，是个 macOS 程序，已上线macOS应用商店，[点击安装](https://apps.apple.com/cn/app/%E6%88%B4%E9%93%AD%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%86%8C%E5%AD%90/id1609702529?mt=12)，或直接在商店搜索戴铭，方便更新程序。小册子文字版 《[戴铭的 Swift 小册子](https://ming1016.github.io/2021/11/23/daiming-swift-pamphlet/)》
 
 使用 SwiftData、Observable、NavigationSplitView 进行了重构，现在可自己添加管理资料，和知识点做关联。
 
@@ -39,7 +40,5 @@ Swift开发的手册，是个 macOS 程序，已上线 App Store [点击安装](
 ![截屏2024-05-07 19 06 30](https://github.com/ming1016/SwiftPamphletApp/assets/251980/f590cbe5-8a94-41e3-8260-6492e3acf46e)
 
 ![截屏2024-05-07 19 08 18](https://github.com/ming1016/SwiftPamphletApp/assets/251980/89b34786-44b1-4fcd-bdf6-8ad92ea80d4e)
-
-
 
 
