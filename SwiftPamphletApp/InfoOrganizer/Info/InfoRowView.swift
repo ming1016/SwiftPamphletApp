@@ -18,8 +18,9 @@ struct InfoRowView: View {
             if let coverImg = info.coverImage {
                 ZStack {
                     Rectangle()
-                        .fill(Color.clear)
+                        .fill(Color(light: .white, dark: .black))
                         .frame(height: 80)
+                        .cornerRadius(5)
                     GeometryReader { geometry in
                         if coverImg.url.isEmpty == false {
                             NukeImage(width: geometry.size.width, height: geometry.size.height, url: coverImg.url, contentModel: .fill)
@@ -34,7 +35,7 @@ struct InfoRowView: View {
                         }
                     }
                 }
-                .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.9), radius: 1, x: 0, y: 0)
+                .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.3), radius: 1, x: 0, y: 0)
             }
             if info.url.isEmpty == false {
                 HStack {

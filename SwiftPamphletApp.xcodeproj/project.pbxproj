@@ -192,6 +192,12 @@
 		086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */; };
 		086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F452744EEB900FECE02 /* FundationFunction.swift */; };
 		086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F512744EF4C00FECE02 /* ViewComponent.swift */; };
+		086BEEF82BF629DB00025307 /* AnyLayout(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEEF72BF629DB00025307 /* AnyLayout(ap).md */; };
+		086BEEFA2BF6300400025307 /* ViewThatFits(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEEF92BF6300400025307 /* ViewThatFits(ap).md */; };
+		086BEEFC2BF63A0000025307 /* Layout协议(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEEFB2BF63A0000025307 /* Layout协议(ap).md */; };
+		086BEEFE2BF644D400025307 /* GeometryReader(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEEFD2BF644D400025307 /* GeometryReader(ap).md */; };
+		086BEF002BF659E500025307 /* alignmentGuide(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEEFF2BF659E500025307 /* alignmentGuide(ap).md */; };
+		086BEF022BF65DCD00025307 /* 布局进阶-参考资料(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEF012BF65DCD00025307 /* 布局进阶-参考资料(ap).md */; };
 		0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C6182BA040E5000B620D /* InfoRowView.swift */; };
 		0871C61B2BA04D23000B620D /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61A2BA04D23000B620D /* CategoryRowView.swift */; };
 		0871C61D2BA05F44000B620D /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61C2BA05F44000B620D /* InfosView.swift */; };
@@ -465,6 +471,12 @@
 		086A5F432744EE2800FECE02 /* SwiftPamphletAppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppConfig.swift; sourceTree = "<group>"; };
 		086A5F452744EEB900FECE02 /* FundationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundationFunction.swift; sourceTree = "<group>"; };
 		086A5F512744EF4C00FECE02 /* ViewComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
+		086BEEF72BF629DB00025307 /* AnyLayout(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AnyLayout(ap).md"; sourceTree = "<group>"; };
+		086BEEF92BF6300400025307 /* ViewThatFits(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ViewThatFits(ap).md"; sourceTree = "<group>"; };
+		086BEEFB2BF63A0000025307 /* Layout协议(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Layout协议(ap).md"; sourceTree = "<group>"; };
+		086BEEFD2BF644D400025307 /* GeometryReader(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GeometryReader(ap).md"; sourceTree = "<group>"; };
+		086BEEFF2BF659E500025307 /* alignmentGuide(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "alignmentGuide(ap).md"; sourceTree = "<group>"; };
+		086BEF012BF65DCD00025307 /* 布局进阶-参考资料(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局进阶-参考资料(ap).md"; sourceTree = "<group>"; };
 		086D48A02BBB820100835544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0871C6182BA040E5000B620D /* InfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRowView.swift; sourceTree = "<group>"; };
 		0871C61A2BA04D23000B620D /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
@@ -1126,6 +1138,19 @@
 			path = ViewComponet;
 			sourceTree = "<group>";
 		};
+		086BEEF62BF629C300025307 /* 布局进阶 */ = {
+			isa = PBXGroup;
+			children = (
+				086BEEF72BF629DB00025307 /* AnyLayout(ap).md */,
+				086BEEF92BF6300400025307 /* ViewThatFits(ap).md */,
+				086BEEFB2BF63A0000025307 /* Layout协议(ap).md */,
+				086BEEFD2BF644D400025307 /* GeometryReader(ap).md */,
+				086BEEFF2BF659E500025307 /* alignmentGuide(ap).md */,
+				086BEF012BF65DCD00025307 /* 布局进阶-参考资料(ap).md */,
+			);
+			path = "布局进阶";
+			sourceTree = "<group>";
+		};
 		0887A5982BA28F3600131359 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
@@ -1167,6 +1192,7 @@
 			children = (
 				0850AC232BF436E8009FDBBF /* Navigation导航 */,
 				08D4EBE02BF4A7470031EDC5 /* 布局基础 */,
+				086BEEF62BF629C300025307 /* 布局进阶 */,
 				08BE634927C4BDDB002BC6A8 /* Stack(ap).md */,
 				08BE635B27C65C7C002BC6A8 /* GroupBox(ap).md */,
 				08C3BB7F27CE4A8500ACF0FE /* TabView(ap).md */,
@@ -1496,6 +1522,7 @@
 				08659BDF2BEA4D8C009B7C00 /* SwiftData-模型关系(ap).md in Resources */,
 				08D8EFFC2BEF9EDE00AA0020 /* 小组件-获取位置权限更新内容(ap).md in Resources */,
 				084E1A6327B517FC0072BBB6 /* Swift各版本演进(ap).md in Resources */,
+				086BEEFA2BF6300400025307 /* ViewThatFits(ap).md in Resources */,
 				08448F6F279EB56400B61353 /* 度量值(ap).md in Resources */,
 				0844900C279ECBB400B61353 /* Scheduler(ap).md in Resources */,
 				08448FA3279EBB1B00B61353 /* 数字(ap).md in Resources */,
@@ -1525,10 +1552,12 @@
 				08026C472869B26900792EF1 /* 调试(ap).md in Resources */,
 				08448F8C279EB84800B61353 /* 布局动画(ap).md in Resources */,
 				08448FC1279EC4B500B61353 /* filter(ap).md in Resources */,
+				086BEEFC2BF63A0000025307 /* Layout协议(ap).md in Resources */,
 				08448F9C279EBA8200B61353 /* 闭包(ap).md in Resources */,
 				0869233C2BF1BF35006779A3 /* ScrollView-参考资料(ap).md in Resources */,
 				08448FAF279EC31200B61353 /* 不透明类型(ap).md in Resources */,
 				08449029279ECEB100B61353 /* SwiftUI是什么(ap).md in Resources */,
+				086BEEFE2BF644D400025307 /* GeometryReader(ap).md in Resources */,
 				08448F79279EB68D00B61353 /* 随机(ap).md in Resources */,
 				08BE632A27BE220D002BC6A8 /* 全屏模式(ap).md in Resources */,
 				08448F5B279EA84100B61353 /* macOS共享菜单(ap).md in Resources */,
@@ -1595,6 +1624,7 @@
 				0850AC062BF2E5DA009FDBBF /* List-移动元素(ap).md in Resources */,
 				08659BCD2BE9A40A009B7C00 /* 创建@Model模型(ap).md in Resources */,
 				08449000279ECAE100B61353 /* flatMap(ap).md in Resources */,
+				086BEF002BF659E500025307 /* alignmentGuide(ap).md in Resources */,
 				08D8EFFE2BEFA3E300AA0020 /* 支持多个小组件(ap).md in Resources */,
 				086923382BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md in Resources */,
 				08448FAB279EC2B400B61353 /* 枚举(ap).md in Resources */,
@@ -1618,6 +1648,7 @@
 				085BB77627D22FE300E8F69A /* SwiftUI Canvas(ap).md in Resources */,
 				08BE635827C63F3A002BC6A8 /* ControlGroup(ap).md in Resources */,
 				08BE637427CCAB52002BC6A8 /* ScrollView(ap).md in Resources */,
+				086BEF022BF65DCD00025307 /* 布局进阶-参考资料(ap).md in Resources */,
 				086923362BF18918006779A3 /* 滚动到特定的位置(ap).md in Resources */,
 				08448F73279EB5DF00B61353 /* 文件(ap).md in Resources */,
 				08448FC8279EC54300B61353 /* If(ap).md in Resources */,
@@ -1669,6 +1700,7 @@
 				08448FE8279EC84B00B61353 /* 恒等(ap).md in Resources */,
 				08026C4C2869B39F00792EF1 /* Advanced layout control(ap).md in Resources */,
 				086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */,
+				086BEEF82BF629DB00025307 /* AnyLayout(ap).md in Resources */,
 				08D4EBD92BF44C170031EDC5 /* NavigationSplitView(ap).md in Resources */,
 				08448F0F2799328700B61353 /* css_cn.html in Resources */,
 				086923312BF171A6006779A3 /* ForEach(ap).md in Resources */,
@@ -1883,7 +1915,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1897,7 +1929,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.5;
+				MARKETING_VERSION = 6.4.6;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -1926,7 +1958,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1940,7 +1972,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.5;
+				MARKETING_VERSION = 6.4.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
