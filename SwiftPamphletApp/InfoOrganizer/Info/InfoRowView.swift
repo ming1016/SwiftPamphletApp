@@ -34,6 +34,7 @@ struct InfoRowView: View {
                         }
                     }
                 }
+                .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.9), radius: 1, x: 0, y: 0)
             }
             if info.url.isEmpty == false {
                 HStack {

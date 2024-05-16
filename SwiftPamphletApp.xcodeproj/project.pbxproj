@@ -202,6 +202,10 @@
 		08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
 		08AEAEFA277F3C7400B969E2 /* css.html in Resources */ = {isa = PBXBuildFile; fileRef = 08AEAEF9277F3C7400B969E2 /* css.html */; };
+		08B6B1012BF4FFE8007B6E2D /* 布局-居中(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B6B1002BF4FFE8007B6E2D /* 布局-居中(ap).md */; };
+		08B6B1032BF50154007B6E2D /* 布局-offset偏移(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B6B1022BF50154007B6E2D /* 布局-offset偏移(ap).md */; };
+		08B6B1052BF5059D007B6E2D /* 布局原理(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B6B1042BF5059D007B6E2D /* 布局原理(ap).md */; };
+		08B6B1072BF598E8007B6E2D /* Safe Area(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B6B1062BF598E8007B6E2D /* Safe Area(ap).md */; };
 		08BE632A27BE220D002BC6A8 /* 全屏模式(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632927BE220D002BC6A8 /* 全屏模式(ap).md */; };
 		08BE632C27BE3762002BC6A8 /* Link(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632B27BE3762002BC6A8 /* Link(ap).md */; };
 		08BE633027BE6CAA002BC6A8 /* Label(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BE632F27BE6CAA002BC6A8 /* Label(ap).md */; };
@@ -472,6 +476,10 @@
 		08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentMarkdown.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		08AEAEF9277F3C7400B969E2 /* css.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css.html; sourceTree = "<group>"; };
+		08B6B1002BF4FFE8007B6E2D /* 布局-居中(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局-居中(ap).md"; sourceTree = "<group>"; };
+		08B6B1022BF50154007B6E2D /* 布局-offset偏移(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局-offset偏移(ap).md"; sourceTree = "<group>"; };
+		08B6B1042BF5059D007B6E2D /* 布局原理(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局原理(ap).md"; sourceTree = "<group>"; };
+		08B6B1062BF598E8007B6E2D /* Safe Area(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Safe Area(ap).md"; sourceTree = "<group>"; };
 		08BE632927BE220D002BC6A8 /* 全屏模式(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "全屏模式(ap).md"; sourceTree = "<group>"; };
 		08BE632B27BE3762002BC6A8 /* Link(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Link(ap).md"; sourceTree = "<group>"; };
 		08BE632F27BE6CAA002BC6A8 /* Label(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Label(ap).md"; sourceTree = "<group>"; };
@@ -1159,10 +1167,10 @@
 			children = (
 				0850AC232BF436E8009FDBBF /* Navigation导航 */,
 				08D4EBE02BF4A7470031EDC5 /* 布局基础 */,
-				08C3BB7F27CE4A8500ACF0FE /* TabView(ap).md */,
 				08BE634927C4BDDB002BC6A8 /* Stack(ap).md */,
-				08BE635727C63F3A002BC6A8 /* ControlGroup(ap).md */,
 				08BE635B27C65C7C002BC6A8 /* GroupBox(ap).md */,
+				08C3BB7F27CE4A8500ACF0FE /* TabView(ap).md */,
+				08BE635727C63F3A002BC6A8 /* ControlGroup(ap).md */,
 				08026C3A2869A21000792EF1 /* Advanced layout control(ap).md */,
 				0858C5C62BEBD230004F4C04 /* ContentUnavailableView(ap).md */,
 			);
@@ -1217,6 +1225,10 @@
 				08D4EBE12BF4A76A0031EDC5 /* 布局-基础(ap).md */,
 				08D4EBE32BF4AB9A0031EDC5 /* 布局-留白(ap).md */,
 				08D4EBE52BF4B8050031EDC5 /* 布局-对齐(ap).md */,
+				08B6B1002BF4FFE8007B6E2D /* 布局-居中(ap).md */,
+				08B6B1022BF50154007B6E2D /* 布局-offset偏移(ap).md */,
+				08B6B1062BF598E8007B6E2D /* Safe Area(ap).md */,
+				08B6B1042BF5059D007B6E2D /* 布局原理(ap).md */,
 			);
 			path = "布局基础";
 			sourceTree = "<group>";
@@ -1472,6 +1484,7 @@
 			files = (
 				08026C512869B43500792EF1 /* Table(ap).md in Resources */,
 				08D4EBD52BF4379E0031EDC5 /* NavigationStack(ap).md in Resources */,
+				08B6B1012BF4FFE8007B6E2D /* 布局-居中(ap).md in Resources */,
 				0850AC142BF34D8B009FDBBF /* List-索引标题(ap).md in Resources */,
 				0850445027B0FDBD0096D556 /* @resultBuilder(ap).md in Resources */,
 				08449015279ECC8300B61353 /* Combine Timer(ap).md in Resources */,
@@ -1489,6 +1502,7 @@
 				08AEAEFA277F3C7400B969E2 /* css.html in Resources */,
 				08026C492869B38300792EF1 /* 链接器(ap).md in Resources */,
 				0850444E27B0D4EA0096D556 /* targetEnvironment环境的判断(ap).md in Resources */,
+				08B6B1032BF50154007B6E2D /* 布局-offset偏移(ap).md in Resources */,
 				08C3BBA227CF1B2B00ACF0FE /* Toggle(ap).md in Resources */,
 				08448FBA279EC3EA00B61353 /* 方法(ap).md in Resources */,
 				08448FD0279EC5CC00B61353 /* Switch(ap).md in Resources */,
@@ -1528,6 +1542,7 @@
 				08449002279ECB0500B61353 /* append(ap).md in Resources */,
 				08D4EBDB2BF4599D0031EDC5 /* Inspectors右侧多出一栏(ap).md in Resources */,
 				08449013279ECC6300B61353 /* Combine通知(ap).md in Resources */,
+				08B6B1052BF5059D007B6E2D /* 布局原理(ap).md in Resources */,
 				0844901E279ECD9D00B61353 /* 结构化并发(ap).md in Resources */,
 				08448FD3279EC60300B61353 /* 数组(ap).md in Resources */,
 				08448F64279EB32C00B61353 /* Swift规范(ap).md in Resources */,
@@ -1610,6 +1625,7 @@
 				08448F7E279EB71D00B61353 /* 单例(ap).md in Resources */,
 				0850AC1C2BF3A333009FDBBF /* Table-样式(ap).md in Resources */,
 				08448F8F279EB88500B61353 /* Keychain(ap).md in Resources */,
+				08B6B1072BF598E8007B6E2D /* Safe Area(ap).md in Resources */,
 				08448FA0279EBAD900B61353 /* 访问控制(ap).md in Resources */,
 				0850AC0C2BF2FA2F009FDBBF /* List-轻扫操作(ap).md in Resources */,
 				08448FFA279ECA5300B61353 /* Empty(ap).md in Resources */,
