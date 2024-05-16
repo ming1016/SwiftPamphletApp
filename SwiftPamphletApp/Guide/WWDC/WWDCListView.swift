@@ -36,9 +36,12 @@ struct WWDCListView: View {
                             .foregroundStyle(.secondary)
                         }
                     }
-                    .contentShape(Rectangle())
                 } else {
-                    Text(item.text)
+                    HStack {
+                        Text(item.text)
+                        Spacer()
+                    }
+                    .contentShape(Rectangle())
                 }
             }
         })
