@@ -286,15 +286,28 @@ final class GuideListModel {
                 L(t: "Advanced layout control"),
                 L(t: "ContentUnavailableView"),
             ]),
-            L(t: "视图组件使用",sub: [
+            L(t: "表单", sub: [
                 L(t: "Form"),
-                L(t: "Button"),
-                L(t: "进度"),
-                L(t: "浮层"),
+                L(t: "Picker选择器", sub: [
+                    L(t: "Picker"),
+                    L(t: "文字Picker"),
+                    L(t: "ColorPicker"),
+                    L(t: "DatePicker"),
+                    L(t: "PhotoPicker"),
+                    L(t: "字体Picker"),
+                    L(t: "WheelPicker"),
+                ]),
                 L(t: "Toggle"),
-                L(t: "Picker"),
                 L(t: "Slider"),
                 L(t: "Stepper"),
+            ]),
+            L(t: "浮层组件", sub: [
+                L(t: "浮层"),
+                L(t: "Sheet"),
+            ]),
+            L(t: "视图组件",sub: [
+                L(t: "Button"),
+                L(t: "进度"),
                 L(t: "Keyboard"),
                 L(t: "Transferable"),
                 L(t: "ShareLink")

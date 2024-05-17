@@ -166,6 +166,7 @@
 		0858C5C92BECCD17004F4C04 /* SwiftData-资料(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0858C5C82BECCD17004F4C04 /* SwiftData-资料(ap).md */; };
 		085BB77427D22FCA00E8F69A /* SwiftUI动画(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */; };
 		085BB77627D22FE300E8F69A /* SwiftUI Canvas(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */; };
+		085F06A12BF73AB80090310F /* Sheet(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085F06A02BF73AB80090310F /* Sheet(ap).md */; };
 		08659BC72BE8FD84009B7C00 /* SwiftUI数据流(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */; };
 		08659BCD2BE9A40A009B7C00 /* 创建@Model模型(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08659BCC2BE9A40A009B7C00 /* 创建@Model模型(ap).md */; };
 		08659BCF2BE9A430009B7C00 /* 容器配置modelContainer(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08659BCE2BE9A430009B7C00 /* 容器配置modelContainer(ap).md */; };
@@ -198,6 +199,12 @@
 		086BEEFE2BF644D400025307 /* GeometryReader(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEEFD2BF644D400025307 /* GeometryReader(ap).md */; };
 		086BEF002BF659E500025307 /* alignmentGuide(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEEFF2BF659E500025307 /* alignmentGuide(ap).md */; };
 		086BEF022BF65DCD00025307 /* 布局进阶-参考资料(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEF012BF65DCD00025307 /* 布局进阶-参考资料(ap).md */; };
+		086BEF052BF6C38300025307 /* 文字Picker(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEF042BF6C38300025307 /* 文字Picker(ap).md */; };
+		086BEF072BF6C39B00025307 /* ColorPicker(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEF062BF6C39B00025307 /* ColorPicker(ap).md */; };
+		086BEF092BF6C3B100025307 /* DatePicker(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEF082BF6C3B100025307 /* DatePicker(ap).md */; };
+		086BEF0B2BF6C40300025307 /* PhotoPicker(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEF0A2BF6C40300025307 /* PhotoPicker(ap).md */; };
+		086BEF0D2BF6C42500025307 /* 字体Picker(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEF0C2BF6C42500025307 /* 字体Picker(ap).md */; };
+		086BEF0F2BF6C43800025307 /* WheelPicker(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086BEF0E2BF6C43800025307 /* WheelPicker(ap).md */; };
 		0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C6182BA040E5000B620D /* InfoRowView.swift */; };
 		0871C61B2BA04D23000B620D /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61A2BA04D23000B620D /* CategoryRowView.swift */; };
 		0871C61D2BA05F44000B620D /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61C2BA05F44000B620D /* InfosView.swift */; };
@@ -444,6 +451,7 @@
 		0858C5C82BECCD17004F4C04 /* SwiftData-资料(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftData-资料(ap).md"; sourceTree = "<group>"; };
 		085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI动画(ap).md"; sourceTree = "<group>"; };
 		085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI Canvas(ap).md"; sourceTree = "<group>"; };
+		085F06A02BF73AB80090310F /* Sheet(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sheet(ap).md"; sourceTree = "<group>"; };
 		08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI数据流(ap).md"; sourceTree = "<group>"; };
 		08659BCC2BE9A40A009B7C00 /* 创建@Model模型(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "创建@Model模型(ap).md"; sourceTree = "<group>"; };
 		08659BCE2BE9A430009B7C00 /* 容器配置modelContainer(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "容器配置modelContainer(ap).md"; sourceTree = "<group>"; };
@@ -477,6 +485,12 @@
 		086BEEFD2BF644D400025307 /* GeometryReader(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GeometryReader(ap).md"; sourceTree = "<group>"; };
 		086BEEFF2BF659E500025307 /* alignmentGuide(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "alignmentGuide(ap).md"; sourceTree = "<group>"; };
 		086BEF012BF65DCD00025307 /* 布局进阶-参考资料(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "布局进阶-参考资料(ap).md"; sourceTree = "<group>"; };
+		086BEF042BF6C38300025307 /* 文字Picker(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "文字Picker(ap).md"; sourceTree = "<group>"; };
+		086BEF062BF6C39B00025307 /* ColorPicker(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ColorPicker(ap).md"; sourceTree = "<group>"; };
+		086BEF082BF6C3B100025307 /* DatePicker(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "DatePicker(ap).md"; sourceTree = "<group>"; };
+		086BEF0A2BF6C40300025307 /* PhotoPicker(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "PhotoPicker(ap).md"; sourceTree = "<group>"; };
+		086BEF0C2BF6C42500025307 /* 字体Picker(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "字体Picker(ap).md"; sourceTree = "<group>"; };
+		086BEF0E2BF6C43800025307 /* WheelPicker(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "WheelPicker(ap).md"; sourceTree = "<group>"; };
 		086D48A02BBB820100835544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0871C6182BA040E5000B620D /* InfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRowView.swift; sourceTree = "<group>"; };
 		0871C61A2BA04D23000B620D /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
@@ -642,7 +656,9 @@
 				08A7FF2D2BEABDCA00E12E5A /* 图文组件 */,
 				08A7FF2E2BEABE0100E12E5A /* 数据集合组件 */,
 				08A7FF2F2BEABE3F00E12E5A /* 布局组件 */,
-				0844902A279ECED300B61353 /* 表单组件 */,
+				0844902A279ECED300B61353 /* 表单 */,
+				085F069E2BF739DC0090310F /* 浮层组件 */,
+				085F069F2BF73A020090310F /* 视图组件 */,
 				08522BE727CF625B005FF059 /* 视觉 */,
 				08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */,
 			);
@@ -902,22 +918,16 @@
 			path = "介绍";
 			sourceTree = "<group>";
 		};
-		0844902A279ECED300B61353 /* 表单组件 */ = {
+		0844902A279ECED300B61353 /* 表单 */ = {
 			isa = PBXGroup;
 			children = (
 				08026C3D2869A51200792EF1 /* Form(ap).md */,
-				0896FB9127BA486900676B7F /* Button(ap).md */,
-				08BE638E27CE157D002BC6A8 /* 浮层(ap).md */,
-				08BE636727C8C2A0002BC6A8 /* 进度(ap).md */,
+				086BEF032BF6BE4E00025307 /* Picker选择器 */,
 				08C3BBA127CF1B2B00ACF0FE /* Toggle(ap).md */,
-				08522BD527CF3218005FF059 /* Picker(ap).md */,
 				08522BD927CF5029005FF059 /* Slider(ap).md */,
 				08522BDD27CF5133005FF059 /* Stepper(ap).md */,
-				08522BEC27CF7A0C005FF059 /* Keyboard(ap).md */,
-				08026C3B2869A2F100792EF1 /* Transferable(ap).md */,
-				08026C3C2869A35800792EF1 /* ShareLink(ap).md */,
 			);
-			path = "表单组件";
+			path = "表单";
 			sourceTree = "<group>";
 		};
 		0846234D2BAC59AF003373D9 /* App */ = {
@@ -996,6 +1006,27 @@
 				08026C392869A17800792EF1 /* SwiftCharts(ap).md */,
 			);
 			path = "视觉";
+			sourceTree = "<group>";
+		};
+		085F069E2BF739DC0090310F /* 浮层组件 */ = {
+			isa = PBXGroup;
+			children = (
+				08BE638E27CE157D002BC6A8 /* 浮层(ap).md */,
+				085F06A02BF73AB80090310F /* Sheet(ap).md */,
+			);
+			path = "浮层组件";
+			sourceTree = "<group>";
+		};
+		085F069F2BF73A020090310F /* 视图组件 */ = {
+			isa = PBXGroup;
+			children = (
+				0896FB9127BA486900676B7F /* Button(ap).md */,
+				08BE636727C8C2A0002BC6A8 /* 进度(ap).md */,
+				08522BEC27CF7A0C005FF059 /* Keyboard(ap).md */,
+				08026C3B2869A2F100792EF1 /* Transferable(ap).md */,
+				08026C3C2869A35800792EF1 /* ShareLink(ap).md */,
+			);
+			path = "视图组件";
 			sourceTree = "<group>";
 		};
 		08659BCB2BE9A3E6009B7C00 /* SwiftData */ = {
@@ -1149,6 +1180,20 @@
 				086BEF012BF65DCD00025307 /* 布局进阶-参考资料(ap).md */,
 			);
 			path = "布局进阶";
+			sourceTree = "<group>";
+		};
+		086BEF032BF6BE4E00025307 /* Picker选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				08522BD527CF3218005FF059 /* Picker(ap).md */,
+				086BEF042BF6C38300025307 /* 文字Picker(ap).md */,
+				086BEF062BF6C39B00025307 /* ColorPicker(ap).md */,
+				086BEF082BF6C3B100025307 /* DatePicker(ap).md */,
+				086BEF0A2BF6C40300025307 /* PhotoPicker(ap).md */,
+				086BEF0C2BF6C42500025307 /* 字体Picker(ap).md */,
+				086BEF0E2BF6C43800025307 /* WheelPicker(ap).md */,
+			);
+			path = "Picker选择器";
 			sourceTree = "<group>";
 		};
 		0887A5982BA28F3600131359 /* Guide */ = {
@@ -1547,6 +1592,7 @@
 				0858C5C92BECCD17004F4C04 /* SwiftData-资料(ap).md in Resources */,
 				08D8EFED2BEF3F2100AA0020 /* 小组件-配置选项(ap).md in Resources */,
 				0844900F279ECC0C00B61353 /* Combine网络请求(ap).md in Resources */,
+				086BEF052BF6C38300025307 /* 文字Picker(ap).md in Resources */,
 				0850AC192BF35A26009FDBBF /* Grid(ap).md in Resources */,
 				08448F9A279EBA2900B61353 /* 可选(ap).md in Resources */,
 				08026C472869B26900792EF1 /* 调试(ap).md in Resources */,
@@ -1598,6 +1644,7 @@
 				08BE637027C8F6A7002BC6A8 /* LazyVGrid和LazyHGrid(ap).md in Resources */,
 				08448FB6279EC39800B61353 /* 结构体(ap).md in Resources */,
 				08BE638F27CE157D002BC6A8 /* 浮层(ap).md in Resources */,
+				086BEF0B2BF6C40300025307 /* PhotoPicker(ap).md in Resources */,
 				08448F6A279EB47E00B61353 /* 时间(ap).md in Resources */,
 				08448F97279EB9B000B61353 /* 打印(ap).md in Resources */,
 				08448FC5279EC4F800B61353 /* sorted(ap).md in Resources */,
@@ -1614,6 +1661,7 @@
 				08D8EFF12BEF4E6900AA0020 /* Widget View(ap).md in Resources */,
 				08D8EFEF2BEF45CD00AA0020 /* AppIntentTimelineProvider(ap).md in Resources */,
 				08BE636827C8C2A0002BC6A8 /* 进度(ap).md in Resources */,
+				085F06A12BF73AB80090310F /* Sheet(ap).md in Resources */,
 				08BE636C27C8CFA7002BC6A8 /* Image(ap).md in Resources */,
 				08659BDD2BE9E3AA009B7C00 /* SwiftData-调试(ap).md in Resources */,
 				08659BDB2BE9A834009B7C00 /* SwiftData-版本迁移(ap).md in Resources */,
@@ -1622,6 +1670,7 @@
 				08D4EBD32BF437510031EDC5 /* Navigation(ap).md in Resources */,
 				08448FDE279EC74200B61353 /* 比较运算符(ap).md in Resources */,
 				0850AC062BF2E5DA009FDBBF /* List-移动元素(ap).md in Resources */,
+				086BEF092BF6C3B100025307 /* DatePicker(ap).md in Resources */,
 				08659BCD2BE9A40A009B7C00 /* 创建@Model模型(ap).md in Resources */,
 				08449000279ECAE100B61353 /* flatMap(ap).md in Resources */,
 				086BEF002BF659E500025307 /* alignmentGuide(ap).md in Resources */,
@@ -1656,6 +1705,7 @@
 				08448F7E279EB71D00B61353 /* 单例(ap).md in Resources */,
 				0850AC1C2BF3A333009FDBBF /* Table-样式(ap).md in Resources */,
 				08448F8F279EB88500B61353 /* Keychain(ap).md in Resources */,
+				086BEF0D2BF6C42500025307 /* 字体Picker(ap).md in Resources */,
 				08B6B1072BF598E8007B6E2D /* Safe Area(ap).md in Resources */,
 				08448FA0279EBAD900B61353 /* 访问控制(ap).md in Resources */,
 				0850AC0C2BF2FA2F009FDBBF /* List-轻扫操作(ap).md in Resources */,
@@ -1687,6 +1737,7 @@
 				08D8EFF32BEF78B400AA0020 /* 刷新小组件(ap).md in Resources */,
 				08449026279ECE5400B61353 /* Swift Concurrency和Combine(ap).md in Resources */,
 				08448F95279EB96F00B61353 /* 变量(ap).md in Resources */,
+				086BEF072BF6C39B00025307 /* ColorPicker(ap).md in Resources */,
 				08448F6D279EB51000B61353 /* 格式化(ap).md in Resources */,
 				08448FF4279EC9C500B61353 /* publisher(ap).md in Resources */,
 				08448FBC279EC41700B61353 /* 继承(ap).md in Resources */,
@@ -1717,6 +1768,7 @@
 				08D8EFFA2BEF9C9800AA0020 /* 小组件-远程定时获取数据(ap).md in Resources */,
 				0850AC102BF30058009FDBBF /* List-完全可点击的行(ap).md in Resources */,
 				0858C5C72BEBD230004F4C04 /* ContentUnavailableView(ap).md in Resources */,
+				086BEF0F2BF6C43800025307 /* WheelPicker(ap).md in Resources */,
 				08448FD5279EC62700B61353 /* Sets(ap).md in Resources */,
 				086923342BF178D9006779A3 /* 固定到滚动视图的顶部(ap).md in Resources */,
 				08448F75279EB62B00B61353 /* Scanner(ap).md in Resources */,
