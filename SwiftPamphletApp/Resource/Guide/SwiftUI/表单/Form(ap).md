@@ -17,7 +17,7 @@ Form {
 }.formStyle(.grouped)
 ```
 
-Form 今年也得到了增强，示例如下：
+Form 新版也得到了增强，示例如下：
 
 ```swift
 struct SimpleFormView: View {

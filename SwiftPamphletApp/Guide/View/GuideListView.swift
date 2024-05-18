@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import SMFile
 
 struct GuideListView: View {
     @Query(BookmarkModel.all) var bookmarks: [BookmarkModel]
@@ -54,6 +55,9 @@ struct GuideListView: View {
         })
         .onAppear(perform: {
             updateApBookmarks()
+            //导出内容
+//            listModel.buildMDContent()
+            
         })
         .overlay {
             if listModel.filtered().isEmpty {
@@ -109,6 +113,46 @@ final class GuideListModel {
         } else {
             return arr.last?.description ?? ""
         }
+    }
+    
+    // 导出内容
+    func buildMDContent() {
+        var md = ""
+        for one in lModel {
+            if one.t == "SwiftUI" {
+                if let oneSub = one.sub {
+                    for two in oneSub {
+                        if two.t == "数据集合组件" {
+                            if let twoSub = two.sub {
+                                for three in twoSub {
+                                    if let threeSub = three.sub {
+                                        let title = "\n## \(three.t)\n"
+                                        var fourStrs = ""
+                                        for four in threeSub {
+                                            let fourStr = SMFile.loadBundleString("\(four.t)(ap).md")
+                                            let fourStrformat = "\n### \(four.t)\n" + fourStr.replacingOccurrences(of: "## ", with: "#### ")
+                                            fourStrs += fourStrformat
+                                        }
+                                        md += title + fourStrs
+                                    } else {
+                                        let threeStr = SMFile.loadBundleString("\(three.t)(ap).md")
+                                        let threeStrformat = "\n## \(three.t)\n" + threeStr.replacingOccurrences(of: "## ", with: "### ")
+                                        md += threeStrformat
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+//                        let str =   SMFile.loadBundleString("\(two.t)(ap).md")
+//                        let strformat = "## \(two.t)\n" + str.replacingOccurrences(of: "## ", with: "### ")
+//                        md += strformat
+                    }
+                }
+                
+            }
+        }
+        SMFile.writeToDownload(fileName: "read.md", content: md)
     }
     
     var lModel = [
@@ -289,16 +333,16 @@ final class GuideListModel {
             L(t: "表单", sub: [
                 L(t: "Form"),
                 L(t: "Picker选择器", sub: [
-                    L(t: "Picker"),
-                    L(t: "文字Picker"),
-                    L(t: "ColorPicker"),
-                    L(t: "DatePicker"),
-                    L(t: "PhotoPicker"),
-                    L(t: "字体Picker"),
+                    L(t: "Picker", icon: "filemenu.and.selection"),
+                    L(t: "文字Picker", icon: "contextualmenu.and.cursorarrow"),
+                    L(t: "ColorPicker", icon: "paintpalette"),
+                    L(t: "DatePicker", icon: "calendar"),
+                    L(t: "PhotoPicker", icon: "photo.on.rectangle.angled"),
+                    L(t: "字体Picker", icon: "doc.richtext"),
                     L(t: "WheelPicker"),
                 ]),
-                L(t: "Toggle"),
-                L(t: "Slider"),
+                L(t: "Toggle", icon: "togglepower"),
+                L(t: "Slider", icon: "slider.horizontal.below.sun.max"),
                 L(t: "Stepper"),
             ]),
             L(t: "浮层组件", sub: [

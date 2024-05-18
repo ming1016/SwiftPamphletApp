@@ -39,7 +39,6 @@ struct MainView: View {
 
 用 `fullScreenCover()` 修饰符视图就会全屏显示, 会让向下拖动来关闭 Sheet 功能失效。另外，新增的 `interactiveDismissDisabled` 修饰符也可以用来禁用用户通过向下滑动来关闭 Sheet。
 
-```swift
 
 ## 绑定到所选项目
 
