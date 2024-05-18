@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SwiftData
-import Charts
 import InfoOrganizer
 
 struct CategoryListView: View {

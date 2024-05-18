@@ -12,10 +12,6 @@ struct CategoryRowView: View {
     @State var cate: IOCategory
     let selectedCate: IOCategory?
     
-    var cateColor: Color {
-        selectedCate == cate ? Color.white : Color.accentColor
-    }
-    
     var body: some View {
         HStack {
             if cate.pin == 1 {
