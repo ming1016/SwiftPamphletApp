@@ -208,6 +208,12 @@
 		0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C6182BA040E5000B620D /* InfoRowView.swift */; };
 		0871C61B2BA04D23000B620D /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61A2BA04D23000B620D /* CategoryRowView.swift */; };
 		0871C61D2BA05F44000B620D /* InfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871C61C2BA05F44000B620D /* InfosView.swift */; };
+		087ECDFE2BFCC3560011F679 /* Full Screen Modal View(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECDFD2BFCC3560011F679 /* Full Screen Modal View(ap).md */; };
+		087ECE002BFCC36F0011F679 /* confirmationDialog()(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECDFF2BFCC36F0011F679 /* confirmationDialog()(ap).md */; };
+		087ECE022BFCC3980011F679 /* Alert(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE012BFCC3980011F679 /* Alert(ap).md */; };
+		087ECE042BFCC3AA0011F679 /* Popover(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE032BFCC3AA0011F679 /* Popover(ap).md */; };
+		087ECE062BFCC3BD0011F679 /* Menu和ContextMenu(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE052BFCC3BD0011F679 /* Menu和ContextMenu(ap).md */; };
+		087ECE082BFCC3D90011F679 /* HUD(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE072BFCC3D90011F679 /* HUD(ap).md */; };
 		0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887A5992BA28F6D00131359 /* CSGuideView.swift */; };
 		0896FB9227BA486900676B7F /* Button(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* Button(ap).md */; };
 		08A4FDC227B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */; };
@@ -495,6 +501,12 @@
 		0871C6182BA040E5000B620D /* InfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRowView.swift; sourceTree = "<group>"; };
 		0871C61A2BA04D23000B620D /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
 		0871C61C2BA05F44000B620D /* InfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosView.swift; sourceTree = "<group>"; };
+		087ECDFD2BFCC3560011F679 /* Full Screen Modal View(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Full Screen Modal View(ap).md"; sourceTree = "<group>"; };
+		087ECDFF2BFCC36F0011F679 /* confirmationDialog()(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "confirmationDialog()(ap).md"; sourceTree = "<group>"; };
+		087ECE012BFCC3980011F679 /* Alert(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Alert(ap).md"; sourceTree = "<group>"; };
+		087ECE032BFCC3AA0011F679 /* Popover(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Popover(ap).md"; sourceTree = "<group>"; };
+		087ECE052BFCC3BD0011F679 /* Menu和ContextMenu(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Menu和ContextMenu(ap).md"; sourceTree = "<group>"; };
+		087ECE072BFCC3D90011F679 /* HUD(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "HUD(ap).md"; sourceTree = "<group>"; };
 		0887A5992BA28F6D00131359 /* CSGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuideView.swift; sourceTree = "<group>"; };
 		0896FB9127BA486900676B7F /* Button(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Button(ap).md"; sourceTree = "<group>"; };
 		08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "@dynamicMemberLookup动态成员查询(ap).md"; sourceTree = "<group>"; };
@@ -660,6 +672,10 @@
 				085F069E2BF739DC0090310F /* 浮层组件 */,
 				085F069F2BF73A020090310F /* 视图组件 */,
 				08522BE727CF625B005FF059 /* 视觉 */,
+				087ECE092BFDDAD90011F679 /* 修饰符 */,
+				087ECE0A2BFDDB2B0011F679 /* 样式 */,
+				087ECE0B2BFDDB320011F679 /* ViewBuilder */,
+				087ECE0C2BFDDB3E0011F679 /* 视图协议 */,
 				08659BC62BE8FD84009B7C00 /* SwiftUI数据流(ap).md */,
 			);
 			path = SwiftUI;
@@ -1013,6 +1029,12 @@
 			children = (
 				08BE638E27CE157D002BC6A8 /* 浮层(ap).md */,
 				085F06A02BF73AB80090310F /* Sheet(ap).md */,
+				087ECDFD2BFCC3560011F679 /* Full Screen Modal View(ap).md */,
+				087ECDFF2BFCC36F0011F679 /* confirmationDialog()(ap).md */,
+				087ECE012BFCC3980011F679 /* Alert(ap).md */,
+				087ECE032BFCC3AA0011F679 /* Popover(ap).md */,
+				087ECE052BFCC3BD0011F679 /* Menu和ContextMenu(ap).md */,
+				087ECE072BFCC3D90011F679 /* HUD(ap).md */,
 			);
 			path = "浮层组件";
 			sourceTree = "<group>";
@@ -1194,6 +1216,34 @@
 				086BEF0E2BF6C43800025307 /* WheelPicker(ap).md */,
 			);
 			path = "Picker选择器";
+			sourceTree = "<group>";
+		};
+		087ECE092BFDDAD90011F679 /* 修饰符 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "修饰符";
+			sourceTree = "<group>";
+		};
+		087ECE0A2BFDDB2B0011F679 /* 样式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "样式";
+			sourceTree = "<group>";
+		};
+		087ECE0B2BFDDB320011F679 /* ViewBuilder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewBuilder;
+			sourceTree = "<group>";
+		};
+		087ECE0C2BFDDB3E0011F679 /* 视图协议 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "视图协议";
 			sourceTree = "<group>";
 		};
 		0887A5982BA28F3600131359 /* Guide */ = {
@@ -1670,11 +1720,13 @@
 				08D4EBD32BF437510031EDC5 /* Navigation(ap).md in Resources */,
 				08448FDE279EC74200B61353 /* 比较运算符(ap).md in Resources */,
 				0850AC062BF2E5DA009FDBBF /* List-移动元素(ap).md in Resources */,
+				087ECE022BFCC3980011F679 /* Alert(ap).md in Resources */,
 				086BEF092BF6C3B100025307 /* DatePicker(ap).md in Resources */,
 				08659BCD2BE9A40A009B7C00 /* 创建@Model模型(ap).md in Resources */,
 				08449000279ECAE100B61353 /* flatMap(ap).md in Resources */,
 				086BEF002BF659E500025307 /* alignmentGuide(ap).md in Resources */,
 				08D8EFFE2BEFA3E300AA0020 /* 支持多个小组件(ap).md in Resources */,
+				087ECE042BFCC3AA0011F679 /* Popover(ap).md in Resources */,
 				086923382BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md in Resources */,
 				08448FAB279EC2B400B61353 /* 枚举(ap).md in Resources */,
 				08522BD627CF3218005FF059 /* Picker(ap).md in Resources */,
@@ -1690,6 +1742,7 @@
 				08449008279ECB6500B61353 /* zip(ap).md in Resources */,
 				08448F83279EB78A00B61353 /* 版本兼容(ap).md in Resources */,
 				08659BD32BE9A478009B7C00 /* SwiftData-检索(ap).md in Resources */,
+				087ECE062BFCC3BD0011F679 /* Menu和ContextMenu(ap).md in Resources */,
 				08448F81279EB75800B61353 /* 系统判断(ap).md in Resources */,
 				08448FF6279EC9E800B61353 /* Just(ap).md in Resources */,
 				08026C452869B25700792EF1 /* Distributed Actors(ap).md in Resources */,
@@ -1711,7 +1764,9 @@
 				0850AC0C2BF2FA2F009FDBBF /* List-轻扫操作(ap).md in Resources */,
 				08448FFA279ECA5300B61353 /* Empty(ap).md in Resources */,
 				08026C462869B26000792EF1 /* Swift-DocC(ap).md in Resources */,
+				087ECE002BFCC36F0011F679 /* confirmationDialog()(ap).md in Resources */,
 				08D4EBE42BF4AB9A0031EDC5 /* 布局-留白(ap).md in Resources */,
+				087ECDFE2BFCC3560011F679 /* Full Screen Modal View(ap).md in Resources */,
 				08448FF8279ECA2000B61353 /* PassthroughSubject(ap).md in Resources */,
 				08D8EFF82BEF912700AA0020 /* 小组件动画(ap).md in Resources */,
 				08D8F0042BEFA86C00AA0020 /* 小组件-参考资料(ap).md in Resources */,
@@ -1769,6 +1824,7 @@
 				0850AC102BF30058009FDBBF /* List-完全可点击的行(ap).md in Resources */,
 				0858C5C72BEBD230004F4C04 /* ContentUnavailableView(ap).md in Resources */,
 				086BEF0F2BF6C43800025307 /* WheelPicker(ap).md in Resources */,
+				087ECE082BFCC3D90011F679 /* HUD(ap).md in Resources */,
 				08448FD5279EC62700B61353 /* Sets(ap).md in Resources */,
 				086923342BF178D9006779A3 /* 固定到滚动视图的顶部(ap).md in Resources */,
 				08448F75279EB62B00B61353 /* Scanner(ap).md in Resources */,

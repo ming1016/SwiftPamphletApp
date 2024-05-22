@@ -347,7 +347,12 @@ final class GuideListModel {
             ]),
             L(t: "浮层组件", sub: [
                 L(t: "浮层"),
-                L(t: "Sheet"),
+                L(t: "Full Screen Modal View"),
+                L(t: "confirmationDialog()"),
+                L(t: "Alert"),
+                L(t: "Popover"),
+                L(t: "Menu和ContextMenu", icon: "filemenu.and.selection"),
+                L(t: "HUD"),
             ]),
             L(t: "视图组件",sub: [
                 L(t: "Button"),
@@ -363,6 +368,18 @@ final class GuideListModel {
                 L(t: "SwiftUI Canvas"),
                 L(t: "SF Symbol"),
                 L(t: "SwiftCharts"),
+            ]),
+            L(t: "修饰符", sub: [
+                
+            ]),
+            L(t: "样式", sub: [
+                
+            ]),
+            L(t: "ViewBuilder", sub: [
+                
+            ]),
+            L(t: "视图协议", sub: [
+                
             ]),
             L(t: "SwiftUI数据流")
         ]),
