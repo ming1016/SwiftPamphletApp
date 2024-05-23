@@ -370,17 +370,32 @@ final class GuideListModel {
                 L(t: "SwiftCharts"),
             ]),
             L(t: "修饰符", sub: [
-                
+                L(t: "自定义修饰符"),
+                L(t: "背景修饰符"),
+                L(t: "修饰符-visualEffect"),
+                L(t: "修饰符-圆角"),
+                L(t: "ContainerRelativeShape"),
+                L(t: "修饰符-fixedSize"),
+                L(t: "修饰符-蒙版"),
+                L(t: "redacted隐私展示"),
             ]),
-            L(t: "样式", sub: [
-                
+            L(t: "视图协议",sub: [
+                L(t: "视图协议-简介"),
+                L(t: "视图协议-核心协议"),
+                L(t: "Style协议"),
+                L(t: "小组件协议"),
+                L(t: "Shapes协议"),
+                L(t: "Animations协议"),
+                L(t: "视图协议-Environment"),
+                L(t: "Previews协议"),
+                L(t: "Legacy bridges协议"),
+                L(t: "Responder chain协议"),
+                L(t: "Toolbar协议"),
+                L(t: "Documents协议"),
+                L(t: "特定情况视图协议"),
             ]),
-            L(t: "ViewBuilder", sub: [
-                
-            ]),
-            L(t: "视图协议", sub: [
-                
-            ]),
+            L(t: "SwiftUI-自定义样式"),
+            L(t: "ViewBuilder"),
             L(t: "SwiftUI数据流")
         ]),
         L(t: "SwiftData", icon: "swiftdata", sub: [

@@ -46,3 +46,5 @@ struct Book: Identifiable, Equatable {
 ```
 
 示例中，`sidebar` 是主视图，它显示了一个图书列表。当用户选择一个图书时，`content` 视图会显示图书的作者，`detail` 视图会显示图书的详细信息。`NavigationSplitView` 会根据 `splitVisibility` 的值来决定显示哪些视图。
+
+使用 `.toolbar(removing: .sidebarToggle)` 可以移除边栏隐藏的按钮。
