@@ -363,6 +363,7 @@ final class GuideListModel {
             ]),
             L(t: "视觉",sub: [
                 L(t: "SwiftUI颜色"),
+                L(t: "SwiftUI-Shadow"),
                 L(t: "SwiftUI Effect"),
                 L(t: "SwiftUI动画"),
                 L(t: "SwiftUI Canvas"),

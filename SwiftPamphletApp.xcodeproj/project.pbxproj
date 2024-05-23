@@ -237,6 +237,7 @@
 		087ECE372BFF26790011F679 /* Toolbar协议(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE362BFF26790011F679 /* Toolbar协议(ap).md */; };
 		087ECE392BFF26910011F679 /* Documents协议(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE382BFF26910011F679 /* Documents协议(ap).md */; };
 		087ECE3B2BFF26B00011F679 /* 特定情况视图协议(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE3A2BFF26B00011F679 /* 特定情况视图协议(ap).md */; };
+		087ECE3D2BFF491B0011F679 /* SwiftUI-Shadow(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE3C2BFF491B0011F679 /* SwiftUI-Shadow(ap).md */; };
 		0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887A5992BA28F6D00131359 /* CSGuideView.swift */; };
 		0896FB9227BA486900676B7F /* Button(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* Button(ap).md */; };
 		08A4FDC227B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */; };
@@ -553,6 +554,7 @@
 		087ECE362BFF26790011F679 /* Toolbar协议(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Toolbar协议(ap).md"; sourceTree = "<group>"; };
 		087ECE382BFF26910011F679 /* Documents协议(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Documents协议(ap).md"; sourceTree = "<group>"; };
 		087ECE3A2BFF26B00011F679 /* 特定情况视图协议(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "特定情况视图协议(ap).md"; sourceTree = "<group>"; };
+		087ECE3C2BFF491B0011F679 /* SwiftUI-Shadow(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI-Shadow(ap).md"; sourceTree = "<group>"; };
 		0887A5992BA28F6D00131359 /* CSGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuideView.swift; sourceTree = "<group>"; };
 		0896FB9127BA486900676B7F /* Button(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Button(ap).md"; sourceTree = "<group>"; };
 		08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "@dynamicMemberLookup动态成员查询(ap).md"; sourceTree = "<group>"; };
@@ -1061,6 +1063,7 @@
 			isa = PBXGroup;
 			children = (
 				08522BE327CF5C55005FF059 /* SwiftUI颜色(ap).md */,
+				087ECE3C2BFF491B0011F679 /* SwiftUI-Shadow(ap).md */,
 				08522BE827CF6E3A005FF059 /* SwiftUI Effect(ap).md */,
 				085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */,
 				085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */,
@@ -1892,6 +1895,7 @@
 				08BE636427C886D2002BC6A8 /* LazyVStack和LazyHStack(ap).md in Resources */,
 				08449030279ECF7D00B61353 /* 1.md in Resources */,
 				087ECE352BFF26620011F679 /* Responder chain协议(ap).md in Resources */,
+				087ECE3D2BFF491B0011F679 /* SwiftUI-Shadow(ap).md in Resources */,
 				08522BDA27CF5029005FF059 /* Slider(ap).md in Resources */,
 				08D8EFFA2BEF9C9800AA0020 /* 小组件-远程定时获取数据(ap).md in Resources */,
 				0850AC102BF30058009FDBBF /* List-完全可点击的行(ap).md in Resources */,

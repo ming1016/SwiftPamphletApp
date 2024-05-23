@@ -50,6 +50,36 @@ struct ContentView: View {
 }
 ```
 
+## containerRelativeFrame 控制划动单元显示范围
+
+containerRelativeFrame 可以控制划动单元显示范围，可以控制单个内容一页，也可以控制多个内容一页。
+
+以下是 containerRelativeFrame 的使用示例：
+
+```swift
+struct ContentView: View {
+    
+    var body: some View {
+        ScrollView(.horizontal) {
+            HStack(spacing: 10.0) {
+                ForEach(0...20, id: \.self) { _ in
+                    Image("evermore")
+                        .resizable()
+                        .scaledToFit()
+                        .containerRelativeFrame(.horizontal, count: 4, span: 3, spacing: 8)
+                }
+            }
+        }
+        .scrollTargetBehavior(.paging)
+        .safeAreaPadding(.horizontal, 20.0)
+    }
+}
+```
+
+以上代码中，我们使用 containerRelativeFrame 修饰符，将每个 Image 视图的宽度设置为容器宽度的 3/4。我们还设置了每个 Image 视图之间的间距为 8 点。
+
+
+
 
 
 
