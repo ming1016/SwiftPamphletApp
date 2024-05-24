@@ -238,6 +238,11 @@
 		087ECE392BFF26910011F679 /* Documents协议(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE382BFF26910011F679 /* Documents协议(ap).md */; };
 		087ECE3B2BFF26B00011F679 /* 特定情况视图协议(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE3A2BFF26B00011F679 /* 特定情况视图协议(ap).md */; };
 		087ECE3D2BFF491B0011F679 /* SwiftUI-Shadow(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE3C2BFF491B0011F679 /* SwiftUI-Shadow(ap).md */; };
+		087ECE3F2BFF8A690011F679 /* Blend Modes(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE3E2BFF8A690011F679 /* Blend Modes(ap).md */; };
+		087ECE412C00532F0011F679 /* SwiftUI-渐变(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE402C00532F0011F679 /* SwiftUI-渐变(ap).md */; };
+		087ECE432C0066740011F679 /* SwiftUI-模糊(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE422C0066740011F679 /* SwiftUI-模糊(ap).md */; };
+		087ECE452C006A170011F679 /* SwiftUI-背景材质(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE442C006A170011F679 /* SwiftUI-背景材质(ap).md */; };
+		087ECE472C00756C0011F679 /* AppIcon(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE462C00756C0011F679 /* AppIcon(ap).md */; };
 		0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887A5992BA28F6D00131359 /* CSGuideView.swift */; };
 		0896FB9227BA486900676B7F /* Button(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* Button(ap).md */; };
 		08A4FDC227B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */; };
@@ -555,6 +560,11 @@
 		087ECE382BFF26910011F679 /* Documents协议(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Documents协议(ap).md"; sourceTree = "<group>"; };
 		087ECE3A2BFF26B00011F679 /* 特定情况视图协议(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "特定情况视图协议(ap).md"; sourceTree = "<group>"; };
 		087ECE3C2BFF491B0011F679 /* SwiftUI-Shadow(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI-Shadow(ap).md"; sourceTree = "<group>"; };
+		087ECE3E2BFF8A690011F679 /* Blend Modes(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Blend Modes(ap).md"; sourceTree = "<group>"; };
+		087ECE402C00532F0011F679 /* SwiftUI-渐变(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI-渐变(ap).md"; sourceTree = "<group>"; };
+		087ECE422C0066740011F679 /* SwiftUI-模糊(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI-模糊(ap).md"; sourceTree = "<group>"; };
+		087ECE442C006A170011F679 /* SwiftUI-背景材质(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI-背景材质(ap).md"; sourceTree = "<group>"; };
+		087ECE462C00756C0011F679 /* AppIcon(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AppIcon(ap).md"; sourceTree = "<group>"; };
 		0887A5992BA28F6D00131359 /* CSGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuideView.swift; sourceTree = "<group>"; };
 		0896FB9127BA486900676B7F /* Button(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Button(ap).md"; sourceTree = "<group>"; };
 		08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "@dynamicMemberLookup动态成员查询(ap).md"; sourceTree = "<group>"; };
@@ -658,6 +668,7 @@
 			isa = PBXGroup;
 			children = (
 				08026C322869991200792EF1 /* Swift-DocC(ap).md */,
+				087ECE462C00756C0011F679 /* AppIcon(ap).md */,
 			);
 			path = "系统能力";
 			sourceTree = "<group>";
@@ -1064,6 +1075,10 @@
 			children = (
 				08522BE327CF5C55005FF059 /* SwiftUI颜色(ap).md */,
 				087ECE3C2BFF491B0011F679 /* SwiftUI-Shadow(ap).md */,
+				087ECE3E2BFF8A690011F679 /* Blend Modes(ap).md */,
+				087ECE402C00532F0011F679 /* SwiftUI-渐变(ap).md */,
+				087ECE422C0066740011F679 /* SwiftUI-模糊(ap).md */,
+				087ECE442C006A170011F679 /* SwiftUI-背景材质(ap).md */,
 				08522BE827CF6E3A005FF059 /* SwiftUI Effect(ap).md */,
 				085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */,
 				085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */,
@@ -1700,6 +1715,7 @@
 				0858C5C92BECCD17004F4C04 /* SwiftData-资料(ap).md in Resources */,
 				08D8EFED2BEF3F2100AA0020 /* 小组件-配置选项(ap).md in Resources */,
 				0844900F279ECC0C00B61353 /* Combine网络请求(ap).md in Resources */,
+				087ECE452C006A170011F679 /* SwiftUI-背景材质(ap).md in Resources */,
 				086BEF052BF6C38300025307 /* 文字Picker(ap).md in Resources */,
 				0850AC192BF35A26009FDBBF /* Grid(ap).md in Resources */,
 				08448F9A279EBA2900B61353 /* 可选(ap).md in Resources */,
@@ -1712,6 +1728,7 @@
 				0869233C2BF1BF35006779A3 /* ScrollView-参考资料(ap).md in Resources */,
 				08448FAF279EC31200B61353 /* 不透明类型(ap).md in Resources */,
 				08449029279ECEB100B61353 /* SwiftUI是什么(ap).md in Resources */,
+				087ECE432C0066740011F679 /* SwiftUI-模糊(ap).md in Resources */,
 				086BEEFE2BF644D400025307 /* GeometryReader(ap).md in Resources */,
 				087ECE0E2BFDE0630011F679 /* 自定义修饰符(ap).md in Resources */,
 				08448F79279EB68D00B61353 /* 随机(ap).md in Resources */,
@@ -1802,6 +1819,7 @@
 				087ECE252BFF25940011F679 /* 视图协议-核心协议(ap).md in Resources */,
 				08448F71279EB58C00B61353 /* Data(ap).md in Resources */,
 				08448FFE279ECAA100B61353 /* removeDuplicates(ap).md in Resources */,
+				087ECE472C00756C0011F679 /* AppIcon(ap).md in Resources */,
 				08D4EBE62BF4B8050031EDC5 /* 布局-对齐(ap).md in Resources */,
 				08D8EFEB2BEF106B00AA0020 /* 小组件-AppIntentConfiguration(ap).md in Resources */,
 				0850445827B1228E0096D556 /* Result(ap).md in Resources */,
@@ -1889,6 +1907,7 @@
 				08448F9E279EBAA800B61353 /* 函数(ap).md in Resources */,
 				08448FEC279EC8BE00B61353 /* 注释(ap).md in Resources */,
 				08D8F0002BEFA72300AA0020 /* 获取小组件形状(ap).md in Resources */,
+				087ECE3F2BFF8A690011F679 /* Blend Modes(ap).md in Resources */,
 				08026C4E2869B3B500792EF1 /* ShareLink(ap).md in Resources */,
 				08026C432869B22E00792EF1 /* Regex(ap).md in Resources */,
 				08D4EBDD2BF461F60031EDC5 /* 自定义导航栏(ap).md in Resources */,
@@ -1900,6 +1919,7 @@
 				08D8EFFA2BEF9C9800AA0020 /* 小组件-远程定时获取数据(ap).md in Resources */,
 				0850AC102BF30058009FDBBF /* List-完全可点击的行(ap).md in Resources */,
 				087ECE1A2BFEA8210011F679 /* 修饰符-蒙版(ap).md in Resources */,
+				087ECE412C00532F0011F679 /* SwiftUI-渐变(ap).md in Resources */,
 				0858C5C72BEBD230004F4C04 /* ContentUnavailableView(ap).md in Resources */,
 				086BEF0F2BF6C43800025307 /* WheelPicker(ap).md in Resources */,
 				087ECE082BFCC3D90011F679 /* HUD(ap).md in Resources */,

@@ -1,4 +1,13 @@
 
+
+## shadow
+
+卡片阴影效果
+
+```swift
+.shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.25), radius: 10, x: 0, y: 0)
+```
+
 ## `.shadow(.drop(radius:` 前景阴影
 
 ```swift
@@ -23,6 +32,7 @@ struct ContentView: View {
 ```
 
 以上代码中，我们使用了 `shadow(.drop(radius: y:))` 修饰符为图像和文本添加了阴影效果。这个修饰符接受两个参数：`radius` 和 `y`。`radius` 参数控制阴影的模糊半径，`y` 参数控制阴影的偏移量。
+
 
 ## 多重阴影，发光效果
 

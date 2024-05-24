@@ -32,10 +32,12 @@ struct LightingView<Content: View>: View {
 struct IntroView: View {
     var body: some View {
         VStack(spacing: 15) {
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 120)
+            if let appIcon = NSImage(named: "AppIcon") {
+                Image(nsImage: appIcon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+            }
             Text("戴铭的开发小册子").bold()
             LightingView {
                 Text("Swift Pamphlet App").gradientTitle(color: .mint)

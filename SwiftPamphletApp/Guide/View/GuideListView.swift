@@ -364,6 +364,10 @@ final class GuideListModel {
             L(t: "视觉",sub: [
                 L(t: "SwiftUI颜色"),
                 L(t: "SwiftUI-Shadow"),
+                L(t: "Blend Modes"),
+                L(t: "SwiftUI-渐变"),
+                L(t: "SwiftUI-模糊"),
+                L(t: "SwiftUI-背景材质"),
                 L(t: "SwiftUI Effect"),
                 L(t: "SwiftUI动画"),
                 L(t: "SwiftUI Canvas"),
@@ -428,7 +432,8 @@ final class GuideListModel {
             L(t: "小组件-参考资料", icon: "books.vertical"),
         ]),
         L(t: "系统能力",icon: "apple.terminal",sub: [
-            L(t: "Swift-DocC", icon: "doc.append")
+            L(t: "Swift-DocC", icon: "doc.append"),
+            L(t: "AppIcon", icon: "app")
         ]),
         L(t: "工程模式",icon: "building.columns", sub: [
             L(t: "单例"),
