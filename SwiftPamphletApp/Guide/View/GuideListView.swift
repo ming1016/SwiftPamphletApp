@@ -28,7 +28,7 @@ struct GuideListView: View {
             .padding(.top, 10)
         }
         SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
-            NavigationLink(destination: GuideDetailView(t: i.t, plName: "ap", limit: $limit, trigger: $trigger)) {
+            NavigationLink(destination: GuideDetailView(t: i.t, icon: i.icon, plName: "ap", limit: $limit, trigger: $trigger)) {
                 HStack(spacing:3) {
                     if i.icon.isEmpty == false {
                         Image(systemName: i.icon)
@@ -264,12 +264,12 @@ final class GuideListModel {
             L(t: "数据集合组件",icon: "list.bullet.rectangle.fill", sub: [
                 L(t: "ForEach"),
                 L(t: "Scroll视图", icon: "scroll.fill", sub: [
-                    L(t: "ScrollView"),
+                    L(t: "ScrollView", icon: "arrow.up.arrow.down.circle"),
                     L(t: "固定到滚动视图的顶部",icon: "pin.circle"),
                     L(t: "滚动到特定的位置"),
                     L(t: "scrollTargetBehavior分页滚动", icon: "book.pages"),
                     L(t: "scrollTransition视觉效果"),
-                    L(t: "ScrollView-参考资料"),
+                    L(t: "ScrollView-参考资料", icon: "books.vertical"),
                 ]),
                 L(t: "List列表", icon: "list.bullet.rectangle.portrait.fill", sub: [
                     L(t: "List", icon: "list.bullet.rectangle.portrait"),
@@ -278,10 +278,10 @@ final class GuideListModel {
                     L(t: "List-搜索", icon: "text.magnifyingglass"),
                     L(t: "List-下拉刷新", icon: "arrow.circlepath"),
                     L(t: "List-轻扫操作", icon: "hand.point.up.left.and.text"),
-                    L(t: "List-大纲视图"),
-                    L(t: "List-完全可点击的行"),
-                    L(t: "List-索引标题"),
-                    L(t: "List-加载更多"),
+                    L(t: "List-大纲视图", icon: "list.number"),
+                    L(t: "List-完全可点击的行", icon: "chevron.right.circle"),
+                    L(t: "List-索引标题", icon: "textformat.abc.dottedunderline"),
+                    L(t: "List-加载更多", icon: "arrow.down.circle"),
                 ]),
                 L(t: "Lazy容器", sub: [
                     L(t: "LazyVStack和LazyHStack"),
@@ -290,7 +290,7 @@ final class GuideListModel {
                 L(t: "Grid", icon: "square.grid.3x2"),
                 L(t: "Table表格", icon: "tablecells.fill", sub: [
                     L(t: "Table", icon: "tablecells"),
-                    L(t: "Table-样式"),
+                    L(t: "Table-样式", icon: "paintbrush"),
                     L(t: "Table-行的选择", icon: "line.3.horizontal"),
                     L(t: "Table-多属性排序", icon: "tablecells.badge.ellipsis"),
                     L(t: "Table-contextMenu", icon: "filemenu.and.selection"),
@@ -349,10 +349,10 @@ final class GuideListModel {
                 L(t: "浮层"),
                 L(t: "Full Screen Modal View"),
                 L(t: "confirmationDialog()"),
-                L(t: "Alert"),
-                L(t: "Popover"),
+                L(t: "Alert", icon: "exclamationmark.triangle"),
+                L(t: "Popover", icon: "text.bubble"),
                 L(t: "Menu和ContextMenu", icon: "filemenu.and.selection"),
-                L(t: "HUD"),
+                L(t: "HUD", icon: "speedometer"),
             ]),
             L(t: "视图组件",sub: [
                 L(t: "Button"),
@@ -362,17 +362,17 @@ final class GuideListModel {
                 L(t: "ShareLink")
             ]),
             L(t: "视觉",sub: [
-                L(t: "SwiftUI颜色"),
-                L(t: "SwiftUI-Shadow"),
+                L(t: "SwiftUI颜色", icon: "paintbrush"),
+                L(t: "SwiftUI-Shadow", icon: "moon.circle"),
                 L(t: "Blend Modes"),
                 L(t: "SwiftUI-渐变"),
                 L(t: "SwiftUI-模糊"),
                 L(t: "SwiftUI-背景材质"),
-                L(t: "SwiftUI Effect"),
-                L(t: "SwiftUI动画"),
+                L(t: "SwiftUI Effect", icon: "sparkles"),
                 L(t: "SwiftUI Canvas"),
-                L(t: "SF Symbol"),
-                L(t: "SwiftCharts"),
+                L(t: "SF Symbol", icon: "star"),
+                L(t: "SwiftCharts", icon: "chart.line.uptrend.xyaxis"),
+                L(t: "Shaders Metal", icon: "cpu"),
             ]),
             L(t: "修饰符", sub: [
                 L(t: "自定义修饰符"),
@@ -404,15 +404,15 @@ final class GuideListModel {
             L(t: "SwiftUI数据流")
         ]),
         L(t: "SwiftData", icon: "swiftdata", sub: [
-            L(t: "创建@Model模型"),
-            L(t: "SwiftData-模型关系"),
-            L(t: "容器配置modelContainer"),
+            L(t: "创建@Model模型", icon: "plus.rectangle.on.rectangle"),
+            L(t: "SwiftData-模型关系", icon: "arrow.triangle.2.circlepath"),
+            L(t: "容器配置modelContainer", icon: "gearshape.2"),
             L(t: "增删modelContext"),
-            L(t: "SwiftData-检索"),
-            L(t: "SwiftData-处理大量数据"),
-            L(t: "SwiftData多线程"),
-            L(t: "SwiftData-版本迁移"),
-            L(t: "SwiftData-调试"),
+            L(t: "SwiftData-检索", icon: "magnifyingglass.circle"),
+            L(t: "SwiftData-处理大量数据", icon: "externaldrive.connected.to.line.below"),
+            L(t: "SwiftData多线程", icon: "arrow.triangle.branch"),
+            L(t: "SwiftData-版本迁移", icon: "arrow.right.arrow.left.square"),
+            L(t: "SwiftData-调试", icon: "ant"),
             L(t: "SwiftData-资料", icon: "books.vertical")
         ]),
         L(t: "小组件", icon: "window.shade.open", sub: [
@@ -420,15 +420,15 @@ final class GuideListModel {
             L(t: "小组件-AppIntentConfiguration"),
             L(t: "小组件-配置选项",icon: "rectangle.portrait.bottomleft.inset.filled"),
             L(t: "AppIntentTimelineProvider"),
-            L(t: "Widget View"),
+            L(t: "Widget View", icon: "rectangle.grid.1x2"),
             L(t: "刷新小组件", icon: "arrow.clockwise.circle"),
             L(t: "小组件动画", icon: "figure.disc.sports"),
             L(t: "小组件-远程定时获取数据", icon: "cloud"),
             L(t: "小组件-获取位置权限更新内容", icon: "location.fill.viewfinder"),
-            L(t: "支持多个小组件"),
-            L(t: "获取小组件形状"),
-            L(t: "小组件-Deep link"),
-            L(t: "小组件访问SwiftData"),
+            L(t: "支持多个小组件", icon: "rectangle.grid.2x2"),
+            L(t: "获取小组件形状", icon: "rectangle.inset.filled"),
+            L(t: "小组件-Deep link", icon: "link.circle"),
+            L(t: "小组件访问SwiftData", icon: "externaldrive"),
             L(t: "小组件-参考资料", icon: "books.vertical"),
         ]),
         L(t: "系统能力",icon: "apple.terminal",sub: [
@@ -481,7 +481,15 @@ final class GuideListModel {
             ]),
         ]),
         L(t: "动画", icon: "moonphase.waning.gibbous.inverse", sub: [
-            L(t: "布局动画", icon: "squareshape.split.2x2.dotted")
+            L(t: "SwiftUI动画", icon: "play"),
+            L(t: "contentTransition", icon: "number.circle"),
+            L(t: "animation修饰符", icon: "waveform.path.ecg"),
+            L(t: "Transaction", icon: "arrow.right.arrow.left"),
+            L(t: "Matched Geometry Effect", icon: "arrow.triangle.2.circlepath"),
+            L(t: "PhaseAnimator", icon: "arrow.up.right.circle"),
+            L(t: "KeyframeAnimator"),
+            L(t: "布局动画", icon: "squareshape.split.2x2.dotted"),
+            L(t: "动画-例子", icon: "lightbulb")
         ]),
         L(t: "网络", icon:"point.3.connected.trianglepath.dotted", sub: [
             L(t: "网络状态检查")

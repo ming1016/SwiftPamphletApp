@@ -17,6 +17,7 @@ struct GuideDetailView: View {
     @State private var isShowInspector = false
     @AppStorage(SPC.isShowPamphletInspector) var asIsShowPamphletInspector: Bool = false
     var t: String
+    var icon: String
     var plName: String
     @Binding var limit: Int
     @Binding var trigger: Bool
@@ -27,8 +28,9 @@ struct GuideDetailView: View {
     
     
     // 初始化
-    init(t:String, plName: String, limit: Binding<Int>, trigger: Binding<Bool>) {
+    init(t:String, icon:String, plName: String, limit: Binding<Int>, trigger: Binding<Bool>) {
         self.t = t
+        self.icon = icon
         self.plName = plName
         self._trigger = trigger
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
@@ -54,7 +56,7 @@ struct GuideDetailView: View {
                     })
                     .onChange(of: isBookmarked) { oldValue, newValue in
                         if newValue == true {
-                            BookmarkModel.addBM(t, plName: plName, context: modelContext)
+                            BookmarkModel.addBM(t, icon: icon, plName: plName, context: modelContext)
                         } else {
                             BookmarkModel.delBM(t, plName: plName, context: modelContext)
                         }
@@ -64,10 +66,15 @@ struct GuideDetailView: View {
                         checkBookmarkState()
                     })
                     
-                    
+                   
                     // 标题和资料
                     Spacer()
-                    Text(t).font(.title)
+                    if icon.isEmpty == false {
+                        Text("\(Image(systemName: icon).symbolRenderingMode(.hierarchical)) \(t)").font(.title)
+                    } else {
+                        Text(t).font(.title)
+                    }
+                    
                     Spacer()
                     Button("相关资料管理") {
                         isShowInspector.toggle()

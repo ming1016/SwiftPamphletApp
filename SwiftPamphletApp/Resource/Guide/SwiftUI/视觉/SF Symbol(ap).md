@@ -83,18 +83,12 @@ symbolVariant 可以设置 SF Symbol 的变体，可以设置为 `.none`、`.cir
 
 当然，以下是 SF Symbols 的各种变体的详细介绍：
 
-1. `none`：没有任何特殊变体的 SF Symbol。
-
-2. `circle`：这个变体的 SF Symbol 是在一个圆形背景中的。例如，`circle` 变体的 "person" symbol 就是一个人像在一个圆形背景中。
-
-3. `square`：这个变体的 SF Symbol 是在一个正方形背景中的。例如，`square` 变体的 "person" symbol 就是一个人像在一个正方形背景中。
-
-4. `rectangle`：这个变体的 SF Symbol 是在一个矩形背景中的。例如，`rectangle` 变体的 "person" symbol 就是一个人像在一个矩形背景中。
-
-5. `fill`：这个变体的 SF Symbol 是填充的，也就是说，它的内部是有颜色的，而不是空心的。例如，`fill` 变体的 "heart" symbol 就是一个填充的心形。
-
-6. `slash`：这个变体的 SF Symbol 是有一条斜线穿过的。例如，`slash` 变体的 "bell" symbol 就是一个有斜线穿过的铃铛，表示静音。
-
+- `none`：没有任何特殊变体的 SF Symbol。
+- `circle`：在一个圆形背景中的。例如，`circle` 变体的 "person" symbol 就是一个人像在一个圆形背景中。
+- `square`：在一个正方形背景中的。例如，`square` 变体的 "person" symbol 就是一个人像在一个正方形背景中。
+- `rectangle`：在一个矩形背景中的。例如，`rectangle` 变体的 "person" symbol 就是一个人像在一个矩形背景中。
+- `fill`：填充的，也就是说，它的内部是有颜色的，而不是空心的。例如，`fill` 变体的 "heart" symbol 就是一个填充的心形。
+- `slash`：一条斜线穿过。例如，`slash` 变体的 "bell" symbol 就是一个有斜线穿过的铃铛，表示静音。
 
 ```swift
 struct ContentView: View {
@@ -124,3 +118,51 @@ struct ContentView: View {
 }
 
 ```
+
+## 动画
+
+ SF Symbols 的动画一共有 7 种，分别是：Appear, Disappear, Bounce, Scale, Variable Color, Pulse, Replace。
+
+```swift
+struct ContentView: View {
+    @State private var isAnimating = false
+    @State var count: Int = 0
+    
+    var body: some View {
+        VStack {
+            Button("Toggle Animation") {
+                withAnimation {
+                    self.isAnimating.toggle()
+                }
+            }
+            Stepper("Count: \(count)", value: $count, in: 0...100)
+            
+            Image(systemName: "moon.stars")
+                .symbolEffect(.disappear, isActive: isAnimating)
+            
+            Image(systemName: "sun.max.fill")
+                .symbolEffect(
+                    .variableColor,
+                    isActive: isAnimating
+                )
+            Image(systemName: "wifi")
+                .symbolEffect(.bounce, value: count)
+            Image(systemName: "wifi")
+                .symbolEffect(.pulse, value: count)
+            Image(systemName: "wifi")
+                .symbolEffect(.variableColor, value: count)
+            Image(systemName: "wifi")
+                .symbolEffect(.variableColor, isActive: isAnimating)
+            Image(systemName: "wifi")
+                .symbolEffect(.scale.up, isActive: isAnimating)
+            Image(systemName: "wifi")
+                .symbolEffect(.scale.down, isActive: isAnimating)
+            Image(systemName: "wifi")
+                .symbolEffect(.pulse, isActive: isAnimating)
+        }
+        .imageScale(.large)
+        .padding()
+    }
+}
+```
+

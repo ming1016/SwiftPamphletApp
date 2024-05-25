@@ -11,6 +11,7 @@ import SwiftData
 @Model
 final class BookmarkModel {
     var name: String = ""
+    var icon: String = ""
     var pamphletName: String = ""
     var tags: [BookmarkTagModel] = [BookmarkTagModel]()
     var createDate: Date = Date.now
@@ -44,9 +45,10 @@ final class BookmarkModel {
         return nil
     }
     
-    static func addBM(_ name: String, plName: String, context: ModelContext) {
+    static func addBM(_ name: String, icon: String, plName: String, context: ModelContext) {
         if BookmarkModel.hasBM(name, plName: plName, context: context) == nil {
             let newBM = BookmarkModel(pamphletName: plName, name: name)
+            newBM.icon = icon
             context.insert(newBM)
         }
     }

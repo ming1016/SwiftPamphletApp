@@ -17,8 +17,12 @@ struct BookmarkListView: View {
     var body: some View {
         List {
             ForEach(bms) { bm in
-                NavigationLink(destination: GuideDetailView(t: bm.name, plName: bm.pamphletName, limit: $limit, trigger: $trigger)) {
+                NavigationLink(destination: GuideDetailView(t: bm.name, icon: bm.icon, plName: bm.pamphletName, limit: $limit, trigger: $trigger)) {
                     HStack {
+                        if bm.icon.isEmpty == false {
+                            Image(systemName: bm.icon)
+                                .foregroundStyle(Color.secondary)
+                        }
                         Text(bm.name)
                         Spacer()
                         Image(systemName: "bookmark")

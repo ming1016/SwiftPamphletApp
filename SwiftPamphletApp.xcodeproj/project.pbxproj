@@ -243,6 +243,14 @@
 		087ECE432C0066740011F679 /* SwiftUI-模糊(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE422C0066740011F679 /* SwiftUI-模糊(ap).md */; };
 		087ECE452C006A170011F679 /* SwiftUI-背景材质(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE442C006A170011F679 /* SwiftUI-背景材质(ap).md */; };
 		087ECE472C00756C0011F679 /* AppIcon(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE462C00756C0011F679 /* AppIcon(ap).md */; };
+		087ECE492C00DC1E0011F679 /* contentTransition(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE482C00DC1E0011F679 /* contentTransition(ap).md */; };
+		087ECE4B2C01768B0011F679 /* animation修饰符(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE4A2C01768B0011F679 /* animation修饰符(ap).md */; };
+		087ECE4D2C018E7B0011F679 /* Transaction(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE4C2C018E7B0011F679 /* Transaction(ap).md */; };
+		087ECE4F2C01B7280011F679 /* Matched Geometry Effect(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE4E2C01B7280011F679 /* Matched Geometry Effect(ap).md */; };
+		087ECE512C01D6E10011F679 /* PhaseAnimator(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE502C01D6E10011F679 /* PhaseAnimator(ap).md */; };
+		087ECE532C01E5B80011F679 /* KeyframeAnimator(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE522C01E5B80011F679 /* KeyframeAnimator(ap).md */; };
+		087ECE552C01F0A10011F679 /* Shaders Metal(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE542C01F0A10011F679 /* Shaders Metal(ap).md */; };
+		087ECE572C01F3A20011F679 /* 动画-例子(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE562C01F3A20011F679 /* 动画-例子(ap).md */; };
 		0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887A5992BA28F6D00131359 /* CSGuideView.swift */; };
 		0896FB9227BA486900676B7F /* Button(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* Button(ap).md */; };
 		08A4FDC227B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */; };
@@ -565,6 +573,14 @@
 		087ECE422C0066740011F679 /* SwiftUI-模糊(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI-模糊(ap).md"; sourceTree = "<group>"; };
 		087ECE442C006A170011F679 /* SwiftUI-背景材质(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI-背景材质(ap).md"; sourceTree = "<group>"; };
 		087ECE462C00756C0011F679 /* AppIcon(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AppIcon(ap).md"; sourceTree = "<group>"; };
+		087ECE482C00DC1E0011F679 /* contentTransition(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "contentTransition(ap).md"; sourceTree = "<group>"; };
+		087ECE4A2C01768B0011F679 /* animation修饰符(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "animation修饰符(ap).md"; sourceTree = "<group>"; };
+		087ECE4C2C018E7B0011F679 /* Transaction(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Transaction(ap).md"; sourceTree = "<group>"; };
+		087ECE4E2C01B7280011F679 /* Matched Geometry Effect(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Matched Geometry Effect(ap).md"; sourceTree = "<group>"; };
+		087ECE502C01D6E10011F679 /* PhaseAnimator(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "PhaseAnimator(ap).md"; sourceTree = "<group>"; };
+		087ECE522C01E5B80011F679 /* KeyframeAnimator(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "KeyframeAnimator(ap).md"; sourceTree = "<group>"; };
+		087ECE542C01F0A10011F679 /* Shaders Metal(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Shaders Metal(ap).md"; sourceTree = "<group>"; };
+		087ECE562C01F3A20011F679 /* 动画-例子(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "动画-例子(ap).md"; sourceTree = "<group>"; };
 		0887A5992BA28F6D00131359 /* CSGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuideView.swift; sourceTree = "<group>"; };
 		0896FB9127BA486900676B7F /* Button(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Button(ap).md"; sourceTree = "<group>"; };
 		08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "@dynamicMemberLookup动态成员查询(ap).md"; sourceTree = "<group>"; };
@@ -821,7 +837,15 @@
 		08448F8A279EB82D00B61353 /* 动画 */ = {
 			isa = PBXGroup;
 			children = (
+				085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */,
+				087ECE482C00DC1E0011F679 /* contentTransition(ap).md */,
+				087ECE4A2C01768B0011F679 /* animation修饰符(ap).md */,
+				087ECE4C2C018E7B0011F679 /* Transaction(ap).md */,
+				087ECE4E2C01B7280011F679 /* Matched Geometry Effect(ap).md */,
+				087ECE502C01D6E10011F679 /* PhaseAnimator(ap).md */,
+				087ECE522C01E5B80011F679 /* KeyframeAnimator(ap).md */,
 				08448F8B279EB84800B61353 /* 布局动画(ap).md */,
+				087ECE562C01F3A20011F679 /* 动画-例子(ap).md */,
 			);
 			path = "动画";
 			sourceTree = "<group>";
@@ -1080,10 +1104,10 @@
 				087ECE422C0066740011F679 /* SwiftUI-模糊(ap).md */,
 				087ECE442C006A170011F679 /* SwiftUI-背景材质(ap).md */,
 				08522BE827CF6E3A005FF059 /* SwiftUI Effect(ap).md */,
-				085BB77327D22FCA00E8F69A /* SwiftUI动画(ap).md */,
 				085BB77527D22FE300E8F69A /* SwiftUI Canvas(ap).md */,
 				08026C3E2869AD7800792EF1 /* SF Symbol(ap).md */,
 				08026C392869A17800792EF1 /* SwiftCharts(ap).md */,
+				087ECE542C01F0A10011F679 /* Shaders Metal(ap).md */,
 			);
 			path = "视觉";
 			sourceTree = "<group>";
@@ -1681,6 +1705,7 @@
 				0850445027B0FDBD0096D556 /* @resultBuilder(ap).md in Resources */,
 				08449015279ECC8300B61353 /* Combine Timer(ap).md in Resources */,
 				08448FFC279ECA7C00B61353 /* CurrentValueSubject(ap).md in Resources */,
+				087ECE532C01E5B80011F679 /* KeyframeAnimator(ap).md in Resources */,
 				08659BD72BE9A7F8009B7C00 /* SwiftData-处理大量数据(ap).md in Resources */,
 				08448FE4279EC7ED00B61353 /* 范围(ap).md in Resources */,
 				08448F92279EB8CA00B61353 /* 程序入口点(ap).md in Resources */,
@@ -1695,6 +1720,7 @@
 				08448FA3279EBB1B00B61353 /* 数字(ap).md in Resources */,
 				08AEAEFA277F3C7400B969E2 /* css.html in Resources */,
 				08026C492869B38300792EF1 /* 链接器(ap).md in Resources */,
+				087ECE572C01F3A20011F679 /* 动画-例子(ap).md in Resources */,
 				0850444E27B0D4EA0096D556 /* targetEnvironment环境的判断(ap).md in Resources */,
 				08B6B1032BF50154007B6E2D /* 布局-offset偏移(ap).md in Resources */,
 				08C3BBA227CF1B2B00ACF0FE /* Toggle(ap).md in Resources */,
@@ -1718,6 +1744,7 @@
 				087ECE452C006A170011F679 /* SwiftUI-背景材质(ap).md in Resources */,
 				086BEF052BF6C38300025307 /* 文字Picker(ap).md in Resources */,
 				0850AC192BF35A26009FDBBF /* Grid(ap).md in Resources */,
+				087ECE4F2C01B7280011F679 /* Matched Geometry Effect(ap).md in Resources */,
 				08448F9A279EBA2900B61353 /* 可选(ap).md in Resources */,
 				08026C472869B26900792EF1 /* 调试(ap).md in Resources */,
 				08448F8C279EB84800B61353 /* 布局动画(ap).md in Resources */,
@@ -1754,6 +1781,7 @@
 				08448FD7279EC64600B61353 /* 字典(ap).md in Resources */,
 				08026C412869B1BF00792EF1 /* 性能技术演进(ap).md in Resources */,
 				0850AC0A2BF2F8AE009FDBBF /* List-下拉刷新(ap).md in Resources */,
+				087ECE4B2C01768B0011F679 /* animation修饰符(ap).md in Resources */,
 				08026C4F2869B3BE00792EF1 /* Form(ap).md in Resources */,
 				08522BE927CF6E3B005FF059 /* SwiftUI Effect(ap).md in Resources */,
 				08449004279ECB2900B61353 /* prepend(ap).md in Resources */,
@@ -1773,6 +1801,7 @@
 				08BE637027C8F6A7002BC6A8 /* LazyVGrid和LazyHGrid(ap).md in Resources */,
 				08448FB6279EC39800B61353 /* 结构体(ap).md in Resources */,
 				08BE638F27CE157D002BC6A8 /* 浮层(ap).md in Resources */,
+				087ECE512C01D6E10011F679 /* PhaseAnimator(ap).md in Resources */,
 				086BEF0B2BF6C40300025307 /* PhotoPicker(ap).md in Resources */,
 				08448F6A279EB47E00B61353 /* 时间(ap).md in Resources */,
 				08448F97279EB9B000B61353 /* 打印(ap).md in Resources */,
@@ -1785,6 +1814,7 @@
 				08659BD12BE9A448009B7C00 /* 增删modelContext(ap).md in Resources */,
 				08448FC3279EC4D600B61353 /* reduce(ap).md in Resources */,
 				08BE635C27C65C7C002BC6A8 /* GroupBox(ap).md in Resources */,
+				087ECE492C00DC1E0011F679 /* contentTransition(ap).md in Resources */,
 				0844901A279ECD4E00B61353 /* async await(ap).md in Resources */,
 				08449024279ECE2200B61353 /* Swift Concurrency学习路径(ap).md in Resources */,
 				08D8EFF12BEF4E6900AA0020 /* Widget View(ap).md in Resources */,
@@ -1796,6 +1826,7 @@
 				08659BDB2BE9A834009B7C00 /* SwiftData-版本迁移(ap).md in Resources */,
 				0850AC222BF41F65009FDBBF /* Table-contextMenu(ap).md in Resources */,
 				08522BE427CF5C55005FF059 /* SwiftUI颜色(ap).md in Resources */,
+				087ECE4D2C018E7B0011F679 /* Transaction(ap).md in Resources */,
 				08D4EBD32BF437510031EDC5 /* Navigation(ap).md in Resources */,
 				08448FDE279EC74200B61353 /* 比较运算符(ap).md in Resources */,
 				0850AC062BF2E5DA009FDBBF /* List-移动元素(ap).md in Resources */,
@@ -1837,6 +1868,7 @@
 				086BEF022BF65DCD00025307 /* 布局进阶-参考资料(ap).md in Resources */,
 				086923362BF18918006779A3 /* 滚动到特定的位置(ap).md in Resources */,
 				08448F73279EB5DF00B61353 /* 文件(ap).md in Resources */,
+				087ECE552C01F0A10011F679 /* Shaders Metal(ap).md in Resources */,
 				08448FC8279EC54300B61353 /* If(ap).md in Resources */,
 				08D4EBE22BF4A76A0031EDC5 /* 布局-基础(ap).md in Resources */,
 				08448F7E279EB71D00B61353 /* 单例(ap).md in Resources */,
