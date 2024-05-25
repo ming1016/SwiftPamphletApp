@@ -119,9 +119,13 @@ final class GuideListModel {
     func buildMDContent() {
         var md = ""
         for one in lModel {
-            if one.t == "SwiftUI" {
+            if one.t == "动画" {
                 if let oneSub = one.sub {
                     for two in oneSub {
+                        let str =   SMFile.loadBundleString("\(two.t)(ap).md")
+                        let strformat = "## \(two.t)\n" + str.replacingOccurrences(of: "## ", with: "### ")
+                        md += strformat
+                        
                         if two.t == "数据集合组件" {
                             if let twoSub = two.sub {
                                 for three in twoSub {
@@ -142,16 +146,11 @@ final class GuideListModel {
                                 }
                             }
                         }
-                        
-                        
-//                        let str =   SMFile.loadBundleString("\(two.t)(ap).md")
-//                        let strformat = "## \(two.t)\n" + str.replacingOccurrences(of: "## ", with: "### ")
-//                        md += strformat
-                    }
-                }
+                    } // end for two
+                } // end if let oneSub
                 
-            }
-        }
+            } // end if one.t
+        } // end for one
         SMFile.writeToDownload(fileName: "read.md", content: md)
     }
     
