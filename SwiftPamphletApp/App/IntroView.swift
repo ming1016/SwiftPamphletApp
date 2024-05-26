@@ -8,6 +8,7 @@
 import SwiftUI
 import MarkdownUI
 import SMFile
+import SMUI
 
 struct LightingView<Content: View>: View {
     @Environment(\.colorScheme) var colorSchemeMode

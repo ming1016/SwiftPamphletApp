@@ -13,6 +13,7 @@ import PhotosUI
 import InfoOrganizer
 import SMFile
 import SMNetwork
+import SMUI
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
@@ -203,7 +204,7 @@ struct EditInfoView: View {
                     if info.imageUrls.isEmpty == false {
                         LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)]) {
                             ForEach(info.imageUrls, id:\.self) { img in
-                                NukeImage(url: img)
+                                NukeImage(height: 150, url: img)
                                 .contextMenu {
                                     Button {
                                         IOInfo.updateCoverImage(info: info, img: IOImg(url: img))

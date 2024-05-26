@@ -24,9 +24,9 @@
 		08026C512869B43500792EF1 /* Table(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C502869B41B00792EF1 /* Table(ap).md */; };
 		08026C522869B43D00792EF1 /* SF Symbol(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3E2869AD7800792EF1 /* SF Symbol(ap).md */; };
 		08026C532869B44400792EF1 /* macOS技术演进(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08026C3F2869B00D00792EF1 /* macOS技术演进(ap).md */; };
-		0805F4962BAAABEA0008BB52 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0805F4952BAAABEA0008BB52 /* ViewStyle.swift */; };
 		08069CAB2BDE01E800D48E24 /* GuideListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08069CAA2BDE01E800D48E24 /* GuideListView.swift */; };
 		08069CAD2BDE7A6B00D48E24 /* GuideDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08069CAC2BDE7A6B00D48E24 /* GuideDetailView.swift */; };
+		0820367A2C02EEA7002FB5E3 /* SMUI in Frameworks */ = {isa = PBXBuildFile; productRef = 082036792C02EEA7002FB5E3 /* SMUI */; };
 		0825E4872BC6596F00332378 /* EditCustomSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0825E4862BC6596F00332378 /* EditCustomSearchView.swift */; };
 		08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E242B9EEE1300DFDD02 /* InfoListView.swift */; };
 		08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E282B9F0A9100DFDD02 /* EditInfoView.swift */; };
@@ -354,7 +354,6 @@
 		08026C402869B1BF00792EF1 /* 性能技术演进(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "性能技术演进(ap).md"; sourceTree = "<group>"; };
 		08026C422869B22E00792EF1 /* Regex(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Regex(ap).md"; sourceTree = "<group>"; };
 		08026C502869B41B00792EF1 /* Table(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Table(ap).md"; sourceTree = "<group>"; };
-		0805F4952BAAABEA0008BB52 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		08069CAA2BDE01E800D48E24 /* GuideListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideListView.swift; sourceTree = "<group>"; };
 		08069CAC2BDE7A6B00D48E24 /* GuideDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailView.swift; sourceTree = "<group>"; };
 		0825E4862BC6596F00332378 /* EditCustomSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCustomSearchView.swift; sourceTree = "<group>"; };
@@ -660,6 +659,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0820367A2C02EEA7002FB5E3 /* SMUI in Frameworks */,
 				086923412BF2BFCC006779A3 /* AVKit.framework in Frameworks */,
 				0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
@@ -1274,7 +1274,6 @@
 				086A5F512744EF4C00FECE02 /* ViewComponent.swift */,
 				08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */,
 				08F14B432BBE2865005B46CC /* ViewComponentImage.swift */,
-				0805F4952BAAABEA0008BB52 /* ViewStyle.swift */,
 			);
 			path = ViewComponet;
 			sourceTree = "<group>";
@@ -1642,6 +1641,7 @@
 				3ACA74FA2BD7964A0024B18E /* SMFile */,
 				3A46DEF42BD7AAB2008AD993 /* SMDate */,
 				0868D00A2BDD37280023C871 /* SMGitHub */,
+				082036792C02EEA7002FB5E3 /* SMUI */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -1683,6 +1683,7 @@
 				3ACA74F92BD7964A0024B18E /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMFile" */,
 				3A46DEF32BD7AAB2008AD993 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMDate" */,
 				0868D0092BDD37280023C871 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMGitHub" */,
+				082036782C02EEA7002FB5E3 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMUI" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -2014,7 +2015,6 @@
 				08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
 				086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */,
-				0805F4962BAAABEA0008BB52 /* ViewStyle.swift in Sources */,
 				08CD61FF27758B8A008C0935 /* Token.swift in Sources */,
 				3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */,
 				08EF35D22BECFDA80098E2D4 /* BookmarkModel.swift in Sources */,
@@ -2246,6 +2246,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		082036782C02EEA7002FB5E3 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMUI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SwiftPamphletApp/SharePackage/SMUI;
+		};
 		0868D0092BDD37280023C871 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMGitHub" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = SwiftPamphletApp/SharePackage/SMGitHub;
@@ -2312,6 +2316,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		082036792C02EEA7002FB5E3 /* SMUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SMUI;
+		};
 		08397E312B9F39C100DFDD02 /* SwiftSoup */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08397E302B9F39C100DFDD02 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
