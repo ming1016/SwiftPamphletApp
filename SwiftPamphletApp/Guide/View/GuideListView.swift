@@ -346,6 +346,7 @@ final class GuideListModel {
             ]),
             L(t: "浮层组件", sub: [
                 L(t: "浮层"),
+                L(t: "Sheet"),
                 L(t: "Full Screen Modal View"),
                 L(t: "confirmationDialog()"),
                 L(t: "Alert", icon: "exclamationmark.triangle"),
