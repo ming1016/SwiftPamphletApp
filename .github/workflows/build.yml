@@ -9,8 +9,7 @@ jobs:
         with:
           xcode-version: latest-stable
       - name: Checkout
-        uses: actions/checkout@master
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: submodules-init
         uses: snickerbockers/submodules-init@v4
       - name: Import PAT from Actions secrets
