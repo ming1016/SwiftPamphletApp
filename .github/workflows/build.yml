@@ -10,7 +10,8 @@ jobs:
           xcode-version: latest-stable
       - name: Checkout
         uses: actions/checkout@v4
-          submodules: recursive
+          with:
+            submodules: recursive
       - name: Import PAT from Actions secrets
         run: |
          cd SwiftPamphletApp/App
