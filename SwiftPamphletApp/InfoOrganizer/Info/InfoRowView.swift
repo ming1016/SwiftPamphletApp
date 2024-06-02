@@ -15,37 +15,52 @@ struct InfoRowView: View {
     
     var body: some View {
         VStack(alignment:.leading) {
-            if let coverImg = info.coverImage {
-                ZStack {
-                    Rectangle()
-                        .fill(Color(light: .white, dark: .black))
-                        .frame(height: 80)
-                        .cornerRadius(5)
-                    GeometryReader { geometry in
+            HStack(alignment: .top) {
+                if let coverImg = info.coverImage {
+                    VStack {
+    //                    Rectangle()
+    //                        .fill(Color(light: .white, dark: .black))
+    //                        .frame(height: 80)
+    //                        .cornerRadius(5)
+    //                    GeometryReader { geometry in
+    //                        if coverImg.url.isEmpty == false {
+    //                            NukeImage(width: geometry.size.width, height: geometry.size.height, url: coverImg.url, contentModel: .fill)
+    //                        } else if let imgData = coverImg.imgData {
+    //                            if let nsImage = NSImage(data: imgData) {
+    //                                Image(nsImage: nsImage)
+    //                                    .resizable()
+    //                                    .scaledToFill()
+    //                                    .frame(width: geometry.size.width, height: geometry.size.height)
+    //                                    .cornerRadius(5)
+    //                            }
+    //                        }
+    //                    }
+                        
                         if coverImg.url.isEmpty == false {
-                            NukeImage(width: geometry.size.width, height: geometry.size.height, url: coverImg.url, contentModel: .fill)
+                            NukeImage(width: 50, height: 50, url: coverImg.url, contentModel: .fill)
                         } else if let imgData = coverImg.imgData {
                             if let nsImage = NSImage(data: imgData) {
                                 Image(nsImage: nsImage)
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: geometry.size.width, height: geometry.size.height)
+                                    .frame(width: 50, height: 50)
                                     .cornerRadius(5)
                             }
                         }
+                        
                     }
+                    .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.3), radius: 1, x: 0, y: 0)
                 }
-                .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.3), radius: 1, x: 0, y: 0)
-            }
-            if info.url.isEmpty == false {
-                HStack {
-                    Text(info.name).bold() + Text(" - \(hostFromString(info.url))").font(.footnote).foregroundStyle(.secondary)
-                }
-                .fixedSize(horizontal: false, vertical: true)
-            } else {
-                Text(info.name)
-                    .bold()
+                if info.url.isEmpty == false {
+                    HStack {
+                        Text(info.name).bold() + Text(" - \(hostFromString(info.url))").font(.footnote).foregroundStyle(.secondary)
+                    }
                     .fixedSize(horizontal: false, vertical: true)
+                } else {
+                    Text(info.name)
+                        .bold()
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
             
             Text(shortDes())
