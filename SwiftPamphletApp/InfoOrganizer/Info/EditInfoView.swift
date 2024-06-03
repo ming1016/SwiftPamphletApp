@@ -17,6 +17,7 @@ import SMUI
 
 struct EditInfoView: View {
     @Environment(\.modelContext) var modelContext
+    @Environment(\.dismiss) var dismiss
     @Bindable var info: IOInfo
     @Query(IOCategory.all) var categories: [IOCategory]
     @State private var showSheet = false
@@ -341,14 +342,15 @@ struct EditInfoView: View {
                             .padding(.leading, 1)
                         }
                         .padding(2)
-                        Button(action: {
-                            showSheet = false
-                        }, label: {
-                            Label("关闭", systemImage: "xmark.circle")
-                        })
-                        .padding(2)
                     }
                     .padding(20)
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("关闭", systemImage: "xmark") {
+                                showSheet = false
+                            }
+                        }
+                    }
                 })
                 .keyboardShortcut(KeyEquivalent("s"), modifiers: .command)
             }

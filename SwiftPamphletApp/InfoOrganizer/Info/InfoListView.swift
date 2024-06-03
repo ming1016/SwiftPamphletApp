@@ -157,12 +157,13 @@ struct InfoListView: View {
                     .padding(.leading, 1)
                 }
                 .padding(2)
-                Button(action: {
-                    showSheet = false
-                }, label: {
-                    Label("关闭", systemImage: "xmark.circle")
-                })
-                .padding(2)
+            }
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("关闭", systemImage: "xmark") {
+                        showSheet = false
+                    }
+                }
             }
             .padding(20)
         })

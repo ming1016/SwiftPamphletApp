@@ -296,6 +296,18 @@ struct ShoppingCartDetailView: View {
 }
 ```
 
+## 添加工具栏按钮
+
+```swift
+.toolbar {
+    ToolbarItem(placement: .cancellationAction) {
+        Button("关闭", systemImage: "xmark") {
+            showSheet = false
+        }
+    }
+}
+```
+
 
 ## 多 Sheet
 
