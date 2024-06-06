@@ -39,15 +39,16 @@ public class SMNetwork {
             schemeStr = scheme
             hostStr = host
         }
+        url.path()
         
         if urlStr.hasPrefix("http") {
             return urlStr
         } else {
-            var slash = ""
-            if urlStr.hasPrefix("/") == false {
-                slash = "/"
-            }
-            return "\(schemeStr)://\(hostStr)\(slash)\(urlStr)"
+//            var slash = ""
+//            if urlStr.hasPrefix("/") == false {
+//                slash = "/"
+//            }
+            return "\(schemeStr)://\(hostStr)\(url.path())\(urlStr)"
         }
     }
 }
