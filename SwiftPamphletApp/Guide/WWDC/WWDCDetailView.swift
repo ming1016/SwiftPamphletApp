@@ -39,7 +39,6 @@ struct WWDCDetailView: View {
                 if selectInfo == nil {
                     VStack(spacing: 10) {
                         HStack {
-                            Spacer()
                             Text(ss.title)
                                 .font(.title)
                             Spacer()
@@ -48,13 +47,22 @@ struct WWDCDetailView: View {
                             }
                         }
                         VStack(alignment:.leading, spacing: 10) {
-                            if let vurl = ss.media.videoOriginalUrl {
+                            if let vurl = ss.media.streamHLS {
                                 if let okVurl = URL(string: vurl) {
-                                    if ss.year > 2020 {
-                                        VideoPlayer(player: AVPlayer(url: okVurl))
-                                    } else {
-                                        Link("视频地址：\(vurl)", destination: okVurl)
-                                    }
+//                                    if ss.year > 2020 {
+//                                        VideoPlayer(player: AVPlayer(url: okVurl))
+//                                    } else {
+//                                        Link("视频地址：\(vurl)", destination: okVurl)
+//                                    }
+                                    VideoPlayer(player: AVPlayer(url: okVurl))
+                                }
+                            }
+                            HStack {
+                                if let hd = ss.media.downloadHD {
+                                    Link("HD 下载链接", destination: URL(string: hd)!)
+                                }
+                                if let sd = ss.media.downloadSD {
+                                    Link("SD 下载链接", destination: URL(string: sd)!)
                                 }
                             }
                             if let platforms = ss.platforms {

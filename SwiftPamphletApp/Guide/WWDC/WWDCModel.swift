@@ -64,9 +64,12 @@ struct WWDCSessionModel: Jsonable {
 
 struct WWDCMedia: Decodable, Hashable {
     var duration: Int?
-    var videoOriginalFilename: String?
-    var videoOriginalUrl: String?
-    var videoFilename: String?
+//    var videoOriginalFilename: String?
+//    var videoOriginalUrl: String?
+//    var videoFilename: String?
+    var streamHLS: String?
+    var downloadHD: String?
+    var downloadSD: String?
 }
 
 struct WWDCEvent: Jsonable {
