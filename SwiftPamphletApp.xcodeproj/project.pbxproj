@@ -188,7 +188,6 @@
 		086923382BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086923372BF19AB7006779A3 /* scrollTargetBehavior分页滚动(ap).md */; };
 		0869233A2BF1A490006779A3 /* scrollTransition视觉效果(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 086923392BF1A490006779A3 /* scrollTransition视觉效果(ap).md */; };
 		0869233C2BF1BF35006779A3 /* ScrollView-参考资料(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0869233B2BF1BF35006779A3 /* ScrollView-参考资料(ap).md */; };
-		086923412BF2BFCC006779A3 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869233F2BF2BF81006779A3 /* AVKit.framework */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
 		086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */; };
@@ -256,6 +255,7 @@
 		087ECE552C01F0A10011F679 /* Shaders Metal(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE542C01F0A10011F679 /* Shaders Metal(ap).md */; };
 		087ECE572C01F3A20011F679 /* 动画-例子(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087ECE562C01F3A20011F679 /* 动画-例子(ap).md */; };
 		0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887A5992BA28F6D00131359 /* CSGuideView.swift */; };
+		0888EF752C1C280F004967AD /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869233F2BF2BF81006779A3 /* AVKit.framework */; };
 		0896FB9227BA486900676B7F /* Button(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0896FB9127BA486900676B7F /* Button(ap).md */; };
 		08A4FDC227B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A4FDC127B25A140068E5BC /* @dynamicMemberLookup动态成员查询(ap).md */; };
 		08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */; };
@@ -668,8 +668,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0820367A2C02EEA7002FB5E3 /* SMUI in Frameworks */,
-				086923412BF2BFCC006779A3 /* AVKit.framework in Frameworks */,
 				0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */,
+				0888EF752C1C280F004967AD /* AVKit.framework in Frameworks */,
 				08448F4E279E8CA400B61353 /* Ink in Frameworks */,
 				08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */,
 				08F14B422BBDA3EA005B46CC /* NukeVideo in Frameworks */,
@@ -2181,7 +2181,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2195,7 +2195,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.8;
+				MARKETING_VERSION = 6.4.11;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -2224,7 +2224,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2238,7 +2238,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.4.8;
+				MARKETING_VERSION = 6.4.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";

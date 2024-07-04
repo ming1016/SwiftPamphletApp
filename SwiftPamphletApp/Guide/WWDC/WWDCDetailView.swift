@@ -54,17 +54,21 @@ struct WWDCDetailView: View {
 //                                    } else {
 //                                        Link("视频地址：\(vurl)", destination: okVurl)
 //                                    }
-                                    VideoPlayer(player: AVPlayer(url: okVurl))
+//                                    VideoPlayer(player: AVPlayer(url: okVurl))
+                                    HStack {
+                                        Link("视频播放", destination: okVurl)
+                                        Spacer()
+                                    }
                                 }
                             }
-                            HStack {
-                                if let hd = ss.media.downloadHD {
-                                    Link("HD 下载链接", destination: URL(string: hd)!)
-                                }
-                                if let sd = ss.media.downloadSD {
-                                    Link("SD 下载链接", destination: URL(string: sd)!)
-                                }
-                            }
+//                            HStack {
+//                                if let hd = ss.media.downloadHD {
+//                                    Link("HD 下载链接", destination: URL(string: hd)!)
+//                                }
+//                                if let sd = ss.media.downloadSD {
+//                                    Link("SD 下载链接", destination: URL(string: sd)!)
+//                                }
+//                            }
                             if let platforms = ss.platforms {
                                 Text(platformDes(platforms))
                                     .foregroundStyle(.secondary)
