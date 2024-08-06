@@ -509,7 +509,7 @@ final class GuideListModel {
             L(t: "Keychain")
         ]),
         L(t: "macOS", icon: "macstudio", sub: [
-            L(t: "macOS技术演进"),
+//            L(t: "macOS技术演进"),
             L(t: "macOS范例"),
             L(t: "三栏结构"),
             L(t: "全屏模式"),
