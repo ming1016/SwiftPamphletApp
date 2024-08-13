@@ -164,8 +164,7 @@ final class GuideListModel {
                 L(t: "闭包"),
                 L(t: "函数"),
                 L(t: "访问控制"),
-                L(t: "Regex"),
-                L(t: "Regex111")
+                L(t: "Regex")
             ]),
             L(t: "基础类型", sub: [
                 L(t: "数字"),
