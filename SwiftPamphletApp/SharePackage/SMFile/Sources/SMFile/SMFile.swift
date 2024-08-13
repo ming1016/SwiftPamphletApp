@@ -49,6 +49,12 @@ public struct SMFile {
     public static func loadBundleData(_ filename: String) -> Data {
         let data: Data
         guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {
+            let str = "<p>此部分为 App Store 版本内容，请到<a href=\"https://apps.apple.com/cn/app/%E6%88%B4%E9%93%AD%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%86%8C%E5%AD%90/id1609702529?mt=12\">应用商店下载(98元)</a></p>"
+            if let data = str.data(using: .utf8) {
+                return data
+            } else {
+                print("Failed to convert string to data")
+            }
             return Data()
 //            fatalError("Couldn't find \(filename) in main bundle.")
         }

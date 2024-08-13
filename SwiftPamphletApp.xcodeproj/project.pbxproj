@@ -1415,20 +1415,8 @@
 		08AEAEE7277EDD5D00B969E2 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
+				08FC82342C6AE2890083C91F /* appstore */,
 				08448F44279E7E0300B61353 /* Swift语法 */,
-				08448F67279EB40D00B61353 /* 基础库 */,
-				08448F47279E7E3A00B61353 /* SwiftUI */,
-				08659BCB2BE9A3E6009B7C00 /* SwiftData */,
-				08EF35CB2BECF1690098E2D4 /* 小组件 */,
-				08026C312869990100792EF1 /* 系统能力 */,
-				08448F7C279EB6F700B61353 /* 工程模式 */,
-				08EF35CA2BECF0B70098E2D4 /* 多线程 */,
-				08448F8A279EB82D00B61353 /* 动画 */,
-				08448F87279EB7EC00B61353 /* 网络 */,
-				08026C332869999800792EF1 /* 性能和构建 */,
-				08448F8D279EB86500B61353 /* 安全 */,
-				08448F4F279E8E9F00B61353 /* macOS */,
-				08448F5C279EB19700B61353 /* 三方库使用 */,
 				0844902F279ECF7D00B61353 /* 1.md */,
 			);
 			path = Guide;
@@ -1518,8 +1506,7 @@
 				08449016279ECD1400B61353 /* Swift Concurrency */,
 				08448F48279E7E4100B61353 /* Combine */,
 			);
-			name = "多线程";
-			path = "../多线程";
+			path = "多线程";
 			sourceTree = "<group>";
 		};
 		08EF35CB2BECF1690098E2D4 /* 小组件 */ = {
@@ -1593,6 +1580,26 @@
 				0825E4862BC6596F00332378 /* EditCustomSearchView.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		08FC82342C6AE2890083C91F /* appstore */ = {
+			isa = PBXGroup;
+			children = (
+				08448F67279EB40D00B61353 /* 基础库 */,
+				08448F47279E7E3A00B61353 /* SwiftUI */,
+				08659BCB2BE9A3E6009B7C00 /* SwiftData */,
+				08EF35CB2BECF1690098E2D4 /* 小组件 */,
+				08026C312869990100792EF1 /* 系统能力 */,
+				08448F7C279EB6F700B61353 /* 工程模式 */,
+				08EF35CA2BECF0B70098E2D4 /* 多线程 */,
+				08448F8A279EB82D00B61353 /* 动画 */,
+				08448F87279EB7EC00B61353 /* 网络 */,
+				08026C332869999800792EF1 /* 性能和构建 */,
+				08448F8D279EB86500B61353 /* 安全 */,
+				08448F4F279E8E9F00B61353 /* macOS */,
+				08448F5C279EB19700B61353 /* 三方库使用 */,
+			);
+			path = appstore;
 			sourceTree = "<group>";
 		};
 		3AE0D5962BAB09AB00D6D925 /* Developer */ = {
