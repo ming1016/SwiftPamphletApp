@@ -193,7 +193,7 @@ final class GuideListModel {
             L(t: "控制流",sub: [
                 L(t: "If"),
                 L(t: "Guard"),
-                L(t: "遍历For-in"),
+                L(t: "遍历"),
                 L(t: "While"),
                 L(t: "Switch")
             ]),
@@ -298,6 +298,8 @@ final class GuideListModel {
                     L(t: "Table-行的选择", icon: "line.3.horizontal"),
                     L(t: "Table-多属性排序", icon: "tablecells.badge.ellipsis"),
                     L(t: "Table-contextMenu", icon: "filemenu.and.selection"),
+                    L(t: "Table-拖拽"),
+                    L(t: "Table-可交互"),
                 ]),
             ]),
             L(t: "布局组件",icon: "rectangle.3.group.fill", sub: [
@@ -406,9 +408,17 @@ final class GuideListModel {
             ]),
             L(t: "SwiftUI-自定义样式"),
             L(t: "ViewBuilder"),
-            L(t: "SwiftUI数据流")
+            L(t: "数据流", sub: [
+                L(t: "SwiftUI数据流"),
+                L(t: "SwiftUI数据流-@State"),
+                L(t: "SwiftUI数据流-@Binding"),
+                L(t: "SwiftUI数据流-@Observable"),
+                L(t: "SwiftUI数据流-@Environment"),
+                L(t: "SwiftUI数据流-@AppStorage")
+            ])
         ]),
         L(t: "SwiftData", icon: "swiftdata", sub: [
+            L(t: "SwiftData基础"),
             L(t: "创建@Model模型", icon: "plus.rectangle.on.rectangle"),
             L(t: "SwiftData-模型关系", icon: "arrow.triangle.2.circlepath"),
             L(t: "容器配置modelContainer", icon: "gearshape.2"),
@@ -418,6 +428,7 @@ final class GuideListModel {
             L(t: "SwiftData多线程", icon: "arrow.triangle.branch"),
             L(t: "SwiftData-版本迁移", icon: "arrow.right.arrow.left.square"),
             L(t: "SwiftData-调试", icon: "ant"),
+            L(t: "SwiftData和CoreData"),
             L(t: "SwiftData-资料", icon: "books.vertical")
         ]),
         L(t: "小组件", icon: "window.shade.open", sub: [
@@ -484,6 +495,9 @@ final class GuideListModel {
                     L(t: "Combine Timer")
                 ])
             ]),
+        ]),
+        L(t: "图片处理", icon: "photo.stack", sub: [
+            L(t: "图片处理-基础")
         ]),
         L(t: "动画", icon: "moonphase.waning.gibbous.inverse", sub: [
             L(t: "SwiftUI动画", icon: "play"),
