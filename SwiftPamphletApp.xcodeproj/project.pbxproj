@@ -67,6 +67,7 @@
 		08448FEC279EC8BE00B61353 /* 注释(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08448FEB279EC8BE00B61353 /* 注释(ap).md */; };
 		08449030279ECF7D00B61353 /* 1.md in Resources */ = {isa = PBXBuildFile; fileRef = 0844902F279ECF7D00B61353 /* 1.md */; };
 		084DBA0F2C6D086F00C9D88D /* 图片处理-基础(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 084DBA0E2C6D086F00C9D88D /* 图片处理-基础(ap).md */; };
+		084DBA122C6DA52D00C9D88D /* 日期组件创建时间(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 084DBA112C6DA52D00C9D88D /* 日期组件创建时间(ap).md */; };
 		084E1A6327B517FC0072BBB6 /* Swift各版本演进(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A6227B517FC0072BBB6 /* Swift各版本演进(ap).md */; };
 		084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E1A6427B51EDB0072BBB6 /* AutoTask.swift */; };
 		0850445827B1228E0096D556 /* Result(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0850445727B1228E0096D556 /* Result(ap).md */; };
@@ -408,6 +409,7 @@
 		08448FEB279EC8BE00B61353 /* 注释(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "注释(ap).md"; sourceTree = "<group>"; };
 		0844902F279ECF7D00B61353 /* 1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 1.md; sourceTree = "<group>"; };
 		084DBA0E2C6D086F00C9D88D /* 图片处理-基础(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "图片处理-基础(ap).md"; sourceTree = "<group>"; };
+		084DBA112C6DA52D00C9D88D /* 日期组件创建时间(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "日期组件创建时间(ap).md"; sourceTree = "<group>"; };
 		084E1A6227B517FC0072BBB6 /* Swift各版本演进(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Swift各版本演进(ap).md"; sourceTree = "<group>"; };
 		084E1A6427B51EDB0072BBB6 /* AutoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTask.swift; sourceTree = "<group>"; };
 		0850445727B1228E0096D556 /* Result(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Result(ap).md"; sourceTree = "<group>"; };
@@ -855,6 +857,15 @@
 			path = "图片处理";
 			sourceTree = "<group>";
 		};
+		084DBA102C6DA51600C9D88D /* 时间 */ = {
+			isa = PBXGroup;
+			children = (
+				08BDD43A2C6B007A00914412 /* 时间(ap).md */,
+				084DBA112C6DA52D00C9D88D /* 日期组件创建时间(ap).md */,
+			);
+			path = "时间";
+			sourceTree = "<group>";
+		};
 		0869233E2BF2BF81006779A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1089,6 +1100,7 @@
 		08BDD42B2C6B007A00914412 /* 格式化 */ = {
 			isa = PBXGroup;
 			children = (
+				08BDD4392C6B007A00914412 /* 格式化(ap).md */,
 				08BDD4272C6B007A00914412 /* 格式化-度量值(ap).md */,
 				08BDD4282C6B007A00914412 /* 格式化-生活日常(ap).md */,
 				08BDD4292C6B007A00914412 /* 格式化-时间(ap).md */,
@@ -1130,13 +1142,12 @@
 		08BDD4412C6B007A00914412 /* 基础库 */ = {
 			isa = PBXGroup;
 			children = (
-				08BDD42B2C6B007A00914412 /* 格式化 */,
 				08BDD4302C6B007A00914412 /* 系统及设备 */,
 				08BDD4342C6B007A00914412 /* 自带属性包装 */,
 				08BDD4372C6B007A00914412 /* 自带协议 */,
+				08BDD42B2C6B007A00914412 /* 格式化 */,
+				084DBA102C6DA51600C9D88D /* 时间 */,
 				08BDD4382C6B007A00914412 /* 度量值(ap).md */,
-				08BDD4392C6B007A00914412 /* 格式化(ap).md */,
-				08BDD43A2C6B007A00914412 /* 时间(ap).md */,
 				08BDD43B2C6B007A00914412 /* 随机(ap).md */,
 				08BDD43C2C6B007A00914412 /* 文件(ap).md */,
 				08BDD43D2C6B007A00914412 /* AttributeString(ap).md */,
@@ -1520,20 +1531,20 @@
 		08BDD4FB2C6B007A00914412 /* appstore */ = {
 			isa = PBXGroup;
 			children = (
-				08BDD3F62C6B007A00914412 /* 安全 */,
+				08BDD4412C6B007A00914412 /* 基础库 */,
+				08BDD4FA2C6B007A00914412 /* SwiftUI */,
+				08BDD46E2C6B007A00914412 /* SwiftData */,
+				08BDD4572C6B007A00914412 /* 小组件 */,
+				08BDD4482C6B007A00914412 /* 系统能力 */,
+				08BDD4262C6B007A00914412 /* 工程模式 */,
+				08BDD4232C6B007A00914412 /* 多线程 */,
 				084DBA0D2C6D06AC00C9D88D /* 图片处理 */,
 				08BDD4002C6B007A00914412 /* 动画 */,
-				08BDD4232C6B007A00914412 /* 多线程 */,
-				08BDD4262C6B007A00914412 /* 工程模式 */,
-				08BDD4412C6B007A00914412 /* 基础库 */,
-				08BDD4432C6B007A00914412 /* 三方库使用 */,
 				08BDD4452C6B007A00914412 /* 网络 */,
-				08BDD4482C6B007A00914412 /* 系统能力 */,
-				08BDD4572C6B007A00914412 /* 小组件 */,
 				08BDD45C2C6B007A00914412 /* 性能和构建 */,
+				08BDD3F62C6B007A00914412 /* 安全 */,
 				08BDD4632C6B007A00914412 /* macOS */,
-				08BDD46E2C6B007A00914412 /* SwiftData */,
-				08BDD4FA2C6B007A00914412 /* SwiftUI */,
+				08BDD4432C6B007A00914412 /* 三方库使用 */,
 			);
 			path = appstore;
 			sourceTree = "<group>";
@@ -2005,6 +2016,7 @@
 				08BDD5AD2C6B007A00914412 /* Transferable(ap).md in Resources */,
 				08BDD5942C6B007A00914412 /* SwiftCharts(ap).md in Resources */,
 				08448FE8279EC84B00B61353 /* 恒等(ap).md in Resources */,
+				084DBA122C6DA52D00C9D88D /* 日期组件创建时间(ap).md in Resources */,
 				08BDD58E2C6B007A00914412 /* SwiftUI参考资料(ap).md in Resources */,
 				086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */,
 				08BDD5EB2C6C950D00914412 /* SwiftData和CoreData(ap).md in Resources */,

@@ -233,12 +233,16 @@ final class GuideListModel {
                 L(t: "@resultBuilder"),
                 L(t: "JSON没有id字段")
             ]),
-            L(t: "时间"),
             L(t: "格式化", sub: [
+                L(t: "格式化"),
                 L(t: "格式化-时间"),
                 L(t: "格式化-数据"),
                 L(t: "格式化-度量值"),
                 L(t: "格式化-生活日常"),
+            ]),
+            L(t: "时间", icon: "calendar.badge.clock", sub: [
+                L(t: "时间"),
+                L(t: "日期组件创建时间"),
             ]),
             L(t: "度量值"),
             L(t: "Data"),
