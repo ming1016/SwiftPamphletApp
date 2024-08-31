@@ -523,6 +523,13 @@ final class GuideListModel {
             L(t: "网络状态检查")
         ]),
         L(t: "性能和构建",icon: "battery.100percent.bolt", sub: [
+            L(t: "卡顿监控", sub: [
+                L(t: "避免视图绘制掉帧"),
+                L(t: "卡顿原因"),
+                L(t: "防止卡顿的方法"),
+                L(t: "RunLoop"),
+                L(t: "卡死崩溃监控"),
+            ]),
             L(t: "内存管理", sub: [
                 L(t: "内存管理"),
                 L(t: "自动引用计数（ARC）机制"),
@@ -531,6 +538,10 @@ final class GuideListModel {
                 L(t: "Swift内存操作"),
                 L(t: "内存分配器libMalloc"),
                 L(t: "检测和诊断内存问题"),
+            ]),
+            L(t: "IO性能", sub: [
+                L(t: "IO性能-文件系统"),
+                L(t: "文件内存映射（mmap）"),
             ]),
             L(t: "包体积", sub: [
                 L(t: "包体积的影响"),
@@ -543,12 +554,14 @@ final class GuideListModel {
                 L(t: "包体积-链接器优化"),
                 L(t: "包体积-三方库优化"),
             ]),
+            L(t: "性能分析", sub: [
+                L(t: "性能分析-工具"),
+            ]),
             L(t: "动态性", sub: [
                 L(t: "Swift运行时"),
+                L(t: "动态库注入技术"),
             ]),
-            L(t: "IO性能", sub: [
-                L(t: "IO性能-文件系统"),
-            ]),
+            
             L(t: "性能技术演进"),
             L(t: "调试"),
             L(t: "链接器")
