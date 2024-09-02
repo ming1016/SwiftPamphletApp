@@ -561,10 +561,16 @@ final class GuideListModel {
                 L(t: "Swift运行时"),
                 L(t: "动态库注入技术"),
             ]),
-            
+            L(t: "Bazel", sub: [
+                L(t: "Bazel-介绍"),
+                L(t: "Bazel-Tulsi"),
+                L(t: "Bazel-依赖分析"),
+                L(t: "Bazel-依赖分析"),
+            ]),
             L(t: "性能技术演进"),
             L(t: "调试"),
-            L(t: "链接器")
+            L(t: "链接器"),
+            
         ]),
         L(t: "安全", icon: "cross.case", sub: [
             L(t: "Keychain")
