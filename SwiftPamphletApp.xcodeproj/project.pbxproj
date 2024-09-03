@@ -71,8 +71,22 @@
 		084E1A6327B517FC0072BBB6 /* Swift各版本演进(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A6227B517FC0072BBB6 /* Swift各版本演进(ap).md */; };
 		084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E1A6427B51EDB0072BBB6 /* AutoTask.swift */; };
 		0850445827B1228E0096D556 /* Result(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0850445727B1228E0096D556 /* Result(ap).md */; };
-		0851E5322C848AD100D9463A /* Bazel-Tulsi(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5312C848AD100D9463A /* Bazel-Tulsi(ap).md */; };
-		0851E5342C848F4200D9463A /* Bazel-query 指令找依赖关系(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5332C848F4200D9463A /* Bazel-query 指令找依赖关系(ap).md */; };
+		0851E5322C848AD100D9463A /* Bazel-生成Xcode工程(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5312C848AD100D9463A /* Bazel-生成Xcode工程(ap).md */; };
+		0851E5342C848F4200D9463A /* Bazel-query指令找依赖关系(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5332C848F4200D9463A /* Bazel-query指令找依赖关系(ap).md */; };
+		0851E5362C8563BF00D9463A /* Bazel-远程缓存配置(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5352C8563BF00D9463A /* Bazel-远程缓存配置(ap).md */; };
+		0851E5382C85654100D9463A /* Bazel-远程执行配置(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5372C85654100D9463A /* Bazel-远程执行配置(ap).md */; };
+		0851E53A2C85683800D9463A /* Bazel-自定义的构建规则(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5392C85683800D9463A /* Bazel-自定义的构建规则(ap).md */; };
+		0851E53D2C85CAA400D9463A /* 编辑器-三方工具(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E53C2C85CAA400D9463A /* 编辑器-三方工具(ap).md */; };
+		0851E53F2C85CC8000D9463A /* VSCode(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E53E2C85CC8000D9463A /* VSCode(ap).md */; };
+		0851E5422C85E30D00D9463A /* 静态分析-概述(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5412C85E30D00D9463A /* 静态分析-概述(ap).md */; };
+		0851E5442C85E73A00D9463A /* 静态分析-Swift语言(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5432C85E73A00D9463A /* 静态分析-Swift语言(ap).md */; };
+		0851E5462C85F7ED00D9463A /* MachO(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5452C85F7ED00D9463A /* MachO(ap).md */; };
+		0851E5482C85FFA700D9463A /* 静态分析-代码规范(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5472C85FFA700D9463A /* 静态分析-代码规范(ap).md */; };
+		0851E54A2C860DFC00D9463A /* Clang静态分析器(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5492C860DFC00D9463A /* Clang静态分析器(ap).md */; };
+		0851E54E2C865B9B00D9463A /* 自动化测试(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E54D2C865B9B00D9463A /* 自动化测试(ap).md */; };
+		0851E5502C865EB900D9463A /* XCTest(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E54F2C865EB900D9463A /* XCTest(ap).md */; };
+		0851E5532C86783400D9463A /* LLDB(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5522C86783400D9463A /* LLDB(ap).md */; };
+		0851E5552C86899200D9463A /* Language Server Protocol(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5542C86899200D9463A /* Language Server Protocol(ap).md */; };
 		0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */ = {isa = PBXBuildFile; productRef = 0868D00A2BDD37280023C871 /* SMGitHub */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
 		086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086A5F0A2744E89100FECE02 /* Assets.xcassets */; };
@@ -447,8 +461,22 @@
 		084E1A6227B517FC0072BBB6 /* Swift各版本演进(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Swift各版本演进(ap).md"; sourceTree = "<group>"; };
 		084E1A6427B51EDB0072BBB6 /* AutoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTask.swift; sourceTree = "<group>"; };
 		0850445727B1228E0096D556 /* Result(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Result(ap).md"; sourceTree = "<group>"; };
-		0851E5312C848AD100D9463A /* Bazel-Tulsi(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-Tulsi(ap).md"; sourceTree = "<group>"; };
-		0851E5332C848F4200D9463A /* Bazel-query 指令找依赖关系(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-query 指令找依赖关系(ap).md"; sourceTree = "<group>"; };
+		0851E5312C848AD100D9463A /* Bazel-生成Xcode工程(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-生成Xcode工程(ap).md"; sourceTree = "<group>"; };
+		0851E5332C848F4200D9463A /* Bazel-query指令找依赖关系(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-query指令找依赖关系(ap).md"; sourceTree = "<group>"; };
+		0851E5352C8563BF00D9463A /* Bazel-远程缓存配置(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-远程缓存配置(ap).md"; sourceTree = "<group>"; };
+		0851E5372C85654100D9463A /* Bazel-远程执行配置(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-远程执行配置(ap).md"; sourceTree = "<group>"; };
+		0851E5392C85683800D9463A /* Bazel-自定义的构建规则(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-自定义的构建规则(ap).md"; sourceTree = "<group>"; };
+		0851E53C2C85CAA400D9463A /* 编辑器-三方工具(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "编辑器-三方工具(ap).md"; sourceTree = "<group>"; };
+		0851E53E2C85CC8000D9463A /* VSCode(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "VSCode(ap).md"; sourceTree = "<group>"; };
+		0851E5412C85E30D00D9463A /* 静态分析-概述(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "静态分析-概述(ap).md"; sourceTree = "<group>"; };
+		0851E5432C85E73A00D9463A /* 静态分析-Swift语言(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "静态分析-Swift语言(ap).md"; sourceTree = "<group>"; };
+		0851E5452C85F7ED00D9463A /* MachO(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MachO(ap).md"; sourceTree = "<group>"; };
+		0851E5472C85FFA700D9463A /* 静态分析-代码规范(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "静态分析-代码规范(ap).md"; sourceTree = "<group>"; };
+		0851E5492C860DFC00D9463A /* Clang静态分析器(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Clang静态分析器(ap).md"; sourceTree = "<group>"; };
+		0851E54D2C865B9B00D9463A /* 自动化测试(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "自动化测试(ap).md"; sourceTree = "<group>"; };
+		0851E54F2C865EB900D9463A /* XCTest(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "XCTest(ap).md"; sourceTree = "<group>"; };
+		0851E5522C86783400D9463A /* LLDB(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "LLDB(ap).md"; sourceTree = "<group>"; };
+		0851E5542C86899200D9463A /* Language Server Protocol(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Language Server Protocol(ap).md"; sourceTree = "<group>"; };
 		0869233F2BF2BF81006779A3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
@@ -940,6 +968,68 @@
 			path = "时间";
 			sourceTree = "<group>";
 		};
+		0851E53B2C85CA7C00D9463A /* 编辑器 */ = {
+			isa = PBXGroup;
+			children = (
+				0851E53C2C85CAA400D9463A /* 编辑器-三方工具(ap).md */,
+				0851E53E2C85CC8000D9463A /* VSCode(ap).md */,
+			);
+			path = "编辑器";
+			sourceTree = "<group>";
+		};
+		0851E5402C85E20000D9463A /* 静态分析 */ = {
+			isa = PBXGroup;
+			children = (
+				0851E5412C85E30D00D9463A /* 静态分析-概述(ap).md */,
+				0851E5432C85E73A00D9463A /* 静态分析-Swift语言(ap).md */,
+				0851E5492C860DFC00D9463A /* Clang静态分析器(ap).md */,
+				0851E5472C85FFA700D9463A /* 静态分析-代码规范(ap).md */,
+				0851E5542C86899200D9463A /* Language Server Protocol(ap).md */,
+				0851E5452C85F7ED00D9463A /* MachO(ap).md */,
+			);
+			path = "静态分析";
+			sourceTree = "<group>";
+		};
+		0851E54B2C865A9C00D9463A /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				08BDD4412C6B007A00914412 /* 基础库 */,
+				08BDD4FA2C6B007A00914412 /* SwiftUI */,
+				08BDD46E2C6B007A00914412 /* SwiftData */,
+				08BDD4572C6B007A00914412 /* 小组件 */,
+				08BDD4482C6B007A00914412 /* 系统能力 */,
+				08BDD4262C6B007A00914412 /* 工程模式 */,
+				08BDD4232C6B007A00914412 /* 多线程 */,
+				084DBA0D2C6D06AC00C9D88D /* 图片处理 */,
+				08BDD4002C6B007A00914412 /* 动画 */,
+				08BDD4452C6B007A00914412 /* 网络 */,
+				08BDD45C2C6B007A00914412 /* 性能和构建 */,
+				0851E5512C86781E00D9463A /* 调试 */,
+				0851E54C2C865AF600D9463A /* 测试 */,
+				08BDD3F62C6B007A00914412 /* 安全 */,
+				08BDD4632C6B007A00914412 /* macOS */,
+				08BDD4432C6B007A00914412 /* 三方库使用 */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
+		0851E54C2C865AF600D9463A /* 测试 */ = {
+			isa = PBXGroup;
+			children = (
+				0851E54D2C865B9B00D9463A /* 自动化测试(ap).md */,
+				0851E54F2C865EB900D9463A /* XCTest(ap).md */,
+			);
+			path = "测试";
+			sourceTree = "<group>";
+		};
+		0851E5512C86781E00D9463A /* 调试 */ = {
+			isa = PBXGroup;
+			children = (
+				0851E5522C86783400D9463A /* LLDB(ap).md */,
+			);
+			path = "调试";
+			sourceTree = "<group>";
+		};
 		0869233E2BF2BF81006779A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1104,9 +1194,12 @@
 			isa = PBXGroup;
 			children = (
 				087A7B082C83737E00321F85 /* Bazel-介绍(ap).md */,
-				0851E5312C848AD100D9463A /* Bazel-Tulsi(ap).md */,
+				0851E5312C848AD100D9463A /* Bazel-生成Xcode工程(ap).md */,
 				087A7B0B2C8407E200321F85 /* Bazel-依赖分析(ap).md */,
-				0851E5332C848F4200D9463A /* Bazel-query 指令找依赖关系(ap).md */,
+				0851E5332C848F4200D9463A /* Bazel-query指令找依赖关系(ap).md */,
+				0851E5372C85654100D9463A /* Bazel-远程执行配置(ap).md */,
+				0851E5352C8563BF00D9463A /* Bazel-远程缓存配置(ap).md */,
+				0851E5392C85683800D9463A /* Bazel-自定义的构建规则(ap).md */,
 			);
 			path = Bazel;
 			sourceTree = "<group>";
@@ -1364,8 +1457,10 @@
 				087A7AF22C81133B00321F85 /* IO性能 */,
 				087A7ACF2C8008FD00321F85 /* 包体积 */,
 				087A7B002C82904B00321F85 /* 性能分析 */,
+				0851E5402C85E20000D9463A /* 静态分析 */,
 				087A7AEF2C80C7D200321F85 /* 动态性 */,
 				087A7B0A2C83776C00321F85 /* Bazel */,
+				0851E53B2C85CA7C00D9463A /* 编辑器 */,
 				08BDD4582C6B007A00914412 /* 调试(ap).md */,
 				08BDD4592C6B007A00914412 /* 链接器(ap).md */,
 				08BDD45B2C6B007A00914412 /* 性能技术演进(ap).md */,
@@ -1689,20 +1784,7 @@
 		08BDD4FB2C6B007A00914412 /* appstore */ = {
 			isa = PBXGroup;
 			children = (
-				08BDD4412C6B007A00914412 /* 基础库 */,
-				08BDD4FA2C6B007A00914412 /* SwiftUI */,
-				08BDD46E2C6B007A00914412 /* SwiftData */,
-				08BDD4572C6B007A00914412 /* 小组件 */,
-				08BDD4482C6B007A00914412 /* 系统能力 */,
-				08BDD4262C6B007A00914412 /* 工程模式 */,
-				08BDD4232C6B007A00914412 /* 多线程 */,
-				084DBA0D2C6D06AC00C9D88D /* 图片处理 */,
-				08BDD4002C6B007A00914412 /* 动画 */,
-				08BDD4452C6B007A00914412 /* 网络 */,
-				08BDD45C2C6B007A00914412 /* 性能和构建 */,
-				08BDD3F62C6B007A00914412 /* 安全 */,
-				08BDD4632C6B007A00914412 /* macOS */,
-				08BDD4432C6B007A00914412 /* 三方库使用 */,
+				0851E54B2C865A9C00D9463A /* Apple */,
 			);
 			path = appstore;
 			sourceTree = "<group>";
@@ -1990,10 +2072,12 @@
 				08BDD57F2C6B007A00914412 /* NavigationStack(ap).md in Resources */,
 				08BDD5AC2C6B007A00914412 /* ShareLink(ap).md in Resources */,
 				08BDD5692C6B007A00914412 /* Slider(ap).md in Resources */,
+				0851E5482C85FFA700D9463A /* 静态分析-代码规范(ap).md in Resources */,
 				08BDD53A2C6B007A00914412 /* UserDefaults(ap).md in Resources */,
 				08BDD5BF2C6B007A00914412 /* ScrollView(ap).md in Resources */,
 				08BDD51E2C6B007A00914412 /* Distributed Actors(ap).md in Resources */,
 				08448FC1279EC4B500B61353 /* filter(ap).md in Resources */,
+				0851E54A2C860DFC00D9463A /* Clang静态分析器(ap).md in Resources */,
 				08BDD5122C6B007A00914412 /* merge(ap).md in Resources */,
 				08BDD5AF2C6B007A00914412 /* LazyVStack和LazyHStack(ap).md in Resources */,
 				08BDD5442C6B007A00914412 /* 小组件-远程定时获取数据(ap).md in Resources */,
@@ -2007,6 +2091,7 @@
 				087A7AD72C802C4A00321F85 /* 包体积-资源优化(ap).md in Resources */,
 				08BDD5922C6B007A00914412 /* SF Symbol(ap).md in Resources */,
 				08BDD5722C6B007A00914412 /* Safe Area(ap).md in Resources */,
+				0851E53F2C85CC8000D9463A /* VSCode(ap).md in Resources */,
 				08BDD5B62C6B007A00914412 /* List-完全可点击的行(ap).md in Resources */,
 				08BDD5042C6B007A00914412 /* SwiftUI动画(ap).md in Resources */,
 				08BDD54E2C6B007A00914412 /* 链接器(ap).md in Resources */,
@@ -2033,6 +2118,7 @@
 				08BDD5092C6B007A00914412 /* Combine Timer(ap).md in Resources */,
 				08448FAD279EC2E900B61353 /* 泛型和协议(ap).md in Resources */,
 				08BDD51A2C6B007A00914412 /* Actors(ap).md in Resources */,
+				0851E5362C8563BF00D9463A /* Bazel-远程缓存配置(ap).md in Resources */,
 				08BDD5A72C6B007A00914412 /* Style协议(ap).md in Resources */,
 				08BDD52F2C6B007A00914412 /* @resultBuilder(ap).md in Resources */,
 				08BDD5B52C6B007A00914412 /* List-索引标题(ap).md in Resources */,
@@ -2084,6 +2170,7 @@
 				08BDD5222C6B007A00914412 /* Swift Concurrency学习路径(ap).md in Resources */,
 				08BDD5C72C6B007A00914412 /* Text-动态时间(ap).md in Resources */,
 				08BDD5712C6B007A00914412 /* 布局原理(ap).md in Resources */,
+				0851E5462C85F7ED00D9463A /* MachO(ap).md in Resources */,
 				08BDD5D02C6B007B00914412 /* 修饰符-圆角(ap).md in Resources */,
 				08BDD5872C6B007A00914412 /* Alert(ap).md in Resources */,
 				08BDD5B42C6B007A00914412 /* List-搜索(ap).md in Resources */,
@@ -2100,6 +2187,7 @@
 				08BDD5D12C6B007B00914412 /* 修饰符-fixedSize(ap).md in Resources */,
 				08BDD53E2C6B007A00914412 /* Swift-DocC(ap).md in Resources */,
 				08448FAB279EC2B400B61353 /* 枚举(ap).md in Resources */,
+				0851E5442C85E73A00D9463A /* 静态分析-Swift语言(ap).md in Resources */,
 				08448FCE279EC5AA00B61353 /* While(ap).md in Resources */,
 				08BDD4FF2C6B007A00914412 /* animation修饰符(ap).md in Resources */,
 				08BDD5C92C6B007A00914412 /* Image(ap).md in Resources */,
@@ -2130,6 +2218,7 @@
 				08BDD5622C6B007A00914412 /* 字体Picker(ap).md in Resources */,
 				08BDD52D2C6B007A00914412 /* @dynamicCallable动态可调用类型(ap).md in Resources */,
 				08BDD5B22C6B007A00914412 /* List-轻扫操作(ap).md in Resources */,
+				0851E54E2C865B9B00D9463A /* 自动化测试(ap).md in Resources */,
 				08BDD5812C6B007A00914412 /* ContentUnavailableView(ap).md in Resources */,
 				087A7ADD2C803AD500321F85 /* 包体积-系统优化(ap).md in Resources */,
 				08BDD5362C6B007A00914412 /* 文件(ap).md in Resources */,
@@ -2142,11 +2231,12 @@
 				08BDD5152C6B007A00914412 /* publisher(ap).md in Resources */,
 				08BDD5162C6B007A00914412 /* removeDuplicates(ap).md in Resources */,
 				08BDD5E72C6C4DA900914412 /* SwiftUI数据流-@AppStorage(ap).md in Resources */,
+				0851E53D2C85CAA400D9463A /* 编辑器-三方工具(ap).md in Resources */,
 				08BDD5DC2C6B566E00914412 /* Table-可交互(ap).md in Resources */,
 				08BDD5CB2C6B007A00914412 /* Link(ap).md in Resources */,
 				08BDD51B2C6B007A00914412 /* async await(ap).md in Resources */,
 				08BDD5CA2C6B007A00914412 /* Label(ap).md in Resources */,
-				0851E5322C848AD100D9463A /* Bazel-Tulsi(ap).md in Resources */,
+				0851E5322C848AD100D9463A /* Bazel-生成Xcode工程(ap).md in Resources */,
 				08BDD5632C6B007A00914412 /* ColorPicker(ap).md in Resources */,
 				08448FEA279EC86700B61353 /* 运算符(ap).md in Resources */,
 				08448FB1279EC33E00B61353 /* 类型转换(ap).md in Resources */,
@@ -2155,6 +2245,7 @@
 				08BDD5602C6B007A00914412 /* SwiftData多线程(ap).md in Resources */,
 				08448FE6279EC82500B61353 /* 逻辑(ap).md in Resources */,
 				08448F95279EB96F00B61353 /* 变量(ap).md in Resources */,
+				0851E5532C86783400D9463A /* LLDB(ap).md in Resources */,
 				087A7AEE2C80C22400321F85 /* iOS虚拟内存(ap).md in Resources */,
 				08BDD5DF2C6C4BAE00914412 /* SwiftUI数据流-@State(ap).md in Resources */,
 				08BDD5E12C6C4BC500914412 /* SwiftUI数据流-@Binding(ap).md in Resources */,
@@ -2173,9 +2264,10 @@
 				087A7AF62C8121DA00321F85 /* 文件内存映射（mmap）(ap).md in Resources */,
 				08BDD5672C6B007A00914412 /* WheelPicker(ap).md in Resources */,
 				08BDD56E2C6B007A00914412 /* 布局-居中(ap).md in Resources */,
+				0851E53A2C85683800D9463A /* Bazel-自定义的构建规则(ap).md in Resources */,
 				08448FCC279EC58800B61353 /* 遍历(ap).md in Resources */,
 				08BDD59D2C6B007A00914412 /* 视图协议-简介(ap).md in Resources */,
-				0851E5342C848F4200D9463A /* Bazel-query 指令找依赖关系(ap).md in Resources */,
+				0851E5342C848F4200D9463A /* Bazel-query指令找依赖关系(ap).md in Resources */,
 				087A7AF42C81135800321F85 /* IO性能-文件系统(ap).md in Resources */,
 				08BDD59B2C6B007A00914412 /* SwiftUI颜色(ap).md in Resources */,
 				08BDD5582C6B007A00914412 /* 容器配置modelContainer(ap).md in Resources */,
@@ -2237,6 +2329,7 @@
 				08BDD5CD2C6B007B00914412 /* TextField(ap).md in Resources */,
 				087A7B022C82947200321F85 /* 防止卡顿的方法(ap).md in Resources */,
 				08BDD5C82C6B007A00914412 /* Text(ap).md in Resources */,
+				0851E5382C85654100D9463A /* Bazel-远程执行配置(ap).md in Resources */,
 				08BDD55E2C6B007A00914412 /* SwiftData-模型关系(ap).md in Resources */,
 				08BDD5892C6B007A00914412 /* Full Screen Modal View(ap).md in Resources */,
 				08449030279ECF7D00B61353 /* 1.md in Resources */,
@@ -2257,6 +2350,9 @@
 				08BDD5212C6B007A00914412 /* Swift Concurrency相关提案(ap).md in Resources */,
 				08BDD5D42C6B007B00914412 /* ContainerRelativeShape(ap).md in Resources */,
 				08BDD5A82C6B007A00914412 /* Toolbar协议(ap).md in Resources */,
+				0851E5552C86899200D9463A /* Language Server Protocol(ap).md in Resources */,
+				0851E5502C865EB900D9463A /* XCTest(ap).md in Resources */,
+				0851E5422C85E30D00D9463A /* 静态分析-概述(ap).md in Resources */,
 				08BDD5932C6B007A00914412 /* Shaders Metal(ap).md in Resources */,
 				08BDD5D52C6B007B00914412 /* redacted隐私展示(ap).md in Resources */,
 				08BDD5972C6B007A00914412 /* SwiftUI-背景材质(ap).md in Resources */,

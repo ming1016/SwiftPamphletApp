@@ -557,20 +557,42 @@ final class GuideListModel {
             L(t: "性能分析", sub: [
                 L(t: "性能分析-工具"),
             ]),
+            L(t: "静态分析", sub: [
+                L(t: "静态分析-概述"),
+                L(t: "静态分析-Swift语言"),
+                L(t: "Clang静态分析器"),
+                L(t: "静态分析-代码规范"),
+                L(t: "Language Server Protocol"),
+                L(t: "MachO"),
+            ]),
             L(t: "动态性", sub: [
                 L(t: "Swift运行时"),
                 L(t: "动态库注入技术"),
             ]),
             L(t: "Bazel", sub: [
                 L(t: "Bazel-介绍"),
-                L(t: "Bazel-Tulsi"),
+                L(t: "Bazel-生成Xcode工程"),
                 L(t: "Bazel-依赖分析"),
-                L(t: "Bazel-依赖分析"),
+                L(t: "Bazel-query指令找依赖关系"),
+                L(t: "Bazel-远程执行配置"),
+                L(t: "Bazel-远程缓存配置"),
+                L(t: "Bazel-自定义的构建规则"),
+            ]),
+            L(t: "编辑器", sub: [
+                L(t: "编辑器-三方工具"),
+                L(t: "VSCode"),
             ]),
             L(t: "性能技术演进"),
             L(t: "调试"),
             L(t: "链接器"),
             
+        ]),
+        L(t: "调试", icon: "ant.circle.fill", sub: [
+            L(t: "LLDB"),
+        ]),
+        L(t: "测试", icon: "testtube.2", sub: [
+            L(t: "自动化测试"),
+            L(t: "XCTest")
         ]),
         L(t: "安全", icon: "cross.case", sub: [
             L(t: "Keychain")
