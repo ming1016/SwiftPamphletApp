@@ -520,7 +520,9 @@ final class GuideListModel {
             L(t: "动画-例子", icon: "lightbulb")
         ]),
         L(t: "网络", icon:"point.3.connected.trianglepath.dotted", sub: [
-            L(t: "网络状态检查")
+            L(t: "截获网络请求数据"),
+            L(t: "网络状态检查"),
+            L(t: "WKWebView")
         ]),
         L(t: "性能和构建",icon: "battery.100percent.bolt", sub: [
             L(t: "卡顿监控", sub: [
@@ -543,6 +545,13 @@ final class GuideListModel {
                 L(t: "IO性能-文件系统"),
                 L(t: "文件内存映射（mmap）"),
             ]),
+            L(t: "CPU", sub: [
+                L(t: "CPU占用率"),
+                L(t: "CPU核数和类型"),
+            ]),
+            L(t: "启动优化", sub: [
+                L(t: "启动优化-启动时间"),
+            ]),
             L(t: "包体积", sub: [
                 L(t: "包体积的影响"),
                 L(t: "包体积-系统优化"),
@@ -556,16 +565,24 @@ final class GuideListModel {
             ]),
             L(t: "性能分析", sub: [
                 L(t: "性能分析-工具"),
+                L(t: "Instruments"),
+                L(t: "MetricKit"),
+                L(t: "InApp分析工具"),
+                L(t: "fishhook"),
+                L(t: "Frida"),
             ]),
             L(t: "静态分析", sub: [
                 L(t: "静态分析-概述"),
                 L(t: "静态分析-Swift语言"),
+                L(t: "SourceKitten"),
+                L(t: "SwiftSyntax"),
                 L(t: "Clang静态分析器"),
                 L(t: "静态分析-代码规范"),
                 L(t: "Language Server Protocol"),
                 L(t: "MachO"),
             ]),
             L(t: "动态性", sub: [
+                L(t: "OC运行时"),
                 L(t: "Swift运行时"),
                 L(t: "动态库注入技术"),
             ]),
@@ -583,18 +600,20 @@ final class GuideListModel {
                 L(t: "VSCode"),
             ]),
             L(t: "性能技术演进"),
-            L(t: "调试"),
             L(t: "链接器"),
             
         ]),
         L(t: "调试", icon: "ant.circle.fill", sub: [
+            L(t: "调试"),
             L(t: "LLDB"),
         ]),
         L(t: "测试", icon: "testtube.2", sub: [
             L(t: "自动化测试"),
-            L(t: "XCTest")
+            L(t: "XCTest"),
+            L(t: "测试-代码覆盖率")
         ]),
         L(t: "安全", icon: "cross.case", sub: [
+            L(t: "安全-介绍"),
             L(t: "Keychain")
         ]),
         L(t: "macOS", icon: "macstudio", sub: [
