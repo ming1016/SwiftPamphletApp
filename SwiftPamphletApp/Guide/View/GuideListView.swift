@@ -541,8 +541,13 @@ final class GuideListModel {
                 L(t: "内存分配器libMalloc"),
                 L(t: "检测和诊断内存问题"),
             ]),
+            L(t: "崩溃", sub: [
+                L(t: "崩溃日志"),
+            ]),
             L(t: "IO性能", sub: [
                 L(t: "IO性能-文件系统"),
+                L(t: "IO性能-文件读写"),
+                L(t: "IO性能-文件缓存"),
                 L(t: "文件内存映射（mmap）"),
             ]),
             L(t: "CPU", sub: [
@@ -551,6 +556,8 @@ final class GuideListModel {
             ]),
             L(t: "启动优化", sub: [
                 L(t: "启动优化-启动时间"),
+                L(t: "启动治理思路"),
+                L(t: "启动优化-工具"),
             ]),
             L(t: "包体积", sub: [
                 L(t: "包体积的影响"),

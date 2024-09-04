@@ -149,6 +149,11 @@
 		087A7B0C2C8407E200321F85 /* Bazel-依赖分析(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087A7B0B2C8407E200321F85 /* Bazel-依赖分析(ap).md */; };
 		0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887A5992BA28F6D00131359 /* CSGuideView.swift */; };
 		0888EF752C1C280F004967AD /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869233F2BF2BF81006779A3 /* AVKit.framework */; };
+		088F2C222C87F9A700DCA64F /* IO性能-文件读写(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C212C87F9A700DCA64F /* IO性能-文件读写(ap).md */; };
+		088F2C242C87FDFE00DCA64F /* IO性能-文件缓存(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C232C87FDFE00DCA64F /* IO性能-文件缓存(ap).md */; };
+		088F2C272C8836B200DCA64F /* 崩溃日志(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C262C8836B200DCA64F /* 崩溃日志(ap).md */; };
+		088F2C292C88438F00DCA64F /* 启动治理思路(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C282C88438F00DCA64F /* 启动治理思路(ap).md */; };
+		088F2C2B2C8843E000DCA64F /* 启动优化-工具(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C2A2C8843E000DCA64F /* 启动优化-工具(ap).md */; };
 		08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */; };
 		08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
@@ -556,6 +561,11 @@
 		087A7B082C83737E00321F85 /* Bazel-介绍(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-介绍(ap).md"; sourceTree = "<group>"; };
 		087A7B0B2C8407E200321F85 /* Bazel-依赖分析(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-依赖分析(ap).md"; sourceTree = "<group>"; };
 		0887A5992BA28F6D00131359 /* CSGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuideView.swift; sourceTree = "<group>"; };
+		088F2C212C87F9A700DCA64F /* IO性能-文件读写(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "IO性能-文件读写(ap).md"; sourceTree = "<group>"; };
+		088F2C232C87FDFE00DCA64F /* IO性能-文件缓存(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "IO性能-文件缓存(ap).md"; sourceTree = "<group>"; };
+		088F2C262C8836B200DCA64F /* 崩溃日志(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "崩溃日志(ap).md"; sourceTree = "<group>"; };
+		088F2C282C88438F00DCA64F /* 启动治理思路(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动治理思路(ap).md"; sourceTree = "<group>"; };
+		088F2C2A2C8843E000DCA64F /* 启动优化-工具(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动优化-工具(ap).md"; sourceTree = "<group>"; };
 		08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAccessTokenView.swift; sourceTree = "<group>"; };
 		08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentMarkdown.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
@@ -1077,6 +1087,8 @@
 			isa = PBXGroup;
 			children = (
 				0851E5762C87478700D9463A /* 启动优化-启动时间(ap).md */,
+				088F2C282C88438F00DCA64F /* 启动治理思路(ap).md */,
+				088F2C2A2C8843E000DCA64F /* 启动优化-工具(ap).md */,
 			);
 			path = "启动优化";
 			sourceTree = "<group>";
@@ -1217,6 +1229,8 @@
 			isa = PBXGroup;
 			children = (
 				087A7AF32C81135800321F85 /* IO性能-文件系统(ap).md */,
+				088F2C212C87F9A700DCA64F /* IO性能-文件读写(ap).md */,
+				088F2C232C87FDFE00DCA64F /* IO性能-文件缓存(ap).md */,
 				087A7AF52C8121DA00321F85 /* 文件内存映射（mmap）(ap).md */,
 			);
 			path = "IO性能";
@@ -1269,6 +1283,14 @@
 				08EF35CE2BECFCD40098E2D4 /* View */,
 			);
 			path = Guide;
+			sourceTree = "<group>";
+		};
+		088F2C252C88369900DCA64F /* 崩溃 */ = {
+			isa = PBXGroup;
+			children = (
+				088F2C262C8836B200DCA64F /* 崩溃日志(ap).md */,
+			);
+			path = "崩溃";
 			sourceTree = "<group>";
 		};
 		08AEAEE7277EDD5D00B969E2 /* Guide */ = {
@@ -1514,6 +1536,7 @@
 			children = (
 				087A7AF92C816AC300321F85 /* 卡顿监控 */,
 				087A7AE22C80683B00321F85 /* 内存管理 */,
+				088F2C252C88369900DCA64F /* 崩溃 */,
 				087A7AF22C81133B00321F85 /* IO性能 */,
 				0851E56E2C87288400D9463A /* CPU */,
 				0851E5752C87475100D9463A /* 启动优化 */,
@@ -2154,6 +2177,7 @@
 				08BDD5922C6B007A00914412 /* SF Symbol(ap).md in Resources */,
 				08BDD5722C6B007A00914412 /* Safe Area(ap).md in Resources */,
 				0851E53F2C85CC8000D9463A /* VSCode(ap).md in Resources */,
+				088F2C222C87F9A700DCA64F /* IO性能-文件读写(ap).md in Resources */,
 				08BDD5B62C6B007A00914412 /* List-完全可点击的行(ap).md in Resources */,
 				08BDD5042C6B007A00914412 /* SwiftUI动画(ap).md in Resources */,
 				08BDD54E2C6B007A00914412 /* 链接器(ap).md in Resources */,
@@ -2178,6 +2202,7 @@
 				0851E5652C86EFC200D9463A /* fishhook(ap).md in Resources */,
 				08BDD55A2C6B007A00914412 /* SwiftData-版本迁移(ap).md in Resources */,
 				08BDD5682C6B007A00914412 /* Form(ap).md in Resources */,
+				088F2C272C8836B200DCA64F /* 崩溃日志(ap).md in Resources */,
 				08BDD5412C6B007A00914412 /* 小组件-参考资料(ap).md in Resources */,
 				08BDD5092C6B007A00914412 /* Combine Timer(ap).md in Resources */,
 				08448FAD279EC2E900B61353 /* 泛型和协议(ap).md in Resources */,
@@ -2302,6 +2327,7 @@
 				08BDD5402C6B007A00914412 /* 刷新小组件(ap).md in Resources */,
 				08BDD5152C6B007A00914412 /* publisher(ap).md in Resources */,
 				08BDD5162C6B007A00914412 /* removeDuplicates(ap).md in Resources */,
+				088F2C2B2C8843E000DCA64F /* 启动优化-工具(ap).md in Resources */,
 				08BDD5E72C6C4DA900914412 /* SwiftUI数据流-@AppStorage(ap).md in Resources */,
 				0851E53D2C85CAA400D9463A /* 编辑器-三方工具(ap).md in Resources */,
 				08BDD5DC2C6B566E00914412 /* Table-可交互(ap).md in Resources */,
@@ -2324,6 +2350,7 @@
 				08BDD5C62C6B007A00914412 /* Grid(ap).md in Resources */,
 				08448FBC279EC41700B61353 /* 继承(ap).md in Resources */,
 				08BDD5A32C6B007A00914412 /* Legacy bridges协议(ap).md in Resources */,
+				088F2C292C88438F00DCA64F /* 启动治理思路(ap).md in Resources */,
 				087A7B062C8339CD00321F85 /* 避免视图绘制掉帧(ap).md in Resources */,
 				0851E5702C872A7A00D9463A /* CPU占用率(ap).md in Resources */,
 				08BDD5BA2C6B007A00914412 /* 固定到滚动视图的顶部(ap).md in Resources */,
@@ -2385,6 +2412,7 @@
 				08BDD5822C6B007A00914412 /* ControlGroup(ap).md in Resources */,
 				08448F9E279EBAA800B61353 /* 函数(ap).md in Resources */,
 				086E036B2C6E7148008CEDD3 /* Calendar(ap).md in Resources */,
+				088F2C242C87FDFE00DCA64F /* IO性能-文件缓存(ap).md in Resources */,
 				08BDD5852C6B007A00914412 /* TabView(ap).md in Resources */,
 				086E03672C6E711F008CEDD3 /* 时区(ap).md in Resources */,
 				08BDD5BC2C6B007A00914412 /* scrollTargetBehavior分页滚动(ap).md in Resources */,
