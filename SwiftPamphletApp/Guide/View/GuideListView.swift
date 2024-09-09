@@ -458,7 +458,8 @@ final class GuideListModel {
         ]),
         L(t: "系统能力",icon: "apple.terminal",sub: [
             L(t: "Swift-DocC", icon: "doc.append"),
-            L(t: "AppIcon", icon: "app")
+            L(t: "AppIcon", icon: "app"),
+            L(t: "Share Extension", icon: "app")
         ]),
         L(t: "工程模式",icon: "building.columns", sub: [
             L(t: "单例"),
@@ -608,7 +609,6 @@ final class GuideListModel {
             ]),
             L(t: "性能技术演进"),
             L(t: "链接器"),
-            
         ]),
         L(t: "调试", icon: "ant.circle.fill", sub: [
             L(t: "调试"),

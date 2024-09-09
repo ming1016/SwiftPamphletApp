@@ -154,6 +154,7 @@
 		088F2C272C8836B200DCA64F /* 崩溃日志(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C262C8836B200DCA64F /* 崩溃日志(ap).md */; };
 		088F2C292C88438F00DCA64F /* 启动治理思路(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C282C88438F00DCA64F /* 启动治理思路(ap).md */; };
 		088F2C2B2C8843E000DCA64F /* 启动优化-工具(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C2A2C8843E000DCA64F /* 启动优化-工具(ap).md */; };
+		088F2C2F2C8E827300DCA64F /* Share Extension(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C2E2C8E827300DCA64F /* Share Extension(ap).md */; };
 		08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */; };
 		08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
@@ -566,6 +567,7 @@
 		088F2C262C8836B200DCA64F /* 崩溃日志(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "崩溃日志(ap).md"; sourceTree = "<group>"; };
 		088F2C282C88438F00DCA64F /* 启动治理思路(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动治理思路(ap).md"; sourceTree = "<group>"; };
 		088F2C2A2C8843E000DCA64F /* 启动优化-工具(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动优化-工具(ap).md"; sourceTree = "<group>"; };
+		088F2C2E2C8E827300DCA64F /* Share Extension(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Share Extension(ap).md"; sourceTree = "<group>"; };
 		08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAccessTokenView.swift; sourceTree = "<group>"; };
 		08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentMarkdown.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
@@ -1506,6 +1508,7 @@
 			children = (
 				08BDD4462C6B007A00914412 /* AppIcon(ap).md */,
 				08BDD4472C6B007A00914412 /* Swift-DocC(ap).md */,
+				088F2C2E2C8E827300DCA64F /* Share Extension(ap).md */,
 			);
 			path = "系统能力";
 			sourceTree = "<group>";
@@ -2138,6 +2141,7 @@
 				0851E5772C87478700D9463A /* 启动优化-启动时间(ap).md in Resources */,
 				08BDD5882C6B007A00914412 /* confirmationDialog()(ap).md in Resources */,
 				08BDD58C2C6B007A00914412 /* Popover(ap).md in Resources */,
+				088F2C2F2C8E827300DCA64F /* Share Extension(ap).md in Resources */,
 				08448FB4279EC37000B61353 /* 类(ap).md in Resources */,
 				08BDD55B2C6B007A00914412 /* SwiftData-处理大量数据(ap).md in Resources */,
 				08BDD5452C6B007A00914412 /* 小组件-AppIntentConfiguration(ap).md in Resources */,
