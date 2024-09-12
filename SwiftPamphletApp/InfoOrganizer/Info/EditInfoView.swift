@@ -318,7 +318,7 @@ struct EditInfoView: View {
             })
             Button("管理分类", action: manageCate)
             if term.isEmpty == false {
-                Button("自定检索") {
+                Button("自定标签") {
                     showSheet = true
                 }
                 .help("command + s")
@@ -355,7 +355,7 @@ struct EditInfoView: View {
                 .keyboardShortcut(KeyEquivalent("s"), modifiers: .command)
             }
 
-            Button("管理自定检索", action: manageCustomSearch)
+            Button("管理自定标签", action: manageCustomSearch)
         }
     }
     
@@ -449,7 +449,7 @@ struct EditInfoView: View {
     }
 
     
-    // MARK: 自定检索
+    // MARK: 自定标签
     @AppStorage(SPC.customSearchTerm) var term = ""
     @State private var searchTerms: [[String]] = [[String]]()
     func parseSearchTerms() -> [[String]] {

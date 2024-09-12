@@ -12,7 +12,7 @@ struct EditCustomSearchView: View {
     
     var body: some View {
         VStack {
-            Text("自定检索，换行间隔，同行逗号间隔")
+            Text("自定标签，换行间隔，同行逗号间隔")
             TextEditor(text: $term).border()
         }
         .padding(20)
