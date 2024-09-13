@@ -155,6 +155,20 @@
 		088F2C292C88438F00DCA64F /* 启动治理思路(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C282C88438F00DCA64F /* 启动治理思路(ap).md */; };
 		088F2C2B2C8843E000DCA64F /* 启动优化-工具(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C2A2C8843E000DCA64F /* 启动优化-工具(ap).md */; };
 		088F2C2F2C8E827300DCA64F /* Share Extension(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C2E2C8E827300DCA64F /* Share Extension(ap).md */; };
+		088F2C322C93284100DCA64F /* 知识管理-介绍(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C312C93284100DCA64F /* 知识管理-介绍(ap).md */; };
+		088F2C342C93285700DCA64F /* 怎么用小册子APP做知识管理(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C332C93285700DCA64F /* 怎么用小册子APP做知识管理(ap).md */; };
+		088F2C362C93293F00DCA64F /* 知识管理-工具(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C352C93293F00DCA64F /* 知识管理-工具(ap).md */; };
+		088F2C382C93295200DCA64F /* 知识管理-输入(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C372C93295200DCA64F /* 知识管理-输入(ap).md */; };
+		088F2C3A2C93296200DCA64F /* 笔记记录方法(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C392C93296200DCA64F /* 笔记记录方法(ap).md */; };
+		088F2C3C2C93297600DCA64F /* 卡片盒笔记法(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C3B2C93297600DCA64F /* 卡片盒笔记法(ap).md */; };
+		088F2C3E2C9329E400DCA64F /* PARA记录法(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C3D2C9329E400DCA64F /* PARA记录法(ap).md */; };
+		088F2C402C9329F800DCA64F /* 费曼学习法(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C3F2C9329F800DCA64F /* 费曼学习法(ap).md */; };
+		088F2C422C932A0900DCA64F /* 知识管理-CODE方法论(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C412C932A0900DCA64F /* 知识管理-CODE方法论(ap).md */; };
+		088F2C442C932A4700DCA64F /* 知识管理-网状和树状(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C432C932A4700DCA64F /* 知识管理-网状和树状(ap).md */; };
+		088F2C462C932A5B00DCA64F /* 知识管理-消化(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C452C932A5B00DCA64F /* 知识管理-消化(ap).md */; };
+		088F2C482C932A7900DCA64F /* 知识管理-输出(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C472C932A7900DCA64F /* 知识管理-输出(ap).md */; };
+		088F2C4A2C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C492C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md */; };
+		088F2C4C2C932C5800DCA64F /* 知识管理-PKM(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C4B2C932C5800DCA64F /* 知识管理-PKM(ap).md */; };
 		08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */; };
 		08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
@@ -568,6 +582,20 @@
 		088F2C282C88438F00DCA64F /* 启动治理思路(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动治理思路(ap).md"; sourceTree = "<group>"; };
 		088F2C2A2C8843E000DCA64F /* 启动优化-工具(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动优化-工具(ap).md"; sourceTree = "<group>"; };
 		088F2C2E2C8E827300DCA64F /* Share Extension(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Share Extension(ap).md"; sourceTree = "<group>"; };
+		088F2C312C93284100DCA64F /* 知识管理-介绍(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-介绍(ap).md"; sourceTree = "<group>"; };
+		088F2C332C93285700DCA64F /* 怎么用小册子APP做知识管理(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "怎么用小册子APP做知识管理(ap).md"; sourceTree = "<group>"; };
+		088F2C352C93293F00DCA64F /* 知识管理-工具(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-工具(ap).md"; sourceTree = "<group>"; };
+		088F2C372C93295200DCA64F /* 知识管理-输入(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-输入(ap).md"; sourceTree = "<group>"; };
+		088F2C392C93296200DCA64F /* 笔记记录方法(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "笔记记录方法(ap).md"; sourceTree = "<group>"; };
+		088F2C3B2C93297600DCA64F /* 卡片盒笔记法(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "卡片盒笔记法(ap).md"; sourceTree = "<group>"; };
+		088F2C3D2C9329E400DCA64F /* PARA记录法(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "PARA记录法(ap).md"; sourceTree = "<group>"; };
+		088F2C3F2C9329F800DCA64F /* 费曼学习法(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "费曼学习法(ap).md"; sourceTree = "<group>"; };
+		088F2C412C932A0900DCA64F /* 知识管理-CODE方法论(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-CODE方法论(ap).md"; sourceTree = "<group>"; };
+		088F2C432C932A4700DCA64F /* 知识管理-网状和树状(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-网状和树状(ap).md"; sourceTree = "<group>"; };
+		088F2C452C932A5B00DCA64F /* 知识管理-消化(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-消化(ap).md"; sourceTree = "<group>"; };
+		088F2C472C932A7900DCA64F /* 知识管理-输出(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-输出(ap).md"; sourceTree = "<group>"; };
+		088F2C492C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-目的导向工作流(ap).md"; sourceTree = "<group>"; };
+		088F2C4B2C932C5800DCA64F /* 知识管理-PKM(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-PKM(ap).md"; sourceTree = "<group>"; };
 		08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAccessTokenView.swift; sourceTree = "<group>"; };
 		08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentMarkdown.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
@@ -1053,6 +1081,7 @@
 				08BDD3F62C6B007A00914412 /* 安全 */,
 				08BDD4632C6B007A00914412 /* macOS */,
 				08BDD4432C6B007A00914412 /* 三方库使用 */,
+				088F2C302C93263800DCA64F /* 知识管理 */,
 			);
 			path = Apple;
 			sourceTree = "<group>";
@@ -1293,6 +1322,27 @@
 				088F2C262C8836B200DCA64F /* 崩溃日志(ap).md */,
 			);
 			path = "崩溃";
+			sourceTree = "<group>";
+		};
+		088F2C302C93263800DCA64F /* 知识管理 */ = {
+			isa = PBXGroup;
+			children = (
+				088F2C312C93284100DCA64F /* 知识管理-介绍(ap).md */,
+				088F2C332C93285700DCA64F /* 怎么用小册子APP做知识管理(ap).md */,
+				088F2C4B2C932C5800DCA64F /* 知识管理-PKM(ap).md */,
+				088F2C352C93293F00DCA64F /* 知识管理-工具(ap).md */,
+				088F2C372C93295200DCA64F /* 知识管理-输入(ap).md */,
+				088F2C392C93296200DCA64F /* 笔记记录方法(ap).md */,
+				088F2C3B2C93297600DCA64F /* 卡片盒笔记法(ap).md */,
+				088F2C3D2C9329E400DCA64F /* PARA记录法(ap).md */,
+				088F2C3F2C9329F800DCA64F /* 费曼学习法(ap).md */,
+				088F2C412C932A0900DCA64F /* 知识管理-CODE方法论(ap).md */,
+				088F2C432C932A4700DCA64F /* 知识管理-网状和树状(ap).md */,
+				088F2C452C932A5B00DCA64F /* 知识管理-消化(ap).md */,
+				088F2C472C932A7900DCA64F /* 知识管理-输出(ap).md */,
+				088F2C492C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md */,
+			);
+			path = "知识管理";
 			sourceTree = "<group>";
 		};
 		08AEAEE7277EDD5D00B969E2 /* Guide */ = {
@@ -2149,6 +2199,7 @@
 				08BDD5A92C6B007A00914412 /* 进度(ap).md in Resources */,
 				08BDD5D72C6B007B00914412 /* SwiftUI数据流(ap).md in Resources */,
 				08448FCA279EC56D00B61353 /* Guard(ap).md in Resources */,
+				088F2C442C932A4700DCA64F /* 知识管理-网状和树状(ap).md in Resources */,
 				08448FB8279EC3C200B61353 /* 属性(ap).md in Resources */,
 				08BDD5982C6B007A00914412 /* SwiftUI-渐变(ap).md in Resources */,
 				08BDD5C52C6B007A00914412 /* ForEach(ap).md in Resources */,
@@ -2199,6 +2250,7 @@
 				08BDD50F2C6B007A00914412 /* Empty(ap).md in Resources */,
 				08448F64279EB32C00B61353 /* Swift规范(ap).md in Resources */,
 				087A7AFF2C828F7400321F85 /* 性能分析-工具(ap).md in Resources */,
+				088F2C3C2C93297600DCA64F /* 卡片盒笔记法(ap).md in Resources */,
 				08BDD5B32C6B007A00914412 /* List-设置样式(ap).md in Resources */,
 				0851E56B2C870F1500D9463A /* Instruments(ap).md in Resources */,
 				08BDD5AE2C6B007A00914412 /* LazyVGrid和LazyHGrid(ap).md in Resources */,
@@ -2222,6 +2274,7 @@
 				08BDD58F2C6B007A00914412 /* SwiftUI对标的UIKit视图(ap).md in Resources */,
 				08BDD5292C6B007A00914412 /* 版本兼容(ap).md in Resources */,
 				08BDD5A02C6B007A00914412 /* 小组件协议(ap).md in Resources */,
+				088F2C402C9329F800DCA64F /* 费曼学习法(ap).md in Resources */,
 				0851E5722C872AD100D9463A /* CPU核数和类型(ap).md in Resources */,
 				08BDD5BD2C6B007A00914412 /* scrollTransition视觉效果(ap).md in Resources */,
 				08BDD5AB2C6B007A00914412 /* Keyboard(ap).md in Resources */,
@@ -2242,6 +2295,7 @@
 				086E03692C6E7136008CEDD3 /* 字符串时间(ap).md in Resources */,
 				08448F97279EB9B000B61353 /* 打印(ap).md in Resources */,
 				08448FC5279EC4F800B61353 /* sorted(ap).md in Resources */,
+				088F2C4C2C932C5800DCA64F /* 知识管理-PKM(ap).md in Resources */,
 				08BDD5422C6B007A00914412 /* 小组件-获取位置权限更新内容(ap).md in Resources */,
 				08BDD5952C6B007A00914412 /* SwiftUI Canvas(ap).md in Resources */,
 				08BDD5802C6B007A00914412 /* Advanced layout control(ap).md in Resources */,
@@ -2282,6 +2336,7 @@
 				08BDD5742C6B007A00914412 /* alignmentGuide(ap).md in Resources */,
 				087A7ADB2C803A6C00321F85 /* 包体积-三方库优化(ap).md in Resources */,
 				086E03652C6E7109008CEDD3 /* 时间-formatted(ap).md in Resources */,
+				088F2C342C93285700DCA64F /* 怎么用小册子APP做知识管理(ap).md in Resources */,
 				08BDD5732C6B007A00914412 /* 布局进阶-参考资料(ap).md in Resources */,
 				08BDD5D12C6B007B00914412 /* 修饰符-fixedSize(ap).md in Resources */,
 				08BDD53E2C6B007A00914412 /* Swift-DocC(ap).md in Resources */,
@@ -2306,6 +2361,7 @@
 				08BDD5352C6B007A00914412 /* 随机(ap).md in Resources */,
 				08BDD5A42C6B007A00914412 /* Previews协议(ap).md in Resources */,
 				08BDD5012C6B007A00914412 /* KeyframeAnimator(ap).md in Resources */,
+				088F2C322C93284100DCA64F /* 知识管理-介绍(ap).md in Resources */,
 				08448FC8279EC54300B61353 /* If(ap).md in Resources */,
 				08BDD51C2C6B007A00914412 /* Async Sequences(ap).md in Resources */,
 				08BDD5B82C6B007A00914412 /* List-移动元素(ap).md in Resources */,
@@ -2315,6 +2371,8 @@
 				08BDD5572C6B007A00914412 /* 创建@Model模型(ap).md in Resources */,
 				08BDD5C42C6B007A00914412 /* Table(ap).md in Resources */,
 				08BDD5532C6B007A00914412 /* macOS范例(ap).md in Resources */,
+				088F2C462C932A5B00DCA64F /* 知识管理-消化(ap).md in Resources */,
+				088F2C482C932A7900DCA64F /* 知识管理-输出(ap).md in Resources */,
 				08BDD5622C6B007A00914412 /* 字体Picker(ap).md in Resources */,
 				08BDD52D2C6B007A00914412 /* @dynamicCallable动态可调用类型(ap).md in Resources */,
 				08BDD5B22C6B007A00914412 /* List-轻扫操作(ap).md in Resources */,
@@ -2336,6 +2394,7 @@
 				0851E53D2C85CAA400D9463A /* 编辑器-三方工具(ap).md in Resources */,
 				08BDD5DC2C6B566E00914412 /* Table-可交互(ap).md in Resources */,
 				08BDD5CB2C6B007A00914412 /* Link(ap).md in Resources */,
+				088F2C382C93295200DCA64F /* 知识管理-输入(ap).md in Resources */,
 				08BDD51B2C6B007A00914412 /* async await(ap).md in Resources */,
 				08BDD5CA2C6B007A00914412 /* Label(ap).md in Resources */,
 				0851E5322C848AD100D9463A /* Bazel-生成Xcode工程(ap).md in Resources */,
@@ -2358,6 +2417,7 @@
 				087A7B062C8339CD00321F85 /* 避免视图绘制掉帧(ap).md in Resources */,
 				0851E5702C872A7A00D9463A /* CPU占用率(ap).md in Resources */,
 				08BDD5BA2C6B007A00914412 /* 固定到滚动视图的顶部(ap).md in Resources */,
+				088F2C422C932A0900DCA64F /* 知识管理-CODE方法论(ap).md in Resources */,
 				08BDD5642C6B007A00914412 /* DatePicker(ap).md in Resources */,
 				0851E5612C86E9D200D9463A /* MetricKit(ap).md in Resources */,
 				08BDD56A2C6B007A00914412 /* Stepper(ap).md in Resources */,
@@ -2390,6 +2450,8 @@
 				08BDD50D2C6B007A00914412 /* combineLatest(ap).md in Resources */,
 				08BDD5232C6B007A00914412 /* 程序入口点(ap).md in Resources */,
 				08BDD5782C6B007A00914412 /* ViewThatFits(ap).md in Resources */,
+				088F2C3A2C93296200DCA64F /* 笔记记录方法(ap).md in Resources */,
+				088F2C3E2C9329E400DCA64F /* PARA记录法(ap).md in Resources */,
 				08BDD57A2C6B007A00914412 /* 自定义导航栏(ap).md in Resources */,
 				08BDD5B92C6B007A00914412 /* List(ap).md in Resources */,
 				08BDD56B2C6B007A00914412 /* Toggle(ap).md in Resources */,
@@ -2416,6 +2478,7 @@
 				08BDD5822C6B007A00914412 /* ControlGroup(ap).md in Resources */,
 				08448F9E279EBAA800B61353 /* 函数(ap).md in Resources */,
 				086E036B2C6E7148008CEDD3 /* Calendar(ap).md in Resources */,
+				088F2C4A2C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md in Resources */,
 				088F2C242C87FDFE00DCA64F /* IO性能-文件缓存(ap).md in Resources */,
 				08BDD5852C6B007A00914412 /* TabView(ap).md in Resources */,
 				086E03672C6E711F008CEDD3 /* 时区(ap).md in Resources */,
@@ -2451,6 +2514,7 @@
 				08448FE0279EC7AF00B61353 /* 三元(ap).md in Resources */,
 				08BDD5BE2C6B007A00914412 /* ScrollView-参考资料(ap).md in Resources */,
 				086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */,
+				088F2C362C93293F00DCA64F /* 知识管理-工具(ap).md in Resources */,
 				08BDD5432C6B007A00914412 /* 小组件-配置选项(ap).md in Resources */,
 				08BDD5D22C6B007B00914412 /* 修饰符-visualEffect(ap).md in Resources */,
 				08448FBF279EC45E00B61353 /* map(ap).md in Resources */,
@@ -2652,7 +2716,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2666,7 +2730,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.5;
+				MARKETING_VERSION = 6.5.1;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -2695,7 +2759,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2709,7 +2773,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.5;
+				MARKETING_VERSION = 6.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
