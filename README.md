@@ -1,7 +1,7 @@
 # 戴铭的开发小册子 6.x
 [![Available on the App Store](https://ming1016.github.io/qdimg/badge-download-on-the-mac-app-store.svg)](https://apps.apple.com/cn/app/id1609702529)
 
-Swift开发的手册，是个 macOS 程序，已上线macOS应用商店，[点击购买安装(98元)](https://apps.apple.com/cn/app/%E6%88%B4%E9%93%AD%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%86%8C%E5%AD%90/id1609702529?mt=12)，或直接在商店搜索“戴铭”关键字。安装应用方便更新程序。小册子5.0 的文字版 《[戴铭的 Swift 小册子](https://starming.com/2021/11/23/daiming-swift-pamphlet/)》，6.x 新增的部分文字内容也可以在我[博客](https://starming.com)上看。
+Swift开发的手册，是个 macOS 程序，已上线macOS应用商店，[点击购买安装(98元)](https://apps.apple.com/cn/app/%E6%88%B4%E9%93%AD%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%86%8C%E5%AD%90/id1609702529?mt=12)，或直接在商店搜索“戴铭”关键字。安装应用方便更新程序。在我[博客](https://starming.com)上会有部分文字内容可以看。
 
 本手册使用 SwiftData、Observable、NavigationSplitView 进行了重构，现在可自己添加管理资料，和知识点做关联。
 
@@ -13,7 +13,7 @@ Swift开发的手册，是个 macOS 程序，已上线macOS应用商店，[点�
 功能主要包含
 
 - 手册书签收藏
-- 资料收集整理
+- 资料收集整理（参考[我是怎么做个人知识管理（PKM）的，从史前时代备忘录、Sublime，经历了Evernote，Markdown兴起，Bear的优雅，Notion革命，飞书语雀，Obsidian、Flomo，到最后使用卢曼卡片盒笔记法串起了流程](https://starming.com/2024/09/12/my-pkm/)这篇文章，里面有提及如何使用小册子的资料整理功能）
 - 离线保存资料
 - 知识点和资料关联
 - 手册、WWDC和资料可搜索
