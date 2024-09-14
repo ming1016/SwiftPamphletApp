@@ -38,6 +38,8 @@ struct EditInfoView: View {
     // 图集
     @State var selectedPhotos = [PhotosPickerItem]()
     @State var addWebImageUrl = ""
+    // 关联输入和编辑的开关
+    @State var isShowRelateTextField = false
     
     var body: some View {
         VStack {
@@ -49,7 +51,7 @@ struct EditInfoView: View {
                 
                 Section {
                     categoryInputView
-                    if info.relateName.isEmpty == false {
+                    if isShowRelateTextField == true {
                         TextField("关联:", text: $info.relateName)
                             .rounded()
                             .foregroundStyle(Color.indigo)
@@ -99,6 +101,10 @@ struct EditInfoView: View {
                     inspectorType = .customSearch
                 }
                 isShowInspector = asIsShowInspector
+                // 关联编辑
+                if info.relateName.isEmpty == false {
+                    isShowRelateTextField = true
+                }
             })
             .onChange(of: term) { oldValue, newValue in
                 _ = parseSearchTerms()
@@ -445,6 +451,12 @@ struct EditInfoView: View {
                 Image(systemName: "arrow.up.square")
             })
             .help("提到前面")
+            Button {
+                isShowRelateTextField.toggle()
+            } label: {
+                Image(systemName: isShowRelateTextField == true ? "network.slash" : "network")
+            }
+            .help("关联编辑")
         }
     }
 
