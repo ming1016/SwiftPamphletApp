@@ -414,6 +414,17 @@
 		08ED80162B9C54DE0069B7EC /* SMNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 08ED80152B9C54DE0069B7EC /* SMNetwork */; };
 		08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED801B2B9D1EEC0069B7EC /* SettingView.swift */; };
 		08EF35D22BECFDA80098E2D4 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF35D12BECFDA80098E2D4 /* BookmarkModel.swift */; };
+		08F0F8AF2C95958E00DC659B /* 开源-精品项目(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8AE2C95958E00DC659B /* 开源-精品项目(ap).md */; };
+		08F0F8B12C95964400DC659B /* 开源-有趣的项目(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8B02C95964400DC659B /* 开源-有趣的项目(ap).md */; };
+		08F0F8B32C95969500DC659B /* 开源-天气(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8B22C95969500DC659B /* 开源-天气(ap).md */; };
+		08F0F8B52C9596B000DC659B /* 开源-学习(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8B42C9596B000DC659B /* 开源-学习(ap).md */; };
+		08F0F8B72C9596CC00DC659B /* 开源-生活(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8B62C9596CC00DC659B /* 开源-生活(ap).md */; };
+		08F0F8B92C95974E00DC659B /* 开源-理财(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8B82C95974E00DC659B /* 开源-理财(ap).md */; };
+		08F0F8BB2C95976E00DC659B /* 开源-阅读(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8BA2C95976E00DC659B /* 开源-阅读(ap).md */; };
+		08F0F8BD2C95978C00DC659B /* 开源-笔记(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8BC2C95978C00DC659B /* 开源-笔记(ap).md */; };
+		08F0F8BF2C95982C00DC659B /* 开源-动画(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8BE2C95982C00DC659B /* 开源-动画(ap).md */; };
+		08F0F8C12C959B0600DC659B /* 开源-时间(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8C02C959B0600DC659B /* 开源-时间(ap).md */; };
+		08F0F8C32C95B9F700DC659B /* 开源-macOS应用(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F8C22C95B9F700DC659B /* 开源-macOS应用(ap).md */; };
 		08F14B3C2BBDA3EA005B46CC /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3B2BBDA3EA005B46CC /* Nuke */; };
 		08F14B3E2BBDA3EA005B46CC /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3D2BBDA3EA005B46CC /* NukeExtensions */; };
 		08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08F14B3F2BBDA3EA005B46CC /* NukeUI */; };
@@ -838,6 +849,17 @@
 		08D8F00D2BF044FB00AA0020 /* WWDCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCDetailView.swift; sourceTree = "<group>"; };
 		08ED801B2B9D1EEC0069B7EC /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		08EF35D12BECFDA80098E2D4 /* BookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; };
+		08F0F8AE2C95958E00DC659B /* 开源-精品项目(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-精品项目(ap).md"; sourceTree = "<group>"; };
+		08F0F8B02C95964400DC659B /* 开源-有趣的项目(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-有趣的项目(ap).md"; sourceTree = "<group>"; };
+		08F0F8B22C95969500DC659B /* 开源-天气(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-天气(ap).md"; sourceTree = "<group>"; };
+		08F0F8B42C9596B000DC659B /* 开源-学习(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-学习(ap).md"; sourceTree = "<group>"; };
+		08F0F8B62C9596CC00DC659B /* 开源-生活(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-生活(ap).md"; sourceTree = "<group>"; };
+		08F0F8B82C95974E00DC659B /* 开源-理财(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-理财(ap).md"; sourceTree = "<group>"; };
+		08F0F8BA2C95976E00DC659B /* 开源-阅读(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-阅读(ap).md"; sourceTree = "<group>"; };
+		08F0F8BC2C95978C00DC659B /* 开源-笔记(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-笔记(ap).md"; sourceTree = "<group>"; };
+		08F0F8BE2C95982C00DC659B /* 开源-动画(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-动画(ap).md"; sourceTree = "<group>"; };
+		08F0F8C02C959B0600DC659B /* 开源-时间(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-时间(ap).md"; sourceTree = "<group>"; };
+		08F0F8C22C95B9F700DC659B /* 开源-macOS应用(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-macOS应用(ap).md"; sourceTree = "<group>"; };
 		08F14B432BBE2865005B46CC /* ViewComponentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentImage.swift; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
@@ -1081,6 +1103,7 @@
 				08BDD3F62C6B007A00914412 /* 安全 */,
 				08BDD4632C6B007A00914412 /* macOS */,
 				08BDD4432C6B007A00914412 /* 三方库使用 */,
+				08F0F8AD2C958FD400DC659B /* 开源 */,
 				088F2C302C93263800DCA64F /* 知识管理 */,
 			);
 			path = Apple;
@@ -2011,6 +2034,24 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		08F0F8AD2C958FD400DC659B /* 开源 */ = {
+			isa = PBXGroup;
+			children = (
+				08F0F8AE2C95958E00DC659B /* 开源-精品项目(ap).md */,
+				08F0F8B02C95964400DC659B /* 开源-有趣的项目(ap).md */,
+				08F0F8B22C95969500DC659B /* 开源-天气(ap).md */,
+				08F0F8C02C959B0600DC659B /* 开源-时间(ap).md */,
+				08F0F8B42C9596B000DC659B /* 开源-学习(ap).md */,
+				08F0F8B62C9596CC00DC659B /* 开源-生活(ap).md */,
+				08F0F8B82C95974E00DC659B /* 开源-理财(ap).md */,
+				08F0F8BA2C95976E00DC659B /* 开源-阅读(ap).md */,
+				08F0F8BC2C95978C00DC659B /* 开源-笔记(ap).md */,
+				08F0F8BE2C95982C00DC659B /* 开源-动画(ap).md */,
+				08F0F8C22C95B9F700DC659B /* 开源-macOS应用(ap).md */,
+			);
+			path = "开源";
+			sourceTree = "<group>";
+		};
 		08F1AB632BA083F500AEA0CA /* Info */ = {
 			isa = PBXGroup;
 			children = (
@@ -2160,6 +2201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F0F8B52C9596B000DC659B /* 开源-学习(ap).md in Resources */,
 				08BDD5512C6B007A00914412 /* 全屏模式(ap).md in Resources */,
 				08BDD56D2C6B007A00914412 /* 布局-基础(ap).md in Resources */,
 				08BDD5E92C6C8A3F00914412 /* SwiftData基础(ap).md in Resources */,
@@ -2221,9 +2263,11 @@
 				08BDD5122C6B007A00914412 /* merge(ap).md in Resources */,
 				08BDD5AF2C6B007A00914412 /* LazyVStack和LazyHStack(ap).md in Resources */,
 				08BDD5442C6B007A00914412 /* 小组件-远程定时获取数据(ap).md in Resources */,
+				08F0F8BD2C95978C00DC659B /* 开源-笔记(ap).md in Resources */,
 				08BDD5DA2C6B517900914412 /* Table-拖拽(ap).md in Resources */,
 				087A7AF82C81409400321F85 /* 动态库注入技术(ap).md in Resources */,
 				087A7B0C2C8407E200321F85 /* Bazel-依赖分析(ap).md in Resources */,
+				08F0F8C32C95B9F700DC659B /* 开源-macOS应用(ap).md in Resources */,
 				08BDD5262C6B007A00914412 /* 格式化-生活日常(ap).md in Resources */,
 				087A7AEC2C80BCBA00321F85 /* Swift内存安全性及其实现机制(ap).md in Resources */,
 				087A7AE42C80686100321F85 /* Swift内存操作(ap).md in Resources */,
@@ -2255,6 +2299,7 @@
 				0851E56B2C870F1500D9463A /* Instruments(ap).md in Resources */,
 				08BDD5AE2C6B007A00914412 /* LazyVGrid和LazyHGrid(ap).md in Resources */,
 				08448FD7279EC64600B61353 /* 字典(ap).md in Resources */,
+				08F0F8BF2C95982C00DC659B /* 开源-动画(ap).md in Resources */,
 				0851E5652C86EFC200D9463A /* fishhook(ap).md in Resources */,
 				08BDD55A2C6B007A00914412 /* SwiftData-版本迁移(ap).md in Resources */,
 				08BDD5682C6B007A00914412 /* Form(ap).md in Resources */,
@@ -2267,6 +2312,7 @@
 				08BDD5A72C6B007A00914412 /* Style协议(ap).md in Resources */,
 				08BDD52F2C6B007A00914412 /* @resultBuilder(ap).md in Resources */,
 				08BDD5B52C6B007A00914412 /* List-索引标题(ap).md in Resources */,
+				08F0F8C12C959B0600DC659B /* 开源-时间(ap).md in Resources */,
 				08BDD5332C6B007A00914412 /* 格式化(ap).md in Resources */,
 				08BDD4FC2C6B007A00914412 /* Keychain(ap).md in Resources */,
 				08BDD5832C6B007A00914412 /* GroupBox(ap).md in Resources */,
@@ -2295,6 +2341,7 @@
 				086E03692C6E7136008CEDD3 /* 字符串时间(ap).md in Resources */,
 				08448F97279EB9B000B61353 /* 打印(ap).md in Resources */,
 				08448FC5279EC4F800B61353 /* sorted(ap).md in Resources */,
+				08F0F8BB2C95976E00DC659B /* 开源-阅读(ap).md in Resources */,
 				088F2C4C2C932C5800DCA64F /* 知识管理-PKM(ap).md in Resources */,
 				08BDD5422C6B007A00914412 /* 小组件-获取位置权限更新内容(ap).md in Resources */,
 				08BDD5952C6B007A00914412 /* SwiftUI Canvas(ap).md in Resources */,
@@ -2322,6 +2369,7 @@
 				08BDD5712C6B007A00914412 /* 布局原理(ap).md in Resources */,
 				0851E5792C87563100D9463A /* 截获网络请求数据(ap).md in Resources */,
 				0851E5462C85F7ED00D9463A /* MachO(ap).md in Resources */,
+				08F0F8B32C95969500DC659B /* 开源-天气(ap).md in Resources */,
 				08BDD5D02C6B007B00914412 /* 修饰符-圆角(ap).md in Resources */,
 				08BDD5872C6B007A00914412 /* Alert(ap).md in Resources */,
 				08BDD5B42C6B007A00914412 /* List-搜索(ap).md in Resources */,
@@ -2356,6 +2404,7 @@
 				0850445827B1228E0096D556 /* Result(ap).md in Resources */,
 				08BDD5992C6B007A00914412 /* SwiftUI-模糊(ap).md in Resources */,
 				08BDD5072C6B007A00914412 /* Combine是什么(ap).md in Resources */,
+				08F0F8B12C95964400DC659B /* 开源-有趣的项目(ap).md in Resources */,
 				08BDD5C02C6B007A00914412 /* Table-多属性排序(ap).md in Resources */,
 				08BDD5902C6B007A00914412 /* SwiftUI是什么(ap).md in Resources */,
 				08BDD5352C6B007A00914412 /* 随机(ap).md in Resources */,
@@ -2404,6 +2453,7 @@
 				087A7AD92C8039EF00321F85 /* 包体积-代码优化(ap).md in Resources */,
 				08BDD50C2C6B007A00914412 /* append(ap).md in Resources */,
 				08BDD5602C6B007A00914412 /* SwiftData多线程(ap).md in Resources */,
+				08F0F8AF2C95958E00DC659B /* 开源-精品项目(ap).md in Resources */,
 				08448FE6279EC82500B61353 /* 逻辑(ap).md in Resources */,
 				08448F95279EB96F00B61353 /* 变量(ap).md in Resources */,
 				0851E5532C86783400D9463A /* LLDB(ap).md in Resources */,
@@ -2412,6 +2462,7 @@
 				08BDD5E12C6C4BC500914412 /* SwiftUI数据流-@Binding(ap).md in Resources */,
 				08BDD5C62C6B007A00914412 /* Grid(ap).md in Resources */,
 				08448FBC279EC41700B61353 /* 继承(ap).md in Resources */,
+				08F0F8B72C9596CC00DC659B /* 开源-生活(ap).md in Resources */,
 				08BDD5A32C6B007A00914412 /* Legacy bridges协议(ap).md in Resources */,
 				088F2C292C88438F00DCA64F /* 启动治理思路(ap).md in Resources */,
 				087A7B062C8339CD00321F85 /* 避免视图绘制掉帧(ap).md in Resources */,
@@ -2489,6 +2540,7 @@
 				08BDD5342C6B007A00914412 /* 时间(ap).md in Resources */,
 				08BDD5D62C6B007B00914412 /* SwiftUI-自定义样式(ap).md in Resources */,
 				08BDD5382C6B007A00914412 /* Data(ap).md in Resources */,
+				08F0F8B92C95974E00DC659B /* 开源-理财(ap).md in Resources */,
 				08BDD5562C6B007A00914412 /* macOS剪贴板(ap).md in Resources */,
 				08BDD50B2C6B007A00914412 /* Combine网络请求(ap).md in Resources */,
 				08BDD59A2C6B007A00914412 /* SwiftUI-Shadow(ap).md in Resources */,

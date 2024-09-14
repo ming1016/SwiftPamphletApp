@@ -93,7 +93,8 @@ struct EditInfoView: View {
                 }
             }
             .onAppear(perform: {
-                _ = parseSearchTerms()
+                // 标签
+                searchTerms(arr: parseSearchTerms())
                 // AppStorage
                 if asInspectorType == 0 {
                     inspectorType = .category
@@ -107,7 +108,7 @@ struct EditInfoView: View {
                 }
             })
             .onChange(of: term) { oldValue, newValue in
-                _ = parseSearchTerms()
+                searchTerms(arr: parseSearchTerms())
             }
             .onChange(of: isShowInspector) { oldValue, newValue in
                 asIsShowInspector = newValue
@@ -117,6 +118,13 @@ struct EditInfoView: View {
                     asInspectorType = 0
                 } else if newValue == InspectorType.customSearch {
                     asInspectorType = 1
+                }
+            }
+            .onChange(of: info.relateName) { oldValue, newValue in
+                if info.relateName.isEmpty == true {
+                    isShowRelateTextField = false
+                } else {
+                    isShowRelateTextField = true
                 }
             }
             Spacer()
@@ -365,24 +373,29 @@ struct EditInfoView: View {
         }
     }
     
+    func fetchWebContent(urlString: String) async {
+        let re = await fetchTitleFromUrl(urlString:info.url)
+        await MainActor.run {
+            if re.title.isEmpty == false {
+                info.name = re.title
+                if re.imageUrl.isEmpty == false {
+                    IOInfo.updateCoverImage(info: info, img: IOImg(url: re.imageUrl))
+                }
+                info.imageUrls = re.imageUrls
+            }
+        }
+    }
+    
     // MARK: URL
     private var urlInputView: some View {
         HStack {
             TextField("地址:", text: $info.url, prompt: Text("输入或粘贴 url，例如 https://starming.com")).rounded()
                 .onSubmit {
                     info.name = "获取标题中......"
+                    
                     Task {
                         // MARK: 获取 Web 内容
-                        let re = await fetchTitleFromUrl(urlString:info.url)
-                        DispatchQueue.main.async {
-                            if re.title.isEmpty == false {
-                                info.name = re.title
-                                if re.imageUrl.isEmpty == false {
-                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: re.imageUrl))
-                                }
-                                info.imageUrls = re.imageUrls
-                            }
-                        }
+                        await fetchWebContent(urlString: info.url)
                     }
                 }
             if info.url.isEmpty == false {
@@ -390,16 +403,7 @@ struct EditInfoView: View {
                     info.name = "获取标题中......"
                     Task {
                         // MARK: 获取 Web 内容
-                        let re = await fetchTitleFromUrl(urlString:info.url)
-                        DispatchQueue.main.async {
-                            if re.title.isEmpty == false {
-                                info.name = re.title
-                                if re.imageUrl.isEmpty == false {
-                                    IOInfo.updateCoverImage(info: info, img: IOImg(url: re.imageUrl))
-                                }
-                                info.imageUrls = re.imageUrls
-                            }
-                        }
+                        await fetchWebContent(urlString: info.url)
                     }
                 } label: {
                     Image(systemName: "link")
@@ -483,8 +487,11 @@ struct EditInfoView: View {
                 sterms.append(lineTs)
             } // end if
         } // end for
-        searchTerms = sterms
         return sterms
+    }
+    
+    @MainActor func searchTerms(arr: [[String]]) {
+        searchTerms = arr
     }
     
     // MARK: 数据管理

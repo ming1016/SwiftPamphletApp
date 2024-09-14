@@ -634,6 +634,19 @@ final class GuideListModel {
         L(t: "三方库使用", icon:"tray.2", sub: [
             L(t: "SQLite.swift的使用")
         ]),
+        L(t: "开源", icon:"globe.asia.australia", sub: [
+            L(t: "开源-精品项目"),
+            L(t: "开源-有趣的项目"),
+            L(t: "开源-天气"),
+            L(t: "开源-时间"),
+            L(t: "开源-学习"),
+            L(t: "开源-生活"),
+            L(t: "开源-理财"),
+            L(t: "开源-阅读"),
+            L(t: "开源-笔记"),
+            L(t: "开源-动画"),
+            L(t: "开源-macOS应用"),
+        ]),
         L(t: "知识管理", icon:"lightbulb.max", sub: [
             L(t: "知识管理-介绍"),
             L(t: "怎么用小册子APP做知识管理"),

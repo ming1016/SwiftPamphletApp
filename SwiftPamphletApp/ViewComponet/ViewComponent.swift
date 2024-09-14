@@ -31,7 +31,6 @@ struct SPOutlineView<D, Content>: View where D: RandomAccessCollection, D.Elemen
     let d: D
     let c: KeyPath<D.Element, D?>
     let content: (D.Element) -> Content
-    @State var isExpanded = true // 控制初始是否展开的状态
     
     var body: some View {
         ForEach(d) { i in
