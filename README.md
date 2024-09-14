@@ -13,7 +13,7 @@ Swift开发的手册，是个 macOS 程序，已上线macOS应用商店，[点�
 功能主要包含
 
 - 手册书签收藏
-- 资料收集整理（参考[我是怎么做个人知识管理（PKM）的，从史前时代备忘录、Sublime，经历了Evernote，Markdown兴起，Bear的优雅，Notion革命，飞书语雀，Obsidian、Flomo，到最后使用卢曼卡片盒笔记法串起了流程](https://starming.com/2024/09/12/my-pkm/)这篇文章，里面有提及如何使用小册子的资料整理功能）
+- 资料收集整理（参考[我是怎么做个人知识管理（PKM）的，从史前时代备忘录、Sublime，经历了Evernote，Markdown兴起，Bear的优雅，Notion革命，飞书语雀，Obsidian、Flomo，到最后使用卢曼卡片盒笔记法串起了流程](https://mp.weixin.qq.com/s/PbUOxURK57eIeSnuE1mh4g)这篇文章，里面有提及如何使用小册子的资料整理功能）
 - 离线保存资料
 - 知识点和资料关联
 - 手册、WWDC和资料可搜索
