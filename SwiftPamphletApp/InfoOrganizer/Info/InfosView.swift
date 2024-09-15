@@ -10,6 +10,8 @@ import SwiftData
 import InfoOrganizer
 import SMDate
 
+
+
 struct InfosView: View {
     @Environment(\.modelContext) var modelContext
     @Query var infos: [IOInfo]

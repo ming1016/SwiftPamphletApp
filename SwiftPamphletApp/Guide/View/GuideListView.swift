@@ -245,6 +245,7 @@ final class GuideListModel {
                 L(t: "TimeInterval"),
                 L(t: "时间-formatted"),
                 L(t: "时区"),
+                L(t: "农历公历互转"),
                 L(t: "字符串时间"),
                 L(t: "Calendar"),
                 L(t: "时间-开源库"),
@@ -631,6 +632,22 @@ final class GuideListModel {
             L(t: "macOS共享菜单"),
             L(t: "macOS剪贴板")
         ]),
+        L(t: "visionOS", icon: "visionpro", sub: [
+            L(t: "visionOS-介绍"),
+            L(t: "visionOS-入门"),
+            L(t: "visionOS-空间设计"),
+            L(t: "空间计算和SwiftUI"),
+            L(t: "RealityKit"),
+            L(t: "Reality Composer Pro"),
+            L(t: "visionOS-Model3D"),
+            L(t: "visionOS-Object Capture"),
+            L(t: "ARKit"),
+            L(t: "Metal"),
+            L(t: "visionOS-Unity"),
+            L(t: "visionOS-系统能力"),
+            L(t: "visionOS-空间视频"),
+            L(t: "visionOS-声音"),
+        ]),
         L(t: "三方库使用", icon:"tray.2", sub: [
             L(t: "SQLite.swift的使用")
         ]),
@@ -644,8 +661,13 @@ final class GuideListModel {
             L(t: "开源-理财"),
             L(t: "开源-阅读"),
             L(t: "开源-笔记"),
+            L(t: "开源-音乐"),
             L(t: "开源-动画"),
-            L(t: "开源-macOS应用"),
+            L(t: "macOS开源", sub: [
+                L(t: "macOS开源-窗口管理"),
+                L(t: "macOS开源-系统监控"),
+                L(t: "macOS开源-系统清理"),
+            ]),
         ]),
         L(t: "知识管理", icon:"lightbulb.max", sub: [
             L(t: "知识管理-介绍"),
