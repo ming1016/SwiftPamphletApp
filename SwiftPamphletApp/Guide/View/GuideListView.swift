@@ -699,15 +699,13 @@ final class GuideListModel {
             L(t: "知识管理-目的导向工作流"),
         ])
     ]
-    
-    struct L: Hashable, Identifiable {
-        var id = UUID()
-        var t: String
-        var icon: String = ""
-        var sub: [L]?
-    }
 
 }
 
-
+struct L: Hashable, Identifiable {
+    var id = UUID()
+    var t: String
+    var icon: String = ""
+    var sub: [L]?
+}
 

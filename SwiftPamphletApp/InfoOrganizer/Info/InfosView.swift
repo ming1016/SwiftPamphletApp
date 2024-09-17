@@ -20,21 +20,33 @@ struct InfosView: View {
     
     init(filterCateName: String = "", searchString: String = "", selectInfo: Binding<IOInfo?>, sortOrder: [SortDescriptor<IOInfo>] = [], limit: Binding<Int>) {
         
+//        var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
+//            if !filterCateName.isEmpty && !searchString.isEmpty {
+//                (info.name.localizedStandardContains(searchString)
+//                || info.url.localizedStandardContains(searchString)
+//                 || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName
+//            } else if !filterCateName.isEmpty {
+//                info.category?.name == filterCateName
+//            } else if searchString.isEmpty {
+//                true
+//            } else {
+//                info.name.localizedStandardContains(searchString)
+//                || info.url.localizedStandardContains(searchString)
+//                 || info.des.localizedStandardContains(searchString)
+//            }
+//            
+//        }, sortBy: sortOrder)
+        
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
-            if !filterCateName.isEmpty && !searchString.isEmpty {
-                (info.name.localizedStandardContains(searchString)
-                || info.url.localizedStandardContains(searchString)
-                 || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName
-            } else if !filterCateName.isEmpty {
-                info.category?.name == filterCateName
-            } else if searchString.isEmpty {
-                true
-            } else {
+            if searchString.isEmpty == false {
                 info.name.localizedStandardContains(searchString)
                 || info.url.localizedStandardContains(searchString)
                  || info.des.localizedStandardContains(searchString)
+            } else if filterCateName.isEmpty == false {
+                info.category?.name == filterCateName
+            } else {
+                true
             }
-            
         }, sortBy: sortOrder)
         
         // 测试无数据用

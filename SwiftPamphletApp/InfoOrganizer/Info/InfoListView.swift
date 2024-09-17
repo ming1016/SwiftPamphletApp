@@ -150,6 +150,7 @@ struct InfoListView: View {
                                     showSheet = false
                                     searchText = "[\(oneTerm)]"
                                 }
+                                .fixedSize()
                             }
                         }
                         Spacer()

@@ -349,6 +349,7 @@ struct EditInfoView: View {
                                             showSheet = false
                                             info.des = "[\(oneTerm)]" + "\n" + info.des
                                         }
+                                        .fixedSize()
                                     }
                                 }
                                 Spacer()

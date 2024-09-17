@@ -7,7 +7,7 @@
 
 import SwiftUI
 import SwiftData
-import SMGitHub
+@preconcurrency import SMGitHub
 
 struct EditDeveloper: View {
     @Bindable var dev: DeveloperModel
