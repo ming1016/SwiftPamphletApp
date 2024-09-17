@@ -81,8 +81,9 @@ struct GuideDetailView: View {
                     }
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
+                MarkdownView(s: SMFile.loadBundleString("\(t)" + "(\(plName)).md"))
                 // 内容
-                WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(SMFile.loadBundleString("\(t)" + "(\(plName)).md"))")), baseURLStr: "")
+//                WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(SMFile.loadBundleString("\(t)" + "(\(plName)).md"))")), baseURLStr: "")
             } else {
                 if let info = selectInfo {
                     EditInfoView(info: info)

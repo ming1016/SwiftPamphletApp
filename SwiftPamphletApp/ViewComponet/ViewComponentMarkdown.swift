@@ -34,7 +34,7 @@ extension Theme {
     /// Bulleted list | ![](GitHubNestedBulletedList)
     /// Numbered list | ![](GitHubNumberedList)
     /// Table | ![](GitHubTable)
-    public static let gitHubCustom = Theme()
+    @MainActor public static let gitHubCustom = Theme()
         .text {
             ForegroundColor(.text)
             BackgroundColor(.background)
