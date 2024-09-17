@@ -261,6 +261,7 @@ final class GuideListModel {
         L(t: "SwiftUI",icon: "heart.text.square.fill",sub: [
             L(t: "介绍",sub: [
                 L(t: "SwiftUI是什么"),
+                L(t: "SwiftUI-入门"),
                 L(t: "SwiftUI参考资料"),
                 L(t: "SwiftUI对标的UIKit视图"),
             ]),
@@ -647,6 +648,16 @@ final class GuideListModel {
             L(t: "visionOS-系统能力"),
             L(t: "visionOS-空间视频"),
             L(t: "visionOS-声音"),
+        ]),
+        L(t: "人工智能", icon:"cpu", sub: [
+            L(t: "人工智能-介绍"),
+            L(t: "Core ML"),
+            L(t: "Create ML"),
+            L(t: "人工智能-语音"),
+            L(t: "人工智能-视觉"),
+            L(t: "人工智能-Metal"),
+            L(t: "Stable Diffusion"),
+            L(t: "AI辅助开发APP"),
         ]),
         L(t: "三方库使用", icon:"tray.2", sub: [
             L(t: "SQLite.swift的使用")
