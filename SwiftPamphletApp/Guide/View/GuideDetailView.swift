@@ -19,6 +19,7 @@ struct GuideDetailView: View {
     var t: String
     var icon: String
     var plName: String
+    @State var tContent: String
     @Binding var limit: Int
     @Binding var trigger: Bool
     
@@ -32,6 +33,7 @@ struct GuideDetailView: View {
         self.t = t
         self.icon = icon
         self.plName = plName
+        self.tContent = ""
         self._trigger = trigger
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
             info.relateName == t && info.isArchived == false
@@ -81,9 +83,8 @@ struct GuideDetailView: View {
                     }
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
-                MarkdownView(s: SMFile.loadBundleString("\(t)" + "(\(plName)).md"))
                 // 内容
-//                WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: "\(SMFile.loadBundleString("\(t)" + "(\(plName)).md"))")), baseURLStr: "")
+                WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: tContent)), baseURLStr: "")
             } else {
                 if let info = selectInfo {
                     EditInfoView(info: info)
@@ -132,13 +133,16 @@ struct GuideDetailView: View {
         }
         .onAppear {
             isShowInspector = asIsShowPamphletInspector
+            tContent = SMFile.loadBundleString("\(t)" + "(\(plName)).md")
         }
         .onChange(of: t) { oldValue, newValue in
             selectInfo = nil
+            tContent = SMFile.loadBundleString("\(t)" + "(\(plName)).md")
         }
         .onChange(of: isShowInspector) { oldValue, newValue in
             asIsShowPamphletInspector = newValue
         }
+
     }
     
     func checkBookmarkState() {
