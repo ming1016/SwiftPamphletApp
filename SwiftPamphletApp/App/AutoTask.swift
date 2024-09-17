@@ -11,9 +11,9 @@ import SMFile
 struct AutoTask {
     
     static func buildContentMarkdownFile() {
-        let a1 = ["guide-syntax","guide-features","guide-subject","lib-Combine","lib-Concurrency","lib-SwiftUI"]
+//        let a1 = ["guide-syntax","guide-features","guide-subject","lib-Combine","lib-Concurrency","lib-SwiftUI"]
 //        let a1 = ["lib-SwiftUI"]
-        var mk = ""
+//        var mk = ""
 //        for e in a1 {
 //            let fc:[CustomIssuesModel] = SMFile.loadBundleJSONFile(e + ".json")
 //            if e == "guide-syntax" {
@@ -43,8 +43,8 @@ struct AutoTask {
 //                }
 //            }
 //        }
-        
-        SMFile.writeToDownload(fileName: "read.md", content: mk)
+//        
+//        SMFile.writeToDownload(fileName: "read.md", content: mk)
     }
     
 }

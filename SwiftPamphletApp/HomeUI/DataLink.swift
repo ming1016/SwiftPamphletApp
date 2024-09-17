@@ -20,7 +20,7 @@ struct DataLink: Identifiable {
     case content,detail
     }
     
-    @ViewBuilder
+    @MainActor @ViewBuilder
     static func viewToShow(
         for title: String?,
         selectInfo:Binding<IOInfo?>,

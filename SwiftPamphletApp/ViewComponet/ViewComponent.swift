@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import WebKit
+@preconcurrency import WebKit
 import MarkdownUI
 import SMFile
 import SMNetwork
@@ -121,14 +121,15 @@ struct ShareView: View {
                 Text("拷贝链接")
             }
             Divider()
-            ForEach(NSSharingService.sharingServices(forItems: [""]), id: \.title) { item in
-                Button {
-                    item.perform(withItems: [s])
-                } label: {
-                    Image(nsImage: item.image)
-                    Text(item.title)
-                }
-            }
+            
+//            ForEach(NSSharingService.sharingServices(forItems: [""]), id: \.title) { item in
+//                Button {
+//                    item.perform(withItems: [s])
+//                } label: {
+//                    Image(nsImage: item.image)
+//                    Text(item.title)
+//                }
+//            }
         } label: {
             Image(systemName: "square.and.arrow.up")
             Text("分享")
