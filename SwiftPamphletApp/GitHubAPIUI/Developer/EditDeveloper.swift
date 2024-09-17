@@ -124,32 +124,36 @@ struct EditDeveloper: View {
         }
         // end HStack
 
-        TabView(selection: $tabSelct) {
-            RepoCommitsView(commits: repoVM.commits, repo: repoVM.repo)
-                .tabItem {
-                    Text("新提交")
-                }
-                .tag(1)
+        Form {
+            Section {
+                TabView(selection: $tabSelct) {
+                    RepoCommitsView(commits: repoVM.commits, repo: repoVM.repo)
+                        .tabItem {
+                            Text("新提交")
+                        }
+                        .tag(1)
 
-            IssuesView(issues: repoVM.issues, repo: repoVM.repo)
-                .tabItem {
-                    Text("议题列表")
-                }
-                .tag(2)
+                    IssuesView(issues: repoVM.issues, repo: repoVM.repo)
+                        .tabItem {
+                            Text("议题列表")
+                        }
+                        .tag(2)
 
-            IssueEventsView(issueEvents: repoVM.issuesEvents, repo: repoVM.repo)
-                .tabItem {
-                    Text("议题事件")
-                }
-                .tag(3)
+                    IssueEventsView(issueEvents: repoVM.issuesEvents, repo: repoVM.repo)
+                        .tabItem {
+                            Text("议题事件")
+                        }
+                        .tag(3)
 
-            ReadmeView(content: repoVM.readme.content.replacingOccurrences(of: "\n", with: ""))
-                .tabItem {
-                    Text("README")
-                }
-                .tag(4)
+                    ReadmeView(content: repoVM.readme.content.replacingOccurrences(of: "\n", with: ""))
+                        .tabItem {
+                            Text("README")
+                        }
+                        .tag(4)
 
-        } // end TabView
+                } // end TabView
+            }
+        }
         Spacer()
     }
     
@@ -213,21 +217,24 @@ struct EditDeveloper: View {
             }
         })
         
-        TabView(selection: $tabSelct) {
-
-            DeveloperEventView(events: userVM.events)
-                .tabItem {
-                    Image(systemName: "keyboard")
-                    Text("事件")
+        Form {
+            Section {
+                TabView(selection: $tabSelct) {
+                    DeveloperEventView(events: userVM.events)
+                        .tabItem {
+                            Image(systemName: "keyboard")
+                            Text("事件")
+                        }
+                        .tag(1)
+                    
+                    DeveloperEventView(events: userVM.receivedEvents)
+                        .tabItem {
+                            Image(systemName: "keyboard.badge.ellipsis")
+                            Text("Ta 接收的事件")
+                        }
+                        .tag(2)
                 }
-                .tag(1)
-            
-            DeveloperEventView(events: userVM.receivedEvents)
-                .tabItem {
-                    Image(systemName: "keyboard.badge.ellipsis")
-                    Text("Ta 接收的事件")
-                }
-                .tag(2)
+            }
         }
         Spacer()
     }
