@@ -11,6 +11,7 @@ import SMFile
 import SMDate
 import SwiftData
 import InfoOrganizer
+import MarkdownUI
 
 struct GuideDetailView: View {
     @Environment(\.modelContext) var modelContext
@@ -84,7 +85,7 @@ struct GuideDetailView: View {
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
                 // 内容
-                WebUIView(html: wrapperHtmlContent(content: MarkdownParser().html(from: tContent)), baseURLStr: "")
+                WebUIView(html: tContent, baseURLStr: "")
             } else {
                 if let info = selectInfo {
                     EditInfoView(info: info)
@@ -133,11 +134,13 @@ struct GuideDetailView: View {
         }
         .onAppear {
             isShowInspector = asIsShowPamphletInspector
-            tContent = SMFile.loadBundleString("\(t)" + "(\(plName)).md")
+            let md = SMFile.loadBundleString("\(t)" + "(\(plName)).md")
+            tContent = wrapperHtmlContent(content: MarkdownParser().html(from: md))
         }
         .onChange(of: t) { oldValue, newValue in
             selectInfo = nil
-            tContent = SMFile.loadBundleString("\(t)" + "(\(plName)).md")
+            let md = SMFile.loadBundleString("\(t)" + "(\(plName)).md")
+            tContent = wrapperHtmlContent(content: MarkdownParser().html(from: md))
         }
         .onChange(of: isShowInspector) { oldValue, newValue in
             asIsShowPamphletInspector = newValue
