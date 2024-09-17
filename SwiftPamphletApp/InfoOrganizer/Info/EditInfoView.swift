@@ -461,6 +461,7 @@ struct EditInfoView: View {
                 Image(systemName: isShowRelateTextField == true ? "network.slash" : "network")
             }
             .help("关联编辑")
+            .keyboardShortcut(KeyEquivalent("r"), modifiers: .command)
         }
     }
 

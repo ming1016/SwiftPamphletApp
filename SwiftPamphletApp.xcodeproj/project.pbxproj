@@ -31,6 +31,17 @@
 		0832668B2C97232E00E27CC5 /* visionOS-声音(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0832668A2C97232E00E27CC5 /* visionOS-声音(ap).md */; };
 		0832668D2C97238C00E27CC5 /* visionOS-Unity(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0832668C2C97238C00E27CC5 /* visionOS-Unity(ap).md */; };
 		0832668F2C972F5800E27CC5 /* 开源-音乐(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0832668E2C972F5800E27CC5 /* 开源-音乐(ap).md */; };
+		083266922C97E51400E27CC5 /* 人工智能-介绍(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 083266912C97E51400E27CC5 /* 人工智能-介绍(ap).md */; };
+		083266942C97E52700E27CC5 /* Core ML(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 083266932C97E52700E27CC5 /* Core ML(ap).md */; };
+		083266962C97E5FF00E27CC5 /* Create ML(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 083266952C97E5FF00E27CC5 /* Create ML(ap).md */; };
+		083266982C97E62F00E27CC5 /* 人工智能-语音(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 083266972C97E62F00E27CC5 /* 人工智能-语音(ap).md */; };
+		0832669A2C97E64700E27CC5 /* 人工智能-视觉(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 083266992C97E64700E27CC5 /* 人工智能-视觉(ap).md */; };
+		0832669C2C97E65A00E27CC5 /* 人工智能-Metal(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0832669B2C97E65A00E27CC5 /* 人工智能-Metal(ap).md */; };
+		0832669E2C97E67A00E27CC5 /* Stable Diffusion(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0832669D2C97E67A00E27CC5 /* Stable Diffusion(ap).md */; };
+		083266A02C98792000E27CC5 /* Swift Package Manager(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0832669F2C98792000E27CC5 /* Swift Package Manager(ap).md */; };
+		083266A22C987A0700E27CC5 /* AI辅助开发APP(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 083266A12C987A0700E27CC5 /* AI辅助开发APP(ap).md */; };
+		083266A42C987D9000E27CC5 /* macOS开源-菜单栏(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 083266A32C987D9000E27CC5 /* macOS开源-菜单栏(ap).md */; };
+		083266A62C9888E900E27CC5 /* SwiftUI-入门(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 083266A52C9888E900E27CC5 /* SwiftUI-入门(ap).md */; };
 		08397E252B9EEE1300DFDD02 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E242B9EEE1300DFDD02 /* InfoListView.swift */; };
 		08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E282B9F0A9100DFDD02 /* EditInfoView.swift */; };
 		08397E2D2B9F10AD00DFDD02 /* EditCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */; };
@@ -487,6 +498,17 @@
 		0832668A2C97232E00E27CC5 /* visionOS-声音(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "visionOS-声音(ap).md"; sourceTree = "<group>"; };
 		0832668C2C97238C00E27CC5 /* visionOS-Unity(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "visionOS-Unity(ap).md"; sourceTree = "<group>"; };
 		0832668E2C972F5800E27CC5 /* 开源-音乐(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开源-音乐(ap).md"; sourceTree = "<group>"; };
+		083266912C97E51400E27CC5 /* 人工智能-介绍(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-介绍(ap).md"; sourceTree = "<group>"; };
+		083266932C97E52700E27CC5 /* Core ML(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Core ML(ap).md"; sourceTree = "<group>"; };
+		083266952C97E5FF00E27CC5 /* Create ML(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Create ML(ap).md"; sourceTree = "<group>"; };
+		083266972C97E62F00E27CC5 /* 人工智能-语音(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-语音(ap).md"; sourceTree = "<group>"; };
+		083266992C97E64700E27CC5 /* 人工智能-视觉(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-视觉(ap).md"; sourceTree = "<group>"; };
+		0832669B2C97E65A00E27CC5 /* 人工智能-Metal(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Metal(ap).md"; sourceTree = "<group>"; };
+		0832669D2C97E67A00E27CC5 /* Stable Diffusion(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Stable Diffusion(ap).md"; sourceTree = "<group>"; };
+		0832669F2C98792000E27CC5 /* Swift Package Manager(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Swift Package Manager(ap).md"; sourceTree = "<group>"; };
+		083266A12C987A0700E27CC5 /* AI辅助开发APP(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI辅助开发APP(ap).md"; sourceTree = "<group>"; };
+		083266A32C987D9000E27CC5 /* macOS开源-菜单栏(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "macOS开源-菜单栏(ap).md"; sourceTree = "<group>"; };
+		083266A52C9888E900E27CC5 /* SwiftUI-入门(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI-入门(ap).md"; sourceTree = "<group>"; };
 		08397E242B9EEE1300DFDD02 /* InfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListView.swift; sourceTree = "<group>"; };
 		08397E282B9F0A9100DFDD02 /* EditInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoView.swift; sourceTree = "<group>"; };
 		08397E2C2B9F10AD00DFDD02 /* EditCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryView.swift; sourceTree = "<group>"; };
@@ -937,6 +959,7 @@
 		0832666A2C96A2E400E27CC5 /* macOS开源 */ = {
 			isa = PBXGroup;
 			children = (
+				083266A32C987D9000E27CC5 /* macOS开源-菜单栏(ap).md */,
 				0832666B2C96A34100E27CC5 /* macOS开源-窗口管理(ap).md */,
 				0832666D2C96A36700E27CC5 /* macOS开源-系统监控(ap).md */,
 				0832666F2C96A37900E27CC5 /* macOS开源-系统清理(ap).md */,
@@ -963,6 +986,21 @@
 				0832668A2C97232E00E27CC5 /* visionOS-声音(ap).md */,
 			);
 			path = visionOS;
+			sourceTree = "<group>";
+		};
+		083266902C97E4F200E27CC5 /* 人工智能 */ = {
+			isa = PBXGroup;
+			children = (
+				083266912C97E51400E27CC5 /* 人工智能-介绍(ap).md */,
+				083266932C97E52700E27CC5 /* Core ML(ap).md */,
+				083266952C97E5FF00E27CC5 /* Create ML(ap).md */,
+				083266972C97E62F00E27CC5 /* 人工智能-语音(ap).md */,
+				083266992C97E64700E27CC5 /* 人工智能-视觉(ap).md */,
+				0832669B2C97E65A00E27CC5 /* 人工智能-Metal(ap).md */,
+				0832669D2C97E67A00E27CC5 /* Stable Diffusion(ap).md */,
+				083266A12C987A0700E27CC5 /* AI辅助开发APP(ap).md */,
+			);
+			path = "人工智能";
 			sourceTree = "<group>";
 		};
 		08397E212B9EE83F00DFDD02 /* InfoOrganizer */ = {
@@ -1171,6 +1209,7 @@
 				08BDD3F62C6B007A00914412 /* 安全 */,
 				08BDD4632C6B007A00914412 /* macOS */,
 				083266712C96BEDC00E27CC5 /* visionOS */,
+				083266902C97E4F200E27CC5 /* 人工智能 */,
 				08BDD4432C6B007A00914412 /* 三方库使用 */,
 				08F0F8AD2C958FD400DC659B /* 开源 */,
 				088F2C302C93263800DCA64F /* 知识管理 */,
@@ -1563,6 +1602,7 @@
 			children = (
 				08BDD4242C6B007A00914412 /* 程序入口点(ap).md */,
 				08BDD4252C6B007A00914412 /* 单例(ap).md */,
+				0832669F2C98792000E27CC5 /* Swift Package Manager(ap).md */,
 			);
 			path = "工程模式";
 			sourceTree = "<group>";
@@ -1830,9 +1870,10 @@
 		08BDD4A62C6B007A00914412 /* 介绍 */ = {
 			isa = PBXGroup;
 			children = (
+				08BDD4A52C6B007A00914412 /* SwiftUI是什么(ap).md */,
+				083266A52C9888E900E27CC5 /* SwiftUI-入门(ap).md */,
 				08BDD4A32C6B007A00914412 /* SwiftUI参考资料(ap).md */,
 				08BDD4A42C6B007A00914412 /* SwiftUI对标的UIKit视图(ap).md */,
-				08BDD4A52C6B007A00914412 /* SwiftUI是什么(ap).md */,
 			);
 			path = "介绍";
 			sourceTree = "<group>";
@@ -1993,10 +2034,10 @@
 		08BDD4FA2C6B007A00914412 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				08BDD4A62C6B007A00914412 /* 介绍 */,
 				08BDD47B2C6B007A00914412 /* 表单 */,
 				08BDD4992C6B007A00914412 /* 布局组件 */,
 				08BDD4A22C6B007A00914412 /* 浮层组件 */,
-				08BDD4A62C6B007A00914412 /* 介绍 */,
 				08BDD4B22C6B007A00914412 /* 视觉 */,
 				08BDD4C02C6B007A00914412 /* 视图协议 */,
 				08BDD4C62C6B007A00914412 /* 视图组件 */,
@@ -2302,6 +2343,7 @@
 				08F51BC527A374A500693AB6 /* footer_js.html in Resources */,
 				08BDD5552C6B007A00914412 /* macOS技术演进(ap).md in Resources */,
 				0851E5772C87478700D9463A /* 启动优化-启动时间(ap).md in Resources */,
+				083266982C97E62F00E27CC5 /* 人工智能-语音(ap).md in Resources */,
 				08BDD5882C6B007A00914412 /* confirmationDialog()(ap).md in Resources */,
 				08BDD58C2C6B007A00914412 /* Popover(ap).md in Resources */,
 				088F2C2F2C8E827300DCA64F /* Share Extension(ap).md in Resources */,
@@ -2336,12 +2378,14 @@
 				08448FC1279EC4B500B61353 /* filter(ap).md in Resources */,
 				0851E54A2C860DFC00D9463A /* Clang静态分析器(ap).md in Resources */,
 				08BDD5122C6B007A00914412 /* merge(ap).md in Resources */,
+				0832669E2C97E67A00E27CC5 /* Stable Diffusion(ap).md in Resources */,
 				08BDD5AF2C6B007A00914412 /* LazyVStack和LazyHStack(ap).md in Resources */,
 				08BDD5442C6B007A00914412 /* 小组件-远程定时获取数据(ap).md in Resources */,
 				08F0F8BD2C95978C00DC659B /* 开源-笔记(ap).md in Resources */,
 				08BDD5DA2C6B517900914412 /* Table-拖拽(ap).md in Resources */,
 				087A7AF82C81409400321F85 /* 动态库注入技术(ap).md in Resources */,
 				087A7B0C2C8407E200321F85 /* Bazel-依赖分析(ap).md in Resources */,
+				0832669C2C97E65A00E27CC5 /* 人工智能-Metal(ap).md in Resources */,
 				08BDD5262C6B007A00914412 /* 格式化-生活日常(ap).md in Resources */,
 				087A7AEC2C80BCBA00321F85 /* Swift内存安全性及其实现机制(ap).md in Resources */,
 				087A7AE42C80686100321F85 /* Swift内存操作(ap).md in Resources */,
@@ -2365,6 +2409,7 @@
 				08448FAF279EC31200B61353 /* 不透明类型(ap).md in Resources */,
 				08448FE2279EC7CF00B61353 /* Nil-coalescing(ap).md in Resources */,
 				08448FD3279EC60300B61353 /* 数组(ap).md in Resources */,
+				083266962C97E5FF00E27CC5 /* Create ML(ap).md in Resources */,
 				08BDD50F2C6B007A00914412 /* Empty(ap).md in Resources */,
 				08448F64279EB32C00B61353 /* Swift规范(ap).md in Resources */,
 				087A7AFF2C828F7400321F85 /* 性能分析-工具(ap).md in Resources */,
@@ -2412,6 +2457,7 @@
 				08BDD5612C6B007A00914412 /* 文字Picker(ap).md in Resources */,
 				083266852C97209F00E27CC5 /* visionOS-入门(ap).md in Resources */,
 				08BDD57E2C6B007A00914412 /* NavigationSplitView(ap).md in Resources */,
+				083266A22C987A0700E27CC5 /* AI辅助开发APP(ap).md in Resources */,
 				08BDD4FE2C6B007A00914412 /* 动画-例子(ap).md in Resources */,
 				08BDD5B02C6B007A00914412 /* List-大纲视图(ap).md in Resources */,
 				08448FB6279EC39800B61353 /* 结构体(ap).md in Resources */,
@@ -2420,10 +2466,12 @@
 				08448F97279EB9B000B61353 /* 打印(ap).md in Resources */,
 				08448FC5279EC4F800B61353 /* sorted(ap).md in Resources */,
 				08F0F8BB2C95976E00DC659B /* 开源-阅读(ap).md in Resources */,
+				083266942C97E52700E27CC5 /* Core ML(ap).md in Resources */,
 				088F2C4C2C932C5800DCA64F /* 知识管理-PKM(ap).md in Resources */,
 				08BDD5422C6B007A00914412 /* 小组件-获取位置权限更新内容(ap).md in Resources */,
 				08BDD5952C6B007A00914412 /* SwiftUI Canvas(ap).md in Resources */,
 				08BDD5802C6B007A00914412 /* Advanced layout control(ap).md in Resources */,
+				083266A62C9888E900E27CC5 /* SwiftUI-入门(ap).md in Resources */,
 				08BDD5752C6B007A00914412 /* AnyLayout(ap).md in Resources */,
 				087A7AE62C80AFD700321F85 /* 内存分配器libMalloc(ap).md in Resources */,
 				08BDD58B2C6B007A00914412 /* Menu和ContextMenu(ap).md in Resources */,
@@ -2449,11 +2497,13 @@
 				0851E5462C85F7ED00D9463A /* MachO(ap).md in Resources */,
 				08F0F8B32C95969500DC659B /* 开源-天气(ap).md in Resources */,
 				08BDD5D02C6B007B00914412 /* 修饰符-圆角(ap).md in Resources */,
+				083266922C97E51400E27CC5 /* 人工智能-介绍(ap).md in Resources */,
 				08BDD5872C6B007A00914412 /* Alert(ap).md in Resources */,
 				08BDD5B42C6B007A00914412 /* List-搜索(ap).md in Resources */,
 				0851E56D2C8711DA00D9463A /* OC运行时(ap).md in Resources */,
 				086E03632C6E70EB008CEDD3 /* TimeInterval(ap).md in Resources */,
 				0851E5692C870C4E00D9463A /* InApp分析工具(ap).md in Resources */,
+				0832669A2C97E64700E27CC5 /* 人工智能-视觉(ap).md in Resources */,
 				08BDD5372C6B007A00914412 /* AttributeString(ap).md in Resources */,
 				08BDD5032C6B007A00914412 /* PhaseAnimator(ap).md in Resources */,
 				08BDD5022C6B007A00914412 /* Matched Geometry Effect(ap).md in Resources */,
@@ -2592,12 +2642,14 @@
 				08BDD5B92C6B007A00914412 /* List(ap).md in Resources */,
 				08BDD56B2C6B007A00914412 /* Toggle(ap).md in Resources */,
 				08448FA9279EBBB900B61353 /* 字符串(ap).md in Resources */,
+				083266A02C98792000E27CC5 /* Swift Package Manager(ap).md in Resources */,
 				08BDD56F2C6B007A00914412 /* 布局-留白(ap).md in Resources */,
 				086E036E2C6F997A008CEDD3 /* 时间-开源库(ap).md in Resources */,
 				08BDD5AD2C6B007A00914412 /* Transferable(ap).md in Resources */,
 				0832667D2C96C18100E27CC5 /* ARKit(ap).md in Resources */,
 				08BDD5942C6B007A00914412 /* SwiftCharts(ap).md in Resources */,
 				08448FE8279EC84B00B61353 /* 恒等(ap).md in Resources */,
+				083266A42C987D9000E27CC5 /* macOS开源-菜单栏(ap).md in Resources */,
 				084DBA122C6DA52D00C9D88D /* 日期组件(ap).md in Resources */,
 				08BDD58E2C6B007A00914412 /* SwiftUI参考资料(ap).md in Resources */,
 				086A5F0E2744E89100FECE02 /* Preview Assets.xcassets in Resources */,
@@ -2884,7 +2936,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -2919,7 +2971,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -2994,8 +3046,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
 			requirement = {
-				kind = exactVersion;
-				version = 2.3.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
 			};
 		};
 		08D107BB278826BA007B7009 /* XCRemoteSwiftPackageReference "swift-html-entities" */ = {
