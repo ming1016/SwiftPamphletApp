@@ -17,7 +17,7 @@ struct SettingView: View {
                 }
             customSearch()
                 .tabItem {
-                    Label("自定义搜索", systemImage: "mail.and.text.magnifyingglass")
+                    Label("自定义标签", systemImage: "mail.and.text.magnifyingglass")
                 }
             
         }
@@ -29,7 +29,7 @@ struct SettingView: View {
     @ViewBuilder
     func customSearch() -> some View {
         VStack {
-            Text("输入自定义的搜索关键字，以换行作为间隔")
+            Text("输入自定义的标签，以换行作为间隔")
             TextEditor(text: $term)
                 .overlay {
                     Rectangle()

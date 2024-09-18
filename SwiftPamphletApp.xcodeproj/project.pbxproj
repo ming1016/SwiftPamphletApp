@@ -191,6 +191,8 @@
 		087AAA972C9AAEA100877650 /* 自动化构建流程(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA962C9AAEA100877650 /* 自动化构建流程(ap).md */; };
 		087AAA992C9AB23C00877650 /* Xcode(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA982C9AB23C00877650 /* Xcode(ap).md */; };
 		087AAA9B2C9AB32800877650 /* CocoaPods(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA9A2C9AB32800877650 /* CocoaPods(ap).md */; };
+		087AAA9D2C9ABEFB00877650 /* 人工智能-文本(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA9C2C9ABEFB00877650 /* 人工智能-文本(ap).md */; };
+		087AAA9F2C9AC1E200877650 /* 使用LLM模型(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA9E2C9AC1E200877650 /* 使用LLM模型(ap).md */; };
 		0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887A5992BA28F6D00131359 /* CSGuideView.swift */; };
 		0888EF752C1C280F004967AD /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869233F2BF2BF81006779A3 /* AVKit.framework */; };
 		088F2C222C87F9A700DCA64F /* IO性能-文件读写(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C212C87F9A700DCA64F /* IO性能-文件读写(ap).md */; };
@@ -671,6 +673,8 @@
 		087AAA962C9AAEA100877650 /* 自动化构建流程(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "自动化构建流程(ap).md"; sourceTree = "<group>"; };
 		087AAA982C9AB23C00877650 /* Xcode(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Xcode(ap).md"; sourceTree = "<group>"; };
 		087AAA9A2C9AB32800877650 /* CocoaPods(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CocoaPods(ap).md"; sourceTree = "<group>"; };
+		087AAA9C2C9ABEFB00877650 /* 人工智能-文本(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-文本(ap).md"; sourceTree = "<group>"; };
+		087AAA9E2C9AC1E200877650 /* 使用LLM模型(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "使用LLM模型(ap).md"; sourceTree = "<group>"; };
 		0887A5992BA28F6D00131359 /* CSGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuideView.swift; sourceTree = "<group>"; };
 		088F2C212C87F9A700DCA64F /* IO性能-文件读写(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "IO性能-文件读写(ap).md"; sourceTree = "<group>"; };
 		088F2C232C87FDFE00DCA64F /* IO性能-文件缓存(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "IO性能-文件缓存(ap).md"; sourceTree = "<group>"; };
@@ -1018,9 +1022,11 @@
 				083266912C97E51400E27CC5 /* 人工智能-介绍(ap).md */,
 				083266932C97E52700E27CC5 /* Core ML(ap).md */,
 				083266952C97E5FF00E27CC5 /* Create ML(ap).md */,
+				087AAA9C2C9ABEFB00877650 /* 人工智能-文本(ap).md */,
 				083266972C97E62F00E27CC5 /* 人工智能-语音(ap).md */,
 				083266992C97E64700E27CC5 /* 人工智能-视觉(ap).md */,
 				0832669B2C97E65A00E27CC5 /* 人工智能-Metal(ap).md */,
+				087AAA9E2C9AC1E200877650 /* 使用LLM模型(ap).md */,
 				0832669D2C97E67A00E27CC5 /* Stable Diffusion(ap).md */,
 				083266A12C987A0700E27CC5 /* AI辅助开发APP(ap).md */,
 			);
@@ -2520,6 +2526,7 @@
 				08448F97279EB9B000B61353 /* 打印(ap).md in Resources */,
 				08448FC5279EC4F800B61353 /* sorted(ap).md in Resources */,
 				087AAA882C9A768200877650 /* 组件化模块化(ap).md in Resources */,
+				087AAA9D2C9ABEFB00877650 /* 人工智能-文本(ap).md in Resources */,
 				08F0F8BB2C95976E00DC659B /* 开源-阅读(ap).md in Resources */,
 				083266942C97E52700E27CC5 /* Core ML(ap).md in Resources */,
 				088F2C4C2C932C5800DCA64F /* 知识管理-PKM(ap).md in Resources */,
@@ -2562,6 +2569,7 @@
 				0851E56D2C8711DA00D9463A /* OC运行时(ap).md in Resources */,
 				086E03632C6E70EB008CEDD3 /* TimeInterval(ap).md in Resources */,
 				0851E5692C870C4E00D9463A /* InApp分析工具(ap).md in Resources */,
+				087AAA9F2C9AC1E200877650 /* 使用LLM模型(ap).md in Resources */,
 				0832669A2C97E64700E27CC5 /* 人工智能-视觉(ap).md in Resources */,
 				08BDD5372C6B007A00914412 /* AttributeString(ap).md in Resources */,
 				08BDD5032C6B007A00914412 /* PhaseAnimator(ap).md in Resources */,
