@@ -465,10 +465,7 @@ final class GuideListModel {
             L(t: "AppIcon", icon: "app"),
             L(t: "Share Extension", icon: "app")
         ]),
-        L(t: "工程模式",icon: "building.columns", sub: [
-            L(t: "单例"),
-            L(t: "程序入口点", icon: "door.right.hand.open")
-        ]),
+        
         L(t: "多线程", icon: "text.line.first.and.arrowtriangle.forward", sub: [
             L(t: "Swift Concurrency",sub: [
                 L(t: "Swift Concurrency是什么"),
@@ -529,7 +526,7 @@ final class GuideListModel {
             L(t: "网络状态检查"),
             L(t: "WKWebView")
         ]),
-        L(t: "性能和构建",icon: "battery.100percent.bolt", sub: [
+        L(t: "性能优化",icon: "battery.100percent.bolt", sub: [
             L(t: "卡顿监控", sub: [
                 L(t: "避免视图绘制掉帧"),
                 L(t: "卡顿原因"),
@@ -598,19 +595,6 @@ final class GuideListModel {
                 L(t: "Swift运行时"),
                 L(t: "动态库注入技术"),
             ]),
-            L(t: "Bazel", sub: [
-                L(t: "Bazel-介绍"),
-                L(t: "Bazel-生成Xcode工程"),
-                L(t: "Bazel-依赖分析"),
-                L(t: "Bazel-query指令找依赖关系"),
-                L(t: "Bazel-远程执行配置"),
-                L(t: "Bazel-远程缓存配置"),
-                L(t: "Bazel-自定义的构建规则"),
-            ]),
-            L(t: "编辑器", sub: [
-                L(t: "编辑器-三方工具"),
-                L(t: "VSCode"),
-            ]),
             L(t: "性能技术演进"),
             L(t: "链接器"),
         ]),
@@ -626,6 +610,41 @@ final class GuideListModel {
         L(t: "安全", icon: "cross.case", sub: [
             L(t: "安全-介绍"),
             L(t: "Keychain")
+        ]),
+        L(t: "工程架构与构建",icon: "building.columns.fill", sub: [
+            L(t: "架构技术演进"),
+            L(t: "设计模式"),
+            L(t: "包管理工具",sub: [
+                L(t: "包管理工具-介绍"),
+                L(t: "Swift Package Manager"),
+                L(t: "CocoaPods")
+            ]),
+            L(t: "组件化模块化"),
+            L(t: "容器化插件化"),
+            L(t: "跨平台", sub: [
+                L(t: "跨平台-Swift"),
+                L(t: "跨平台-布局渲染"),
+                L(t: "跨平台-大厂自研"),
+                L(t: "跨平台-React Native"),
+            ]),
+            L(t: "编辑器", sub: [
+                L(t: "Xcode"),
+                L(t: "编辑器-三方工具"),
+                L(t: "VSCode"),
+            ]),
+            L(t: "Bazel", sub: [
+                L(t: "Bazel-介绍"),
+                L(t: "Bazel-生成Xcode工程"),
+                L(t: "Bazel-依赖分析"),
+                L(t: "Bazel-query指令找依赖关系"),
+                L(t: "Bazel-远程执行配置"),
+                L(t: "Bazel-远程缓存配置"),
+                L(t: "Bazel-自定义的构建规则"),
+            ]),
+            L(t: "自动化构建流程"),
+            
+            L(t: "单例"),
+            L(t: "程序入口点", icon: "door.right.hand.open"),
         ]),
         L(t: "macOS", icon: "macstudio", sub: [
 //            L(t: "macOS技术演进"),
@@ -651,7 +670,7 @@ final class GuideListModel {
             L(t: "visionOS-空间视频"),
             L(t: "visionOS-声音"),
         ]),
-        L(t: "人工智能", icon:"cpu", sub: [
+        L(t: "人工智能", icon:"cpu.fill", sub: [
             L(t: "人工智能-介绍"),
             L(t: "Core ML"),
             L(t: "Create ML"),
