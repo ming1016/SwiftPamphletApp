@@ -193,6 +193,8 @@
 		087AAA9B2C9AB32800877650 /* CocoaPods(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA9A2C9AB32800877650 /* CocoaPods(ap).md */; };
 		087AAA9D2C9ABEFB00877650 /* 人工智能-文本(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA9C2C9ABEFB00877650 /* 人工智能-文本(ap).md */; };
 		087AAA9F2C9AC1E200877650 /* 使用LLM模型(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA9E2C9AC1E200877650 /* 使用LLM模型(ap).md */; };
+		087AAAA12C9C0EEA00877650 /* 人工智能-Translation(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAAA02C9C0EEA00877650 /* 人工智能-Translation(ap).md */; };
+		087AAAA32C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */; };
 		0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887A5992BA28F6D00131359 /* CSGuideView.swift */; };
 		0888EF752C1C280F004967AD /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869233F2BF2BF81006779A3 /* AVKit.framework */; };
 		088F2C222C87F9A700DCA64F /* IO性能-文件读写(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C212C87F9A700DCA64F /* IO性能-文件读写(ap).md */; };
@@ -675,6 +677,8 @@
 		087AAA9A2C9AB32800877650 /* CocoaPods(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CocoaPods(ap).md"; sourceTree = "<group>"; };
 		087AAA9C2C9ABEFB00877650 /* 人工智能-文本(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-文本(ap).md"; sourceTree = "<group>"; };
 		087AAA9E2C9AC1E200877650 /* 使用LLM模型(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "使用LLM模型(ap).md"; sourceTree = "<group>"; };
+		087AAAA02C9C0EEA00877650 /* 人工智能-Translation(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Translation(ap).md"; sourceTree = "<group>"; };
+		087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Writing Tools(ap).md"; sourceTree = "<group>"; };
 		0887A5992BA28F6D00131359 /* CSGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuideView.swift; sourceTree = "<group>"; };
 		088F2C212C87F9A700DCA64F /* IO性能-文件读写(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "IO性能-文件读写(ap).md"; sourceTree = "<group>"; };
 		088F2C232C87FDFE00DCA64F /* IO性能-文件缓存(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "IO性能-文件缓存(ap).md"; sourceTree = "<group>"; };
@@ -1023,6 +1027,8 @@
 				083266932C97E52700E27CC5 /* Core ML(ap).md */,
 				083266952C97E5FF00E27CC5 /* Create ML(ap).md */,
 				087AAA9C2C9ABEFB00877650 /* 人工智能-文本(ap).md */,
+				087AAAA02C9C0EEA00877650 /* 人工智能-Translation(ap).md */,
+				087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */,
 				083266972C97E62F00E27CC5 /* 人工智能-语音(ap).md */,
 				083266992C97E64700E27CC5 /* 人工智能-视觉(ap).md */,
 				0832669B2C97E65A00E27CC5 /* 人工智能-Metal(ap).md */,
@@ -2508,6 +2514,7 @@
 				08BDD5912C6B007A00914412 /* Blend Modes(ap).md in Resources */,
 				08BDD5502C6B007A00914412 /* 性能技术演进(ap).md in Resources */,
 				0832668D2C97238C00E27CC5 /* visionOS-Unity(ap).md in Resources */,
+				087AAAA32C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md in Resources */,
 				08448FDA279EC6F500B61353 /* 赋值(ap).md in Resources */,
 				08BDD52A2C6B007A00914412 /* 系统判断(ap).md in Resources */,
 				08BDD5652C6B007A00914412 /* PhotoPicker(ap).md in Resources */,
@@ -2658,6 +2665,7 @@
 				08448FE6279EC82500B61353 /* 逻辑(ap).md in Resources */,
 				08448F95279EB96F00B61353 /* 变量(ap).md in Resources */,
 				0851E5532C86783400D9463A /* LLDB(ap).md in Resources */,
+				087AAAA12C9C0EEA00877650 /* 人工智能-Translation(ap).md in Resources */,
 				087A7AEE2C80C22400321F85 /* iOS虚拟内存(ap).md in Resources */,
 				08BDD5DF2C6C4BAE00914412 /* SwiftUI数据流-@State(ap).md in Resources */,
 				08BDD5E12C6C4BC500914412 /* SwiftUI数据流-@Binding(ap).md in Resources */,

@@ -25,6 +25,7 @@ struct InfosView: View {
             fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
                 (info.name.localizedStandardContains(searchString)
                 || info.url.localizedStandardContains(searchString)
+                 || info.relateName.localizedStandardContains(searchString)
                  || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName
             }, sortBy: sortOrder)
         } else {
@@ -32,6 +33,7 @@ struct InfosView: View {
                 if searchString.isEmpty == false {
                     info.name.localizedStandardContains(searchString)
                     || info.url.localizedStandardContains(searchString)
+                    || info.relateName.localizedStandardContains(searchString)
                      || info.des.localizedStandardContains(searchString)
                 } else if filterCateName.isEmpty == false {
                     info.category?.name == filterCateName

@@ -675,6 +675,8 @@ final class GuideListModel {
             L(t: "Core ML"),
             L(t: "Create ML"),
             L(t: "人工智能-文本"),
+            L(t: "人工智能-Translation"),
+            L(t: "人工智能-Writing Tools"),
             L(t: "人工智能-语音"),
             L(t: "人工智能-视觉"),
             L(t: "人工智能-Metal"),
