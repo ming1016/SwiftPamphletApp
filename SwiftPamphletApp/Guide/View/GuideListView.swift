@@ -642,7 +642,6 @@ final class GuideListModel {
                 L(t: "Bazel-自定义的构建规则"),
             ]),
             L(t: "自动化构建流程"),
-            
             L(t: "单例"),
             L(t: "程序入口点", icon: "door.right.hand.open"),
         ]),

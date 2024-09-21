@@ -37,8 +37,8 @@ struct GuideDetailView: View {
         self.tContent = ""
         self._trigger = trigger
         var fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
-            info.relateName == t && info.isArchived == false
-        }, sortBy: [SortDescriptor(\IOInfo.updateDate, order: .reverse)])
+            info.relateName == t
+        }, sortBy: [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.updateDate, order: .reverse)])
         fd.fetchLimit = limit.wrappedValue
         _infos = Query(fd)
         self._limit = limit
