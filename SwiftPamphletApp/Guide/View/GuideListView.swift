@@ -27,49 +27,47 @@ struct GuideListView: View {
             }
             .padding(.top, 10)
         }
-        NavigationStack {
-            SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
-                NavigationLink(destination: GuideDetailView(t: i.t, icon: i.icon, plName: "ap", limit: $limit, trigger: $trigger)) {
-                    HStack(spacing:3) {
-                        if i.icon.isEmpty == false {
-                            Image(systemName: i.icon)
-                                .foregroundStyle(i.sub == nil ? Color.secondary : .indigo)
-                        } else if i.sub != nil {
-                            Image(systemName: "folder.fill")
-                                .foregroundStyle(.indigo)
-                        }
-                        Text(listModel.searchText.isEmpty == true ? GuideListModel.simpleTitle(i.t) : i.t)
-                        Spacer()
-                        if apBookmarks.contains(i.t) {
-                            Image(systemName: "bookmark")
-                                .foregroundStyle(.secondary)
-                                .font(.footnote)
-                        }
+        SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
+            NavigationLink(destination: GuideDetailView(t: i.t, icon: i.icon, plName: "ap", limit: $limit, trigger: $trigger)) {
+                HStack(spacing:3) {
+                    if i.icon.isEmpty == false {
+                        Image(systemName: i.icon)
+                            .foregroundStyle(i.sub == nil ? Color.secondary : .indigo)
+                    } else if i.sub != nil {
+                        Image(systemName: "folder.fill")
+                            .foregroundStyle(.indigo)
                     }
-                    .contentShape(Rectangle())
+                    Text(listModel.searchText.isEmpty == true ? GuideListModel.simpleTitle(i.t) : i.t)
+                    Spacer()
+                    if apBookmarks.contains(i.t) {
+                        Image(systemName: "bookmark")
+                            .foregroundStyle(.secondary)
+                            .font(.footnote)
+                    }
+                }
+                .contentShape(Rectangle())
+            }
+        }
+        .searchable(text: $listModel.searchText, prompt: "搜索 Apple 技术手册")
+        .listStyle(.sidebar)
+        .onChange(of: trigger, { oldValue, newValue in
+            updateApBookmarks()
+        })
+        .onAppear(perform: {
+            updateApBookmarks()
+            //导出内容
+//            listModel.buildMDContent()
+            
+        })
+        .overlay {
+            if listModel.filtered().isEmpty {
+                ContentUnavailableView {
+                    Label("无结果", systemImage: "rectangle.and.text.magnifyingglass")
+                } description: {
+                    Text("请再次输入")
                 }
             }
-            .searchable(text: $listModel.searchText, prompt: "搜索 Apple 技术手册")
-            .listStyle(.sidebar)
-            .onChange(of: trigger, { oldValue, newValue in
-                updateApBookmarks()
-            })
-            .onAppear(perform: {
-                updateApBookmarks()
-                //导出内容
-    //            listModel.buildMDContent()
-                
-            })
-            .overlay {
-                if listModel.filtered().isEmpty {
-                    ContentUnavailableView {
-                        Label("无结果", systemImage: "rectangle.and.text.magnifyingglass")
-                    } description: {
-                        Text("请再次输入")
-                    }
-                }
-            } // end overlay
-        }
+        } // end overlay
     }
     
     func updateApBookmarks() {
