@@ -28,19 +28,22 @@ struct InfosView: View {
                  || info.relateName.localizedStandardContains(searchString)
                  || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName
             }, sortBy: sortOrder)
+        } else if searchString.isEmpty == false {
+            fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
+                info.name.localizedStandardContains(searchString)
+                || info.url.localizedStandardContains(searchString)
+                || info.relateName.localizedStandardContains(searchString)
+                 || info.des.localizedStandardContains(searchString)
+            }, sortBy: sortOrder)
+        } else if filterCateName.isEmpty == false {
+            fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
+                info.category?.name == filterCateName
+            }, sortBy: sortOrder)
         } else {
             fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
-                if searchString.isEmpty == false {
-                    info.name.localizedStandardContains(searchString)
-                    || info.url.localizedStandardContains(searchString)
-                    || info.relateName.localizedStandardContains(searchString)
-                     || info.des.localizedStandardContains(searchString)
-                } else if filterCateName.isEmpty == false {
-                    info.category?.name == filterCateName
-                } else {
-                    true
-                }
+                true
             }, sortBy: sortOrder)
+            
         }
         
         // 测试无数据用
