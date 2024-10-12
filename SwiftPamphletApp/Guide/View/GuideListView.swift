@@ -29,7 +29,15 @@ struct GuideListView: View {
         }
         NavigationStack {
             SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
-                NavigationLink(destination: GuideDetailView(t: i.t, icon: i.icon, plName: "ap", limit: $limit, trigger: $trigger)) {
+                NavigationLink(
+                    destination: GuideDetailView(
+                        t: i.t,
+                        icon: i.icon,
+                        plName: "ap",
+                        limit: $limit,
+                        trigger: $trigger
+                    )
+                ) {
                     HStack(spacing:3) {
                         if i.icon.isEmpty == false {
                             Image(systemName: i.icon)
@@ -49,7 +57,10 @@ struct GuideListView: View {
                     .contentShape(Rectangle())
                 }
             }
-            .searchable(text: $listModel.searchText, prompt: "搜索 Apple 技术手册")
+            .searchable(
+                text: $listModel.searchText,
+                prompt: "搜索 Apple 技术手册"
+            )
             .listStyle(.sidebar)
             .onChange(of: trigger, { oldValue, newValue in
                 updateApBookmarks()
@@ -63,7 +74,10 @@ struct GuideListView: View {
             .overlay {
                 if listModel.filtered().isEmpty {
                     ContentUnavailableView {
-                        Label("无结果", systemImage: "rectangle.and.text.magnifyingglass")
+                        Label(
+                            "无结果",
+                            systemImage: "rectangle.and.text.magnifyingglass"
+                        )
                     } description: {
                         Text("请再次输入")
                     }
