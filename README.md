@@ -18,9 +18,9 @@ Swift开发的手册，是个 macOS 程序，已上线macOS应用商店，[点�
 - 手册内容和资料可搜索
 - Github 开发者和仓库信息添加管理
 
-本应用知识点目前主要有 Swift 基础语法，SwiftUI，SwiftData，小组件等知识内容。
+本应用知识点目前主要有 Swift 基础语法，SwiftUI，SwiftData，小组件等知识内容。更多 iOS 开发资料，信息以及开发者活动可以关注 [XR 基地](https://xreality.zone) 和 [SwiftGG](https://swiftgg.team)。SwiftGG 的愿景是致力于成为中国与海外技术社区的桥梁，为中国开发者创造展示自我走向世界舞台的机会。
 
-本版本解决了以下几个问题。
+小册子6.x版本解决了以下几个问题。
 
 第一个，存储的问题。以前使用的是三方数据库，写法比较繁琐且和 SwiftUI 结合的不好。现在用的是 SwiftData，写法简洁了很多，代码也好维护了。更多技术重构细节可以直接查看代码。
 
