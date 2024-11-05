@@ -475,9 +475,11 @@ final class GuideListModel {
             L(t: "小组件-参考资料", icon: "books.vertical"),
         ]),
         L(t: "系统能力",icon: "apple.terminal",sub: [
+            L(t: "WeatherKit", icon: "app"),
             L(t: "Swift-DocC", icon: "doc.append"),
             L(t: "AppIcon", icon: "app"),
             L(t: "Share Extension", icon: "app")
+            
         ]),
         
         L(t: "多线程", icon: "text.line.first.and.arrowtriangle.forward", sub: [
