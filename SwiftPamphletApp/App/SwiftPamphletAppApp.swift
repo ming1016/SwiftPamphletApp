@@ -14,7 +14,9 @@ import SMGitHub
 
 @main
 struct SwiftPamphletAppApp: App {
+    #if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    #endif
     init() {
         let gr = GitHubReq.shared
         if SPC.gitHubAccessToken.isEmpty == true {
@@ -25,19 +27,30 @@ struct SwiftPamphletAppApp: App {
     }
     var body: some Scene {
         WindowGroup {
+            #if os(macOS)
             HomeView()
                 .modelContainer(for: [IOInfo.self, DeveloperModel.self, BookmarkModel.self], isUndoEnabled: true)
+            #elseif os(iOS)
+            HomeiOSView()
+//                .modelContainer(for: [IOInfo.self, DeveloperModel.self, BookmarkModel.self], isUndoEnabled: true)
+            #endif
+            
         }
+        #if os(macOS)
         .windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true)) // 用来控制是否展示标题
+        #endif
+        #if os(macOS)
         Settings {
             SettingView()
         }
+        #endif
+        
     }
 }
 
 // MARK: - UnCat
 
-
+#if os(macOS)
 class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
     var op: String?
@@ -55,3 +68,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
 }
+#endif

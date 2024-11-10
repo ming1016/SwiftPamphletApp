@@ -19,6 +19,7 @@ struct HomeView: View {
     @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
+#if os(macOS)
         NavigationSplitView {
             SidebarView(
                 selectedDataLinkString: $selectedDataLinkString,
@@ -90,6 +91,7 @@ struct HomeView: View {
         .onOpenURL(perform: { url in
             // 处理外部链接
         })
+#endif
     }
 }
 

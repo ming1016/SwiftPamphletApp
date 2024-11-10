@@ -61,7 +61,9 @@ struct GuideListView: View {
                 text: $listModel.searchText,
                 prompt: "搜索 Apple 技术手册"
             )
+            #if os(macOS)
             .listStyle(.sidebar)
+            #endif
             .onChange(of: trigger, { oldValue, newValue in
                 updateApBookmarks()
             })
@@ -84,6 +86,9 @@ struct GuideListView: View {
                 }
             } // end overlay
         }
+        #if os(iOS)
+        .navigationTitle("Apple 开发手册")
+        #endif
     }
     
     func updateApBookmarks() {

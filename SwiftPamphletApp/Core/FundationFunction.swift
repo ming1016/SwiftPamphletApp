@@ -39,13 +39,14 @@ func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> St
 // MARK: - 基础
 // decoder
 // extension 
-
+#if os(macOS)
 extension NSPasteboard {
     func copyText(_ text: String) {
         self.clearContents()
         self.setString(text, forType: .string)
     }
 }
+#endif
 
 // base64
 extension String {

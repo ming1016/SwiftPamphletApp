@@ -8,6 +8,7 @@
 import SwiftUI
 import InfoOrganizer
 
+#if os(macOS)
 struct SidebarView: View {
     @AppStorage(SPC.isShowGithub) var isShowGithub = false
     @Binding var selectedDataLinkString: String
@@ -28,5 +29,5 @@ struct SidebarView: View {
         })
     }
 }
-
+#endif
 

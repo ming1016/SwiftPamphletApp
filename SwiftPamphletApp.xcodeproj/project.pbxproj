@@ -477,6 +477,7 @@
 		08F14B442BBE2865005B46CC /* ViewComponentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F14B432BBE2865005B46CC /* ViewComponentImage.swift */; };
 		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
 		3A30EFD62CDA818B0029CB2F /* WeatherKit(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */; };
+		3A3168932CE0FD53004DFC5C /* HomeiOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */; };
 		3A46DEF52BD7AAB2008AD993 /* SMDate in Frameworks */ = {isa = PBXBuildFile; productRef = 3A46DEF42BD7AAB2008AD993 /* SMDate */; };
 		3ACA74FB2BD7964A0024B18E /* SMFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACA74FA2BD7964A0024B18E /* SMFile */; };
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
@@ -954,6 +955,7 @@
 		08F14B432BBE2865005B46CC /* ViewComponentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentImage.swift; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
 		3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "WeatherKit(ap).md"; sourceTree = "<group>"; };
+		3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeiOSView.swift; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
 		3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeveloper.swift; sourceTree = "<group>"; };
 		3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCategoryInfoListView.swift; sourceTree = "<group>"; };
@@ -1054,6 +1056,7 @@
 			isa = PBXGroup;
 			children = (
 				084417742B99B9060049297D /* HomeView.swift */,
+				3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */,
 				084417762B99BA3F0049297D /* SidebarView.swift */,
 				084417782B99BE720049297D /* DataLink.swift */,
 			);
@@ -2825,6 +2828,7 @@
 				3AF2A2E52BE231BD00F3BE1B /* StarInfosView.swift in Sources */,
 				3AF2A2E32BE2317300F3BE1B /* StarInfoListView.swift in Sources */,
 				3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */,
+				3A3168932CE0FD53004DFC5C /* HomeiOSView.swift in Sources */,
 				084417772B99BA3F0049297D /* SidebarView.swift in Sources */,
 				08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */,
 				0825E4872BC6596F00332378 /* EditCustomSearchView.swift in Sources */,
@@ -3006,6 +3010,10 @@
 				INFOPLIST_FILE = SwiftPamphletApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -3022,11 +3030,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -3051,6 +3062,10 @@
 				INFOPLIST_FILE = SwiftPamphletApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -3060,10 +3075,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

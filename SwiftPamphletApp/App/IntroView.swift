@@ -33,12 +33,21 @@ struct LightingView<Content: View>: View {
 struct IntroView: View {
     var body: some View {
         VStack(spacing: 15) {
+            #if os(macOS)
             if let appIcon = NSImage(named: "AppIcon") {
                 Image(nsImage: appIcon)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 120, height: 120)
             }
+            #elseif os(iOS)
+            if let appIcon = UIImage(named: "AppIcon") {
+                Image(uiImage: appIcon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+            }
+            #endif
             Text("戴铭的开发小册子").bold()
             LightingView {
                 Text("Swift Pamphlet App").gradientTitle(color: .mint)

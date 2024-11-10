@@ -27,6 +27,7 @@ struct SPOutlineListView<D, Content>: View where D: RandomAccessCollection, D.El
     }
 }
 
+
 struct SPOutlineView<D, Content>: View where D: RandomAccessCollection, D.Element: Identifiable, Content: View {
     let d: D
     let c: KeyPath<D.Element, D?>
@@ -113,9 +114,13 @@ struct ShareView: View {
     var body: some View {
         Menu {
             Button {
+                #if os(macOS)
                 let p = NSPasteboard.general
                 p.declareTypes([.string], owner: nil)
                 p.setString(s, forType: .string)
+                #elseif os(iOS)
+                UIPasteboard.general.string = s
+                #endif
             } label: {
                 Image(systemName: "doc.on.doc")
                 Text("拷贝链接")
@@ -137,6 +142,7 @@ struct ShareView: View {
     }
 }
 
+#if os(macOS)
 // MARK: - WebView
 struct WebUIView: NSViewRepresentable {
     var urlStr: String = ""
@@ -268,6 +274,121 @@ struct WebUIViewWithSave: NSViewRepresentable {
         }
     } // end Coordinator
 }
+
+#elseif os(iOS)
+// MARK: - WebView iOS
+struct WebUIView: UIViewRepresentable {
+    var urlStr: String = ""
+    var html: String = ""
+    var baseURLStr: String = ""
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        webView.navigationDelegate = context.coordinator
+        return webView
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        if urlStr.isEmpty {
+            let host = URL(string: baseURLStr)?.host ?? ""
+            uiView.loadHTMLString(html, baseURL: URL(string: "https://\(host)"))
+        } else {
+            if let url = URL(string: urlStr) {
+                let r = URLRequest(url: url)
+                uiView.load(r)
+            }
+        }
+    }
+    
+    class Coordinator: NSObject, WKNavigationDelegate {
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            if navigationAction.navigationType == .linkActivated {
+                if let url = navigationAction.request.url {
+                    let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+                    if components?.scheme == "http" || components?.scheme == "https" {
+                        UIApplication.shared.open(url)
+                        decisionHandler(.cancel)
+                        return
+                    }
+                }
+            }
+            decisionHandler(.allow)
+        }
+    }
+}
+
+struct WebUIViewWithSave: UIViewRepresentable {
+    var urlStr: String = ""
+    var html: String = ""
+    var baseURLStr: String = ""
+    
+    @Binding var savingDataTrigger: Bool
+    @Binding var savingData: Data?
+    
+    @Binding var isStop: Bool
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        webView.navigationDelegate = context.coordinator
+        return webView
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        if savingDataTrigger == true {
+            uiView.createWebArchiveData { result in
+                do {
+                    let data = try result.get()
+                    savingData = data
+                } catch {
+                    print("创建 webarchivedata 数据失败，\(error)")
+                }
+            }
+            savingDataTrigger = false
+        }
+        
+        if isStop == true {
+            return
+        }
+        
+        if savingData != nil {
+            if let data = savingData {
+                uiView.load(data, mimeType: "application/x-webarchive", characterEncodingName: "utf-8", baseURL: SMFile.getDocumentsDirectory())
+                isStop = true
+            }
+        } else {
+            if let url = URL(string: urlStr) {
+                let r = URLRequest(url: url)
+                uiView.load(r)
+                isStop = true
+            }
+        }
+    }
+    
+    class Coordinator: NSObject, WKNavigationDelegate {
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            if navigationAction.navigationType == .linkActivated {
+                if let url = navigationAction.request.url {
+                    let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+                    if components?.scheme == "http" || components?.scheme == "https" {
+                        UIApplication.shared.open(url)
+                        decisionHandler(.cancel)
+                        return
+                    }
+                }
+            }
+            decisionHandler(.allow)
+        }
+    }
+}
+#endif
 
 // MARK: - Time
 struct GitHubApiTimeView: View {

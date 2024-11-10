@@ -39,6 +39,7 @@ struct InfoRowView: View {
                         if coverImg.url.isEmpty == false {
                             NukeImage(width: 50, height: 50, url: coverImg.url, contentModel: .fill)
                         } else if let imgData = coverImg.imgData {
+                            #if os(macOS)
                             if let nsImage = NSImage(data: imgData) {
                                 Image(nsImage: nsImage)
                                     .resizable()
@@ -46,6 +47,15 @@ struct InfoRowView: View {
                                     .frame(width: 50, height: 50)
                                     .cornerRadius(5)
                             }
+                            #elseif os(iOS)
+                            if let uiImage = UIImage(data: imgData) {
+                                Image(uiImage: uiImage)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 50, height: 50)
+                                    .cornerRadius(5)
+                            }
+                            #endif
                         }
                         
                     }

@@ -133,7 +133,11 @@ struct EditInfoView: View {
     
     // MARK: Image
     @State private var largeImageUrlStr = ""
+    #if os(macOS)
     @State private var largeNSImage: NSImage? = nil
+    #elseif os(iOS)
+    @State private var largeUIImage: UIImage? = nil
+    #endif
     
     @MainActor
     @ViewBuilder
@@ -162,6 +166,7 @@ struct EditInfoView: View {
                                 ForEach(Array(infoImgs.enumerated()), id:\.0) {i, img in
                                     VStack {
                                         if let data = img.imgData {
+                                            #if os(macOS)
                                             if let nsImg = NSImage(data: data) {
                                                 Image(nsImage: nsImg)
                                                     .resizable()
@@ -185,6 +190,31 @@ struct EditInfoView: View {
 
                                                     }
                                             }
+                                            #elseif os(iOS)
+                                            if let uiImg = UIImage(data: data) {
+                                                Image(uiImage: uiImg)
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .cornerRadius(5)
+                                                    .onTapGesture(perform: {
+                                                        largeUIImage = uiImg
+                                                    })
+                                                    .contextMenu {
+                                                        Button {
+                                                            IOInfo.updateCoverImage(info: info, img: img)
+                                                        } label: {
+                                                            Label("设为封面图", image: "doc.text.image")
+                                                        }
+                                                        Button {
+                                                            info.imgs?.remove(at: i)
+                                                            IOImg.delete(img)
+                                                        } label: {
+                                                            Label("删除", image: "circle")
+                                                        }
+                                                        
+                                                    }
+                                            }
+                                        #endif
                                         } else if img.url.isEmpty == false {
                                             NukeImage(url: img.url)
                                             .contextMenu {
@@ -194,9 +224,14 @@ struct EditInfoView: View {
                                                     Label("设为封面图", image: "doc.text.image")
                                                 }
                                                 Button {
+                                                    #if os(macOS)
                                                     let p = NSPasteboard.general
                                                     p.declareTypes([.string], owner: nil)
                                                     p.setString(img.url, forType: .string)
+                                                    #elseif os(iOS)
+                                                    let p = UIPasteboard.general
+                                                    p.string = img.url
+                                                    #endif
                                                 } label: {
                                                     Label("复制图片链接", image: "circle")
                                                 }
@@ -227,9 +262,14 @@ struct EditInfoView: View {
                                         Label("设为封面图", image: "doc.text.image")
                                     }
                                     Button {
+                                        #if os(macOS)
                                         let p = NSPasteboard.general
                                         p.declareTypes([.string], owner: nil)
                                         p.setString(img, forType: .string)
+                                        #elseif os(iOS)
+                                        let p = UIPasteboard.general
+                                        p.string = img
+                                        #endif
                                     } label: {
                                         Label("复制图片链接", image: "circle")
                                     }
@@ -251,6 +291,7 @@ struct EditInfoView: View {
                             }
                         }
                 }
+                #if os(macOS)
                 if largeNSImage != nil {
                     Image(nsImage: largeNSImage!)
                         .resizable()
@@ -261,11 +302,27 @@ struct EditInfoView: View {
                             }
                         }
                 }
+                #elseif os(iOS)
+                if largeUIImage != nil {
+                    Image(uiImage: largeUIImage!)
+                        .resizable()
+                        .scaledToFit()
+                        .onTapGesture {
+                            withAnimation {
+                                largeUIImage = nil
+                            }
+                        }
+                }
+                #endif
             }
         }
         .onChange(of: info, { oldValue, newValue in
             largeImageUrlStr = ""
+            #if os(macOS)
             largeNSImage = nil
+            #elseif os(iOS)
+            largeUIImage = nil
+            #endif
         })
         .padding(10)
         .tabItem { Label("图集", systemImage: "circle")}
