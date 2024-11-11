@@ -12,10 +12,13 @@ import InfoOrganizer
 import SMFile
 import SMGitHub
 
+
 @main
 struct SwiftPamphletAppApp: App {
     #if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    #elseif os(iOS)
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     #endif
     init() {
         let gr = GitHubReq.shared
@@ -57,7 +60,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("-- AppDelegate Section --")
-
         // 生成 Markdown 文件
 //        AutoTask.buildContentMarkdownFile()
 
@@ -67,5 +69,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        codeCoverageProfrawDump()
     }
     
+}
+#elseif os(iOS)
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        _ = MetricKitManager.shared
+        print("didFinishLaunchingWithOptions")
+        return true
+    }
 }
 #endif

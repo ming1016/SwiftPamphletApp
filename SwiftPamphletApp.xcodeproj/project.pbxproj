@@ -481,6 +481,7 @@
 		3A3168952CE0FFCE004DFC5C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3168942CE0FFCE004DFC5C /* Launch Screen.storyboard */; platformFilter = ios; };
 		3A46DEF52BD7AAB2008AD993 /* SMDate in Frameworks */ = {isa = PBXBuildFile; productRef = 3A46DEF42BD7AAB2008AD993 /* SMDate */; };
 		3ACA74FB2BD7964A0024B18E /* SMFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACA74FA2BD7964A0024B18E /* SMFile */; };
+		3ADBA84F2CE209FB00B0050B /* MetricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADBA84E2CE209FB00B0050B /* MetricManager.swift */; };
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
 		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
 		3AE4CA382BD7813D005BEF2C /* InfoOrganizer in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE4CA372BD7813D005BEF2C /* InfoOrganizer */; };
@@ -958,6 +959,7 @@
 		3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "WeatherKit(ap).md"; sourceTree = "<group>"; };
 		3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeiOSView.swift; sourceTree = "<group>"; };
 		3A3168942CE0FFCE004DFC5C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3ADBA84E2CE209FB00B0050B /* MetricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricManager.swift; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
 		3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeveloper.swift; sourceTree = "<group>"; };
 		3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCategoryInfoListView.swift; sourceTree = "<group>"; };
@@ -1327,6 +1329,7 @@
 		086A5F052744E88E00FECE02 /* SwiftPamphletApp */ = {
 			isa = PBXGroup;
 			children = (
+				3ADBA84D2CE209C000B0050B /* Performance */,
 				086D48A02BBB820100835544 /* Info.plist */,
 				0846234D2BAC59AF003373D9 /* App */,
 				084417732B99B8EA0049297D /* HomeUI */,
@@ -2261,6 +2264,14 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		3ADBA84D2CE209C000B0050B /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				3ADBA84E2CE209FB00B0050B /* MetricManager.swift */,
+			);
+			path = Performance;
+			sourceTree = "<group>";
+		};
 		3AE0D5962BAB09AB00D6D925 /* Developer */ = {
 			isa = PBXGroup;
 			children = (
@@ -2849,6 +2860,7 @@
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				084417752B99B9060049297D /* HomeView.swift in Sources */,
 				3AF2A2E72BE239A300F3BE1B /* ArchivedInfoListView.swift in Sources */,
+				3ADBA84F2CE209FB00B0050B /* MetricManager.swift in Sources */,
 				086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */,
 				08D8F00E2BF044FB00AA0020 /* WWDCDetailView.swift in Sources */,
 				08069CAD2BDE7A6B00D48E24 /* GuideDetailView.swift in Sources */,
