@@ -478,7 +478,7 @@
 		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
 		3A30EFD62CDA818B0029CB2F /* WeatherKit(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */; };
 		3A3168932CE0FD53004DFC5C /* HomeiOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */; };
-		3A3168952CE0FFCE004DFC5C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3168942CE0FFCE004DFC5C /* Launch Screen.storyboard */; };
+		3A3168952CE0FFCE004DFC5C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3168942CE0FFCE004DFC5C /* Launch Screen.storyboard */; platformFilter = ios; };
 		3A46DEF52BD7AAB2008AD993 /* SMDate in Frameworks */ = {isa = PBXBuildFile; productRef = 3A46DEF42BD7AAB2008AD993 /* SMDate */; };
 		3ACA74FB2BD7964A0024B18E /* SMFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACA74FA2BD7964A0024B18E /* SMFile */; };
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
