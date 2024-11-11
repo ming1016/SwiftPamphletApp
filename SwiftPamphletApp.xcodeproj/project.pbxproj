@@ -480,8 +480,12 @@
 		3A3168932CE0FD53004DFC5C /* HomeiOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */; };
 		3A3168952CE0FFCE004DFC5C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3168942CE0FFCE004DFC5C /* Launch Screen.storyboard */; platformFilter = ios; };
 		3A46DEF52BD7AAB2008AD993 /* SMDate in Frameworks */ = {isa = PBXBuildFile; productRef = 3A46DEF42BD7AAB2008AD993 /* SMDate */; };
+		3AA462362CE228CA00774B59 /* NotificationPreheat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA462352CE228CA00774B59 /* NotificationPreheat.swift */; };
+		3AA462382CE261CC00774B59 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA462372CE261CC00774B59 /* TaskManager.swift */; };
+		3AA4623D2CE2734E00774B59 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 3AA4623C2CE2734E00774B59 /* AsyncAlgorithms */; };
 		3ACA74FB2BD7964A0024B18E /* SMFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACA74FA2BD7964A0024B18E /* SMFile */; };
 		3ADBA84F2CE209FB00B0050B /* MetricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADBA84E2CE209FB00B0050B /* MetricManager.swift */; };
+		3ADBA8512CE216E900B0050B /* Perf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADBA8502CE216E900B0050B /* Perf.swift */; };
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
 		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
 		3AE4CA382BD7813D005BEF2C /* InfoOrganizer in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE4CA372BD7813D005BEF2C /* InfoOrganizer */; };
@@ -959,7 +963,10 @@
 		3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "WeatherKit(ap).md"; sourceTree = "<group>"; };
 		3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeiOSView.swift; sourceTree = "<group>"; };
 		3A3168942CE0FFCE004DFC5C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3AA462352CE228CA00774B59 /* NotificationPreheat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPreheat.swift; sourceTree = "<group>"; };
+		3AA462372CE261CC00774B59 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		3ADBA84E2CE209FB00B0050B /* MetricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricManager.swift; sourceTree = "<group>"; };
+		3ADBA8502CE216E900B0050B /* Perf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perf.swift; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
 		3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeveloper.swift; sourceTree = "<group>"; };
 		3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCategoryInfoListView.swift; sourceTree = "<group>"; };
@@ -982,6 +989,7 @@
 				08F14B402BBDA3EA005B46CC /* NukeUI in Frameworks */,
 				08F14B422BBDA3EA005B46CC /* NukeVideo in Frameworks */,
 				08F14B3E2BBDA3EA005B46CC /* NukeExtensions in Frameworks */,
+				3AA4623D2CE2734E00774B59 /* AsyncAlgorithms in Frameworks */,
 				3A46DEF52BD7AAB2008AD993 /* SMDate in Frameworks */,
 				08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */,
 				08397E322B9F39C100DFDD02 /* SwiftSoup in Frameworks */,
@@ -2268,6 +2276,9 @@
 			isa = PBXGroup;
 			children = (
 				3ADBA84E2CE209FB00B0050B /* MetricManager.swift */,
+				3ADBA8502CE216E900B0050B /* Perf.swift */,
+				3AA462352CE228CA00774B59 /* NotificationPreheat.swift */,
+				3AA462372CE261CC00774B59 /* TaskManager.swift */,
 			);
 			path = Performance;
 			sourceTree = "<group>";
@@ -2339,6 +2350,7 @@
 				3A46DEF42BD7AAB2008AD993 /* SMDate */,
 				0868D00A2BDD37280023C871 /* SMGitHub */,
 				082036792C02EEA7002FB5E3 /* SMUI */,
+				3AA4623C2CE2734E00774B59 /* AsyncAlgorithms */,
 			);
 			productName = SwiftPamphletApp;
 			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
@@ -2381,6 +2393,7 @@
 				3A46DEF32BD7AAB2008AD993 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMDate" */,
 				0868D0092BDD37280023C871 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMGitHub" */,
 				082036782C02EEA7002FB5E3 /* XCLocalSwiftPackageReference "SwiftPamphletApp/SharePackage/SMUI" */,
+				3AA4623B2CE2734E00774B59 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
 			);
 			productRefGroup = 086A5F042744E88E00FECE02 /* Products */;
 			projectDirPath = "";
@@ -2845,6 +2858,7 @@
 				3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */,
 				3A3168932CE0FD53004DFC5C /* HomeiOSView.swift in Sources */,
 				084417772B99BA3F0049297D /* SidebarView.swift in Sources */,
+				3AA462362CE228CA00774B59 /* NotificationPreheat.swift in Sources */,
 				08ED801C2B9D1EEC0069B7EC /* SettingView.swift in Sources */,
 				0825E4872BC6596F00332378 /* EditCustomSearchView.swift in Sources */,
 				3AF2A2E92BE239BA00F3BE1B /* ArchivedInfosView.swift in Sources */,
@@ -2870,10 +2884,12 @@
 				08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
 				086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */,
+				3ADBA8512CE216E900B0050B /* Perf.swift in Sources */,
 				08CD61FF27758B8A008C0935 /* Token.swift in Sources */,
 				3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */,
 				08EF35D22BECFDA80098E2D4 /* BookmarkModel.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
+				3AA462382CE261CC00774B59 /* TaskManager.swift in Sources */,
 				084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3037,6 +3053,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 6.6.4;
+				MERGED_BINARY_TYPE = none;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
 					"-interposable",
@@ -3090,6 +3107,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 6.6.4;
+				MERGED_BINARY_TYPE = none;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3194,6 +3212,14 @@
 				minimumVersion = 12.5.0;
 			};
 		};
+		3AA4623B2CE2734E00774B59 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -3252,6 +3278,11 @@
 		3A46DEF42BD7AAB2008AD993 /* SMDate */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SMDate;
+		};
+		3AA4623C2CE2734E00774B59 /* AsyncAlgorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AA4623B2CE2734E00774B59 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncAlgorithms;
 		};
 		3ACA74FA2BD7964A0024B18E /* SMFile */ = {
 			isa = XCSwiftPackageProductDependency;
