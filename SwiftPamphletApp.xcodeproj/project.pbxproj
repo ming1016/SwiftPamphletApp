@@ -129,7 +129,6 @@
 		0851E56D2C8711DA00D9463A /* OC运行时(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E56C2C8711DA00D9463A /* OC运行时(ap).md */; };
 		0851E5702C872A7A00D9463A /* CPU占用率(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E56F2C872A7A00D9463A /* CPU占用率(ap).md */; };
 		0851E5722C872AD100D9463A /* CPU核数和类型(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5712C872AD100D9463A /* CPU核数和类型(ap).md */; };
-		0851E5772C87478700D9463A /* 启动优化-启动时间(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5762C87478700D9463A /* 启动优化-启动时间(ap).md */; };
 		0851E5792C87563100D9463A /* 截获网络请求数据(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5782C87563100D9463A /* 截获网络请求数据(ap).md */; };
 		0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */ = {isa = PBXBuildFile; productRef = 0868D00A2BDD37280023C871 /* SMGitHub */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
@@ -489,6 +488,11 @@
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
 		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
 		3AE4CA382BD7813D005BEF2C /* InfoOrganizer in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE4CA372BD7813D005BEF2C /* InfoOrganizer */; };
+		3AEC7F4B2CE37028005D510D /* 动态库与静态库(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F4A2CE37028005D510D /* 动态库与静态库(ap).md */; };
+		3AEC7F4D2CE373C5005D510D /* 启动优化-测试(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F4C2CE373C5005D510D /* 启动优化-测试(ap).md */; };
+		3AEC7F592CE38749005D510D /* OC项目启动时间(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F572CE38749005D510D /* OC项目启动时间(ap).md */; };
+		3AEC7F5B2CE3876D005D510D /* Swift项目启动时间(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F5A2CE3876D005D510D /* Swift项目启动时间(ap).md */; };
+		3AEC7F5D2CE39250005D510D /* 可合并库(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F5C2CE39250005D510D /* 可合并库(ap).md */; };
 		3AF2A2DF2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */; };
 		3AF2A2E12BE22B5800F3BE1B /* UnCategoryInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2E02BE22B5800F3BE1B /* UnCategoryInfosView.swift */; };
 		3AF2A2E32BE2317300F3BE1B /* StarInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2E22BE2317300F3BE1B /* StarInfoListView.swift */; };
@@ -618,7 +622,6 @@
 		0851E56C2C8711DA00D9463A /* OC运行时(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC运行时(ap).md"; sourceTree = "<group>"; };
 		0851E56F2C872A7A00D9463A /* CPU占用率(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CPU占用率(ap).md"; sourceTree = "<group>"; };
 		0851E5712C872AD100D9463A /* CPU核数和类型(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CPU核数和类型(ap).md"; sourceTree = "<group>"; };
-		0851E5762C87478700D9463A /* 启动优化-启动时间(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动优化-启动时间(ap).md"; sourceTree = "<group>"; };
 		0851E5782C87563100D9463A /* 截获网络请求数据(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "截获网络请求数据(ap).md"; sourceTree = "<group>"; };
 		0869233F2BF2BF81006779A3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -969,6 +972,11 @@
 		3ADBA8502CE216E900B0050B /* Perf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perf.swift; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
 		3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeveloper.swift; sourceTree = "<group>"; };
+		3AEC7F4A2CE37028005D510D /* 动态库与静态库(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "动态库与静态库(ap).md"; sourceTree = "<group>"; };
+		3AEC7F4C2CE373C5005D510D /* 启动优化-测试(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动优化-测试(ap).md"; sourceTree = "<group>"; };
+		3AEC7F572CE38749005D510D /* OC项目启动时间(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC项目启动时间(ap).md"; sourceTree = "<group>"; };
+		3AEC7F5A2CE3876D005D510D /* Swift项目启动时间(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Swift项目启动时间(ap).md"; sourceTree = "<group>"; };
+		3AEC7F5C2CE39250005D510D /* 可合并库(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "可合并库(ap).md"; sourceTree = "<group>"; };
 		3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCategoryInfoListView.swift; sourceTree = "<group>"; };
 		3AF2A2E02BE22B5800F3BE1B /* UnCategoryInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCategoryInfosView.swift; sourceTree = "<group>"; };
 		3AF2A2E22BE2317300F3BE1B /* StarInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarInfoListView.swift; sourceTree = "<group>"; };
@@ -1302,9 +1310,12 @@
 		0851E5752C87475100D9463A /* 启动优化 */ = {
 			isa = PBXGroup;
 			children = (
-				0851E5762C87478700D9463A /* 启动优化-启动时间(ap).md */,
+				3AEC7F582CE38749005D510D /* 启动时间 */,
 				088F2C282C88438F00DCA64F /* 启动治理思路(ap).md */,
 				088F2C2A2C8843E000DCA64F /* 启动优化-工具(ap).md */,
+				3AEC7F4A2CE37028005D510D /* 动态库与静态库(ap).md */,
+				3AEC7F5C2CE39250005D510D /* 可合并库(ap).md */,
+				3AEC7F4C2CE373C5005D510D /* 启动优化-测试(ap).md */,
 			);
 			path = "启动优化";
 			sourceTree = "<group>";
@@ -2292,6 +2303,15 @@
 			path = Developer;
 			sourceTree = "<group>";
 		};
+		3AEC7F582CE38749005D510D /* 启动时间 */ = {
+			isa = PBXGroup;
+			children = (
+				3AEC7F572CE38749005D510D /* OC项目启动时间(ap).md */,
+				3AEC7F5A2CE3876D005D510D /* Swift项目启动时间(ap).md */,
+			);
+			path = "启动时间";
+			sourceTree = "<group>";
+		};
 		3AF2A2DB2BE227C700F3BE1B /* UnCategoryInfos */ = {
 			isa = PBXGroup;
 			children = (
@@ -2441,7 +2461,7 @@
 				08BDD5C22C6B007A00914412 /* Table-样式(ap).md in Resources */,
 				08F51BC527A374A500693AB6 /* footer_js.html in Resources */,
 				08BDD5552C6B007A00914412 /* macOS技术演进(ap).md in Resources */,
-				0851E5772C87478700D9463A /* 启动优化-启动时间(ap).md in Resources */,
+				3AEC7F4B2CE37028005D510D /* 动态库与静态库(ap).md in Resources */,
 				083266982C97E62F00E27CC5 /* 人工智能-语音(ap).md in Resources */,
 				08BDD5882C6B007A00914412 /* confirmationDialog()(ap).md in Resources */,
 				08BDD58C2C6B007A00914412 /* Popover(ap).md in Resources */,
@@ -2523,6 +2543,7 @@
 				08BDD5682C6B007A00914412 /* Form(ap).md in Resources */,
 				088F2C272C8836B200DCA64F /* 崩溃日志(ap).md in Resources */,
 				08BDD5412C6B007A00914412 /* 小组件-参考资料(ap).md in Resources */,
+				3AEC7F5D2CE39250005D510D /* 可合并库(ap).md in Resources */,
 				08BDD5092C6B007A00914412 /* Combine Timer(ap).md in Resources */,
 				083266752C96C00F00E27CC5 /* visionOS-空间设计(ap).md in Resources */,
 				08448FAD279EC2E900B61353 /* 泛型和协议(ap).md in Resources */,
@@ -2645,6 +2666,7 @@
 				08F0F8B12C95964400DC659B /* 开源-有趣的项目(ap).md in Resources */,
 				08BDD5C02C6B007A00914412 /* Table-多属性排序(ap).md in Resources */,
 				08BDD5902C6B007A00914412 /* SwiftUI是什么(ap).md in Resources */,
+				3AEC7F4D2CE373C5005D510D /* 启动优化-测试(ap).md in Resources */,
 				08BDD5352C6B007A00914412 /* 随机(ap).md in Resources */,
 				08BDD5A42C6B007A00914412 /* Previews协议(ap).md in Resources */,
 				08BDD5012C6B007A00914412 /* KeyframeAnimator(ap).md in Resources */,
@@ -2752,6 +2774,7 @@
 				08BDD5782C6B007A00914412 /* ViewThatFits(ap).md in Resources */,
 				088F2C3A2C93296200DCA64F /* 笔记记录方法(ap).md in Resources */,
 				088F2C3E2C9329E400DCA64F /* PARA记录法(ap).md in Resources */,
+				3AEC7F5B2CE3876D005D510D /* Swift项目启动时间(ap).md in Resources */,
 				08BDD57A2C6B007A00914412 /* 自定义导航栏(ap).md in Resources */,
 				08BDD5B92C6B007A00914412 /* List(ap).md in Resources */,
 				08BDD56B2C6B007A00914412 /* Toggle(ap).md in Resources */,
@@ -2762,6 +2785,7 @@
 				0832667D2C96C18100E27CC5 /* ARKit(ap).md in Resources */,
 				08BDD5942C6B007A00914412 /* SwiftCharts(ap).md in Resources */,
 				08448FE8279EC84B00B61353 /* 恒等(ap).md in Resources */,
+				3AEC7F592CE38749005D510D /* OC项目启动时间(ap).md in Resources */,
 				083266A42C987D9000E27CC5 /* macOS开源-菜单栏(ap).md in Resources */,
 				084DBA122C6DA52D00C9D88D /* 日期组件(ap).md in Resources */,
 				08BDD58E2C6B007A00914412 /* SwiftUI参考资料(ap).md in Resources */,

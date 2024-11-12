@@ -13,6 +13,7 @@ import SMFile
 import SMGitHub
 import os.signpost
 import BackgroundTasks
+import AppIntents
 
 @main
 struct SwiftPamphletAppApp: App {
@@ -54,9 +55,8 @@ struct SwiftPamphletAppApp: App {
                     }
                     scheduleAppRefresh()
                     
-                    // 任务管理器
-                    // 使用示例
-
+                    // 任务管理器示例
+                    taskgroupDemo()
                     
                     #if DEBUG
                     // 主界面加载完成，记录终点
@@ -83,7 +83,6 @@ struct SwiftPamphletAppApp: App {
                         break
                     }
                 }
-                
 //                .modelContainer(for: [IOInfo.self, DeveloperModel.self, BookmarkModel.self], isUndoEnabled: true)
             #endif
         }
@@ -97,6 +96,8 @@ struct SwiftPamphletAppApp: App {
         #endif
         
     }
+    
+    
     
     #if os(iOS)
     // MARK: - Background Task

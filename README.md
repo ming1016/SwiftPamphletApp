@@ -13,10 +13,10 @@ Swift开发的手册，是个 macOS 程序，已上线macOS应用商店，[点�
 
 - 手册书签收藏
 - 资料收集整理（参考[我是怎么做个人知识管理（PKM）的，从史前时代备忘录、Sublime，经历了Evernote，Markdown兴起，Bear的优雅，Notion革命，飞书语雀，Obsidian、Flomo，到最后使用卢曼卡片盒笔记法串起了流程](https://mp.weixin.qq.com/s/PbUOxURK57eIeSnuE1mh4g)这篇文章，里面有提及如何使用小册子的资料整理功能）
-- 离线保存资料
+- 资料网页离线保存（防止网络资料源丢失）
 - 知识点和资料关联
 - 手册内容和资料可搜索
-- Github 开发者和仓库信息添加管理
+- Github 开发者和仓库信息添加管理（在设置里添加 token）
 
 本应用知识点目前主要有 Swift 基础语法，SwiftUI，SwiftData，小组件等知识内容。更多 iOS 开发资料，信息以及开发者活动可以关注 [XR 基地](https://xreality.zone) 和 [SwiftGG](https://swiftgg.team)。SwiftGG 的愿景是致力于成为中国与海外技术社区的桥梁，为中国开发者创造展示自我走向世界舞台的机会。
 

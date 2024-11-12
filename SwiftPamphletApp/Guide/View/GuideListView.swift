@@ -484,9 +484,7 @@ final class GuideListModel {
             L(t: "Swift-DocC", icon: "doc.append"),
             L(t: "AppIcon", icon: "app"),
             L(t: "Share Extension", icon: "app")
-            
         ]),
-        
         L(t: "多线程", icon: "text.line.first.and.arrowtriangle.forward", sub: [
             L(t: "Swift Concurrency",sub: [
                 L(t: "Swift Concurrency是什么"),
@@ -578,9 +576,15 @@ final class GuideListModel {
                 L(t: "CPU核数和类型"),
             ]),
             L(t: "启动优化", sub: [
-                L(t: "启动优化-启动时间"),
+                L(t: "启动时间",sub: [
+                    L(t: "OC项目启动时间"),
+                    L(t: "Swift项目启动时间"),
+                ]),
                 L(t: "启动治理思路"),
                 L(t: "启动优化-工具"),
+                L(t: "动态库与静态库"),
+                L(t: "可合并库"),
+                L(t: "启动优化-测试"),
             ]),
             L(t: "包体积", sub: [
                 L(t: "包体积的影响"),
