@@ -54,19 +54,24 @@ struct SwiftPamphletAppApp: App {
                         self.handleAppRefresh(task: task as! BGAppRefreshTask)
                     }
                     scheduleAppRefresh()
+                    // 任务示例
+//                    TaskCase().bad()
+                    TaskCase().good()
                     
                     // 任务管理器示例
-                    taskgroupDemo()
+//                    taskgroupDemo()
                     
                     #if DEBUG
-                    // 主界面加载完成，记录终点
-                    let launchEndTime = DispatchTime.now()
-                    let launchTime = Double(launchEndTime.uptimeNanoseconds - launchStartTime.uptimeNanoseconds) / 1_000_000_000
-                    print("手动打点 Post-main : \(launchTime) 秒")
-                    
                     // 查看整体从进程创建到主界面加载完成时间，只在开发环境下执行
                     if let processStartTime = Perf.getProcessRunningTime() {
-                        print("进程创建到主界面加载完成时间: \(String(format: "%.2f", processStartTime)) 秒")
+                        // 主界面加载完成，记录终点
+                        let launchEndTime = DispatchTime.now()
+                        let launchTime = Double(launchEndTime.uptimeNanoseconds - launchStartTime.uptimeNanoseconds) / 1_000_000_000
+                        
+                        // Pre-main
+                        print("Pre-main : \(String(format: "%.2f", (processStartTime - launchTime))) 秒")
+                        // Post-main
+                        print("进程创建到主界面显示时间: \(String(format: "%.2f", processStartTime)) 秒")
                     } else {
                         print("无法获取进程创建时间")
                     }

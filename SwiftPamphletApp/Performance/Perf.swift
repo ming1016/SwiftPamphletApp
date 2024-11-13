@@ -9,6 +9,12 @@ import Foundation
 
 // 性能工具
 struct Perf {
+    static func showTime(des: String = "") {
+        if let processStartTime = Perf.getProcessRunningTime() {
+            print("进程创建到\(des)时间: \(String(format: "%.2f", processStartTime)) 秒")
+        }
+    }
+    
     // 通过 sysctl 获取进程创建开始到当前的时间
     static func getProcessRunningTime() -> Double? {
         var kinfo = kinfo_proc()

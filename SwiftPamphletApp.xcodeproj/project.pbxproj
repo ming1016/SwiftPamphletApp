@@ -487,6 +487,14 @@
 		3ADBA8512CE216E900B0050B /* Perf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADBA8502CE216E900B0050B /* Perf.swift */; };
 		3AE0D59A2BAB0A0600D6D925 /* DeveloperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */; };
 		3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */; };
+		3AE3F94F2CE44B2D007EFDFA /* AppleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3F94E2CE44B2D007EFDFA /* AppleGuide.swift */; };
+		3AE3F9512CE44EF8007EFDFA /* CSGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3F9502CE44EF8007EFDFA /* CSGuide.swift */; };
+		3AE3F9532CE4532D007EFDFA /* TaskCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3F9522CE4532D007EFDFA /* TaskCase.swift */; };
+		3AE3F9622CE4A0C5007EFDFA /* TaskCaseUIUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3F9612CE4A0C5007EFDFA /* TaskCaseUIUpdateView.swift */; };
+		3AE3F9642CE4ADFC007EFDFA /* TaskCaseAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3F9632CE4ADFC007EFDFA /* TaskCaseAnimationView.swift */; };
+		3AE3F9662CE4BCEA007EFDFA /* TaskCaseBigImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3F9652CE4BCEA007EFDFA /* TaskCaseBigImageView.swift */; };
+		3AE3F9682CE4C65F007EFDFA /* TaskCaseCacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3F9672CE4C65F007EFDFA /* TaskCaseCacheView.swift */; };
+		3AE3F96A2CE4DC4C007EFDFA /* TaskCasePriorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3F9692CE4DC4C007EFDFA /* TaskCasePriorityView.swift */; };
 		3AE4CA382BD7813D005BEF2C /* InfoOrganizer in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE4CA372BD7813D005BEF2C /* InfoOrganizer */; };
 		3AEC7F4B2CE37028005D510D /* 动态库与静态库(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F4A2CE37028005D510D /* 动态库与静态库(ap).md */; };
 		3AEC7F4D2CE373C5005D510D /* 启动优化-测试(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F4C2CE373C5005D510D /* 启动优化-测试(ap).md */; };
@@ -975,6 +983,14 @@
 		3ADBA8502CE216E900B0050B /* Perf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perf.swift; sourceTree = "<group>"; };
 		3AE0D5992BAB0A0600D6D925 /* DeveloperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListView.swift; sourceTree = "<group>"; };
 		3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeveloper.swift; sourceTree = "<group>"; };
+		3AE3F94E2CE44B2D007EFDFA /* AppleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGuide.swift; sourceTree = "<group>"; };
+		3AE3F9502CE44EF8007EFDFA /* CSGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGuide.swift; sourceTree = "<group>"; };
+		3AE3F9522CE4532D007EFDFA /* TaskCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCase.swift; sourceTree = "<group>"; };
+		3AE3F9612CE4A0C5007EFDFA /* TaskCaseUIUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCaseUIUpdateView.swift; sourceTree = "<group>"; };
+		3AE3F9632CE4ADFC007EFDFA /* TaskCaseAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCaseAnimationView.swift; sourceTree = "<group>"; };
+		3AE3F9652CE4BCEA007EFDFA /* TaskCaseBigImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCaseBigImageView.swift; sourceTree = "<group>"; };
+		3AE3F9672CE4C65F007EFDFA /* TaskCaseCacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCaseCacheView.swift; sourceTree = "<group>"; };
+		3AE3F9692CE4DC4C007EFDFA /* TaskCasePriorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCasePriorityView.swift; sourceTree = "<group>"; };
 		3AEC7F4A2CE37028005D510D /* 动态库与静态库(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "动态库与静态库(ap).md"; sourceTree = "<group>"; };
 		3AEC7F4C2CE373C5005D510D /* 启动优化-测试(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动优化-测试(ap).md"; sourceTree = "<group>"; };
 		3AEC7F572CE38749005D510D /* OC项目启动时间(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC项目启动时间(ap).md"; sourceTree = "<group>"; };
@@ -2224,6 +2240,7 @@
 		08EF35CE2BECFCD40098E2D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3AE3F94D2CE44B16007EFDFA /* GuideOutline */,
 				0887A5992BA28F6D00131359 /* CSGuideView.swift */,
 				08069CAA2BDE01E800D48E24 /* GuideListView.swift */,
 				08069CAC2BDE7A6B00D48E24 /* GuideDetailView.swift */,
@@ -2299,6 +2316,8 @@
 				3ADBA8502CE216E900B0050B /* Perf.swift */,
 				3AA462352CE228CA00774B59 /* NotificationPreheat.swift */,
 				3AA462372CE261CC00774B59 /* TaskManager.swift */,
+				3AE3F9522CE4532D007EFDFA /* TaskCase.swift */,
+				3AE3F9602CE49FA2007EFDFA /* TaskCaseViews */,
 			);
 			path = Performance;
 			sourceTree = "<group>";
@@ -2310,6 +2329,27 @@
 				3AE0D59D2BAB183100D6D925 /* EditDeveloper.swift */,
 			);
 			path = Developer;
+			sourceTree = "<group>";
+		};
+		3AE3F94D2CE44B16007EFDFA /* GuideOutline */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3F94E2CE44B2D007EFDFA /* AppleGuide.swift */,
+				3AE3F9502CE44EF8007EFDFA /* CSGuide.swift */,
+			);
+			path = GuideOutline;
+			sourceTree = "<group>";
+		};
+		3AE3F9602CE49FA2007EFDFA /* TaskCaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3F9612CE4A0C5007EFDFA /* TaskCaseUIUpdateView.swift */,
+				3AE3F9632CE4ADFC007EFDFA /* TaskCaseAnimationView.swift */,
+				3AE3F9652CE4BCEA007EFDFA /* TaskCaseBigImageView.swift */,
+				3AE3F9672CE4C65F007EFDFA /* TaskCaseCacheView.swift */,
+				3AE3F9692CE4DC4C007EFDFA /* TaskCasePriorityView.swift */,
+			);
+			path = TaskCaseViews;
 			sourceTree = "<group>";
 		};
 		3AEC7F582CE38749005D510D /* 启动时间 */ = {
@@ -2901,29 +2941,37 @@
 				08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */,
 				08D8F00A2BEFBB2300AA0020 /* WWDCModel.swift in Sources */,
 				0871C6192BA040E5000B620D /* InfoRowView.swift in Sources */,
+				3AE3F9662CE4BCEA007EFDFA /* TaskCaseBigImageView.swift in Sources */,
+				3AE3F96A2CE4DC4C007EFDFA /* TaskCasePriorityView.swift in Sources */,
+				3AE3F9532CE4532D007EFDFA /* TaskCase.swift in Sources */,
 				086A5F442744EE2800FECE02 /* SwiftPamphletAppConfig.swift in Sources */,
 				3AF2A2E12BE22B5800F3BE1B /* UnCategoryInfosView.swift in Sources */,
 				08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */,
 				0887A59A2BA28F6D00131359 /* CSGuideView.swift in Sources */,
 				08D8EFE52BED825E00AA0020 /* BookmarkListView.swift in Sources */,
 				3AF2A2DF2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift in Sources */,
+				3AE3F9622CE4A0C5007EFDFA /* TaskCaseUIUpdateView.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				084417752B99B9060049297D /* HomeView.swift in Sources */,
 				3AF2A2E72BE239A300F3BE1B /* ArchivedInfoListView.swift in Sources */,
 				3ADBA84F2CE209FB00B0050B /* MetricManager.swift in Sources */,
 				086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */,
 				08D8F00E2BF044FB00AA0020 /* WWDCDetailView.swift in Sources */,
+				3AE3F94F2CE44B2D007EFDFA /* AppleGuide.swift in Sources */,
 				08069CAD2BDE7A6B00D48E24 /* GuideDetailView.swift in Sources */,
+				3AE3F9682CE4C65F007EFDFA /* TaskCaseCacheView.swift in Sources */,
 				08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */,
 				08397E292B9F0A9100DFDD02 /* EditInfoView.swift in Sources */,
 				08D8F00C2BEFCFCF00AA0020 /* WWDCListView.swift in Sources */,
 				08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */,
+				3AE3F9642CE4ADFC007EFDFA /* TaskCaseAnimationView.swift in Sources */,
 				086A5F372744ED9600FECE02 /* UserView.swift in Sources */,
 				086A5F522744EF4C00FECE02 /* ViewComponent.swift in Sources */,
 				3ADBA8512CE216E900B0050B /* Perf.swift in Sources */,
 				08CD61FF27758B8A008C0935 /* Token.swift in Sources */,
 				3AE0D59E2BAB183100D6D925 /* EditDeveloper.swift in Sources */,
 				08EF35D22BECFDA80098E2D4 /* BookmarkModel.swift in Sources */,
+				3AE3F9512CE44EF8007EFDFA /* CSGuide.swift in Sources */,
 				086A5F462744EEB900FECE02 /* FundationFunction.swift in Sources */,
 				3AA462382CE261CC00774B59 /* TaskManager.swift in Sources */,
 				084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */,

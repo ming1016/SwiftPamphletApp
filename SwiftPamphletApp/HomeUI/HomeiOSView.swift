@@ -25,9 +25,35 @@ struct HomeiOSView: View {
             DetailView(state: $state)
         } else {
             // 首页
-            GuideListView()
+//            GuideListView()
+            TaskCaseView()
         }
     }
+}
+
+struct TaskCaseView: View {
+    var body: some View {
+        ScrollView {
+            TaskCaseUIUpdateView(isBad: false)
+                .onAppear {
+                    Perf.showTime(des: "UI更新")
+                }
+            TaskCaseAnimationView(isBad: false)
+                .onAppear {
+                    Perf.showTime(des: "动画视图")
+                }
+            TaskCaseBigImageView(isBad: false)
+                .onAppear {
+                    Perf.showTime(des: "大图处理视图")
+                }
+            TaskCaseCacheView()
+            // 异步执行，计算量大会影响主线程
+//            TaskCasePriorityView(isBad: true)
+//                .onAppear {
+//                    Perf.showTime(des: "优先级视图")
+//                }
+        }
+    } // end body
 }
 
 struct DetailView: View {

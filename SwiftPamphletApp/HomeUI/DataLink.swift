@@ -93,7 +93,14 @@ struct DataLink: Identifiable {
         case "Apple技术":
             switch type {
             case .content:
-                GuideListView()
+                GuideListView(listModel: GuideListModel(plModel: AppleGuide().outline, pplName: "ap"))
+            case .detail:
+                IntroView()
+            }
+        case "计算机科学":
+            switch type {
+            case .content:
+                GuideListView(listModel: GuideListModel(plModel: CSGuide().outline, pplName: "cs"))
             case .detail:
                 IntroView()
             }
@@ -115,7 +122,7 @@ struct DataLink: Identifiable {
             switch type {
             case .content:
                 // 默认
-                GuideListView()
+                GuideListView(listModel: GuideListModel(plModel: AppleGuide().outline, pplName: "ap"))
             case .detail:
                 IntroView()
             }
@@ -128,6 +135,7 @@ extension DataLink {
         DataLink(title: "开发手册", imageName: "", children: [
             DataLink(title: "书签", imageName: "p24", color: .mint),
             DataLink(title: "Apple技术", imageName: "p19", color: .indigo),
+//            DataLink(title: "计算机科学", imageName: "p22"),
 //            DataLink(title: "WWDC", imageName: "p22")
         ]),
         DataLink(title: "资料整理", imageName: "", children: [
