@@ -483,7 +483,8 @@ final class GuideListModel {
             L(t: "WeatherKit", icon: "app"),
             L(t: "Swift-DocC", icon: "doc.append"),
             L(t: "AppIcon", icon: "app"),
-            L(t: "Share Extension", icon: "app")
+            L(t: "Share Extension", icon: "app"),
+            L(t: "Background Fetch", icon: "app")
         ]),
         L(t: "多线程", icon: "text.line.first.and.arrowtriangle.forward", sub: [
             L(t: "Swift Concurrency",sub: [
@@ -584,6 +585,8 @@ final class GuideListModel {
                 L(t: "启动优化-工具"),
                 L(t: "动态库与静态库"),
                 L(t: "可合并库"),
+                L(t: "启动优化-线程任务管理"),
+                L(t: "启动优化-一些技巧"),
                 L(t: "启动优化-测试"),
             ]),
             L(t: "包体积", sub: [

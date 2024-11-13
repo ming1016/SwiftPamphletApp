@@ -29,17 +29,23 @@ func performLowPriorityTasks(tasks: [@Sendable () async -> Void]) {
 }
 
 func taskgroupDemo() {
-    var tasks: [@Sendable () async -> Void] = [
-        {
-            await performTaskOne()
-        },
-        {
-            await performTaskTwo()
-        },
-        {
-            await performTaskThree()
-        }
-    ]
+    @Sendable func wait() async {
+//        try? await Task.sleep(nanoseconds: 1_000_000_000)
+    }
+    
+    var tasks = [@Sendable () async -> Void]()
+    tasks.append {
+        await wait()
+        print("Task One Completed")
+    }
+    tasks.append {
+        await wait()
+        print("Task Two Completed")
+    }
+    tasks.append {
+        await wait()
+        print("Task Three Completed")
+    }
     tasks.append {
         await wait()
         print("Task Four Completed")
@@ -49,42 +55,17 @@ func taskgroupDemo() {
         print("Task Five Completed")
     }
     
-    // 示例异步任务函数
-    @Sendable func performTaskOne() async {
-        await wait()
-        print("Task One Completed")
-    }
-
-    @Sendable func performTaskTwo() async {
-        await wait()
-        print("Task Two Completed")
-    }
-
-    @Sendable func performTaskThree() async {
-        await wait()
-        print("Task Three Completed")
-    }
-    
-    @Sendable func wait() async {
-//        try? await Task.sleep(nanoseconds: 1_000_000_000)
-    }
-    
     // 低优先级示例函数
-    @Sendable func backgroundTaskOne() async {
+    var backgroundTasks = [@Sendable () async -> Void]()
+    
+    backgroundTasks.append {
         await wait()
         print("Background Task One Executed")
     }
-
-    @Sendable func backgroundTaskTwo() async {
+    backgroundTasks.append {
         await wait()
         print("Background Task Two Executed")
     }
-    
-    var backgroundTasks: [@Sendable () async -> Void] = [
-        { await backgroundTaskOne() },
-        { await backgroundTaskTwo() }
-    ]
-    
     backgroundTasks.append {
         await wait()
         print("Background Task Three Executed")

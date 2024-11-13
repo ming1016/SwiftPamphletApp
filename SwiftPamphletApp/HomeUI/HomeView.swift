@@ -44,7 +44,6 @@ struct HomeView: View {
                 }
             }
         } detail: {
-            
             if !selectedDataLinkString.isEmpty {
                 DataLink.viewToShow(
                     for: selectedDataLinkString,

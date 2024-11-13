@@ -493,6 +493,9 @@
 		3AEC7F592CE38749005D510D /* OC项目启动时间(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F572CE38749005D510D /* OC项目启动时间(ap).md */; };
 		3AEC7F5B2CE3876D005D510D /* Swift项目启动时间(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F5A2CE3876D005D510D /* Swift项目启动时间(ap).md */; };
 		3AEC7F5D2CE39250005D510D /* 可合并库(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F5C2CE39250005D510D /* 可合并库(ap).md */; };
+		3AEC7F5F2CE39444005D510D /* 启动优化-线程任务管理(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F5E2CE39444005D510D /* 启动优化-线程任务管理(ap).md */; };
+		3AEC7F612CE398BD005D510D /* 启动优化-一些技巧(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F602CE398BD005D510D /* 启动优化-一些技巧(ap).md */; };
+		3AEC7F672CE39DC6005D510D /* Background Fetch(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC7F662CE39DC6005D510D /* Background Fetch(ap).md */; };
 		3AF2A2DF2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */; };
 		3AF2A2E12BE22B5800F3BE1B /* UnCategoryInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2E02BE22B5800F3BE1B /* UnCategoryInfosView.swift */; };
 		3AF2A2E32BE2317300F3BE1B /* StarInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2A2E22BE2317300F3BE1B /* StarInfoListView.swift */; };
@@ -977,6 +980,9 @@
 		3AEC7F572CE38749005D510D /* OC项目启动时间(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC项目启动时间(ap).md"; sourceTree = "<group>"; };
 		3AEC7F5A2CE3876D005D510D /* Swift项目启动时间(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Swift项目启动时间(ap).md"; sourceTree = "<group>"; };
 		3AEC7F5C2CE39250005D510D /* 可合并库(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "可合并库(ap).md"; sourceTree = "<group>"; };
+		3AEC7F5E2CE39444005D510D /* 启动优化-线程任务管理(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动优化-线程任务管理(ap).md"; sourceTree = "<group>"; };
+		3AEC7F602CE398BD005D510D /* 启动优化-一些技巧(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "启动优化-一些技巧(ap).md"; sourceTree = "<group>"; };
+		3AEC7F662CE39DC6005D510D /* Background Fetch(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Background Fetch(ap).md"; sourceTree = "<group>"; };
 		3AF2A2DE2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCategoryInfoListView.swift; sourceTree = "<group>"; };
 		3AF2A2E02BE22B5800F3BE1B /* UnCategoryInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCategoryInfosView.swift; sourceTree = "<group>"; };
 		3AF2A2E22BE2317300F3BE1B /* StarInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarInfoListView.swift; sourceTree = "<group>"; };
@@ -1315,6 +1321,8 @@
 				088F2C2A2C8843E000DCA64F /* 启动优化-工具(ap).md */,
 				3AEC7F4A2CE37028005D510D /* 动态库与静态库(ap).md */,
 				3AEC7F5C2CE39250005D510D /* 可合并库(ap).md */,
+				3AEC7F5E2CE39444005D510D /* 启动优化-线程任务管理(ap).md */,
+				3AEC7F602CE398BD005D510D /* 启动优化-一些技巧(ap).md */,
 				3AEC7F4C2CE373C5005D510D /* 启动优化-测试(ap).md */,
 			);
 			path = "启动优化";
@@ -1788,6 +1796,7 @@
 				3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */,
 				08BDD4472C6B007A00914412 /* Swift-DocC(ap).md */,
 				088F2C2E2C8E827300DCA64F /* Share Extension(ap).md */,
+				3AEC7F662CE39DC6005D510D /* Background Fetch(ap).md */,
 			);
 			path = "系统能力";
 			sourceTree = "<group>";
@@ -2545,6 +2554,7 @@
 				08BDD5412C6B007A00914412 /* 小组件-参考资料(ap).md in Resources */,
 				3AEC7F5D2CE39250005D510D /* 可合并库(ap).md in Resources */,
 				08BDD5092C6B007A00914412 /* Combine Timer(ap).md in Resources */,
+				3AEC7F672CE39DC6005D510D /* Background Fetch(ap).md in Resources */,
 				083266752C96C00F00E27CC5 /* visionOS-空间设计(ap).md in Resources */,
 				08448FAD279EC2E900B61353 /* 泛型和协议(ap).md in Resources */,
 				08BDD51A2C6B007A00914412 /* Actors(ap).md in Resources */,
@@ -2690,6 +2700,7 @@
 				083266732C96BF0500E27CC5 /* visionOS-介绍(ap).md in Resources */,
 				0851E5592C86BB7600D9463A /* 测试-代码覆盖率(ap).md in Resources */,
 				08BDD5812C6B007A00914412 /* ContentUnavailableView(ap).md in Resources */,
+				3AEC7F612CE398BD005D510D /* 启动优化-一些技巧(ap).md in Resources */,
 				087A7ADD2C803AD500321F85 /* 包体积-系统优化(ap).md in Resources */,
 				08BDD5362C6B007A00914412 /* 文件(ap).md in Resources */,
 				08448FA0279EBAD900B61353 /* 访问控制(ap).md in Resources */,
@@ -2775,6 +2786,7 @@
 				088F2C3A2C93296200DCA64F /* 笔记记录方法(ap).md in Resources */,
 				088F2C3E2C9329E400DCA64F /* PARA记录法(ap).md in Resources */,
 				3AEC7F5B2CE3876D005D510D /* Swift项目启动时间(ap).md in Resources */,
+				3AEC7F5F2CE39444005D510D /* 启动优化-线程任务管理(ap).md in Resources */,
 				08BDD57A2C6B007A00914412 /* 自定义导航栏(ap).md in Resources */,
 				08BDD5B92C6B007A00914412 /* List(ap).md in Resources */,
 				08BDD56B2C6B007A00914412 /* Toggle(ap).md in Resources */,

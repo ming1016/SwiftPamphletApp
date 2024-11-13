@@ -24,6 +24,7 @@ struct HomeiOSView: View {
         if state == "detail" {
             DetailView(state: $state)
         } else {
+            // 首页
             GuideListView()
         }
     }
