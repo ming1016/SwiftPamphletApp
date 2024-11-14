@@ -36,19 +36,19 @@ struct TaskCaseView: View {
         ScrollView {
             TaskCaseUIUpdateView(isBad: false)
                 .onAppear {
-                    Perf.showTime(des: "UI更新")
+                    Perf.showTime("UI更新视图")
                 }
             TaskCaseAnimationView(isBad: false)
                 .onAppear {
-                    Perf.showTime(des: "动画视图")
+                    Perf.showTime("动画视图")
                 }
             TaskCaseBigImageView(isBad: false)
                 .onAppear {
-                    Perf.showTime(des: "大图处理视图")
+                    Perf.showTime("大图处理视图")
                 }
             TaskCaseCacheView()
             // 异步执行，计算量大会影响主线程
-//            TaskCasePriorityView(isBad: true)
+//            TaskCasePriorityView(isBad: false)
 //                .onAppear {
 //                    Perf.showTime(des: "优先级视图")
 //                }

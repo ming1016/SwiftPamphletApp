@@ -9,7 +9,7 @@ import Foundation
 
 // 性能工具
 struct Perf {
-    static func showTime(des: String = "") {
+    static func showTime(_ des: String = "") {
         if let processStartTime = Perf.getProcessRunningTime() {
             print("进程创建到\(des)时间: \(String(format: "%.2f", processStartTime)) 秒")
         }
@@ -33,6 +33,7 @@ struct Perf {
         let startTimeSec = kinfo.kp_proc.p_starttime.tv_sec
         let startTimeUsec = kinfo.kp_proc.p_starttime.tv_usec
         let startTime = TimeInterval(startTimeSec) + TimeInterval(startTimeUsec) / 1_000_000
+        
         let currentTime = Date().timeIntervalSince1970
         return currentTime - startTime
     }

@@ -29,10 +29,10 @@ final class CalculationPriorityViewModel: ObservableObject, @unchecked Sendable 
     private var animationTimer: AnyCancellable?
     
     // 不当使用高优先级(会导致UI卡顿)
-    func runHighPriorityTasks() async {
+    func runHighPriorityTasks(iter: Int = 1) async {
         isCalculating = true
         let tasks = (1...10).map { id in
-            CalculationTask(id: id, iterations: 500000)
+            CalculationTask(id: id, iterations: iter)
         }
         
         // 使用高优先级运行所有任务
@@ -52,10 +52,10 @@ final class CalculationPriorityViewModel: ObservableObject, @unchecked Sendable 
     }
     
     // 使用合适的优先级(UI流畅)
-    func runOptimizedTasks() async {
+    func runOptimizedTasks(iter: Int = 1) async {
         isCalculating = true
         let tasks = (1...10).map { id in
-            CalculationTask(id: id, iterations: 500000)
+            CalculationTask(id: id, iterations: iter)
         }
         
         // 使用较低优先级运行计算任务
@@ -156,12 +156,18 @@ struct TaskCasePriorityView: View {
             viewModel.startAnimation()
             if isBad == true {
                 Task {
-                    await viewModel.runHighPriorityTasks()
+                    await viewModel.runHighPriorityTasks(iter: 500000)
+                    Perf.showTime("高优先级执行完成")
                 }
             } else {
-                Task {
-                    await viewModel.runOptimizedTasks()
+                var tasks = [@Sendable () async -> Void]()
+                for _ in 0...10 {
+                    tasks.append {
+                        await viewModel.runOptimizedTasks(iter: 50000)
+                    }
                 }
+                performLowPriorityTasks(tasks: tasks)
+                Perf.showTime("低优先级执行完成")
             }
         }
         .onDisappear {

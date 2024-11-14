@@ -49,20 +49,14 @@ struct SwiftPamphletAppApp: App {
             #elseif os(iOS)
             HomeiOSView()
                 .onAppear {
+#if DEBUG
                     // background fetch
                     BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.starming.fetch", using: nil) { task in
                         self.handleAppRefresh(task: task as! BGAppRefreshTask)
                     }
                     scheduleAppRefresh()
-                    // 任务示例
-//                    TaskCase().bad()
-                    TaskCase().good()
                     
-                    // 任务管理器示例
-//                    taskgroupDemo()
-                    
-                    #if DEBUG
-                    // 查看整体从进程创建到主界面加载完成时间，只在开发环境下执行
+                    // 查看整体从进程创建到主界面加载完成时间
                     if let processStartTime = Perf.getProcessRunningTime() {
                         // 主界面加载完成，记录终点
                         let launchEndTime = DispatchTime.now()
@@ -70,12 +64,22 @@ struct SwiftPamphletAppApp: App {
                         
                         // Pre-main
                         print("Pre-main : \(String(format: "%.2f", (processStartTime - launchTime))) 秒")
-                        // Post-main
-                        print("进程创建到主界面显示时间: \(String(format: "%.2f", processStartTime)) 秒")
                     } else {
                         print("无法获取进程创建时间")
                     }
-                    #endif
+                    
+                    // 任务示例
+//                    TaskCase.bad()
+                    TaskCase.good()
+                    
+                    // 任务管理器示例
+//                    taskgroupDemo()
+                    
+                    if let processStartTime = Perf.getProcessRunningTime() {
+                        // Post-main
+                        print("进程创建到进入主界面时间: \(String(format: "%.2f", processStartTime)) 秒")
+                    }
+#endif
                     
                     // 记录启动结束
                     os_signpost(.end, log: log, name: "Launch", signpostID: signpostID)
@@ -101,8 +105,6 @@ struct SwiftPamphletAppApp: App {
         #endif
         
     }
-    
-    
     
     #if os(iOS)
     // MARK: - Background Task

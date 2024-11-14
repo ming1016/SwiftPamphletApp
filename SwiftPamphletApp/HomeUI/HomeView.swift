@@ -82,6 +82,7 @@ struct HomeView: View {
         .onOpenURL(perform: { url in
             // 处理外部链接
         })
+        
 #endif
     }
 }
