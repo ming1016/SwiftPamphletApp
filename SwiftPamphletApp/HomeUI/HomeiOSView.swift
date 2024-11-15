@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if os(iOS)
 struct HomeiOSView: View {
     @State var state: String = ""
     var body: some View {
@@ -69,3 +70,5 @@ struct DetailView: View {
         }
     }
 }
+
+#endif
