@@ -39,10 +39,10 @@ struct TaskCaseView: View {
                 .onAppear {
                     Perf.showTime("UI更新视图")
                 }
-            TaskCaseAnimationView(isBad: false)
-                .onAppear {
-                    Perf.showTime("动画视图")
-                }
+//            TaskCaseAnimationView(isBad: false)
+//                .onAppear {
+//                    Perf.showTime("动画视图")
+//                }
             TaskCaseBigImageView(isBad: false)
                 .onAppear {
                     Perf.showTime("大图处理视图")

@@ -19,9 +19,8 @@ struct DataLink: Identifiable {
     enum ShowType {
     case content,detail
     }
-    
-    @MainActor @ViewBuilder
-    static func viewToShow(
+
+    @MainActor @ViewBuilder static func viewToShow(
         for title: String?,
         selectInfo:Binding<IOInfo?>,
         selectDev:Binding<DeveloperModel?>,
