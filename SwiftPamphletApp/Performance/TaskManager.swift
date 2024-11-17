@@ -19,8 +19,8 @@ func executeTasksConcurrently(tasks: [@Sendable () async -> Void]) async {
     }
 }
 
-// 执行低优先级任务
-func performLowPriorityTasks(tasks: [@Sendable () async -> Void]) {
+// 执行低优先级异步任务
+func performLowPriorityTasks(tasks: [@Sendable () async -> Void], withTimeLimit: Double? = nil) {
     for task in tasks {
         Task.detached(priority: .background) {
             await task()
@@ -30,7 +30,7 @@ func performLowPriorityTasks(tasks: [@Sendable () async -> Void]) {
 
 func taskgroupDemo() {
     @Sendable func wait() async {
-//        try? await Task.sleep(nanoseconds: 1_000_000_000)
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
     }
     
     var tasks = [@Sendable () async -> Void]()
@@ -75,7 +75,8 @@ func taskgroupDemo() {
         print("Background Task Four Executed")
     }
     
-    // 开始执行任务
+    // MARK: 开始执行任务
+    // 低优先级任务
     performLowPriorityTasks(tasks: backgroundTasks)
     Task {
         await executeTasksConcurrently(tasks: tasks)

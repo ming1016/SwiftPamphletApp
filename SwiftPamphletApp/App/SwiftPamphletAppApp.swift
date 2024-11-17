@@ -17,6 +17,7 @@ import AppIntents
 
 @main
 struct SwiftPamphletAppApp: App {
+    @State private var metricsManager = MetricsManager()
     // 启动时间打点
     private let launchStartTime = DispatchTime.now()
     private let signpostID = OSSignpostID(log: OSLog.default)
@@ -69,8 +70,8 @@ struct SwiftPamphletAppApp: App {
                     }
                     
                     // 任务示例
-//                    TaskCase.bad()
-                    TaskCase.good()
+                    TaskCase.bad()
+//                    TaskCase.good()
                     
                     // 任务管理器示例
 //                    taskgroupDemo()
@@ -91,6 +92,10 @@ struct SwiftPamphletAppApp: App {
                     default:
                         break
                     }
+                }
+                .environment(metricsManager)
+                .task {
+                    await metricsManager.fetchMetrics()
                 }
 //                .modelContainer(for: [IOInfo.self, DeveloperModel.self, BookmarkModel.self], isUndoEnabled: true)
             #endif
@@ -154,7 +159,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 #elseif os(iOS)
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        _ = MetricKitManager.shared // 上报启动时间
         print("didFinishLaunchingWithOptions")
         return true
     }

@@ -6,38 +6,45 @@
 //
 
 import MetricKit
+import Observation
 
-@objc class MetricKitManager: NSObject, MXMetricManagerSubscriber {
-    @MainActor @objc public static let shared = MetricKitManager()
+@Observable
+@MainActor
+class MetricsManager: NSObject, @preconcurrency MXMetricManagerSubscriber {
+    var latestPayload: MXMetricPayload?
 
-    private override init() {
+    override init() {
         super.init()
-        start()
+        MXMetricManager.shared.add(self)
     }
 
-    func start() {
-        let metricManager = MXMetricManager.shared
-        metricManager.add(self)
-    }
-    
     deinit {
         MXMetricManager.shared.remove(self)
     }
+
+    func didReceive(_ payloads: [MXMetricPayload]) {
+        Task { @MainActor in
+            if let latest = payloads.last {
+                self.latestPayload = latest
+            }
+        }
+    }
+
+    func didReceive(_ payloads: [MXDiagnosticPayload]) {
+        // Handle diagnostic payloads if needed
+    }
+
+    func fetchMetrics() async {
+        // Example async function to fetch metrics
+        try! await Task.sleep(nanoseconds: 2 * 1_000_000_000) // Simulate network delay
+        // Update state with fetched metrics
+    }
 }
 
-extension MetricKitManager {
-    #if os(iOS)
-    @available(iOS 13.0, *)
-    func didReceive(_ payloads: [MXMetricPayload]) {
-        // 获取启动时间数据
-        guard let firstPayload = payloads.first else { return }
-        print("Launch Time Data: \(firstPayload.dictionaryRepresentation())")
-    }
-    #endif
-
-    @available(iOS 14.0, *)
-    func didReceive(_ payloads: [MXDiagnosticPayload]) {
-        guard let firstPayload = payloads.first else { return }
-        print("Diagnostic Data: \(firstPayload.dictionaryRepresentation())")
+extension MetricsManager {
+    func performAsyncOperation() async {
+        await Task { @Sendable in
+            // Perform some async operation
+        }.value
     }
 }
