@@ -15,6 +15,7 @@ struct GuideListView: View {
     @State var listModel = GuideListModel()
     @State private var limit: Int = 50
     @State private var trigger = false // 触发列表书签状态更新
+    
     var body: some View {
         if listModel.searchText.isEmpty == false {
             HStack {

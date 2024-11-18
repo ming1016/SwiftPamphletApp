@@ -5,6 +5,7 @@
 //  Created by Ming on 2024/11/11.
 //
 
+#if os(iOS)
 import MetricKit
 import Observation
 
@@ -48,3 +49,4 @@ extension MetricsManager {
         }.value
     }
 }
+#endif

@@ -17,7 +17,7 @@ import AppIntents
 
 @main
 struct SwiftPamphletAppApp: App {
-    @State private var metricsManager = MetricsManager()
+    
     // 启动时间打点
     private let launchStartTime = DispatchTime.now()
     private let signpostID = OSSignpostID(log: OSLog.default)
@@ -26,6 +26,7 @@ struct SwiftPamphletAppApp: App {
     #if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     #elseif os(iOS)
+    @State private var metricsManager = MetricsManager()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     #endif
     
@@ -70,8 +71,8 @@ struct SwiftPamphletAppApp: App {
                     }
                     
                     // 任务示例
-                    TaskCase.bad()
-//                    TaskCase.good()
+//                    TaskCase.bad()
+                    TaskCase.good()
                     
                     // 任务管理器示例
 //                    taskgroupDemo()
