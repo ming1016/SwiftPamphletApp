@@ -13,7 +13,7 @@ struct GuideListView: View {
     @Query(BookmarkModel.all) var bookmarks: [BookmarkModel]
     @State private var apBookmarks: [String] = [String]()
     @State var listModel: GuideListModel
-    @Binding var selectedItem: L? // 改为 L? 类型
+    @Binding var selectedItem: L?
     @AppStorage(SPC.expandedGuideItems) private var expandedItemsString: String = ""
     @State private var expandedItems: Set<String> = []
     

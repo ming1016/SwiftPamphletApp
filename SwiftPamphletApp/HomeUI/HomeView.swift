@@ -52,28 +52,18 @@ struct HomeView: View {
             }
         } detail: {
             if !selectedDataLinkString.isEmpty {
-                if selectedDataLinkString == "Apple技术", let item = selectedGuideItem {
-                    GuideDetailView(
-                        t: item.t,
-                        icon: item.icon,
-                        plName: "ap",
-                        limit: $limit,
-                        trigger: $trigger
-                    )
-                } else {
-                    DataLink.viewToShow(
-                        for: selectedDataLinkString,
-                        selectInfo: $selectInfo,
-                        selectDev: $selectDev,
-                        selectInfoBindable: selectInfo,
-                        selectDevBindable: selectDev,
-                        selectGuideItem: $selectedGuideItem,
-                        selectGuideItemBindable: selectedGuideItem,
-                        limit: $limit,
-                        trigger: $trigger,
-                        type: .detail
-                    )
-                }
+                DataLink.viewToShow(
+                    for: selectedDataLinkString,
+                    selectInfo: $selectInfo,
+                    selectDev: $selectDev,
+                    selectInfoBindable: selectInfo,
+                    selectDevBindable: selectDev,
+                    selectGuideItem: $selectedGuideItem,
+                    selectGuideItemBindable: selectedGuideItem,
+                    limit: $limit,
+                    trigger: $trigger,
+                    type: .detail
+                )
             } else {
                 IntroView()
             }

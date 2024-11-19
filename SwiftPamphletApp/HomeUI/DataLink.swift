@@ -128,9 +128,17 @@ struct DataLink: Identifiable {
         case "书签":
             switch type {
             case .content:
-                BookmarkListView()
+                BookmarkListView(selectedItem: selectGuideItem)
             case .detail:
-                IntroView()
+                if let item = selectGuideItemBindable {
+                    GuideDetailView(
+                        t: item.t,
+                        icon: item.icon,
+                        plName: "ap",
+                        limit: limit,
+                        trigger: trigger
+                    )
+                }
             }
         default:
             switch type {

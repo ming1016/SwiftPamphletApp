@@ -12,32 +12,24 @@ struct BookmarkListView: View {
     @Environment(\.modelContext) var modelContext
     @Query(BookmarkModel.all) var bms: [BookmarkModel]
 //    var bms: [BookmarkModel] = [BookmarkModel]() // 测试空数据用
+    @Binding var selectedItem: L?
     @State private var limit: Int = 50
     @State private var trigger = false
     var body: some View {
-        List {
+        List(selection: $selectedItem) {
             ForEach(bms) { bm in
-                NavigationLink(
-                    destination: GuideDetailView(
-                        t: bm.name,
-                        icon: bm.icon,
-                        plName: bm.pamphletName,
-                        limit: $limit,
-                        trigger: $trigger
-                    )
-                ) {
-                    HStack {
-                        if bm.icon.isEmpty == false {
-                            Image(systemName: bm.icon)
-                                .foregroundStyle(Color.secondary)
-                        }
-                        Text(bm.name)
-                        Spacer()
-                        Image(systemName: "bookmark")
-                            .foregroundStyle(.secondary)
-                            .font(.footnote)
+                HStack {
+                    if bm.icon.isEmpty == false {
+                        Image(systemName: bm.icon)
+                            .foregroundStyle(Color.secondary)
                     }
+                    Text(bm.name)
+                    Spacer()
+                    Image(systemName: "bookmark")
+                        .foregroundStyle(.secondary)
+                        .font(.footnote)
                 }
+                .tag(L(t: bm.name, icon: bm.icon))
                 .contextMenu {
                     Button("前移") {
                         bm.updateDate = Date.now
