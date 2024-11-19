@@ -78,9 +78,14 @@ struct GuideListView: View {
                     }
                 } label: {
                     ItemRow(item: item, bookmarks: bookmarks)
-                        .tag(item)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            // 点击目录时只切换展开状态
+                            expandedItems.toggle(item.t)
+                        }
                 }
             } else {
+                // 只有非目录项才可选择
                 ItemRow(item: item, bookmarks: bookmarks)
                     .tag(item)
             }
@@ -217,4 +222,14 @@ struct L: Hashable, Identifiable {
     var t: String
     var icon: String = ""
     var sub: [L]?
+}
+
+extension Set {
+    mutating func toggle(_ element: Element) {
+        if contains(element) {
+            remove(element)
+        } else {
+            insert(element)
+        }
+    }
 }
