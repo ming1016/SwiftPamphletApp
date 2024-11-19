@@ -12,94 +12,121 @@ import SMFile
 struct GuideListView: View {
     @Query(BookmarkModel.all) var bookmarks: [BookmarkModel]
     @State private var apBookmarks: [String] = [String]()
-    @State var listModel = GuideListModel()
-    @State private var limit: Int = 50
-    @State private var trigger = false // 触发列表书签状态更新
+    @State var listModel: GuideListModel
+    @Binding var selectedItem: L? // 改为 L? 类型
+    @AppStorage(SPC.expandedGuideItems) private var expandedItemsString: String = ""
+    @State private var expandedItems: Set<String> = []
     
     var body: some View {
-        if listModel.searchText.isEmpty == false {
-            HStack {
-                Text("搜索”\(listModel.searchText)“结果如下")
-                Button {
-                    listModel.searchText = ""
-                } label: {
-                    Image(systemName: "xmark.circle")
-                }
+        List(selection: $selectedItem) {
+            ForEach(listModel.filtered()) { item in
+                OutlineGroup(
+                    item: item,
+                    bookmarks: apBookmarks,
+                    selectedItem: $selectedItem,
+                    expandedItems: $expandedItems
+                )
             }
-            .padding(.top, 10)
         }
-        NavigationStack {
-            SPOutlineListView(d: listModel.filtered(), c: \.sub) { i in
-                NavigationLink(
-                    destination: GuideDetailView(
-                        t: i.t,
-                        icon: i.icon,
-                        plName: listModel.plName,
-                        limit: $limit,
-                        trigger: $trigger
-                    )
-                ) {
-                    HStack(spacing:3) {
-                        if i.icon.isEmpty == false {
-                            Image(systemName: i.icon)
-                                .foregroundStyle(i.sub == nil ? Color.secondary : .indigo)
-                        } else if i.sub != nil {
-                            Image(systemName: "folder.fill")
-                                .foregroundStyle(.indigo)
-                        }
-                        Text(listModel.searchText.isEmpty == true ? GuideListModel.simpleTitle(i.t) : i.t)
-                        Spacer()
-                        if apBookmarks.contains(i.t) {
-                            Image(systemName: "bookmark")
-                                .foregroundStyle(.secondary)
-                                .font(.footnote)
-                        }
-                    }
-                    .contentShape(Rectangle())
-                }
-            }
-            .searchable(
-                text: $listModel.searchText,
-                prompt: "搜索 Apple 技术手册"
-            )
-            #if os(macOS)
-            .listStyle(.sidebar)
-            #endif
-            .onChange(of: trigger, { oldValue, newValue in
-                updateApBookmarks()
-            })
-            .onAppear(perform: {
-                updateApBookmarks()
-                //导出内容
-    //            listModel.buildMDContent()
-                
-            })
-            .overlay {
-                if listModel.filtered().isEmpty {
-                    ContentUnavailableView {
-                        Label(
-                            "无结果",
-                            systemImage: "rectangle.and.text.magnifyingglass"
-                        )
-                    } description: {
-                        Text("请再次输入")
-                    }
-                }
-            } // end overlay
-        }
-        #if os(iOS)
-        .navigationTitle("Apple 开发手册")
+        .searchable(
+            text: $listModel.searchText,
+            prompt: "搜索 Apple 技术手册"
+        )
+        #if os(macOS)
+        .listStyle(.sidebar)
         #endif
+        .onAppear {
+            // 读取保存的展开状态
+            expandedItems = Set(expandedItemsString.split(separator: ",").map(String.init))
+            print("Loaded expanded items: \(expandedItems.count)") // Debug
+            updateApBookmarks()
+        }
+        .onChange(of: expandedItems) { _, newValue in
+            // 保存展开状态
+            expandedItemsString = newValue.joined(separator: ",")
+            print("Saved expanded items: \(newValue.count)") // Debug
+        }
+        .overlay {
+            if listModel.filtered().isEmpty {
+                ContentUnavailableView {
+                    Label("无结果", systemImage: "rectangle.and.text.magnifyingglass")
+                } description: {
+                    Text("请再次输入")
+                }
+            }
+        }
+    }
+    
+    private struct OutlineGroup: View {
+        let item: L
+        let bookmarks: [String]
+        @Binding var selectedItem: L?
+        @Binding var expandedItems: Set<String>
+        
+        var body: some View {
+            if let subItems = item.sub {
+                DisclosureGroup(
+                    isExpanded: expandedBinding(for: item.t, in: $expandedItems)
+                ) {
+                    ForEach(subItems) { subItem in
+                        OutlineGroup(
+                            item: subItem,
+                            bookmarks: bookmarks,
+                            selectedItem: $selectedItem,
+                            expandedItems: $expandedItems
+                        )
+                    }
+                } label: {
+                    ItemRow(item: item, bookmarks: bookmarks)
+                        .tag(item)
+                }
+            } else {
+                ItemRow(item: item, bookmarks: bookmarks)
+                    .tag(item)
+            }
+        }
+    }
+    
+    private static func expandedBinding(for id: String, in expandedItems: Binding<Set<String>>) -> Binding<Bool> {
+        Binding(
+            get: { expandedItems.wrappedValue.contains(id) },
+            set: { isExpanded in
+                if isExpanded {
+                    expandedItems.wrappedValue.insert(id)
+                } else {
+                    expandedItems.wrappedValue.remove(id)
+                }
+            }
+        )
+    }
+    
+    private struct ItemRow: View {
+        let item: L
+        let bookmarks: [String]
+        
+        var body: some View {
+            HStack(spacing: 3) {
+                if !item.icon.isEmpty {
+                    Image(systemName: item.icon)
+                        .foregroundStyle(item.sub == nil ? Color.secondary : .indigo)
+                } else if item.sub != nil {
+                    Image(systemName: "folder.fill")
+                        .foregroundStyle(.indigo)
+                }
+                Text(GuideListModel.simpleTitle(item.t))
+                Spacer()
+                if bookmarks.contains(item.t) {
+                    Image(systemName: "bookmark")
+                        .foregroundStyle(.secondary)
+                        .font(.footnote)
+                }
+            }
+            .contentShape(Rectangle())
+        }
     }
     
     func updateApBookmarks() {
-        apBookmarks = [String]()
-        for bm in bookmarks {
-//            if bm.pamphletName == "ap" {
-//                apBookmarks.append(bm.name)
-//            }
-            apBookmarks.append(bm.name)
-        }
+        apBookmarks = bookmarks.map(\.name)
     }
 }
 
@@ -183,15 +210,11 @@ final class GuideListModel {
         } // end for one
         SMFile.writeToDownload(fileName: "read.md", content: md)
     }
-    
-    
-
 }
 
 struct L: Hashable, Identifiable {
-    var id = UUID()
+    var id: String { t }
     var t: String
     var icon: String = ""
     var sub: [L]?
 }
-

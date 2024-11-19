@@ -17,6 +17,9 @@ struct HomeView: View {
     
     @AppStorage(SPC.isFirstRun) var isFirstRun = true
     @Environment(\.scenePhase) var scenePhase
+    @State private var selectedGuideItem: L? = nil // 改为 L? 类型
+    @State private var limit: Int = 50 // 为 GuideDetailView 添加
+    @State private var trigger: Bool = false // 为 GuideDetailView 添加
     
     var body: some View {
 #if os(macOS)
@@ -33,6 +36,10 @@ struct HomeView: View {
                     selectDev: $selectDev,
                     selectInfoBindable: selectInfo,
                     selectDevBindable: selectDev,
+                    selectGuideItem: $selectedGuideItem,
+                    selectGuideItemBindable: selectedGuideItem,
+                    limit: $limit,
+                    trigger: $trigger,
                     type: .content
                 )
             } else {
@@ -45,14 +52,28 @@ struct HomeView: View {
             }
         } detail: {
             if !selectedDataLinkString.isEmpty {
-                DataLink.viewToShow(
-                    for: selectedDataLinkString,
-                    selectInfo: $selectInfo,
-                    selectDev: $selectDev,
-                    selectInfoBindable: selectInfo,
-                    selectDevBindable: selectDev, 
-                    type: .detail
-                )
+                if selectedDataLinkString == "Apple技术", let item = selectedGuideItem {
+                    GuideDetailView(
+                        t: item.t,
+                        icon: item.icon,
+                        plName: "ap",
+                        limit: $limit,
+                        trigger: $trigger
+                    )
+                } else {
+                    DataLink.viewToShow(
+                        for: selectedDataLinkString,
+                        selectInfo: $selectInfo,
+                        selectDev: $selectDev,
+                        selectInfoBindable: selectInfo,
+                        selectDevBindable: selectDev,
+                        selectGuideItem: $selectedGuideItem,
+                        selectGuideItemBindable: selectedGuideItem,
+                        limit: $limit,
+                        trigger: $trigger,
+                        type: .detail
+                    )
+                }
             } else {
                 IntroView()
             }
@@ -82,7 +103,6 @@ struct HomeView: View {
         .onOpenURL(perform: { url in
             // 处理外部链接
         })
-        
 #endif
     }
 }

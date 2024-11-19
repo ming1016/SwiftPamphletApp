@@ -26,6 +26,10 @@ struct DataLink: Identifiable {
         selectDev:Binding<DeveloperModel?>,
         selectInfoBindable: IOInfo?,
         selectDevBindable: DeveloperModel?,
+        selectGuideItem: Binding<L?>,
+        selectGuideItemBindable: L?,
+        limit: Binding<Int>,
+        trigger: Binding<Bool>,
         type: ShowType
     ) -> some View {
         switch title {
@@ -92,17 +96,28 @@ struct DataLink: Identifiable {
         case "Apple技术":
             switch type {
             case .content:
-                GuideListView(listModel: GuideListModel(plModel: AppleGuide().outline, pplName: "ap"))
+                GuideListView(
+                    listModel: GuideListModel(plModel: AppleGuide().outline, pplName: "ap"),
+                    selectedItem: selectGuideItem
+                )
             case .detail:
-                IntroView()
+                if let item = selectGuideItemBindable {
+                    GuideDetailView(
+                        t: item.t,
+                        icon: item.icon,
+                        plName: "ap",
+                        limit: limit,
+                        trigger: trigger
+                    )
+                }
             }
-        case "计算机科学":
-            switch type {
-            case .content:
-                GuideListView(listModel: GuideListModel(plModel: CSGuide().outline, pplName: "cs"))
-            case .detail:
-                IntroView()
-            }
+//        case "计算机科学":
+//            switch type {
+//            case .content:
+//                GuideListView(listModel: GuideListModel(plModel: CSGuide().outline, pplName: "cs"))
+//            case .detail:
+//                IntroView()
+//            }
         case "WWDC":
             switch type {
             case .content:
@@ -121,7 +136,7 @@ struct DataLink: Identifiable {
             switch type {
             case .content:
                 // 默认
-                GuideListView(listModel: GuideListModel(plModel: AppleGuide().outline, pplName: "ap"))
+                InfoListView(selectInfo: selectInfo)
             case .detail:
                 IntroView()
             }

@@ -29,6 +29,9 @@ struct SPC {
     static let isShowWWDCInspector = "isShowWWDCInspector"
     static let inspectorType = "inspectorType"
 
+    // MARK: GuideListView
+    static let expandedGuideItems = "expandedGuideItems"
+
 //    static func loadCustomIssues(jsonFileName: String) -> [CustomIssuesModel] {
 //        let lc: [CustomIssuesModel] = SMFile.loadBundleJSONFile(jsonFileName + ".json")
 //        return lc
