@@ -530,12 +530,12 @@ struct AppleGuide {
 //            L(t: "visionOS-空间视频"),
 //            L(t: "visionOS-声音"),
 //        ]),
-//        L(t: "人工智能", icon:"cpu.fill", sub: [
-//            L(t: "人工智能-介绍"),
-//            L(t: "Apple Intelligence"),
-//            L(t: "Core ML"),
-//            L(t: "人工智能-模型训练"),
-//            L(t: "Create ML"),
+        L(t: "人工智能", icon:"cpu.fill", sub: [
+            L(t: "人工智能-介绍"),
+            L(t: "Apple Intelligence"),
+            L(t: "Core ML"),
+            L(t: "人工智能-模型训练"),
+            L(t: "Create ML"),
 //            L(t: "人工智能-MLX"),
 //            L(t: "人工智能-文本"),
 //            L(t: "人工智能-Translation"),
@@ -550,7 +550,7 @@ struct AppleGuide {
 //            L(t: "用于开发APP的提示词"),
 //            L(t: "人工智能-RAG"),
 //            L(t: "人工智能-技术原理"),
-//        ]),
+        ]),
         L(t: "三方库使用", icon:"tray.2", sub: [
             L(t: "SQLite.swift的使用")
         ]),
