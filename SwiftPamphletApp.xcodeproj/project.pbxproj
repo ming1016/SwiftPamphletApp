@@ -453,7 +453,7 @@
 		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
 		08D5A7952CECBA1F0036AAC6 /* Apple Intelligence(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7942CECBA1F0036AAC6 /* Apple Intelligence(ap).md */; };
 		08D5A7972CECBA500036AAC6 /* 人工智能-模型训练(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7962CECBA500036AAC6 /* 人工智能-模型训练(ap).md */; };
-		08D5A7992CECBA710036AAC6 /* 人工智能-MLX.md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7982CECBA710036AAC6 /* 人工智能-MLX.md */; };
+		08D5A7992CECBA710036AAC6 /* 人工智能-MLX(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7982CECBA710036AAC6 /* 人工智能-MLX(ap).md */; };
 		08D5A79B2CECBAA90036AAC6 /* 使用三方大模型接口(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A79A2CECBAA90036AAC6 /* 使用三方大模型接口(ap).md */; };
 		08D5A79D2CECBAE40036AAC6 /* 用于开发APP的提示词(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A79C2CECBAE40036AAC6 /* 用于开发APP的提示词(ap).md */; };
 		08D5A79F2CECBAF90036AAC6 /* 人工智能-RAG(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A79E2CECBAF90036AAC6 /* 人工智能-RAG(ap).md */; };
@@ -967,7 +967,7 @@
 		08CD61FD27758B8A008C0935 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		08D5A7942CECBA1F0036AAC6 /* Apple Intelligence(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Apple Intelligence(ap).md"; sourceTree = "<group>"; };
 		08D5A7962CECBA500036AAC6 /* 人工智能-模型训练(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-模型训练(ap).md"; sourceTree = "<group>"; };
-		08D5A7982CECBA710036AAC6 /* 人工智能-MLX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-MLX.md"; sourceTree = "<group>"; };
+		08D5A7982CECBA710036AAC6 /* 人工智能-MLX(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-MLX(ap).md"; sourceTree = "<group>"; };
 		08D5A79A2CECBAA90036AAC6 /* 使用三方大模型接口(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "使用三方大模型接口(ap).md"; sourceTree = "<group>"; };
 		08D5A79C2CECBAE40036AAC6 /* 用于开发APP的提示词(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "用于开发APP的提示词(ap).md"; sourceTree = "<group>"; };
 		08D5A79E2CECBAF90036AAC6 /* 人工智能-RAG(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-RAG(ap).md"; sourceTree = "<group>"; };
@@ -1094,7 +1094,7 @@
 				083266932C97E52700E27CC5 /* Core ML(ap).md */,
 				08D5A7962CECBA500036AAC6 /* 人工智能-模型训练(ap).md */,
 				083266952C97E5FF00E27CC5 /* Create ML(ap).md */,
-				08D5A7982CECBA710036AAC6 /* 人工智能-MLX.md */,
+				08D5A7982CECBA710036AAC6 /* 人工智能-MLX(ap).md */,
 				087AAA9C2C9ABEFB00877650 /* 人工智能-文本(ap).md */,
 				087AAAA02C9C0EEA00877650 /* 人工智能-Translation(ap).md */,
 				087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */,
@@ -2817,7 +2817,7 @@
 				087AAAA12C9C0EEA00877650 /* 人工智能-Translation(ap).md in Resources */,
 				087A7AEE2C80C22400321F85 /* iOS虚拟内存(ap).md in Resources */,
 				08BDD5DF2C6C4BAE00914412 /* SwiftUI数据流-@State(ap).md in Resources */,
-				08D5A7992CECBA710036AAC6 /* 人工智能-MLX.md in Resources */,
+				08D5A7992CECBA710036AAC6 /* 人工智能-MLX(ap).md in Resources */,
 				08BDD5E12C6C4BC500914412 /* SwiftUI数据流-@Binding(ap).md in Resources */,
 				08BDD5C62C6B007A00914412 /* Grid(ap).md in Resources */,
 				08448FBC279EC41700B61353 /* 继承(ap).md in Resources */,
