@@ -216,6 +216,7 @@
 		088F2C482C932A7900DCA64F /* 知识管理-输出(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C472C932A7900DCA64F /* 知识管理-输出(ap).md */; };
 		088F2C4A2C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C492C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md */; };
 		088F2C4C2C932C5800DCA64F /* 知识管理-PKM(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C4B2C932C5800DCA64F /* 知识管理-PKM(ap).md */; };
+		0891EACD2CF1EAC000597974 /* SettingSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0891EACC2CF1EAC000597974 /* SettingSidebarView.swift */; };
 		08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */; };
 		08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
@@ -732,6 +733,7 @@
 		088F2C472C932A7900DCA64F /* 知识管理-输出(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-输出(ap).md"; sourceTree = "<group>"; };
 		088F2C492C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-目的导向工作流(ap).md"; sourceTree = "<group>"; };
 		088F2C4B2C932C5800DCA64F /* 知识管理-PKM(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-PKM(ap).md"; sourceTree = "<group>"; };
+		0891EACC2CF1EAC000597974 /* SettingSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSidebarView.swift; sourceTree = "<group>"; };
 		08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAccessTokenView.swift; sourceTree = "<group>"; };
 		08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentMarkdown.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
@@ -2260,6 +2262,7 @@
 			children = (
 				08ED801B2B9D1EEC0069B7EC /* SettingView.swift */,
 				08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */,
+				0891EACC2CF1EAC000597974 /* SettingSidebarView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -2968,6 +2971,7 @@
 			files = (
 				3A05B7C92CE57A5C00B2B30F /* TaskCaseLoadFile.swift in Sources */,
 				0871C61B2BA04D23000B620D /* CategoryRowView.swift in Sources */,
+				0891EACD2CF1EAC000597974 /* SettingSidebarView.swift in Sources */,
 				08F14B442BBE2865005B46CC /* ViewComponentImage.swift in Sources */,
 				08069CAB2BDE01E800D48E24 /* GuideListView.swift in Sources */,
 				084417792B99BE720049297D /* DataLink.swift in Sources */,

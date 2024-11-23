@@ -20,6 +20,7 @@ struct HomeView: View {
     @State private var selectedGuideItem: L? = nil // 改为 L? 类型
     @State private var limit: Int = 50 // 为 GuideDetailView 添加
     @State private var trigger: Bool = false // 为 GuideDetailView 添加
+    @State private var selectedItem: String? = nil
     
     var body: some View {
 #if os(macOS)
@@ -38,6 +39,8 @@ struct HomeView: View {
                     selectDevBindable: selectDev,
                     selectGuideItem: $selectedGuideItem,
                     selectGuideItemBindable: selectedGuideItem,
+                    selectItem: $selectedItem,
+                    selectItemBindable: selectedItem,
                     limit: $limit,
                     trigger: $trigger,
                     type: .content
@@ -60,6 +63,8 @@ struct HomeView: View {
                     selectDevBindable: selectDev,
                     selectGuideItem: $selectedGuideItem,
                     selectGuideItemBindable: selectedGuideItem,
+                    selectItem: $selectedItem,
+                    selectItemBindable: selectedItem,
                     limit: $limit,
                     trigger: $trigger,
                     type: .detail

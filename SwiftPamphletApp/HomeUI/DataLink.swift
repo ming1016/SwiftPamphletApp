@@ -28,6 +28,8 @@ struct DataLink: Identifiable {
         selectDevBindable: DeveloperModel?,
         selectGuideItem: Binding<L?>,
         selectGuideItemBindable: L?,
+        selectItem: Binding<String?>,
+        selectItemBindable: String?,
         limit: Binding<Int>,
         trigger: Binding<Bool>,
         type: ShowType
@@ -140,6 +142,20 @@ struct DataLink: Identifiable {
                     )
                 }
             }
+        case "设置":
+            switch type {
+            case .content:
+                SettingSidebarView(selectedItem: selectItem)
+            case .detail:
+                switch selectItemBindable {
+                case "Github Token 设置":
+                    GithubAccessTokenView()
+                case "自定义标签":
+                    CustomSearch()
+                default:
+                    IntroView()
+                }
+            }
         default:
             switch type {
             case .content:
@@ -165,6 +181,9 @@ extension DataLink {
             DataLink(title: "未分类", imageName: "p6"),
             DataLink(title: "收藏", imageName: "p11"),
             DataLink(title: "归档", imageName: "p3")
+        ]),
+        DataLink(title: "工具", imageName: "", children: [
+            DataLink(title: "设置", imageName: "p27")
         ])
     ]
     static func dataLinksWithGithub() -> [DataLink] {
