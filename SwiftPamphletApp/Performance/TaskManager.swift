@@ -29,29 +29,29 @@ func performLowPriorityTasks(tasks: [@Sendable () async -> Void], withTimeLimit:
 }
 
 func taskgroupDemo() {
-    @Sendable func wait() async {
-        try? await Task.sleep(nanoseconds: 2_000_000_000)
+    @Sendable func doSomething(sec: UInt64 = 2) async {
+        try? await Task.sleep(nanoseconds: sec * 1_000_000_000)
     }
     
     var tasks = [@Sendable () async -> Void]()
     tasks.append {
-        await wait()
+        await doSomething()
         print("Task One Completed")
     }
     tasks.append {
-        await wait()
+        await doSomething()
         print("Task Two Completed")
     }
     tasks.append {
-        await wait()
+        await doSomething()
         print("Task Three Completed")
     }
     tasks.append {
-        await wait()
+        await doSomething()
         print("Task Four Completed")
     }
     tasks.append {
-        await wait()
+        await doSomething()
         print("Task Five Completed")
     }
     
@@ -59,25 +59,26 @@ func taskgroupDemo() {
     var backgroundTasks = [@Sendable () async -> Void]()
     
     backgroundTasks.append {
-        await wait()
+        await doSomething()
         print("Background Task One Executed")
     }
     backgroundTasks.append {
-        await wait()
+        await doSomething(sec: 10)
         print("Background Task Two Executed")
     }
     backgroundTasks.append {
-        await wait()
+        await doSomething()
         print("Background Task Three Executed")
     }
     backgroundTasks.append {
-        await wait()
+        await doSomething()
         print("Background Task Four Executed")
     }
     
     // MARK: 开始执行任务
     // 低优先级任务
     performLowPriorityTasks(tasks: backgroundTasks)
+    // 分组执行
     Task {
         await executeTasksConcurrently(tasks: tasks)
         print("first group of tasks completed.")

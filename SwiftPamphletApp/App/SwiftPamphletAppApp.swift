@@ -75,7 +75,7 @@ struct SwiftPamphletAppApp: App {
                     TaskCase.good()
                     
                     // 任务管理器示例
-//                    taskgroupDemo()
+                    taskgroupDemo()
                     
                     if let processStartTime = Perf.getProcessRunningTime() {
                         // Post-main
@@ -93,10 +93,6 @@ struct SwiftPamphletAppApp: App {
                     default:
                         break
                     }
-                }
-                .environment(metricsManager)
-                .task {
-                    await metricsManager.fetchMetrics()
                 }
 //                .modelContainer(for: [IOInfo.self, DeveloperModel.self, BookmarkModel.self], isUndoEnabled: true)
             #endif

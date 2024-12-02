@@ -548,7 +548,9 @@ struct AppleGuide {
             L(t: "Stable Diffusion"),
             L(t: "AI辅助开发APP"),
             L(t: "用于开发APP的提示词"),
-            L(t: "人工智能-RAG"),
+            L(t: "智能体", sub: [
+                L(t: "人工智能-RAG"),
+            ]),
             L(t: "人工智能-技术原理"),
         ]),
         L(t: "三方库使用", icon:"tray.2", sub: [
