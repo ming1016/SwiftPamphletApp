@@ -13,6 +13,7 @@ struct HomeiOSView: View {
     var body: some View {
         EmptyView()
             .onOpenURL { url in
+                // SwiftPamphletApp://view?content=detail
                 if let content = URLComponents(url: url, resolvingAgainstBaseURL: true)?
                     .queryItems?.first(where: { $0.name == "content" })?.value {
                     if content == "detail" {

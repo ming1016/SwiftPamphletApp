@@ -226,8 +226,7 @@ struct EditInfoView: View {
                                                 Button {
                                                     #if os(macOS)
                                                     let p = NSPasteboard.general
-                                                    p.declareTypes([.string], owner: nil)
-                                                    p.setString(img.url, forType: .string)
+                                                    p.copyText(img.url)
                                                     #elseif os(iOS)
                                                     let p = UIPasteboard.general
                                                     p.string = img.url
@@ -264,8 +263,7 @@ struct EditInfoView: View {
                                     Button {
                                         #if os(macOS)
                                         let p = NSPasteboard.general
-                                        p.declareTypes([.string], owner: nil)
-                                        p.setString(img, forType: .string)
+                                        p.copyText(img)
                                         #elseif os(iOS)
                                         let p = UIPasteboard.general
                                         p.string = img

@@ -116,8 +116,7 @@ struct ShareView: View {
             Button {
                 #if os(macOS)
                 let p = NSPasteboard.general
-                p.declareTypes([.string], owner: nil)
-                p.setString(s, forType: .string)
+                p.copyText(s)
                 #elseif os(iOS)
                 UIPasteboard.general.string = s
                 #endif

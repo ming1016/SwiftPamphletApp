@@ -43,6 +43,7 @@ func wrapperHtmlContent(content: String, codeStyle: String = "lioshi.min") -> St
 extension NSPasteboard {
     func copyText(_ text: String) {
         self.clearContents()
+        self.declareTypes([.string], owner: nil)
         self.setString(text, forType: .string)
     }
 }

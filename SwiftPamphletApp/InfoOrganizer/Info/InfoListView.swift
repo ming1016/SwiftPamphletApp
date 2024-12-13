@@ -32,8 +32,8 @@ struct InfoListView: View {
                     }, label: {
                         Label("添加资料", systemImage: "plus")
                     })
-                    .help("command + =")
-                    .keyboardShortcut(KeyEquivalent("="), modifiers: .command)
+                    .help("command + t")
+                    .keyboardShortcut(KeyEquivalent("t"), modifiers: .command)
                 }
                 ToolbarItem(placement: .navigation) {
                     Picker("分类", selection: $filterCate) {
