@@ -305,6 +305,7 @@ struct AppleGuide {
             L(t: "刷新小组件", icon: "arrow.clockwise.circle"),
             L(t: "小组件动画", icon: "figure.disc.sports"),
             L(t: "小组件-远程定时获取数据", icon: "cloud"),
+            L(t: "小组件-网络请求", icon: "cloud"),
             L(t: "小组件-获取位置权限更新内容", icon: "location.fill.viewfinder"),
             L(t: "支持多个小组件", icon: "rectangle.grid.2x2"),
             L(t: "获取小组件形状", icon: "rectangle.inset.filled"),

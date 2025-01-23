@@ -218,6 +218,7 @@
 		088F2C4A2C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C492C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md */; };
 		088F2C4C2C932C5800DCA64F /* 知识管理-PKM(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C4B2C932C5800DCA64F /* 知识管理-PKM(ap).md */; };
 		0891EACD2CF1EAC000597974 /* SettingSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0891EACC2CF1EAC000597974 /* SettingSidebarView.swift */; };
+		089503FA2D10E8C0008A9A67 /* 小组件-网络请求.md in Resources */ = {isa = PBXBuildFile; fileRef = 089503F92D10E8C0008A9A67 /* 小组件-网络请求.md */; };
 		08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */; };
 		08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
@@ -735,6 +736,7 @@
 		088F2C492C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-目的导向工作流(ap).md"; sourceTree = "<group>"; };
 		088F2C4B2C932C5800DCA64F /* 知识管理-PKM(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-PKM(ap).md"; sourceTree = "<group>"; };
 		0891EACC2CF1EAC000597974 /* SettingSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSidebarView.swift; sourceTree = "<group>"; };
+		089503F92D10E8C0008A9A67 /* 小组件-网络请求.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-网络请求.md"; sourceTree = "<group>"; };
 		08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAccessTokenView.swift; sourceTree = "<group>"; };
 		08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentMarkdown.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
@@ -1863,6 +1865,7 @@
 				08BDD44C2C6B007A00914412 /* 小组件-获取位置权限更新内容(ap).md */,
 				08BDD44D2C6B007A00914412 /* 小组件-配置选项(ap).md */,
 				08BDD44E2C6B007A00914412 /* 小组件-远程定时获取数据(ap).md */,
+				089503F92D10E8C0008A9A67 /* 小组件-网络请求.md */,
 				08BDD44F2C6B007A00914412 /* 小组件-AppIntentConfiguration(ap).md */,
 				08BDD4502C6B007A00914412 /* 小组件-Deep link(ap).md */,
 				08BDD4512C6B007A00914412 /* 小组件-StaticConfiguration(ap).md */,
@@ -2794,6 +2797,7 @@
 				08BDD5812C6B007A00914412 /* ContentUnavailableView(ap).md in Resources */,
 				3AEC7F612CE398BD005D510D /* 启动优化-一些技巧(ap).md in Resources */,
 				087A7ADD2C803AD500321F85 /* 包体积-系统优化(ap).md in Resources */,
+				089503FA2D10E8C0008A9A67 /* 小组件-网络请求.md in Resources */,
 				08BDD5362C6B007A00914412 /* 文件(ap).md in Resources */,
 				08448FA0279EBAD900B61353 /* 访问控制(ap).md in Resources */,
 				08448FA5279EBB4100B61353 /* 布尔数(ap).md in Resources */,
