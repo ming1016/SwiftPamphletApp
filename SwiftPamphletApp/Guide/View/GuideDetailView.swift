@@ -19,6 +19,7 @@ struct GuideDetailView: View {
     @AppStorage(SPC.isShowPamphletInspector) var asIsShowPamphletInspector: Bool = false
     var t: String
     var icon: String
+    var l: L
     var plName: String
     @State var tContent: String
     @Binding var limit: Int
@@ -30,9 +31,10 @@ struct GuideDetailView: View {
     
     
     // 初始化
-    init(t:String, icon:String, plName: String, limit: Binding<Int>, trigger: Binding<Bool>) {
+    init(t:String, icon:String, l: L, plName: String, limit: Binding<Int>, trigger: Binding<Bool>) {
         self.t = t
         self.icon = icon
+        self.l = l
         self.plName = plName
         self.tContent = ""
         self._trigger = trigger
@@ -85,7 +87,12 @@ struct GuideDetailView: View {
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
                 // 内容
-                WebUIView(html: tContent, baseURLStr: "")
+                if l.type == 2 {
+                    WebUIView(urlStr: l.url)
+                } else {
+                    WebUIView(html: tContent, baseURLStr: "")
+                }
+               
             } else {
                 if let info = selectInfo {
                     EditInfoView(info: info)
@@ -134,18 +141,25 @@ struct GuideDetailView: View {
         }
         .onAppear {
             isShowInspector = asIsShowPamphletInspector
-            let md = SMFile.loadBundleString("\(t)" + "(\(plName)).md")
-            tContent = wrapperHtmlContent(content: MarkdownParser().html(from: md))
+            updateContent()
         }
         .onChange(of: t) { oldValue, newValue in
             selectInfo = nil
-            let md = SMFile.loadBundleString("\(t)" + "(\(plName)).md")
-            tContent = wrapperHtmlContent(content: MarkdownParser().html(from: md))
+            updateContent()
         }
         .onChange(of: isShowInspector) { oldValue, newValue in
             asIsShowPamphletInspector = newValue
         }
 
+    }
+    
+    func updateContent() {
+        var end = "md"
+        if l.type == 1 {
+            end = "html"
+        }
+        let md = SMFile.loadBundleString("\(t)" + "(\(plName)).\(end)")
+        tContent = wrapperHtmlContent(content: MarkdownParser().html(from: md))
     }
     
     func checkBookmarkState() {

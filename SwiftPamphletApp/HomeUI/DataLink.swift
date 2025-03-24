@@ -107,6 +107,7 @@ struct DataLink: Identifiable {
                     GuideDetailView(
                         t: item.t,
                         icon: item.icon,
+                        l: item,
                         plName: "ap",
                         limit: limit,
                         trigger: trigger
@@ -136,6 +137,7 @@ struct DataLink: Identifiable {
                     GuideDetailView(
                         t: item.t,
                         icon: item.icon,
+                        l: item,
                         plName: "ap",
                         limit: limit,
                         trigger: trigger

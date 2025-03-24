@@ -222,6 +222,8 @@ struct L: Hashable, Identifiable {
     var t: String
     var icon: String = ""
     var sub: [L]?
+    var type: Int = 0 // 0: markdown, 1: 本地html, 2: 网页
+    var url: String = ""
 }
 
 extension Set {
