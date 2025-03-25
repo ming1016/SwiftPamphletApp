@@ -1,49 +1,204 @@
-函数可以作为另一个函数的参数，也可以作为另一个函数的返回。函数是特殊的闭包，在类、结构体和枚举中是方法。
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #007AFF;
+            --secondary: #34C759;
+            --accent: #FF375F;
+            --text: #1D1D1F;
+            --bg: #FFFFFF;
+            --card-bg: #F5F5F7;
+            --code-bg: #E5E5EA;
+            --border: rgba(0,0,0,0.1);
+        }
 
-```swift
-// 为参数设置默认值
-func f1(p: String = "p") -> String {
-    "p is \(p)"
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #FFFFFF;
+                --bg: #000000;
+                --card-bg: #1C1C1E;
+                --code-bg: #2C2C2E;
+                --border: rgba(255,255,255,0.1);
+            }
+        }
+
+        body {
+            font-family: -apple-system, system-ui;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .visual {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        pre {
+            background: var(--code-bg);
+            padding: 1rem;
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+
+        .links {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <!-- 基础函数 -->
+        <div class="card">
+            <h2>📦 基础函数</h2>
+            <div class="visual">
+                <svg width="200" height="100">
+                    <path d="M30 50 L80 30 L170 50 L120 70 Z"
+                          fill="var(--primary)"
+                          opacity="0.2"/>
+                    <path d="M30 50 L80 30 L170 50 M80 30 L120 70"
+                          stroke="var(--text)"/>
+                </svg>
+            </div>
+            <pre><code>// 无参数无返回值
+func greet() {
+    print("Hello!")
 }
 
-// 函数作为参数
-func f2(fn: (String) -> String, p: String) -> String {
-    return fn(p)
-}
+// 带类型注解
+func sum(a: Int, b: Int) -> Int {
+    return a + b
+}</code></pre>
+            <div class="links">
+                <a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/functions/"
+                   class="link">官方文档</a>
+            </div>
+        </div>
 
-print(f2(fn:f1, p: "d")) // p is d
+        <!-- 参数标签 -->
+        <div class="card">
+            <h2>🏷️ 参数标签</h2>
+            <div class="visual">
+                <svg width="200" height="100">
+                    <rect x="30" y="30" width="60" height="40" rx="6" fill="var(--secondary)"/>
+                    <rect x="110" y="30" width="60" height="40" rx="6" fill="var(--primary)"/>
+                    <path d="M90 40 L110 40" stroke="var(--text)"/>
+                    <text x="60" y="65" text-anchor="middle">外部</text>
+                    <text x="140" y="65" text-anchor="middle">内部</text>
+                </svg>
+            </div>
+            <pre><code>// 默认参数标签
+func move(from start: Point, to end: Point)
+
+// 省略标签
+func calculate(_ a: Int, _ b: Int) -> Int
+
+// 默认参数
+func connect(timeout: TimeInterval = 10)</code></pre>
+            <div class="links">
+                <a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/functions/#Function-Parameter-Names"
+                   class="link">参数规范</a>
+            </div>
+        </div>
+
+        <!-- 高阶函数 -->
+        <div class="card">
+            <h2>🚀 高阶函数</h2>
+            <div class="visual">
+                <svg width="200" height="100">
+                    <rect x="30" y="30" width="140" height="40" rx="8"
+                         stroke="var(--accent)"
+                         fill="none"/>
+                    <path d="M30 50 L60 30 L170 50"
+                          stroke="var(--secondary)"/>
+                </svg>
+            </div>
+            <pre><code>// 函数作为参数
+func filter(_ numbers: [Int],
+           using condition: (Int) -> Bool) -> [Int] {
+    return numbers.filter(condition)
+}
 
 // 函数作为返回值
-func f3(p: String) -> (String) -> String {
-    return f1
+func makeCounter() -> () -> Int {
+    var count = 0
+    return { count += 1; return count }
+}</code></pre>
+            <div class="links">
+                <a href="https://www.swiftbysundell.com/articles/first-class-functions-in-swift/"
+                   class="link">高阶用法</a>
+            </div>
+        </div>
+
+        <!-- 高级特性 -->
+        <div class="card">
+            <h2>💡 高级特性</h2>
+            <div class="visual">
+                <svg width="200" height="100">
+                    <rect x="30" y="30" width="140" height="40" rx="8"
+                         fill="var(--code-bg)"/>
+                    <text x="100" y="55" text-anchor="middle"
+                          fill="var(--text)">inout</text>
+                </svg>
+            </div>
+            <pre><code>// inout参数
+func swapValues(_ a: inout Int, _ b: inout Int) {
+    let temp = a
+    a = b
+    b = temp
 }
 
-print(f3(p: "yes")("no")) // p is no
-```
-
-函数可以返回多个值，函数是可以嵌套的，也就是函数里内可以定义函数，函数内定义的函数可以访问自己作用域外函数内的变量。inout 表示的是输入输出参数，函数可以在函数内改变输入输出参数。defer 标识的代码块会在函数返回之前执行。
-
-函数在 Swift 5.4 时开始有了使用多个变量参数的能力，使用方法如下：
-
-```swift
-func f4(s: String..., i: Int...) {
-    print(s)
-    print(i)
+// 泛型函数
+func findIndex<T: Equatable>(of value: T, in array: [T]) -> Int? {
+    return array.firstIndex(of: value)
 }
 
-f4(s: "one", "two", "three", i: 1, 2, 3)
-/// ["one", "two", "three"]
-/// [1, 2, 3]
-```
-
-嵌套函数可以重载，嵌套函数可以在声明函数之前调用他。
-
-```swift
-func f5() {
-    nf5()
-    func nf5() {
-        print("this is nested function")
-    }
-}
-f5() // this is nested function
-```
+// @discardableResult
+@discardableResult
+func log(message: String) -> Bool {
+    print(message)
+    return true
+}</code></pre>
+            <div class="links">
+                <a href="https://nshipster.com/swift-generic-parameters/"
+                   class="link">泛型文档</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

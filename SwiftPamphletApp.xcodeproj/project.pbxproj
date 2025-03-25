@@ -218,6 +218,8 @@
 		088F2C4C2C932C5800DCA64F /* 知识管理-PKM(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C4B2C932C5800DCA64F /* 知识管理-PKM(ap).md */; };
 		0891EACD2CF1EAC000597974 /* SettingSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0891EACC2CF1EAC000597974 /* SettingSidebarView.swift */; };
 		089503FA2D10E8C0008A9A67 /* 小组件-网络请求.md in Resources */ = {isa = PBXBuildFile; fileRef = 089503F92D10E8C0008A9A67 /* 小组件-网络请求.md */; };
+		08A414162D9233C100035B4A /* ARM汇编语言(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A414152D9233C100035B4A /* ARM汇编语言(cs).md */; };
+		08A414182D923C2D00035B4A /* ARM反汇编(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A414172D923C2D00035B4A /* ARM反汇编(cs).md */; };
 		08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */; };
 		08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
@@ -453,6 +455,41 @@
 		08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FC27758B8A008C0935 /* Lexer.swift */; };
 		08CD61FF27758B8A008C0935 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FD27758B8A008C0935 /* Token.swift */; };
 		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
+		08D223052D92B78B008F40C6 /* KnowledgeGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D223042D92B78B008F40C6 /* KnowledgeGuide.swift */; };
+		08D223072D92B858008F40C6 /* 公元前1046年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223062D92B858008F40C6 /* 公元前1046年(kg).md */; };
+		08D223092D92BC9B008F40C6 /* 公元前1045年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223082D92BC9B008F40C6 /* 公元前1045年(kg).md */; };
+		08D2230B2D92CD46008F40C6 /* ARM解释器和虚拟机(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2230A2D92CD46008F40C6 /* ARM解释器和虚拟机(cs).md */; };
+		08D2230D2D92D0E9008F40C6 /* 公元前1044年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2230C2D92D0E9008F40C6 /* 公元前1044年(kg).md */; };
+		08D2230F2D92D188008F40C6 /* 公元前1043年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2230E2D92D188008F40C6 /* 公元前1043年(kg).md */; };
+		08D223112D92D198008F40C6 /* 公元前1042年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223102D92D198008F40C6 /* 公元前1042年(kg).md */; };
+		08D223132D92D1AA008F40C6 /* 公元前1041年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223122D92D1AA008F40C6 /* 公元前1041年(kg).md */; };
+		08D223152D92D1C0008F40C6 /* 公元前1040年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223142D92D1C0008F40C6 /* 公元前1040年(kg).md */; };
+		08D223172D92D65D008F40C6 /* 公元前1039年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223162D92D65D008F40C6 /* 公元前1039年(kg).md */; };
+		08D223192D92D675008F40C6 /* 公元前1038年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223182D92D675008F40C6 /* 公元前1038年(kg).md */; };
+		08D2231B2D92D68A008F40C6 /* 公元前1037年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2231A2D92D68A008F40C6 /* 公元前1037年(kg).md */; };
+		08D223212D92DDB3008F40C6 /* 公元前1036年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223202D92DDB3008F40C6 /* 公元前1036年(kg).md */; };
+		08D223232D92DDC1008F40C6 /* 公元前1035年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223222D92DDC1008F40C6 /* 公元前1035年(kg).md */; };
+		08D223252D92DDD1008F40C6 /* 公元前1034年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223242D92DDD1008F40C6 /* 公元前1034年(kg).md */; };
+		08D223272D92DDE5008F40C6 /* 公元前1033年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223262D92DDE5008F40C6 /* 公元前1033年(kg).md */; };
+		08D223292D92DDF5008F40C6 /* 公元前1032年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223282D92DDF5008F40C6 /* 公元前1032年(kg).md */; };
+		08D2232B2D92DE07008F40C6 /* 公元前1031年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2232A2D92DE07008F40C6 /* 公元前1031年(kg).md */; };
+		08D2232D2D92DE1D008F40C6 /* 公元前1030年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2232C2D92DE1D008F40C6 /* 公元前1030年(kg).md */; };
+		08D2232F2D92DE33008F40C6 /* 公元前1029年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2232E2D92DE33008F40C6 /* 公元前1029年(kg).md */; };
+		08D223312D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223302D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md */; };
+		08D223332D92F111008F40C6 /* ARM解释器支持OC的语法特性(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223322D92F111008F40C6 /* ARM解释器支持OC的语法特性(cs).md */; };
+		08D223352D92F553008F40C6 /* 公元前1028年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223342D92F553008F40C6 /* 公元前1028年(kg).md */; };
+		08D223372D92F566008F40C6 /* 公元前1027年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223362D92F566008F40C6 /* 公元前1027年(kg).md */; };
+		08D223392D92F5A6008F40C6 /* 公元前1026年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223382D92F5A6008F40C6 /* 公元前1026年(kg).md */; };
+		08D2233B2D92F5B8008F40C6 /* 公元前1025年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2233A2D92F5B8008F40C6 /* 公元前1025年(kg).md */; };
+		08D2233D2D92F5C7008F40C6 /* 公元前1024年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2233C2D92F5C7008F40C6 /* 公元前1024年(kg).md */; };
+		08D2233F2D92F5D6008F40C6 /* 公元前1023年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2233E2D92F5D6008F40C6 /* 公元前1023年(kg).md */; };
+		08D223412D92F5E7008F40C6 /* 公元前1022年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223402D92F5E7008F40C6 /* 公元前1022年(kg).md */; };
+		08D223432D92F5F9008F40C6 /* 公元前1021年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223422D92F5F9008F40C6 /* 公元前1021年(kg).md */; };
+		08D223452D92F609008F40C6 /* 公元前1020年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223442D92F609008F40C6 /* 公元前1020年(kg).md */; };
+		08D223472D92F61A008F40C6 /* 公元前1019年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223462D92F61A008F40C6 /* 公元前1019年(kg).md */; };
+		08D223492D92F634008F40C6 /* 公元前1018年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223482D92F633008F40C6 /* 公元前1018年(kg).md */; };
+		08D2234B2D92F643008F40C6 /* 公元前1017年(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2234A2D92F643008F40C6 /* 公元前1017年(kg).md */; };
+		08D2234D2D930BB8008F40C6 /* ARM解释器模拟内存和堆栈第一部分(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2234C2D930BB8008F40C6 /* ARM解释器模拟内存和堆栈第一部分(cs).md */; };
 		08D5A7952CECBA1F0036AAC6 /* Apple Intelligence(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7942CECBA1F0036AAC6 /* Apple Intelligence(ap).md */; };
 		08D5A7972CECBA500036AAC6 /* 人工智能-模型训练(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7962CECBA500036AAC6 /* 人工智能-模型训练(ap).md */; };
 		08D5A7992CECBA710036AAC6 /* 人工智能-MLX(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7982CECBA710036AAC6 /* 人工智能-MLX(ap).md */; };
@@ -722,6 +759,8 @@
 		088F2C4B2C932C5800DCA64F /* 知识管理-PKM(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "知识管理-PKM(ap).md"; sourceTree = "<group>"; };
 		0891EACC2CF1EAC000597974 /* SettingSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSidebarView.swift; sourceTree = "<group>"; };
 		089503F92D10E8C0008A9A67 /* 小组件-网络请求.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-网络请求.md"; sourceTree = "<group>"; };
+		08A414152D9233C100035B4A /* ARM汇编语言(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM汇编语言(cs).md"; sourceTree = "<group>"; };
+		08A414172D923C2D00035B4A /* ARM反汇编(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM反汇编(cs).md"; sourceTree = "<group>"; };
 		08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAccessTokenView.swift; sourceTree = "<group>"; };
 		08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentMarkdown.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
@@ -955,6 +994,41 @@
 		08BDD5EA2C6C950D00914412 /* SwiftData和CoreData(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftData和CoreData(ap).md"; sourceTree = "<group>"; };
 		08CD61FC27758B8A008C0935 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		08CD61FD27758B8A008C0935 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		08D223042D92B78B008F40C6 /* KnowledgeGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeGuide.swift; sourceTree = "<group>"; };
+		08D223062D92B858008F40C6 /* 公元前1046年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1046年(kg).md"; sourceTree = "<group>"; };
+		08D223082D92BC9B008F40C6 /* 公元前1045年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1045年(kg).md"; sourceTree = "<group>"; };
+		08D2230A2D92CD46008F40C6 /* ARM解释器和虚拟机(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器和虚拟机(cs).md"; sourceTree = "<group>"; };
+		08D2230C2D92D0E9008F40C6 /* 公元前1044年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1044年(kg).md"; sourceTree = "<group>"; };
+		08D2230E2D92D188008F40C6 /* 公元前1043年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1043年(kg).md"; sourceTree = "<group>"; };
+		08D223102D92D198008F40C6 /* 公元前1042年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1042年(kg).md"; sourceTree = "<group>"; };
+		08D223122D92D1AA008F40C6 /* 公元前1041年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1041年(kg).md"; sourceTree = "<group>"; };
+		08D223142D92D1C0008F40C6 /* 公元前1040年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1040年(kg).md"; sourceTree = "<group>"; };
+		08D223162D92D65D008F40C6 /* 公元前1039年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1039年(kg).md"; sourceTree = "<group>"; };
+		08D223182D92D675008F40C6 /* 公元前1038年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1038年(kg).md"; sourceTree = "<group>"; };
+		08D2231A2D92D68A008F40C6 /* 公元前1037年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1037年(kg).md"; sourceTree = "<group>"; };
+		08D223202D92DDB3008F40C6 /* 公元前1036年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1036年(kg).md"; sourceTree = "<group>"; };
+		08D223222D92DDC1008F40C6 /* 公元前1035年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1035年(kg).md"; sourceTree = "<group>"; };
+		08D223242D92DDD1008F40C6 /* 公元前1034年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1034年(kg).md"; sourceTree = "<group>"; };
+		08D223262D92DDE5008F40C6 /* 公元前1033年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1033年(kg).md"; sourceTree = "<group>"; };
+		08D223282D92DDF5008F40C6 /* 公元前1032年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1032年(kg).md"; sourceTree = "<group>"; };
+		08D2232A2D92DE07008F40C6 /* 公元前1031年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1031年(kg).md"; sourceTree = "<group>"; };
+		08D2232C2D92DE1D008F40C6 /* 公元前1030年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1030年(kg).md"; sourceTree = "<group>"; };
+		08D2232E2D92DE33008F40C6 /* 公元前1029年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1029年(kg).md"; sourceTree = "<group>"; };
+		08D223302D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU的TCG和TCI(cs).md"; sourceTree = "<group>"; };
+		08D223322D92F111008F40C6 /* ARM解释器支持OC的语法特性(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器支持OC的语法特性(cs).md"; sourceTree = "<group>"; };
+		08D223342D92F553008F40C6 /* 公元前1028年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1028年(kg).md"; sourceTree = "<group>"; };
+		08D223362D92F566008F40C6 /* 公元前1027年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1027年(kg).md"; sourceTree = "<group>"; };
+		08D223382D92F5A6008F40C6 /* 公元前1026年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1026年(kg).md"; sourceTree = "<group>"; };
+		08D2233A2D92F5B8008F40C6 /* 公元前1025年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1025年(kg).md"; sourceTree = "<group>"; };
+		08D2233C2D92F5C7008F40C6 /* 公元前1024年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1024年(kg).md"; sourceTree = "<group>"; };
+		08D2233E2D92F5D6008F40C6 /* 公元前1023年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1023年(kg).md"; sourceTree = "<group>"; };
+		08D223402D92F5E7008F40C6 /* 公元前1022年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1022年(kg).md"; sourceTree = "<group>"; };
+		08D223422D92F5F9008F40C6 /* 公元前1021年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1021年(kg).md"; sourceTree = "<group>"; };
+		08D223442D92F609008F40C6 /* 公元前1020年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1020年(kg).md"; sourceTree = "<group>"; };
+		08D223462D92F61A008F40C6 /* 公元前1019年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1019年(kg).md"; sourceTree = "<group>"; };
+		08D223482D92F633008F40C6 /* 公元前1018年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1018年(kg).md"; sourceTree = "<group>"; };
+		08D2234A2D92F643008F40C6 /* 公元前1017年(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1017年(kg).md"; sourceTree = "<group>"; };
+		08D2234C2D930BB8008F40C6 /* ARM解释器模拟内存和堆栈第一部分(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器模拟内存和堆栈第一部分(cs).md"; sourceTree = "<group>"; };
 		08D5A7942CECBA1F0036AAC6 /* Apple Intelligence(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Apple Intelligence(ap).md"; sourceTree = "<group>"; };
 		08D5A7962CECBA500036AAC6 /* 人工智能-模型训练(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-模型训练(ap).md"; sourceTree = "<group>"; };
 		08D5A7982CECBA710036AAC6 /* 人工智能-MLX(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-MLX(ap).md"; sourceTree = "<group>"; };
@@ -1143,14 +1217,14 @@
 		08448FA1279EBAFC00B61353 /* 基础类型 */ = {
 			isa = PBXGroup;
 			children = (
-				0850445727B1228E0096D556 /* Result(ap).md */,
 				08448FA2279EBB1B00B61353 /* 数字(ap).md */,
 				08448FA4279EBB4100B61353 /* 布尔数(ap).md */,
-				08448FA6279EBB7E00B61353 /* 元组(ap).md */,
 				08448FA8279EBBB900B61353 /* 字符串(ap).md */,
 				08448FAA279EC2B400B61353 /* 枚举(ap).md */,
+				08448FA6279EBB7E00B61353 /* 元组(ap).md */,
 				08448FAC279EC2E900B61353 /* 泛型和协议(ap).md */,
 				08448FAE279EC31200B61353 /* 不透明类型(ap).md */,
+				0850445727B1228E0096D556 /* Result(ap).md */,
 				08448FB0279EC33E00B61353 /* 类型转换(ap).md */,
 			);
 			path = "基础类型";
@@ -1596,6 +1670,27 @@
 				088F2C492C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md */,
 			);
 			path = "知识管理";
+			sourceTree = "<group>";
+		};
+		08A414132D92337500035B4A /* CS */ = {
+			isa = PBXGroup;
+			children = (
+				08A414142D92338A00035B4A /* 汇编 */,
+			);
+			path = CS;
+			sourceTree = "<group>";
+		};
+		08A414142D92338A00035B4A /* 汇编 */ = {
+			isa = PBXGroup;
+			children = (
+				08A414152D9233C100035B4A /* ARM汇编语言(cs).md */,
+				08A414172D923C2D00035B4A /* ARM反汇编(cs).md */,
+				08D2230A2D92CD46008F40C6 /* ARM解释器和虚拟机(cs).md */,
+				08D223302D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md */,
+				08D223322D92F111008F40C6 /* ARM解释器支持OC的语法特性(cs).md */,
+				08D2234C2D930BB8008F40C6 /* ARM解释器模拟内存和堆栈第一部分(cs).md */,
+			);
+			path = "汇编";
 			sourceTree = "<group>";
 		};
 		08AEAEE7277EDD5D00B969E2 /* Guide */ = {
@@ -2185,6 +2280,8 @@
 		08BDD4FB2C6B007A00914412 /* appstore */ = {
 			isa = PBXGroup;
 			children = (
+				08D223012D92B15A008F40C6 /* Knowledge */,
+				08A414132D92337500035B4A /* CS */,
 				0851E54B2C865A9C00D9463A /* Apple */,
 			);
 			path = appstore;
@@ -2211,6 +2308,59 @@
 				08CD61FD27758B8A008C0935 /* Token.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		08D223012D92B15A008F40C6 /* Knowledge */ = {
+			isa = PBXGroup;
+			children = (
+				08D223032D92B750008F40C6 /* 历史 */,
+			);
+			path = Knowledge;
+			sourceTree = "<group>";
+		};
+		08D223022D92B16D008F40C6 /* 历史时间轴 */ = {
+			isa = PBXGroup;
+			children = (
+				08D223062D92B858008F40C6 /* 公元前1046年(kg).md */,
+				08D223082D92BC9B008F40C6 /* 公元前1045年(kg).md */,
+				08D2230C2D92D0E9008F40C6 /* 公元前1044年(kg).md */,
+				08D2230E2D92D188008F40C6 /* 公元前1043年(kg).md */,
+				08D223102D92D198008F40C6 /* 公元前1042年(kg).md */,
+				08D223122D92D1AA008F40C6 /* 公元前1041年(kg).md */,
+				08D223142D92D1C0008F40C6 /* 公元前1040年(kg).md */,
+				08D223162D92D65D008F40C6 /* 公元前1039年(kg).md */,
+				08D223182D92D675008F40C6 /* 公元前1038年(kg).md */,
+				08D2231A2D92D68A008F40C6 /* 公元前1037年(kg).md */,
+				08D223202D92DDB3008F40C6 /* 公元前1036年(kg).md */,
+				08D223222D92DDC1008F40C6 /* 公元前1035年(kg).md */,
+				08D223242D92DDD1008F40C6 /* 公元前1034年(kg).md */,
+				08D223262D92DDE5008F40C6 /* 公元前1033年(kg).md */,
+				08D223282D92DDF5008F40C6 /* 公元前1032年(kg).md */,
+				08D2232A2D92DE07008F40C6 /* 公元前1031年(kg).md */,
+				08D2232C2D92DE1D008F40C6 /* 公元前1030年(kg).md */,
+				08D2232E2D92DE33008F40C6 /* 公元前1029年(kg).md */,
+				08D223342D92F553008F40C6 /* 公元前1028年(kg).md */,
+				08D223362D92F566008F40C6 /* 公元前1027年(kg).md */,
+				08D223382D92F5A6008F40C6 /* 公元前1026年(kg).md */,
+				08D2233A2D92F5B8008F40C6 /* 公元前1025年(kg).md */,
+				08D2233C2D92F5C7008F40C6 /* 公元前1024年(kg).md */,
+				08D2233E2D92F5D6008F40C6 /* 公元前1023年(kg).md */,
+				08D223402D92F5E7008F40C6 /* 公元前1022年(kg).md */,
+				08D223422D92F5F9008F40C6 /* 公元前1021年(kg).md */,
+				08D223442D92F609008F40C6 /* 公元前1020年(kg).md */,
+				08D223462D92F61A008F40C6 /* 公元前1019年(kg).md */,
+				08D223482D92F633008F40C6 /* 公元前1018年(kg).md */,
+				08D2234A2D92F643008F40C6 /* 公元前1017年(kg).md */,
+			);
+			path = "历史时间轴";
+			sourceTree = "<group>";
+		};
+		08D223032D92B750008F40C6 /* 历史 */ = {
+			isa = PBXGroup;
+			children = (
+				08D223022D92B16D008F40C6 /* 历史时间轴 */,
+			);
+			path = "历史";
 			sourceTree = "<group>";
 		};
 		08D8EFE32BED74D900AA0020 /* View */ = {
@@ -2334,6 +2484,7 @@
 			children = (
 				3AE3F94E2CE44B2D007EFDFA /* AppleGuide.swift */,
 				3AE3F9502CE44EF8007EFDFA /* CSGuide.swift */,
+				08D223042D92B78B008F40C6 /* KnowledgeGuide.swift */,
 			);
 			path = GuideOutline;
 			sourceTree = "<group>";
@@ -2469,6 +2620,7 @@
 				08BDD56D2C6B007A00914412 /* 布局-基础(ap).md in Resources */,
 				08BDD5E92C6C8A3F00914412 /* SwiftData基础(ap).md in Resources */,
 				08BDD5102C6B007A00914412 /* flatMap(ap).md in Resources */,
+				08D2233B2D92F5B8008F40C6 /* 公元前1025年(kg).md in Resources */,
 				08BDD58D2C6B007A00914412 /* Sheet(ap).md in Resources */,
 				08448FE4279EC7ED00B61353 /* 范围(ap).md in Resources */,
 				083266892C9722DD00E27CC5 /* Reality Composer Pro(ap).md in Resources */,
@@ -2505,6 +2657,7 @@
 				083266812C96C1AE00E27CC5 /* visionOS-系统能力(ap).md in Resources */,
 				08BDD55B2C6B007A00914412 /* SwiftData-处理大量数据(ap).md in Resources */,
 				08BDD5452C6B007A00914412 /* 小组件-AppIntentConfiguration(ap).md in Resources */,
+				08D2230F2D92D188008F40C6 /* 公元前1043年(kg).md in Resources */,
 				08448FA7279EBB7E00B61353 /* 元组(ap).md in Resources */,
 				08BDD5A92C6B007A00914412 /* 进度(ap).md in Resources */,
 				08BDD5D72C6B007B00914412 /* SwiftUI数据流(ap).md in Resources */,
@@ -2518,7 +2671,9 @@
 				08BDD50A2C6B007A00914412 /* Combine通知(ap).md in Resources */,
 				08BDD5522C6B007A00914412 /* 三栏结构(ap).md in Resources */,
 				087A7ADF2C803E6F00321F85 /* 包体积的影响(ap).md in Resources */,
+				08D223372D92F566008F40C6 /* 公元前1027年(kg).md in Resources */,
 				0832666E2C96A36700E27CC5 /* macOS开源-系统监控(ap).md in Resources */,
+				08D2230D2D92D0E9008F40C6 /* 公元前1044年(kg).md in Resources */,
 				08BDD59E2C6B007A00914412 /* 视图协议-Environment(ap).md in Resources */,
 				08448F9A279EBA2900B61353 /* 可选(ap).md in Resources */,
 				08BDD57F2C6B007A00914412 /* NavigationStack(ap).md in Resources */,
@@ -2550,6 +2705,7 @@
 				0851E53F2C85CC8000D9463A /* VSCode(ap).md in Resources */,
 				088F2C222C87F9A700DCA64F /* IO性能-文件读写(ap).md in Resources */,
 				08BDD5B62C6B007A00914412 /* List-完全可点击的行(ap).md in Resources */,
+				08D2234B2D92F643008F40C6 /* 公元前1017年(kg).md in Resources */,
 				08BDD5042C6B007A00914412 /* SwiftUI动画(ap).md in Resources */,
 				08BDD54E2C6B007A00914412 /* 链接器(ap).md in Resources */,
 				08BDD5062C6B007A00914412 /* Combine的资料(ap).md in Resources */,
@@ -2560,6 +2716,7 @@
 				08BDD52C2C6B007A00914412 /* targetEnvironment环境的判断(ap).md in Resources */,
 				08448F9C279EBA8200B61353 /* 闭包(ap).md in Resources */,
 				08BDD5322C6B007A00914412 /* 度量值(ap).md in Resources */,
+				08A414162D9233C100035B4A /* ARM汇编语言(cs).md in Resources */,
 				08448FAF279EC31200B61353 /* 不透明类型(ap).md in Resources */,
 				08448FE2279EC7CF00B61353 /* Nil-coalescing(ap).md in Resources */,
 				08448FD3279EC60300B61353 /* 数组(ap).md in Resources */,
@@ -2577,12 +2734,14 @@
 				08BDD55A2C6B007A00914412 /* SwiftData-版本迁移(ap).md in Resources */,
 				08BDD5682C6B007A00914412 /* Form(ap).md in Resources */,
 				088F2C272C8836B200DCA64F /* 崩溃日志(ap).md in Resources */,
+				08D223112D92D198008F40C6 /* 公元前1042年(kg).md in Resources */,
 				08BDD5412C6B007A00914412 /* 小组件-参考资料(ap).md in Resources */,
 				3AEC7F5D2CE39250005D510D /* 可合并库(ap).md in Resources */,
 				08BDD5092C6B007A00914412 /* Combine Timer(ap).md in Resources */,
 				3AEC7F672CE39DC6005D510D /* Background Fetch(ap).md in Resources */,
 				083266752C96C00F00E27CC5 /* visionOS-空间设计(ap).md in Resources */,
 				08448FAD279EC2E900B61353 /* 泛型和协议(ap).md in Resources */,
+				08D223332D92F111008F40C6 /* ARM解释器支持OC的语法特性(cs).md in Resources */,
 				08BDD51A2C6B007A00914412 /* Actors(ap).md in Resources */,
 				0851E5362C8563BF00D9463A /* Bazel-远程缓存配置(ap).md in Resources */,
 				08BDD5A72C6B007A00914412 /* Style协议(ap).md in Resources */,
@@ -2590,6 +2749,7 @@
 				08BDD5B52C6B007A00914412 /* List-索引标题(ap).md in Resources */,
 				08F0F8C12C959B0600DC659B /* 开源-时间(ap).md in Resources */,
 				08BDD5332C6B007A00914412 /* 格式化(ap).md in Resources */,
+				08D223432D92F5F9008F40C6 /* 公元前1021年(kg).md in Resources */,
 				08BDD4FC2C6B007A00914412 /* Keychain(ap).md in Resources */,
 				08BDD5832C6B007A00914412 /* GroupBox(ap).md in Resources */,
 				08BDD54A2C6B007A00914412 /* 支持多个小组件(ap).md in Resources */,
@@ -2622,11 +2782,14 @@
 				08BDD52E2C6B007A00914412 /* @dynamicMemberLookup动态成员查询(ap).md in Resources */,
 				086E03692C6E7136008CEDD3 /* 字符串时间(ap).md in Resources */,
 				08448F97279EB9B000B61353 /* 打印(ap).md in Resources */,
+				08D223232D92DDC1008F40C6 /* 公元前1035年(kg).md in Resources */,
 				08D5A79D2CECBAE40036AAC6 /* 用于开发APP的提示词(ap).md in Resources */,
 				08448FC5279EC4F800B61353 /* sorted(ap).md in Resources */,
+				08D2234D2D930BB8008F40C6 /* ARM解释器模拟内存和堆栈第一部分(cs).md in Resources */,
 				3A3168952CE0FFCE004DFC5C /* Launch Screen.storyboard in Resources */,
 				087AAA882C9A768200877650 /* 组件化模块化(ap).md in Resources */,
 				087AAA9D2C9ABEFB00877650 /* 人工智能-文本(ap).md in Resources */,
+				08D223152D92D1C0008F40C6 /* 公元前1040年(kg).md in Resources */,
 				08F0F8BB2C95976E00DC659B /* 开源-阅读(ap).md in Resources */,
 				083266942C97E52700E27CC5 /* Core ML(ap).md in Resources */,
 				088F2C4C2C932C5800DCA64F /* 知识管理-PKM(ap).md in Resources */,
@@ -2645,10 +2808,12 @@
 				08BDD5CC2C6B007A00914412 /* TextEditor(ap).md in Resources */,
 				08BDD5172C6B007A00914412 /* Scheduler(ap).md in Resources */,
 				0851E55B2C86DA7800D9463A /* SwiftSyntax(ap).md in Resources */,
+				08D2233D2D92F5C7008F40C6 /* 公元前1024年(kg).md in Resources */,
 				08BDD54F2C6B007A00914412 /* 内存管理(ap).md in Resources */,
 				08448FC3279EC4D600B61353 /* reduce(ap).md in Resources */,
 				08BDD5492C6B007A00914412 /* 小组件访问SwiftData(ap).md in Resources */,
 				08BDD53D2C6B007A00914412 /* AppIcon(ap).md in Resources */,
+				08D223492D92F634008F40C6 /* 公元前1018年(kg).md in Resources */,
 				0851E5672C86F1FE00D9463A /* WKWebView(ap).md in Resources */,
 				08BDD5862C6B007A00914412 /* 浮层(ap).md in Resources */,
 				08BDD5282C6B007A00914412 /* 格式化-数据(ap).md in Resources */,
@@ -2663,12 +2828,14 @@
 				087AAA862C9A71D700877650 /* 包管理工具-介绍(ap).md in Resources */,
 				08F0F8B32C95969500DC659B /* 开源-天气(ap).md in Resources */,
 				08BDD5D02C6B007B00914412 /* 修饰符-圆角(ap).md in Resources */,
+				08D223472D92F61A008F40C6 /* 公元前1019年(kg).md in Resources */,
 				083266922C97E51400E27CC5 /* 人工智能-介绍(ap).md in Resources */,
 				08BDD5872C6B007A00914412 /* Alert(ap).md in Resources */,
 				08BDD5B42C6B007A00914412 /* List-搜索(ap).md in Resources */,
 				0851E56D2C8711DA00D9463A /* OC运行时(ap).md in Resources */,
 				086E03632C6E70EB008CEDD3 /* TimeInterval(ap).md in Resources */,
 				0851E5692C870C4E00D9463A /* InApp分析工具(ap).md in Resources */,
+				08D223132D92D1AA008F40C6 /* 公元前1041年(kg).md in Resources */,
 				087AAA9F2C9AC1E200877650 /* 使用LLM模型(ap).md in Resources */,
 				0832669A2C97E64700E27CC5 /* 人工智能-视觉(ap).md in Resources */,
 				08BDD5372C6B007A00914412 /* AttributeString(ap).md in Resources */,
@@ -2677,6 +2844,7 @@
 				08BDD5CE2C6B007B00914412 /* 背景修饰符(ap).md in Resources */,
 				08448FDE279EC74200B61353 /* 比较运算符(ap).md in Resources */,
 				08BDD5742C6B007A00914412 /* alignmentGuide(ap).md in Resources */,
+				08D223392D92F5A6008F40C6 /* 公元前1026年(kg).md in Resources */,
 				0832667F2C96C19900E27CC5 /* Metal(ap).md in Resources */,
 				087A7ADB2C803A6C00321F85 /* 包体积-三方库优化(ap).md in Resources */,
 				083266832C96C1C500E27CC5 /* visionOS-空间视频(ap).md in Resources */,
@@ -2695,6 +2863,7 @@
 				087A7AF12C80C7E700321F85 /* Swift运行时(ap).md in Resources */,
 				08BDD54D2C6B007A00914412 /* 调试(ap).md in Resources */,
 				08BDD53C2C6B007A00914412 /* 网络状态检查(ap).md in Resources */,
+				08D223252D92DDD1008F40C6 /* 公元前1034年(kg).md in Resources */,
 				08BDD52B2C6B007A00914412 /* canImport判断库是否可使用(ap).md in Resources */,
 				08D8F0072BEFBAC700AA0020 /* WWDCData.json in Resources */,
 				0850445827B1228E0096D556 /* Result(ap).md in Resources */,
@@ -2727,7 +2896,9 @@
 				08BDD5B22C6B007A00914412 /* List-轻扫操作(ap).md in Resources */,
 				0851E54E2C865B9B00D9463A /* 自动化测试(ap).md in Resources */,
 				083266732C96BF0500E27CC5 /* visionOS-介绍(ap).md in Resources */,
+				08D2232D2D92DE1D008F40C6 /* 公元前1030年(kg).md in Resources */,
 				0851E5592C86BB7600D9463A /* 测试-代码覆盖率(ap).md in Resources */,
+				08D223212D92DDB3008F40C6 /* 公元前1036年(kg).md in Resources */,
 				08BDD5812C6B007A00914412 /* ContentUnavailableView(ap).md in Resources */,
 				3AEC7F612CE398BD005D510D /* 启动优化-一些技巧(ap).md in Resources */,
 				087A7ADD2C803AD500321F85 /* 包体积-系统优化(ap).md in Resources */,
@@ -2767,6 +2938,7 @@
 				087A7AEE2C80C22400321F85 /* iOS虚拟内存(ap).md in Resources */,
 				08BDD5DF2C6C4BAE00914412 /* SwiftUI数据流-@State(ap).md in Resources */,
 				08D5A7992CECBA710036AAC6 /* 人工智能-MLX(ap).md in Resources */,
+				08D223292D92DDF5008F40C6 /* 公元前1032年(kg).md in Resources */,
 				08BDD5E12C6C4BC500914412 /* SwiftUI数据流-@Binding(ap).md in Resources */,
 				08BDD5C62C6B007A00914412 /* Grid(ap).md in Resources */,
 				08448FBC279EC41700B61353 /* 继承(ap).md in Resources */,
@@ -2774,18 +2946,21 @@
 				08F0F8B72C9596CC00DC659B /* 开源-生活(ap).md in Resources */,
 				08BDD5A32C6B007A00914412 /* Legacy bridges协议(ap).md in Resources */,
 				08D5A7952CECBA1F0036AAC6 /* Apple Intelligence(ap).md in Resources */,
+				08D223452D92F609008F40C6 /* 公元前1020年(kg).md in Resources */,
 				088F2C292C88438F00DCA64F /* 启动治理思路(ap).md in Resources */,
 				087A7B062C8339CD00321F85 /* 避免视图绘制掉帧(ap).md in Resources */,
 				0851E5702C872A7A00D9463A /* CPU占用率(ap).md in Resources */,
 				08BDD5BA2C6B007A00914412 /* 固定到滚动视图的顶部(ap).md in Resources */,
 				088F2C422C932A0900DCA64F /* 知识管理-CODE方法论(ap).md in Resources */,
 				087AAA732C9A6C9B00877650 /* 架构技术演进(ap).md in Resources */,
+				08D223172D92D65D008F40C6 /* 公元前1039年(kg).md in Resources */,
 				08BDD5642C6B007A00914412 /* DatePicker(ap).md in Resources */,
 				0851E5612C86E9D200D9463A /* MetricKit(ap).md in Resources */,
 				08BDD56A2C6B007A00914412 /* Stepper(ap).md in Resources */,
 				08BDD5132C6B007A00914412 /* PassthroughSubject(ap).md in Resources */,
 				083266692C9663DC00E27CC5 /* 农历公历互转(ap).md in Resources */,
 				08D5A7A12CECBB0D0036AAC6 /* 人工智能-技术原理(ap).md in Resources */,
+				08D223352D92F553008F40C6 /* 公元前1028年(kg).md in Resources */,
 				08BDD54C2C6B007A00914412 /* Widget View(ap).md in Resources */,
 				087AAA932C9AAB7F00877650 /* 跨平台-大厂自研(ap).md in Resources */,
 				08BDD5C12C6B007A00914412 /* Table-行的选择(ap).md in Resources */,
@@ -2800,6 +2975,7 @@
 				0851E5342C848F4200D9463A /* Bazel-query指令找依赖关系(ap).md in Resources */,
 				087A7AF42C81135800321F85 /* IO性能-文件系统(ap).md in Resources */,
 				08BDD59B2C6B007A00914412 /* SwiftUI颜色(ap).md in Resources */,
+				08D223312D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md in Resources */,
 				08BDD5582C6B007A00914412 /* 容器配置modelContainer(ap).md in Resources */,
 				08BDD5D32C6B007B00914412 /* 自定义修饰符(ap).md in Resources */,
 				087AAA8C2C9A7D9400877650 /* 容器化插件化(ap).md in Resources */,
@@ -2813,15 +2989,19 @@
 				08BDD5792C6B007A00914412 /* 导航状态保存和还原(ap).md in Resources */,
 				087A7AEA2C80B92500321F85 /* 自动引用计数（ARC）机制(ap).md in Resources */,
 				08BDD5142C6B007A00914412 /* prepend(ap).md in Resources */,
+				08A414182D923C2D00035B4A /* ARM反汇编(cs).md in Resources */,
 				087A7AE12C8060B300321F85 /* 包体积-链接器优化(ap).md in Resources */,
 				08BDD50D2C6B007A00914412 /* combineLatest(ap).md in Resources */,
 				087AAA772C9A6E0800877650 /* 单例(ap).md in Resources */,
 				08BDD5782C6B007A00914412 /* ViewThatFits(ap).md in Resources */,
 				088F2C3A2C93296200DCA64F /* 笔记记录方法(ap).md in Resources */,
 				088F2C3E2C9329E400DCA64F /* PARA记录法(ap).md in Resources */,
+				08D2233F2D92F5D6008F40C6 /* 公元前1023年(kg).md in Resources */,
 				3AEC7F5B2CE3876D005D510D /* Swift项目启动时间(ap).md in Resources */,
+				08D223412D92F5E7008F40C6 /* 公元前1022年(kg).md in Resources */,
 				3AEC7F5F2CE39444005D510D /* 启动优化-线程任务管理(ap).md in Resources */,
 				08BDD57A2C6B007A00914412 /* 自定义导航栏(ap).md in Resources */,
+				08D2232B2D92DE07008F40C6 /* 公元前1031年(kg).md in Resources */,
 				08BDD5B92C6B007A00914412 /* List(ap).md in Resources */,
 				08BDD56B2C6B007A00914412 /* Toggle(ap).md in Resources */,
 				08448FA9279EBBB900B61353 /* 字符串(ap).md in Resources */,
@@ -2829,6 +3009,7 @@
 				086E036E2C6F997A008CEDD3 /* 时间-开源库(ap).md in Resources */,
 				08BDD5AD2C6B007A00914412 /* Transferable(ap).md in Resources */,
 				0832667D2C96C18100E27CC5 /* ARKit(ap).md in Resources */,
+				08D2230B2D92CD46008F40C6 /* ARM解释器和虚拟机(cs).md in Resources */,
 				08BDD5942C6B007A00914412 /* SwiftCharts(ap).md in Resources */,
 				08448FE8279EC84B00B61353 /* 恒等(ap).md in Resources */,
 				3AEC7F592CE38749005D510D /* OC项目启动时间(ap).md in Resources */,
@@ -2845,11 +3026,13 @@
 				08BDD5192C6B007A00914412 /* 结构化并发(ap).md in Resources */,
 				08BDD5112C6B007A00914412 /* Just(ap).md in Resources */,
 				08BDD5392C6B007A00914412 /* Scanner(ap).md in Resources */,
+				08D223092D92BC9B008F40C6 /* 公元前1045年(kg).md in Resources */,
 				08BDD5A12C6B007A00914412 /* Animations协议(ap).md in Resources */,
 				08BDD5C32C6B007A00914412 /* Table-contextMenu(ap).md in Resources */,
 				08BDD5B72C6B007A00914412 /* List-下拉刷新(ap).md in Resources */,
 				08BDD5822C6B007A00914412 /* ControlGroup(ap).md in Resources */,
 				083266872C9722AC00E27CC5 /* 空间计算和SwiftUI(ap).md in Resources */,
+				08D2231B2D92D68A008F40C6 /* 公元前1037年(kg).md in Resources */,
 				08448F9E279EBAA800B61353 /* 函数(ap).md in Resources */,
 				086E036B2C6E7148008CEDD3 /* Calendar(ap).md in Resources */,
 				088F2C4A2C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md in Resources */,
@@ -2862,6 +3045,7 @@
 				08BDD59C2C6B007A00914412 /* 视图协议-核心协议(ap).md in Resources */,
 				08BDD5342C6B007A00914412 /* 时间(ap).md in Resources */,
 				08BDD5D62C6B007B00914412 /* SwiftUI-自定义样式(ap).md in Resources */,
+				08D2232F2D92DE33008F40C6 /* 公元前1029年(kg).md in Resources */,
 				08BDD5382C6B007A00914412 /* Data(ap).md in Resources */,
 				08F0F8B92C95974E00DC659B /* 开源-理财(ap).md in Resources */,
 				08BDD5562C6B007A00914412 /* macOS剪贴板(ap).md in Resources */,
@@ -2874,6 +3058,7 @@
 				08BDD5CD2C6B007B00914412 /* TextField(ap).md in Resources */,
 				087A7B022C82947200321F85 /* 防止卡顿的方法(ap).md in Resources */,
 				08BDD5C82C6B007A00914412 /* Text(ap).md in Resources */,
+				08D223272D92DDE5008F40C6 /* 公元前1033年(kg).md in Resources */,
 				083266772C96C02100E27CC5 /* RealityKit(ap).md in Resources */,
 				0851E5382C85654100D9463A /* Bazel-远程执行配置(ap).md in Resources */,
 				08BDD55E2C6B007A00914412 /* SwiftData-模型关系(ap).md in Resources */,
@@ -2890,6 +3075,7 @@
 				08448FE0279EC7AF00B61353 /* 三元(ap).md in Resources */,
 				08BDD5BE2C6B007A00914412 /* ScrollView-参考资料(ap).md in Resources */,
 				087AAA912C9AAB6C00877650 /* 跨平台-布局渲染(ap).md in Resources */,
+				08D223072D92B858008F40C6 /* 公元前1046年(kg).md in Resources */,
 				086A5F0B2744E89100FECE02 /* Assets.xcassets in Resources */,
 				088F2C362C93293F00DCA64F /* 知识管理-工具(ap).md in Resources */,
 				08BDD5432C6B007A00914412 /* 小组件-配置选项(ap).md in Resources */,
@@ -2902,6 +3088,7 @@
 				0851E5502C865EB900D9463A /* XCTest(ap).md in Resources */,
 				0851E5422C85E30D00D9463A /* 静态分析-概述(ap).md in Resources */,
 				08BDD5932C6B007A00914412 /* Shaders Metal(ap).md in Resources */,
+				08D223192D92D675008F40C6 /* 公元前1038年(kg).md in Resources */,
 				08BDD5D52C6B007B00914412 /* redacted隐私展示(ap).md in Resources */,
 				0851E5572C86B95200D9463A /* SourceKitten(ap).md in Resources */,
 				08BDD5972C6B007A00914412 /* SwiftUI-背景材质(ap).md in Resources */,
@@ -2940,6 +3127,7 @@
 				08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */,
 				08D8EFE52BED825E00AA0020 /* BookmarkListView.swift in Sources */,
 				3AF2A2DF2BE22A8C00F3BE1B /* UnCategoryInfoListView.swift in Sources */,
+				08D223052D92B78B008F40C6 /* KnowledgeGuide.swift in Sources */,
 				086A5F362744ED9600FECE02 /* RepoView.swift in Sources */,
 				084417752B99B9060049297D /* HomeView.swift in Sources */,
 				3AF2A2E72BE239A300F3BE1B /* ArchivedInfoListView.swift in Sources */,

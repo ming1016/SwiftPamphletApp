@@ -87,7 +87,7 @@ struct GuideDetailView: View {
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 2, trailing: 10))
                 // 内容
-                if l.type == 2 {
+                if l.url.isEmpty == false {
                     WebUIView(urlStr: l.url)
                 } else {
                     WebUIView(html: tContent, baseURLStr: "")
@@ -154,12 +154,12 @@ struct GuideDetailView: View {
     }
     
     func updateContent() {
-        var end = "md"
+        let str = SMFile.loadBundleString("\(t)" + "(\(plName)).md")
         if l.type == 1 {
-            end = "html"
+            tContent = str
+        } else {
+            tContent = wrapperHtmlContent(content: MarkdownParser().html(from: str))
         }
-        let md = SMFile.loadBundleString("\(t)" + "(\(plName)).\(end)")
-        tContent = wrapperHtmlContent(content: MarkdownParser().html(from: md))
     }
     
     func checkBookmarkState() {

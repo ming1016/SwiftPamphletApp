@@ -114,13 +114,38 @@ struct DataLink: Identifiable {
                     )
                 }
             }
-//        case "计算机科学":
-//            switch type {
-//            case .content:
-//                GuideListView(listModel: GuideListModel(plModel: CSGuide().outline, pplName: "cs"))
-//            case .detail:
-//                IntroView()
-//            }
+        case "计算机科学":
+            switch type {
+            case .content:
+                GuideListView(listModel: GuideListModel(plModel: CSGuide().outline, pplName: "cs"), selectedItem: selectGuideItem)
+            case .detail:
+                if let item = selectGuideItemBindable {
+                    GuideDetailView(
+                        t: item.t,
+                        icon: item.icon,
+                        l: item,
+                        plName: "cs",
+                        limit: limit,
+                        trigger: trigger
+                    )
+                }
+            }
+        case "知识":
+            switch type {
+            case .content:
+                GuideListView(listModel: GuideListModel(plModel: KnowledgeGuide().outline, pplName: "kg"), selectedItem: selectGuideItem)
+            case .detail:
+                if let item = selectGuideItemBindable {
+                    GuideDetailView(
+                        t: item.t,
+                        icon: item.icon,
+                        l: item,
+                        plName: "kg",
+                        limit: limit,
+                        trigger: trigger
+                    )
+                }
+            }
         case "WWDC":
             switch type {
             case .content:
@@ -175,7 +200,8 @@ extension DataLink {
         DataLink(title: "开发手册", imageName: "", children: [
             DataLink(title: "书签", imageName: "p24", color: .mint),
             DataLink(title: "Apple技术", imageName: "p19", color: .indigo),
-//            DataLink(title: "计算机科学", imageName: "p22"),
+            DataLink(title: "计算机科学", imageName: "p22"),
+            DataLink(title: "知识", imageName: "p23"),
 //            DataLink(title: "WWDC", imageName: "p22")
         ]),
         DataLink(title: "资料整理", imageName: "", children: [

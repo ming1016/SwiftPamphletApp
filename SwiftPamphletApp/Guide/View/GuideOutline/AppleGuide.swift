@@ -11,14 +11,14 @@ struct AppleGuide {
     var outline = [
         L(t: "Swift语法", icon: "swift", sub: [
             L(t: "语法基础", sub: [
-                L(t: "变量"),
-                L(t: "打印", icon: "printer"),
-                L(t: "注释", icon: "number.square"),
+                L(t: "变量", type: 1),
+                L(t: "打印", icon: "printer", type: 1),
+                L(t: "注释", icon: "number.square", type: 1),
                 L(t: "可选", icon: "exclamationmark.questionmark"),
-                L(t: "闭包"),
-                L(t: "函数"),
-                L(t: "访问控制"),
-                L(t: "Regex")
+                L(t: "闭包", type: 1),
+                L(t: "函数", type: 1),
+                L(t: "访问控制", type: 1),
+                L(t: "Regex", type: 1)
             ]),
             L(t: "基础类型", sub: [
                 L(t: "数字"),
@@ -453,7 +453,7 @@ struct AppleGuide {
                 L(t: "MachO"),
             ]),
             L(t: "动态性", sub: [
-                L(t: "OC运行时"),
+                L(t: "OC运行时", type: 1),
                 L(t: "Swift运行时"),
                 L(t: "动态库注入技术"),
             ]),
