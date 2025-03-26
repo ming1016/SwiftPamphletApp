@@ -4,3 +4,4 @@ build
 *.app
 SwiftPamphletApp.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
 SwiftPamphletApp/Resource/Guide/appstore/**
+/SwiftPamphletApp/Resource/Guide/appstore/CS
