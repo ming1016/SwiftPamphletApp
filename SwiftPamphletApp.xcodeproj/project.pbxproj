@@ -196,6 +196,22 @@
 		087AAAA12C9C0EEA00877650 /* 人工智能-Translation(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAAA02C9C0EEA00877650 /* 人工智能-Translation(ap).md */; };
 		087AAAA32C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */; };
 		0888EF752C1C280F004967AD /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0869233F2BF2BF81006779A3 /* AVKit.framework */; };
+		088959922D958304006D9103 /* 公元前334年苏秦合纵(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959912D958304006D9103 /* 公元前334年苏秦合纵(kg).md */; };
+		088959942D958FD7006D9103 /* 公元前311年张仪连横(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959932D958FD7006D9103 /* 公元前311年张仪连横(kg).md */; };
+		088959962D958FEC006D9103 /* 公元前307年赵灭中山之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959952D958FEC006D9103 /* 公元前307年赵灭中山之战(kg).md */; };
+		088959982D959010006D9103 /* 公元前306年胡服骑射(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959972D959010006D9103 /* 公元前306年胡服骑射(kg).md */; };
+		0889599A2D959034006D9103 /* 公元前301年垂沙之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959992D959034006D9103 /* 公元前301年垂沙之战(kg).md */; };
+		0889599C2D959048006D9103 /* 公元前298年三国攻秦之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0889599B2D959048006D9103 /* 公元前298年三国攻秦之战(kg).md */; };
+		0889599E2D95905D006D9103 /* 公元前293年伊阙之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0889599D2D95905D006D9103 /* 公元前293年伊阙之战(kg).md */; };
+		088959A02D95936B006D9103 /* 公元前284年济西之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0889599F2D95936B006D9103 /* 公元前284年济西之战(kg).md */; };
+		088959A22D95937C006D9103 /* 公元前283年完璧归赵.md in Resources */ = {isa = PBXBuildFile; fileRef = 088959A12D95937C006D9103 /* 公元前283年完璧归赵.md */; };
+		088959A42D959390006D9103 /* 公元前279年将相和(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959A32D959390006D9103 /* 公元前279年将相和(kg).md */; };
+		088959A62D9593A1006D9103 /* 公元前278年战国四大名将(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959A52D9593A1006D9103 /* 公元前278年战国四大名将(kg).md */; };
+		088959A82D9593B5006D9103 /* 公元前270年战国四公子(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959A72D9593B5006D9103 /* 公元前270年战国四公子(kg).md */; };
+		088959AA2D9593C5006D9103 /* 公元前268年远交近攻(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959A92D9593C5006D9103 /* 公元前268年远交近攻(kg).md */; };
+		088959AC2D9593D4006D9103 /* 公元前262年长平之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959AB2D9593D4006D9103 /* 公元前262年长平之战(kg).md */; };
+		088959AE2D9593E5006D9103 /* 公元前259年邯郸之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959AD2D9593E5006D9103 /* 公元前259年邯郸之战(kg).md */; };
+		088959B02D9593F7006D9103 /* 公元前256年都江堰(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088959AF2D9593F7006D9103 /* 公元前256年都江堰(kg).md */; };
 		088F2C222C87F9A700DCA64F /* IO性能-文件读写(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C212C87F9A700DCA64F /* IO性能-文件读写(ap).md */; };
 		088F2C242C87FDFE00DCA64F /* IO性能-文件缓存(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C232C87FDFE00DCA64F /* IO性能-文件缓存(ap).md */; };
 		088F2C272C8836B200DCA64F /* 崩溃日志(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 088F2C262C8836B200DCA64F /* 崩溃日志(ap).md */; };
@@ -254,7 +270,6 @@
 		08B9A17D2D93B1B300E8A959 /* ARM解释器模拟内存和堆栈-代码实现与示例(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A17C2D93B1B300E8A959 /* ARM解释器模拟内存和堆栈-代码实现与示例(cs).md */; };
 		08B9A17F2D93B3C300E8A959 /* ARM解释器模拟内存和堆栈-性能优化与挑战(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A17E2D93B3C300E8A959 /* ARM解释器模拟内存和堆栈-性能优化与挑战(cs).md */; };
 		08B9A1812D93C97600E8A959 /* ARM解释器模拟内存和堆栈-调试与可视化(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1802D93C97600E8A959 /* ARM解释器模拟内存和堆栈-调试与可视化(cs).md */; };
-		08B9A1832D943A0900E8A959 /* 公元前613年楚庄王（kg）.md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1822D943A0900E8A959 /* 公元前613年楚庄王（kg）.md */; };
 		08B9A1852D943A6700E8A959 /* 公元前606年问鼎中原(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1842D943A6700E8A959 /* 公元前606年问鼎中原(kg).md */; };
 		08B9A1872D943A7F00E8A959 /* 公元前601年孙叔敖(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1862D943A7F00E8A959 /* 公元前601年孙叔敖(kg).md */; };
 		08B9A1892D943B8100E8A959 /* 公元前597年邲之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1882D943B8100E8A959 /* 公元前597年邲之战(kg).md */; };
@@ -283,6 +298,7 @@
 		08B9A1B72D943FEF00E8A959 /* 公元前315年蔺相如(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1B62D943FEF00E8A959 /* 公元前315年蔺相如(kg).md */; };
 		08B9A1B92D9440A600E8A959 /* ARM解释器模拟内存和堆栈-实际应用与案例分析(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1B82D9440A600E8A959 /* ARM解释器模拟内存和堆栈-实际应用与案例分析(cs).md */; };
 		08B9A1BB2D94513C00E8A959 /* ARM解释器中FFI调用iOS原生函数(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1BA2D94513C00E8A959 /* ARM解释器中FFI调用iOS原生函数(cs).md */; };
+		08B9A1BD2D94565800E8A959 /* 公元前613年楚庄王(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1BC2D94565800E8A959 /* 公元前613年楚庄王(kg).md */; };
 		08BDD4FC2C6B007A00914412 /* Keychain(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BDD3F52C6B007A00914412 /* Keychain(ap).md */; };
 		08BDD4FD2C6B007A00914412 /* 布局动画(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BDD3F72C6B007A00914412 /* 布局动画(ap).md */; };
 		08BDD4FE2C6B007A00914412 /* 动画-例子(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BDD3F82C6B007A00914412 /* 动画-例子(ap).md */; };
@@ -766,6 +782,22 @@
 		087AAA9E2C9AC1E200877650 /* 使用LLM模型(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "使用LLM模型(ap).md"; sourceTree = "<group>"; };
 		087AAAA02C9C0EEA00877650 /* 人工智能-Translation(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Translation(ap).md"; sourceTree = "<group>"; };
 		087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Writing Tools(ap).md"; sourceTree = "<group>"; };
+		088959912D958304006D9103 /* 公元前334年苏秦合纵(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前334年苏秦合纵(kg).md"; sourceTree = "<group>"; };
+		088959932D958FD7006D9103 /* 公元前311年张仪连横(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前311年张仪连横(kg).md"; sourceTree = "<group>"; };
+		088959952D958FEC006D9103 /* 公元前307年赵灭中山之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前307年赵灭中山之战(kg).md"; sourceTree = "<group>"; };
+		088959972D959010006D9103 /* 公元前306年胡服骑射(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前306年胡服骑射(kg).md"; sourceTree = "<group>"; };
+		088959992D959034006D9103 /* 公元前301年垂沙之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前301年垂沙之战(kg).md"; sourceTree = "<group>"; };
+		0889599B2D959048006D9103 /* 公元前298年三国攻秦之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前298年三国攻秦之战(kg).md"; sourceTree = "<group>"; };
+		0889599D2D95905D006D9103 /* 公元前293年伊阙之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前293年伊阙之战(kg).md"; sourceTree = "<group>"; };
+		0889599F2D95936B006D9103 /* 公元前284年济西之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前284年济西之战(kg).md"; sourceTree = "<group>"; };
+		088959A12D95937C006D9103 /* 公元前283年完璧归赵.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前283年完璧归赵.md"; sourceTree = "<group>"; };
+		088959A32D959390006D9103 /* 公元前279年将相和(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前279年将相和(kg).md"; sourceTree = "<group>"; };
+		088959A52D9593A1006D9103 /* 公元前278年战国四大名将(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前278年战国四大名将(kg).md"; sourceTree = "<group>"; };
+		088959A72D9593B5006D9103 /* 公元前270年战国四公子(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前270年战国四公子(kg).md"; sourceTree = "<group>"; };
+		088959A92D9593C5006D9103 /* 公元前268年远交近攻(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前268年远交近攻(kg).md"; sourceTree = "<group>"; };
+		088959AB2D9593D4006D9103 /* 公元前262年长平之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前262年长平之战(kg).md"; sourceTree = "<group>"; };
+		088959AD2D9593E5006D9103 /* 公元前259年邯郸之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前259年邯郸之战(kg).md"; sourceTree = "<group>"; };
+		088959AF2D9593F7006D9103 /* 公元前256年都江堰(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前256年都江堰(kg).md"; sourceTree = "<group>"; };
 		088F2C212C87F9A700DCA64F /* IO性能-文件读写(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "IO性能-文件读写(ap).md"; sourceTree = "<group>"; };
 		088F2C232C87FDFE00DCA64F /* IO性能-文件缓存(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "IO性能-文件缓存(ap).md"; sourceTree = "<group>"; };
 		088F2C262C8836B200DCA64F /* 崩溃日志(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "崩溃日志(ap).md"; sourceTree = "<group>"; };
@@ -824,7 +856,6 @@
 		08B9A17C2D93B1B300E8A959 /* ARM解释器模拟内存和堆栈-代码实现与示例(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器模拟内存和堆栈-代码实现与示例(cs).md"; sourceTree = "<group>"; };
 		08B9A17E2D93B3C300E8A959 /* ARM解释器模拟内存和堆栈-性能优化与挑战(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器模拟内存和堆栈-性能优化与挑战(cs).md"; sourceTree = "<group>"; };
 		08B9A1802D93C97600E8A959 /* ARM解释器模拟内存和堆栈-调试与可视化(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器模拟内存和堆栈-调试与可视化(cs).md"; sourceTree = "<group>"; };
-		08B9A1822D943A0900E8A959 /* 公元前613年楚庄王（kg）.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前613年楚庄王（kg）.md"; sourceTree = "<group>"; };
 		08B9A1842D943A6700E8A959 /* 公元前606年问鼎中原(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前606年问鼎中原(kg).md"; sourceTree = "<group>"; };
 		08B9A1862D943A7F00E8A959 /* 公元前601年孙叔敖(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前601年孙叔敖(kg).md"; sourceTree = "<group>"; };
 		08B9A1882D943B8100E8A959 /* 公元前597年邲之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前597年邲之战(kg).md"; sourceTree = "<group>"; };
@@ -853,6 +884,7 @@
 		08B9A1B62D943FEF00E8A959 /* 公元前315年蔺相如(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前315年蔺相如(kg).md"; sourceTree = "<group>"; };
 		08B9A1B82D9440A600E8A959 /* ARM解释器模拟内存和堆栈-实际应用与案例分析(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器模拟内存和堆栈-实际应用与案例分析(cs).md"; sourceTree = "<group>"; };
 		08B9A1BA2D94513C00E8A959 /* ARM解释器中FFI调用iOS原生函数(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器中FFI调用iOS原生函数(cs).md"; sourceTree = "<group>"; };
+		08B9A1BC2D94565800E8A959 /* 公元前613年楚庄王(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前613年楚庄王(kg).md"; sourceTree = "<group>"; };
 		08BDD3F52C6B007A00914412 /* Keychain(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Keychain(ap).md"; sourceTree = "<group>"; };
 		08BDD3F72C6B007A00914412 /* 布局动画(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "布局动画(ap).md"; sourceTree = "<group>"; };
 		08BDD3F82C6B007A00914412 /* 动画-例子(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "动画-例子(ap).md"; sourceTree = "<group>"; };
@@ -1815,7 +1847,7 @@
 				08B9A1732D93A34A00E8A959 /* 公元前632年城濮之战(kg).md */,
 				08B9A1752D93A42000E8A959 /* 公元前630年易牙烹子侍恒公(kg).md */,
 				08B9A1772D93A44100E8A959 /* 公元前627年秦晋殽之战与烛之武退秦师(kg).md */,
-				08B9A1822D943A0900E8A959 /* 公元前613年楚庄王（kg）.md */,
+				08B9A1BC2D94565800E8A959 /* 公元前613年楚庄王(kg).md */,
 				08B9A1842D943A6700E8A959 /* 公元前606年问鼎中原(kg).md */,
 				08B9A1862D943A7F00E8A959 /* 公元前601年孙叔敖(kg).md */,
 				08B9A1882D943B8100E8A959 /* 公元前597年邲之战(kg).md */,
@@ -1827,8 +1859,8 @@
 				08B9A1942D943C0500E8A959 /* 公元前515年孙子兵法(kg).md */,
 				08B9A1962D943C1A00E8A959 /* 公元前514年吴王阖闾(kg).md */,
 				08B9A1982D943C5000E8A959 /* 公元前510年道德经(kg).md */,
-				08B9A19A2D943C6600E8A959 /* 公元前506年柏举之战(kg).md */,
 				08B9A19C2D943D0100E8A959 /* 公元前507年鲁班(kg).md */,
+				08B9A19A2D943C6600E8A959 /* 公元前506年柏举之战(kg).md */,
 				08B9A19E2D943D1900E8A959 /* 公元前496年越王勾践(kg).md */,
 				08B9A1A02D943D2E00E8A959 /* 公元前476年战国七雄(kg).md */,
 				08B9A1A22D943D4800E8A959 /* 公元前475年越灭吴之战(kg).md */,
@@ -1839,9 +1871,25 @@
 				08B9A1AC2D943DF200E8A959 /* 公元前356年商鞅变法(kg).md */,
 				08B9A1AE2D943E1600E8A959 /* 公元前354年邯郸之难(kg).md */,
 				08B9A1B02D943E2D00E8A959 /* 公元前344年逢泽之会(kg).md */,
+				088959912D958304006D9103 /* 公元前334年苏秦合纵(kg).md */,
 				08B9A1B22D943E5D00E8A959 /* 公元前323年公孙衍与五国相王(kg).md */,
 				08B9A1B42D943E7000E8A959 /* 公元前318年合纵连横(kg).md */,
 				08B9A1B62D943FEF00E8A959 /* 公元前315年蔺相如(kg).md */,
+				088959932D958FD7006D9103 /* 公元前311年张仪连横(kg).md */,
+				088959952D958FEC006D9103 /* 公元前307年赵灭中山之战(kg).md */,
+				088959972D959010006D9103 /* 公元前306年胡服骑射(kg).md */,
+				088959992D959034006D9103 /* 公元前301年垂沙之战(kg).md */,
+				0889599B2D959048006D9103 /* 公元前298年三国攻秦之战(kg).md */,
+				0889599D2D95905D006D9103 /* 公元前293年伊阙之战(kg).md */,
+				0889599F2D95936B006D9103 /* 公元前284年济西之战(kg).md */,
+				088959A12D95937C006D9103 /* 公元前283年完璧归赵.md */,
+				088959A32D959390006D9103 /* 公元前279年将相和(kg).md */,
+				088959A52D9593A1006D9103 /* 公元前278年战国四大名将(kg).md */,
+				088959A72D9593B5006D9103 /* 公元前270年战国四公子(kg).md */,
+				088959A92D9593C5006D9103 /* 公元前268年远交近攻(kg).md */,
+				088959AB2D9593D4006D9103 /* 公元前262年长平之战(kg).md */,
+				088959AD2D9593E5006D9103 /* 公元前259年邯郸之战(kg).md */,
+				088959AF2D9593F7006D9103 /* 公元前256年都江堰(kg).md */,
 			);
 			path = "春秋战国";
 			sourceTree = "<group>";
@@ -2746,6 +2794,7 @@
 				08AEAEFA277F3C7400B969E2 /* css.html in Resources */,
 				08BDD5542C6B007A00914412 /* macOS共享菜单(ap).md in Resources */,
 				08BDD5472C6B007A00914412 /* 小组件-StaticConfiguration(ap).md in Resources */,
+				088959922D958304006D9103 /* 公元前334年苏秦合纵(kg).md in Resources */,
 				08BDD4FD2C6B007A00914412 /* 布局动画(ap).md in Resources */,
 				08BDD5002C6B007A00914412 /* contentTransition(ap).md in Resources */,
 				08448FBA279EC3EA00B61353 /* 方法(ap).md in Resources */,
@@ -2824,6 +2873,7 @@
 				08BDD5062C6B007A00914412 /* Combine的资料(ap).md in Resources */,
 				08BDD55D2C6B007A00914412 /* SwiftData-检索(ap).md in Resources */,
 				08BDD5E32C6C4D4600914412 /* SwiftUI数据流-@Observable(ap).md in Resources */,
+				088959AC2D9593D4006D9103 /* 公元前262年长平之战(kg).md in Resources */,
 				08BDD5252C6B007A00914412 /* 格式化-度量值(ap).md in Resources */,
 				08BDD55C2C6B007A00914412 /* SwiftData-调试(ap).md in Resources */,
 				08BDD52C2C6B007A00914412 /* targetEnvironment环境的判断(ap).md in Resources */,
@@ -2845,6 +2895,7 @@
 				08448FD7279EC64600B61353 /* 字典(ap).md in Resources */,
 				08B9A1472D9376E100E8A959 /* 公元前985年周昭王攻荆楚之战(kg).md in Resources */,
 				08F0F8BF2C95982C00DC659B /* 开源-动画(ap).md in Resources */,
+				088959A82D9593B5006D9103 /* 公元前270年战国四公子(kg).md in Resources */,
 				0851E5652C86EFC200D9463A /* fishhook(ap).md in Resources */,
 				08BDD55A2C6B007A00914412 /* SwiftData-版本迁移(ap).md in Resources */,
 				08BDD5682C6B007A00914412 /* Form(ap).md in Resources */,
@@ -2868,6 +2919,7 @@
 				08BDD4FC2C6B007A00914412 /* Keychain(ap).md in Resources */,
 				08BDD5832C6B007A00914412 /* GroupBox(ap).md in Resources */,
 				08BDD54A2C6B007A00914412 /* 支持多个小组件(ap).md in Resources */,
+				08B9A1BD2D94565800E8A959 /* 公元前613年楚庄王(kg).md in Resources */,
 				08BDD58F2C6B007A00914412 /* SwiftUI对标的UIKit视图(ap).md in Resources */,
 				08BDD5292C6B007A00914412 /* 版本兼容(ap).md in Resources */,
 				08B9A1AB2D943DA000E8A959 /* 公元前386年楚国吴起变法(kg).md in Resources */,
@@ -2898,6 +2950,7 @@
 				083266A22C987A0700E27CC5 /* AI辅助开发APP(ap).md in Resources */,
 				08BDD4FE2C6B007A00914412 /* 动画-例子(ap).md in Resources */,
 				08BDD5B02C6B007A00914412 /* List-大纲视图(ap).md in Resources */,
+				088959A62D9593A1006D9103 /* 公元前278年战国四大名将(kg).md in Resources */,
 				08448FB6279EC39800B61353 /* 结构体(ap).md in Resources */,
 				08BDD52E2C6B007A00914412 /* @dynamicMemberLookup动态成员查询(ap).md in Resources */,
 				086E03692C6E7136008CEDD3 /* 字符串时间(ap).md in Resources */,
@@ -2935,6 +2988,7 @@
 				08BDD53D2C6B007A00914412 /* AppIcon(ap).md in Resources */,
 				0851E5672C86F1FE00D9463A /* WKWebView(ap).md in Resources */,
 				08B9A1A72D943D7900E8A959 /* 公元前404年百家争鸣(kg).md in Resources */,
+				0889599C2D959048006D9103 /* 公元前298年三国攻秦之战(kg).md in Resources */,
 				08B9A16E2D93A25000E8A959 /* 公元前650年宋襄公(kg).md in Resources */,
 				08BDD5862C6B007A00914412 /* 浮层(ap).md in Resources */,
 				08BDD5282C6B007A00914412 /* 格式化-数据(ap).md in Resources */,
@@ -2945,6 +2999,7 @@
 				08BDD5222C6B007A00914412 /* Swift Concurrency学习路径(ap).md in Resources */,
 				08BDD5C72C6B007A00914412 /* Text-动态时间(ap).md in Resources */,
 				08BDD5712C6B007A00914412 /* 布局原理(ap).md in Resources */,
+				088959A22D95937C006D9103 /* 公元前283年完璧归赵.md in Resources */,
 				0851E5792C87563100D9463A /* 截获网络请求数据(ap).md in Resources */,
 				0851E5462C85F7ED00D9463A /* MachO(ap).md in Resources */,
 				087AAA862C9A71D700877650 /* 包管理工具-介绍(ap).md in Resources */,
@@ -2974,6 +3029,8 @@
 				087A7ADB2C803A6C00321F85 /* 包体积-三方库优化(ap).md in Resources */,
 				083266832C96C1C500E27CC5 /* visionOS-空间视频(ap).md in Resources */,
 				086E03652C6E7109008CEDD3 /* 时间-formatted(ap).md in Resources */,
+				088959982D959010006D9103 /* 公元前306年胡服骑射(kg).md in Resources */,
+				0889599E2D95905D006D9103 /* 公元前293年伊阙之战(kg).md in Resources */,
 				088F2C342C93285700DCA64F /* 怎么用小册子APP做知识管理(ap).md in Resources */,
 				08BDD5732C6B007A00914412 /* 布局进阶-参考资料(ap).md in Resources */,
 				08B9A1A32D943D4800E8A959 /* 公元前475年越灭吴之战(kg).md in Resources */,
@@ -3024,6 +3081,7 @@
 				088F2C482C932A7900DCA64F /* 知识管理-输出(ap).md in Resources */,
 				08BDD5622C6B007A00914412 /* 字体Picker(ap).md in Resources */,
 				08BDD52D2C6B007A00914412 /* @dynamicCallable动态可调用类型(ap).md in Resources */,
+				088959AE2D9593E5006D9103 /* 公元前259年邯郸之战(kg).md in Resources */,
 				08BDD5B22C6B007A00914412 /* List-轻扫操作(ap).md in Resources */,
 				0851E54E2C865B9B00D9463A /* 自动化测试(ap).md in Resources */,
 				083266732C96BF0500E27CC5 /* visionOS-介绍(ap).md in Resources */,
@@ -3036,6 +3094,7 @@
 				08BDD5362C6B007A00914412 /* 文件(ap).md in Resources */,
 				08448FA0279EBAD900B61353 /* 访问控制(ap).md in Resources */,
 				08B9A1B12D943E2D00E8A959 /* 公元前344年逢泽之会(kg).md in Resources */,
+				0889599A2D959034006D9103 /* 公元前301年垂沙之战(kg).md in Resources */,
 				08448FA5279EBB4100B61353 /* 布尔数(ap).md in Resources */,
 				08448FDC279EC71800B61353 /* 计算符(ap).md in Resources */,
 				087A7AD52C801C8000321F85 /* 包体积-编译优化(ap).md in Resources */,
@@ -3071,6 +3130,7 @@
 				0851E5532C86783400D9463A /* LLDB(ap).md in Resources */,
 				087AAAA12C9C0EEA00877650 /* 人工智能-Translation(ap).md in Resources */,
 				087A7AEE2C80C22400321F85 /* iOS虚拟内存(ap).md in Resources */,
+				088959AA2D9593C5006D9103 /* 公元前268年远交近攻(kg).md in Resources */,
 				08BDD5DF2C6C4BAE00914412 /* SwiftUI数据流-@State(ap).md in Resources */,
 				08D5A7992CECBA710036AAC6 /* 人工智能-MLX(ap).md in Resources */,
 				08BDD5E12C6C4BC500914412 /* SwiftUI数据流-@Binding(ap).md in Resources */,
@@ -3092,7 +3152,9 @@
 				08BDD56A2C6B007A00914412 /* Stepper(ap).md in Resources */,
 				08BDD5132C6B007A00914412 /* PassthroughSubject(ap).md in Resources */,
 				083266692C9663DC00E27CC5 /* 农历公历互转(ap).md in Resources */,
+				088959A02D95936B006D9103 /* 公元前284年济西之战(kg).md in Resources */,
 				08D5A7A12CECBB0D0036AAC6 /* 人工智能-技术原理(ap).md in Resources */,
+				088959B02D9593F7006D9103 /* 公元前256年都江堰(kg).md in Resources */,
 				08BDD54C2C6B007A00914412 /* Widget View(ap).md in Resources */,
 				087AAA932C9AAB7F00877650 /* 跨平台-大厂自研(ap).md in Resources */,
 				08B9A18B2D943B9800E8A959 /* 公元前594年鲁初税亩(kg).md in Resources */,
@@ -3101,7 +3163,6 @@
 				08B9A1572D938BC700E8A959 /* 公元前789年千亩之战(kg).md in Resources */,
 				087A7AE82C80B74B00321F85 /* 检测和诊断内存问题(ap).md in Resources */,
 				087A7AF62C8121DA00321F85 /* 文件内存映射（mmap）(ap).md in Resources */,
-				08B9A1832D943A0900E8A959 /* 公元前613年楚庄王（kg）.md in Resources */,
 				08BDD5672C6B007A00914412 /* WheelPicker(ap).md in Resources */,
 				08BDD56E2C6B007A00914412 /* 布局-居中(ap).md in Resources */,
 				0851E53A2C85683800D9463A /* Bazel-自定义的构建规则(ap).md in Resources */,
@@ -3132,6 +3193,7 @@
 				08B9A17D2D93B1B300E8A959 /* ARM解释器模拟内存和堆栈-代码实现与示例(cs).md in Resources */,
 				08A414182D923C2D00035B4A /* ARM反汇编(cs).md in Resources */,
 				087A7AE12C8060B300321F85 /* 包体积-链接器优化(ap).md in Resources */,
+				088959942D958FD7006D9103 /* 公元前311年张仪连横(kg).md in Resources */,
 				08BDD50D2C6B007A00914412 /* combineLatest(ap).md in Resources */,
 				087AAA772C9A6E0800877650 /* 单例(ap).md in Resources */,
 				08BDD5782C6B007A00914412 /* ViewThatFits(ap).md in Resources */,
@@ -3143,6 +3205,7 @@
 				08BDD5B92C6B007A00914412 /* List(ap).md in Resources */,
 				08BDD56B2C6B007A00914412 /* Toggle(ap).md in Resources */,
 				08448FA9279EBBB900B61353 /* 字符串(ap).md in Resources */,
+				088959962D958FEC006D9103 /* 公元前307年赵灭中山之战(kg).md in Resources */,
 				08BDD56F2C6B007A00914412 /* 布局-留白(ap).md in Resources */,
 				086E036E2C6F997A008CEDD3 /* 时间-开源库(ap).md in Resources */,
 				08BDD5AD2C6B007A00914412 /* Transferable(ap).md in Resources */,
@@ -3164,6 +3227,7 @@
 				08448F0F2799328700B61353 /* css_cn.html in Resources */,
 				087A7AD12C80091800321F85 /* Swift无用代码(ap).md in Resources */,
 				08BDD5192C6B007A00914412 /* 结构化并发(ap).md in Resources */,
+				088959A42D959390006D9103 /* 公元前279年将相和(kg).md in Resources */,
 				08BDD5112C6B007A00914412 /* Just(ap).md in Resources */,
 				08B9A1892D943B8100E8A959 /* 公元前597年邲之战(kg).md in Resources */,
 				08BDD5392C6B007A00914412 /* Scanner(ap).md in Resources */,

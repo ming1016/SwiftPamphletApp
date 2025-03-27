@@ -14,29 +14,29 @@ struct AppleGuide {
                 L(t: "变量", type: 1),
                 L(t: "打印", icon: "printer", type: 1),
                 L(t: "注释", icon: "number.square", type: 1),
-                L(t: "可选", icon: "exclamationmark.questionmark"),
+                L(t: "可选", icon: "exclamationmark.questionmark", type: 1),
                 L(t: "闭包", type: 1),
                 L(t: "函数", type: 1),
                 L(t: "访问控制", type: 1),
                 L(t: "Regex", type: 1)
             ]),
             L(t: "基础类型", sub: [
-                L(t: "数字"),
-                L(t: "布尔数"),
-                L(t: "字符串"),
-                L(t: "枚举"),
-                L(t: "元组"),
-                L(t: "泛型和协议"),
-                L(t: "不透明类型"),
-                L(t: "Result"),
-                L(t: "类型转换")
+                L(t: "数字", type: 1),
+                L(t: "布尔数", type: 1),
+                L(t: "字符串", type: 1),
+                L(t: "枚举", type: 1),
+                L(t: "元组", type: 1),
+                L(t: "泛型和协议", type: 1),
+                L(t: "不透明类型", type: 1),
+                L(t: "Result", type: 1),
+                L(t: "类型转换", type: 1)
             ]),
             L(t: "类和结构体",sub: [
-                L(t: "类"),
-                L(t: "结构体"),
-                L(t: "属性"),
-                L(t: "方法"),
-                L(t: "继承")
+                L(t: "类", type: 1),
+                L(t: "结构体", type: 1),
+                L(t: "属性", type: 1),
+                L(t: "方法", type: 1),
+                L(t: "继承", type: 1)
             ]),
             L(t: "函数式",sub: [
                 L(t: "map"),
