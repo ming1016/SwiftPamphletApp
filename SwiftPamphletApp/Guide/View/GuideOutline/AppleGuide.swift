@@ -39,17 +39,17 @@ struct AppleGuide {
                 L(t: "继承", type: 1)
             ]),
             L(t: "函数式",sub: [
-                L(t: "map"),
-                L(t: "filter"),
-                L(t: "reduce"),
-                L(t: "sorted")
+                L(t: "map", type: 1),
+                L(t: "filter", type: 1),
+                L(t: "reduce", type: 1),
+                L(t: "sorted", type: 1)
             ]),
             L(t: "控制流",sub: [
-                L(t: "If"),
-                L(t: "Guard"),
-                L(t: "遍历"),
-                L(t: "While"),
-                L(t: "Switch")
+                L(t: "If", type: 1),
+                L(t: "Guard", type: 1),
+                L(t: "遍历", type: 1),
+                L(t: "While", type: 1),
+                L(t: "Switch", type: 1)
             ]),
             L(t: "集合",sub: [
                 L(t: "数组"),
