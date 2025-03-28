@@ -52,24 +52,24 @@ struct AppleGuide {
                 L(t: "Switch", type: 1)
             ]),
             L(t: "集合",sub: [
-                L(t: "数组"),
-                L(t: "Sets"),
-                L(t: "字典")
+                L(t: "数组", type: 1),
+                L(t: "Sets", type: 1),
+                L(t: "字典", type: 1)
             ]),
             L(t: "操作符",sub: [
-                L(t: "赋值"),
-                L(t: "计算符"),
-                L(t: "比较运算符"),
-                L(t: "三元"),
-                L(t: "Nil-coalescing"),
-                L(t: "范围"),
-                L(t: "逻辑"),
-                L(t: "恒等"),
-                L(t: "运算符")
+                L(t: "赋值", type: 1),
+                L(t: "计算符", type: 1),
+                L(t: "比较运算符", type: 1),
+                L(t: "三元", type: 1),
+                L(t: "Nil-coalescing", type: 1),
+                L(t: "范围", type: 1),
+                L(t: "逻辑", type: 1),
+                L(t: "恒等", type: 1),
+                L(t: "运算符", type: 1)
             ]),
-            L(t: "Swift各版本演进"),
-            L(t: "Swift规范"),
-            L(t: "Swift书单")
+            L(t: "Swift各版本演进", type: 1),
+            L(t: "Swift规范", type: 1),
+            L(t: "Swift书单", type: 1)
         ]),
         L(t: "基础库", icon: "globe.asia.australia.fill", sub: [
             L(t: "系统及设备", sub: [
