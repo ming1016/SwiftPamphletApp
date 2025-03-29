@@ -57,19 +57,19 @@ struct AppleGuide {
                 L(t: "字典", type: 1)
             ]),
             L(t: "操作符",sub: [
-                L(t: "赋值", type: 1),
-                L(t: "计算符", type: 1),
-                L(t: "比较运算符", type: 1),
-                L(t: "三元", type: 1),
-                L(t: "Nil-coalescing", type: 1),
-                L(t: "范围", type: 1),
-                L(t: "逻辑", type: 1),
-                L(t: "恒等", type: 1),
-                L(t: "运算符", type: 1)
+                L(t: "赋值"),
+                L(t: "计算符"),
+                L(t: "比较运算符"),
+                L(t: "三元"),
+                L(t: "Nil-coalescing"),
+                L(t: "范围"),
+                L(t: "逻辑"),
+                L(t: "恒等"),
+                L(t: "运算符")
             ]),
             L(t: "Swift各版本演进", type: 1),
             L(t: "Swift规范", type: 1),
-            L(t: "Swift书单", type: 1)
+            L(t: "Swift书单")
         ]),
         L(t: "基础库", icon: "globe.asia.australia.fill", sub: [
             L(t: "系统及设备", sub: [
@@ -79,22 +79,21 @@ struct AppleGuide {
                 L(t: "targetEnvironment环境的判断")
             ]),
             L(t: "自带属性包装", sub: [
-                L(t: "@resultBuilder"),
+                L(t: "@resultBuilder", type: 1),
                 L(t: "@dynamicMemberLookup动态成员查询"),
                 L(t: "@dynamicCallable动态可调用类型")
             ]),
             L(t: "自带协议", sub: [
-                L(t: "@resultBuilder"),
                 L(t: "JSON没有id字段")
             ]),
             L(t: "格式化", sub: [
-                L(t: "格式化"),
+                L(t: "格式化", type: 1),
                 L(t: "格式化-数据"),
                 L(t: "格式化-度量值"),
                 L(t: "格式化-生活日常"),
             ]),
             L(t: "时间", icon: "calendar.badge.clock", sub: [
-                L(t: "时间"),
+                L(t: "时间", type: 1),
                 L(t: "日期组件"),
                 L(t: "TimeInterval"),
                 L(t: "时间-formatted"),
@@ -104,13 +103,13 @@ struct AppleGuide {
                 L(t: "Calendar"),
                 L(t: "时间-开源库"),
             ]),
-            L(t: "度量值"),
-            L(t: "Data"),
-            L(t: "文件"),
-            L(t: "Scanner"),
-            L(t: "AttributeString"),
+            L(t: "度量值", type: 1),
+            L(t: "Data", type: 1),
+            L(t: "文件", type: 1),
+            L(t: "Scanner", type: 1),
+            L(t: "AttributeString", type: 1),
             L(t: "随机"),
-            L(t: "UserDefaults")
+            L(t: "UserDefaults", type: 1)
         ]),
         L(t: "SwiftUI",icon: "heart.text.square.fill",sub: [
             L(t: "介绍",sub: [

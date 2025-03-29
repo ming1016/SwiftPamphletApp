@@ -1,216 +1,1310 @@
-##### Swift 1.1
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift语言版本演进</title>
+    <style>
+        :root {
+            --primary-color: #b19cd9;
+            --secondary-color: #f8bbd0;
+            --accent-color: #a5d6d9;
+            --mint-color: #c5e8d5;
+            --text-color: #333;
+            --bg-color: #fff;
+            --code-bg: #f7f5fa;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --shadow-color: rgba(0, 0, 0, 0.05);
+            --heading-color: #8a6bab;
+            --link-color: #9370DB;
+            --border-color: #e5dbf2;
+        }
 
-* countElements() 改成了 count()。
-* @NSApplicationMain 可以在 macOS 上使用。
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #9d86c3;
+                --secondary-color: #d999b3;
+                --accent-color: #87b8bb;
+                --mint-color: #a5c8b5;
+                --text-color: #e0e0e0;
+                --bg-color: #121212;
+                --code-bg: #282a36;
+                --card-bg: rgba(30, 30, 30, 0.8);
+                --shadow-color: rgba(0, 0, 0, 0.2);
+                --heading-color: #c4a9e7;
+                --link-color: #bb9cff;
+                --border-color: #534868;
+            }
+        }
 
-##### Swift 1.2
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-* 引入 Set 类型。
-* if let 可以放到一起，使用逗号分隔。
-* 新增 zip() 和 flatMap()。
-* 类增加静态方法和静态属性，使用 static 关键字描述。
-* as! 用于类型强转，失败会崩溃。
-* @noescape 用于描述作为参数闭包，用来告诉 Swift 闭包将在函数返回前使用。
-* 常量可以延后初始化。
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            transition: background-color 0.3s ease;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(177, 156, 217, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(197, 232, 213, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(165, 214, 217, 0.05) 0%, transparent 70%);
+            background-attachment: fixed;
+        }
 
-##### Swift 2.0
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-* 增加 guard 关键字，用于解可选项值。
-* defer 关键字用来延迟执行，即使抛出错误了都会在最后执行。
-* ErrorType 协议，以及 throws、do、try 和 catch 的引入用来处理错误。
-* characters 加上 count，用来替代 count()。
-* #available 用来检查系统版本。
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
 
-##### Swift 2.1
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.2), rgba(248, 187, 208, 0.2));
+            z-index: -1;
+            border-radius: 0 0 50% 50% / 15%;
+        }
 
-* 字符串插值可以包含字符串字面符号。
+        h1 {
+            font-size: 3rem;
+            color: var(--heading-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
 
-*Swift 2.2*
+        h2 {
+            font-size: 2.2rem;
+            color: var(--heading-color);
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 500;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
 
-官方博客介绍：[Swift 2.2 Released!](https://swift.org/blog/swift-2.2-released/)、[New Features in Swift 2.2](https://swift.org/blog/swift-2.2-new-features/)、[Swift 2.2 Release Process](https://swift.org/blog/swift-2.2-release-process/)
+        h3 {
+            font-size: 1.8rem;
+            color: var(--heading-color);
+            margin: 2rem 0 1rem;
+            font-weight: 500;
+        }
 
-* __FILE__, __LINE__ 和 __FUNCTION__ 换成 #file，#line 和 #function。
-* 废弃 ++ 和 -- 操作符。
-* C 语言风格 for 循环废弃。
-* 废弃变量参数，因为变量参数容易和 inout 搞混。
-* 废弃字符串化的选择器，选择器不再能写成字符串了。
-* 元组可直接比较是否相等。
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
 
-##### Swift 3.0
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--link-color);
+            transition: all 0.3s ease;
+        }
 
-官方博客介绍：[Swift 3.0 Released!](https://swift.org/blog/swift-3.0-released/)、[Swift 3.0 Preview 1 Released!](https://swift.org/blog/swift-3.0-preview-1-released/)、[Swift 3.0 Release Process](https://swift.org/blog/swift-3.0-release-process/)
+        a:hover {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--primary-color);
+        }
 
-* 规范动词和名词来命名。
-* 去掉 NS 前缀。
-* 方法名描述参数部分变为参数名。
-* 省略没必要的单词，命名做了简化呢。比如 stringByTrimmingCharactersInSet 就换成了 trimmingCharacters。
-* 枚举的属性使用小写开头。
-* 引入 C 函数的属性。
+        .version-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(var(--primary-color), 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-##### Swift 3.1
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px var(--shadow-color);
+        }
 
-官方博客介绍：[Swift 3.1 Released!](https://swift.org/blog/swift-3.1-released/)、[Swift 3.1 Release Process](https://swift.org/blog/swift-3.1-release-process/)
+        .version-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
 
-* 序列新增 prefix(while:) 和 drop(while:) 方法，顺序遍历执行闭包里的逻辑判断，满足条件就返回，遇到不匹配就会停止遍历。prefix 返回满足条件的元素集合，drop 返回停止遍历之后那些元素集合。
-* 泛型适用于嵌套类型。
-* 类型的扩展可以使用约束条件，比如扩展数组时，加上元素为整数的约束，这样的扩展就只会对元素为整数的数组有效。
+        .version-tag {
+            background: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            padding: 0.3rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
 
-##### Swift 4.0
+        .release-date {
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
 
-官方博客介绍：[Swift 4.0 Released!](https://swift.org/blog/swift-4.0-released/)、[Swift 4 Release Process](https://swift.org/blog/swift-4.0-release-process/)
+        .feature-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+        }
 
-* 加入 Codable 协议，更 Swifty 的编码和解码。提案 [SE-0167 Swift Encoders](https://github.com/apple/swift-evolution/blob/master/proposals/0167-swift-encoders.md)
-* 字符串加入三个双引号的支持，让多行字符串编写更加直观。提案 [SE-0168 Multi-Line String Literals](https://github.com/apple/swift-evolution/blob/master/proposals/0168-multi-line-string-literals.md)
-* 字符串变成集合，表示可以对字符串进行逐字遍历、map 和反转等操作。
-* keypaths 语法提升。提案见 [SE-0161 Smart KeyPaths: Better Key-Value Coding for Swift](https://github.com/apple/swift-evolution/blob/master/proposals/0161-key-paths.md)
-* 集合加入 `..<10` 这样语法的单边切片。提案 [SE-0172 One-sided Ranges](https://github.com/apple/swift-evolution/blob/master/proposals/0172-one-sided-ranges.md)
-* 字典新增 mapValues，可 map 字典的值。通过 grouping 可对字典进行分组生成新字典，键和值都可以。从字典中取值，如果键对应无值，则使用通过 default 指定的默认值。提案 [SE-0165 Dictionary & Set Enhancements](https://github.com/apple/swift-evolution/blob/master/proposals/0165-dict.md)
+        .feature-list li {
+            margin-bottom: 0.7rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
 
-##### Swift 4.1
+        .feature-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.1rem;
+        }
 
-官方博客介绍：[Swift 4.1 Released!](https://swift.org/blog/swift-4.1-released/)、[Swift 4.1 Release Process](https://swift.org/blog/swift-4.1-release-process/)
+        pre {
+            background-color: var(--code-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary-color);
+            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            position: relative;
+        }
 
-* Hashable 也不需要返回一个唯一的 hashValue 哈希值属性。
-* Equatable 和 Hashable 自动合成的提案参见 [SE-0185 Synthesizing Equatable and Hashable conformance](https://github.com/apple/swift-evolution/blob/master/proposals/0185-synthesize-equatable-hashable.md)。
-* 两个自定类型比较是否相等时，不再需要比较每个属性，Swift 会自动生成 == 方法，你只需要声明 Equatable 协议。
-* 引入 KeyDecodingStrategy属性，其中 .convertFromSnakeCase 可以将下划线的命名转化成驼峰的命名。
-* 引入条件符合性，只有满足一定条件才符合协议。比如扩展数组要求当里面元素满足某协议数组才符合这个协议。提案见 [SE-0143 Conditional conformances](https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md)。
-* 引入 canImport 宏条件关键字，判断是否可以使用某库，以前只能通过判断操作系统平台来判断。提案见 [SE-0075 Adding a Build Configuration Import Test](https://github.com/apple/swift-evolution/blob/master/proposals/0075-import-test.md)。
-* 新增能够去除为零项目的 compactMap()。提案 [SE-0187 Introduce Sequence.compactMap(_:)](https://github.com/apple/swift-evolution/blob/master/proposals/0187-introduce-filtermap.md)
-* 关联类型可以创建递归约束，提案见 [SE-0157 Support recursive constraints on associated types](https://github.com/apple/swift-evolution/blob/master/proposals/0157-recursive-protocol-constraints.md)
-* targetEnvironment 环境的判断，比如模拟器。提案见 [SE-0190 Target environment platform condition](https://github.com/apple/swift-evolution/blob/master/proposals/0190-target-environment-platform-condition.md) 。
+        code {
+            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+            padding: 0.2rem 0.4rem;
+            background: var(--code-bg);
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
 
-##### Swift 4.2
+        pre code {
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
 
-官方博客介绍：[Swift 4.2 Released!](https://swift.org/blog/swift-4.2-released/)、[Swift 4.2 Release Process](https://swift.org/blog/4.2-release-process/)
+        .code-title {
+            position: absolute;
+            top: 0;
+            right: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.2rem 0.7rem;
+            border-radius: 0 0 5px 5px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
 
-* 新增动态成员查询，@dynamicMemberLookup 新属性，指示访问属性时调用一个已实现的处理动态查找的下标方法 subscript(dynamicMemeber:)，通过指定属性字符串名返回值。提案 [SE-0195 Introduce User-defined "Dynamic Member Lookup" Types](https://github.com/apple/swift-evolution/blob/master/proposals/0195-dynamic-member-lookup.md)
-* 集合新加 removeAll(where:) 方法，过滤满足条件所有元素。比 filter 更高效。提案 [SE-0197 Adding in-place removeAll(where:) to the Standard Library](https://github.com/apple/swift-evolution/blob/master/proposals/0197-remove-where.md)
-* 布尔值增加 toggle() 方法，用来切换布尔值。提案见 [SE-0199 Adding toggle to Bool](https://github.com/apple/swift-evolution/blob/master/proposals/0199-bool-toggle.md)
-* 引入 CaseIterable 协议，可以将枚举中所有 case 生成 allCases 数组。提案 [SE-0194 Derived Collection of Enum Cases](https://github.com/apple/swift-evolution/blob/master/proposals/0194-derived-collection-of-enum-cases.md)
-* 引入 #warning 和 #error 两个新的编译器指令。#warning 会产生一个警告，#error 会直接让编译出错。比如必须要填写 token 才能编译的话可以在设置 token 的代码前加上 #error 和说明。提案见 [SE-0196 Compiler Diagnostic Directives](https://github.com/apple/swift-evolution/blob/master/proposals/0196-diagnostic-directives.md)
-* 新增加密安全的随机 API。直接在数字类型上调用 random() 方法生成随机数。shuffle() 方法可以对数组进行乱序重排。提案 [SE-0202 Random Unification](https://github.com/apple/swift-evolution/blob/master/proposals/0202-random-unification.md)
-* 更简单更安全的哈希协议，引入新的 Hasher 结构，通过 combine() 方法为哈希值添加更多属性，调用 finalize() 方法生成最终哈希值。提案 [SE-0206 Hashable Enhancements](https://github.com/apple/swift-evolution/blob/master/proposals/0206-hashable-enhancements.md)
-* 集合增加 allSatisfy() 用来判断集合中的元素是否都满足了一个条件。提案 [SE-0207 Add an allSatisfy algorithm to Sequence](https://github.com/apple/swift-evolution/blob/master/proposals/0207-containsOnly.md)
+        .resources {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 3rem;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            backdrop-filter: blur(10px);
+        }
 
-##### Swift 5.0
+        .resource-group {
+            margin-bottom: 2rem;
+        }
 
-官方博客介绍：[Swift 5 Released!](https://swift.org/blog/swift-5-released/)、[Swift 5.0 Release Process](https://swift.org/blog/5.0-release-process/)
+        .resource-list {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 1rem;
+            margin-top: 1rem;
+        }
 
-* @dynamicCallable 动态可调用类型。通过实现 dynamicallyCall 方法来定义变参的处理。提案 [SE-0216 Introduce user-defined dynamically "callable" types](https://github.com/apple/swift-evolution/blob/master/proposals/0216-dynamic-callable.md)
-* 新加 Result 类型用来处理错误。提案 [SE-0235 Add Result to the Standard Library](https://github.com/apple/swift-evolution/blob/master/proposals/0235-add-result.md)
-* 新增原始字符串能力，在字符串前加上一个或多个#符号。里面的双引号和转义符号将不再起作用了，如果想让转义符起作用，需要在转义符后面加上#符号。提案见 [SE-0200 Enhancing String Literals Delimiters to Support Raw Text](https://github.com/apple/swift-evolution/blob/master/proposals/0200-raw-string-escaping.md)
-* 自定义字符串插值。提案 [SE-0228 Fix ExpressibleByStringInterpolation](https://github.com/apple/swift-evolution/blob/master/proposals/0228-fix-expressiblebystringinterpolation.md)
-* 枚举新增 @unknown 用来区分固定的枚举和可能改变的枚举的能力。用于防止未来新增枚举属性会进行提醒提示完善每个 case 的处理。提案 [SE-0192 Handling Future Enum Cases](https://github.com/apple/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md)
-* compactMapValues() 对字典值进行转换和解包。可以解可选类型，并去掉 nil 值。提案 [SE-0218 Introduce compactMapValues to Dictionary](https://github.com/apple/swift-evolution/blob/master/proposals/0218-introduce-compact-map-values.md)
-* 扁平化 try?。提案 [SE-0230 Flatten nested optionals resulting from 'try?'](https://github.com/apple/swift-evolution/blob/master/proposals/0230-flatten-optional-try.md)
-* isMultiple(of:) 方法检查一个数字是否是另一个数字的倍数。提案见 [SE-0225 Adding isMultiple to BinaryInteger](https://github.com/apple/swift-evolution/blob/master/proposals/0225-binaryinteger-iseven-isodd-ismultiple.md)
+        .resource-item {
+            background: rgba(var(--bg-color), 0.5);
+            border-radius: 10px;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
 
-##### Swift 5.1
+        .resource-item:hover {
+            transform: translateY(-3px);
+        }
 
-官方博客介绍：[Swift 5.1 Released!](https://swift.org/blog/swift-5.1-released/)、[Swift 5.1 Release Process](https://swift.org/blog/5.1-release-process/)
+        .svg-container {
+            width: 100%;
+            margin: 2rem 0;
+            text-align: center;
+        }
 
-* 有序集合的 diff，通过 difference(from:) 方法，可以返回要删除哪些和添加哪些项目能够让两个集合相等。提案 [SE-0240 Ordered Collection Diffing](https://github.com/apple/swift-evolution/blob/master/proposals/0240-ordered-collection-diffing.md)
-* 属性包装。提案 [SE-0258 Property Wrappers](https://github.com/apple/swift-evolution/blob/main/proposals/0258-property-wrappers.md)
-* 不透明返回类型。函数调用者决定返回什么类型是泛型，函数自身决定返回什么类型使用不透明返回类型。提案 [SE-0244 Opaque Result Types](https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md)
-* 初始化有默认值的属性可不设置。提案 [SE-0242 Synthesize default values for the memberwise initializer](https://github.com/apple/swift-evolution/blob/master/proposals/0242-default-values-memberwise.md)
-* 单行表达式函数隐式返回，返回一个单行表达式的函数可以不用 return 关键字。提案 [SE-0255 Implicit returns from single-expression functions](https://github.com/apple/swift-evolution/blob/master/proposals/0255-omit-return.md)
-* 在类、结构体和枚举里使用 Self，Self 可以指代包含的类型。提案见 [SE-0068 Expanding Swift Self to class members and value types](https://github.com/apple/swift-evolution/blob/master/proposals/0068-universal-self.md)
-* 静态下标。提案 [SE-0254 Static and class subscripts](https://github.com/apple/swift-evolution/blob/master/proposals/0254-static-subscripts.md)
-* 枚举里有 none 的 case 编译器会提示换成 Optional.none。
-* 引入未初始化数组。提案 [SE-0245 Add an Array Initializer with Access to Uninitialized Storage](https://github.com/apple/swift-evolution/blob/master/proposals/0245-array-uninitialized-initializer.md)
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
 
-##### Swift 5.2
+        .note {
+            background: rgba(var(--accent-color), 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
 
-官方博客介绍：[Swift 5.2 Released!](https://swift.org/blog/swift-5.2-released/)、[Swift 5.2 Release Process](https://swift.org/blog/5.2-release-process/)
+        .note-title {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
 
-* 自定义类型中实现了 callAsFunction() 的话，该类型的值就可以直接调用。提案 [SE-0253 Callable values of user-defined nominal types](https://github.com/apple/swift-evolution/blob/master/proposals/0253-callable.md)
-* 键路径表达式作为函数。提案 [SE-0249 Key Path Expressions as Functions](https://github.com/apple/swift-evolution/blob/master/proposals/0249-key-path-literal-function-expressions.md)
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
 
-##### Swift 5.3
+            h1 {
+                font-size: 2.2rem;
+            }
 
-官方博客介绍：[Swift 5.3 released!](https://swift.org/blog/swift-5.3-released/)、[Swift 5.3 Release Process](https://swift.org/blog/5.3-release-process/)
+            h2 {
+                font-size: 1.8rem;
+            }
 
-* SPM 包管理资源，SPM 可以包含资源文件，比如多媒体或文本等。通过 Bundle.module 访问这些资源。提案 [SE-0271 Package Manager Resources](https://github.com/apple/swift-evolution/blob/master/proposals/0271-package-manager-resources.md)
-* SPM 包里资源本地化。提案 [SE-0278 Package Manager Localized Resources](https://github.com/apple/swift-evolution/blob/master/proposals/0278-package-manager-localized-resources.md)
-* SPM 可以整合二进制包依赖。提案 [SE-0272 Package Manager Binary Dependencies](https://github.com/apple/swift-evolution/blob/master/proposals/0272-swiftpm-binary-dependencies.md)
-* SPM 可以设置特定平台的依赖。提案 [SE-0273 Package Manager Conditional Target Dependencies](https://github.com/apple/swift-evolution/blob/master/proposals/0273-swiftpm-conditional-target-dependencies.md)
-* 单个 catch 块中捕获多个 Error 的 case。提案 [SE-0276 Multi-Pattern Catch Clauses](https://github.com/apple/swift-evolution/blob/master/proposals/0276-multi-pattern-catch-clauses.md)
-* 支持多个尾部闭包。提案见 [SE-0279 Multiple Trailing Closures](https://github.com/apple/swift-evolution/blob/master/proposals/0279-multiple-trailing-closures.md)
-* 符合 Comparable 协议的枚举可以进行比较。提案 [SE-0266 Synthesized Comparable conformance for enum types](https://github.com/apple/swift-evolution/blob/master/proposals/0266-synthesized-comparable-for-enumerations.md)
-* 很多地方可以不用加 self 来指代实例自己了。提案见 [SE-0269 Increase availability of implicit self in @escaping closures when reference cycles are unlikely to occur](https://github.com/apple/swift-evolution/blob/master/proposals/0269-implicit-self-explicit-capture.md)
-* @main 可以方便指定程序入口点。提案 [SE-0281 @main: Type-Based Program Entry Points](https://github.com/apple/swift-evolution/blob/master/proposals/0281-main-attribute.md)
-* where 子句可以用到泛型和扩展函数中。提案 [SE-0267 where clauses on contextually generic declarations](https://github.com/apple/swift-evolution/blob/master/proposals/0267-where-on-contextually-generic.md)
-* 枚举的 case 也可以符合协议。提案 [SE-0280 Enum cases as protocol witnesses](https://github.com/apple/swift-evolution/blob/master/proposals/0280-enum-cases-as-protocol-witnesses.md)
-* 完善 didSet，性能提升。提案 [SE-0268 Refine didSet Semantics](https://github.com/apple/swift-evolution/blob/master/proposals/0268-didset-semantics.md)
-* 新增 Float16 类型，即半精度浮点类型。提案 [SE-0277 Float16](https://github.com/apple/swift-evolution/blob/master/proposals/0277-float16.md)
+            h3 {
+                font-size: 1.5rem;
+            }
 
+            .version-card {
+                padding: 1.5rem;
+            }
 
-##### Swift 5.4
+            .resource-list {
+                grid-template-columns: 1fr;
+            }
+        }
 
-官方博客介绍：[Swift 5.4 Released!](https://swift.org/blog/swift-5.4-released/)
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem 0;
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
 
-* SPM 支持 @main。提案见 [SE-0294 Declaring executable targets in Package Manifests](https://github.com/apple/swift-evolution/blob/main/proposals/0294-package-executable-targets.md)
-* 结果生成器（Result builders），通过传递序列创建新值，SwiftUI就是使用的结果生成器将多个视图生成一个视图。提案 [SE-0289 Result builders](https://github.com/apple/swift-evolution/blob/main/proposals/0289-result-builders.md)
-* 增强隐式成员语法，即使用了隐式的成员可以进行链式处理。提案见 [SE-0287 Extend implicit member syntax to cover chains of member references](https://github.com/apple/swift-evolution/blob/main/proposals/0287-implicit-member-chains.md)
-* 函数开始有了使用多个变量参数的能力。提案 [SE-0284 Allow Multiple Variadic Parameters in Functions, Subscripts, and Initializers](https://github.com/apple/swift-evolution/blob/main/proposals/0284-multiple-variadic-parameters.md)
-* 嵌套函数可以重载，嵌套函数可以在声明函数之前调用他。
-* 属性包装支持局部变量。
+        .run-button {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 5px;
+            padding: 0.4rem 1rem;
+            cursor: pointer;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
 
-##### Swift 5.5
+        .run-button:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Swift语言版本演进</h1>
+            <p>从Swift 1.0到最新版本的完整演进历程</p>
+        </header>
 
-官方博客介绍：[Swift 5.5 Released!](https://swift.org/blog/swift-5.5-released/)
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 1.0 - 初次亮相</h2>
+                <span class="version-tag">Swift 1.0</span>
+            </div>
+            <div class="release-date">发布日期：2014年6月2日</div>
 
-* Async await，用同步写法来处理异步。提案 [SE-0296 Async/await](https://github.com/apple/swift-evolution/blob/main/proposals/0296-async-await.md)
-* Async sequences，异步序列上的循环能力。符合 AsyncSequence 协议的序列可以通过 for await 来进行异步循环。提案见 [SE-0298 Async/Await: Sequences](https://github.com/apple/swift-evolution/blob/main/proposals/0298-asyncsequence.md) 
-* 结构化的并发，使用 Task 和 TaskGroup 执行、取消和监听当前操作的方法。复杂的并发处理可以使用 withTaskGroup() 来创建一组 Task，addTask() 用来添加任务，cancelAll() 可以取消任务，addTask() 在取消任务后可以继续添加任务，如果使用了 addTaskUnlessCancelled() 方法就可以避免取消后会继续添加任务这种情况。提案见 [SE-0304 Structured concurrency](https://github.com/apple/swift-evolution/blob/main/proposals/0304-structured-concurrency.md)
-* 只读属性支持 async 和 throws 关键字。提案 [SE-0310 Effectful Read-only Properties](https://github.com/apple/swift-evolution/blob/main/proposals/0310-effectful-readonly-properties.md)
-* async let，可以创建 await 子任务。提案 [SE-0317 async let bindings](https://github.com/apple/swift-evolution/blob/main/proposals/0317-async-let.md)
-* 以前异步代码的适配。比如 DispatchQueue.main.async，外部库可以通过 withCheckedContinuation() 函数来对以前异步代码进行封装。 提案见 [SE-0300 Continuations for interfacing async tasks with synchronous code](https://github.com/apple/swift-evolution/blob/main/proposals/0300-continuation.md)
-* Actor，可以确保内部只能被一个线程访问，避免存储属性和方法出现竞争条件。提案在这 [SE-0306 Actors](https://github.com/apple/swift-evolution/blob/main/proposals/0306-actors.md)
-* 全局 actors，通过 actor 将全局状态隔离出来，避免数据竞争。比如主线程 @MainActor 这个属性包装可以将属性和方法标记为只能在主线程上访问。提案 [SE-0316 Global actors](https://github.com/apple/swift-evolution/blob/main/proposals/0316-global-actors.md)
-* Sendable 协议和 @Sendable 属性包装，目的是支持安全的将数据从一个线程传给另一个线程。Swift 的核心数据类型比如字符、集合等已符合 Sendable 协议。提案 [SE-0302 Sendable and @Sendable closures](https://github.com/apple/swift-evolution/blob/main/proposals/0302-concurrent-value-and-concurrent-closures.md)
-* 局部变量可以使用 lazy。
-* 属性包装可以用到函数和闭包参数上。提案[SE-0293 Extend Property Wrappers to Function and Closure Parameters](https://github.com/apple/swift-evolution/blob/main/proposals/0293-extend-property-wrappers-to-function-and-closure-parameters.md)
-* 泛型支持静态成员查找。提案 [SE-0299 Extending Static Member Lookup in Generic Contexts](https://github.com/apple/swift-evolution/blob/main/proposals/0299-extend-generic-static-member-lookup.md)
-* #if 用于后缀成员表达式。提案见 [SE-0308 #if for postfix member expressions](https://github.com/apple/swift-evolution/blob/main/proposals/0308-postfix-if-config-expressions.md)
-* CGFloat 和 Double 之间可以隐式转换。提案 [SE-0307 Allow interchangeable use of CGFloat and Double types](https://github.com/apple/swift-evolution/blob/main/proposals/0307-allow-interchangeable-use-of-double-cgfloat-types.md)
-* Codable 支持关联值枚举。提案 [SE-0295 Codable synthesis for enums with associated values](https://github.com/apple/swift-evolution/blob/main/proposals/0295-codable-synthesis-for-enums-with-associated-values.md)
+            <p>2014年，Apple在WWDC上首次发布Swift编程语言，为iOS和macOS开发提供了全新的现代编程语言选择。Swift旨在取代Objective-C，提供更安全、更快速的开发体验。</p>
 
-##### Swift 5.6
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>类型安全和类型推断</li>
+                <li>可选类型（Optionals）</li>
+                <li>闭包（Closures）</li>
+                <li>命名空间</li>
+                <li>元组（Tuples）</li>
+                <li>快速的编译期性能</li>
+            </ul>
 
-[5.6 官方博客介绍](https://www.swift.org/blog/swift-5.6-released/)
+            <h3>代码示例：可选类型</h3>
+            <pre><code>// Swift的可选类型示例
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber) // convertedNumber 的类型是 Int?
 
-* 使用 any 注释此类类型，使存在类型的影响在语言中明确。提案 [SE-0335 Introduce existential any](https://github.com/apple/swift-evolution/blob/main/proposals/0335-existential-any.md)
-* 类型占位符。[SE-0315 Type placeholders (formerly, "Placeholder types")](https://github.com/apple/swift-evolution/blob/main/proposals/0315-placeholder-types.md)
-* 新增 CodingKeyRepresentable 协议将非字符串和整数类型自定义表现。提案 [SE-0320 Allow coding of non String / Int keyed Dictionary into a KeyedContainer](https://github.com/apple/swift-evolution/blob/main/proposals/0320-codingkeyrepresentable.md)
-* 增加 Unavailability 用来在检查不可用时可以做些事情。[SE-0290 Unavailability Condition](https://github.com/apple/swift-evolution/blob/main/proposals/0290-negative-availability.md)
-* 增加了 `@preconcurrency` 属性。提案 [SE-0337 Incremental migration to concurrency checking](https://github.com/apple/swift-evolution/blob/main/proposals/0337-support-incremental-migration-to-concurrency-checking.md)
-* actor 的 init 和 deinit。[SE-0327 On Actors and Initialization](https://github.com/apple/swift-evolution/blob/main/proposals/0327-actor-initializers.md)
+// 使用if let解包可选类型
+if let actualNumber = convertedNumber {
+    print("字符串转换为数字: \(actualNumber)")
+} else {
+    print("字符串不包含有效数字")
+}
 
-Package Manage 的一些提案
+// 使用!强制解包（不安全）
+let forcedNumber = convertedNumber! // 如果convertedNumber为nil，会引起运行时错误</code></pre>
 
-* [SE-0303 Package Manager Extensible Build Tools](https://github.com/apple/swift-evolution/blob/main/proposals/0303-swiftpm-extensible-build-tools.md)
-* [SE-0305 Package Manager Binary Target Improvements](https://github.com/apple/swift-evolution/blob/main/proposals/0305-swiftpm-binary-target-improvements.md)
-* [SE-0325 Additional Package Plugin APIs](https://github.com/apple/swift-evolution/blob/main/proposals/0325-swiftpm-additional-plugin-apis.md)
-* [SE-0332 Package Manager Command Plugins](https://github.com/apple/swift-evolution/blob/main/proposals/0332-swiftpm-command-plugins.md)
+            <div class="svg-container">
+                <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="80" width="500" height="40" rx="20" fill="#f0e5ff" stroke="#b19cd9" stroke-width="2"/>
+                    <text x="300" y="105" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">变量值</text>
+                    <rect x="50" y="30" width="500" height="40" rx="20" fill="#fce4ec" stroke="#f8bbd0" stroke-width="2"/>
+                    <text x="300" y="55" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Optional&lt;T&gt;</text>
+                    <path d="M300,70 L300,80" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+                    <path d="M280,130 L280,170 L320,170 L320,130" stroke="#a5d6d9" stroke-width="2" fill="none"/>
+                    <text x="300" y="190" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">nil 表示没有值</text>
+                </svg>
+            </div>
+        </div>
 
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 2.0 - 增强安全与性能</h2>
+                <span class="version-tag">Swift 2.0</span>
+            </div>
+            <div class="release-date">发布日期：2015年6月8日</div>
 
-##### Swift 5.7
+            <p>Swift 2.0增强了安全特性，改进了错误处理，并增加了更多语言功能，使开发人员能够编写更加健壮的代码。</p>
 
-* 标准库多了个 `Regex<Output>` 类型，Regex 语法与 Perl、Python、Ruby、Java、NSRegularExpression 和许多其他语言兼容。可以用 `let regex = try! Regex("a[bc]+")` 或 `let regex = /a[bc]+/` 写法来使用。[SE-0350 Regex Type and Overview](https://github.com/apple/swift-evolution/blob/main/proposals/0350-regex-type-overview.md) 引入 Regex 类型。[SE-0351 Regex builder DSL](https://github.com/apple/swift-evolution/blob/main/proposals/0351-regex-builder.md) 使用 result builder 来构建正则表达式的 DSL。[SE-0354 Regex Literals](https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md) 简化的正则表达式。[SE-0357 Regex-powered string processing algorithms](https://github.com/apple/swift-evolution/blob/main/proposals/0357-regex-string-processing-algorithms.md) 提案里有基于正则表达式的新字符串处理算法。
-* [SE-0347 Type inference from default expressions](https://github.com/apple/swift-evolution/blob/main/proposals/0347-type-inference-from-default-exprs.md) 扩展 Swift 泛型参数类型的默认值能力。
-* [SE-0341 Opaque Parameter Declarations](https://github.com/apple/swift-evolution/blob/main/proposals/0341-opaque-parameters.md) 使用 some 参数简化泛型参数声明。[SE-0328 Structural opaque result types](https://github.com/apple/swift-evolution/blob/main/proposals/0328-structural-opaque-result-types.md) 扩大不透明结果返回类型可以使用的范围。[SE-0360 Opaque result types with limited availability](https://github.com/apple/swift-evolution/blob/main/proposals/0360-opaque-result-types-with-availability.md) 可用性有限的不透明结果类型，比如 `if #available(macOS 13.0, *) {}` 就可以根据系统不同版本返回不同类型，新版本出现新类型的 View 就可以和以前的 View 类型区别开。
-* [SE-0309 Unlock existentials for all protocols](https://github.com/apple/swift-evolution/blob/main/proposals/0309-unlock-existential-types-for-all-protocols.md) 改进了 existentials 和 泛型的交互。这样就可以更方便的检查 Any 类型的两个值是否相等.
-* [SE-0346 Lightweight same-type requirements for primary associated types](https://github.com/apple/swift-evolution/blob/main/proposals/0346-light-weight-same-type-syntax.md) 引入一种新语法，用于符合泛型参数并通过相同类型要求约束关联类型。[SE-0358 Primary Associated Types in the Standard Library](https://github.com/apple/swift-evolution/blob/main/proposals/0358-primary-associated-types-in-stdlib.md) 引入主要关联类型概念，并将其带入了标准库。这些关联类型很像泛型，允许开发者将给定关联类型的类型指定为通用约束。
-* [SE-0353 Constrained Existential Types](https://github.com/apple/swift-evolution/blob/main/proposals/0353-constrained-existential-types.md) 基于 SE-0309 和 SE-0346 提案，在 existential 类型的上下文中重用轻量关联类型的约束。
-* [SE-0352 Implicitly Opened Existentials](https://github.com/apple/swift-evolution/blob/main/proposals/0352-implicit-open-existentials.md)  允许 Swift 在很多情况下使用协议调用泛型函数。
-* 新增 [SE-0338 Clarify the Execution of Non-Actor-Isolated Async Functions](https://github.com/apple/swift-evolution/blob/main/proposals/0338-clarify-execution-non-actor-async.md) 通过收紧可发送性检查的规则来避免潜在的数据竞争。
-* [SE-0343 Concurrency in Top-level Code](https://github.com/apple/swift-evolution/blob/main/proposals/0343-top-level-concurrency.md) 这个提案主要是更好地支持命令行工具的开发，可以直接将 concurrency 代码写到 main.swift 文件里。
-* [SE-0340 Unavailable From Async Attribute](https://github.com/apple/swift-evolution/blob/main/proposals/0340-swift-noasync.md) 提供 noasync 语法以允许我们将类型和函数标记为在异步上下文不可用。
-* [SE-0336 Distributed Actor Isolation](https://github.com/apple/swift-evolution/blob/main/proposals/0336-distributed-actor-isolation.md) 和 [SE-0344 Distributed Actor Runtime](https://github.com/apple/swift-evolution/blob/main/proposals/0344-distributed-actor-runtime.md) 是两个 Distributed Actors 的相关提案。
-* [SE-0345 if let shorthand for shadowing an existing optional variable](https://github.com/apple/swift-evolution/blob/main/proposals/0345-if-let-shorthand.md) 引入的新语法，用于 unwrapping optinal。
-* [SE-0326](https://github.com/apple/swift-evolution/blob/main/proposals/0326-extending-multi-statement-closure-inference.md) 提高了 Swift 对闭包使用参数和类型推断的能力。
-* [SE-0348 buildPartialBlock for result builders](https://github.com/apple/swift-evolution/blob/main/proposals/0348-buildpartialblock.md)  简化了实现复杂 result buiders 所需的重载。
-* [SE-0356 Swift Snippets](https://github.com/apple/swift-evolution/blob/main/proposals/0356-swift-snippets.md)  代码片段用于示例文档的提案。
-* 内存管理相关提案包括 [SE-0349 Unaligned Loads and Stores from Raw Memory](https://github.com/apple/swift-evolution/blob/main/proposals/0349-unaligned-loads-and-stores.md) 、[SE-0334 Pointer API Usability Improvements](https://github.com/apple/swift-evolution/blob/main/proposals/0334-pointer-usability-improvements.md) 、[SE-0333 Expand usability of withMemoryRebound](https://github.com/apple/swift-evolution/blob/main/proposals/0333-with-memory-rebound.md) 。
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>新的错误处理模型（try/catch）</li>
+                <li>guard语句</li>
+                <li>协议扩展（Protocol Extensions）</li>
+                <li>可用性检查（availability checking）</li>
+                <li>模式匹配增强</li>
+                <li>改进的编译器性能</li>
+            </ul>
+
+            <h3>代码示例：错误处理与Guard语句</h3>
+            <pre><code>// Swift 2.0中的错误处理
+enum PasswordError: Error {
+    case tooShort
+    case noUppercaseLetter
+    case noSpecialCharacter
+}
+
+func validatePassword(_ password: String) throws -> Bool {
+    // 使用guard语句进行早期返回
+    guard password.count >= 8 else {
+        throw PasswordError.tooShort
+    }
+
+    guard password.contains(where: { $0.isUppercase }) else {
+        throw PasswordError.noUppercaseLetter
+    }
+
+    let specialCharacters = "!@#$%^&*()_-+=[]{}|:;'\"\\/?,.<>"
+    guard password.contains(where: { specialCharacters.contains($0) }) else {
+        throw PasswordError.noSpecialCharacter
+    }
+
+    return true
+}
+
+// 调用可能抛出错误的函数
+do {
+    let passwordIsValid = try validatePassword("password")
+    print("密码有效")
+} catch PasswordError.tooShort {
+    print("密码太短")
+} catch PasswordError.noUppercaseLetter {
+    print("密码需要包含大写字母")
+} catch PasswordError.noSpecialCharacter {
+    print("密码需要包含特殊字符")
+} catch {
+    print("验证失败: \(error)")
+}</code></pre>
+
+            <div class="svg-container">
+                <svg width="600" height="250" viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="200" y="20" width="200" height="50" rx="10" fill="#f0e5ff" stroke="#b19cd9" stroke-width="2"/>
+                    <text x="300" y="50" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">函数开始</text>
+                    <path d="M300,70 L300,90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <rect x="200" y="90" width="200" height="50" rx="10" fill="#fce4ec" stroke="#f8bbd0" stroke-width="2"/>
+                    <text x="300" y="120" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">guard 条件检查</text>
+                    <path d="M400,115 L450,115 L450,180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <text x="470" y="140" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">条件不满足</text>
+
+                    <path d="M300,140 L300,160" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <text x="250" y="155" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">条件满足</text>
+
+                    <rect x="200" y="160" width="200" height="50" rx="10" fill="#e0f7fa" stroke="#a5d6d9" stroke-width="2"/>
+                    <text x="300" y="190" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">继续执行</text>
+
+                    <rect x="400" y="180" width="150" height="50" rx="10" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="2"/>
+                    <text x="475" y="210" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">抛出错误</text>
+
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 3.0 - API设计指南</h2>
+                <span class="version-tag">Swift 3.0</span>
+            </div>
+            <div class="release-date">发布日期：2016年9月13日</div>
+
+            <p>Swift 3.0是一个重大更新，破坏了向后兼容性，但带来了更一致的API设计。这个版本专注于建立Swift作为一种开源语言的基础，并统一了核心库和API设计。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>API命名规范大改（去掉了很多NS前缀）</li>
+                <li>移除了C风格的for循环</li>
+                <li>函数参数标签改进</li>
+                <li>GCD和Core Graphics API现代化</li>
+                <li>移除了++ 和 -- 操作符</li>
+                <li>改进了泛型系统</li>
+            </ul>
+
+            <h3>代码示例：API命名变化</h3>
+            <pre><code>// Swift 2.0 写法
+let blue = UIColor.blueColor()
+let min = CGRectGetMinX(rect)
+dispatch_async(dispatch_get_main_queue()) {
+    // 执行操作
+}
+
+// Swift 3.0 写法
+let blue = UIColor.blue
+let min = rect.minX
+DispatchQueue.main.async {
+    // 执行操作
+}
+</code></pre>
+
+            <div class="svg-container">
+                <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="50" width="500" height="40" rx="10" fill="#f0e5ff" stroke="#b19cd9" stroke-width="2"/>
+                    <text x="120" y="75" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Swift 2.0</text>
+                    <text x="350" y="75" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">NSData.dataWithContentsOfURL(url)</text>
+
+                    <path d="M300,90 L300,110" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <rect x="50" y="110" width="500" height="40" rx="10" fill="#e0f7fa" stroke="#a5d6d9" stroke-width="2"/>
+                    <text x="120" y="135" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Swift 3.0</text>
+                    <text x="350" y="135" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Data(contentsOf: url)</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 4.0 - 源代码稳定性</h2>
+                <span class="version-tag">Swift 4.0</span>
+            </div>
+            <div class="release-date">发布日期：2017年9月19日</div>
+
+            <p>Swift 4.0主要致力于ABI稳定性（虽然尚未完全实现），增强了语言功能，改进了字符串实现，并添加了序列化能力。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>改进的String实现（重新成为Collection）</li>
+                <li>新的Codable协议，用于JSON和PropertyList的编码和解码</li>
+                <li>新的Dictionary和Set API</li>
+                <li>多行字符串字面量</li>
+                <li>私有访问权限修改（private和fileprivate的区分）</li>
+                <li>Key Paths 和 Smart Key Paths</li>
+            </ul>
+
+            <h3>代码示例：Codable和多行字符串</h3>
+            <pre><code>// Swift 4.0 中的 Codable 协议
+struct Person: Codable {
+    var name: String
+    var age: Int
+    var email: String
+}
+
+// 编码为JSON
+let person = Person(name: "张三", age: 28, email: "zhangsan@example.com")
+let encoder = JSONEncoder()
+if let jsonData = try? encoder.encode(person) {
+    if let jsonString = String(data: jsonData, encoding: .utf8) {
+        print(jsonString) // {"name":"张三","age":28,"email":"zhangsan@example.com"}
+    }
+}
+
+// 多行字符串字面量
+let poem = """
+    春眠不觉晓，
+    处处闻啼鸟。
+    夜来风雨声，
+    花落知多少。
+    """
+print(poem)</code></pre>
+
+            <div class="svg-container">
+                <svg width="600" height="260" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="100" y="20" width="400" height="50" rx="10" fill="#f0e5ff" stroke="#b19cd9" stroke-width="2"/>
+                    <text x="300" y="50" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Swift对象</text>
+
+                    <path d="M300,70 L300,100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <text x="340" y="90" text-anchor="start" font-family="Arial" font-size="14" fill="#333">JSONEncoder</text>
+
+                    <rect x="100" y="100" width="400" height="50" rx="10" fill="#fce4ec" stroke="#f8bbd0" stroke-width="2"/>
+                    <text x="300" y="130" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">JSON数据</text>
+
+                    <path d="M200,150 L200,180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <path d="M400,150 L400,180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <text x="150" y="170" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">发送网络</text>
+                    <text x="450" y="170" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">存储文件</text>
+
+                    <rect x="100" y="180" width="200" height="50" rx="10" fill="#e0f7fa" stroke="#a5d6d9" stroke-width="2"/>
+                    <text x="200" y="210" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">API服务器</text>
+
+                    <rect x="300" y="180" width="200" height="50" rx="10" fill="#c5e8d5" stroke="#a5c8b5" stroke-width="2"/>
+                    <text x="400" y="210" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">本地存储</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 5.0 - ABI稳定性</h2>
+                <span class="version-tag">Swift 5.0</span>
+            </div>
+            <div class="release-date">发布日期：2019年3月25日</div>
+
+            <p>Swift 5.0是一个里程碑式的版本，实现了ABI稳定性，这意味着Swift运行时现在已经包含在了操作系统中，这大大减小了应用程序的体积。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>ABI稳定性</li>
+                <li>新的String API</li>
+                <li>Raw字符串（可以包含引号和反斜杠）</li>
+                <li>动态可调用类型（dynamicCallable）</li>
+                <li>Result类型</li>
+                <li>性能优化</li>
+                <li>新的Unicode支持</li>
+            </ul>
+
+            <h3>代码示例：Result类型和Raw字符串</h3>
+            <pre><code>// Swift 5.0 中的 Result 类型
+enum NetworkError: Error {
+    case badURL
+    case serverError(Int)
+    case noData
+}
+
+func fetchData(from urlString: String, completion: @escaping (Result&lt;Data, NetworkError&gt;) -> Void) {
+    guard let url = URL(string: urlString) else {
+        completion(.failure(.badURL))
+        return
+    }
+
+    URLSession.shared.dataTask(with: url) { (data, response, error) in
+        if let httpResponse = response as? HTTPURLResponse, !(200...299).contains(httpResponse.statusCode) {
+            completion(.failure(.serverError(httpResponse.statusCode)))
+            return
+        }
+
+        if let data = data {
+            completion(.success(data))
+        } else {
+            completion(.failure(.noData))
+        }
+    }.resume()
+}
+
+// 使用Result类型
+fetchData(from: "https://api.example.com/data") { result in
+    switch result {
+    case .success(let data):
+        print("获取数据成功: \(data)")
+    case .failure(let error):
+        switch error {
+        case .badURL:
+            print("URL无效")
+        case .serverError(let code):
+            print("服务器错误: \(code)")
+        case .noData:
+            print("没有数据")
+        }
+    }
+}
+
+// Raw字符串
+let regex = #"\\d{3}-\\d{2}-\\d{4}"#
+print(regex) // 输出: \d{3}-\d{2}-\d{4}
+</code></pre>
+
+            <div class="svg-container">
+                <svg width="600" height="250" viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="150" y="30" width="300" height="60" rx="10" fill="#f0e5ff" stroke="#b19cd9" stroke-width="2"/>
+                    <text x="300" y="50" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Result&lt;Success, Failure&gt;</text>
+                    <line x1="150" y1="65" x2="450" y2="65" stroke="#b19cd9" stroke-width="1" />
+                    <text x="300" y="80" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">一种表示成功或失败的枚举类型</text>
+
+                    <path d="M225,90 L225,120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <path d="M375,90 L375,120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <rect x="100" y="120" width="200" height="50" rx="10" fill="#e0f7fa" stroke="#a5d6d9" stroke-width="2"/>
+                    <text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">.success(Value)</text>
+
+                    <rect x="300" y="120" width="200" height="50" rx="10" fill="#fce4ec" stroke="#f8bbd0" stroke-width="2"/>
+                    <text x="400" y="150" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">.failure(Error)</text>
+
+                    <path d="M200,170 L200,200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <path d="M400,170 L400,200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <rect x="100" y="200" width="200" height="40" rx="10" fill="#c5e8d5" stroke="#a5c8b5" stroke-width="2"/>
+                    <text x="200" y="225" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">处理成功结果</text>
+
+                    <rect x="300" y="200" width="200" height="40" rx="10" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="2"/>
+                    <text x="400" y="225" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">处理错误情况</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 5.1 - 模块稳定性</h2>
+                <span class="version-tag">Swift 5.1</span>
+            </div>
+            <div class="release-date">发布日期：2019年9月10日</div>
+
+            <p>Swift 5.1引入了模块稳定性，为Swift包管理器（SPM）提供二进制框架分发的支持，并添加了一些重要的语法特性。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>模块稳定性</li>
+                <li>函数返回的不透明类型（opaque return types）</li>
+                <li>属性包装器（Property Wrappers）</li>
+                <li>静态和类订阅（static and class subscripts）</li>
+                <li>隐式返回表达式（单表达式函数可省略return）</li>
+                <li>Universal Self</li>
+            </ul>
+
+            <h3>代码示例：属性包装器和隐式返回</h3>
+            <pre><code>// Swift 5.1 属性包装器
+@propertyWrapper
+struct UserDefaultsBacked&lt;T&gt; {
+    let key: String
+    let defaultValue: T
+    let storage: UserDefaults
+
+    init(wrappedValue defaultValue: T, key: String, storage: UserDefaults = .standard) {
+        self.key = key
+        self.defaultValue = defaultValue
+        self.storage = storage
+    }
+
+    var wrappedValue: T {
+        get {
+            storage.object(forKey: key) as? T ?? defaultValue
+        }
+        set {
+            storage.set(newValue, forKey: key)
+        }
+    }
+}
+
+class Settings {
+    @UserDefaultsBacked(key: "username", defaultValue: "")
+    var username: String
+
+    @UserDefaultsBacked(key: "isFirstLaunch", defaultValue: true)
+    var isFirstLaunch: Bool
+}
+
+// Swift 5.1 隐式返回
+// 之前
+func square(number: Int) -> Int {
+    return number * number
+}
+
+// Swift 5.1
+func square(number: Int) -> Int {
+    number * number  // 隐式返回
+}</code></pre>
+
+            <div class="svg-container">
+                <svg width="600" height="250" viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="150" y="20" width="300" height="60" rx="10" fill="#f0e5ff" stroke="#b19cd9" stroke-width="2"/>
+                    <text x="300" y="50" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">@propertyWrapper</text>
+                    <text x="300" y="70" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">定义属性包装器</text>
+
+                    <path d="M300,80 L300,110" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <rect x="150" y="110" width="300" height="60" rx="10" fill="#fce4ec" stroke="#f8bbd0" stroke-width="2"/>
+                    <text x="300" y="135" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">struct UserDefaultsBacked&lt;T&gt;</text>
+                    <text x="300" y="155" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">包含wrappedValue的读写逻辑</text>
+
+                    <path d="M300,170 L300,200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <rect x="150" y="200" width="300" height="40" rx="10" fill="#e0f7fa" stroke="#a5d6d9" stroke-width="2"/>
+                    <text x="300" y="225" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">@UserDefaultsBacked var username: String</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 5.5 - 异步编程</h2>
+                <span class="version-tag">Swift 5.5</span>
+            </div>
+            <div class="release-date">发布日期：2021年9月20日</div>
+
+            <p>Swift 5.5带来了期待已久的并发编程模型，引入了async/await语法，actor模型和结构化并发，彻底改变了Swift中的异步编程方式。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>async/await</li>
+                <li>Actor模型</li>
+                <li>结构化并发（TaskGroup）</li>
+                <li>异步序列</li>
+                <li>全局 actors</li>
+                <li>@MainActor 属性包装器</li>
+                <li>连续性委托</li>
+            </ul>
+
+            <h3>代码示例：async/await和Actor</h3>
+            <pre><code>// Swift 5.5 中的 async/await
+func fetchUserData() async throws -> User {
+    let url = URL(string: "https://api.example.com/user")!
+    let (data, _) = try await URLSession.shared.data(from: url)
+    return try JSONDecoder().decode(User.self, from: data)
+}
+
+// 调用异步函数
+Task {
+    do {
+        let user = try await fetchUserData()
+        print("用户名: \(user.name)")
+    } catch {
+        print("获取用户数据失败: \(error)")
+    }
+}
+
+// Swift 5.5 中的 Actor
+actor BankAccount {
+    private var balance: Double
+
+    init(initialBalance: Double) {
+        balance = initialBalance
+    }
+
+    func deposit(amount: Double) {
+        balance += amount
+    }
+
+    func withdraw(amount: Double) -> Double {
+        guard balance >= amount else {
+            return 0
+        }
+        balance -= amount
+        return amount
+    }
+
+    func checkBalance() -> Double {
+        return balance
+    }
+}
+
+// 使用Actor
+func transferMoney() async {
+    let account = BankAccount(initialBalance: 1000)
+
+    // 并发访问是安全的
+    async let deposit = account.deposit(amount: 100)
+    async let withdrawal = account.withdraw(amount: 50)
+
+    // 等待两个操作完成
+    await deposit
+    let amount = await withdrawal
+
+    let finalBalance = await account.checkBalance()
+    print("提取金额: \(amount), 最终余额: \(finalBalance)")
+}</code></pre>
+
+            <div class="svg-container">
+                <svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+                        </marker>
+                    </defs>
+
+                    <!-- Actor圆圈 -->
+                    <circle cx="300" cy="120" r="80" fill="#f0e5ff" stroke="#b19cd9" stroke-width="3"/>
+                    <text x="300" y="90" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#333">Actor</text>
+                    <text x="300" y="120" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">隔离状态</text>
+                    <text x="300" y="145" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">顺序执行</text>
+
+                    <!-- 消息队列 -->
+                    <rect x="190" y="220" width="220" height="50" rx="10" fill="#e0f7fa" stroke="#a5d6d9" stroke-width="2"/>
+                    <text x="300" y="250" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">消息队列 (actor mailbox)</text>
+
+                    <!-- 连接箭头 -->
+                    <path d="M300,200 L300,220" stroke="#333" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+
+                    <!-- 线程 -->
+                    <path d="M100,50 L180,50" stroke="#fce4ec" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <text x="130" y="40" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">线程1</text>
+
+                    <path d="M100,100 L180,100" stroke="#c5e8d5" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <text x="130" y="90" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">线程2</text>
+
+                    <path d="M100,150 L180,150" stroke="#ffcdd2" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <text x="130" y="140" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">线程3</text>
+
+                    <!-- 出口 -->
+                    <path d="M420,80 L500,80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <text x="460" y="70" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">异步响应</text>
+
+                    <path d="M420,160 L500,160" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <text x="460" y="150" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">异步响应</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 5.6 - 增强开发体验</h2>
+                <span class="version-tag">Swift 5.6</span>
+            </div>
+            <div class="release-date">发布日期：2022年3月14日</div>
+
+            <p>Swift 5.6带来了多项改进，重点是提升开发者体验和性能，尤其在并发方面做了多项增强。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>任何类型存在性检查（any关键字）</li>
+                <li>扩展的正则表达式文字</li>
+                <li>增加对 Type Placeholders 的支持</li>
+                <li>Swift包管理器命令插件</li>
+                <li>新的 Swift-DocC 文档编译器功能</li>
+                <li>改进的IDE诊断和崩溃消息</li>
+            </ul>
+
+            <h3>代码示例：Any关键字和类型占位符</h3>
+            <pre><code>// Swift 5.6 中的 any 关键字
+// 之前的写法
+protocol Drawable {
+    func draw()
+}
+
+// 旧语法
+let shapes: [Drawable] = [Circle(), Rectangle(), Triangle()]
+
+// Swift 5.6新语法
+let shapes: [any Drawable] = [Circle(), Rectangle(), Triangle()]
+
+// Type Placeholders
+let tuple = (4, "Hello", true)
+// 使用占位符提取第一个元素类型
+let _: _ = tuple.0 // 编译器推断类型为Int
+</code></pre>
+
+            <div class="note">
+                <div class="note-title">关于any关键字</div>
+                <p>在Swift 5.6中，any关键字是为了更明确地表示使用了类型擦除。这增加了代码的可读性，并为将来的语言发展准备了基础。在Swift演进过程中，越来越强调类型信息的显式声明。</p>
+            </div>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 5.7 - 泛型和并发增强</h2>
+                <span class="version-tag">Swift 5.7</span>
+            </div>
+            <div class="release-date">发布日期：2022年9月12日</div>
+
+            <p>Swift 5.7引入了新的语法特性，提高了类型检查速度，并进一步增强了并发模型，尤其是把分布式actors作为实验性功能引入。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>正则表达式字面量</li>
+                <li>if-let可选绑定语法简化</li>
+                <li>Clock协议和计时API</li>
+                <li>实例一致性检查（instance member lookup）</li>
+                <li>Sendable和@Sendable类型</li>
+                <li>类型推断改进</li>
+                <li>多类型关联约束</li>
+            </ul>
+
+            <h3>代码示例：正则表达式和简化的if-let语法</h3>
+            <pre><code>// Swift 5.7 中的正则表达式字面量
+let regex = /\d{3}-\d{4}/
+let text = "电话: 123-4567"
+
+if let match = text.firstMatch(of: regex) {
+    print("找到电话号码: \(match.0)")
+}
+
+// 简化的可选绑定语法
+// 之前的写法
+if let username = user.username {
+    print("用户名是: \(username)")
+}
+
+// Swift 5.7简化语法
+if let username = user.username {
+    print("用户名是: \(username)")
+}
+
+// 多个可选绑定
+// 之前的写法
+if let firstName = person.firstName,
+   let lastName = person.lastName {
+    print("姓名: \(firstName) \(lastName)")
+}
+
+// Swift 5.7简化语法
+if let firstName = person.firstName,
+   let lastName = person.lastName {
+    print("姓名: \(firstName) \(lastName)")
+}
+
+// 使用Clock协议
+struct MyTask {
+    static func wait() async throws {
+        try await Task.sleep(for: .seconds(2))
+        print("等待2秒完成")
+    }
+}
+</code></pre>
+
+            <div class="svg-container">
+                <svg width="600" height="220" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="20" width="500" height="180" rx="10" fill="#f7f7f7" stroke="#ddd" stroke-width="1"/>
+
+                    <rect x="80" y="50" width="440" height="50" rx="8" fill="#f0e5ff" stroke="#b19cd9" stroke-width="2"/>
+                    <text x="300" y="80" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">let regex = /\d{3}-\d{4}/</text>
+
+                    <path d="M300,100 L300,130" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <rect x="80" y="130" width="440" height="50" rx="8" fill="#e0f7fa" stroke="#a5d6d9" stroke-width="2"/>
+                    <text x="300" y="160" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">if let match = text.firstMatch(of: regex) { ... }</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 5.8 - 语言改进与优化</h2>
+                <span class="version-tag">Swift 5.8</span>
+            </div>
+            <div class="release-date">发布日期：2023年3月30日</div>
+
+            <p>Swift 5.8主要关注于语言的改进和稳定性，带来了若干性能优化和语法便利。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>改进的隐式成员引用</li>
+                <li>可发送闭包改进</li>
+                <li>非孤立表达式的类型检查</li>
+                <li>自动引入的命名空间访问控制</li>
+                <li>字符串处理改进</li>
+                <li>编译速度优化</li>
+            </ul>
+
+            <h3>代码示例：隐式成员引用语法</h3>
+            <pre><code>// Swift 5.8 中的隐式成员引用改进
+enum Direction {
+    case north, south, east, west
+}
+
+// Swift 5.7及之前
+let directions: [Direction] = [.north, .south, .east, .west]
+
+// Swift 5.8: 可以在集合字面量中省略元素类型
+let directions: [Direction] = [.north, .south, .east, .west]
+
+// 适用于各种集合类型和嵌套集合
+let nestedDirections: [[Direction]] = [[.north, .south], [.east, .west]]
+
+// 对于字典也同样适用
+enum HTTPMethod: String {
+    case get, post, put, delete
+}
+
+let methods: [HTTPMethod: String] = [
+    .get: "获取数据",
+    .post: "创建数据",
+    .put: "更新数据",
+    .delete: "删除数据"
+]
+</code></pre>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 5.9 - 宏和泛型增强</h2>
+                <span class="version-tag">Swift 5.9</span>
+            </div>
+            <div class="release-date">发布日期：2023年9月18日</div>
+
+            <p>Swift 5.9引入了强大的宏系统，使开发者能够编写更加简洁和表达力强的代码，同时还改进了泛型系统和值参数处理。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>宏系统（Macros）</li>
+                <li>if和switch中的值绑定</li>
+                <li>隐式self的结构化并发检查</li>
+                <li>泛型关联类型推断扩展</li>
+                <li>非逃逸闭包使用规则改进</li>
+                <li>更新的字符串处理能力</li>
+            </ul>
+
+            <h3>代码示例：宏和if中的值绑定</h3>
+            <pre><code>// Swift 5.9 宏示例
+import SwiftUI
+
+// 使用@Observable宏简化SwiftUI状态管理
+@Observable
+class UserViewModel {
+    var name: String = "张三"
+    var age: Int = 30
+
+    func incrementAge() {
+        age += 1
+    }
+}
+
+struct UserView: View {
+    var viewModel = UserViewModel()
+
+    var body: some View {
+        VStack {
+            Text("姓名: \(viewModel.name)")
+            Text("年龄: \(viewModel.age)")
+            Button("生日+1") {
+                viewModel.incrementAge()
+            }
+        }
+    }
+}
+
+// Swift 5.9 中的值绑定
+let result = calculateResult()
+
+// 之前的写法
+if case .success(let value) = result {
+    print("成功: \(value)")
+}
+
+// Swift 5.9
+if case .success(let value) = result {
+    print("成功: \(value)")
+}
+
+// 对于switch语句也有类似改进
+switch result {
+case .success(let value):
+    print("成功: \(value)")
+case .failure(let error):
+    print("失败: \(error)")
+}
+</code></pre>
+
+            <div class="svg-container">
+                <svg width="600" height="280" viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="100" y="20" width="400" height="60" rx="10" fill="#f0e5ff" stroke="#b19cd9" stroke-width="2"/>
+                    <text x="300" y="55" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">@Observable 宏</text>
+
+                    <path d="M300,80 L300,100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <rect x="100" y="100" width="400" height="60" rx="10" fill="#e0f7fa" stroke="#a5d6d9" stroke-width="2"/>
+                    <text x="300" y="135" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">编译时代码生成和转换</text>
+
+                    <path d="M300,160 L300,180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <rect x="50" y="180" width="240" height="80" rx="10" fill="#fce4ec" stroke="#f8bbd0" stroke-width="2"/>
+                    <text x="170" y="210" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">实现属性观察</text>
+                    <text x="170" y="235" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">willSet/didSet</text>
+
+                    <rect x="310" y="180" width="240" height="80" rx="10" fill="#c5e8d5" stroke="#a5c8b5" stroke-width="2"/>
+                    <text x="430" y="210" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">自动UI更新</text>
+                    <text x="430" y="235" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">SwiftUI视图刷新</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift 5.10 - 更多语言改进</h2>
+                <span class="version-tag">Swift 5.10</span>
+            </div>
+            <div class="release-date">发布日期：2024年3月</div>
+
+            <p>Swift 5.10带来了更多的语言改进，包括对异步编程、类型系统和编译器性能的增强。</p>
+
+            <h3>主要特性</h3>
+            <ul class="feature-list">
+                <li>主角参数标签支持</li>
+                <li>宏扩展</li>
+                <li>额外的属性包装器能力</li>
+                <li>初始化器参数细化</li>
+                <li>async let绑定创建隐式TaskGroup</li>
+                <li>存储属性在协议扩展中的默认值</li>
+                <li>改进的泛型参数接口</li>
+            </ul>
+        </div>
+
+        <div class="resources">
+            <h2>Swift学习资源</h2>
+
+            <div class="resource-group">
+                <h3>官方文档</h3>
+                <ul class="resource-list">
+                    <li class="resource-item"><a href="https://www.swift.org/documentation/" target="_blank">Swift官方文档</a></li>
+                    <li class="resource-item"><a href="https://docs.swift.org/swift-book/" target="_blank">Swift编程语言(官方书籍)</a></li>
+                    <li class="resource-item"><a href="https://developer.apple.com/documentation/swift" target="_blank">Apple开发者文档 - Swift</a></li>
+                    <li class="resource-item"><a href="https://www.swift.org/getting-started/" target="_blank">Swift.org入门指南</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-group">
+                <h3>博客文章和技术网站</h3>
+                <ul class="resource-list">
+                    <li class="resource-item"><a href="https://www.swiftbysundell.com/" target="_blank">Swift by Sundell</a></li>
+                    <li class="resource-item"><a href="https://www.hackingwithswift.com/" target="_blank">Hacking with Swift</a></li>
+                    <li class="resource-item"><a href="https://www.objc.io/" target="_blank">objc.io</a></li>
+                    <li class="resource-item"><a href="https://nshipster.com/" target="_blank">NSHipster</a></li>
+                    <li class="resource-item"><a href="https://www.raywenderlich.com/ios/swift" target="_blank">raywenderlich.com</a></li>
+                    <li class="resource-item"><a href="https://swiftrocks.com/" target="_blank">Swift Rocks</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-group">
+                <h3>书籍推荐</h3>
+                <ul class="resource-list">
+                    <li class="resource-item">《Swift进阶》 - 王巍（onevcat）</li>
+                    <li class="resource-item">《Swift编程权威指南》- Chris Lattner等</li>
+                    <li class="resource-item">《Functional Swift》- Chris Eidhof等</li>
+                    <li class="resource-item">《Advanced Swift》- Chris Eidhof, Ole Begemann等</li>
+                    <li class="resource-item">《Design Patterns in Swift》- Factory Method, Builder等</li>
+                    <li class="resource-item">《iOS编程（第7版）》- Christian Keur, Aaron Hillegass</li>
+                </ul>
+            </div>
+
+            <div class="resource-group">
+                <h3>视频教程</h3>
+                <ul class="resource-list">
+                    <li class="resource-item"><a href="https://developer.apple.com/videos/swift" target="_blank">Apple WWDC视频 - Swift相关</a></li>
+                    <li class="resource-item"><a href="https://www.youtube.com/c/SeanAllen" target="_blank">Sean Allen - YouTube</a></li>
+                    <li class="resource-item"><a href="https://www.youtube.com/c/PaulHudson" target="_blank">Paul Hudson - YouTube</a></li>
+                    <li class="resource-item"><a href="https://www.youtube.com/c/SwiftfulThinking" target="_blank">Swiftful Thinking</a></li>
+                    <li class="resource-item"><a href="https://www.pointfree.co/" target="_blank">Point-Free</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-group">
+                <h3>开源项目</h3>
+                <ul class="resource-list">
+                    <li class="resource-item"><a href="https://github.com/Alamofire/Alamofire" target="_blank">Alamofire - 网络库</a></li>
+                    <li class="resource-item"><a href="https://github.com/ReactiveX/RxSwift" target="_blank">RxSwift - 响应式编程</a></li>
+                    <li class="resource-item"><a href="https://github.com/SwiftyJSON/SwiftyJSON" target="_blank">SwiftyJSON - JSON处理</a></li>
+                    <li class="resource-item"><a href="https://github.com/realm/realm-swift" target="_blank">Realm - 移动数据库</a></li>
+                    <li class="resource-item"><a href="https://github.com/danielgindi/Charts" target="_blank">Charts - 图表库</a></li>
+                    <li class="resource-item"><a href="https://github.com/pointfreeco/swift-composable-architecture" target="_blank">Swift Composable Architecture</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-group">
+                <h3>Swift工具与环境</h3>
+                <ul class="resource-list">
+                    <li class="resource-item"><a href="https://swiftpm.co/" target="_blank">Swift Package Manager</a></li>
+                    <li class="resource-item"><a href="https://github.com/realm/SwiftLint" target="_blank">SwiftLint - 代码规范工具</a></li>
+                    <li class="resource-item"><a href="https://github.com/nicklockwood/SwiftFormat" target="_blank">SwiftFormat - 代码格式化工具</a></li>
+                    <li class="resource-item"><a href="https://swiftplayground.run/" target="_blank">Swift Playground Online</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="note">
+            <div class="note-title">Swift的未来发展</div>
+            <p>Swift语言仍在快速发展中。未来的版本将继续关注性能优化、开发体验改进以及跨平台能力的增强。关注<a href="https://www.swift.org/blog/" target="_blank">Swift官方博客</a>和<a href="https://forums.swift.org/" target="_blank">Swift论坛</a>以获取最新动态。</p>
+        </div>
+
+        <div class="version-card">
+            <div class="version-header">
+                <h2>Swift跨平台发展</h2>
+                <span class="version-tag">跨平台</span>
+            </div>
+
+            <p>虽然Swift最初是为Apple平台设计的，但它已经扩展到其他平台。Swift现已支持Linux、Windows，并通过Swift for TensorFlow等项目进入了人工智能和机器学习领域。</p>
+
+            <h3>Swift的跨平台应用</h3>
+            <ul class="feature-list">
+                <li>服务器端Swift (Vapor, Kitura, Perfect等框架)</li>
+                <li>Swift for TensorFlow (机器学习)</li>
+                <li>Swift在Linux上的应用</li>
+                <li>Swift在Windows上的应用</li>
+                <li>与其他语言的互操作性</li>
+            </ul>
+
+            <h3>代码示例：Vapor服务器端框架</h3>
+            <pre><code>// Swift服务器端代码示例 (使用Vapor框架)
+import Vapor
+
+struct Todo: Content {
+    var id: UUID?
+    var title: String
+    var completed: Bool = false
+}
+
+func routes(_ app: Application) throws {
+    app.get("todos") { req in
+        return [
+            Todo(id: UUID(), title: "完成Swift演进文档", completed: true),
+            Todo(id: UUID(), title: "学习Swift并发编程", completed: false),
+            Todo(id: UUID(), title: "研究Swift宏系统", completed: false)
+        ]
+    }
+
+    app.post("todos") { req -> Todo in
+        let todo = try req.content.decode(Todo.self)
+        return todo
+    }
+}
+
+// 启动服务器
+let app = Application()
+try routes(app)
+try app.run()</code></pre>
+        </div>
+    </div>
+
+</body>
+</html>
