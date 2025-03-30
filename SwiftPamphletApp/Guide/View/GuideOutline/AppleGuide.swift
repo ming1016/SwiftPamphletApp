@@ -114,25 +114,25 @@ struct AppleGuide {
         L(t: "SwiftUI",icon: "heart.text.square.fill",sub: [
             L(t: "介绍",sub: [
                 L(t: "SwiftUI是什么"),
-                L(t: "SwiftUI-入门"),
+                L(t: "SwiftUI-入门", type: 1),
                 L(t: "SwiftUI参考资料"),
                 L(t: "SwiftUI对标的UIKit视图"),
             ]),
             L(t: "图文组件",sub: [
                 L(t: "Text", sub: [
-                    L(t: "Text"),
+                    L(t: "Text", type: 1),
                     L(t: "Text-动态时间")
                 ]),
-                L(t: "Link"),
-                L(t: "Label"),
-                L(t: "TextEditor", icon: "arrow.up.and.down.text.horizontal"),
-                L(t: "TextField"),
-                L(t: "Image"),
+                L(t: "Link", type: 1),
+                L(t: "Label", type: 1),
+                L(t: "TextEditor", icon: "arrow.up.and.down.text.horizontal", type: 1),
+                L(t: "TextField", type: 1),
+                L(t: "Image", type: 1),
             ]),
             L(t: "数据集合组件",icon: "list.bullet.rectangle.fill", sub: [
                 L(t: "ForEach"),
                 L(t: "Scroll视图", icon: "scroll.fill", sub: [
-                    L(t: "ScrollView", icon: "arrow.up.arrow.down.circle"),
+                    L(t: "ScrollView", icon: "arrow.up.arrow.down.circle", type: 1),
                     L(t: "固定到滚动视图的顶部",icon: "pin.circle"),
                     L(t: "滚动到特定的位置"),
                     L(t: "scrollTargetBehavior分页滚动", icon: "book.pages"),
@@ -140,7 +140,7 @@ struct AppleGuide {
                     L(t: "ScrollView-参考资料", icon: "books.vertical"),
                 ]),
                 L(t: "List列表", icon: "list.bullet.rectangle.portrait.fill", sub: [
-                    L(t: "List", icon: "list.bullet.rectangle.portrait"),
+                    L(t: "List", icon: "list.bullet.rectangle.portrait", type: 1),
                     L(t: "List-设置样式"),
                     L(t: "List-移动元素"),
                     L(t: "List-搜索", icon: "text.magnifyingglass"),
@@ -152,12 +152,12 @@ struct AppleGuide {
                     L(t: "List-加载更多", icon: "arrow.down.circle"),
                 ]),
                 L(t: "Lazy容器", sub: [
-                    L(t: "LazyVStack和LazyHStack"),
-                    L(t: "LazyVGrid和LazyHGrid"),
+                    L(t: "LazyVStack和LazyHStack", type: 1),
+                    L(t: "LazyVGrid和LazyHGrid", type: 1),
                 ]),
-                L(t: "Grid", icon: "square.grid.3x2"),
+                L(t: "Grid", icon: "square.grid.3x2", type: 1),
                 L(t: "Table表格", icon: "tablecells.fill", sub: [
-                    L(t: "Table", icon: "tablecells"),
+                    L(t: "Table", icon: "tablecells", type: 1),
                     L(t: "Table-样式", icon: "paintbrush"),
                     L(t: "Table-行的选择", icon: "line.3.horizontal"),
                     L(t: "Table-多属性排序", icon: "tablecells.badge.ellipsis"),
@@ -168,7 +168,7 @@ struct AppleGuide {
             ]),
             L(t: "布局组件",icon: "rectangle.3.group.fill", sub: [
                 L(t: "Navigation导航", icon: "sidebar.squares.leading", sub: [
-                    L(t: "Navigation", icon: "sidebar.squares.leading"),
+                    L(t: "Navigation", icon: "sidebar.squares.leading", type: 1),
                     L(t: "NavigationStack", icon: "square.stack.3d.down.forward"),
                     L(t: "NavigationPath", icon: "arrow.3.trianglepath"),
                     L(t: "NavigationSplitView", icon: "rectangle.split.3x1"),
@@ -186,19 +186,19 @@ struct AppleGuide {
                     L(t: "布局原理"),
                 ]),
                 L(t: "布局进阶", sub: [
-                    L(t: "AnyLayout"),
-                    L(t: "ViewThatFits"),
-                    L(t: "Layout协议"),
-                    L(t: "GeometryReader"),
+                    L(t: "AnyLayout", type: 1),
+                    L(t: "ViewThatFits", type: 1),
+                    L(t: "Layout协议", type: 1),
+                    L(t: "GeometryReader", type: 1),
                     L(t: "alignmentGuide"),
                     L(t: "布局进阶-参考资料"),
                 ]),
-                L(t: "Stack", icon: "square.3.layers.3d"),
-                L(t: "GroupBox", icon: "shippingbox"),
-                L(t: "TabView"),
-                L(t: "ControlGroup"),
-                L(t: "Advanced layout control"),
-                L(t: "ContentUnavailableView"),
+                L(t: "Stack", icon: "square.3.layers.3d", type: 1),
+                L(t: "GroupBox", icon: "shippingbox", type: 1),
+                L(t: "TabView", type: 1),
+                L(t: "ControlGroup", type: 1),
+                L(t: "Advanced layout control", type: 1),
+                L(t: "ContentUnavailableView", type: 1),
             ]),
             L(t: "表单", sub: [
                 L(t: "Form"),

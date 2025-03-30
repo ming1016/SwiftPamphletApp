@@ -99,6 +99,7 @@
 		084DBA122C6DA52D00C9D88D /* 日期组件(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 084DBA112C6DA52D00C9D88D /* 日期组件(ap).md */; };
 		084E1A6327B517FC0072BBB6 /* Swift各版本演进(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 084E1A6227B517FC0072BBB6 /* Swift各版本演进(ap).md */; };
 		084E1A6527B51EDB0072BBB6 /* AutoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E1A6427B51EDB0072BBB6 /* AutoTask.swift */; };
+		084EB7D62D996F3F006FEADF /* 公元89年燕然勒石(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 084EB7D52D996F3F006FEADF /* 公元89年燕然勒石(kg).md */; };
 		0850445827B1228E0096D556 /* Result(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0850445727B1228E0096D556 /* Result(ap).md */; };
 		0851E5322C848AD100D9463A /* Bazel-生成Xcode工程(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5312C848AD100D9463A /* Bazel-生成Xcode工程(ap).md */; };
 		0851E5342C848F4200D9463A /* Bazel-query指令找依赖关系(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5332C848F4200D9463A /* Bazel-query指令找依赖关系(ap).md */; };
@@ -768,6 +769,7 @@
 		084DBA112C6DA52D00C9D88D /* 日期组件(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "日期组件(ap).md"; sourceTree = "<group>"; };
 		084E1A6227B517FC0072BBB6 /* Swift各版本演进(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Swift各版本演进(ap).md"; sourceTree = "<group>"; };
 		084E1A6427B51EDB0072BBB6 /* AutoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTask.swift; sourceTree = "<group>"; };
+		084EB7D52D996F3F006FEADF /* 公元89年燕然勒石(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元89年燕然勒石(kg).md"; sourceTree = "<group>"; };
 		0850445727B1228E0096D556 /* Result(ap).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Result(ap).md"; sourceTree = "<group>"; };
 		0851E5312C848AD100D9463A /* Bazel-生成Xcode工程(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-生成Xcode工程(ap).md"; sourceTree = "<group>"; };
 		0851E5332C848F4200D9463A /* Bazel-query指令找依赖关系(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Bazel-query指令找依赖关系(ap).md"; sourceTree = "<group>"; };
@@ -2039,6 +2041,7 @@
 				08A7AB562D98029600362878 /* 公元80年蔡伦改进造纸术(kg).md */,
 				08A7AB582D9802B300362878 /* 公元86年王充与论衡(kg).md */,
 				08A7AB5A2D9802C400362878 /* 公元88年戚宦之争(kg).md */,
+				084EB7D52D996F3F006FEADF /* 公元89年燕然勒石(kg).md */,
 				08A7AB5C2D9802D700362878 /* 公元92年班固与汉书(kg).md */,
 				08A7AB5E2D9802E800362878 /* 公元97年甘英出使大秦(kg).md */,
 				08A7AB602D9802FA00362878 /* 公元100年说文解字(kg).md */,
@@ -2518,10 +2521,10 @@
 		08BDD4922C6B007A00914412 /* Navigation导航 */ = {
 			isa = PBXGroup;
 			children = (
+				08BDD48E2C6B007A00914412 /* Navigation(ap).md */,
 				08BDD48B2C6B007A00914412 /* 导航状态保存和还原(ap).md */,
 				08BDD48C2C6B007A00914412 /* 自定义导航栏(ap).md */,
 				08BDD48D2C6B007A00914412 /* Inspectors右侧多出一栏(ap).md */,
-				08BDD48E2C6B007A00914412 /* Navigation(ap).md */,
 				08BDD48F2C6B007A00914412 /* NavigationPath(ap).md */,
 				08BDD4902C6B007A00914412 /* NavigationSplitView(ap).md */,
 				08BDD4912C6B007A00914412 /* NavigationStack(ap).md */,
@@ -2663,11 +2666,11 @@
 		08BDD4E12C6B007A00914412 /* Table表格 */ = {
 			isa = PBXGroup;
 			children = (
+				08BDD4E02C6B007A00914412 /* Table(ap).md */,
 				08BDD4DC2C6B007A00914412 /* Table-多属性排序(ap).md */,
 				08BDD4DD2C6B007A00914412 /* Table-行的选择(ap).md */,
 				08BDD4DE2C6B007A00914412 /* Table-样式(ap).md */,
 				08BDD4DF2C6B007A00914412 /* Table-contextMenu(ap).md */,
-				08BDD4E02C6B007A00914412 /* Table(ap).md */,
 				08BDD5D92C6B517900914412 /* Table-拖拽(ap).md */,
 				08BDD5DB2C6B566E00914412 /* Table-可交互(ap).md */,
 			);
@@ -3611,6 +3614,7 @@
 				08BDD5C82C6B007A00914412 /* Text(ap).md in Resources */,
 				083266772C96C02100E27CC5 /* RealityKit(ap).md in Resources */,
 				0851E5382C85654100D9463A /* Bazel-远程执行配置(ap).md in Resources */,
+				084EB7D62D996F3F006FEADF /* 公元89年燕然勒石(kg).md in Resources */,
 				08BDD55E2C6B007A00914412 /* SwiftData-模型关系(ap).md in Resources */,
 				08B9A1AF2D943E1600E8A959 /* 公元前354年邯郸之难(kg).md in Resources */,
 				08BDD5892C6B007A00914412 /* Full Screen Modal View(ap).md in Resources */,
