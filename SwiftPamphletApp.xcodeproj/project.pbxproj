@@ -794,6 +794,11 @@
 		08F4041C2D9D2DF20082F5DB /* CURSOR入门指南(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F4041B2D9D2DF20082F5DB /* CURSOR入门指南(cs).md */; };
 		08F4041E2D9D31F80082F5DB /* AI编程-常用交互方式(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F4041D2D9D31F80082F5DB /* AI编程-常用交互方式(cs).md */; };
 		08F404202D9D35030082F5DB /* AI编程-代码重构(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F4041F2D9D35030082F5DB /* AI编程-代码重构(cs).md */; };
+		08F404232D9D486A0082F5DB /* AI编程-调试(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F404222D9D486A0082F5DB /* AI编程-调试(cs).md */; };
+		08F404252D9D509A0082F5DB /* AI编程-理解代码(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F404242D9D509A0082F5DB /* AI编程-理解代码(cs).md */; };
+		08F404272D9D55700082F5DB /* AI编程-使用场景(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F404262D9D55700082F5DB /* AI编程-使用场景(cs).md */; };
+		08F404292D9D5C910082F5DB /* AI编程-遗留代码协作最佳实践(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F404282D9D5C910082F5DB /* AI编程-遗留代码协作最佳实践(cs).md */; };
+		08F4042B2D9D607F0082F5DB /* AI编程-加速开发(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F4042A2D9D607F0082F5DB /* AI编程-加速开发(cs).md */; };
 		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
 		3A30EFD62CDA818B0029CB2F /* WeatherKit(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */; };
 		3A3168932CE0FD53004DFC5C /* HomeiOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */; };
@@ -1603,6 +1608,11 @@
 		08F4041B2D9D2DF20082F5DB /* CURSOR入门指南(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CURSOR入门指南(cs).md"; sourceTree = "<group>"; };
 		08F4041D2D9D31F80082F5DB /* AI编程-常用交互方式(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-常用交互方式(cs).md"; sourceTree = "<group>"; };
 		08F4041F2D9D35030082F5DB /* AI编程-代码重构(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-代码重构(cs).md"; sourceTree = "<group>"; };
+		08F404222D9D486A0082F5DB /* AI编程-调试(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-调试(cs).md"; sourceTree = "<group>"; };
+		08F404242D9D509A0082F5DB /* AI编程-理解代码(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-理解代码(cs).md"; sourceTree = "<group>"; };
+		08F404262D9D55700082F5DB /* AI编程-使用场景(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-使用场景(cs).md"; sourceTree = "<group>"; };
+		08F404282D9D5C910082F5DB /* AI编程-遗留代码协作最佳实践(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-遗留代码协作最佳实践(cs).md"; sourceTree = "<group>"; };
+		08F4042A2D9D607F0082F5DB /* AI编程-加速开发(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-加速开发(cs).md"; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
 		3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "WeatherKit(ap).md"; sourceTree = "<group>"; };
 		3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeiOSView.swift; sourceTree = "<group>"; };
@@ -3355,6 +3365,7 @@
 				08F4041B2D9D2DF20082F5DB /* CURSOR入门指南(cs).md */,
 				08F4041D2D9D31F80082F5DB /* AI编程-常用交互方式(cs).md */,
 				08F404212D9D47D00082F5DB /* 处理现有代码库 */,
+				08F4042A2D9D607F0082F5DB /* AI编程-加速开发(cs).md */,
 			);
 			path = "AI编程";
 			sourceTree = "<group>";
@@ -3363,6 +3374,10 @@
 			isa = PBXGroup;
 			children = (
 				08F4041F2D9D35030082F5DB /* AI编程-代码重构(cs).md */,
+				08F404222D9D486A0082F5DB /* AI编程-调试(cs).md */,
+				08F404242D9D509A0082F5DB /* AI编程-理解代码(cs).md */,
+				08F404262D9D55700082F5DB /* AI编程-使用场景(cs).md */,
+				08F404282D9D5C910082F5DB /* AI编程-遗留代码协作最佳实践(cs).md */,
 			);
 			path = "处理现有代码库";
 			sourceTree = "<group>";
@@ -3574,12 +3589,14 @@
 				08B9A1B72D943FEF00E8A959 /* 公元前315年蔺相如(kg).md in Resources */,
 				08448FB4279EC37000B61353 /* 类(ap).md in Resources */,
 				083266812C96C1AE00E27CC5 /* visionOS-系统能力(ap).md in Resources */,
+				08F404232D9D486A0082F5DB /* AI编程-调试(cs).md in Resources */,
 				08A7AB4D2D97F5CF00362878 /* 公元24年九章算术(kg).md in Resources */,
 				088CE8D92D9B8A9E0086C8E2 /* 公元376年前秦灭代国之战(kg).md in Resources */,
 				08BDD55B2C6B007A00914412 /* SwiftData-处理大量数据(ap).md in Resources */,
 				08BDD5452C6B007A00914412 /* 小组件-AppIntentConfiguration(ap).md in Resources */,
 				08448FA7279EBB7E00B61353 /* 元组(ap).md in Resources */,
 				0891ACE12D9AF0E100BF9D93 /* 公元247年美男潘岳(kg).md in Resources */,
+				08F404292D9D5C910082F5DB /* AI编程-遗留代码协作最佳实践(cs).md in Resources */,
 				08BDD5A92C6B007A00914412 /* 进度(ap).md in Resources */,
 				08BDD5D72C6B007B00914412 /* SwiftUI数据流(ap).md in Resources */,
 				08448FCA279EC56D00B61353 /* Guard(ap).md in Resources */,
@@ -3907,6 +3924,7 @@
 				08A7AB612D9802FA00362878 /* 公元100年说文解字(kg).md in Resources */,
 				088CE91D2D9BB7D60086C8E2 /* 公元468年钟嵘与诗品(kg).md in Resources */,
 				08B9A1BB2D94513C00E8A959 /* ARM解释器中FFI调用iOS原生函数(cs).md in Resources */,
+				08F404272D9D55700082F5DB /* AI编程-使用场景(cs).md in Resources */,
 				08A7AB5F2D9802E800362878 /* 公元97年甘英出使大秦(kg).md in Resources */,
 				0891ACA72D9AEB2700BF9D93 /* 公元190年关东联军讨伐董卓之战(kg).md in Resources */,
 				08D8F0072BEFBAC700AA0020 /* WWDCData.json in Resources */,
@@ -3926,6 +3944,7 @@
 				088CE9352D9BBB7F0086C8E2 /* 公元513年权臣宇文护(kg).md in Resources */,
 				088CE9592D9BCAB80086C8E2 /* 公元557年北周(kg).md in Resources */,
 				08BDD5352C6B007A00914412 /* 随机(ap).md in Resources */,
+				08F404252D9D509A0082F5DB /* AI编程-理解代码(cs).md in Resources */,
 				088CE8E72D9BB2220086C8E2 /* 公元392年司马道子父子专权(kg).md in Resources */,
 				08BDD5A42C6B007A00914412 /* Previews协议(ap).md in Resources */,
 				08A7AB1B2D97E80900362878 /* 公元前110年灭夜郎(kg).md in Resources */,
@@ -4223,6 +4242,7 @@
 				08A7AB652D98031C00362878 /* 公元132年张衡与地动仪(kg).md in Resources */,
 				088CE94D2D9BC30C0086C8E2 /* 公元543年邙山之战(kg).md in Resources */,
 				08A7AB212D97E88400362878 /* 公元前104年颁布太初历(kg).md in Resources */,
+				08F4042B2D9D607F0082F5DB /* AI编程-加速开发(cs).md in Resources */,
 				08BDD5842C6B007A00914412 /* Stack(ap).md in Resources */,
 				08BDD50E2C6B007A00914412 /* CurrentValueSubject(ap).md in Resources */,
 				08BDD53F2C6B007A00914412 /* 获取小组件形状(ap).md in Resources */,

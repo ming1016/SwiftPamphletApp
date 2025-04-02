@@ -16,8 +16,12 @@ struct CSGuide {
                 L(t: "AI编程-常用交互方式", type: 1),
                 L(t: "处理现有代码库", sub: [
                     L(t: "AI编程-代码重构", type: 1),
+                    L(t: "AI编程-调试", type: 1),
+                    L(t: "AI编程-理解代码", type: 1),
+                    L(t: "AI编程-使用场景", type: 1),
+                    L(t: "AI编程-遗留代码协作最佳实践", type: 1),
                 ]),
-                
+                L(t: "AI编程-加速开发", type: 1),
             ])
         ]),
         L(t: "汇编", sub: [
