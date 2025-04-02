@@ -9,6 +9,17 @@ import Foundation
 
 struct CSGuide {
     var outline = [
+        L(t: "AI", sub: [
+            L(t:"AI编程", sub: [
+                L(t: "AI编程-工具", type: 1),
+                L(t: "CURSOR入门指南", type: 1),
+                L(t: "AI编程-常用交互方式", type: 1),
+                L(t: "处理现有代码库", sub: [
+                    L(t: "AI编程-代码重构", type: 1),
+                ]),
+                
+            ])
+        ]),
         L(t: "汇编", sub: [
             L(t: "ARM汇编语言", type: 1),
             L(t: "ARM反汇编", type: 1),
