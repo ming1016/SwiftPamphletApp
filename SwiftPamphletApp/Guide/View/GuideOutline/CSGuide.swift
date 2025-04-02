@@ -22,6 +22,9 @@ struct CSGuide {
                     L(t: "AI编程-遗留代码协作最佳实践", type: 1),
                 ]),
                 L(t: "AI编程-加速开发", type: 1),
+                L(t: "AI编程-适用场景与局限", type: 1),
+                L(t: "AI编程-学习与技能提升", type: 1),
+                L(t: "AI编程-学习路线图", type: 1),
             ])
         ]),
         L(t: "汇编", sub: [

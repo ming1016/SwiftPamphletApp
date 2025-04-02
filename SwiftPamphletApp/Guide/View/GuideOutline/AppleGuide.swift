@@ -252,8 +252,8 @@ struct AppleGuide {
                 L(t: "修饰符-圆角", type: 1),
                 L(t: "ContainerRelativeShape", type: 1),
                 L(t: "修饰符-fixedSize", type: 1),
-                L(t: "修饰符-蒙版", type: 1),
-                L(t: "redacted隐私展示", type: 1),
+                L(t: "修饰符-蒙版"),
+                L(t: "redacted隐私展示"),
             ]),
             L(t: "视图协议",sub: [
                 L(t: "视图协议-简介", type: 1),

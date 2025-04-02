@@ -799,6 +799,9 @@
 		08F404272D9D55700082F5DB /* AI编程-使用场景(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F404262D9D55700082F5DB /* AI编程-使用场景(cs).md */; };
 		08F404292D9D5C910082F5DB /* AI编程-遗留代码协作最佳实践(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F404282D9D5C910082F5DB /* AI编程-遗留代码协作最佳实践(cs).md */; };
 		08F4042B2D9D607F0082F5DB /* AI编程-加速开发(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F4042A2D9D607F0082F5DB /* AI编程-加速开发(cs).md */; };
+		08F4042D2D9D64630082F5DB /* AI编程-适用场景与局限(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F4042C2D9D64630082F5DB /* AI编程-适用场景与局限(cs).md */; };
+		08F4042F2D9D6C1E0082F5DB /* AI编程-学习与技能提升(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F4042E2D9D6C1E0082F5DB /* AI编程-学习与技能提升(cs).md */; };
+		08F404312D9D70F10082F5DB /* AI编程-学习路线图(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08F404302D9D70F10082F5DB /* AI编程-学习路线图(cs).md */; };
 		08F51BC527A374A500693AB6 /* footer_js.html in Resources */ = {isa = PBXBuildFile; fileRef = 08F51BC427A374A500693AB6 /* footer_js.html */; };
 		3A30EFD62CDA818B0029CB2F /* WeatherKit(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */; };
 		3A3168932CE0FD53004DFC5C /* HomeiOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */; };
@@ -1613,6 +1616,9 @@
 		08F404262D9D55700082F5DB /* AI编程-使用场景(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-使用场景(cs).md"; sourceTree = "<group>"; };
 		08F404282D9D5C910082F5DB /* AI编程-遗留代码协作最佳实践(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-遗留代码协作最佳实践(cs).md"; sourceTree = "<group>"; };
 		08F4042A2D9D607F0082F5DB /* AI编程-加速开发(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-加速开发(cs).md"; sourceTree = "<group>"; };
+		08F4042C2D9D64630082F5DB /* AI编程-适用场景与局限(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-适用场景与局限(cs).md"; sourceTree = "<group>"; };
+		08F4042E2D9D6C1E0082F5DB /* AI编程-学习与技能提升(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-学习与技能提升(cs).md"; sourceTree = "<group>"; };
+		08F404302D9D70F10082F5DB /* AI编程-学习路线图(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI编程-学习路线图(cs).md"; sourceTree = "<group>"; };
 		08F51BC427A374A500693AB6 /* footer_js.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer_js.html; sourceTree = "<group>"; };
 		3A30EFD52CDA818B0029CB2F /* WeatherKit(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "WeatherKit(ap).md"; sourceTree = "<group>"; };
 		3A3168922CE0FD53004DFC5C /* HomeiOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeiOSView.swift; sourceTree = "<group>"; };
@@ -3042,8 +3048,8 @@
 		08BDD4C02C6B007A00914412 /* 视图协议 */ = {
 			isa = PBXGroup;
 			children = (
-				08BDD4B32C6B007A00914412 /* 视图协议-核心协议(ap).md */,
 				08BDD4B42C6B007A00914412 /* 视图协议-简介(ap).md */,
+				08BDD4B32C6B007A00914412 /* 视图协议-核心协议(ap).md */,
 				08BDD4B52C6B007A00914412 /* 视图协议-Environment(ap).md */,
 				08BDD4B62C6B007A00914412 /* 特定情况视图协议(ap).md */,
 				08BDD4B72C6B007A00914412 /* 小组件协议(ap).md */,
@@ -3366,6 +3372,9 @@
 				08F4041D2D9D31F80082F5DB /* AI编程-常用交互方式(cs).md */,
 				08F404212D9D47D00082F5DB /* 处理现有代码库 */,
 				08F4042A2D9D607F0082F5DB /* AI编程-加速开发(cs).md */,
+				08F4042C2D9D64630082F5DB /* AI编程-适用场景与局限(cs).md */,
+				08F4042E2D9D6C1E0082F5DB /* AI编程-学习与技能提升(cs).md */,
+				08F404302D9D70F10082F5DB /* AI编程-学习路线图(cs).md */,
 			);
 			path = "AI编程";
 			sourceTree = "<group>";
@@ -3760,6 +3769,7 @@
 				08BDD5A02C6B007A00914412 /* 小组件协议(ap).md in Resources */,
 				088F2C402C9329F800DCA64F /* 费曼学习法(ap).md in Resources */,
 				0851E5722C872AD100D9463A /* CPU核数和类型(ap).md in Resources */,
+				08F404312D9D70F10082F5DB /* AI编程-学习路线图(cs).md in Resources */,
 				08BDD5BD2C6B007A00914412 /* scrollTransition视觉效果(ap).md in Resources */,
 				08BDD5AB2C6B007A00914412 /* Keyboard(ap).md in Resources */,
 				08448F66279EB33F00B61353 /* Swift书单(ap).md in Resources */,
@@ -3783,6 +3793,7 @@
 				08BDD5612C6B007A00914412 /* 文字Picker(ap).md in Resources */,
 				083266852C97209F00E27CC5 /* visionOS-入门(ap).md in Resources */,
 				08BDD57E2C6B007A00914412 /* NavigationSplitView(ap).md in Resources */,
+				08F4042D2D9D64630082F5DB /* AI编程-适用场景与局限(cs).md in Resources */,
 				083266A22C987A0700E27CC5 /* AI辅助开发APP(ap).md in Resources */,
 				08BDD4FE2C6B007A00914412 /* 动画-例子(ap).md in Resources */,
 				08BDD5B02C6B007A00914412 /* List-大纲视图(ap).md in Resources */,
@@ -4060,6 +4071,7 @@
 				08BDD5C62C6B007A00914412 /* Grid(ap).md in Resources */,
 				08448FBC279EC41700B61353 /* 继承(ap).md in Resources */,
 				088CE8A92D9B72160086C8E2 /* 公元303年李雄建立成汉(kg).md in Resources */,
+				08F4042F2D9D6C1E0082F5DB /* AI编程-学习与技能提升(cs).md in Resources */,
 				0832666C2C96A34100E27CC5 /* macOS开源-窗口管理(ap).md in Resources */,
 				08B9A16C2D93A23A00E8A959 /* 公元前656年骊姬之乱(kg).md in Resources */,
 				08F0F8B72C9596CC00DC659B /* 开源-生活(ap).md in Resources */,
