@@ -256,7 +256,7 @@ struct AppleGuide {
                 L(t: "redacted隐私展示"),
             ]),
             L(t: "视图协议",sub: [
-                L(t: "视图协议-简介", type: 1),
+                L(t: "视图协议-简介"),
                 L(t: "视图协议-核心协议", type: 1),
                 L(t: "Style协议", type: 1),
                 L(t: "小组件协议", type: 1),

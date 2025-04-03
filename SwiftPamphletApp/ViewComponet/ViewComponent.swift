@@ -172,34 +172,19 @@ struct WebUIView: NSViewRepresentable {
     }
     
     class Coordinator: NSObject, WKNavigationDelegate {
-        
-        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, preferences: WKWebpagePreferences) async -> (WKNavigationActionPolicy, WKWebpagePreferences) {
             if navigationAction.navigationType == .linkActivated {
                 if let url = navigationAction.request.url {
+                    // 处理所有URL请求 (不仅限于链接激活类型)
                     let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
                     if components?.scheme == "http" || components?.scheme == "https" {
                         NSWorkspace.shared.open(url)
-                        decisionHandler(.cancel)
-                        return
                     }
                 }
             }
-            decisionHandler(.allow)
+            return (.allow, preferences)
         }
         
-//        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-//            if navigationAction.navigationType == .linkActivated {
-//                if let url = navigationAction.request.url {
-//                    let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-//                    if components?.scheme == "http" || components?.scheme == "https" {
-//                        NSWorkspace.shared.open(url)
-//                        decisionHandler(.cancel)
-//                        return
-//                    }
-//                }
-//            }
-//            decisionHandler(.allow)
-//        }
     }
 }
 
