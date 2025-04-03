@@ -271,8 +271,6 @@
 		088CE8E32D9BB2020086C8E2 /* 公元386年北魏建立(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088CE8E22D9BB2020086C8E2 /* 公元386年北魏建立(kg).md */; };
 		088CE8E52D9BB2130086C8E2 /* 公元388年乞伏乾归复国(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088CE8E42D9BB2130086C8E2 /* 公元388年乞伏乾归复国(kg).md */; };
 		088CE8E72D9BB2220086C8E2 /* 公元392年司马道子父子专权(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088CE8E62D9BB2220086C8E2 /* 公元392年司马道子父子专权(kg).md */; };
-		088CE8E92D9BB2990086C8E2 /* 公元393年后燕灭前燕(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088CE8E82D9BB2990086C8E2 /* 公元393年后燕灭前燕(kg).md */; };
-		088CE8EB2D9BB2AA0086C8E2 /* 公元395年参合陂之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088CE8EA2D9BB2AA0086C8E2 /* 公元395年参合陂之战(kg).md */; };
 		088CE8ED2D9BB2BB0086C8E2 /* 公元397年北凉(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088CE8EC2D9BB2BB0086C8E2 /* 公元397年北凉(kg).md */; };
 		088CE8EF2D9BB35C0086C8E2 /* 公元398年慕容德建立南燕(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088CE8EE2D9BB35C0086C8E2 /* 公元398年慕容德建立南燕(kg).md */; };
 		088CE8F12D9BB36B0086C8E2 /* 公元399年孙恩卢循之乱(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 088CE8F02D9BB36B0086C8E2 /* 公元399年孙恩卢循之乱(kg).md */; };
@@ -1095,8 +1093,6 @@
 		088CE8E22D9BB2020086C8E2 /* 公元386年北魏建立(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元386年北魏建立(kg).md"; sourceTree = "<group>"; };
 		088CE8E42D9BB2130086C8E2 /* 公元388年乞伏乾归复国(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元388年乞伏乾归复国(kg).md"; sourceTree = "<group>"; };
 		088CE8E62D9BB2220086C8E2 /* 公元392年司马道子父子专权(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元392年司马道子父子专权(kg).md"; sourceTree = "<group>"; };
-		088CE8E82D9BB2990086C8E2 /* 公元393年后燕灭前燕(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元393年后燕灭前燕(kg).md"; sourceTree = "<group>"; };
-		088CE8EA2D9BB2AA0086C8E2 /* 公元395年参合陂之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元395年参合陂之战(kg).md"; sourceTree = "<group>"; };
 		088CE8EC2D9BB2BB0086C8E2 /* 公元397年北凉(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元397年北凉(kg).md"; sourceTree = "<group>"; };
 		088CE8EE2D9BB35C0086C8E2 /* 公元398年慕容德建立南燕(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元398年慕容德建立南燕(kg).md"; sourceTree = "<group>"; };
 		088CE8F02D9BB36B0086C8E2 /* 公元399年孙恩卢循之乱(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元399年孙恩卢循之乱(kg).md"; sourceTree = "<group>"; };
@@ -2324,8 +2320,8 @@
 				088CE8B22D9B85F60086C8E2 /* 公元317年东晋建立(kg).md */,
 				088CE8B42D9B86040086C8E2 /* 公元319年石勒建立后赵(kg).md */,
 				088CE8B62D9B86140086C8E2 /* 公元320年前凉(kg).md */,
-				088CE8B82D9B86240086C8E2 /* 公元322年王敦之乱(kg).md */,
 				088CE8BA2D9B86340086C8E2 /* 公元321年闻鸡起舞祖逖北伐(kg).md */,
+				088CE8B82D9B86240086C8E2 /* 公元322年王敦之乱(kg).md */,
 				088CE8BC2D9B86430086C8E2 /* 公元326年实行土断制(kg).md */,
 				088CE8BE2D9B86520086C8E2 /* 公元327年苏峻之乱(kg).md */,
 				088CE8C02D9B86610086C8E2 /* 公元334年石虎乱政(kg).md */,
@@ -2348,8 +2344,6 @@
 				088CE8E22D9BB2020086C8E2 /* 公元386年北魏建立(kg).md */,
 				088CE8E42D9BB2130086C8E2 /* 公元388年乞伏乾归复国(kg).md */,
 				088CE8E62D9BB2220086C8E2 /* 公元392年司马道子父子专权(kg).md */,
-				088CE8E82D9BB2990086C8E2 /* 公元393年后燕灭前燕(kg).md */,
-				088CE8EA2D9BB2AA0086C8E2 /* 公元395年参合陂之战(kg).md */,
 				088CE8EC2D9BB2BB0086C8E2 /* 公元397年北凉(kg).md */,
 				088CE8EE2D9BB35C0086C8E2 /* 公元398年慕容德建立南燕(kg).md */,
 				088CE8F02D9BB36B0086C8E2 /* 公元399年孙恩卢循之乱(kg).md */,
@@ -3050,17 +3044,17 @@
 			children = (
 				08BDD4B42C6B007A00914412 /* 视图协议-简介(ap).md */,
 				08BDD4B32C6B007A00914412 /* 视图协议-核心协议(ap).md */,
-				08BDD4B52C6B007A00914412 /* 视图协议-Environment(ap).md */,
-				08BDD4B62C6B007A00914412 /* 特定情况视图协议(ap).md */,
-				08BDD4B72C6B007A00914412 /* 小组件协议(ap).md */,
-				08BDD4B82C6B007A00914412 /* Animations协议(ap).md */,
-				08BDD4B92C6B007A00914412 /* Documents协议(ap).md */,
-				08BDD4BA2C6B007A00914412 /* Legacy bridges协议(ap).md */,
-				08BDD4BB2C6B007A00914412 /* Previews协议(ap).md */,
-				08BDD4BC2C6B007A00914412 /* Responder chain协议(ap).md */,
-				08BDD4BD2C6B007A00914412 /* Shapes协议(ap).md */,
 				08BDD4BE2C6B007A00914412 /* Style协议(ap).md */,
+				08BDD4B72C6B007A00914412 /* 小组件协议(ap).md */,
+				08BDD4BD2C6B007A00914412 /* Shapes协议(ap).md */,
+				08BDD4B82C6B007A00914412 /* Animations协议(ap).md */,
+				08BDD4B52C6B007A00914412 /* 视图协议-Environment(ap).md */,
+				08BDD4BB2C6B007A00914412 /* Previews协议(ap).md */,
+				08BDD4BA2C6B007A00914412 /* Legacy bridges协议(ap).md */,
+				08BDD4BC2C6B007A00914412 /* Responder chain协议(ap).md */,
 				08BDD4BF2C6B007A00914412 /* Toolbar协议(ap).md */,
+				08BDD4B92C6B007A00914412 /* Documents协议(ap).md */,
+				08BDD4B62C6B007A00914412 /* 特定情况视图协议(ap).md */,
 			);
 			path = "视图协议";
 			sourceTree = "<group>";
@@ -3544,7 +3538,6 @@
 				088CE9552D9BCA980086C8E2 /* 公元554年江陵之战(kg).md in Resources */,
 				08BDD5102C6B007A00914412 /* flatMap(ap).md in Resources */,
 				08BDD58D2C6B007A00914412 /* Sheet(ap).md in Resources */,
-				088CE8EB2D9BB2AA0086C8E2 /* 公元395年参合陂之战(kg).md in Resources */,
 				08448FE4279EC7ED00B61353 /* 范围(ap).md in Resources */,
 				083266892C9722DD00E27CC5 /* Reality Composer Pro(ap).md in Resources */,
 				08BDD5182C6B007A00914412 /* zip(ap).md in Resources */,
@@ -3652,7 +3645,6 @@
 				087A7AF82C81409400321F85 /* 动态库注入技术(ap).md in Resources */,
 				08B9A1532D93823C00E8A959 /* 公元前842年国人暴动(kg).md in Resources */,
 				087A7B0C2C8407E200321F85 /* Bazel-依赖分析(ap).md in Resources */,
-				088CE8E92D9BB2990086C8E2 /* 公元393年后燕灭前燕(kg).md in Resources */,
 				0832669C2C97E65A00E27CC5 /* 人工智能-Metal(ap).md in Resources */,
 				088CE8F32D9BB37B0086C8E2 /* 公元400年西凉(kg).md in Resources */,
 				08BDD5262C6B007A00914412 /* 格式化-生活日常(ap).md in Resources */,
