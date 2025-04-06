@@ -31,11 +31,6 @@
             }
         }
 
-        @font-face {
-            font-family: 'PixelFont';
-            src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-            font-display: swap;
-        }
 
         body {
             background-color: var(--bg-color);

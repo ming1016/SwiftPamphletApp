@@ -327,10 +327,10 @@ struct AppleGuide {
                 L(t: "结构化并发", type: 1),
                 L(t: "Actors", type: 1),
                 L(t: "Distributed Actors", type: 1),
-                L(t: "Swift Concurrency相关提案", type: 1),
+                L(t: "Swift Concurrency相关提案"),
                 L(t: "Swift Concurrency学习路径", type: 1),
                 L(t: "Swift Concurrency和Combine", type: 1),
-                L(t: "Concurrency技术演进", type: 1)
+                L(t: "Concurrency技术演进")
             ]),
             L(t: "Combine",sub: [
                 L(t: "介绍",sub: [
@@ -361,23 +361,23 @@ struct AppleGuide {
             ]),
         ]),
         L(t: "图片处理", icon: "photo.stack", sub: [
-            L(t: "图片处理-基础")
+            L(t: "图片处理-基础", type: 1)
         ]),
         L(t: "动画", icon: "moonphase.waning.gibbous.inverse", sub: [
-            L(t: "SwiftUI动画", icon: "play"),
-            L(t: "contentTransition", icon: "number.circle"),
-            L(t: "animation修饰符", icon: "waveform.path.ecg"),
-            L(t: "Transaction", icon: "arrow.right.arrow.left"),
-            L(t: "Matched Geometry Effect", icon: "arrow.triangle.2.circlepath"),
-            L(t: "PhaseAnimator", icon: "arrow.up.right.circle"),
-            L(t: "KeyframeAnimator"),
-            L(t: "布局动画", icon: "squareshape.split.2x2.dotted"),
-            L(t: "动画-例子", icon: "lightbulb")
+            L(t: "SwiftUI动画", icon: "play", type: 1),
+            L(t: "contentTransition", icon: "number.circle", type: 1),
+            L(t: "animation修饰符", icon: "waveform.path.ecg", type: 1),
+            L(t: "Transaction", icon: "arrow.right.arrow.left", type: 1),
+            L(t: "Matched Geometry Effect", icon: "arrow.triangle.2.circlepath", type: 1),
+            L(t: "PhaseAnimator", icon: "arrow.up.right.circle", type: 1),
+            L(t: "KeyframeAnimator", type: 1),
+            L(t: "布局动画", icon: "squareshape.split.2x2.dotted", type: 1),
+            L(t: "动画-例子", icon: "lightbulb", type: 1)
         ]),
         L(t: "网络", icon:"point.3.connected.trianglepath.dotted", sub: [
-            L(t: "截获网络请求数据"),
-            L(t: "网络状态检查"),
-            L(t: "WKWebView")
+            L(t: "截获网络请求数据", type: 1),
+            L(t: "网络状态检查", type: 1),
+            L(t: "WKWebView", type: 1)
         ]),
         L(t: "性能优化",icon: "battery.100percent.bolt", sub: [
             L(t: "卡顿监控", sub: [

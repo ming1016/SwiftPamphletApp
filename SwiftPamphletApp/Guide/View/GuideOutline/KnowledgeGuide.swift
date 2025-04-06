@@ -9,6 +9,26 @@ import Foundation
 
 struct KnowledgeGuide {
     var outline = [
+        L(t: "文学", sub: [
+            L(t: "武侠小说", sub: [
+                L(t: "金庸", sub: [
+                    L(t: "金庸", type: 1),
+                    L(t: "金庸-射雕英雄传", type: 1),
+                    L(t: "金庸-神雕侠侣", type: 1),
+                    L(t: "金庸-倚天屠龙记", type: 1),
+                    L(t: "金庸-天龙八部", type: 1),
+                    L(t: "金庸-笑傲江湖", type: 1),
+                    L(t: "金庸-鹿鼎记", type: 1),
+                ])
+            ]),
+            L(t: "侦探推理", sub: [
+                L(t: "阿加莎·克里斯蒂", sub: [
+                    L(t: "阿加莎·克里斯蒂", type: 1),
+                    L(t: "阿加莎-东方快车谋杀案", type: 1),
+                    L(t: "阿加莎-帷幕", type: 1),
+                ]),
+            ])
+        ]),
         L(t: "历史", sub: [
             L(t: "时间轴",sub: [
                 L(t: "西周", sub: [

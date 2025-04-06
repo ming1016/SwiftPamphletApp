@@ -45,6 +45,26 @@ struct CSGuide {
                 L(t: "ARM解释器模拟内存和堆栈-实际应用与案例分析", type: 1),
             ]),
             L(t: "ARM解释器中FFI调用iOS原生函数", type: 1),
+            L(t: "相关开源项目", sub: [
+                L(t: "QEMU", sub: [
+                    L(t: "QEMU概览", type: 1),
+                    L(t: "QEMU源码初探", type: 1),
+                    L(t: "QEMU-简单修改与实验", type: 1),
+                    L(t: "QEMU-CPU模拟", type: 1),
+                    L(t: "QEMU-内存管理", type: 1),
+                    L(t: "QEMU-设备模拟", type: 1),
+                    L(t: "QEMU-IO子系统", type: 1),
+                    L(t: "QEMU高级特性", type: 1),
+                    L(t: "开发一个简单的QEMU设备", type: 1),
+                    L(t: "QEMU-调试与性能分析", type: 1),
+                    L(t: "QEMU-贡献代码", type: 1),
+                    L(t: "QEMU-设计简化版模拟器", type: 1),
+                    L(t: "QEMU-实现基础框架", type: 1),
+                    L(t: "QEMU-实现核心功能", type: 1),
+                    L(t: "QEMU-扩展与完善", type: 1)
+                ]),
+                
+            ]),
         ])
     ]
 }

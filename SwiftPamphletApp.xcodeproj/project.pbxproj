@@ -131,6 +131,31 @@
 		0851E5702C872A7A00D9463A /* CPU占用率(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E56F2C872A7A00D9463A /* CPU占用率(ap).md */; };
 		0851E5722C872AD100D9463A /* CPU核数和类型(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5712C872AD100D9463A /* CPU核数和类型(ap).md */; };
 		0851E5792C87563100D9463A /* 截获网络请求数据(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 0851E5782C87563100D9463A /* 截获网络请求数据(ap).md */; };
+		08523E132DA279A900AA1B78 /* 阿加莎·克里斯蒂(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E122DA279A900AA1B78 /* 阿加莎·克里斯蒂(kg).md */; };
+		08523E152DA27AB400AA1B78 /* 阿加莎-东方快车谋杀案(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E142DA27AB400AA1B78 /* 阿加莎-东方快车谋杀案(kg).md */; };
+		08523E172DA2B65600AA1B78 /* 阿加莎-帷幕(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E162DA2B65600AA1B78 /* 阿加莎-帷幕(kg).md */; };
+		08523E222DA2BB3500AA1B78 /* 金庸-射雕英雄传(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E1E2DA2BB3500AA1B78 /* 金庸-射雕英雄传(kg).md */; };
+		08523E232DA2BB3500AA1B78 /* 金庸(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E1F2DA2BB3500AA1B78 /* 金庸(kg).md */; };
+		08523E252DA2BB4700AA1B78 /* 金庸-神雕侠侣(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E242DA2BB4700AA1B78 /* 金庸-神雕侠侣(kg).md */; };
+		08523E272DA2BB5600AA1B78 /* 金庸-倚天屠龙记(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E262DA2BB5600AA1B78 /* 金庸-倚天屠龙记(kg).md */; };
+		08523E292DA2C2D800AA1B78 /* 金庸-天龙八部(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E282DA2C2D800AA1B78 /* 金庸-天龙八部(kg).md */; };
+		08523E2B2DA2C2EB00AA1B78 /* 金庸-笑傲江湖(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E2A2DA2C2EB00AA1B78 /* 金庸-笑傲江湖(kg).md */; };
+		08523E2D2DA2C2FA00AA1B78 /* 金庸-鹿鼎记(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E2C2DA2C2FA00AA1B78 /* 金庸-鹿鼎记(kg).md */; };
+		08523E312DA2F3EE00AA1B78 /* QEMU概览(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E302DA2F3EE00AA1B78 /* QEMU概览(cs).md */; };
+		08523E332DA2F40100AA1B78 /* QEMU源码初探(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E322DA2F40100AA1B78 /* QEMU源码初探(cs).md */; };
+		08523E352DA2F41800AA1B78 /* QEMU-简单修改与实验(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E342DA2F41800AA1B78 /* QEMU-简单修改与实验(cs).md */; };
+		08523E372DA2F42A00AA1B78 /* QEMU-CPU模拟(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E362DA2F42A00AA1B78 /* QEMU-CPU模拟(cs).md */; };
+		08523E392DA2F43C00AA1B78 /* QEMU-内存管理(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E382DA2F43C00AA1B78 /* QEMU-内存管理(cs).md */; };
+		08523E3B2DA2F45100AA1B78 /* QEMU-设备模拟(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E3A2DA2F45100AA1B78 /* QEMU-设备模拟(cs).md */; };
+		08523E3D2DA2F46200AA1B78 /* QEMU-IO子系统(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E3C2DA2F46200AA1B78 /* QEMU-IO子系统(cs).md */; };
+		08523E3F2DA2F48400AA1B78 /* QEMU高级特性(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E3E2DA2F48400AA1B78 /* QEMU高级特性(cs).md */; };
+		08523E412DA2F49300AA1B78 /* 开发一个简单的QEMU设备(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E402DA2F49300AA1B78 /* 开发一个简单的QEMU设备(cs).md */; };
+		08523E432DA2F4A300AA1B78 /* QEMU-调试与性能分析(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E422DA2F4A300AA1B78 /* QEMU-调试与性能分析(cs).md */; };
+		08523E452DA2F4B200AA1B78 /* QEMU-贡献代码(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E442DA2F4B200AA1B78 /* QEMU-贡献代码(cs).md */; };
+		08523E472DA2F4C500AA1B78 /* QEMU-设计简化版模拟器(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E462DA2F4C500AA1B78 /* QEMU-设计简化版模拟器(cs).md */; };
+		08523E492DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E482DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md */; };
+		08523E4B2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E4A2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md */; };
+		08523E4D2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E4C2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md */; };
 		085E1A562CF60CBA009938E8 /* 人工智能-RAG(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085E1A552CF60CBA009938E8 /* 人工智能-RAG(ap).md */; };
 		0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */ = {isa = PBXBuildFile; productRef = 0868D00A2BDD37280023C871 /* SMGitHub */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
@@ -951,6 +976,31 @@
 		0851E56F2C872A7A00D9463A /* CPU占用率(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CPU占用率(ap).md"; sourceTree = "<group>"; };
 		0851E5712C872AD100D9463A /* CPU核数和类型(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CPU核数和类型(ap).md"; sourceTree = "<group>"; };
 		0851E5782C87563100D9463A /* 截获网络请求数据(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "截获网络请求数据(ap).md"; sourceTree = "<group>"; };
+		08523E122DA279A900AA1B78 /* 阿加莎·克里斯蒂(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "阿加莎·克里斯蒂(kg).md"; sourceTree = "<group>"; };
+		08523E142DA27AB400AA1B78 /* 阿加莎-东方快车谋杀案(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "阿加莎-东方快车谋杀案(kg).md"; sourceTree = "<group>"; };
+		08523E162DA2B65600AA1B78 /* 阿加莎-帷幕(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "阿加莎-帷幕(kg).md"; sourceTree = "<group>"; };
+		08523E1E2DA2BB3500AA1B78 /* 金庸-射雕英雄传(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "金庸-射雕英雄传(kg).md"; sourceTree = "<group>"; };
+		08523E1F2DA2BB3500AA1B78 /* 金庸(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "金庸(kg).md"; sourceTree = "<group>"; };
+		08523E242DA2BB4700AA1B78 /* 金庸-神雕侠侣(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "金庸-神雕侠侣(kg).md"; sourceTree = "<group>"; };
+		08523E262DA2BB5600AA1B78 /* 金庸-倚天屠龙记(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "金庸-倚天屠龙记(kg).md"; sourceTree = "<group>"; };
+		08523E282DA2C2D800AA1B78 /* 金庸-天龙八部(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "金庸-天龙八部(kg).md"; sourceTree = "<group>"; };
+		08523E2A2DA2C2EB00AA1B78 /* 金庸-笑傲江湖(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "金庸-笑傲江湖(kg).md"; sourceTree = "<group>"; };
+		08523E2C2DA2C2FA00AA1B78 /* 金庸-鹿鼎记(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "金庸-鹿鼎记(kg).md"; sourceTree = "<group>"; };
+		08523E302DA2F3EE00AA1B78 /* QEMU概览(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU概览(cs).md"; sourceTree = "<group>"; };
+		08523E322DA2F40100AA1B78 /* QEMU源码初探(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU源码初探(cs).md"; sourceTree = "<group>"; };
+		08523E342DA2F41800AA1B78 /* QEMU-简单修改与实验(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-简单修改与实验(cs).md"; sourceTree = "<group>"; };
+		08523E362DA2F42A00AA1B78 /* QEMU-CPU模拟(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-CPU模拟(cs).md"; sourceTree = "<group>"; };
+		08523E382DA2F43C00AA1B78 /* QEMU-内存管理(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-内存管理(cs).md"; sourceTree = "<group>"; };
+		08523E3A2DA2F45100AA1B78 /* QEMU-设备模拟(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-设备模拟(cs).md"; sourceTree = "<group>"; };
+		08523E3C2DA2F46200AA1B78 /* QEMU-IO子系统(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-IO子系统(cs).md"; sourceTree = "<group>"; };
+		08523E3E2DA2F48400AA1B78 /* QEMU高级特性(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU高级特性(cs).md"; sourceTree = "<group>"; };
+		08523E402DA2F49300AA1B78 /* 开发一个简单的QEMU设备(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "开发一个简单的QEMU设备(cs).md"; sourceTree = "<group>"; };
+		08523E422DA2F4A300AA1B78 /* QEMU-调试与性能分析(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-调试与性能分析(cs).md"; sourceTree = "<group>"; };
+		08523E442DA2F4B200AA1B78 /* QEMU-贡献代码(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-贡献代码(cs).md"; sourceTree = "<group>"; };
+		08523E462DA2F4C500AA1B78 /* QEMU-设计简化版模拟器(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-设计简化版模拟器(cs).md"; sourceTree = "<group>"; };
+		08523E482DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-实现基础框架(cs).md"; sourceTree = "<group>"; };
+		08523E4A2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-实现核心功能(cs).md"; sourceTree = "<group>"; };
+		08523E4C2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-扩展与完善(cs).md"; sourceTree = "<group>"; };
 		085E1A552CF60CBA009938E8 /* 人工智能-RAG(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-RAG(ap).md"; sourceTree = "<group>"; };
 		0869233F2BF2BF81006779A3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1983,6 +2033,85 @@
 			path = "启动优化";
 			sourceTree = "<group>";
 		};
+		08523E0F2DA2797B00AA1B78 /* 文学 */ = {
+			isa = PBXGroup;
+			children = (
+				08523E212DA2BB3500AA1B78 /* 武侠小说 */,
+				08523E102DA2798200AA1B78 /* 侦探推理 */,
+			);
+			path = "文学";
+			sourceTree = "<group>";
+		};
+		08523E102DA2798200AA1B78 /* 侦探推理 */ = {
+			isa = PBXGroup;
+			children = (
+				08523E112DA2798F00AA1B78 /* 阿加莎·克里斯蒂 */,
+			);
+			path = "侦探推理";
+			sourceTree = "<group>";
+		};
+		08523E112DA2798F00AA1B78 /* 阿加莎·克里斯蒂 */ = {
+			isa = PBXGroup;
+			children = (
+				08523E122DA279A900AA1B78 /* 阿加莎·克里斯蒂(kg).md */,
+				08523E142DA27AB400AA1B78 /* 阿加莎-东方快车谋杀案(kg).md */,
+				08523E162DA2B65600AA1B78 /* 阿加莎-帷幕(kg).md */,
+			);
+			path = "阿加莎·克里斯蒂";
+			sourceTree = "<group>";
+		};
+		08523E202DA2BB3500AA1B78 /* 金庸 */ = {
+			isa = PBXGroup;
+			children = (
+				08523E1F2DA2BB3500AA1B78 /* 金庸(kg).md */,
+				08523E1E2DA2BB3500AA1B78 /* 金庸-射雕英雄传(kg).md */,
+				08523E242DA2BB4700AA1B78 /* 金庸-神雕侠侣(kg).md */,
+				08523E262DA2BB5600AA1B78 /* 金庸-倚天屠龙记(kg).md */,
+				08523E282DA2C2D800AA1B78 /* 金庸-天龙八部(kg).md */,
+				08523E2A2DA2C2EB00AA1B78 /* 金庸-笑傲江湖(kg).md */,
+				08523E2C2DA2C2FA00AA1B78 /* 金庸-鹿鼎记(kg).md */,
+			);
+			path = "金庸";
+			sourceTree = "<group>";
+		};
+		08523E212DA2BB3500AA1B78 /* 武侠小说 */ = {
+			isa = PBXGroup;
+			children = (
+				08523E202DA2BB3500AA1B78 /* 金庸 */,
+			);
+			path = "武侠小说";
+			sourceTree = "<group>";
+		};
+		08523E2E2DA2ED5300AA1B78 /* 相关开源项目 */ = {
+			isa = PBXGroup;
+			children = (
+				08523E2F2DA2ED6300AA1B78 /* QEMU */,
+			);
+			path = "相关开源项目";
+			sourceTree = "<group>";
+		};
+		08523E2F2DA2ED6300AA1B78 /* QEMU */ = {
+			isa = PBXGroup;
+			children = (
+				08523E302DA2F3EE00AA1B78 /* QEMU概览(cs).md */,
+				08523E322DA2F40100AA1B78 /* QEMU源码初探(cs).md */,
+				08523E342DA2F41800AA1B78 /* QEMU-简单修改与实验(cs).md */,
+				08523E362DA2F42A00AA1B78 /* QEMU-CPU模拟(cs).md */,
+				08523E382DA2F43C00AA1B78 /* QEMU-内存管理(cs).md */,
+				08523E3A2DA2F45100AA1B78 /* QEMU-设备模拟(cs).md */,
+				08523E3C2DA2F46200AA1B78 /* QEMU-IO子系统(cs).md */,
+				08523E3E2DA2F48400AA1B78 /* QEMU高级特性(cs).md */,
+				08523E402DA2F49300AA1B78 /* 开发一个简单的QEMU设备(cs).md */,
+				08523E422DA2F4A300AA1B78 /* QEMU-调试与性能分析(cs).md */,
+				08523E442DA2F4B200AA1B78 /* QEMU-贡献代码(cs).md */,
+				08523E462DA2F4C500AA1B78 /* QEMU-设计简化版模拟器(cs).md */,
+				08523E482DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md */,
+				08523E4A2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md */,
+				08523E4C2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md */,
+			);
+			path = QEMU;
+			sourceTree = "<group>";
+		};
 		085E1A542CF60C52009938E8 /* 智能体 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2426,6 +2555,7 @@
 				08D2234C2D930BB8008F40C6 /* ARM架构基础知识(cs).md */,
 				08B9A17B2D93AE0200E8A959 /* ARM解释器模拟内存和堆栈 */,
 				08B9A1BA2D94513C00E8A959 /* ARM解释器中FFI调用iOS原生函数(cs).md */,
+				08523E2E2DA2ED5300AA1B78 /* 相关开源项目 */,
 			);
 			path = "汇编";
 			sourceTree = "<group>";
@@ -2642,15 +2772,15 @@
 		08BDD4002C6B007A00914412 /* 动画 */ = {
 			isa = PBXGroup;
 			children = (
-				08BDD3F72C6B007A00914412 /* 布局动画(ap).md */,
-				08BDD3F82C6B007A00914412 /* 动画-例子(ap).md */,
-				08BDD3F92C6B007A00914412 /* animation修饰符(ap).md */,
+				08BDD3FE2C6B007A00914412 /* SwiftUI动画(ap).md */,
 				08BDD3FA2C6B007A00914412 /* contentTransition(ap).md */,
-				08BDD3FB2C6B007A00914412 /* KeyframeAnimator(ap).md */,
+				08BDD3F92C6B007A00914412 /* animation修饰符(ap).md */,
+				08BDD3FF2C6B007A00914412 /* Transaction(ap).md */,
 				08BDD3FC2C6B007A00914412 /* Matched Geometry Effect(ap).md */,
 				08BDD3FD2C6B007A00914412 /* PhaseAnimator(ap).md */,
-				08BDD3FE2C6B007A00914412 /* SwiftUI动画(ap).md */,
-				08BDD3FF2C6B007A00914412 /* Transaction(ap).md */,
+				08BDD3FB2C6B007A00914412 /* KeyframeAnimator(ap).md */,
+				08BDD3F72C6B007A00914412 /* 布局动画(ap).md */,
+				08BDD3F82C6B007A00914412 /* 动画-例子(ap).md */,
 			);
 			path = "动画";
 			sourceTree = "<group>";
@@ -2710,14 +2840,14 @@
 			children = (
 				08BDD41F2C6B007A00914412 /* Swift Concurrency是什么(ap).md */,
 				08BDD41A2C6B007A00914412 /* async await(ap).md */,
+				08BDD41B2C6B007A00914412 /* Async Sequences(ap).md */,
 				08BDD4182C6B007A00914412 /* 结构化并发(ap).md */,
 				08BDD4192C6B007A00914412 /* Actors(ap).md */,
-				08BDD41B2C6B007A00914412 /* Async Sequences(ap).md */,
-				08BDD41C2C6B007A00914412 /* Concurrency技术演进(ap).md */,
 				08BDD41D2C6B007A00914412 /* Distributed Actors(ap).md */,
-				08BDD41E2C6B007A00914412 /* Swift Concurrency和Combine(ap).md */,
 				08BDD4202C6B007A00914412 /* Swift Concurrency相关提案(ap).md */,
 				08BDD4212C6B007A00914412 /* Swift Concurrency学习路径(ap).md */,
+				08BDD41E2C6B007A00914412 /* Swift Concurrency和Combine(ap).md */,
+				08BDD41C2C6B007A00914412 /* Concurrency技术演进(ap).md */,
 			);
 			path = "Swift Concurrency";
 			sourceTree = "<group>";
@@ -3230,6 +3360,7 @@
 		08D223012D92B15A008F40C6 /* Knowledge */ = {
 			isa = PBXGroup;
 			children = (
+				08523E0F2DA2797B00AA1B78 /* 文学 */,
 				08D223032D92B750008F40C6 /* 历史 */,
 			);
 			path = Knowledge;
@@ -3542,6 +3673,7 @@
 				083266892C9722DD00E27CC5 /* Reality Composer Pro(ap).md in Resources */,
 				08BDD5182C6B007A00914412 /* zip(ap).md in Resources */,
 				08A7AB452D97F16A00362878 /* 公元9年王莽改制(kg).md in Resources */,
+				08523E172DA2B65600AA1B78 /* 阿加莎-帷幕(kg).md in Resources */,
 				0891ACC12D9AEF0B00BF9D93 /* 公元212年益州之战(kg).md in Resources */,
 				0887FF8C2D96D2C400784CC8 /* 公元前232年秦灭赵之战(kg).md in Resources */,
 				08A7AAF92D97E6E000362878 /* 公元前200年白登之围(kg).md in Resources */,
@@ -3565,6 +3697,7 @@
 				08BDD5002C6B007A00914412 /* contentTransition(ap).md in Resources */,
 				08448FBA279EC3EA00B61353 /* 方法(ap).md in Resources */,
 				087A7AFD2C82860000321F85 /* 卡顿原因(ap).md in Resources */,
+				08523E4D2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md in Resources */,
 				087AAA8A2C9A771C00877650 /* 设计模式(ap).md in Resources */,
 				08BDD53B2C6B007A00914412 /* SQLite.swift的使用(ap).md in Resources */,
 				08BDD5482C6B007A00914412 /* 小组件动画(ap).md in Resources */,
@@ -3587,6 +3720,7 @@
 				08BDD58C2C6B007A00914412 /* Popover(ap).md in Resources */,
 				08A7AB052D97E74B00362878 /* 公元前154年七国之乱(kg).md in Resources */,
 				08B9A1B32D943E5D00E8A959 /* 公元前323年公孙衍与五国相王(kg).md in Resources */,
+				08523E3B2DA2F45100AA1B78 /* QEMU-设备模拟(cs).md in Resources */,
 				088F2C2F2C8E827300DCA64F /* Share Extension(ap).md in Resources */,
 				08B9A1B72D943FEF00E8A959 /* 公元前315年蔺相如(kg).md in Resources */,
 				08448FB4279EC37000B61353 /* 类(ap).md in Resources */,
@@ -3609,6 +3743,7 @@
 				08448FB8279EC3C200B61353 /* 属性(ap).md in Resources */,
 				0891ACAD2D9AEB5C00BF9D93 /* 公元194年徐州起业代牧陶谦(kg).md in Resources */,
 				08BDD5982C6B007A00914412 /* SwiftUI-渐变(ap).md in Resources */,
+				08523E272DA2BB5600AA1B78 /* 金庸-倚天屠龙记(kg).md in Resources */,
 				08BDD5C52C6B007A00914412 /* ForEach(ap).md in Resources */,
 				087A7B042C82F83600321F85 /* RunLoop(ap).md in Resources */,
 				08BDD50A2C6B007A00914412 /* Combine通知(ap).md in Resources */,
@@ -3618,6 +3753,7 @@
 				087A7ADF2C803E6F00321F85 /* 包体积的影响(ap).md in Resources */,
 				0832666E2C96A36700E27CC5 /* macOS开源-系统监控(ap).md in Resources */,
 				08BDD59E2C6B007A00914412 /* 视图协议-Environment(ap).md in Resources */,
+				08523E2B2DA2C2EB00AA1B78 /* 金庸-笑傲江湖(kg).md in Resources */,
 				08448F9A279EBA2900B61353 /* 可选(ap).md in Resources */,
 				0887FF9C2D96D35100784CC8 /* 公元前213年焚书坑儒(kg).md in Resources */,
 				08A7AB532D98027300362878 /* 公元67年佛教传入(kg).md in Resources */,
@@ -3664,6 +3800,8 @@
 				08BDD5B62C6B007A00914412 /* List-完全可点击的行(ap).md in Resources */,
 				08BDD5042C6B007A00914412 /* SwiftUI动画(ap).md in Resources */,
 				08BDD54E2C6B007A00914412 /* 链接器(ap).md in Resources */,
+				08523E492DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md in Resources */,
+				08523E312DA2F3EE00AA1B78 /* QEMU概览(cs).md in Resources */,
 				08BDD5062C6B007A00914412 /* Combine的资料(ap).md in Resources */,
 				08BDD55D2C6B007A00914412 /* SwiftData-检索(ap).md in Resources */,
 				08BDD5E32C6C4D4600914412 /* SwiftUI数据流-@Observable(ap).md in Resources */,
@@ -3680,6 +3818,7 @@
 				08BDD5322C6B007A00914412 /* 度量值(ap).md in Resources */,
 				08B9A18F2D943BCA00E8A959 /* 公元前579年弭兵会盟(kg).md in Resources */,
 				08A414162D9233C100035B4A /* ARM汇编语言(cs).md in Resources */,
+				08523E392DA2F43C00AA1B78 /* QEMU-内存管理(cs).md in Resources */,
 				08448FAF279EC31200B61353 /* 不透明类型(ap).md in Resources */,
 				08448FE2279EC7CF00B61353 /* Nil-coalescing(ap).md in Resources */,
 				08448FD3279EC60300B61353 /* 数组(ap).md in Resources */,
@@ -3722,6 +3861,7 @@
 				08BDD5412C6B007A00914412 /* 小组件-参考资料(ap).md in Resources */,
 				3AEC7F5D2CE39250005D510D /* 可合并库(ap).md in Resources */,
 				08BDD5092C6B007A00914412 /* Combine Timer(ap).md in Resources */,
+				08523E432DA2F4A300AA1B78 /* QEMU-调试与性能分析(cs).md in Resources */,
 				3AEC7F672CE39DC6005D510D /* Background Fetch(ap).md in Resources */,
 				083266752C96C00F00E27CC5 /* visionOS-空间设计(ap).md in Resources */,
 				0887FF802D96D1BA00784CC8 /* 公元前256年秦灭周(kg).md in Resources */,
@@ -3755,6 +3895,7 @@
 				08BDD58F2C6B007A00914412 /* SwiftUI对标的UIKit视图(ap).md in Resources */,
 				08BDD5292C6B007A00914412 /* 版本兼容(ap).md in Resources */,
 				08B9A1AB2D943DA000E8A959 /* 公元前386年楚国吴起变法(kg).md in Resources */,
+				08523E472DA2F4C500AA1B78 /* QEMU-设计简化版模拟器(cs).md in Resources */,
 				08A7AAF32D97E46700362878 /* 公元前206年楚汉战争(kg).md in Resources */,
 				08A7AB552D98028500362878 /* 公元73年班超出使西域(kg).md in Resources */,
 				08B9A14D2D937D8500E8A959 /* 公元前891年周孝王分封非子(kg).md in Resources */,
@@ -3817,6 +3958,7 @@
 				08BDD5752C6B007A00914412 /* AnyLayout(ap).md in Resources */,
 				087AAA992C9AB23C00877650 /* Xcode(ap).md in Resources */,
 				0891ACC52D9AEF3000BF9D93 /* 公元217年汉中之战(kg).md in Resources */,
+				08523E2D2DA2C2FA00AA1B78 /* 金庸-鹿鼎记(kg).md in Resources */,
 				087AAA952C9AAB9200877650 /* 跨平台-React Native(ap).md in Resources */,
 				087A7AE62C80AFD700321F85 /* 内存分配器libMalloc(ap).md in Resources */,
 				08A7AAF52D97E47900362878 /* 公元前205年彭城之战(kg).md in Resources */,
@@ -3838,9 +3980,11 @@
 				0851E55B2C86DA7800D9463A /* SwiftSyntax(ap).md in Resources */,
 				088CE9452D9BBBF90086C8E2 /* 公元535年西魏(kg).md in Resources */,
 				088CE8BB2D9B86340086C8E2 /* 公元321年闻鸡起舞祖逖北伐(kg).md in Resources */,
+				08523E412DA2F49300AA1B78 /* 开发一个简单的QEMU设备(cs).md in Resources */,
 				08BDD54F2C6B007A00914412 /* 内存管理(ap).md in Resources */,
 				08448FC3279EC4D600B61353 /* reduce(ap).md in Resources */,
 				08BDD5492C6B007A00914412 /* 小组件访问SwiftData(ap).md in Resources */,
+				08523E3D2DA2F46200AA1B78 /* QEMU-IO子系统(cs).md in Resources */,
 				08BDD53D2C6B007A00914412 /* AppIcon(ap).md in Resources */,
 				0851E5672C86F1FE00D9463A /* WKWebView(ap).md in Resources */,
 				08B9A1A72D943D7900E8A959 /* 公元前404年百家争鸣(kg).md in Resources */,
@@ -3950,6 +4094,7 @@
 				08F404252D9D509A0082F5DB /* AI编程-理解代码(cs).md in Resources */,
 				088CE8E72D9BB2220086C8E2 /* 公元392年司马道子父子专权(kg).md in Resources */,
 				08BDD5A42C6B007A00914412 /* Previews协议(ap).md in Resources */,
+				08523E352DA2F41800AA1B78 /* QEMU-简单修改与实验(cs).md in Resources */,
 				08A7AB1B2D97E80900362878 /* 公元前110年灭夜郎(kg).md in Resources */,
 				08BDD5012C6B007A00914412 /* KeyframeAnimator(ap).md in Resources */,
 				088F2C322C93284100DCA64F /* 知识管理-介绍(ap).md in Resources */,
@@ -3963,7 +4108,9 @@
 				088CE9012D9BB3F30086C8E2 /* 公元420年桃花源记(kg).md in Resources */,
 				08BDD5AA2C6B007A00914412 /* Button(ap).md in Resources */,
 				08BDD5CF2C6B007B00914412 /* 修饰符-蒙版(ap).md in Resources */,
+				08523E292DA2C2D800AA1B78 /* 金庸-天龙八部(kg).md in Resources */,
 				08BDD5572C6B007A00914412 /* 创建@Model模型(ap).md in Resources */,
+				08523E3F2DA2F48400AA1B78 /* QEMU高级特性(cs).md in Resources */,
 				088CE9472D9BBC940086C8E2 /* 公元537年沙苑之役(kg).md in Resources */,
 				087AAA792C9A6E6000877650 /* 程序入口点(ap).md in Resources */,
 				08A7AAFB2D97E6F000362878 /* 公元前195年诛吕安刘(kg).md in Resources */,
@@ -3989,6 +4136,7 @@
 				3AEC7F612CE398BD005D510D /* 启动优化-一些技巧(ap).md in Resources */,
 				0891ACF32D9AF2E600BF9D93 /* 公元279年晋灭吴之战(kg).md in Resources */,
 				088CE8B12D9B72580086C8E2 /* 公元316年衣冠南渡(kg).md in Resources */,
+				08523E452DA2F4B200AA1B78 /* QEMU-贡献代码(cs).md in Resources */,
 				088CE8AB2D9B72270086C8E2 /* 公元304年五胡十六国(kg).md in Resources */,
 				08A7AB5B2D9802C400362878 /* 公元88年戚宦之争(kg).md in Resources */,
 				087A7ADD2C803AD500321F85 /* 包体积-系统优化(ap).md in Resources */,
@@ -4072,6 +4220,8 @@
 				088F2C292C88438F00DCA64F /* 启动治理思路(ap).md in Resources */,
 				087A7B062C8339CD00321F85 /* 避免视图绘制掉帧(ap).md in Resources */,
 				0851E5702C872A7A00D9463A /* CPU占用率(ap).md in Resources */,
+				08523E222DA2BB3500AA1B78 /* 金庸-射雕英雄传(kg).md in Resources */,
+				08523E232DA2BB3500AA1B78 /* 金庸(kg).md in Resources */,
 				08BDD5BA2C6B007A00914412 /* 固定到滚动视图的顶部(ap).md in Resources */,
 				088F2C422C932A0900DCA64F /* 知识管理-CODE方法论(ap).md in Resources */,
 				087AAA732C9A6C9B00877650 /* 架构技术演进(ap).md in Resources */,
@@ -4113,6 +4263,7 @@
 				08D223312D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md in Resources */,
 				088CE8E52D9BB2130086C8E2 /* 公元388年乞伏乾归复国(kg).md in Resources */,
 				08BDD5582C6B007A00914412 /* 容器配置modelContainer(ap).md in Resources */,
+				08523E152DA27AB400AA1B78 /* 阿加莎-东方快车谋杀案(kg).md in Resources */,
 				08B9A17F2D93B3C300E8A959 /* ARM解释器模拟内存和堆栈-性能优化与挑战(cs).md in Resources */,
 				0887FF982D96D32C00784CC8 /* 公元前215年蒙恬败匈奴(kg).md in Resources */,
 				08BDD5D32C6B007B00914412 /* 自定义修饰符(ap).md in Resources */,
@@ -4196,6 +4347,7 @@
 				08448F9E279EBAA800B61353 /* 函数(ap).md in Resources */,
 				086E036B2C6E7148008CEDD3 /* Calendar(ap).md in Resources */,
 				088F2C4A2C932A8B00DCA64F /* 知识管理-目的导向工作流(ap).md in Resources */,
+				08523E372DA2F42A00AA1B78 /* QEMU-CPU模拟(cs).md in Resources */,
 				0887FF8A2D96D2B000784CC8 /* 公元前234年秦灭韩之战(kg).md in Resources */,
 				088CE8FD2D9BB3D70086C8E2 /* 公元413年晋灭谯蜀之战(kg).md in Resources */,
 				088F2C242C87FDFE00DCA64F /* IO性能-文件缓存(ap).md in Resources */,
@@ -4209,6 +4361,7 @@
 				088CE94B2D9BBCB40086C8E2 /* 公元542年开国皇帝宇文觉(kg).md in Resources */,
 				08A7AB172D97E7E400362878 /* 公元前118年五铢钱(kg).md in Resources */,
 				08BDD5342C6B007A00914412 /* 时间(ap).md in Resources */,
+				08523E132DA279A900AA1B78 /* 阿加莎·克里斯蒂(kg).md in Resources */,
 				08A7AB4B2D97F5BC00362878 /* 公元23年刘玄(kg).md in Resources */,
 				0891ACC32D9AEF1F00BF9D93 /* 公元214年刘璋(kg).md in Resources */,
 				088CE8FB2D9BB3C90086C8E2 /* 公元409年刘裕北伐(kg).md in Resources */,
@@ -4237,6 +4390,7 @@
 				088CE8F92D9BB3BB0086C8E2 /* 公元408年北魏太武帝(kg).md in Resources */,
 				088CE8AD2D9B723B0086C8E2 /* 公元311年东海王司马越(kg).md in Resources */,
 				08BDD5892C6B007A00914412 /* Full Screen Modal View(ap).md in Resources */,
+				08523E252DA2BB4700AA1B78 /* 金庸-神雕侠侣(kg).md in Resources */,
 				08449030279ECF7D00B61353 /* 1.md in Resources */,
 				087A7AFB2C816B1300321F85 /* 卡死崩溃监控(ap).md in Resources */,
 				08BDD54B2C6B007A00914412 /* AppIntentTimelineProvider(ap).md in Resources */,
@@ -4244,8 +4398,10 @@
 				08BDD5462C6B007A00914412 /* 小组件-Deep link(ap).md in Resources */,
 				08A7AB632D98030B00362878 /* 公元123年西域长史府(kg).md in Resources */,
 				08A7AB652D98031C00362878 /* 公元132年张衡与地动仪(kg).md in Resources */,
+				08523E4B2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md in Resources */,
 				088CE94D2D9BC30C0086C8E2 /* 公元543年邙山之战(kg).md in Resources */,
 				08A7AB212D97E88400362878 /* 公元前104年颁布太初历(kg).md in Resources */,
+				08523E332DA2F40100AA1B78 /* QEMU源码初探(cs).md in Resources */,
 				08F4042B2D9D607F0082F5DB /* AI编程-加速开发(cs).md in Resources */,
 				08BDD5842C6B007A00914412 /* Stack(ap).md in Resources */,
 				08BDD50E2C6B007A00914412 /* CurrentValueSubject(ap).md in Resources */,
@@ -4484,7 +4640,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 28;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
@@ -4504,7 +4660,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.6.6;
+				MARKETING_VERSION = 6.6.7;
 				MERGED_BINARY_TYPE = none;
 				OTHER_LDFLAGS = (
 					"-Xlinker",
@@ -4538,7 +4694,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 28;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftPamphletApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 962Z8PV35L;
@@ -4558,7 +4714,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 6.6.6;
+				MARKETING_VERSION = 6.6.7;
 				MERGED_BINARY_TYPE = none;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
 				PRODUCT_NAME = "戴铭的开发小册子";

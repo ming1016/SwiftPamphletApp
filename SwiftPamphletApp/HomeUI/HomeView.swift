@@ -84,6 +84,7 @@ struct HomeView: View {
         })
         .onChange(of: selectedDataLinkString, {
             sdLinkStr = selectedDataLinkString
+            selectedGuideItem = nil
         })
         .onChange(of: scenePhase, {
             guard scenePhase == .active else { return } // 只处理 active 状态
