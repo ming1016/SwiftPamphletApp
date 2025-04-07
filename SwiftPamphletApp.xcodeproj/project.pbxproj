@@ -418,6 +418,13 @@
 		0891ACF32D9AF2E600BF9D93 /* 公元279年晋灭吴之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0891ACF22D9AF2E600BF9D93 /* 公元279年晋灭吴之战(kg).md */; };
 		0891ACF52D9AF2F600BF9D93 /* 公元280年陈寿与三国志(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0891ACF42D9AF2F600BF9D93 /* 公元280年陈寿与三国志(kg).md */; };
 		0891EACD2CF1EAC000597974 /* SettingSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0891EACC2CF1EAC000597974 /* SettingSidebarView.swift */; };
+		0893B00D2DA3F1EE002DE50F /* C语言(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 0893B00C2DA3F1EE002DE50F /* C语言(cs).md */; };
+		0893B00F2DA3F1FE002DE50F /* GCC、GDB、Make(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 0893B00E2DA3F1FE002DE50F /* GCC、GDB、Make(cs).md */; };
+		0893B0112DA3F20E002DE50F /* Git版本控制系统(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 0893B0102DA3F20E002DE50F /* Git版本控制系统(cs).md */; };
+		0893B0132DA3F221002DE50F /* 基本的性能分析和调试技术(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 0893B0122DA3F221002DE50F /* 基本的性能分析和调试技术(cs).md */; };
+		0893B0152DA3F236002DE50F /* 计算机组成原理(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 0893B0142DA3F236002DE50F /* 计算机组成原理(cs).md */; };
+		0893B0172DA3F249002DE50F /* 指令集架构(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 0893B0162DA3F249002DE50F /* 指令集架构(cs).md */; };
+		0893B0192DA3F258002DE50F /* 操作系统原理(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 0893B0182DA3F258002DE50F /* 操作系统原理(cs).md */; };
 		089503FA2D10E8C0008A9A67 /* 小组件-网络请求(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 089503F92D10E8C0008A9A67 /* 小组件-网络请求(ap).md */; };
 		08A414162D9233C100035B4A /* ARM汇编语言(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A414152D9233C100035B4A /* ARM汇编语言(cs).md */; };
 		08A414182D923C2D00035B4A /* ARM反汇编(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A414172D923C2D00035B4A /* ARM反汇编(cs).md */; };
@@ -1265,6 +1272,13 @@
 		0891ACF22D9AF2E600BF9D93 /* 公元279年晋灭吴之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元279年晋灭吴之战(kg).md"; sourceTree = "<group>"; };
 		0891ACF42D9AF2F600BF9D93 /* 公元280年陈寿与三国志(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元280年陈寿与三国志(kg).md"; sourceTree = "<group>"; };
 		0891EACC2CF1EAC000597974 /* SettingSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSidebarView.swift; sourceTree = "<group>"; };
+		0893B00C2DA3F1EE002DE50F /* C语言(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "C语言(cs).md"; sourceTree = "<group>"; };
+		0893B00E2DA3F1FE002DE50F /* GCC、GDB、Make(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GCC、GDB、Make(cs).md"; sourceTree = "<group>"; };
+		0893B0102DA3F20E002DE50F /* Git版本控制系统(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Git版本控制系统(cs).md"; sourceTree = "<group>"; };
+		0893B0122DA3F221002DE50F /* 基本的性能分析和调试技术(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "基本的性能分析和调试技术(cs).md"; sourceTree = "<group>"; };
+		0893B0142DA3F236002DE50F /* 计算机组成原理(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "计算机组成原理(cs).md"; sourceTree = "<group>"; };
+		0893B0162DA3F249002DE50F /* 指令集架构(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "指令集架构(cs).md"; sourceTree = "<group>"; };
+		0893B0182DA3F258002DE50F /* 操作系统原理(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "操作系统原理(cs).md"; sourceTree = "<group>"; };
 		089503F92D10E8C0008A9A67 /* 小组件-网络请求(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "小组件-网络请求(ap).md"; sourceTree = "<group>"; };
 		08A414152D9233C100035B4A /* ARM汇编语言(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM汇编语言(cs).md"; sourceTree = "<group>"; };
 		08A414172D923C2D00035B4A /* ARM反汇编(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM反汇编(cs).md"; sourceTree = "<group>"; };
@@ -2535,10 +2549,33 @@
 			path = "三国两晋南北朝";
 			sourceTree = "<group>";
 		};
+		0893B00A2DA3F1BC002DE50F /* 开发工具和语言 */ = {
+			isa = PBXGroup;
+			children = (
+				0893B00C2DA3F1EE002DE50F /* C语言(cs).md */,
+				0893B00E2DA3F1FE002DE50F /* GCC、GDB、Make(cs).md */,
+				0893B0102DA3F20E002DE50F /* Git版本控制系统(cs).md */,
+				0893B0122DA3F221002DE50F /* 基本的性能分析和调试技术(cs).md */,
+			);
+			path = "开发工具和语言";
+			sourceTree = "<group>";
+		};
+		0893B00B2DA3F1D4002DE50F /* 计算机基础 */ = {
+			isa = PBXGroup;
+			children = (
+				0893B0142DA3F236002DE50F /* 计算机组成原理(cs).md */,
+				0893B0162DA3F249002DE50F /* 指令集架构(cs).md */,
+				0893B0182DA3F258002DE50F /* 操作系统原理(cs).md */,
+			);
+			path = "计算机基础";
+			sourceTree = "<group>";
+		};
 		08A414132D92337500035B4A /* CS */ = {
 			isa = PBXGroup;
 			children = (
 				08F404172D9D2B620082F5DB /* AI */,
+				0893B00A2DA3F1BC002DE50F /* 开发工具和语言 */,
+				0893B00B2DA3F1D4002DE50F /* 计算机基础 */,
 				08A414142D92338A00035B4A /* 汇编 */,
 			);
 			path = CS;
@@ -3772,6 +3809,7 @@
 				0832669E2C97E67A00E27CC5 /* Stable Diffusion(ap).md in Resources */,
 				08BDD5AF2C6B007A00914412 /* LazyVStack和LazyHStack(ap).md in Resources */,
 				08BDD5442C6B007A00914412 /* 小组件-远程定时获取数据(ap).md in Resources */,
+				0893B0172DA3F249002DE50F /* 指令集架构(cs).md in Resources */,
 				08F0F8BD2C95978C00DC659B /* 开源-笔记(ap).md in Resources */,
 				08A7AB312D97E91100362878 /* 公元前60年西域都护府与匈奴(kg).md in Resources */,
 				088CE8F72D9BB3AC0086C8E2 /* 公元407年夏(kg).md in Resources */,
@@ -4013,6 +4051,8 @@
 				087AAA862C9A71D700877650 /* 包管理工具-介绍(ap).md in Resources */,
 				08F0F8B32C95969500DC659B /* 开源-天气(ap).md in Resources */,
 				0891ACDD2D9AF0BE00BF9D93 /* 公元242年吴国二宫之争(kg).md in Resources */,
+				0893B00D2DA3F1EE002DE50F /* C语言(cs).md in Resources */,
+				0893B0112DA3F20E002DE50F /* Git版本控制系统(cs).md in Resources */,
 				08B9A1B92D9440A600E8A959 /* ARM解释器模拟内存和堆栈-实际应用与案例分析(cs).md in Resources */,
 				08BDD5D02C6B007B00914412 /* 修饰符-圆角(ap).md in Resources */,
 				083266922C97E51400E27CC5 /* 人工智能-介绍(ap).md in Resources */,
@@ -4199,6 +4239,7 @@
 				08F0F8AF2C95958E00DC659B /* 开源-精品项目(ap).md in Resources */,
 				08448FE6279EC82500B61353 /* 逻辑(ap).md in Resources */,
 				08448F95279EB96F00B61353 /* 变量(ap).md in Resources */,
+				0893B0132DA3F221002DE50F /* 基本的性能分析和调试技术(cs).md in Resources */,
 				0851E5532C86783400D9463A /* LLDB(ap).md in Resources */,
 				08A7AB292D97E8CC00362878 /* 公元前87年昭宣中兴(kg).md in Resources */,
 				087AAAA12C9C0EEA00877650 /* 人工智能-Translation(ap).md in Resources */,
@@ -4206,6 +4247,7 @@
 				088959AA2D9593C5006D9103 /* 公元前268年远交近攻(kg).md in Resources */,
 				08BDD5DF2C6C4BAE00914412 /* SwiftUI数据流-@State(ap).md in Resources */,
 				088CE8BD2D9B86430086C8E2 /* 公元326年实行土断制(kg).md in Resources */,
+				0893B0192DA3F258002DE50F /* 操作系统原理(cs).md in Resources */,
 				08D5A7992CECBA710036AAC6 /* 人工智能-MLX(ap).md in Resources */,
 				08BDD5E12C6C4BC500914412 /* SwiftUI数据流-@Binding(ap).md in Resources */,
 				08BDD5C62C6B007A00914412 /* Grid(ap).md in Resources */,
@@ -4229,6 +4271,7 @@
 				08BDD5642C6B007A00914412 /* DatePicker(ap).md in Resources */,
 				088CE8DD2D9BB1D70086C8E2 /* 公元383年淝水之战(kg).md in Resources */,
 				088CE8C32D9B86700086C8E2 /* 公元336年敦煌莫高窟(kg).md in Resources */,
+				0893B00F2DA3F1FE002DE50F /* GCC、GDB、Make(cs).md in Resources */,
 				0851E5612C86E9D200D9463A /* MetricKit(ap).md in Resources */,
 				08BDD56A2C6B007A00914412 /* Stepper(ap).md in Resources */,
 				08BDD5132C6B007A00914412 /* PassthroughSubject(ap).md in Resources */,
@@ -4396,6 +4439,7 @@
 				08BDD54B2C6B007A00914412 /* AppIntentTimelineProvider(ap).md in Resources */,
 				088CE9572D9BCAA80086C8E2 /* 公元555年后梁(kg).md in Resources */,
 				08BDD5462C6B007A00914412 /* 小组件-Deep link(ap).md in Resources */,
+				0893B0152DA3F236002DE50F /* 计算机组成原理(cs).md in Resources */,
 				08A7AB632D98030B00362878 /* 公元123年西域长史府(kg).md in Resources */,
 				08A7AB652D98031C00362878 /* 公元132年张衡与地动仪(kg).md in Resources */,
 				08523E4B2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md in Resources */,

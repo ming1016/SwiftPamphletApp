@@ -27,6 +27,17 @@ struct CSGuide {
                 L(t: "AI编程-学习路线图", type: 1),
             ])
         ]),
+        L(t: "开发工具和语言", sub: [
+            L(t: "C语言", type: 1),
+//            L(t: "GCC、GDB、Make", type: 1),
+//            L(t: "Git版本控制系统", type: 1),
+//            L(t: "基本的性能分析和调试技术", type: 1)
+        ]),
+//        L(t: "计算机基础", sub: [
+//            L(t: "计算机组成原理", type: 1),
+//            L(t: "指令集架构", type: 1),
+//            L(t: "操作系统原理", type: 1)
+//        ]),
         L(t: "汇编", sub: [
             L(t: "ARM汇编语言", type: 1),
             L(t: "ARM反汇编", type: 1),
@@ -45,6 +56,13 @@ struct CSGuide {
                 L(t: "ARM解释器模拟内存和堆栈-实际应用与案例分析", type: 1),
             ]),
             L(t: "ARM解释器中FFI调用iOS原生函数", type: 1),
+            L(t: "虚拟化技术", sub: [
+                L(t: "虚拟化的基本概念", type: 1),
+                L(t: "常见虚拟化技术原理", type: 1),
+                L(t: "CPU虚拟化", type: 1),
+                L(t: "内存虚拟化", type: 1),
+                L(t: "IO虚拟化", type: 1)
+            ]),
             L(t: "相关开源项目", sub: [
                 L(t: "QEMU", sub: [
                     L(t: "QEMU概览", type: 1),
@@ -63,7 +81,6 @@ struct CSGuide {
                     L(t: "QEMU-实现核心功能", type: 1),
                     L(t: "QEMU-扩展与完善", type: 1)
                 ]),
-                
             ]),
         ])
     ]
