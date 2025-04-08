@@ -179,6 +179,7 @@ struct WebUIView: NSViewRepresentable {
                     let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
                     if components?.scheme == "http" || components?.scheme == "https" {
                         NSWorkspace.shared.open(url)
+                        return (.cancel, preferences)
                     }
                 }
             }

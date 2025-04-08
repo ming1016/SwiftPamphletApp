@@ -29,15 +29,15 @@ struct CSGuide {
         ]),
         L(t: "开发工具和语言", sub: [
             L(t: "C语言", type: 1),
-//            L(t: "GCC、GDB、Make", type: 1),
-//            L(t: "Git版本控制系统", type: 1),
-//            L(t: "基本的性能分析和调试技术", type: 1)
+            L(t: "GCC、GDB、Make", type: 1),
+            L(t: "Git版本控制系统", type: 1),
+            L(t: "基本的性能分析和调试技术", type: 1)
         ]),
-//        L(t: "计算机基础", sub: [
-//            L(t: "计算机组成原理", type: 1),
-//            L(t: "指令集架构", type: 1),
-//            L(t: "操作系统原理", type: 1)
-//        ]),
+        L(t: "计算机基础", sub: [
+            L(t: "计算机组成原理", type: 1),
+            L(t: "指令集架构", type: 1),
+            L(t: "操作系统原理", type: 1)
+        ]),
         L(t: "汇编", sub: [
             L(t: "ARM汇编语言", type: 1),
             L(t: "ARM反汇编", type: 1),
