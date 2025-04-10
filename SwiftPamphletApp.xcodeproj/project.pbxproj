@@ -492,6 +492,17 @@
 		08A7AB6D2D98035700362878 /* 公元168年汉灵帝的破败统治(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7AB6C2D98035700362878 /* 公元168年汉灵帝的破败统治(kg).md */; };
 		08A7AB6F2D98036600362878 /* 公元220年汉献帝禅位东汉灭亡(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7AB6E2D98036600362878 /* 公元220年汉献帝禅位东汉灭亡(kg).md */; };
 		08A7AB712D98199000362878 /* 公元前204年背水一战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7AB702D98199000362878 /* 公元前204年背水一战(kg).md */; };
+		08A7B44A2DA756E2002A18C1 /* 人工智能-MCP(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4492DA756E2002A18C1 /* 人工智能-MCP(ap).md */; };
+		08A7B44C2DA75704002A18C1 /* 人工智能-智能体(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B44B2DA75704002A18C1 /* 人工智能-智能体(ap).md */; };
+		08A7B44E2DA759CB002A18C1 /* 人工智能-SiriKit与App Intents(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B44D2DA759CB002A18C1 /* 人工智能-SiriKit与App Intents(ap).md */; };
+		08A7B4502DA75A11002A18C1 /* 人工智能-Image Playground(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B44F2DA75A11002A18C1 /* 人工智能-Image Playground(ap).md */; };
+		08A7B4522DA75B2F002A18C1 /* 人工智能-基于位置的服务(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4512DA75B2F002A18C1 /* 人工智能-基于位置的服务(ap).md */; };
+		08A7B4542DA75DE4002A18C1 /* 人工智能-Genmoji(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4532DA75DE4002A18C1 /* 人工智能-Genmoji(ap).md */; };
+		08A7B4562DA75E45002A18C1 /* 人工智能-传感器.md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4552DA75E45002A18C1 /* 人工智能-传感器.md */; };
+		08A7B4582DA75EF2002A18C1 /* AI应用架构(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4572DA75EF2002A18C1 /* AI应用架构(ap).md */; };
+		08A7B45A2DA75F03002A18C1 /* AI应用开发的最佳实践(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4592DA75F03002A18C1 /* AI应用开发的最佳实践(ap).md */; };
+		08A7B45C2DA7603F002A18C1 /* 人工智能-实际应用和案例研究(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B45B2DA7603F002A18C1 /* 人工智能-实际应用和案例研究(ap).md */; };
+		08A7B45E2DA760C0002A18C1 /* 苹果AI前沿技术展望(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B45D2DA760C0002A18C1 /* 苹果AI前沿技术展望(ap).md */; };
 		08A7FF312BEB02EA00E12E5A /* GithubAccessTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */; };
 		08A9E1A22BC25D0700A73764 /* ViewComponentMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */; };
 		08AEAEF1277F09D000B969E2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AEAEF0277F09D000B969E2 /* IntroView.swift */; };
@@ -786,6 +797,7 @@
 		08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FC27758B8A008C0935 /* Lexer.swift */; };
 		08CD61FF27758B8A008C0935 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FD27758B8A008C0935 /* Token.swift */; };
 		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
+		08D1E36C2DA6AF160098BB3E /* 数据可视化(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D1E36B2DA6AF160098BB3E /* 数据可视化(kg).md */; };
 		08D223052D92B78B008F40C6 /* KnowledgeGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D223042D92B78B008F40C6 /* KnowledgeGuide.swift */; };
 		08D2230B2D92CD46008F40C6 /* ARM解释器和虚拟机(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2230A2D92CD46008F40C6 /* ARM解释器和虚拟机(cs).md */; };
 		08D223312D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223302D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md */; };
@@ -1010,7 +1022,7 @@
 		08523E4C2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-扩展与完善(cs).md"; sourceTree = "<group>"; };
 		085E1A552CF60CBA009938E8 /* 人工智能-RAG(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-RAG(ap).md"; sourceTree = "<group>"; };
 		0869233F2BF2BF81006779A3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的开发小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		086A5F032744E88E00FECE02 /* 戴铭的小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPamphletAppApp.swift; sourceTree = "<group>"; };
 		086A5F0A2744E89100FECE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086A5F0D2744E89100FECE02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -1346,6 +1358,17 @@
 		08A7AB6C2D98035700362878 /* 公元168年汉灵帝的破败统治(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元168年汉灵帝的破败统治(kg).md"; sourceTree = "<group>"; };
 		08A7AB6E2D98036600362878 /* 公元220年汉献帝禅位东汉灭亡(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元220年汉献帝禅位东汉灭亡(kg).md"; sourceTree = "<group>"; };
 		08A7AB702D98199000362878 /* 公元前204年背水一战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前204年背水一战(kg).md"; sourceTree = "<group>"; };
+		08A7B4492DA756E2002A18C1 /* 人工智能-MCP(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-MCP(ap).md"; sourceTree = "<group>"; };
+		08A7B44B2DA75704002A18C1 /* 人工智能-智能体(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-智能体(ap).md"; sourceTree = "<group>"; };
+		08A7B44D2DA759CB002A18C1 /* 人工智能-SiriKit与App Intents(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-SiriKit与App Intents(ap).md"; sourceTree = "<group>"; };
+		08A7B44F2DA75A11002A18C1 /* 人工智能-Image Playground(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Image Playground(ap).md"; sourceTree = "<group>"; };
+		08A7B4512DA75B2F002A18C1 /* 人工智能-基于位置的服务(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-基于位置的服务(ap).md"; sourceTree = "<group>"; };
+		08A7B4532DA75DE4002A18C1 /* 人工智能-Genmoji(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Genmoji(ap).md"; sourceTree = "<group>"; };
+		08A7B4552DA75E45002A18C1 /* 人工智能-传感器.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-传感器.md"; sourceTree = "<group>"; };
+		08A7B4572DA75EF2002A18C1 /* AI应用架构(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI应用架构(ap).md"; sourceTree = "<group>"; };
+		08A7B4592DA75F03002A18C1 /* AI应用开发的最佳实践(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI应用开发的最佳实践(ap).md"; sourceTree = "<group>"; };
+		08A7B45B2DA7603F002A18C1 /* 人工智能-实际应用和案例研究(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-实际应用和案例研究(ap).md"; sourceTree = "<group>"; };
+		08A7B45D2DA760C0002A18C1 /* 苹果AI前沿技术展望(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "苹果AI前沿技术展望(ap).md"; sourceTree = "<group>"; };
 		08A7FF302BEB02EA00E12E5A /* GithubAccessTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAccessTokenView.swift; sourceTree = "<group>"; };
 		08A9E1A12BC25D0700A73764 /* ViewComponentMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponentMarkdown.swift; sourceTree = "<group>"; };
 		08AEAEF0277F09D000B969E2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
@@ -1638,6 +1661,7 @@
 		08BDD5EA2C6C950D00914412 /* SwiftData和CoreData(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftData和CoreData(ap).md"; sourceTree = "<group>"; };
 		08CD61FC27758B8A008C0935 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		08CD61FD27758B8A008C0935 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		08D1E36B2DA6AF160098BB3E /* 数据可视化(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "数据可视化(kg).md"; sourceTree = "<group>"; };
 		08D223042D92B78B008F40C6 /* KnowledgeGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeGuide.swift; sourceTree = "<group>"; };
 		08D2230A2D92CD46008F40C6 /* ARM解释器和虚拟机(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器和虚拟机(cs).md"; sourceTree = "<group>"; };
 		08D223302D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU的TCG和TCI(cs).md"; sourceTree = "<group>"; };
@@ -1767,20 +1791,30 @@
 			children = (
 				083266912C97E51400E27CC5 /* 人工智能-介绍(ap).md */,
 				08D5A7942CECBA1F0036AAC6 /* Apple Intelligence(ap).md */,
-				083266932C97E52700E27CC5 /* Core ML(ap).md */,
-				08D5A7962CECBA500036AAC6 /* 人工智能-模型训练(ap).md */,
-				083266952C97E5FF00E27CC5 /* Create ML(ap).md */,
-				08D5A7982CECBA710036AAC6 /* 人工智能-MLX(ap).md */,
+				083266A12C987A0700E27CC5 /* AI辅助开发APP(ap).md */,
+				08A7B4492DA756E2002A18C1 /* 人工智能-MCP(ap).md */,
+				08A7B44D2DA759CB002A18C1 /* 人工智能-SiriKit与App Intents(ap).md */,
+				087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */,
+				08A7B4532DA75DE4002A18C1 /* 人工智能-Genmoji(ap).md */,
+				08A7B44F2DA75A11002A18C1 /* 人工智能-Image Playground(ap).md */,
+				08A7B4512DA75B2F002A18C1 /* 人工智能-基于位置的服务(ap).md */,
 				087AAA9C2C9ABEFB00877650 /* 人工智能-文本(ap).md */,
 				087AAAA02C9C0EEA00877650 /* 人工智能-Translation(ap).md */,
-				087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */,
-				083266972C97E62F00E27CC5 /* 人工智能-语音(ap).md */,
-				083266992C97E64700E27CC5 /* 人工智能-视觉(ap).md */,
-				0832669B2C97E65A00E27CC5 /* 人工智能-Metal(ap).md */,
+				0832669D2C97E67A00E27CC5 /* Stable Diffusion(ap).md */,
 				087AAA9E2C9AC1E200877650 /* 使用LLM模型(ap).md */,
 				08D5A79A2CECBAA90036AAC6 /* 使用三方大模型接口(ap).md */,
-				0832669D2C97E67A00E27CC5 /* Stable Diffusion(ap).md */,
-				083266A12C987A0700E27CC5 /* AI辅助开发APP(ap).md */,
+				083266992C97E64700E27CC5 /* 人工智能-视觉(ap).md */,
+				083266972C97E62F00E27CC5 /* 人工智能-语音(ap).md */,
+				08A7B4552DA75E45002A18C1 /* 人工智能-传感器.md */,
+				083266932C97E52700E27CC5 /* Core ML(ap).md */,
+				083266952C97E5FF00E27CC5 /* Create ML(ap).md */,
+				08A7B4572DA75EF2002A18C1 /* AI应用架构(ap).md */,
+				08A7B4592DA75F03002A18C1 /* AI应用开发的最佳实践(ap).md */,
+				08A7B45B2DA7603F002A18C1 /* 人工智能-实际应用和案例研究(ap).md */,
+				08A7B45D2DA760C0002A18C1 /* 苹果AI前沿技术展望(ap).md */,
+				08D5A7962CECBA500036AAC6 /* 人工智能-模型训练(ap).md */,
+				08D5A7982CECBA710036AAC6 /* 人工智能-MLX(ap).md */,
+				0832669B2C97E65A00E27CC5 /* 人工智能-Metal(ap).md */,
 				08D5A79C2CECBAE40036AAC6 /* 用于开发APP的提示词(ap).md */,
 				085E1A542CF60C52009938E8 /* 智能体 */,
 				08D5A7A02CECBB0D0036AAC6 /* 人工智能-技术原理(ap).md */,
@@ -2129,6 +2163,7 @@
 		085E1A542CF60C52009938E8 /* 智能体 */ = {
 			isa = PBXGroup;
 			children = (
+				08A7B44B2DA75704002A18C1 /* 人工智能-智能体(ap).md */,
 				085E1A552CF60CBA009938E8 /* 人工智能-RAG(ap).md */,
 			);
 			path = "智能体";
@@ -2154,7 +2189,7 @@
 		086A5F042744E88E00FECE02 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */,
+				086A5F032744E88E00FECE02 /* 戴铭的小册子.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3394,11 +3429,20 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		08D1E36A2DA6AEEC0098BB3E /* 视觉 */ = {
+			isa = PBXGroup;
+			children = (
+				08D1E36B2DA6AF160098BB3E /* 数据可视化(kg).md */,
+			);
+			path = "视觉";
+			sourceTree = "<group>";
+		};
 		08D223012D92B15A008F40C6 /* Knowledge */ = {
 			isa = PBXGroup;
 			children = (
 				08523E0F2DA2797B00AA1B78 /* 文学 */,
 				08D223032D92B750008F40C6 /* 历史 */,
+				08D1E36A2DA6AEEC0098BB3E /* 视觉 */,
 			);
 			path = Knowledge;
 			sourceTree = "<group>";
@@ -3642,7 +3686,7 @@
 				3AA4623C2CE2734E00774B59 /* AsyncAlgorithms */,
 			);
 			productName = SwiftPamphletApp;
-			productReference = 086A5F032744E88E00FECE02 /* 戴铭的开发小册子.app */;
+			productReference = 086A5F032744E88E00FECE02 /* 戴铭的小册子.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -3724,6 +3768,7 @@
 				08BDD5202C6B007A00914412 /* Swift Concurrency是什么(ap).md in Resources */,
 				08BDD5312C6B007A00914412 /* JSON没有id字段(ap).md in Resources */,
 				08AEAEFA277F3C7400B969E2 /* css.html in Resources */,
+				08D1E36C2DA6AF160098BB3E /* 数据可视化(kg).md in Resources */,
 				08A7AAF72D97E6CC00362878 /* 公元前202年汉朝建立(kg).md in Resources */,
 				08BDD5542C6B007A00914412 /* macOS共享菜单(ap).md in Resources */,
 				08BDD5472C6B007A00914412 /* 小组件-StaticConfiguration(ap).md in Resources */,
@@ -3813,7 +3858,10 @@
 				08F0F8BD2C95978C00DC659B /* 开源-笔记(ap).md in Resources */,
 				08A7AB312D97E91100362878 /* 公元前60年西域都护府与匈奴(kg).md in Resources */,
 				088CE8F72D9BB3AC0086C8E2 /* 公元407年夏(kg).md in Resources */,
+				08A7B45E2DA760C0002A18C1 /* 苹果AI前沿技术展望(ap).md in Resources */,
+				08A7B45A2DA75F03002A18C1 /* AI应用开发的最佳实践(ap).md in Resources */,
 				0887FF862D96D28B00784CC8 /* 公元前236年流放吕不韦(kg).md in Resources */,
+				08A7B4582DA75EF2002A18C1 /* AI应用架构(ap).md in Resources */,
 				088CE93D2D9BBBBD0086C8E2 /* 公元528年河阴之变(kg).md in Resources */,
 				08BDD5DA2C6B517900914412 /* Table-拖拽(ap).md in Resources */,
 				087A7AF82C81409400321F85 /* 动态库注入技术(ap).md in Resources */,
@@ -3827,8 +3875,10 @@
 				087A7AE42C80686100321F85 /* Swift内存操作(ap).md in Resources */,
 				0891ACE92D9AF12900BF9D93 /* 公元253年姜维(kg).md in Resources */,
 				0887FF9A2D96D33D00784CC8 /* 公元前214年修筑长城(kg).md in Resources */,
+				08A7B4562DA75E45002A18C1 /* 人工智能-传感器.md in Resources */,
 				08BDD5762C6B007A00914412 /* GeometryReader(ap).md in Resources */,
 				087A7AD72C802C4A00321F85 /* 包体积-资源优化(ap).md in Resources */,
+				08A7B4522DA75B2F002A18C1 /* 人工智能-基于位置的服务(ap).md in Resources */,
 				08BDD5922C6B007A00914412 /* SF Symbol(ap).md in Resources */,
 				0887FFA62D96D3A500784CC8 /* 公元前206年西楚(kg).md in Resources */,
 				08BDD5722C6B007A00914412 /* Safe Area(ap).md in Resources */,
@@ -3948,6 +3998,7 @@
 				08BDD5912C6B007A00914412 /* Blend Modes(ap).md in Resources */,
 				08D5A79B2CECBAA90036AAC6 /* 使用三方大模型接口(ap).md in Resources */,
 				08BDD5502C6B007A00914412 /* 性能技术演进(ap).md in Resources */,
+				08A7B4542DA75DE4002A18C1 /* 人工智能-Genmoji(ap).md in Resources */,
 				08B9A1702D93A32200E8A959 /* 公元前638年泓水之战(kg).md in Resources */,
 				0832668D2C97238C00E27CC5 /* visionOS-Unity(ap).md in Resources */,
 				087AAAA32C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md in Resources */,
@@ -4123,7 +4174,10 @@
 				08A7AB332D97EE9800362878 /* 公元前46年陈汤(kg).md in Resources */,
 				08BDD5C02C6B007A00914412 /* Table-多属性排序(ap).md in Resources */,
 				08BDD5902C6B007A00914412 /* SwiftUI是什么(ap).md in Resources */,
+				08A7B44C2DA75704002A18C1 /* 人工智能-智能体(ap).md in Resources */,
 				08A7AB2F2D97E8FE00362878 /* 公元前74年汉废帝(kg).md in Resources */,
+				08A7B44A2DA756E2002A18C1 /* 人工智能-MCP(ap).md in Resources */,
+				08A7B4502DA75A11002A18C1 /* 人工智能-Image Playground(ap).md in Resources */,
 				088CE8E12D9BB1F30086C8E2 /* 公元385年西秦(kg).md in Resources */,
 				08B9A1A12D943D2E00E8A959 /* 公元前476年战国七雄(kg).md in Resources */,
 				08A7AB0B2D97E78100362878 /* 公元前134年罢黜百家独尊儒术(kg).md in Resources */,
@@ -4256,6 +4310,7 @@
 				08F4042F2D9D6C1E0082F5DB /* AI编程-学习与技能提升(cs).md in Resources */,
 				0832666C2C96A34100E27CC5 /* macOS开源-窗口管理(ap).md in Resources */,
 				08B9A16C2D93A23A00E8A959 /* 公元前656年骊姬之乱(kg).md in Resources */,
+				08A7B45C2DA7603F002A18C1 /* 人工智能-实际应用和案例研究(ap).md in Resources */,
 				08F0F8B72C9596CC00DC659B /* 开源-生活(ap).md in Resources */,
 				08BDD5A32C6B007A00914412 /* Legacy bridges协议(ap).md in Resources */,
 				08D5A7952CECBA1F0036AAC6 /* Apple Intelligence(ap).md in Resources */,
@@ -4425,6 +4480,7 @@
 				087A7B022C82947200321F85 /* 防止卡顿的方法(ap).md in Resources */,
 				0887FF842D96D27900784CC8 /* 公元前238年嫪毐之乱(kg).md in Resources */,
 				08BDD5C82C6B007A00914412 /* Text(ap).md in Resources */,
+				08A7B44E2DA759CB002A18C1 /* 人工智能-SiriKit与App Intents(ap).md in Resources */,
 				083266772C96C02100E27CC5 /* RealityKit(ap).md in Resources */,
 				0851E5382C85654100D9463A /* Bazel-远程执行配置(ap).md in Resources */,
 				084EB7D62D996F3F006FEADF /* 公元89年燕然勒石(kg).md in Resources */,
@@ -4714,7 +4770,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
-				PRODUCT_NAME = "戴铭的开发小册子";
+				PRODUCT_NAME = "戴铭的小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -4761,7 +4817,7 @@
 				MARKETING_VERSION = 6.6.7;
 				MERGED_BINARY_TYPE = none;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.SwiftPamphletAppByMing;
-				PRODUCT_NAME = "戴铭的开发小册子";
+				PRODUCT_NAME = "戴铭的小册子";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;

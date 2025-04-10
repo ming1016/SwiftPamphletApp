@@ -48,13 +48,13 @@ struct IntroView: View {
                     .frame(width: 120, height: 120)
             }
             #endif
-            Text("戴铭的开发小册子").bold()
+            Text("戴铭的小册子").bold()
             LightingView {
                 Text("Swift Pamphlet App").gradientTitle(color: .mint)
             }
 
             HStack {
-                Text("一本活的开发手册")
+                Text("一本活的手册")
             }
             if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
                 Text("版本\(version)").font(.footnote)
