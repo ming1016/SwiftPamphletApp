@@ -498,7 +498,7 @@
 		08A7B4502DA75A11002A18C1 /* 人工智能-Image Playground(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B44F2DA75A11002A18C1 /* 人工智能-Image Playground(ap).md */; };
 		08A7B4522DA75B2F002A18C1 /* 人工智能-基于位置的服务(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4512DA75B2F002A18C1 /* 人工智能-基于位置的服务(ap).md */; };
 		08A7B4542DA75DE4002A18C1 /* 人工智能-Genmoji(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4532DA75DE4002A18C1 /* 人工智能-Genmoji(ap).md */; };
-		08A7B4562DA75E45002A18C1 /* 人工智能-传感器.md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4552DA75E45002A18C1 /* 人工智能-传感器.md */; };
+		08A7B4562DA75E45002A18C1 /* 人工智能-传感器(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4552DA75E45002A18C1 /* 人工智能-传感器(ap).md */; };
 		08A7B4582DA75EF2002A18C1 /* AI应用架构(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4572DA75EF2002A18C1 /* AI应用架构(ap).md */; };
 		08A7B45A2DA75F03002A18C1 /* AI应用开发的最佳实践(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B4592DA75F03002A18C1 /* AI应用开发的最佳实践(ap).md */; };
 		08A7B45C2DA7603F002A18C1 /* 人工智能-实际应用和案例研究(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08A7B45B2DA7603F002A18C1 /* 人工智能-实际应用和案例研究(ap).md */; };
@@ -1364,7 +1364,7 @@
 		08A7B44F2DA75A11002A18C1 /* 人工智能-Image Playground(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Image Playground(ap).md"; sourceTree = "<group>"; };
 		08A7B4512DA75B2F002A18C1 /* 人工智能-基于位置的服务(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-基于位置的服务(ap).md"; sourceTree = "<group>"; };
 		08A7B4532DA75DE4002A18C1 /* 人工智能-Genmoji(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Genmoji(ap).md"; sourceTree = "<group>"; };
-		08A7B4552DA75E45002A18C1 /* 人工智能-传感器.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-传感器.md"; sourceTree = "<group>"; };
+		08A7B4552DA75E45002A18C1 /* 人工智能-传感器(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-传感器(ap).md"; sourceTree = "<group>"; };
 		08A7B4572DA75EF2002A18C1 /* AI应用架构(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI应用架构(ap).md"; sourceTree = "<group>"; };
 		08A7B4592DA75F03002A18C1 /* AI应用开发的最佳实践(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AI应用开发的最佳实践(ap).md"; sourceTree = "<group>"; };
 		08A7B45B2DA7603F002A18C1 /* 人工智能-实际应用和案例研究(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-实际应用和案例研究(ap).md"; sourceTree = "<group>"; };
@@ -1805,7 +1805,7 @@
 				08D5A79A2CECBAA90036AAC6 /* 使用三方大模型接口(ap).md */,
 				083266992C97E64700E27CC5 /* 人工智能-视觉(ap).md */,
 				083266972C97E62F00E27CC5 /* 人工智能-语音(ap).md */,
-				08A7B4552DA75E45002A18C1 /* 人工智能-传感器.md */,
+				08A7B4552DA75E45002A18C1 /* 人工智能-传感器(ap).md */,
 				083266932C97E52700E27CC5 /* Core ML(ap).md */,
 				083266952C97E5FF00E27CC5 /* Create ML(ap).md */,
 				08A7B4572DA75EF2002A18C1 /* AI应用架构(ap).md */,
@@ -3875,7 +3875,7 @@
 				087A7AE42C80686100321F85 /* Swift内存操作(ap).md in Resources */,
 				0891ACE92D9AF12900BF9D93 /* 公元253年姜维(kg).md in Resources */,
 				0887FF9A2D96D33D00784CC8 /* 公元前214年修筑长城(kg).md in Resources */,
-				08A7B4562DA75E45002A18C1 /* 人工智能-传感器.md in Resources */,
+				08A7B4562DA75E45002A18C1 /* 人工智能-传感器(ap).md in Resources */,
 				08BDD5762C6B007A00914412 /* GeometryReader(ap).md in Resources */,
 				087A7AD72C802C4A00321F85 /* 包体积-资源优化(ap).md in Resources */,
 				08A7B4522DA75B2F002A18C1 /* 人工智能-基于位置的服务(ap).md in Resources */,
