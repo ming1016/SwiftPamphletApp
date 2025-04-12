@@ -14,6 +14,7 @@ final class BookmarkModel {
     var icon: String = ""
     var pamphletName: String = ""
     var tags: [BookmarkTagModel] = [BookmarkTagModel]()
+    var type: Int = 0 // 0: 书签，1：标签
     var createDate: Date = Date.now
     var updateDate: Date = Date.now
     
@@ -45,10 +46,11 @@ final class BookmarkModel {
         return nil
     }
     
-    static func addBM(_ name: String, icon: String, plName: String, context: ModelContext) {
+    static func addBM(_ name: String, icon: String, plName: String, type: Int, context: ModelContext) {
         if BookmarkModel.hasBM(name, plName: plName, context: context) == nil {
             let newBM = BookmarkModel(pamphletName: plName, name: name)
             newBM.icon = icon
+            newBM.type = type
             context.insert(newBM)
         }
     }

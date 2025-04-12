@@ -29,7 +29,7 @@ struct BookmarkListView: View {
                         .foregroundStyle(.secondary)
                         .font(.footnote)
                 }
-                .tag(L(t: bm.name, icon: bm.icon))
+                .tag(L(t: bm.name, icon: bm.icon, type: bm.type))
                 .contextMenu {
                     Button("前移") {
                         bm.updateDate = Date.now

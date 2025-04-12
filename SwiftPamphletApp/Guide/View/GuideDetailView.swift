@@ -61,7 +61,7 @@ struct GuideDetailView: View {
                     })
                     .onChange(of: isBookmarked) { oldValue, newValue in
                         if newValue == true {
-                            BookmarkModel.addBM(t, icon: icon, plName: plName, context: modelContext)
+                            BookmarkModel.addBM(t, icon: icon, plName: plName, type: l.type, context: modelContext)
                         } else {
                             BookmarkModel.delBM(t, plName: plName, context: modelContext)
                         }
