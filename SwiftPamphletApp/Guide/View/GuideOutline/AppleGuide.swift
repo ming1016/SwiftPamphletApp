@@ -476,7 +476,6 @@ struct AppleGuide {
             L(t: "架构技术演进", type: 1),
             L(t: "设计模式", type: 1),
             L(t: "包管理工具",sub: [
-                L(t: "包管理工具-介绍", type: 1),
                 L(t: "Swift Package Manager", type: 1),
                 L(t: "CocoaPods", type: 1)
             ]),

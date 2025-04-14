@@ -206,7 +206,6 @@
 		087AAA772C9A6E0800877650 /* 单例(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA762C9A6E0800877650 /* 单例(ap).md */; };
 		087AAA792C9A6E6000877650 /* 程序入口点(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA782C9A6E6000877650 /* 程序入口点(ap).md */; };
 		087AAA842C9A718D00877650 /* Swift Package Manager(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA832C9A718D00877650 /* Swift Package Manager(ap).md */; };
-		087AAA862C9A71D700877650 /* 包管理工具-介绍(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA852C9A71D700877650 /* 包管理工具-介绍(ap).md */; };
 		087AAA882C9A768200877650 /* 组件化模块化(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA872C9A768200877650 /* 组件化模块化(ap).md */; };
 		087AAA8A2C9A771C00877650 /* 设计模式(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA892C9A771C00877650 /* 设计模式(ap).md */; };
 		087AAA8C2C9A7D9400877650 /* 容器化插件化(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA8B2C9A7D9400877650 /* 容器化插件化(ap).md */; };
@@ -1073,7 +1072,6 @@
 		087AAA762C9A6E0800877650 /* 单例(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "单例(ap).md"; sourceTree = "<group>"; };
 		087AAA782C9A6E6000877650 /* 程序入口点(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "程序入口点(ap).md"; sourceTree = "<group>"; };
 		087AAA832C9A718D00877650 /* Swift Package Manager(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Swift Package Manager(ap).md"; sourceTree = "<group>"; };
-		087AAA852C9A71D700877650 /* 包管理工具-介绍(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "包管理工具-介绍(ap).md"; sourceTree = "<group>"; };
 		087AAA872C9A768200877650 /* 组件化模块化(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "组件化模块化(ap).md"; sourceTree = "<group>"; };
 		087AAA892C9A771C00877650 /* 设计模式(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "设计模式(ap).md"; sourceTree = "<group>"; };
 		087AAA8B2C9A7D9400877650 /* 容器化插件化(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "容器化插件化(ap).md"; sourceTree = "<group>"; };
@@ -2355,7 +2353,6 @@
 		087AAA812C9A716700877650 /* 包管理工具 */ = {
 			isa = PBXGroup;
 			children = (
-				087AAA852C9A71D700877650 /* 包管理工具-介绍(ap).md */,
 				087AAA832C9A718D00877650 /* Swift Package Manager(ap).md */,
 				087AAA9A2C9AB32800877650 /* CocoaPods(ap).md */,
 			);
@@ -2835,8 +2832,8 @@
 		08BDD3F62C6B007A00914412 /* 安全 */ = {
 			isa = PBXGroup;
 			children = (
-				08BDD3F52C6B007A00914412 /* Keychain(ap).md */,
 				0851E55C2C86E00600D9463A /* 安全-介绍(ap).md */,
+				08BDD3F52C6B007A00914412 /* Keychain(ap).md */,
 			);
 			path = "安全";
 			sourceTree = "<group>";
@@ -4099,7 +4096,6 @@
 				088959A22D95937C006D9103 /* 公元前283年完璧归赵(kg).md in Resources */,
 				0851E5792C87563100D9463A /* 截获网络请求数据(ap).md in Resources */,
 				0851E5462C85F7ED00D9463A /* MachO(ap).md in Resources */,
-				087AAA862C9A71D700877650 /* 包管理工具-介绍(ap).md in Resources */,
 				08F0F8B32C95969500DC659B /* 开源-天气(ap).md in Resources */,
 				0891ACDD2D9AF0BE00BF9D93 /* 公元242年吴国二宫之争(kg).md in Resources */,
 				0893B00D2DA3F1EE002DE50F /* C语言(cs).md in Resources */,
