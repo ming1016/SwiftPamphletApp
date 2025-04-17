@@ -506,7 +506,7 @@ struct AppleGuide {
             L(t: "程序入口点", icon: "door.right.hand.open", type: 1),
         ]),
         L(t: "macOS", icon: "macstudio", sub: [
-            L(t: "macOS技术演进", type: 1),
+            L(t: "macOS技术演进"),
             L(t: "macOS范例"),
             L(t: "三栏结构"),
             L(t: "全屏模式"),
