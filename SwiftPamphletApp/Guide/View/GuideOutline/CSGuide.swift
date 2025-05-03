@@ -61,13 +61,13 @@ struct CSGuide {
                 L(t: "ARM解释器模拟内存和堆栈-实际应用与案例分析", type: 1),
             ]),
             L(t: "ARM解释器中FFI调用iOS原生函数", type: 1),
-            L(t: "虚拟化技术", sub: [
-                L(t: "虚拟化的基本概念", type: 1),
-                L(t: "常见虚拟化技术原理", type: 1),
-                L(t: "CPU虚拟化", type: 1),
-                L(t: "内存虚拟化", type: 1),
-                L(t: "IO虚拟化", type: 1)
-            ]),
+//            L(t: "虚拟化技术", sub: [
+//                L(t: "虚拟化的基本概念", type: 1),
+//                L(t: "常见虚拟化技术原理", type: 1),
+//                L(t: "CPU虚拟化", type: 1),
+//                L(t: "内存虚拟化", type: 1),
+//                L(t: "IO虚拟化", type: 1)
+//            ]),
             L(t: "相关开源项目", sub: [
                 L(t: "QEMU", sub: [
                     L(t: "QEMU概览", type: 1),

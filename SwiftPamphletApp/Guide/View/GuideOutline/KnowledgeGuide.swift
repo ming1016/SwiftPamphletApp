@@ -29,6 +29,9 @@ struct KnowledgeGuide {
                 ]),
             ])
         ]),
+        L(t: "影视作品", sub: [
+            L(t: "孤独的美食家", type: 1)
+        ]),
         L(t: "历史", sub: [
             L(t: "时间轴",sub: [
                 L(t: "西周", sub: [
@@ -333,8 +336,8 @@ struct KnowledgeGuide {
                 ])
             ]), 
         ]),
-        L(t: "视觉", sub: [
-            L(t: "数据可视化", type: 1)
-        ])
+//        L(t: "视觉", sub: [
+//            L(t: "数据可视化", type: 1)
+//        ])
     ]
 }

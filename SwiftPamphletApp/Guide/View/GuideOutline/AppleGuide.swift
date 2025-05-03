@@ -243,6 +243,7 @@ struct AppleGuide {
                 L(t: "SwiftUI Canvas", type: 1),
                 L(t: "SF Symbol", icon: "star", type: 1),
                 L(t: "SwiftCharts", icon: "chart.line.uptrend.xyaxis", type: 1),
+//                L(t: "数据可视化", ),
                 L(t: "Shaders Metal", icon: "cpu", type: 1),
             ]),
             L(t: "修饰符", sub: [
@@ -540,7 +541,7 @@ struct AppleGuide {
             L(t: "人工智能-Image Playground", type: 1),
             L(t: "人工智能-基于位置的服务", type: 1),
             L(t: "人工智能-文本", type: 1),
-            L(t: "人工智能-Translation", type: 1),
+            L(t: "人工智能-Translation"),
             L(t: "Stable Diffusion", type: 1),
             L(t: "使用LLM模型"),
             L(t: "使用三方大模型接口", type: 1),
