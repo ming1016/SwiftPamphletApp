@@ -10,8 +10,6 @@ import SwiftData
 import InfoOrganizer
 import SMDate
 
-
-
 struct InfosView: View {
     @Environment(\.modelContext) var modelContext
     @Query var infos: [IOInfo]
@@ -27,14 +25,14 @@ struct InfosView: View {
                 || info.url.localizedStandardContains(searchString)
                  || info.relateName.localizedStandardContains(searchString)
                  || info.des.localizedStandardContains(searchString)) && info.category?.name == filterCateName
-            }, sortBy: sortOrder)
+            }, sortBy: [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.star, order: .reverse),SortDescriptor(\IOInfo.updateDate, order: .reverse)])
         } else if searchString.isEmpty == false {
             fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
                 info.name.localizedStandardContains(searchString)
                 || info.url.localizedStandardContains(searchString)
                 || info.relateName.localizedStandardContains(searchString)
                  || info.des.localizedStandardContains(searchString)
-            }, sortBy: sortOrder)
+            }, sortBy: [SortDescriptor(\IOInfo.isArchived, order: .forward),SortDescriptor(\IOInfo.star, order: .reverse),SortDescriptor(\IOInfo.updateDate, order: .reverse)])
         } else if filterCateName.isEmpty == false {
             fd = FetchDescriptor<IOInfo>(predicate: #Predicate { info in
                 info.category?.name == filterCateName
