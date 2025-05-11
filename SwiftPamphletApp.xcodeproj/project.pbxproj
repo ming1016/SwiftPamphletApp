@@ -156,6 +156,7 @@
 		08523E492DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E482DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md */; };
 		08523E4B2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E4A2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md */; };
 		08523E4D2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E4C2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md */; };
+		08555F5B2DCB964A002E731B /* 克拉克森的农场(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08555F5A2DCB964A002E731B /* 克拉克森的农场(kg).md */; };
 		085E1A562CF60CBA009938E8 /* 人工智能-RAG(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085E1A552CF60CBA009938E8 /* 人工智能-RAG(ap).md */; };
 		0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */ = {isa = PBXBuildFile; productRef = 0868D00A2BDD37280023C871 /* SMGitHub */; };
 		086A5F072744E88E00FECE02 /* SwiftPamphletAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A5F062744E88E00FECE02 /* SwiftPamphletAppApp.swift */; };
@@ -547,6 +548,7 @@
 		08B2CD212DB63D33005CA3BA /* 网络-序列化(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B2CD202DB63D33005CA3BA /* 网络-序列化(cs).md */; };
 		08B2CD232DB63D42005CA3BA /* 网络-Streaming(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B2CD222DB63D42005CA3BA /* 网络-Streaming(cs).md */; };
 		08B2CD252DB63D52005CA3BA /* 网络-缓存(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B2CD242DB63D52005CA3BA /* 网络-缓存(cs).md */; };
+		08B897972DD0D578007030C1 /* 宝可梦(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B897962DD0D578007030C1 /* 宝可梦(kg).md */; };
 		08B9A1452D9376D400E8A959 /* 公元前1046年西周建立(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1442D9376D400E8A959 /* 公元前1046年西周建立(kg).md */; };
 		08B9A1472D9376E100E8A959 /* 公元前985年周昭王攻荆楚之战(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1462D9376E100E8A959 /* 公元前985年周昭王攻荆楚之战(kg).md */; };
 		08B9A1492D9376F100E8A959 /* 公元前976年周穆王西行(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08B9A1482D9376F100E8A959 /* 公元前976年周穆王西行(kg).md */; };
@@ -1060,6 +1062,7 @@
 		08523E482DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-实现基础框架(cs).md"; sourceTree = "<group>"; };
 		08523E4A2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-实现核心功能(cs).md"; sourceTree = "<group>"; };
 		08523E4C2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-扩展与完善(cs).md"; sourceTree = "<group>"; };
+		08555F5A2DCB964A002E731B /* 克拉克森的农场(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "克拉克森的农场(kg).md"; sourceTree = "<group>"; };
 		085E1A552CF60CBA009938E8 /* 人工智能-RAG(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-RAG(ap).md"; sourceTree = "<group>"; };
 		0869233F2BF2BF81006779A3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		086A5F032744E88E00FECE02 /* 戴铭的小册子.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "戴铭的小册子.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1453,6 +1456,7 @@
 		08B2CD202DB63D33005CA3BA /* 网络-序列化(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "网络-序列化(cs).md"; sourceTree = "<group>"; };
 		08B2CD222DB63D42005CA3BA /* 网络-Streaming(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "网络-Streaming(cs).md"; sourceTree = "<group>"; };
 		08B2CD242DB63D52005CA3BA /* 网络-缓存(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "网络-缓存(cs).md"; sourceTree = "<group>"; };
+		08B897962DD0D578007030C1 /* 宝可梦(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦(kg).md"; sourceTree = "<group>"; };
 		08B9A1442D9376D400E8A959 /* 公元前1046年西周建立(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前1046年西周建立(kg).md"; sourceTree = "<group>"; };
 		08B9A1462D9376E100E8A959 /* 公元前985年周昭王攻荆楚之战(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前985年周昭王攻荆楚之战(kg).md"; sourceTree = "<group>"; };
 		08B9A1482D9376F100E8A959 /* 公元前976年周穆王西行(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前976年周穆王西行(kg).md"; sourceTree = "<group>"; };
@@ -2346,6 +2350,7 @@
 			isa = PBXGroup;
 			children = (
 				0872429D2DBBECC4005BAD35 /* 孤独的美食家(kg).md */,
+				08555F5A2DCB964A002E731B /* 克拉克森的农场(kg).md */,
 			);
 			path = "影视作品";
 			sourceTree = "<group>";
@@ -2902,6 +2907,14 @@
 			path = "网络";
 			sourceTree = "<group>";
 		};
+		08B897952DD0D556007030C1 /* 游戏 */ = {
+			isa = PBXGroup;
+			children = (
+				08B897962DD0D578007030C1 /* 宝可梦(kg).md */,
+			);
+			path = "游戏";
+			sourceTree = "<group>";
+		};
 		08B9A13F2D93766B00E8A959 /* 西周 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2918,7 +2931,7 @@
 			path = "西周";
 			sourceTree = "<group>";
 		};
-		08B9A1402D93766B00E8A959 /* 时间轴 */ = {
+		08B9A1402D93766B00E8A959 /* 中国时间轴 */ = {
 			isa = PBXGroup;
 			children = (
 				0891AC282D9A3F4D00BF9D93 /* 三国两晋南北朝 */,
@@ -2927,7 +2940,7 @@
 				08B9A15C2D93967200E8A959 /* 春秋战国 */,
 				08B9A13F2D93766B00E8A959 /* 西周 */,
 			);
-			path = "时间轴";
+			path = "中国时间轴";
 			sourceTree = "<group>";
 		};
 		08B9A15C2D93967200E8A959 /* 春秋战国 */ = {
@@ -3620,6 +3633,7 @@
 			children = (
 				08523E0F2DA2797B00AA1B78 /* 文学 */,
 				0872429C2DBBEB9D005BAD35 /* 影视作品 */,
+				08B897952DD0D556007030C1 /* 游戏 */,
 				08D223032D92B750008F40C6 /* 历史 */,
 				08D1E36A2DA6AEEC0098BB3E /* 视觉 */,
 			);
@@ -3629,7 +3643,7 @@
 		08D223032D92B750008F40C6 /* 历史 */ = {
 			isa = PBXGroup;
 			children = (
-				08B9A1402D93766B00E8A959 /* 时间轴 */,
+				08B9A1402D93766B00E8A959 /* 中国时间轴 */,
 			);
 			path = "历史";
 			sourceTree = "<group>";
@@ -4000,6 +4014,7 @@
 				08BDD55B2C6B007A00914412 /* SwiftData-处理大量数据(ap).md in Resources */,
 				08BDD5452C6B007A00914412 /* 小组件-AppIntentConfiguration(ap).md in Resources */,
 				08448FA7279EBB7E00B61353 /* 元组(ap).md in Resources */,
+				08B897972DD0D578007030C1 /* 宝可梦(kg).md in Resources */,
 				0891ACE12D9AF0E100BF9D93 /* 公元247年美男潘岳(kg).md in Resources */,
 				08F404292D9D5C910082F5DB /* AI编程-遗留代码协作最佳实践(cs).md in Resources */,
 				08B2CD1F2DB63D21005CA3BA /* 网络-协议(cs).md in Resources */,
@@ -4208,6 +4223,7 @@
 				08BDD5592C6B007A00914412 /* 增删modelContext(ap).md in Resources */,
 				08B9A1872D943A7F00E8A959 /* 公元前601年孙叔敖(kg).md in Resources */,
 				083266792C96C03200E27CC5 /* visionOS-Model3D(ap).md in Resources */,
+				08555F5B2DCB964A002E731B /* 克拉克森的农场(kg).md in Resources */,
 				088CE9192D9BB59F0086C8E2 /* 公元464年梁武帝萧衍(kg).md in Resources */,
 				08F4041E2D9D31F80082F5DB /* AI编程-常用交互方式(cs).md in Resources */,
 				08BDD57D2C6B007A00914412 /* NavigationPath(ap).md in Resources */,

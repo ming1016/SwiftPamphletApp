@@ -30,10 +30,14 @@ struct KnowledgeGuide {
             ])
         ]),
         L(t: "影视作品", sub: [
-            L(t: "孤独的美食家", type: 1)
+            L(t: "孤独的美食家", type: 1),
+            L(t: "克拉克森的农场", type: 1)
+        ]),
+        L(t: "游戏", sub: [
+            L(t: "宝可梦", type: 1)
         ]),
         L(t: "历史", sub: [
-            L(t: "时间轴",sub: [
+            L(t: "中国时间轴",sub: [
                 L(t: "西周", sub: [
                     L(t: "公元前1046年西周建立", type: 1),
                     L(t: "公元前985年周昭王攻荆楚之战", type: 1),
