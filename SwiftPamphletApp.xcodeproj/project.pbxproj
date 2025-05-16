@@ -2708,6 +2708,14 @@
 			path = "编译器和解释器";
 			sourceTree = "<group>";
 		};
+		08A2660B2DD6BF8F00232FCD /* 宝可梦 */ = {
+			isa = PBXGroup;
+			children = (
+				08B897962DD0D578007030C1 /* 宝可梦(kg).md */,
+			);
+			path = "宝可梦";
+			sourceTree = "<group>";
+		};
 		08A414132D92337500035B4A /* CS */ = {
 			isa = PBXGroup;
 			children = (
@@ -2910,7 +2918,7 @@
 		08B897952DD0D556007030C1 /* 游戏 */ = {
 			isa = PBXGroup;
 			children = (
-				08B897962DD0D578007030C1 /* 宝可梦(kg).md */,
+				08A2660B2DD6BF8F00232FCD /* 宝可梦 */,
 			);
 			path = "游戏";
 			sourceTree = "<group>";

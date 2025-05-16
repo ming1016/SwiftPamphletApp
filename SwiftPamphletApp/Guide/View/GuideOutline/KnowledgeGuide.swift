@@ -34,7 +34,11 @@ struct KnowledgeGuide {
             L(t: "克拉克森的农场", type: 1)
         ]),
         L(t: "游戏", sub: [
-            L(t: "宝可梦", type: 1)
+            L(t: "宝可梦", sub: [
+                L(t: "宝可梦", type: 1),
+                L(t: "宝可梦的史诗传奇", type: 1),
+            ])
+            
         ]),
         L(t: "历史", sub: [
             L(t: "中国时间轴",sub: [
