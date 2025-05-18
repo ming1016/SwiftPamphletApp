@@ -162,6 +162,15 @@
 		08523E492DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E482DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md */; };
 		08523E4B2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E4A2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md */; };
 		08523E4D2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08523E4C2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md */; };
+		085435502DD9DE2200FE8C7D /* 宝可梦第七世代-宝可梦数据(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0854354F2DD9DE2200FE8C7D /* 宝可梦第七世代-宝可梦数据(kg).md */; };
+		085435522DD9DE3600FE8C7D /* 宝可梦第七世代-主要地区数据(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 085435512DD9DE3600FE8C7D /* 宝可梦第七世代-主要地区数据(kg).md */; };
+		085435542DD9DE4900FE8C7D /* 宝可梦第七世代-人物角色数据(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 085435532DD9DE4900FE8C7D /* 宝可梦第七世代-人物角色数据(kg).md */; };
+		0854356C2DD9E5B600FE8C7D /* 宝可梦第八世代-宝可梦数据(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0854356B2DD9E5B600FE8C7D /* 宝可梦第八世代-宝可梦数据(kg).md */; };
+		0854356E2DD9E64D00FE8C7D /* 宝可梦第八世代-主要地区数据(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0854356D2DD9E64D00FE8C7D /* 宝可梦第八世代-主要地区数据(kg).md */; };
+		085435702DD9E66200FE8C7D /* 宝可梦第八世代-人物角色数据(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0854356F2DD9E66200FE8C7D /* 宝可梦第八世代-人物角色数据(kg).md */; };
+		085435732DD9FCD700FE8C7D /* 宝可梦第九世代-宝可梦数据(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 085435722DD9FCD700FE8C7D /* 宝可梦第九世代-宝可梦数据(kg).md */; };
+		085435752DD9FCE900FE8C7D /* 宝可梦第九世代-主要地区数据(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 085435742DD9FCE900FE8C7D /* 宝可梦第九世代-主要地区数据(kg).md */; };
+		085435772DD9FD0A00FE8C7D /* 宝可梦第九世代-人物角色数据(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 085435762DD9FD0A00FE8C7D /* 宝可梦第九世代-人物角色数据(kg).md */; };
 		08555F5B2DCB964A002E731B /* 克拉克森的农场(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08555F5A2DCB964A002E731B /* 克拉克森的农场(kg).md */; };
 		085E1A562CF60CBA009938E8 /* 人工智能-RAG(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 085E1A552CF60CBA009938E8 /* 人工智能-RAG(ap).md */; };
 		0868D00B2BDD37280023C871 /* SMGitHub in Frameworks */ = {isa = PBXBuildFile; productRef = 0868D00A2BDD37280023C871 /* SMGitHub */; };
@@ -1105,6 +1114,15 @@
 		08523E482DA2F4D500AA1B78 /* QEMU-实现基础框架(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-实现基础框架(cs).md"; sourceTree = "<group>"; };
 		08523E4A2DA2F4E400AA1B78 /* QEMU-实现核心功能(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-实现核心功能(cs).md"; sourceTree = "<group>"; };
 		08523E4C2DA2F4F300AA1B78 /* QEMU-扩展与完善(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU-扩展与完善(cs).md"; sourceTree = "<group>"; };
+		0854354F2DD9DE2200FE8C7D /* 宝可梦第七世代-宝可梦数据(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第七世代-宝可梦数据(kg).md"; sourceTree = "<group>"; };
+		085435512DD9DE3600FE8C7D /* 宝可梦第七世代-主要地区数据(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第七世代-主要地区数据(kg).md"; sourceTree = "<group>"; };
+		085435532DD9DE4900FE8C7D /* 宝可梦第七世代-人物角色数据(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第七世代-人物角色数据(kg).md"; sourceTree = "<group>"; };
+		0854356B2DD9E5B600FE8C7D /* 宝可梦第八世代-宝可梦数据(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第八世代-宝可梦数据(kg).md"; sourceTree = "<group>"; };
+		0854356D2DD9E64D00FE8C7D /* 宝可梦第八世代-主要地区数据(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第八世代-主要地区数据(kg).md"; sourceTree = "<group>"; };
+		0854356F2DD9E66200FE8C7D /* 宝可梦第八世代-人物角色数据(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第八世代-人物角色数据(kg).md"; sourceTree = "<group>"; };
+		085435722DD9FCD700FE8C7D /* 宝可梦第九世代-宝可梦数据(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第九世代-宝可梦数据(kg).md"; sourceTree = "<group>"; };
+		085435742DD9FCE900FE8C7D /* 宝可梦第九世代-主要地区数据(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第九世代-主要地区数据(kg).md"; sourceTree = "<group>"; };
+		085435762DD9FD0A00FE8C7D /* 宝可梦第九世代-人物角色数据(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第九世代-人物角色数据(kg).md"; sourceTree = "<group>"; };
 		08555F5A2DCB964A002E731B /* 克拉克森的农场(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "克拉克森的农场(kg).md"; sourceTree = "<group>"; };
 		085E1A552CF60CBA009938E8 /* 人工智能-RAG(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-RAG(ap).md"; sourceTree = "<group>"; };
 		0869233F2BF2BF81006779A3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -2340,6 +2358,39 @@
 			path = QEMU;
 			sourceTree = "<group>";
 		};
+		0854354E2DD9DDFE00FE8C7D /* 宝可梦第七世代 */ = {
+			isa = PBXGroup;
+			children = (
+				08A266732DD70BAD00232FCD /* 宝可梦第七世代(kg).md */,
+				0854354F2DD9DE2200FE8C7D /* 宝可梦第七世代-宝可梦数据(kg).md */,
+				085435512DD9DE3600FE8C7D /* 宝可梦第七世代-主要地区数据(kg).md */,
+				085435532DD9DE4900FE8C7D /* 宝可梦第七世代-人物角色数据(kg).md */,
+			);
+			path = "宝可梦第七世代";
+			sourceTree = "<group>";
+		};
+		0854356A2DD9E5A000FE8C7D /* 宝可梦第八世代 */ = {
+			isa = PBXGroup;
+			children = (
+				08A266752DD70BC000232FCD /* 宝可梦第八世代(kg).md */,
+				0854356B2DD9E5B600FE8C7D /* 宝可梦第八世代-宝可梦数据(kg).md */,
+				0854356D2DD9E64D00FE8C7D /* 宝可梦第八世代-主要地区数据(kg).md */,
+				0854356F2DD9E66200FE8C7D /* 宝可梦第八世代-人物角色数据(kg).md */,
+			);
+			path = "宝可梦第八世代";
+			sourceTree = "<group>";
+		};
+		085435712DD9FCC100FE8C7D /* 宝可梦第九世代 */ = {
+			isa = PBXGroup;
+			children = (
+				08A266772DD70BD100232FCD /* 宝可梦第九世代(kg).md */,
+				085435722DD9FCD700FE8C7D /* 宝可梦第九世代-宝可梦数据(kg).md */,
+				085435742DD9FCE900FE8C7D /* 宝可梦第九世代-主要地区数据(kg).md */,
+				085435762DD9FD0A00FE8C7D /* 宝可梦第九世代-人物角色数据(kg).md */,
+			);
+			path = "宝可梦第九世代";
+			sourceTree = "<group>";
+		};
 		085E1A542CF60C52009938E8 /* 智能体 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2863,9 +2914,9 @@
 				089857D52DD8E7C300718281 /* 宝可梦第四世代 */,
 				081796EC2DD977F900623BA1 /* 宝可梦第五世代 */,
 				081797062DD9923200623BA1 /* 宝可梦第六世代 */,
-				08A266732DD70BAD00232FCD /* 宝可梦第七世代(kg).md */,
-				08A266752DD70BC000232FCD /* 宝可梦第八世代(kg).md */,
-				08A266772DD70BD100232FCD /* 宝可梦第九世代(kg).md */,
+				0854354E2DD9DDFE00FE8C7D /* 宝可梦第七世代 */,
+				0854356A2DD9E5A000FE8C7D /* 宝可梦第八世代 */,
+				085435712DD9FCC100FE8C7D /* 宝可梦第九世代 */,
 				08A266A32DD71D8B00232FCD /* 宝可梦-核心玩法揭秘(kg).md */,
 				08A266A52DD71E0B00232FCD /* 宝可梦-高级机制(kg).md */,
 				08A266D12DD723D100232FCD /* 宝可梦-多人与社交功能(kg).md */,
@@ -4134,6 +4185,7 @@
 				08BDD5772C6B007A00914412 /* Layout协议(ap).md in Resources */,
 				08BDD5202C6B007A00914412 /* Swift Concurrency是什么(ap).md in Resources */,
 				08A266232DD6E0DB00232FCD /* 宝可梦-销售魔法(kg).md in Resources */,
+				085435752DD9FCE900FE8C7D /* 宝可梦第九世代-主要地区数据(kg).md in Resources */,
 				08BDD5312C6B007A00914412 /* JSON没有id字段(ap).md in Resources */,
 				08AEAEFA277F3C7400B969E2 /* css.html in Resources */,
 				08D1E36C2DA6AF160098BB3E /* 数据可视化(kg).md in Resources */,
@@ -4310,6 +4362,7 @@
 				08BDD5AE2C6B007A00914412 /* LazyVGrid和LazyHGrid(ap).md in Resources */,
 				08448FD7279EC64600B61353 /* 字典(ap).md in Resources */,
 				08B9A1472D9376E100E8A959 /* 公元前985年周昭王攻荆楚之战(kg).md in Resources */,
+				0854356C2DD9E5B600FE8C7D /* 宝可梦第八世代-宝可梦数据(kg).md in Resources */,
 				08A7AB012D97E72700362878 /* 公元前168年马王堆(kg).md in Resources */,
 				08A7AB572D98029600362878 /* 公元80年蔡伦改进造纸术(kg).md in Resources */,
 				088CE91B2D9BB5AE0086C8E2 /* 公元467年北魏孝文帝改革(kg).md in Resources */,
@@ -4353,6 +4406,7 @@
 				08BDD5B52C6B007A00914412 /* List-索引标题(ap).md in Resources */,
 				08F0F8C12C959B0600DC659B /* 开源-时间(ap).md in Resources */,
 				08B9A18D2D943BB700E8A959 /* 公元前590年诗经(kg).md in Resources */,
+				085435522DD9DE3600FE8C7D /* 宝可梦第七世代-主要地区数据(kg).md in Resources */,
 				088CE8F12D9BB36B0086C8E2 /* 公元399年孙恩卢循之乱(kg).md in Resources */,
 				0891ACD92D9AF02500BF9D93 /* 公元231年木牛流马(kg).md in Resources */,
 				0887FF962D96D31B00784CC8 /* 公元前219年秦始皇封禅(kg).md in Resources */,
@@ -4401,6 +4455,7 @@
 				08BDD5652C6B007A00914412 /* PhotoPicker(ap).md in Resources */,
 				08BDD5592C6B007A00914412 /* 增删modelContext(ap).md in Resources */,
 				08B9A1872D943A7F00E8A959 /* 公元前601年孙叔敖(kg).md in Resources */,
+				085435702DD9E66200FE8C7D /* 宝可梦第八世代-人物角色数据(kg).md in Resources */,
 				083266792C96C03200E27CC5 /* visionOS-Model3D(ap).md in Resources */,
 				08555F5B2DCB964A002E731B /* 克拉克森的农场(kg).md in Resources */,
 				088CE9192D9BB59F0086C8E2 /* 公元464年梁武帝萧衍(kg).md in Resources */,
@@ -4485,6 +4540,7 @@
 				08B9A16E2D93A25000E8A959 /* 公元前650年宋襄公(kg).md in Resources */,
 				08BDD5862C6B007A00914412 /* 浮层(ap).md in Resources */,
 				08BDD5282C6B007A00914412 /* 格式化-数据(ap).md in Resources */,
+				085435542DD9DE4900FE8C7D /* 宝可梦第七世代-人物角色数据(kg).md in Resources */,
 				087A7AD32C80169A00321F85 /* 包的分析(ap).md in Resources */,
 				08BDD57C2C6B007A00914412 /* Navigation(ap).md in Resources */,
 				08A266702DD70B8700232FCD /* 宝可梦第五世代(kg).md in Resources */,
@@ -4500,6 +4556,7 @@
 				08BDD5712C6B007A00914412 /* 布局原理(ap).md in Resources */,
 				088959A22D95937C006D9103 /* 公元前283年完璧归赵(kg).md in Resources */,
 				0851E5792C87563100D9463A /* 截获网络请求数据(ap).md in Resources */,
+				085435502DD9DE2200FE8C7D /* 宝可梦第七世代-宝可梦数据(kg).md in Resources */,
 				0851E5462C85F7ED00D9463A /* MachO(ap).md in Resources */,
 				08F0F8B32C95969500DC659B /* 开源-天气(ap).md in Resources */,
 				0891ACDD2D9AF0BE00BF9D93 /* 公元242年吴国二宫之争(kg).md in Resources */,
@@ -4549,6 +4606,7 @@
 				08448FAB279EC2B400B61353 /* 枚举(ap).md in Resources */,
 				0851E5442C85E73A00D9463A /* 静态分析-Swift语言(ap).md in Resources */,
 				08448FCE279EC5AA00B61353 /* While(ap).md in Resources */,
+				085435732DD9FCD700FE8C7D /* 宝可梦第九世代-宝可梦数据(kg).md in Resources */,
 				08BDD4FF2C6B007A00914412 /* animation修饰符(ap).md in Resources */,
 				0851E55D2C86E00600D9463A /* 安全-介绍(ap).md in Resources */,
 				08A7AB132D97E7C400362878 /* 公元前122年刘安与淮南子(kg).md in Resources */,
@@ -4695,6 +4753,7 @@
 				08B2CCC82DB62189005CA3BA /* 色彩对比计算(cs).md in Resources */,
 				08BDD5CA2C6B007A00914412 /* Label(ap).md in Resources */,
 				0851E5322C848AD100D9463A /* Bazel-生成Xcode工程(ap).md in Resources */,
+				085435772DD9FD0A00FE8C7D /* 宝可梦第九世代-人物角色数据(kg).md in Resources */,
 				08BDD5632C6B007A00914412 /* ColorPicker(ap).md in Resources */,
 				0895C6C12DB1F10B00CF2122 /* LLM如何工作(cs).md in Resources */,
 				08448FEA279EC86700B61353 /* 运算符(ap).md in Resources */,
@@ -4823,6 +4882,7 @@
 				088CE93B2D9BBBAF0086C8E2 /* 公元526年职贡图(kg).md in Resources */,
 				08BDD50D2C6B007A00914412 /* combineLatest(ap).md in Resources */,
 				087AAA772C9A6E0800877650 /* 单例(ap).md in Resources */,
+				0854356E2DD9E64D00FE8C7D /* 宝可梦第八世代-主要地区数据(kg).md in Resources */,
 				08BDD5782C6B007A00914412 /* ViewThatFits(ap).md in Resources */,
 				088F2C3A2C93296200DCA64F /* 笔记记录方法(ap).md in Resources */,
 				088F2C3E2C9329E400DCA64F /* PARA记录法(ap).md in Resources */,
