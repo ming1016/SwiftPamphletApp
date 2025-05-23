@@ -226,6 +226,57 @@ struct WebUIViewWithSave: NSViewRepresentable {
             savingDataTrigger = false
         }
         
+        if buildMarkdownTrigger == true {
+            // 使用Turndown.js库将HTML转换为Markdown
+            let data = SMFile.loadBundleData("TurndownService.html")
+            var script = String(data: data, encoding: .utf8) ?? ""
+            
+            script += """
+
+            // 执行转换的函数
+            function getMarkdown() {
+                try {
+                    // 创建Turndown服务实例
+                    var turndownService = new TurndownService({
+                        headingStyle: 'atx',
+                        codeBlockStyle: 'fenced',
+                        emDelimiter: '*'
+                    });
+                    
+                    // 配置Turndown保留只需要的元素
+                    // turndownService.keep(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'ul', 'ol', 'li']);
+                    
+                    // 自定义规则，忽略不需要的内容
+                    turndownService.remove(['style', 'script', 'noscript', 'iframe', 'form', 'button', 'input']);
+                    
+                    // 获取文档body作为内容
+                    var content = document.body.innerHTML;
+                    
+                    // 转换为markdown
+                    var markdown = turndownService.turndown(content);
+                    
+                    return markdown;
+                } catch (e) {
+                    console.error('Markdown转换错误:', e);
+                    return '转换错误: ' + e.message;
+                }
+            }
+            
+            // 执行并返回结果
+            getMarkdown();
+            """
+            
+            nsView.evaluateJavaScript(script) { (result, error) in
+                if let error = error {
+                    print("JavaScript 执行错误: \(error)")
+                } else if let markdownContent = result as? String {
+                    // 将提取的 Markdown 内容添加到 buildString 中
+                    self.buildString += markdownContent
+                }
+            }
+            buildMarkdownTrigger = false
+        }
+        
         if isStop == true {
             return
         }
@@ -318,6 +369,10 @@ struct WebUIViewWithSave: UIViewRepresentable {
     @Binding var savingDataTrigger: Bool
     @Binding var savingData: Data?
     
+    // markdown
+    @Binding var buildMarkdownTrigger: Bool
+    @Binding var buildString: String
+    
     @Binding var isStop: Bool
     
     func makeCoordinator() -> Coordinator {
@@ -341,6 +396,58 @@ struct WebUIViewWithSave: UIViewRepresentable {
                 }
             }
             savingDataTrigger = false
+        }
+        
+        if buildMarkdownTrigger == true {
+            // 使用Turndown.js库将HTML转换为Markdown
+            let data = SMFile.loadBundleData("TurndownService.html")
+            var script = String(data: data, encoding: .utf8) ?? ""
+            
+            script += """
+            
+            // 执行转换的函数
+            function getMarkdown() {
+                try {
+                    
+                    // 创建Turndown服务实例
+                    var turndownService = new TurndownService({
+                        headingStyle: 'atx',
+                        codeBlockStyle: 'fenced',
+                        emDelimiter: '*'
+                    });
+                    
+                    // 配置Turndown保留只需要的元素
+                    // turndownService.keep(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'ul', 'ol', 'li']);
+                    
+                    // 自定义规则，忽略不需要的内容
+                    turndownService.remove(['style', 'script', 'noscript', 'iframe', 'form', 'button', 'input']);
+                    
+                    // 获取文档body作为内容
+                    var content = document.body.innerHTML;
+                    
+                    // 转换为markdown
+                    var markdown = turndownService.turndown(content);
+                    
+                    return markdown;
+                } catch (e) {
+                    console.error('Markdown转换错误:', e);
+                    return '转换错误: ' + e.message;
+                }
+            }
+            
+            // 执行并返回结果
+            getMarkdown();
+            """
+            
+            uiView.evaluateJavaScript(script) { (result, error) in
+                if let error = error {
+                    print("JavaScript 执行错误: \(error)")
+                } else if let markdownContent = result as? String {
+                    // 将提取的 Markdown 内容添加到 buildString 中
+                    self.buildString += markdownContent
+                }
+            }
+            buildMarkdownTrigger = false
         }
         
         if isStop == true {
