@@ -35,6 +35,8 @@ struct EditInfoView: View {
     @State var isStopLoadingWeb = false
     // webarchive
     @State var savingDataTrigger = false
+    // markdown
+    @State var buildMarkdownTrigger = false
     // 图集
     @State var selectedPhotos = [PhotosPickerItem]()
     @State var addWebImageUrl = ""
@@ -336,6 +338,8 @@ struct EditInfoView: View {
                     urlStr: url.absoluteString,
                     savingDataTrigger: $savingDataTrigger,
                     savingData: $info.webArchive,
+                    buildMarkdownTrigger: $buildMarkdownTrigger,
+                    buildString: $info.des,
                     isStop: $isStopLoadingWeb
                 )
                 TextEditor(text: $info.des)
@@ -485,6 +489,12 @@ struct EditInfoView: View {
                     }
                 }
                 .help("离线内容")
+                // 网页转 markdown
+                Button {
+                    buildMarkdownTrigger = true
+                } label: {
+                    Image(systemName: "m.square")
+                }
             } // end if
         }
     }

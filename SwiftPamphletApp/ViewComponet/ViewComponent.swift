@@ -194,8 +194,12 @@ struct WebUIViewWithSave: NSViewRepresentable {
     var html: String = ""
     var baseURLStr: String = ""
     
+    // 离线
     @Binding var savingDataTrigger: Bool
     @Binding var savingData: Data?
+    // markdown
+    @Binding var buildMarkdownTrigger: Bool
+    @Binding var buildString: String
     
     @Binding var isStop: Bool
 
