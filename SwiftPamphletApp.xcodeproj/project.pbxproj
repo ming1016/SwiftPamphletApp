@@ -237,6 +237,8 @@
 		087AAA9F2C9AC1E200877650 /* 使用LLM模型(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAA9E2C9AC1E200877650 /* 使用LLM模型(ap).md */; };
 		087AAAA12C9C0EEA00877650 /* 人工智能-Translation(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAAA02C9C0EEA00877650 /* 人工智能-Translation(ap).md */; };
 		087AAAA32C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */; };
+		0882F3AC2DE355FB00CC707E /* 宝可梦第五世代的故事(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0882F3AB2DE355FB00CC707E /* 宝可梦第五世代的故事(kg).md */; };
+		0882F3AE2DE361C500CC707E /* 宝可梦第六世代的故事(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0882F3AD2DE361C500CC707E /* 宝可梦第六世代的故事(kg).md */; };
 		0887FF7D2D96BDD100784CC8 /* 公元前277年楚辞与屈原(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0887FF7C2D96BDD100784CC8 /* 公元前277年楚辞与屈原(kg).md */; };
 		0887FF802D96D1BA00784CC8 /* 公元前256年秦灭周(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0887FF7F2D96D1BA00784CC8 /* 公元前256年秦灭周(kg).md */; };
 		0887FF822D96D26200784CC8 /* 公元前247年秦始皇(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 0887FF812D96D26200784CC8 /* 公元前247年秦始皇(kg).md */; };
@@ -883,6 +885,7 @@
 		08BDD5E92C6C8A3F00914412 /* SwiftData基础(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BDD5E82C6C8A3F00914412 /* SwiftData基础(ap).md */; };
 		08BDD5EB2C6C950D00914412 /* SwiftData和CoreData(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08BDD5EA2C6C950D00914412 /* SwiftData和CoreData(ap).md */; };
 		08BF26D32768A5B40064DDAC /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08BF26D22768A5B40064DDAC /* MarkdownUI */; };
+		08C56C352DE2E541000EB8CF /* 宝可梦第四世代的故事(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08C56C342DE2E541000EB8CF /* 宝可梦第四世代的故事(kg).md */; };
 		08CD61FE27758B8A008C0935 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FC27758B8A008C0935 /* Lexer.swift */; };
 		08CD61FF27758B8A008C0935 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD61FD27758B8A008C0935 /* Token.swift */; };
 		08D107BD278826BB007B7009 /* HTMLEntities in Frameworks */ = {isa = PBXBuildFile; productRef = 08D107BC278826BB007B7009 /* HTMLEntities */; };
@@ -892,6 +895,7 @@
 		08D223312D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223302D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md */; };
 		08D223332D92F111008F40C6 /* ARM解释器支持OC的语法特性(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D223322D92F111008F40C6 /* ARM解释器支持OC的语法特性(cs).md */; };
 		08D2234D2D930BB8008F40C6 /* ARM架构基础知识(cs).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D2234C2D930BB8008F40C6 /* ARM架构基础知识(cs).md */; };
+		08D5A0152DF3457300B3F8F8 /* Duolingo多邻国(kg).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A0142DF3457300B3F8F8 /* Duolingo多邻国(kg).md */; };
 		08D5A7952CECBA1F0036AAC6 /* Apple Intelligence(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7942CECBA1F0036AAC6 /* Apple Intelligence(ap).md */; };
 		08D5A7972CECBA500036AAC6 /* 人工智能-模型训练(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7962CECBA500036AAC6 /* 人工智能-模型训练(ap).md */; };
 		08D5A7992CECBA710036AAC6 /* 人工智能-MLX(ap).md in Resources */ = {isa = PBXBuildFile; fileRef = 08D5A7982CECBA710036AAC6 /* 人工智能-MLX(ap).md */; };
@@ -1193,6 +1197,8 @@
 		087AAA9E2C9AC1E200877650 /* 使用LLM模型(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "使用LLM模型(ap).md"; sourceTree = "<group>"; };
 		087AAAA02C9C0EEA00877650 /* 人工智能-Translation(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Translation(ap).md"; sourceTree = "<group>"; };
 		087AAAA22C9C0F0B00877650 /* 人工智能-Writing Tools(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-Writing Tools(ap).md"; sourceTree = "<group>"; };
+		0882F3AB2DE355FB00CC707E /* 宝可梦第五世代的故事(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第五世代的故事(kg).md"; sourceTree = "<group>"; };
+		0882F3AD2DE361C500CC707E /* 宝可梦第六世代的故事(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第六世代的故事(kg).md"; sourceTree = "<group>"; };
 		0887FF7C2D96BDD100784CC8 /* 公元前277年楚辞与屈原(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前277年楚辞与屈原(kg).md"; sourceTree = "<group>"; };
 		0887FF7F2D96D1BA00784CC8 /* 公元前256年秦灭周(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前256年秦灭周(kg).md"; sourceTree = "<group>"; };
 		0887FF812D96D26200784CC8 /* 公元前247年秦始皇(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "公元前247年秦始皇(kg).md"; sourceTree = "<group>"; };
@@ -1837,6 +1843,7 @@
 		08BDD5E62C6C4DA900914412 /* SwiftUI数据流-@AppStorage(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI数据流-@AppStorage(ap).md"; sourceTree = "<group>"; };
 		08BDD5E82C6C8A3F00914412 /* SwiftData基础(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftData基础(ap).md"; sourceTree = "<group>"; };
 		08BDD5EA2C6C950D00914412 /* SwiftData和CoreData(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftData和CoreData(ap).md"; sourceTree = "<group>"; };
+		08C56C342DE2E541000EB8CF /* 宝可梦第四世代的故事(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "宝可梦第四世代的故事(kg).md"; sourceTree = "<group>"; };
 		08CD61FC27758B8A008C0935 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		08CD61FD27758B8A008C0935 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		08D1E36B2DA6AF160098BB3E /* 数据可视化(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "数据可视化(kg).md"; sourceTree = "<group>"; };
@@ -1845,6 +1852,7 @@
 		08D223302D92E41C008F40C6 /* QEMU的TCG和TCI(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "QEMU的TCG和TCI(cs).md"; sourceTree = "<group>"; };
 		08D223322D92F111008F40C6 /* ARM解释器支持OC的语法特性(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM解释器支持OC的语法特性(cs).md"; sourceTree = "<group>"; };
 		08D2234C2D930BB8008F40C6 /* ARM架构基础知识(cs).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ARM架构基础知识(cs).md"; sourceTree = "<group>"; };
+		08D5A0142DF3457300B3F8F8 /* Duolingo多邻国(kg).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Duolingo多邻国(kg).md"; sourceTree = "<group>"; };
 		08D5A7942CECBA1F0036AAC6 /* Apple Intelligence(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Apple Intelligence(ap).md"; sourceTree = "<group>"; };
 		08D5A7962CECBA500036AAC6 /* 人工智能-模型训练(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-模型训练(ap).md"; sourceTree = "<group>"; };
 		08D5A7982CECBA710036AAC6 /* 人工智能-MLX(ap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "人工智能-MLX(ap).md"; sourceTree = "<group>"; };
@@ -1936,6 +1944,7 @@
 			isa = PBXGroup;
 			children = (
 				08A2666F2DD70B8700232FCD /* 宝可梦第五世代(kg).md */,
+				0882F3AB2DE355FB00CC707E /* 宝可梦第五世代的故事(kg).md */,
 				081796ED2DD9781D00623BA1 /* 宝可梦第五世代-宝可梦数据(kg).md */,
 				081796EF2DD9783100623BA1 /* 宝可梦第五世代-主要地区数据(kg).md */,
 				081796F12DD9784100623BA1 /* 宝可梦第五世代-人物角色数据(kg).md */,
@@ -1947,6 +1956,7 @@
 			isa = PBXGroup;
 			children = (
 				08A266712DD70B9A00232FCD /* 宝可梦第六世代(kg).md */,
+				0882F3AD2DE361C500CC707E /* 宝可梦第六世代的故事(kg).md */,
 				081797072DD9924E00623BA1 /* 宝可梦第六世代-宝可梦数据(kg).md */,
 				081797092DD9925F00623BA1 /* 宝可梦第六世代-主要地区数据(kg).md */,
 				0817970B2DD9927100623BA1 /* 宝可梦第六世代-人物角色数据(kg).md */,
@@ -2894,6 +2904,7 @@
 			isa = PBXGroup;
 			children = (
 				08A2666D2DD70B7500232FCD /* 宝可梦第四世代(kg).md */,
+				08C56C342DE2E541000EB8CF /* 宝可梦第四世代的故事(kg).md */,
 				089857D62DD8E7FF00718281 /* 宝可梦第四世代-宝可梦数据(kg).md */,
 				089857D82DD8E81100718281 /* 宝可梦第四世代-主要地区数据(kg).md */,
 				089857DA2DD8E82200718281 /* 宝可梦第四世代-人物角色数据(kg).md */,
@@ -3856,6 +3867,7 @@
 				0872429C2DBBEB9D005BAD35 /* 影视作品 */,
 				08B897952DD0D556007030C1 /* 游戏 */,
 				08D223032D92B750008F40C6 /* 历史 */,
+				08D5A0122DF3454300B3F8F8 /* 教育 */,
 				08D1E36A2DA6AEEC0098BB3E /* 视觉 */,
 			);
 			path = Knowledge;
@@ -3867,6 +3879,22 @@
 				08B9A1402D93766B00E8A959 /* 中国时间轴 */,
 			);
 			path = "历史";
+			sourceTree = "<group>";
+		};
+		08D5A0122DF3454300B3F8F8 /* 教育 */ = {
+			isa = PBXGroup;
+			children = (
+				08D5A0132DF3455100B3F8F8 /* 英语 */,
+			);
+			path = "教育";
+			sourceTree = "<group>";
+		};
+		08D5A0132DF3455100B3F8F8 /* 英语 */ = {
+			isa = PBXGroup;
+			children = (
+				08D5A0142DF3457300B3F8F8 /* Duolingo多邻国(kg).md */,
+			);
+			path = "英语";
 			sourceTree = "<group>";
 		};
 		08D8EFE32BED74D900AA0020 /* View */ = {
@@ -4595,6 +4623,7 @@
 				0832667F2C96C19900E27CC5 /* Metal(ap).md in Resources */,
 				087A7ADB2C803A6C00321F85 /* 包体积-三方库优化(ap).md in Resources */,
 				083266832C96C1C500E27CC5 /* visionOS-空间视频(ap).md in Resources */,
+				0882F3AC2DE355FB00CC707E /* 宝可梦第五世代的故事(kg).md in Resources */,
 				086E03652C6E7109008CEDD3 /* 时间-formatted(ap).md in Resources */,
 				088959982D959010006D9103 /* 公元前306年胡服骑射(kg).md in Resources */,
 				088CE8B32D9B85F60086C8E2 /* 公元317年东晋建立(kg).md in Resources */,
@@ -4686,6 +4715,7 @@
 				088CE9372D9BBB900086C8E2 /* 公元518年宋云西域取经(kg).md in Resources */,
 				08B9A1972D943C1A00E8A959 /* 公元前514年吴王阖闾(kg).md in Resources */,
 				088F2C462C932A5B00DCA64F /* 知识管理-消化(ap).md in Resources */,
+				08C56C352DE2E541000EB8CF /* 宝可梦第四世代的故事(kg).md in Resources */,
 				088F2C482C932A7900DCA64F /* 知识管理-输出(ap).md in Resources */,
 				08BDD5622C6B007A00914412 /* 字体Picker(ap).md in Resources */,
 				08BDD52D2C6B007A00914412 /* @dynamicCallable动态可调用类型(ap).md in Resources */,
@@ -4694,6 +4724,7 @@
 				0851E54E2C865B9B00D9463A /* 自动化测试(ap).md in Resources */,
 				083266732C96BF0500E27CC5 /* visionOS-介绍(ap).md in Resources */,
 				089857C02DD8AF5B00718281 /* 宝可梦初代-宝可梦数据(kg).md in Resources */,
+				0882F3AE2DE361C500CC707E /* 宝可梦第六世代的故事(kg).md in Resources */,
 				0851E5592C86BB7600D9463A /* 测试-代码覆盖率(ap).md in Resources */,
 				08B9A1552D9385A700E8A959 /* 公元前841年宣王中兴(kg).md in Resources */,
 				088CE8D52D9B8A6A0086C8E2 /* 公元363年刘裕专权(kg).md in Resources */,
@@ -4931,6 +4962,7 @@
 				0895C6C32DB1F11E00CF2122 /* Transformer(cs).md in Resources */,
 				08B9A1892D943B8100E8A959 /* 公元前597年邲之战(kg).md in Resources */,
 				08BDD5392C6B007A00914412 /* Scanner(ap).md in Resources */,
+				08D5A0152DF3457300B3F8F8 /* Duolingo多邻国(kg).md in Resources */,
 				08A7AB392D97EED200362878 /* 公元前32年班婕妤(kg).md in Resources */,
 				08BDD5A12C6B007A00914412 /* Animations协议(ap).md in Resources */,
 				08BDD5C32C6B007A00914412 /* Table-contextMenu(ap).md in Resources */,
